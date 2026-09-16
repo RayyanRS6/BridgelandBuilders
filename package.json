@@ -1,0 +1,26 @@
+{
+  "name": "bridgeland-builders",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build-blog-data.mjs && node scripts/build-seo-files.mjs && vite build && npm run build:ssr && node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "seo": "node scripts/build-seo-files.mjs",
+    "blog:data": "node scripts/build-blog-data.mjs",
+    "prerender": "node scripts/prerender.mjs",
+    "audit": "node scripts/audit-seo.mjs",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "docx": "^9.7.1",
+    "vite": "^5.4.11"
+  }
+}
