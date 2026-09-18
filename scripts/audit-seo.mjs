@@ -44,10 +44,15 @@ for (const route of routes) {
 
   const pageLd = [...html.matchAll(/data-seo="page"/g)].length;
   if (pageLd !== 1) problems.push(`${route}: ${pageLd} page-level JSON-LD blocks (expected 1)`);
+
+  // A route missing from the router still prerenders — as the 404 page.
+  if (/ISN&#x27;T IN THE|ISN'T IN THE BLUEPRINT/.test(html)) {
+    problems.push(`${route}: renders the 404 page — route missing from the router`);
+  }
 }
 
 // static artefacts
-for (const f of ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt', '_headers', '_redirects', '404.html', 'favicon.svg']) {
+for (const f of ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt', '_headers', '_redirects', '404.html', 'favicon.png', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png']) {
   if (!existsSync(join(DIST, f))) problems.push(`dist/${f} MISSING`);
 }
 const notFound = readFileSync(join(DIST, '404.html'), 'utf8');

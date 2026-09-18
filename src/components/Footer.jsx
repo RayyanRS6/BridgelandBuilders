@@ -11,6 +11,7 @@ const FOOTER_COLUMNS = [
       { label: 'OUR PROJECTS', to: '/projects' },
       { label: 'FAQs', to: '/faqs' },
       { label: 'BLOGS & ARTICLES', to: '/blog' },
+      { label: 'BOOK ONLINE', to: '/book-online' },
       { label: 'CONTACT US', to: '/contact-us' },
     ],
   },
@@ -40,7 +41,16 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Brand Info */}
           <div className="footer-col-brand">
-            <Link to="/" className="footer-logo">Bridgeland Builders</Link>
+            <Link to="/" className="footer-logo" aria-label="Bridgeland Builders home">
+              <img
+                src="/logo-on-dark.png"
+                alt="Bridgeland Builders — bridging dreams into reality"
+                width="460"
+                height="444"
+                loading="lazy"
+                decoding="async"
+              />
+            </Link>
             <p>
               Your Winnipeg Trusted Renovation and Construction Company. Over 60 years of combined experience turning ideas into reality.
             </p>

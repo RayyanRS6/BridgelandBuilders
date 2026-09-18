@@ -10,7 +10,7 @@ export const DEFAULT_IMAGE =
  */
 export const PAGE_SEO = {
   '/': {
-    title: 'Renovation & Construction Company in Winnipeg | Bridgeland Builders',
+    title: 'Winnipeg Renovation & Construction Company | Bridgeland Builders',
     description:
       'Bridgeland Builders is a top construction and renovation company in Winnipeg, Manitoba, with expert craftsmanship on residential renovation and commercial projects.',
     image: DEFAULT_IMAGE,
@@ -39,6 +39,11 @@ export const PAGE_SEO = {
     title: 'Renovation FAQs | Bridgeland Builders Winnipeg',
     description:
       'Answers to common Winnipeg renovation questions: written quotes, permits and inspections, living in your home during work, timelines and how to get started.',
+  },
+  '/book-online': {
+    title: 'Book an Appointment Online | Bridgeland Builders Winnipeg',
+    description:
+      'Book a free on-site renovation consultation with Bridgeland Builders in Winnipeg. Pick a date and time in our calendar and get instant confirmation.',
   },
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
@@ -122,6 +127,13 @@ export function buildOrganizationGraph() {
       description: BUSINESS.description,
       slogan: BUSINESS.slogan,
       telephone: BUSINESS.telephone,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo-on-light.png`,
+        width: 460,
+        height: 426,
+      },
+      image: `${SITE_URL}/logo-on-light.png`,
       priceRange: '$$',
       currenciesAccepted: 'CAD',
       // Service-area business: the area served is the entity's location claim,
@@ -244,6 +256,7 @@ export const ROUTE_TRAILS = {
   '/projects': [['Projects', '/projects']],
   '/faqs': [['FAQs', '/faqs']],
   '/contact-us': [['Contact Us', '/contact-us']],
+  '/book-online': [['Book Online', '/book-online']],
   '/outside-winnipeg': [['Outside Winnipeg', '/outside-winnipeg']],
   '/blog': [['Blog', '/blog']],
   '/services/whole-home-renovations': [['Services', '/services'], ['Whole Home Renovations', '/services/whole-home-renovations']],

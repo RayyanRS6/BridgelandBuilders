@@ -177,16 +177,11 @@ button {
 }
 
 .brand-logo .logo-mark {
-  width: 34px;
-  height: 34px;
-  background: var(--accent-red);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 700;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  flex: none;
 }
 
 .nav-links {
@@ -1465,11 +1460,13 @@ button {
 }
 
 .footer-col-brand .footer-logo {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 14px;
   display: inline-block;
+  margin-bottom: 18px;
+  max-width: 220px;
+}
+.footer-col-brand .footer-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .footer-col-brand p {

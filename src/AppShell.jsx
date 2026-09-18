@@ -16,6 +16,7 @@ const FaqsPage = lazy(() => import('./pages/FaqsPage.jsx'));
 const BlogPage = lazy(() => import('./pages/BlogPage.jsx'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage.jsx'));
 const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
+const BookingPage = lazy(() => import('./pages/BookingPage.jsx'));
 const OutsideWinnipegPage = lazy(() => import('./pages/OutsideWinnipegPage.jsx'));
 const WholeHomeRenovationsPage = lazy(() => import('./pages/services/WholeHomeRenovationsPage.jsx'));
 const BathroomRenovationsPage = lazy(() => import('./pages/services/BathroomRenovationsPage.jsx'));
@@ -76,6 +77,7 @@ export default function AppShell() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/book-online" element={<BookingPage />} />
           <Route path="/outside-winnipeg" element={<OutsideWinnipegPage />} />
 
           <Route path="/services/whole-home-renovations" element={<WholeHomeRenovationsPage />} />

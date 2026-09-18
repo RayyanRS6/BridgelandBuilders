@@ -31,6 +31,7 @@ const STATIC_ROUTES = [
   ['/faqs', '0.7', 'yearly'],
   ['/outside-winnipeg', '0.5', 'yearly'],
   ['/contact-us', '0.8', 'yearly'],
+  ['/book-online', '0.8', 'monthly'],
   ['/blog', '0.9', 'weekly'],
 ];
 
@@ -118,6 +119,7 @@ ${serviceLines}
 - [Projects](${SITE_URL}/projects): ${PAGE_SEO['/projects'].description}
 - [FAQs](${SITE_URL}/faqs): ${PAGE_SEO['/faqs'].description}
 - [Contact](${SITE_URL}/contact-us): ${PAGE_SEO['/contact-us'].description}
+- [Book online](${SITE_URL}/book-online): ${PAGE_SEO['/book-online'].description}
 - [Blog](${SITE_URL}/blog): ${PAGE_SEO['/blog'].description}
 
 ## Articles
@@ -127,6 +129,7 @@ ${BLOG_POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt
 - Phone: ${SITE_PHONE}
 - Location: Winnipeg, Manitoba, Canada
 - Quote requests: ${SITE_URL}/contact-us
+- Book an appointment: ${SITE_URL}/book-online
 `);
 
 /* --------------------------------------------------------- llms-full.txt */

@@ -62,7 +62,14 @@ export default function Navbar() {
     <div className="header-wrapper">
       <nav className="navbar" id="navbar">
         <Link to="/" className="brand-logo" onClick={closeNavigation}>
-          <span className="logo-mark">B</span>
+          <img
+            className="logo-mark"
+            src="/logo-mark.png"
+            alt=""
+            width="96"
+            height="96"
+            decoding="async"
+          />
           <span>Bridgeland Builders</span>
         </Link>
 

@@ -589,6 +589,11 @@
 .embed-frame-form iframe {
   height: 831px;
 }
+/* The booking widget reports its own height via form_embed.js; this is the
+   starting height before that message arrives. */
+.embed-frame-calendar iframe {
+  height: 760px;
+}
 
 /* Booking widget card in the hero */
 .booking-card {
