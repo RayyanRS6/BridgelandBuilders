@@ -1582,7 +1582,8 @@
     flex: none;
   }
   .booking-card {
-    padding: 18px 10px;
+    --card-gutter: 12px;
+    padding: 18px var(--card-gutter);
     border-radius: var(--radius-sm);
   }
   .booking-card-head h3 {
@@ -1636,8 +1637,32 @@
     padding: 4px 0;
   }
   .lead-card {
-    padding: 24px 12px;
+    --card-gutter: 12px;
+    padding: 22px var(--card-gutter);
     border-radius: var(--radius-md);
+  }
+
+  /* The LeadConnector widgets paint their own background right to the edge of
+     their iframe, so on a phone the card's gutter reads as a stray white band
+     framing a floating dark box. Let them span the full card instead — the
+     card's own radius clips them, so it looks like a seated panel. The
+     estimator is deliberately left alone: it draws its own rounded, shadowed
+     panel and is meant to sit inset. */
+  .booking-card,
+  .lead-card {
+    overflow: hidden;
+  }
+
+  .booking-card > .embed-frame,
+  .lead-card > .embed-frame {
+    margin-right: calc(var(--card-gutter) * -1);
+    margin-bottom: -18px;
+    margin-left: calc(var(--card-gutter) * -1);
+    border-radius: 0;
+  }
+
+  .lead-card > .embed-frame {
+    margin-bottom: -22px;
   }
   .lead-card-head h3 {
     font-size: 1.3rem;
@@ -1789,7 +1814,7 @@
     padding: 28px 16px;
   }
   .hero-card.hero-booking {
-    padding: 24px 14px;
+    padding: 24px 10px;
   }
   .not-found-card,
   .service-area-card {
@@ -1800,8 +1825,9 @@
   .blog-card.is-featured .blog-card-body {
     padding: 22px 16px;
   }
+  .booking-card,
   .lead-card {
-    padding: 22px 8px;
+    --card-gutter: 10px;
   }
   .blog-filter-bar {
     padding: 14px;
