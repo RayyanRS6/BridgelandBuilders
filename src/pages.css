@@ -1516,3 +1516,294 @@
     align-items: flex-start;
   }
 }
+
+/* -------------------------------------------------------------
+   P8. PHONES (<= 640px)
+   Same approach as index.css: the desktop/tablet layout above is
+   untouched, these rules only rescale it for phone widths.
+   ------------------------------------------------------------- */
+@media (max-width: 640px) {
+  /* ---- Standalone page heroes ---- */
+  .page-hero {
+    padding: 26px 0 18px;
+  }
+  .page-hero-card {
+    padding: 34px 20px;
+    border-radius: var(--radius-md);
+  }
+  .page-hero-card::after {
+    width: 180px;
+    height: 180px;
+    right: -80px;
+    bottom: -110px;
+    border-width: 30px;
+  }
+  /* Long single words ("RENOVATIONS") were running past the card edge. */
+  .page-hero-card h1 {
+    margin: 10px 0 14px;
+    font-size: clamp(1.85rem, 8.4vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    overflow-wrap: break-word;
+  }
+  .page-hero-card > p {
+    margin-bottom: 22px;
+    font-size: 0.97rem;
+  }
+  .page-hero-card .hero-cta-group {
+    width: 100%;
+  }
+
+  .breadcrumb {
+    padding-top: 12px;
+    font-size: 0.8rem;
+  }
+  .breadcrumb a {
+    display: inline-block;
+    padding: 5px 0;
+  }
+
+  /* ---- Booking hero ----
+     The LeadConnector booking/lead widgets render their own fixed-ish layout
+     inside the iframe, so the surrounding padding is kept tight on phones to
+     hand them as much width as possible. */
+  .hero-card.hero-booking {
+    padding: 28px 12px;
+  }
+  .hero-points {
+    margin-bottom: 24px;
+    gap: 9px;
+  }
+  .hero-points li {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .hero-points li svg {
+    flex: none;
+  }
+  .booking-card {
+    padding: 18px 10px;
+    border-radius: var(--radius-sm);
+  }
+  .booking-card-head h3 {
+    font-size: 1.12rem;
+  }
+  .booking-card-head p {
+    font-size: 0.85rem;
+  }
+
+  /* ---- What's included ---- */
+  .includes-section {
+    padding: 18px 0 44px;
+  }
+  .includes-grid {
+    gap: 14px;
+  }
+  .include-card {
+    padding: 20px 18px;
+  }
+  .include-card h3 {
+    font-size: 1.08rem;
+  }
+  .include-card p {
+    font-size: 0.91rem;
+  }
+
+  /* ---- Lead capture ---- */
+  .lead-section {
+    padding: 10px 0 48px;
+  }
+  .lead-grid {
+    gap: 20px;
+  }
+  .lead-aside {
+    padding: 28px 20px;
+    border-left-width: 5px;
+    border-radius: var(--radius-md);
+  }
+  .lead-aside h2 {
+    font-size: 1.45rem;
+  }
+  .lead-aside > p {
+    margin-bottom: 22px;
+    font-size: 0.93rem;
+  }
+  .lead-aside-list {
+    gap: 16px;
+  }
+  .lead-aside-item p a {
+    display: inline-block;
+    padding: 4px 0;
+  }
+  .lead-card {
+    padding: 24px 12px;
+    border-radius: var(--radius-md);
+  }
+  .lead-card-head h3 {
+    font-size: 1.3rem;
+  }
+  .lead-card-head p {
+    margin-bottom: 20px;
+    font-size: 0.91rem;
+  }
+
+  /* ---- FAQ accordion ---- */
+  .faq-section {
+    padding: 10px 0 48px;
+  }
+  .faq-question {
+    gap: 12px;
+    padding: 16px 16px;
+    font-size: 0.94rem;
+  }
+  .faq-answer {
+    padding: 0 16px 18px;
+    font-size: 0.92rem;
+  }
+
+  /* ---- 404 ---- */
+  .not-found-card {
+    padding: 34px 18px 26px;
+    border-radius: var(--radius-md);
+  }
+  .not-found-copy h1 {
+    font-size: clamp(2rem, 11vw, 3rem);
+    letter-spacing: -1.2px;
+  }
+  .not-found-visual {
+    padding: 24px 16px;
+  }
+
+  /* ---- Outside Winnipeg ---- */
+  .service-area-card {
+    padding: 34px 18px 28px;
+    border-radius: var(--radius-md);
+  }
+  .service-area-copy h1 {
+    font-size: clamp(2rem, 10.5vw, 3rem);
+    letter-spacing: -1.2px;
+  }
+  .service-area-eyebrow {
+    margin-bottom: 20px;
+  }
+  .service-area-visual {
+    padding: 28px 16px;
+    border-radius: 45% 45% 18px 18px;
+  }
+  /* Pulled inside the card — at -22px it sat over the page background. */
+  .service-area-coming-soon {
+    right: 8px;
+    bottom: 10px;
+    padding: 10px 12px;
+    font-size: 0.72rem;
+  }
+
+  /* ---- Blog ---- */
+  .blog-index-section {
+    padding: 26px 0 50px;
+  }
+  .blog-filter-bar {
+    gap: 10px 12px;
+    padding: 16px;
+    margin-bottom: 26px;
+    border-radius: var(--radius-md);
+  }
+  .blog-filter-pill {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+  .blog-grid {
+    gap: 20px;
+    margin-top: 22px;
+  }
+  .blog-card {
+    border-radius: var(--radius-md);
+  }
+  .blog-card-body,
+  .blog-card.is-featured .blog-card-body {
+    padding: 20px 18px;
+  }
+  .blog-card-body h3 {
+    font-size: 1.18rem;
+  }
+  .blog-card.is-featured .blog-card-body h3 {
+    font-size: 1.35rem;
+  }
+  .blog-card-body > p,
+  .blog-card.is-featured .blog-card-body > p {
+    font-size: 0.93rem;
+  }
+  .blog-card-link,
+  .blog-back-link {
+    padding: 7px 0;
+  }
+  .blog-article-section {
+    padding: 24px 0 50px;
+  }
+  .blog-hero-figure {
+    margin-bottom: 26px;
+    border-radius: var(--radius-md);
+  }
+  .blog-article-body {
+    font-size: 1rem;
+  }
+  .blog-article-body h2 {
+    margin: 32px 0 12px;
+  }
+  .blog-article-body h3 {
+    margin: 26px 0 10px;
+    font-size: 1.15rem;
+  }
+  .blog-article-body blockquote {
+    padding: 16px 18px;
+    font-size: 1rem;
+  }
+  .blog-takeaways {
+    margin: 28px 0;
+    padding: 22px 18px;
+    border-radius: var(--radius-md);
+  }
+  .blog-post-cta {
+    margin-top: 38px;
+    padding: 24px 18px;
+    border-radius: var(--radius-md);
+  }
+  .blog-post-meta {
+    gap: 12px 18px;
+  }
+  .blog-related-section {
+    padding: 44px 0 50px;
+  }
+
+  /* The quote modal carries the same LeadConnector form, so it gets the same
+     tight gutters and its own scroll containment on iOS. */
+  .modal-overlay-embed {
+    padding: 16px 8px;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-hero-card {
+    padding: 28px 16px;
+  }
+  .hero-card.hero-booking {
+    padding: 24px 14px;
+  }
+  .not-found-card,
+  .service-area-card {
+    padding: 28px 14px 24px;
+  }
+  .lead-aside,
+  .blog-card-body,
+  .blog-card.is-featured .blog-card-body {
+    padding: 22px 16px;
+  }
+  .lead-card {
+    padding: 22px 8px;
+  }
+  .blog-filter-bar {
+    padding: 14px;
+  }
+}

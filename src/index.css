@@ -49,11 +49,18 @@ html {
   color: var(--text-main);
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
+  /* Stop iOS Safari inflating body copy when a phone is turned landscape —
+     without this the page renders at a different scale than it was designed. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   overflow-x: hidden;
   line-height: 1.65;
+  /* Removes the grey flash Android/iOS paint over every tap target. The
+     :active states below give the same feedback in the site's own colours. */
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -81,6 +88,10 @@ button {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 24px;
+  /* On notched iPhones held sideways the safe-area inset grows past 24px; on
+     every other device env() resolves to 0 and this stays exactly 24px. */
+  padding-left: max(24px, env(safe-area-inset-left));
+  padding-right: max(24px, env(safe-area-inset-right));
 }
 
 /* -------------------------------------------------------------
@@ -90,6 +101,8 @@ button {
   background: var(--bg-dark);
   color: var(--text-light);
   padding: 11px 24px;
+  padding-left: max(24px, env(safe-area-inset-left));
+  padding-right: max(24px, env(safe-area-inset-right));
   font-size: 0.9rem;
   font-weight: 500;
   display: flex;
@@ -149,6 +162,8 @@ button {
   top: 14px;
   z-index: 100;
   padding: 0 20px;
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
 }
 
 .navbar {
@@ -423,6 +438,11 @@ button {
   gap: 10px;
 }
 
+/* The compact quote label only appears on narrow phones (see breakpoints). */
+.nav-quote-label-short {
+  display: none;
+}
+
 /* Red Primary Buttons */
 .btn-pill-red {
   background: var(--accent-red);
@@ -482,6 +502,12 @@ button {
 .btn-pill-seagreen:hover {
   background: var(--accent-seagreen-hover);
   transform: translateY(-2px);
+}
+
+/* Oversized variant used by the CTA banner cards. */
+.btn-pill-red.btn-pill-lg {
+  padding: 16px 36px;
+  font-size: 1rem;
 }
 
 .mobile-menu-btn {
@@ -1705,6 +1731,32 @@ button {
   .nav-links {
     display: none;
   }
+  /* The open mobile panel. Anchored to the bottom of the navbar so it keeps
+     up when the bar gets shorter on phones, and capped to the *visible*
+     viewport (dvh) so iOS Safari's collapsing toolbar can't hide the end of
+     the list. */
+  .navbar {
+    position: relative;
+  }
+  .nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 110;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    gap: 4px;
+    padding: 24px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-height: calc(100vh - 150px);
+    max-height: calc(100dvh - 150px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
   .mobile-menu-btn {
     display: block;
   }
@@ -1783,9 +1835,15 @@ button {
     max-width: 400px;
     margin: 0 auto;
   }
+  /* Centre it with auto margins rather than translateX(-50%): the `float`
+     keyframes animate `transform`, which was wiping the centering out and
+     pushing the badge off the right edge of the hero card. */
   .hero-floating-badge {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
     bottom: -20px;
   }
   .stats-grid,
@@ -1873,5 +1931,613 @@ button {
   }
   .footer-top-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------------------
+   19. PHONES (<= 640px)
+   Everything above this point is the signed-off desktop/tablet
+   design and is left untouched. The rules below only rescale it
+   for phone widths — iPhone SE (375) through to the large
+   Androids (412/430) and small tablets in portrait.
+   ------------------------------------------------------------- */
+@media (max-width: 640px) {
+  /* Anchor links land below the sticky navbar instead of under it. */
+  section[id],
+  div[id] {
+    scroll-margin-top: 86px;
+  }
+
+  /* ---- Top announcement bar ---- */
+  .top-bar {
+    gap: 5px;
+    padding: 8px 16px;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+  .top-bar-greeting {
+    gap: 7px;
+  }
+  .pulse-dot {
+    width: 7px;
+    height: 7px;
+    flex: none;
+  }
+  .top-bar-contact {
+    gap: 12px;
+  }
+  .top-bar-contact a {
+    min-height: 30px;
+    padding: 4px 12px;
+  }
+
+  /* ---- Floating navbar ---- */
+  .header-wrapper {
+    top: 10px;
+    padding: 0 12px;
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+  .navbar {
+    gap: 8px;
+    padding: 7px 8px 7px 12px;
+  }
+  .brand-logo {
+    min-width: 0;
+    gap: 8px;
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+  .brand-logo > span {
+    min-width: 0;
+    white-space: nowrap;
+  }
+  .brand-logo .logo-mark {
+    width: 32px;
+    height: 32px;
+  }
+  .nav-actions {
+    flex: none;
+    gap: 6px;
+  }
+  /* The full "GET INSTANT QUOTE" label cannot share a phone-width bar with the
+     wordmark and the menu button without wrapping onto two or three lines, so
+     the pill carries the short label from here down. */
+  .nav-quote-label-full {
+    display: none;
+  }
+  .nav-quote-label-short {
+    display: inline;
+  }
+  .nav-quote-btn {
+    padding: 10px 16px;
+    font-size: 0.75rem;
+    letter-spacing: 0.2px;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .mobile-menu-btn {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  /* ---- Hero ---- */
+  .hero-section {
+    padding: 22px 0 40px;
+  }
+  .hero-card {
+    gap: 30px;
+    padding: 32px 20px;
+    border-radius: var(--radius-md);
+  }
+  .badge-soft {
+    gap: 6px;
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+  .badge-soft svg {
+    flex: none;
+  }
+  .hero-title {
+    font-size: clamp(1.9rem, 8.6vw, 2.5rem);
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+  .hero-subtitle {
+    margin-bottom: 26px;
+    font-size: 0.98rem;
+  }
+  /* Full-width stacked buttons give a proper thumb target on a phone. */
+  .hero-cta-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .hero-cta-group > a,
+  .hero-cta-group > button {
+    width: 100%;
+    justify-content: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .hero-arch-frame {
+    height: clamp(240px, 64vw, 330px);
+    max-width: 330px;
+    border-radius: 130px 130px 16px 16px;
+    border-width: 3px;
+  }
+  .hero-floating-badge {
+    gap: 10px;
+    padding: 11px 16px;
+  }
+  .hero-floating-badge .avatar-group {
+    width: 34px;
+    height: 34px;
+    flex: none;
+    font-size: 1rem;
+  }
+  .hero-floating-badge .badge-text h4 {
+    font-size: 0.86rem;
+  }
+  .hero-floating-badge .badge-text p {
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+
+  /* ---- Ticker ---- */
+  .ticker-section {
+    padding: 13px 0;
+  }
+  .ticker-track {
+    gap: 26px;
+  }
+  .ticker-item {
+    gap: 20px;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* ---- Stats ---- */
+  .stats-section {
+    padding: 38px 0 18px;
+  }
+  .stats-grid {
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 18px 14px;
+  }
+  .stat-num {
+    font-size: 2.1rem;
+  }
+  .stat-num .stat-unit {
+    font-size: 1.1rem;
+  }
+  .stat-label {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  /* ---- Section headers ---- */
+  .section-header {
+    margin-bottom: 28px;
+  }
+  .section-tag {
+    font-size: 0.78rem;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    letter-spacing: -0.3px;
+  }
+  .section-desc {
+    font-size: 0.96rem;
+  }
+
+  /* ---- Services ---- */
+  .services-section {
+    padding: 32px 0 50px;
+  }
+  .services-grid {
+    gap: 20px;
+  }
+  .service-card {
+    border-radius: var(--radius-md);
+  }
+  .service-img-wrapper {
+    height: 200px;
+  }
+  .service-body {
+    padding: 20px 18px;
+  }
+  .service-title {
+    font-size: 1.22rem;
+  }
+  .service-text {
+    margin-bottom: 18px;
+    font-size: 0.93rem;
+  }
+
+  /* ---- Services directory page ---- */
+  .service-directory-panel {
+    padding: 24px 16px;
+    border-radius: var(--radius-md);
+  }
+  .service-directory-heading {
+    gap: 18px;
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+  }
+  .service-directory-heading .btn-pill-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+  .service-directory-card {
+    padding: 20px 18px;
+  }
+  .service-directory-overview {
+    padding: 30px 18px;
+    border-radius: var(--radius-md);
+  }
+  .estimator-embed {
+    border-radius: var(--radius-md);
+  }
+
+  /* ---- Why choose us ---- */
+  .why-section {
+    margin: 10px 12px;
+    padding: 46px 0;
+    border-radius: var(--radius-md);
+  }
+  .why-grid {
+    gap: 34px;
+  }
+  .why-main-img {
+    height: 250px;
+  }
+  /* The floating card hangs outside its image on desktop; on a phone there is
+     no room for that, so it tucks under the image instead. */
+  .why-floating-card {
+    position: static;
+    max-width: none;
+    margin-top: -26px;
+    padding: 16px 18px;
+  }
+  .why-content .section-title {
+    font-size: clamp(1.55rem, 6.6vw, 1.95rem);
+    margin-bottom: 16px;
+  }
+  .why-paragraphs p {
+    font-size: 0.95rem;
+  }
+  .why-checklist {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0 26px;
+  }
+  .why-checklist li {
+    font-size: 0.92rem;
+  }
+  .why-content > .btn-pill-red {
+    width: 100%;
+    justify-content: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* ---- Process ---- */
+  .process-section {
+    padding: 46px 0;
+  }
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .process-card {
+    padding: 22px 18px;
+  }
+  .process-step-num {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+  }
+  .process-card-title {
+    font-size: 1.12rem;
+  }
+  .process-card-text {
+    font-size: 0.91rem;
+  }
+
+  /* ---- Testimonial ---- */
+  .testimonial-section {
+    padding: 10px 0 46px;
+  }
+  .testimonial-card {
+    gap: 26px;
+    padding: 28px 20px;
+    border-radius: var(--radius-md);
+  }
+  .stars-badge {
+    font-size: 1.1rem;
+  }
+  .testimonial-headline {
+    font-size: 1.6rem;
+  }
+  .testimonial-sub {
+    font-size: 0.9rem;
+  }
+  .testimonial-quote {
+    font-size: 0.97rem;
+  }
+  .author-initial {
+    width: 38px;
+    height: 38px;
+    flex: none;
+    font-size: 1rem;
+  }
+
+  /* ---- Gallery ---- */
+  .gallery-section {
+    padding: 32px 0 50px;
+  }
+  .gallery-grid {
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .gallery-item {
+    height: 210px;
+    border-radius: var(--radius-md);
+  }
+  .gallery-overlay {
+    padding: 16px;
+  }
+  .gallery-overlay h4 {
+    font-size: 1.05rem;
+  }
+
+  /* ---- CTA banner ---- */
+  .cta-banner-section {
+    padding: 6px 0 46px;
+  }
+  .cta-banner-card {
+    gap: 20px;
+    padding: 32px 20px;
+    border-left-width: 5px;
+    border-radius: var(--radius-md);
+  }
+  .cta-banner-left h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+  .cta-banner-left p {
+    font-size: 0.97rem;
+  }
+  .cta-banner-right {
+    width: 100%;
+  }
+  .btn-pill-red.btn-pill-lg {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 22px;
+    font-size: 0.92rem;
+  }
+
+  /* ---- Footer ---- */
+  .site-footer {
+    padding: 46px 0 22px;
+  }
+  .footer-top-grid {
+    gap: 30px;
+    padding-bottom: 32px;
+  }
+  .footer-col-brand .footer-logo {
+    max-width: 170px;
+    margin-bottom: 14px;
+  }
+  .footer-col-brand p {
+    max-width: none;
+  }
+  .footer-col-title {
+    margin-bottom: 16px;
+  }
+  /* Link rows were 19px tall — padded out to a comfortable thumb target. */
+  .footer-links-list {
+    gap: 3px;
+  }
+  .footer-links-list a {
+    padding: 8px 0;
+  }
+  .footer-contact-item {
+    margin-bottom: 4px;
+  }
+  .footer-contact-item a {
+    display: inline-block;
+    padding: 6px 0;
+  }
+  .footer-bottom {
+    justify-content: flex-start;
+    gap: 14px;
+    padding-top: 22px;
+    /* Clears the iOS home-indicator bar at the bottom of the screen. */
+    padding-bottom: env(safe-area-inset-bottom);
+    font-size: 0.8rem;
+  }
+
+  /* ---- Quote modal ---- */
+  .modal-overlay {
+    padding: 16px 12px;
+  }
+  .modal-card {
+    padding: 24px 12px;
+    border-radius: var(--radius-md);
+  }
+  .modal-close-btn {
+    top: 14px;
+    right: 14px;
+  }
+  .modal-header h3 {
+    padding-right: 42px;
+    font-size: 1.35rem;
+  }
+  .modal-header p {
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+  }
+  /* 16px is the threshold below which iOS Safari zooms the page in on focus. */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+}
+
+/* -------------------------------------------------------------
+   20. NARROW PHONES (<= 420px)
+   iPhone SE/12 mini/13 mini and the 360px Android baseline.
+   ------------------------------------------------------------- */
+@media (max-width: 420px) {
+  .top-bar {
+    font-size: 0.74rem;
+  }
+  .navbar {
+    padding: 6px 7px 6px 10px;
+  }
+  .brand-logo {
+    font-size: 0.88rem;
+  }
+  .brand-logo .logo-mark {
+    width: 30px;
+    height: 30px;
+  }
+  .nav-quote-btn {
+    padding: 9px 13px;
+    font-size: 0.72rem;
+  }
+  /* Below this width even the arrow has to go. */
+  .nav-quote-btn svg {
+    display: none;
+  }
+  .mobile-menu-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-card {
+    padding: 26px 16px;
+  }
+  .hero-arch-frame {
+    border-radius: 110px 110px 14px 14px;
+  }
+  .stats-grid {
+    gap: 10px;
+  }
+  .stat-card {
+    padding: 16px 13px;
+  }
+  .stat-num {
+    font-size: 1.9rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+  }
+  .service-img-wrapper {
+    height: 175px;
+  }
+  .gallery-item {
+    height: 185px;
+  }
+  .why-section {
+    margin: 10px 8px;
+  }
+  .testimonial-card,
+  .cta-banner-card {
+    padding: 26px 16px;
+  }
+  .modal-card {
+    padding: 22px 10px;
+  }
+}
+
+/* -------------------------------------------------------------
+   21. VERY NARROW (<= 340px)
+   Galaxy Fold cover screen and older small Androids.
+   ------------------------------------------------------------- */
+@media (max-width: 340px) {
+  .container {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  /* Only the logo mark fits alongside the CTA and the menu button here. */
+  .brand-logo > span {
+    display: none;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-card {
+    padding: 16px 18px;
+  }
+}
+
+/* -------------------------------------------------------------
+   22. TOUCH DEVICES
+   Anything keyed to :hover is unreachable on a phone, so the
+   equivalent state is made permanent instead.
+   ------------------------------------------------------------- */
+@media (hover: none) {
+  /* Project captions were only readable on hover — on touch they never showed. */
+  .gallery-item .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(25, 23, 21, 0.85) 0%, rgba(25, 23, 21, 0) 58%);
+  }
+  /* Lift-on-hover effects have no meaning without a pointer; a pressed state
+     is the touch equivalent. */
+  .btn-pill-red:hover,
+  .btn-pill-ghost:hover,
+  .btn-pill-seagreen:hover,
+  .service-card:hover,
+  .stat-card:hover,
+  .process-card:hover,
+  .include-card:hover,
+  .blog-card:hover,
+  .service-directory-card:hover {
+    transform: none;
+  }
+  .btn-pill-red:active,
+  .btn-pill-ghost:active,
+  .btn-pill-seagreen:active {
+    transform: scale(0.97);
+  }
+  .footer-links-list a:hover {
+    transform: none;
+  }
+}
+
+/* -------------------------------------------------------------
+   23. REDUCED MOTION
+   ------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .ticker-track,
+  .hero-floating-badge,
+  .pulse-dot {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

@@ -4,3 +4,4 @@ dist-ssr
 .vite
 *.local
 *.zip
+.claude/

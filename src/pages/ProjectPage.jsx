@@ -287,8 +287,7 @@ export default function ProjectPage({ project }) {
             </div>
             <div className="cta-banner-right">
               <button
-                className="btn-pill-red open-quote-btn"
-                style={{ padding: '16px 36px', fontSize: '1rem' }}
+                className="btn-pill-red btn-pill-lg open-quote-btn"
                 onClick={openModal}
               >
                 <span>GET INSTANT QUOTE</span>
