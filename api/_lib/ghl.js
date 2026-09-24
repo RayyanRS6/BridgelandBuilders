@@ -227,6 +227,7 @@ export async function bookAppointment(contactId, startTime, { lead } = {}) {
       endTime,
       title,
       meetingLocationType: 'custom',
+      meetingLocationId: 'custom_0',
       overrideLocationConfig: true,
       address: meetingAddress,
       location: meetingAddress,
