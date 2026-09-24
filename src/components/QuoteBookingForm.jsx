@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   BOOKING_CALENDAR,
   DEFAULT_PHONE_COUNTRY,
@@ -299,7 +300,9 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
           <button type="submit" className="btn-pill-red qf-submit" disabled={busy}>
             {busy ? 'SAVING…' : (<><span>NEXT: PICK A TIME</span><ArrowRightIcon size={15} /></>)}
           </button>
-          <p className="qf-fineprint">No obligation. We only use your details to get back to you about this project.</p>
+          <p className="qf-fineprint">
+            No obligation, and we never sell your details. See our <Link to="/privacy-policy">Privacy Policy</Link>.
+          </p>
         </form>
       )}
 

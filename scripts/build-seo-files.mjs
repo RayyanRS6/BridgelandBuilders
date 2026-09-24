@@ -33,6 +33,7 @@ const STATIC_ROUTES = [
   ['/contact-us', '0.8', 'yearly'],
   ['/book-online', '0.8', 'monthly'],
   ['/blog', '0.9', 'weekly'],
+  ['/privacy-policy', '0.3', 'yearly'],
 ];
 
 const urls = [

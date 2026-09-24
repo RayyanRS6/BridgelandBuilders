@@ -60,6 +60,11 @@ export const PAGE_SEO = {
     description:
       'Renovation inspiration, expert tips and industry insights from Bridgeland Builders, covering residential and commercial renovation ideas for Winnipeg properties.',
   },
+  '/privacy-policy': {
+    title: 'Privacy Policy | Bridgeland Builders',
+    description:
+      'How Bridgeland Builders collects, uses and protects personal information from our website, quote form, booking calendar, price guide and live chat.',
+  },
   // Paid-traffic landing page. Kept out of search (noindex) and out of the
   // sitemap so it never competes with the organic pages it overlaps, but still
   // prerendered so an ad click gets real HTML on first paint. Link previews in
@@ -271,6 +276,7 @@ export const ROUTE_TRAILS = {
   '/outside-winnipeg': [['Outside Winnipeg', '/outside-winnipeg']],
   '/blog': [['Blog', '/blog']],
   '/free-quote': [['Free Quote', '/free-quote']],
+  '/privacy-policy': [['Privacy Policy', '/privacy-policy']],
   '/services/whole-home-renovations': [['Services', '/services'], ['Whole Home Renovations', '/services/whole-home-renovations']],
   '/services/bathroom-renovations': [['Services', '/services'], ['Bathroom Renovations', '/services/bathroom-renovations']],
   '/services/kitchen-renovations': [['Services', '/services'], ['Kitchen Renovations', '/services/kitchen-renovations']],

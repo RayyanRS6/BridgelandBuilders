@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import ScrollToHash from './components/ScrollToHash.jsx';
+import MetaPixelPageViews from './components/MetaPixelPageViews.jsx';
 import TopBar from './components/TopBar.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
@@ -17,6 +18,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
 const BookingPage = lazy(() => import('./pages/BookingPage.jsx'));
 const OutsideWinnipegPage = lazy(() => import('./pages/OutsideWinnipegPage.jsx'));
 const FreeQuotePage = lazy(() => import('./pages/FreeQuotePage.jsx'));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage.jsx'));
 const WholeHomeRenovationsPage = lazy(() => import('./pages/services/WholeHomeRenovationsPage.jsx'));
 const BathroomRenovationsPage = lazy(() => import('./pages/services/BathroomRenovationsPage.jsx'));
 const KitchenRenovationsPage = lazy(() => import('./pages/services/KitchenRenovationsPage.jsx'));
@@ -36,6 +38,7 @@ export default function AppShell() {
   return (
     <>
       <ScrollToHash />
+      <MetaPixelPageViews />
 
       {/* 1. TOP ANNOUNCEMENT BAR */}
       <TopBar />
@@ -58,6 +61,7 @@ export default function AppShell() {
           <Route path="/outside-winnipeg" element={<OutsideWinnipegPage />} />
           {/* Ad landing page — not linked from the site, see PAGE_SEO['/free-quote']. */}
           <Route path="/free-quote" element={<FreeQuotePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
           <Route path="/services/whole-home-renovations" element={<WholeHomeRenovationsPage />} />
           <Route path="/services/bathroom-renovations" element={<BathroomRenovationsPage />} />

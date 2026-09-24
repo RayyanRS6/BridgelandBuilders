@@ -35,11 +35,38 @@
   <link rel="dns-prefetch" href="https://static.wixstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
 
+  <!-- Meta Pixel Code. Meta's standard snippet, loaded async so it never delays
+       the page, and skipped on localhost so local development and testing never
+       send visits to the ad account. Later page views inside the site are sent
+       by src/components/MetaPixelPageViews.jsx; the quote form sends Lead and
+       Schedule (src/lib/bookingApi.js). -->
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <script>
+  if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1272824070968198');
+  fbq('track', 'PageView');
+  }
+  </script>
+  <!-- End Meta Pixel Code -->
+
   <!-- seo:jsonld:start -->
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["GeneralContractor","HomeAndConstructionBusiness","LocalBusiness"],"@id":"https://bridgelandbuilders.com/#organization","name":"Bridgeland Builders","legalName":"Bridgeland Builders","url":"https://bridgelandbuilders.com/","description":"Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home extensions and general contracting across Winnipeg and Manitoba.","slogan":"Bridging dreams into reality","telephone":"+1-431-866-5644","logo":{"@type":"ImageObject","url":"https://bridgelandbuilders.com/logo-on-light.png","width":460,"height":426},"image":"https://bridgelandbuilders.com/logo-on-light.png","priceRange":"$","currenciesAccepted":"CAD","address":{"@type":"PostalAddress","addressLocality":"Winnipeg","addressRegion":"MB","addressCountry":"CA"},"areaServed":[{"@type":"Place","name":"Winnipeg"},{"@type":"Place","name":"Manitoba"},{"@type":"Place","name":"Headingley"},{"@type":"Place","name":"East St. Paul"},{"@type":"Place","name":"West St. Paul"},{"@type":"Place","name":"Oak Bluff"},{"@type":"Place","name":"Steinbach"},{"@type":"Place","name":"Selkirk"}],"knowsAbout":["Whole home renovations","Kitchen renovations","Bathroom renovations","Basement renovations","Home extensions","Commercial renovations","General contracting","Windows and doors installation","Exterior painting","Masonry and stucco","Flooring installation","Demolition"],"contactPoint":{"@type":"ContactPoint","telephone":"+1-431-866-5644","contactType":"customer service","areaServed":"CA","availableLanguage":"English"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Renovation and construction services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Whole home renovations","url":"https://bridgelandbuilders.com/services/whole-home-renovations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Kitchen renovations","url":"https://bridgelandbuilders.com/services/kitchen-renovations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bathroom renovations","url":"https://bridgelandbuilders.com/services/bathroom-renovations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Basement renovations","url":"https://bridgelandbuilders.com/services/basement-renovations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Home extensions","url":"https://bridgelandbuilders.com/services/home-extensions"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial renovations","url":"https://bridgelandbuilders.com/services/commercial-renovations"}}]}},{"@type":"WebSite","@id":"https://bridgelandbuilders.com/#website","url":"https://bridgelandbuilders.com/","name":"Bridgeland Builders","description":"Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home extensions and general contracting across Winnipeg and Manitoba.","publisher":{"@id":"https://bridgelandbuilders.com/#organization"},"inLanguage":"en-CA"}]}</script>
   <!-- seo:jsonld:end -->
 </head>
 <body>
+  <!-- Meta Pixel fallback for visitors without JavaScript (an <img> isn't
+       valid inside <head>, so it lives here). -->
+  <noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1272824070968198&ev=PageView&noscript=1"
+  /></noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 

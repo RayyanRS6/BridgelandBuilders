@@ -2529,3 +2529,42 @@
     padding: 7px 12px;
   }
 }
+
+/* -------------------------------------------------------------
+   P10. PRIVACY POLICY
+   Uses the blog article layout for long-form reading; these rules
+   only make links look like links (the base theme resets them to
+   plain text) and style the "last updated" line.
+   ------------------------------------------------------------- */
+.policy-body a,
+.qf-fineprint a {
+  color: var(--accent-seagreen);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.policy-body a:hover,
+.qf-fineprint a:hover {
+  color: var(--accent-red);
+}
+
+.policy-updated {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.policy-body .blog-takeaways {
+  margin-top: 18px;
+}
+
+.footer-bottom a {
+  color: var(--text-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}

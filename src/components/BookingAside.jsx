@@ -34,7 +34,7 @@ export default function BookingAside({ serviceName }) {
           <span className="lead-aside-icon"><ShieldIcon size={16} /></span>
           <div>
             <h4>Your details stay private</h4>
-            <p>We use them to get back to you about this project. That’s it.</p>
+            <p>We use them to get back to you about your project, and we never sell them.</p>
           </div>
         </li>
         <li className="lead-aside-item">
