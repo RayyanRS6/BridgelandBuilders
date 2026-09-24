@@ -181,9 +181,38 @@ export async function upsertLead(lead, { utmSource } = {}) {
  * booked is refused (slot_unavailable) rather than double-booked — and once
  * booked, the time drops out of getFreeSlots for everyone else.
  */
-export async function bookAppointment(contactId, startTime) {
-  const endTime = new Date(Date.parse(startTime) + BOOKING_CALENDAR.durationMinutes * 60 * 1000).toISOString();
-  if (isMock()) return { id: `mock-appointment-${Date.now()}`, startTime, endTime };
+export async function bookAppointment(contactId, startTime, { lead } = {}) {
+  const durationMs = BOOKING_CALENDAR.durationMinutes * 60 * 1000;
+  const startMs = Date.parse(startTime);
+  const endMs = startMs + durationMs;
+
+  // Preserve the timezone offset if startTime has one (e.g. -05:00) so start & end match
+  let endTime;
+  const tzMatch = typeof startTime === 'string' ? startTime.match(/([+-]\d{2}:\d{2})$/) : null;
+  if (tzMatch) {
+    const sign = tzMatch[1][0] === '-' ? -1 : 1;
+    const hours = parseInt(tzMatch[1].slice(1, 3), 10);
+    const mins = parseInt(tzMatch[1].slice(4), 10);
+    const offsetMin = (hours * 60 + mins) * sign;
+    const localEnd = new Date(endMs + offsetMin * 60000);
+    const pad = (n) => String(n).padStart(2, '0');
+    endTime = `${localEnd.getUTCFullYear()}-${pad(localEnd.getUTCMonth() + 1)}-${pad(localEnd.getUTCDate())}T${pad(localEnd.getUTCHours())}:${pad(localEnd.getUTCMinutes())}:00${tzMatch[1]}`;
+  } else {
+    endTime = new Date(endMs).toISOString();
+  }
+
+  const meetingAddress = [lead?.address, lead?.city, lead?.postalCode].filter(Boolean).join(', ') || lead?.address || '';
+  const title = lead?.name ? `Free Discovery Call - ${lead.name}` : BOOKING_CALENDAR.name;
+  const renovationTypes = Array.isArray(lead?.types) && lead.types.length ? lead.types.join(', ') : '';
+  const notes = [
+    `Contact: ${lead?.name || ''}`,
+    `Phone: ${lead?.phone || ''}`,
+    `Email: ${lead?.email || ''}`,
+    `Meeting Location: ${meetingAddress}`,
+    renovationTypes ? `Renovation Types: ${renovationTypes}` : null,
+  ].filter(Boolean).join('\n');
+
+  if (isMock()) return { id: `mock-appointment-${Date.now()}`, startTime, endTime, address: meetingAddress, title };
 
   const { token, locationId, calendarId } = config();
   const data = await ghl('/calendars/events/appointments', {
@@ -196,11 +225,24 @@ export async function bookAppointment(contactId, startTime) {
       contactId,
       startTime,
       endTime,
+      title,
+      meetingLocationType: 'custom',
+      overrideLocationConfig: true,
+      address: meetingAddress,
+      selectedTimezone: BOOKING_CALENDAR.timeZone,
       appointmentStatus: 'confirmed',
       toNotify: true,
+      description: notes,
+      notes,
     },
   });
-  return { id: data?.id, startTime: data?.startTime || startTime, endTime: data?.endTime || endTime };
+  return {
+    id: data?.id,
+    startTime: data?.startTime || startTime,
+    endTime: data?.endTime || endTime,
+    address: data?.address || meetingAddress,
+    title: data?.title || title,
+  };
 }
 
 /* ---------------------------------------------------------------- mock */

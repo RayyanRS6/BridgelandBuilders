@@ -28,8 +28,17 @@ export default async function handler(req, res) {
     }
 
     const { contactId } = await upsertLead(lead, { utmSource: cleanUtm(body.utmSource) });
-    const booking = await bookAppointment(contactId, body.startTime);
-    sendJson(res, 200, { ok: true, booking: { id: booking.id, startTime: booking.startTime, endTime: booking.endTime } });
+    const booking = await bookAppointment(contactId, body.startTime, { lead });
+    sendJson(res, 200, {
+      ok: true,
+      booking: {
+        id: booking.id,
+        startTime: booking.startTime,
+        endTime: booking.endTime,
+        title: booking.title,
+        address: booking.address,
+      },
+    });
   } catch (error) {
     sendError(res, error);
   }
