@@ -238,6 +238,15 @@ export async function bookAppointment(contactId, startTime, { lead } = {}) {
       notes,
     },
   });
+
+  // Tag the contact in GoHighLevel to signal that the meeting was booked (Step 2 completed)
+  await ghl(`/contacts/${contactId}/tags`, {
+    method: 'POST',
+    version: CONTACTS_VERSION,
+    token,
+    body: { tags: ['website-appointment-booked', 'appointment-booked'] },
+  }).catch((err) => console.error('[ghl] Failed to add appointment-booked tags:', err));
+
   return {
     id: data?.id,
     startTime: data?.startTime || startTime,
