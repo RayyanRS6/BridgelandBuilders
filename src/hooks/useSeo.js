@@ -119,5 +119,6 @@ export function usePageSeo(path, options = {}) {
     path,
     image: image || meta.image,
     jsonLd,
+    robots: meta.robots,
   });
 }

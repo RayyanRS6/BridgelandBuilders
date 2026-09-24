@@ -12,7 +12,7 @@
 import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
 import { BLOG_POSTS } from '../src/data/blogPosts.js';
 import { SITE_URL, SITE_NAME, SITE_PHONE, BUSINESS, SERVICE_CATALOG } from '../src/data/siteConfig.js';
-import { PAGE_SEO, SERVICE_SEO, buildOrganizationGraph } from '../src/data/seo.js';
+import { NOINDEX_ROUTES, PAGE_SEO, SERVICE_SEO, buildOrganizationGraph } from '../src/data/seo.js';
 
 const PUBLIC = new URL('../public/', import.meta.url);
 const out = (name, body) => writeFileSync(new URL(name, PUBLIC), body);
@@ -216,12 +216,16 @@ html = html.replace(
 writeFileSync(indexUrl, html);
 
 /* ------------------------------------------------------ prerender routes */
+// Everything in the sitemap, plus the noindex pages (ad landing pages). Those
+// stay out of the sitemap but still need real HTML: on Vercel a route with no
+// prerendered file is served as a 404.
 writeFileSync(
   new URL('../prerender-routes.json', import.meta.url),
-  JSON.stringify(urls.map((u) => u.path), null, 2)
+  JSON.stringify([...urls.map((u) => u.path), ...NOINDEX_ROUTES], null, 2)
 );
 
 console.log(`sitemap: ${urls.length} urls (${BLOG_POSTS.length} with images)`);
+console.log(`noindex (prerendered, not in sitemap): ${NOINDEX_ROUTES.join(', ') || 'none'}`);
 console.log(`robots: ${AI_AGENTS.length} AI agents allowed`);
 console.log(`llms.txt + llms-full.txt written (${faqBlocks.length} article Q&A blocks)`);
 console.log('sitewide JSON-LD injected into index.html');

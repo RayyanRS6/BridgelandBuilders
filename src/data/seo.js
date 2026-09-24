@@ -60,6 +60,17 @@ export const PAGE_SEO = {
     description:
       'Renovation inspiration, expert tips and industry insights from Bridgeland Builders, covering residential and commercial renovation ideas for Winnipeg properties.',
   },
+  // Paid-traffic landing page. Kept out of search (noindex) and out of the
+  // sitemap so it never competes with the organic pages it overlaps, but still
+  // prerendered so an ad click gets real HTML on first paint. Link previews in
+  // Meta ads read the Open Graph tags, which noindex does not affect.
+  '/free-quote': {
+    title: 'Free Renovation Quote in Winnipeg | Bridgeland Builders',
+    description:
+      'Get a free, no-obligation renovation quote in Winnipeg. Kitchens, bathrooms and basements with clear written pricing and a reply within one business day.',
+    image: DEFAULT_IMAGE,
+    robots: 'noindex, follow',
+  },
 };
 
 /** Service pages get their own titles, descriptions and Service schema. */
@@ -259,6 +270,7 @@ export const ROUTE_TRAILS = {
   '/book-online': [['Book Online', '/book-online']],
   '/outside-winnipeg': [['Outside Winnipeg', '/outside-winnipeg']],
   '/blog': [['Blog', '/blog']],
+  '/free-quote': [['Free Quote', '/free-quote']],
   '/services/whole-home-renovations': [['Services', '/services'], ['Whole Home Renovations', '/services/whole-home-renovations']],
   '/services/bathroom-renovations': [['Services', '/services'], ['Bathroom Renovations', '/services/bathroom-renovations']],
   '/services/kitchen-renovations': [['Services', '/services'], ['Kitchen Renovations', '/services/kitchen-renovations']],
@@ -278,3 +290,8 @@ export const ROUTE_PAGE_TYPES = {
 export function seoFor(path) {
   return PAGE_SEO[path] || SERVICE_SEO[path] || {};
 }
+
+/** Routes that are rendered and served but kept out of search and the sitemap. */
+export const NOINDEX_ROUTES = Object.keys(PAGE_SEO).filter((path) =>
+  /noindex/.test(PAGE_SEO[path].robots || '')
+);

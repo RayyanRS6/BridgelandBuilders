@@ -1,4 +1,5 @@
-import { useQuoteModal } from '../context/QuoteModalContext.jsx';
+import { Link } from 'react-router-dom';
+import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon, CheckIcon } from './icons.jsx';
 
 const CHECKLIST = [
@@ -9,8 +10,6 @@ const CHECKLIST = [
 ];
 
 export default function WhyUs() {
-  const { openModal } = useQuoteModal();
-
   return (
     <section className="why-section" id="why-us">
       <div className="container">
@@ -56,10 +55,10 @@ export default function WhyUs() {
               ))}
             </ul>
 
-            <button className="btn-pill-red open-quote-btn" onClick={openModal}>
-              <span>GET INSTANT QUOTE</span>
+            <Link to={CONSULTATION_PATH} className="btn-pill-red">
+              <span>{CONSULTATION_LABEL.toUpperCase()}</span>
               <ArrowRightIcon size={14} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

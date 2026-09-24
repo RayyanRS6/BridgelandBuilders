@@ -81,6 +81,7 @@ export function headFor(path) {
     description: meta.description,
     path,
     image: image || DEFAULT_IMAGE,
+    robots: meta.robots,
     jsonLd: graph(
       buildWebPage({
         path,

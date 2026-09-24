@@ -1,9 +1,8 @@
-import { useQuoteModal } from '../context/QuoteModalContext.jsx';
+import { Link } from 'react-router-dom';
+import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon } from './icons.jsx';
 
 export default function CtaBanner() {
-  const { openModal } = useQuoteModal();
-
   return (
     <section className="cta-banner-section" id="quote">
       <div className="container">
@@ -13,13 +12,10 @@ export default function CtaBanner() {
             <p>Contact Bridgeland Builders today. We’ll discuss your ideas, provide clear details, and get it done right.</p>
           </div>
           <div className="cta-banner-right">
-            <button
-              className="btn-pill-red btn-pill-lg open-quote-btn"
-              onClick={openModal}
-            >
-              <span>GET INSTANT QUOTE</span>
+            <Link to={CONSULTATION_PATH} className="btn-pill-red btn-pill-lg">
+              <span>{CONSULTATION_LABEL.toUpperCase()}</span>
               <ArrowRightIcon size={16} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

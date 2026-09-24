@@ -1,10 +1,8 @@
-import { useQuoteModal } from '../context/QuoteModalContext.jsx';
 import { Link } from 'react-router-dom';
+import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon, StarIcon } from './icons.jsx';
 
 export default function Hero() {
-  const { openModal } = useQuoteModal();
-
   return (
     <section className="hero-section" id="home">
       <div className="container">
@@ -22,10 +20,10 @@ export default function Hero() {
             </p>
             <div className="hero-cta-group">
               {/* Main CTA in Red */}
-              <button className="btn-pill-red open-quote-btn" onClick={openModal}>
-                <span>GET INSTANT QUOTE</span>
+              <Link to={CONSULTATION_PATH} className="btn-pill-red">
+                <span>{CONSULTATION_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={15} />
-              </button>
+              </Link>
               <Link to="/services" className="btn-pill-ghost">
                 <span>Our Services</span>
               </Link>

@@ -1,11 +1,9 @@
-import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { QuoteModalContext } from './context/QuoteModalContext.jsx';
 import ScrollToHash from './components/ScrollToHash.jsx';
 import TopBar from './components/TopBar.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
-import QuoteModal from './components/QuoteModal.jsx';
 
 const HomePage = lazy(() => import('./pages/Home.jsx'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
@@ -18,6 +16,7 @@ const BlogPostPage = lazy(() => import('./pages/BlogPostPage.jsx'));
 const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
 const BookingPage = lazy(() => import('./pages/BookingPage.jsx'));
 const OutsideWinnipegPage = lazy(() => import('./pages/OutsideWinnipegPage.jsx'));
+const FreeQuotePage = lazy(() => import('./pages/FreeQuotePage.jsx'));
 const WholeHomeRenovationsPage = lazy(() => import('./pages/services/WholeHomeRenovationsPage.jsx'));
 const BathroomRenovationsPage = lazy(() => import('./pages/services/BathroomRenovationsPage.jsx'));
 const KitchenRenovationsPage = lazy(() => import('./pages/services/KitchenRenovationsPage.jsx'));
@@ -29,35 +28,13 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
 /**
  * The whole application below the router. The client wraps this in
  * BrowserRouter; the build-time prerenderer wraps it in StaticRouter.
+ *
+ * Every quote/consultation button on the site links to /free-quote, which
+ * holds the site's own form and calendar (src/components/QuoteBookingForm.jsx).
  */
 export default function AppShell() {
-  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
-
-  // 2. Modal Interactivity
-  const openModal = useCallback(() => {
-    setIsQuoteOpen(true);
-    document.body.style.overflow = 'hidden';
-  }, []);
-
-  const closeModal = useCallback(() => {
-    setIsQuoteOpen(false);
-    document.body.style.overflow = '';
-  }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && isQuoteOpen) {
-        closeModal();
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isQuoteOpen, closeModal]);
-
-  const modalApi = useMemo(() => ({ openModal, closeModal }), [openModal, closeModal]);
-
   return (
-    <QuoteModalContext.Provider value={modalApi}>
+    <>
       <ScrollToHash />
 
       {/* 1. TOP ANNOUNCEMENT BAR */}
@@ -79,6 +56,8 @@ export default function AppShell() {
           <Route path="/contact-us" element={<ContactPage />} />
           <Route path="/book-online" element={<BookingPage />} />
           <Route path="/outside-winnipeg" element={<OutsideWinnipegPage />} />
+          {/* Ad landing page — not linked from the site, see PAGE_SEO['/free-quote']. */}
+          <Route path="/free-quote" element={<FreeQuotePage />} />
 
           <Route path="/services/whole-home-renovations" element={<WholeHomeRenovationsPage />} />
           <Route path="/services/bathroom-renovations" element={<BathroomRenovationsPage />} />
@@ -101,9 +80,6 @@ export default function AppShell() {
 
       {/* 12. SITEMAP FOOTER */}
       <Footer />
-
-      {/* 13. INSTANT QUOTE MODAL */}
-      <QuoteModal isOpen={isQuoteOpen} closeModal={closeModal} />
-    </QuoteModalContext.Provider>
+    </>
   );
 }

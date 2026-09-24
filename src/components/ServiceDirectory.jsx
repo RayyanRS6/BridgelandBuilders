@@ -1,12 +1,11 @@
 import { Link, useSearchParams } from 'react-router-dom';
-import { useQuoteModal } from '../context/QuoteModalContext.jsx';
 import { SERVICE_CATEGORIES } from '../data/serviceCategories.js';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
+import { CONSULTATION_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon } from './icons.jsx';
 import EstimatorSection from './EstimatorSection.jsx';
 
 export default function ServiceDirectory() {
-  const { openModal } = useQuoteModal();
   const [searchParams] = useSearchParams();
   const activeCategory = SERVICE_CATEGORIES.find(
     (category) => category.id === searchParams.get('category')
@@ -86,9 +85,9 @@ export default function ServiceDirectory() {
                         Explore service <ArrowRightIcon size={13} />
                       </Link>
                     ) : (
-                      <button className="service-directory-action" type="button" onClick={openModal}>
+                      <Link className="service-directory-action" to={CONSULTATION_PATH}>
                         Ask about this service <ArrowRightIcon size={13} />
-                      </button>
+                      </Link>
                     )}
                   </article>
                 ))}

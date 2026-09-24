@@ -10,6 +10,11 @@ export const SITE_PHONE = '431-866-5644';
 export const SITE_PHONE_E164 = '+1-431-866-5644';
 export const SITE_LOCALE = 'en_CA';
 
+// Every "book a consultation" button on the site leads to the quote form page.
+// Rename the offer here and every button follows.
+export const CONSULTATION_PATH = '/free-quote';
+export const CONSULTATION_LABEL = 'Free On-Site Consultation';
+
 // Verified facts only — taken from the live site. Nothing here is invented.
 export const BUSINESS = {
   name: SITE_NAME,

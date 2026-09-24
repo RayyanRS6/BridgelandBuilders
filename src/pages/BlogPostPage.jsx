@@ -4,8 +4,8 @@ import CtaBanner from '../components/CtaBanner.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import BlogCard, { formatPostDate } from '../components/BlogCard.jsx';
 import { ArrowRightIcon, CalendarIcon, ClockIcon } from '../components/icons.jsx';
-import { useQuoteModal } from '../context/QuoteModalContext.jsx';
 import { getPostBySlug, getRelatedPosts } from '../data/blogPosts.js';
+import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
 import { buildFaqItems, buildPostHead, buildSections } from '../data/postContent.js';
 import useSeo from '../hooks/useSeo.js';
 import useScrollReveal from '../hooks/useScrollReveal.js';
@@ -61,7 +61,6 @@ function renderBody(items, keyPrefix) {
 export default function BlogPostPage() {
   const { slug } = useParams();
   const post = getPostBySlug(slug);
-  const { openModal } = useQuoteModal();
   useScrollReveal();
 
   const sections = useMemo(() => (post ? buildSections(post.blocks) : []), [post]);
@@ -155,10 +154,10 @@ export default function BlogPostPage() {
                 <h3>Planning a project like this in Winnipeg?</h3>
                 <p>Tell us what you have in mind and we will put together a clear, written quote.</p>
               </div>
-              <button className="btn-pill-red" type="button" onClick={openModal}>
-                <span>GET INSTANT QUOTE</span>
+              <Link className="btn-pill-red" to={CONSULTATION_PATH}>
+                <span>{CONSULTATION_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={14} />
-              </button>
+              </Link>
             </div>
 
             <Link className="blog-back-link" to="/blog">← Back to all articles</Link>

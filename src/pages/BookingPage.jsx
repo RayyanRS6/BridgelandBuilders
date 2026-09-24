@@ -1,7 +1,7 @@
 import PageHero from '../components/PageHero.jsx';
 import BookingAside from '../components/BookingAside.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
-import { BookingCalendar } from '../components/LeadConnector.jsx';
+import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
 import useScrollReveal from '../hooks/useScrollReveal.js';
 
@@ -23,12 +23,8 @@ export default function BookingPage() {
         <div className="container">
           <div className="lead-grid">
             <div className="reveal"><BookingAside serviceName="project" /></div>
-            <div className="lead-card reveal">
-              <div className="lead-card-head">
-                <h3>Choose your appointment</h3>
-                <p>Pick a date and time below. You will get a confirmation straight away, and a reminder before the visit.</p>
-              </div>
-              <BookingCalendar />
+            <div className="reveal">
+              <QuoteBookingForm id="booking-form" title="Book Your Free Consultation" />
             </div>
           </div>
         </div>

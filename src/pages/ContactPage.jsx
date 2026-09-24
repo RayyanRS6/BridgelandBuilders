@@ -1,6 +1,6 @@
 import PageHero from '../components/PageHero.jsx';
 import BookingAside from '../components/BookingAside.jsx';
-import { LeadFormEmbed } from '../components/LeadConnector.jsx';
+import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
 import useScrollReveal from '../hooks/useScrollReveal.js';
 
@@ -20,12 +20,8 @@ export default function ContactPage() {
         <div className="container">
           <div className="lead-grid">
             <div className="reveal"><BookingAside serviceName="project" /></div>
-            <div className="lead-card reveal">
-              <div className="lead-card-head">
-                <h3>Request Your Free Quote</h3>
-                <p>Share the project details below. There is no obligation and no pushy follow-up.</p>
-              </div>
-              <LeadFormEmbed instanceId="contact-page-lead-form" />
+            <div className="reveal">
+              <QuoteBookingForm id="contact-form" title="Request Your Free Quote" />
             </div>
           </div>
         </div>

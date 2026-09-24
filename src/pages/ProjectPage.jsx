@@ -1,24 +1,34 @@
-import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useQuoteModal } from '../context/QuoteModalContext.jsx';
 import useScrollReveal from '../hooks/useScrollReveal.js';
-import { BookingSurvey } from '../components/LeadConnector.jsx';
 import BookingAside from '../components/BookingAside.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
+import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import Ticker from '../components/Ticker.jsx';
 import { ArrowRightIcon, CheckIcon } from '../components/icons.jsx';
 import { PROJECT_ESTIMATORS } from '../data/estimators.js';
+import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
+
+const FORM_ID = 'service-quote-form';
+
+// The "Type of renovation" answer each service page pre-ticks on its form.
+// Home extensions have no matching option, so that page leaves it open.
+const FORM_TYPE_BY_PROJECT = {
+  'whole-home-renovation': 'Whole Home Renovation',
+  'bathroom-renovation': 'Bathroom',
+  'kitchen-renovation': 'Kitchen',
+  'basement-renovation': 'Basement',
+  'commercial-renovation': 'Commercial',
+};
 
 export default function ProjectPage({ project }) {
-  const { openModal } = useQuoteModal();
-  const bookingRef = useRef(null);
   const estimatorSrc = PROJECT_ESTIMATORS[project.slug];
+  const formType = FORM_TYPE_BY_PROJECT[project.slug];
 
   useScrollReveal();
 
-  const scrollTo = (ref) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const scrollToForm = () => {
+    document.getElementById(FORM_ID)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
@@ -34,10 +44,10 @@ export default function ProjectPage({ project }) {
         </nav>
       </div>
 
-      {/* HERO + BOOKING CALENDAR */}
+      {/* HERO + QUOTE FORM AND CALENDAR */}
       <section className="hero-section" id="book">
         <div className="container">
-          <div className="hero-card hero-booking reveal" ref={bookingRef}>
+          <div className="hero-card hero-booking reveal">
             <div className="hero-content">
               <div className="badge-soft">
                 <CheckIcon size={13} />
@@ -58,7 +68,7 @@ export default function ProjectPage({ project }) {
                 ))}
               </ul>
               <div className="hero-cta-group">
-                <button className="btn-pill-red" onClick={() => scrollTo(bookingRef)}>
+                <button className="btn-pill-red" onClick={scrollToForm}>
                   <span>BOOK AN APPOINTMENT</span>
                   <ArrowRightIcon size={15} />
                 </button>
@@ -68,9 +78,10 @@ export default function ProjectPage({ project }) {
               </div>
             </div>
 
-            <BookingSurvey
-              heading="Book Your Free Visit"
-              subheading="Pick a day and time that works for you — you’ll get a confirmation straight away."
+            <QuoteBookingForm
+              id={FORM_ID}
+              title="Book Your Free Consultation"
+              initialTypes={formType ? [formType] : []}
             />
           </div>
         </div>
@@ -129,7 +140,7 @@ export default function ProjectPage({ project }) {
                 ))}
               </ul>
 
-              <button className="btn-pill-red" onClick={() => scrollTo(bookingRef)}>
+              <button className="btn-pill-red" onClick={scrollToForm}>
                 <span>CHECK AVAILABLE DATES</span>
                 <ArrowRightIcon size={14} />
               </button>
@@ -286,13 +297,10 @@ export default function ProjectPage({ project }) {
               <p>Grab a free quote instead — tell us roughly what you need and we’ll come back with numbers. No appointment required.</p>
             </div>
             <div className="cta-banner-right">
-              <button
-                className="btn-pill-red btn-pill-lg open-quote-btn"
-                onClick={openModal}
-              >
-                <span>GET INSTANT QUOTE</span>
+              <Link to={CONSULTATION_PATH} className="btn-pill-red btn-pill-lg">
+                <span>{CONSULTATION_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={16} />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

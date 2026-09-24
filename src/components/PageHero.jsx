@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
-import { useQuoteModal } from '../context/QuoteModalContext.jsx';
+import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon } from './icons.jsx';
 
 export default function PageHero({ eyebrow, title, highlight, description, primaryLink }) {
-  const { openModal } = useQuoteModal();
-
   return (
     <section className="page-hero">
       <div className="container">
@@ -19,9 +17,9 @@ export default function PageHero({ eyebrow, title, highlight, description, prima
                 <ArrowRightIcon size={15} />
               </Link>
             )}
-            <button className={primaryLink ? 'btn-pill-ghost' : 'btn-pill-red'} onClick={openModal}>
-              Get Instant Quote
-            </button>
+            <Link className={primaryLink ? 'btn-pill-ghost' : 'btn-pill-red'} to={CONSULTATION_PATH}>
+              {CONSULTATION_LABEL}
+            </Link>
           </div>
         </div>
       </div>
