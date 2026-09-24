@@ -229,6 +229,8 @@ export async function bookAppointment(contactId, startTime, { lead } = {}) {
       meetingLocationType: 'custom',
       overrideLocationConfig: true,
       address: meetingAddress,
+      location: meetingAddress,
+      meetingLocation: meetingAddress,
       selectedTimezone: BOOKING_CALENDAR.timeZone,
       appointmentStatus: 'confirmed',
       toNotify: true,
