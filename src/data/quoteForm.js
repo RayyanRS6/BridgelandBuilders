@@ -81,15 +81,17 @@ export const BOOKING_CALENDAR = {
 // Tag added to every contact this form creates, so these leads can be filtered
 // (and attributed to the ads) inside GoHighLevel.
 export const LEAD_TAG = 'free-quote-page';
+export const FORM_FILLED_TAG = 'website-form-filled';
 export const LEAD_SOURCE = 'Free Quote Page';
 
 /**
- * Every tag a lead should carry: the page tag, one per answer for each
- * question that has a tagPrefix, and OUTSIDE_AREA_TAG when out of the service
- * area. GoHighLevel stores tags in lower case, so they are built that way here.
+ * Every tag a lead should carry: the website-form-filled tag, the page tag,
+ * one per answer for each question that has a tagPrefix, and OUTSIDE_AREA_TAG
+ * when out of the service area. GoHighLevel stores tags in lower case, so they
+ * are built that way here.
  */
 export function tagsForLead(lead) {
-  const tags = [LEAD_TAG];
+  const tags = [FORM_FILLED_TAG, LEAD_TAG];
   if (!isInServiceArea(lead)) tags.push(OUTSIDE_AREA_TAG);
   for (const question of QUOTE_QUESTIONS) {
     if (question.tagPrefix === undefined) continue;
