@@ -2418,21 +2418,12 @@
   }
 }
 
-/* Phones. Most of this page's traffic arrives from Facebook and Instagram,
-   whose in-app browsers keep their own toolbars on screen and leave roughly
-   560-650px of visible height. So the form comes straight after the offer —
-   its first fields sit on the first screen — followed by the call button and
-   the three promises. Desktop keeps the side-by-side layout. */
-@media (max-width: 640px) {
-  .lp-hero {
-    padding: 14px 0 34px;
-  }
+@media (max-width: 900px) {
   .lp-hero .hero-card.hero-booking {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
-    padding: 24px 12px 26px;
   }
   .lp-hero .hero-content {
     display: contents;
@@ -2443,42 +2434,78 @@
   }
   .lp-hero .hero-title {
     order: 2;
-    margin-bottom: 10px;
-    font-size: clamp(1.85rem, 8.8vw, 2.4rem);
-    line-height: 1.08;
-  }
-  .lp-hero .hero-subtitle {
-    order: 3;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-    line-height: 1.55;
+    margin-bottom: 18px;
+    text-align: center;
   }
   .lp-hero .booking-card {
-    order: 4;
-    padding: 16px 14px 20px;
-    border-radius: var(--radius-md);
+    order: 3;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
     scroll-margin-top: 80px;
   }
-  .lp-hero .hero-cta-group {
-    order: 5;
-    margin-top: 16px;
+  .lp-hero .hero-subtitle {
+    order: 4;
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    text-align: center;
+    max-width: 540px;
   }
-  /* The form is directly above, so the "Get my free quote" jump is redundant
-     here; the call button stays as the alternative. */
-  .lp-hero .hero-cta-group .btn-pill-red {
-    display: none;
-  }
-  /* Centring the block rather than each line keeps the ticks in one column. */
   .lp-hero .hero-points {
-    order: 6;
+    order: 5;
     width: fit-content;
     max-width: 100%;
     margin: 18px auto 0;
     align-items: flex-start;
     gap: 8px;
   }
+  .lp-hero .hero-cta-group {
+    order: 6;
+    margin-top: 20px;
+  }
+  /* The form is directly above, so the "Get my free quote" jump is redundant
+     here; the call button stays as the alternative. */
+  .lp-hero .hero-cta-group .btn-pill-red {
+    display: none;
+  }
+}
+
+/* Phones. Most of this page's traffic arrives from Facebook and Instagram,
+   whose in-app browsers keep their own toolbars on screen and leave roughly
+   560-650px of visible height. So the form comes straight after the hero title —
+   its first fields sit right on the first screen — followed by the subtext,
+   the three promises, and the call button. Desktop keeps the side-by-side layout. */
+@media (max-width: 640px) {
+  .lp-hero {
+    padding: 14px 0 34px;
+  }
+  .lp-hero .hero-card.hero-booking {
+    padding: 24px 12px 26px;
+  }
+  .lp-hero .hero-title {
+    margin-bottom: 16px;
+    font-size: clamp(1.85rem, 8.8vw, 2.4rem);
+    line-height: 1.08;
+  }
+  .lp-hero .booking-card {
+    padding: 16px 14px 20px;
+    border-radius: var(--radius-md);
+  }
+  .lp-hero .hero-subtitle {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    padding: 0 4px;
+  }
+  .lp-hero .hero-points {
+    margin: 16px auto 0;
+  }
   .lp-hero .hero-points li {
     font-size: 0.92rem;
+  }
+  .lp-hero .hero-cta-group {
+    margin-top: 16px;
   }
 
   .qf-steps {
