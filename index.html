@@ -35,11 +35,13 @@
   <link rel="dns-prefetch" href="https://static.wixstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
 
-  <!-- Meta Pixel Code. Meta's standard snippet, loaded async so it never delays
-       the page, and skipped on localhost so local development and testing never
-       send visits to the ad account. Later page views inside the site are sent
-       by src/components/MetaPixelPageViews.jsx; the quote form sends Lead and
-       Schedule (src/lib/bookingApi.js). -->
+  <!-- Meta Pixel Code. This is the only place the pixel lives: every page on
+       the site is prerendered from this file (scripts/prerender.mjs), so it is
+       in the <head> of all of them. Meta's standard snippet, loaded async so it
+       never delays the page, and skipped on localhost so local development and
+       testing never send visits to the ad account. Later page views inside the
+       site are sent by src/components/MetaPixelPageViews.jsx; the quote form
+       sends Lead and Schedule (src/lib/bookingApi.js). -->
   <link rel="preconnect" href="https://connect.facebook.net">
   <script>
   if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
