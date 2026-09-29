@@ -56,12 +56,11 @@ out('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls
-  .map((u) => `  <url>
+    .map((u) => `  <url>
     <loc>${SITE_URL}${u.path}</loc>
     <lastmod>${u.lastmod}</lastmod>
     <changefreq>${u.freq}</changefreq>
-    <priority>${u.priority}</priority>${
-      u.image
+    <priority>${u.priority}</priority>${u.image
         ? `
     <image:image>
       <image:loc>${esc(u.image)}</image:loc>
@@ -69,9 +68,9 @@ ${urls
       <image:caption>${esc(u.imageAlt || u.title)}</image:caption>
     </image:image>`
         : ''
-    }
+      }
   </url>`)
-  .join('\n')}
+    .join('\n')}
 </urlset>
 `);
 
