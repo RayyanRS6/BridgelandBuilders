@@ -297,8 +297,11 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
 
           {alertBox}
 
+          {/* Not "Next: Pick a Time": an old Meta Event Setup Tool rule on the
+              pixel sends a Lead for any button with that text, which would
+              double-count the Lead this form sends in submitDetails. */}
           <button type="submit" className="btn-pill-red qf-submit" disabled={busy}>
-            {busy ? 'SAVING…' : (<><span>NEXT: PICK A TIME</span><ArrowRightIcon size={15} /></>)}
+            {busy ? 'SAVING…' : (<><span>CONTINUE: PICK A TIME</span><ArrowRightIcon size={15} /></>)}
           </button>
           <p className="qf-fineprint">
             No obligation, and we never sell your details. See our <Link to="/privacy-policy">Privacy Policy</Link>.
