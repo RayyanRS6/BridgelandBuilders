@@ -17,10 +17,10 @@ import useScrollReveal from '../hooks/useScrollReveal.js';
 // from the form's embed code: `src` is the iframe's src and `formId` its
 // data-form-id. Until `src` is set, the card offers phone and email instead.
 const CONTACT_FORM = {
-  src: '',
-  formId: '',
-  title: 'Contact Bridgeland Builders',
-  height: 620,
+  src: 'https://api.leadconnectorhq.com/widget/form/8P6zEkRy4MCd9GyRyAdF',
+  formId: '8P6zEkRy4MCd9GyRyAdF',
+  title: 'A2P Form',
+  height: 928,
 };
 
 export default function GetInTouchPage() {
@@ -95,7 +95,7 @@ export default function GetInTouchPage() {
                   <>
                     <LeadConnectorForm {...CONTACT_FORM} />
                     <p className="qf-fineprint contact-sms-terms">
-                      By checking the SMS consent box, you agree to receive text messages from {SITE_NAME}. Message
+                      By checking an SMS consent box above, you agree to receive text messages from {SITE_NAME}. Message
                       frequency may vary. Message and data rates may apply. Reply STOP at any time to unsubscribe or
                       HELP for help. We never share your mobile number or consent with third parties for marketing. See
                       our <Link to="/privacy-policy">Privacy Policy</Link> and{' '}

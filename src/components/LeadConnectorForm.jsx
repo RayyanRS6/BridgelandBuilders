@@ -38,6 +38,8 @@ export default function LeadConnectorForm({ src, formId, title, height = 620 }) 
         data-height={height}
         data-layout-iframe-id={iframeId}
         data-form-id={formId}
+        data-cookie-consent="true"
+        data-cookie-consent-provider="auto"
         title={title}
       />
     </div>
