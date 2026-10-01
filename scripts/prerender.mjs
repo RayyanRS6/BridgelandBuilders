@@ -63,10 +63,12 @@ function headHtml(head) {
   return html;
 }
 
+// Replacer functions, not strings, so a "$$", "$&" or "$'" in the page content
+// (prices, for example) is inserted as written instead of read as a pattern.
 function pageHtml(head, appHtml) {
   return template
-    .replace(/<!-- seo:head:start -->[\s\S]*?<!-- seo:head:end -->/, `<!-- seo:head:start -->\n${headHtml(head)}  <!-- seo:head:end -->`)
-    .replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+    .replace(/<!-- seo:head:start -->[\s\S]*?<!-- seo:head:end -->/, () => `<!-- seo:head:start -->\n${headHtml(head)}  <!-- seo:head:end -->`)
+    .replace('<div id="root"></div>', () => `<div id="root">${appHtml}</div>`);
 }
 
 let written = 0;

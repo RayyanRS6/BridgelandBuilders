@@ -211,9 +211,11 @@ out('_redirects', `/index.html   /   301!
 const indexUrl = new URL('../index.html', import.meta.url);
 let html = readFileSync(indexUrl, 'utf8');
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': buildOrganizationGraph() });
+// A replacer function, not a string: in a replacement string "$$" means "$",
+// which turned priceRange "$$" into "$".
 html = html.replace(
   /<!-- seo:jsonld:start -->[\s\S]*?<!-- seo:jsonld:end -->/,
-  `<!-- seo:jsonld:start -->\n  <script type="application/ld+json">${jsonLd}</script>\n  <!-- seo:jsonld:end -->`
+  () => `<!-- seo:jsonld:start -->\n  <script type="application/ld+json">${jsonLd}</script>\n  <!-- seo:jsonld:end -->`
 );
 writeFileSync(indexUrl, html);
 
