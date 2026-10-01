@@ -60,10 +60,22 @@ export const PAGE_SEO = {
     description:
       'Renovation inspiration, expert tips and industry insights from Bridgeland Builders, covering residential and commercial renovation ideas for Winnipeg properties.',
   },
+  // Second contact page, holding the GoHighLevel form with the SMS consent
+  // checkbox that the Privacy Policy and Terms of Service point to.
+  '/contact': {
+    title: 'Get in Touch | Bridgeland Builders Winnipeg',
+    description:
+      'Send Bridgeland Builders a message about your renovation or project. Call 431-866-5644, email info@bridgelandbuilders.com, or use our contact form.',
+  },
   '/privacy-policy': {
     title: 'Privacy Policy | Bridgeland Builders',
     description:
-      'How Bridgeland Builders collects, uses and protects personal information from our website, quote form, booking calendar, price guide and live chat.',
+      'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, live chat and text messages.',
+  },
+  '/terms-of-service': {
+    title: 'Terms of Service | Bridgeland Builders',
+    description:
+      'The terms for using the Bridgeland Builders website and services, including our text messaging terms, message frequency, and how to opt out.',
   },
   // Paid-traffic landing page. Kept out of search (noindex) and out of the
   // sitemap so it never competes with the organic pages it overlaps, but still
@@ -276,7 +288,9 @@ export const ROUTE_TRAILS = {
   '/outside-winnipeg': [['Outside Winnipeg', '/outside-winnipeg']],
   '/blog': [['Blog', '/blog']],
   '/free-quote': [['Free Quote', '/free-quote']],
+  '/contact': [['Get in Touch', '/contact']],
   '/privacy-policy': [['Privacy Policy', '/privacy-policy']],
+  '/terms-of-service': [['Terms of Service', '/terms-of-service']],
   '/services/whole-home-renovations': [['Services', '/services'], ['Whole Home Renovations', '/services/whole-home-renovations']],
   '/services/bathroom-renovations': [['Services', '/services'], ['Bathroom Renovations', '/services/bathroom-renovations']],
   '/services/kitchen-renovations': [['Services', '/services'], ['Kitchen Renovations', '/services/kitchen-renovations']],
@@ -291,6 +305,7 @@ export const ROUTE_PAGE_TYPES = {
   '/projects': 'CollectionPage',
   '/blog': 'CollectionPage',
   '/contact-us': 'ContactPage',
+  '/contact': 'ContactPage',
 };
 
 export function seoFor(path) {

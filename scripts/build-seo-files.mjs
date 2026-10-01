@@ -31,9 +31,11 @@ const STATIC_ROUTES = [
   ['/faqs', '0.7', 'yearly'],
   ['/outside-winnipeg', '0.5', 'yearly'],
   ['/contact-us', '0.8', 'yearly'],
+  ['/contact', '0.5', 'yearly'],
   ['/book-online', '0.8', 'monthly'],
   ['/blog', '0.9', 'weekly'],
   ['/privacy-policy', '0.3', 'yearly'],
+  ['/terms-of-service', '0.3', 'yearly'],
 ];
 
 const urls = [

@@ -14,6 +14,15 @@ export function PhoneIcon({ size = 14, strokeWidth = '2.5' }) {
   );
 }
 
+export function MailIcon({ size = 16 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+      <path d="M22 7l-10 6L2 7" />
+    </svg>
+  );
+}
+
 export function PinIcon({ size = 16 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

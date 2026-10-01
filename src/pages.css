@@ -2595,3 +2595,60 @@
 .footer-bottom a:hover {
   color: #fff;
 }
+
+/* Business contact block on the Privacy Policy and Terms of Service. */
+.policy-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 24px;
+  padding: 20px 24px;
+  background: var(--bg-cream);
+  border-left: 4px solid var(--accent-seagreen);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--text-muted);
+  font-style: normal;
+  overflow-wrap: anywhere;
+}
+
+.policy-contact strong {
+  color: var(--text-main);
+}
+
+/* -------------------------------------------------------------
+   P11. GET IN TOUCH (/contact)
+   Reuses the lead section's dark details panel and white card;
+   these rules style the contact links and the fallback shown
+   until the GoHighLevel form is set up.
+   ------------------------------------------------------------- */
+.contact-direct-section {
+  padding-top: 38px;
+}
+
+.contact-direct-section .lead-aside-item a {
+  color: #fff;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.contact-direct-section .lead-aside-item a:hover {
+  color: #8ed2dc;
+}
+
+.contact-direct-fallback p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.contact-direct-fallback p a {
+  color: var(--accent-seagreen);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-sms-terms {
+  margin-top: 16px;
+  text-align: left;
+}

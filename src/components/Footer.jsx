@@ -79,7 +79,8 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>
             © 2026 Bridgeland Builders. Winnipeg, Manitoba. All rights reserved. ·{' '}
-            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link> ·{' '}
+            <Link to="/terms-of-service">Terms of Service</Link>
           </p>
           <div className="footer-social-links">
             <span title="Facebook">f</span>

@@ -8,7 +8,24 @@ export const SITE_URL = (
 export const SITE_NAME = 'Bridgeland Builders';
 export const SITE_PHONE = '431-866-5644';
 export const SITE_PHONE_E164 = '+1-431-866-5644';
+export const SITE_EMAIL = 'info@bridgelandbuilders.com';
+export const SITE_ADDRESS = {
+  street: '845 Dakota St',
+  city: 'Winnipeg',
+  region: 'MB',
+  postalCode: 'R2M 5M3',
+  country: 'Canada',
+};
+export const SITE_ADDRESS_LINE = `${SITE_ADDRESS.street}, ${SITE_ADDRESS.city}, ${SITE_ADDRESS.region} ${SITE_ADDRESS.postalCode}, ${SITE_ADDRESS.country}`;
 export const SITE_LOCALE = 'en_CA';
+
+// Text messages: the page whose form carries the SMS consent checkbox, and the
+// confirmation text sent after someone opts in. The Privacy Policy and Terms of
+// Service quote both, and our SMS (A2P 10DLC) registration is checked against
+// them, so the message sent from GoHighLevel must match this word for word.
+export const SMS_OPT_IN_PATH = '/contact';
+export const SMS_CONFIRMATION =
+  'You are now subscribed to messages from Bridgeland Builders. Msg & data rates may apply. Reply STOP to unsubscribe, HELP for help.';
 
 // Every "book a consultation" button on the site leads to the quote form page.
 // Rename the offer here and every button follows.

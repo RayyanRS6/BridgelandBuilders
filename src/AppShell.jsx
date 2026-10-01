@@ -18,7 +18,9 @@ const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
 const BookingPage = lazy(() => import('./pages/BookingPage.jsx'));
 const OutsideWinnipegPage = lazy(() => import('./pages/OutsideWinnipegPage.jsx'));
 const FreeQuotePage = lazy(() => import('./pages/FreeQuotePage.jsx'));
+const GetInTouchPage = lazy(() => import('./pages/GetInTouchPage.jsx'));
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage.jsx'));
+const TermsOfServicePage = lazy(() => import('./pages/TermsOfServicePage.jsx'));
 const WholeHomeRenovationsPage = lazy(() => import('./pages/services/WholeHomeRenovationsPage.jsx'));
 const BathroomRenovationsPage = lazy(() => import('./pages/services/BathroomRenovationsPage.jsx'));
 const KitchenRenovationsPage = lazy(() => import('./pages/services/KitchenRenovationsPage.jsx'));
@@ -61,7 +63,10 @@ export default function AppShell() {
           <Route path="/outside-winnipeg" element={<OutsideWinnipegPage />} />
           {/* Ad landing page — not linked from the site, see PAGE_SEO['/free-quote']. */}
           <Route path="/free-quote" element={<FreeQuotePage />} />
+          {/* Contact form with the SMS opt-in, see SMS_OPT_IN_PATH in siteConfig.js. */}
+          <Route path="/contact" element={<GetInTouchPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
 
           <Route path="/services/whole-home-renovations" element={<WholeHomeRenovationsPage />} />
           <Route path="/services/bathroom-renovations" element={<BathroomRenovationsPage />} />
