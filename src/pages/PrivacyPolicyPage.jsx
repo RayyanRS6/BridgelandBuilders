@@ -162,6 +162,7 @@ export default function PrivacyPolicyPage() {
               <li>To plan and carry out your renovation, process your transactions, and stand behind our work afterwards.</li>
               <li>To administer a promotion, survey or other site feature.</li>
               <li>To send periodic emails regarding your project or our other services.</li>
+              <li>To send promotional messages, such as special offers and discounts, by email or — if you have opted in to marketing texts — text message.</li>
               <li>To understand which ads and pages bring people to us, and to show our ads to people likely to be interested.</li>
               <li>To keep the website working, secure and free of spam.</li>
               <li>To meet our legal, accounting and tax obligations.</li>

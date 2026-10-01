@@ -119,8 +119,9 @@ export default function TermsOfServicePage() {
             <p>
               By submitting your phone number and checking the consent checkbox on our contact form at{' '}
               <Link to={SMS_OPT_IN_PATH}>{OPT_IN_URL}</Link>, you agree to receive SMS text messages from {SITE_NAME}.
-              These messages may include: service updates, appointment confirmations, document-related inquiries, and
-              transactional or support messages.
+              These messages may include: service updates, appointment confirmations and reminders, document-related
+              inquiries, transactional or support messages, and promotional messages, such as special offers and
+              discounts. Promotional messages are sent only if you check the marketing consent box.
             </p>
             <p>Upon opting in, you will receive a confirmation SMS: “{SMS_CONFIRMATION}”</p>
             <p>
