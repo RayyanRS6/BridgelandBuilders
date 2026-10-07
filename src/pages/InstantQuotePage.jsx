@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
+import { ArrowRightIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
 import { INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_E164 } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
@@ -31,9 +33,23 @@ export default function InstantQuotePage() {
             <EstimatorEmbed src={ESTIMATOR_URLS.overall} title="Free instant quote - EstimatorX360" />
           </div>
 
-          <p className="instant-quote-call">
-            Rather talk it through? Call us at <a href={`tel:${SITE_PHONE_E164}`}>{SITE_PHONE}</a>.
-          </p>
+          {/* For visitors who are not after a price yet: book a visit or browse. */}
+          <div className="instant-quote-next">
+            <h2>Prefer to talk it through?</h2>
+            <p>
+              Book a free on-site visit and we’ll look at the space with you, or browse everything we build first.
+              You can also call us at <a href={`tel:${SITE_PHONE_E164}`}>{SITE_PHONE}</a>.
+            </p>
+            <div className="hero-cta-group">
+              <Link to="/book-online" className="btn-pill-red">
+                <span>BOOK A FREE ON-SITE VISIT</span>
+                <ArrowRightIcon size={15} />
+              </Link>
+              <Link to="/services" className="btn-pill-ghost">
+                <span>View All Services</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
