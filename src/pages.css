@@ -2656,22 +2656,38 @@
 /* -------------------------------------------------------------
    P12. INSTANT QUOTE (/instant-quote)
    The price guide section from /services as a page of its own;
-   only the top spacing and the call line under it are new.
+   only the top spacing and the next steps under it are new.
    ------------------------------------------------------------- */
 .instant-quote-section {
   padding-top: 56px;
 }
 
-.instant-quote-call {
-  margin-top: 22px;
+.instant-quote-next {
+  max-width: 640px;
+  margin: 48px auto 0;
   text-align: center;
-  color: var(--text-muted);
 }
 
-.instant-quote-call a {
+.instant-quote-next h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.instant-quote-next p {
+  margin-bottom: 22px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.instant-quote-next p a {
   color: var(--accent-seagreen);
   font-weight: 700;
   white-space: nowrap;
+}
+
+.instant-quote-next .hero-cta-group {
+  justify-content: center;
 }
 
 /* Clears the sticky navbar when a service page scrolls to its estimator. */
@@ -2686,8 +2702,14 @@
   .instant-quote-section .section-header {
     margin-bottom: 20px;
   }
-  .instant-quote-call {
-    margin-top: 18px;
-    font-size: 0.93rem;
+  .instant-quote-next {
+    margin-top: 32px;
+  }
+  .instant-quote-next h2 {
+    font-size: 1.35rem;
+  }
+  .instant-quote-next p {
+    margin-bottom: 18px;
+    font-size: 0.95rem;
   }
 }
