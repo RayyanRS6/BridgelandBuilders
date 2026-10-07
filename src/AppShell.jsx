@@ -18,6 +18,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
 const BookingPage = lazy(() => import('./pages/BookingPage.jsx'));
 const OutsideWinnipegPage = lazy(() => import('./pages/OutsideWinnipegPage.jsx'));
 const FreeQuotePage = lazy(() => import('./pages/FreeQuotePage.jsx'));
+const InstantQuotePage = lazy(() => import('./pages/InstantQuotePage.jsx'));
 const GetInTouchPage = lazy(() => import('./pages/GetInTouchPage.jsx'));
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage.jsx'));
 const TermsOfServicePage = lazy(() => import('./pages/TermsOfServicePage.jsx'));
@@ -33,8 +34,10 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
  * The whole application below the router. The client wraps this in
  * BrowserRouter; the build-time prerenderer wraps it in StaticRouter.
  *
- * Every quote/consultation button on the site links to /free-quote, which
- * holds the site's own form and calendar (src/components/QuoteBookingForm.jsx).
+ * Every "Get Free Instant Quote" button on the site links to /instant-quote,
+ * which embeds the EstimatorX360 estimator. On-site visits are booked through
+ * the site's own form and calendar (src/components/QuoteBookingForm.jsx) on
+ * /free-quote, /book-online and the service pages.
  */
 export default function AppShell() {
   return (
@@ -63,6 +66,8 @@ export default function AppShell() {
           <Route path="/outside-winnipeg" element={<OutsideWinnipegPage />} />
           {/* Ad landing page — not linked from the site, see PAGE_SEO['/free-quote']. */}
           <Route path="/free-quote" element={<FreeQuotePage />} />
+          {/* The estimator page every instant quote button leads to. */}
+          <Route path="/instant-quote" element={<InstantQuotePage />} />
           {/* Contact form with the SMS opt-in, see SMS_OPT_IN_PATH in siteConfig.js. */}
           <Route path="/contact" element={<GetInTouchPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

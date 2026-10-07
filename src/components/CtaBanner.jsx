@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon } from './icons.jsx';
 
 export default function CtaBanner() {
@@ -12,8 +12,8 @@ export default function CtaBanner() {
             <p>Contact Bridgeland Builders today. We’ll discuss your ideas, provide clear details, and get it done right.</p>
           </div>
           <div className="cta-banner-right">
-            <Link to={CONSULTATION_PATH} className="btn-pill-red btn-pill-lg">
-              <span>{CONSULTATION_LABEL.toUpperCase()}</span>
+            <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red btn-pill-lg">
+              <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
               <ArrowRightIcon size={16} />
             </Link>
           </div>

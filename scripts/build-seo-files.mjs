@@ -32,6 +32,7 @@ const STATIC_ROUTES = [
   ['/outside-winnipeg', '0.5', 'yearly'],
   ['/contact-us', '0.8', 'yearly'],
   ['/contact', '0.5', 'yearly'],
+  ['/instant-quote', '0.8', 'monthly'],
   ['/book-online', '0.8', 'monthly'],
   ['/blog', '0.9', 'weekly'],
   ['/privacy-policy', '0.3', 'yearly'],
@@ -121,6 +122,7 @@ ${serviceLines}
 - [Projects](${SITE_URL}/projects): ${PAGE_SEO['/projects'].description}
 - [FAQs](${SITE_URL}/faqs): ${PAGE_SEO['/faqs'].description}
 - [Contact](${SITE_URL}/contact-us): ${PAGE_SEO['/contact-us'].description}
+- [Instant quote](${SITE_URL}/instant-quote): ${PAGE_SEO['/instant-quote'].description}
 - [Book online](${SITE_URL}/book-online): ${PAGE_SEO['/book-online'].description}
 - [Blog](${SITE_URL}/blog): ${PAGE_SEO['/blog'].description}
 
@@ -131,6 +133,7 @@ ${BLOG_POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt
 - Phone: ${SITE_PHONE}
 - Location: Winnipeg, Manitoba, Canada
 - Quote requests: ${SITE_URL}/contact-us
+- Instant quote (price estimator): ${SITE_URL}/instant-quote
 - Book an appointment: ${SITE_URL}/book-online
 `);
 

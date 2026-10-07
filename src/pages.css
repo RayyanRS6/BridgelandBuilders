@@ -2652,3 +2652,42 @@
   margin-top: 16px;
   text-align: left;
 }
+
+/* -------------------------------------------------------------
+   P12. INSTANT QUOTE (/instant-quote)
+   The price guide section from /services as a page of its own;
+   only the top spacing and the call line under it are new.
+   ------------------------------------------------------------- */
+.instant-quote-section {
+  padding-top: 56px;
+}
+
+.instant-quote-call {
+  margin-top: 22px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.instant-quote-call a {
+  color: var(--accent-seagreen);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Clears the sticky navbar when a service page scrolls to its estimator. */
+.price-guide-card {
+  scroll-margin-top: 96px;
+}
+
+@media (max-width: 640px) {
+  .instant-quote-section {
+    padding-top: 24px;
+  }
+  .instant-quote-section .section-header {
+    margin-bottom: 20px;
+  }
+  .instant-quote-call {
+    margin-top: 18px;
+    font-size: 0.93rem;
+  }
+}

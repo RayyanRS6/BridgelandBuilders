@@ -31,7 +31,7 @@ export default function TermsOfServicePage() {
         title="THE TERMS FOR"
         highlight="USING OUR SITE"
         description="The rules for using our website and services, including how our text messages work and how to opt out."
-        showConsultation={false}
+        showQuote={false}
       />
 
       <article className="blog-article-section">

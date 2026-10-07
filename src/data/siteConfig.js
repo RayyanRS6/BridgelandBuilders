@@ -27,10 +27,15 @@ export const SMS_OPT_IN_PATH = '/contact';
 export const SMS_CONFIRMATION =
   'You are now subscribed to messages from Bridgeland Builders. Msg & data rates may apply. Reply STOP to unsubscribe, HELP for help.';
 
-// Every "book a consultation" button on the site leads to the quote form page.
-// Rename the offer here and every button follows.
+// The site's main call to action: the EstimatorX360 price estimator, embedded
+// on our own page so visitors never leave the site. Rename the offer here and
+// every button follows (the navbar keeps its own shorter label).
+export const INSTANT_QUOTE_PATH = '/instant-quote';
+export const INSTANT_QUOTE_LABEL = 'Get Free Instant Quote';
+
+// The on-site visit booking form (details, then calendar). The Meta ads land
+// here; the service pages and /book-online carry the same form.
 export const CONSULTATION_PATH = '/free-quote';
-export const CONSULTATION_LABEL = 'Free On-Site Consultation';
 
 // Verified facts only — taken from the live site. Nothing here is invented.
 export const BUSINESS = {

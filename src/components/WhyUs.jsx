@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon, CheckIcon } from './icons.jsx';
 
 const CHECKLIST = [
@@ -55,8 +55,8 @@ export default function WhyUs() {
               ))}
             </ul>
 
-            <Link to={CONSULTATION_PATH} className="btn-pill-red">
-              <span>{CONSULTATION_LABEL.toUpperCase()}</span>
+            <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red">
+              <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
               <ArrowRightIcon size={14} />
             </Link>
           </div>

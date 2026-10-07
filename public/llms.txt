@@ -21,6 +21,7 @@ and permits and inspections are coordinated with the City of Winnipeg when a pro
 - [Projects](https://bridgelandbuilders.com/projects): Browse completed Winnipeg renovation projects by Bridgeland Builders — kitchens, bathrooms, basements, whole-home remodels and commercial fit-outs.
 - [FAQs](https://bridgelandbuilders.com/faqs): Answers to common Winnipeg renovation questions: written quotes, permits and inspections, living in your home during work, timelines and how to get started.
 - [Contact](https://bridgelandbuilders.com/contact-us): Request a free renovation quote from Bridgeland Builders in Winnipeg. Call 431-866-5644 or send your project details and we reply within one business day.
+- [Instant quote](https://bridgelandbuilders.com/instant-quote): Get a free instant renovation quote from Bridgeland Builders in Winnipeg. Choose your project, answer a few quick questions and see a starting price range.
 - [Book online](https://bridgelandbuilders.com/book-online): Book a free on-site renovation consultation with Bridgeland Builders in Winnipeg. Pick a date and time in our calendar and get instant confirmation.
 - [Blog](https://bridgelandbuilders.com/blog): Renovation inspiration, expert tips and industry insights from Bridgeland Builders, covering residential and commercial renovation ideas for Winnipeg properties.
 
@@ -57,4 +58,5 @@ and permits and inspections are coordinated with the City of Winnipeg when a pro
 - Phone: 431-866-5644
 - Location: Winnipeg, Manitoba, Canada
 - Quote requests: https://bridgelandbuilders.com/contact-us
+- Instant quote (price estimator): https://bridgelandbuilders.com/instant-quote
 - Book an appointment: https://bridgelandbuilders.com/book-online

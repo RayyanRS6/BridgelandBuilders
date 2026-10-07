@@ -40,6 +40,11 @@ export const PAGE_SEO = {
     description:
       'Answers to common Winnipeg renovation questions: written quotes, permits and inspections, living in your home during work, timelines and how to get started.',
   },
+  '/instant-quote': {
+    title: 'Free Instant Renovation Quote | Bridgeland Builders Winnipeg',
+    description:
+      'Get a free instant renovation quote from Bridgeland Builders in Winnipeg. Choose your project, answer a few quick questions and see a starting price range.',
+  },
   '/book-online': {
     title: 'Book an Appointment Online | Bridgeland Builders Winnipeg',
     description:
@@ -284,6 +289,7 @@ export const ROUTE_TRAILS = {
   '/projects': [['Projects', '/projects']],
   '/faqs': [['FAQs', '/faqs']],
   '/contact-us': [['Contact Us', '/contact-us']],
+  '/instant-quote': [['Instant Quote', '/instant-quote']],
   '/book-online': [['Book Online', '/book-online']],
   '/outside-winnipeg': [['Outside Winnipeg', '/outside-winnipeg']],
   '/blog': [['Blog', '/blog']],

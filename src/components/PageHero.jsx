@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon } from './icons.jsx';
 
-export default function PageHero({ eyebrow, title, highlight, description, primaryLink, showConsultation = true }) {
+export default function PageHero({ eyebrow, title, highlight, description, primaryLink, showQuote = true }) {
   return (
     <section className="page-hero">
       <div className="container">
@@ -10,7 +10,7 @@ export default function PageHero({ eyebrow, title, highlight, description, prima
           <span className="section-tag">{eyebrow}</span>
           <h1>{title} {highlight && <span>{highlight}</span>}</h1>
           <p>{description}</p>
-          {(primaryLink || showConsultation) && (
+          {(primaryLink || showQuote) && (
             <div className="hero-cta-group">
               {primaryLink && (
                 <Link className="btn-pill-red" to={primaryLink.to}>
@@ -18,9 +18,9 @@ export default function PageHero({ eyebrow, title, highlight, description, prima
                   <ArrowRightIcon size={15} />
                 </Link>
               )}
-              {showConsultation && (
-                <Link className={primaryLink ? 'btn-pill-ghost' : 'btn-pill-red'} to={CONSULTATION_PATH}>
-                  {CONSULTATION_LABEL}
+              {showQuote && (
+                <Link className={primaryLink ? 'btn-pill-ghost' : 'btn-pill-red'} to={INSTANT_QUOTE_PATH}>
+                  {INSTANT_QUOTE_LABEL}
                 </Link>
               )}
             </div>

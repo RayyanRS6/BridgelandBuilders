@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '../data/serviceCategories.js';
-import { CONSULTATION_PATH } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon, ChevronDownIcon, ChevronRightIcon, MenuIcon } from './icons.jsx';
 
 const NAV_LINKS = [
@@ -178,12 +178,12 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-actions">
-          {/* Main Call To Action Button in Red #C20917 — goes to the quote form
-              page. Narrow phones swap in the shorter label so the pill still
-              fits beside the logo and menu. */}
-          <Link to={CONSULTATION_PATH} className="btn-pill-red nav-quote-btn" onClick={closeNavigation}>
-            <span className="nav-quote-label-full">FREE CONSULTATION</span>
-            <span className="nav-quote-label-short">FREE VISIT</span>
+          {/* Main Call To Action Button in Red #C20917 — goes to the instant
+              quote estimator page. Narrow phones swap in the shorter label so
+              the pill still fits beside the logo and menu. */}
+          <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red nav-quote-btn" onClick={closeNavigation}>
+            <span className="nav-quote-label-full">GET INSTANT QUOTE</span>
+            <span className="nav-quote-label-short">GET QUOTE</span>
             <ArrowRightIcon size={14} />
           </Link>
           <button
