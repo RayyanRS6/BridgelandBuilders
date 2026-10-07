@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
         title="HOW WE HANDLE"
         highlight="YOUR INFORMATION"
         description="What we collect when you use our website, why we collect it, who helps us handle it, and the choices you have."
-        showConsultation={false}
+        showQuote={false}
       />
 
       <article className="blog-article-section">

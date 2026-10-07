@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon, StarIcon } from './icons.jsx';
 
 export default function Hero() {
@@ -20,8 +20,8 @@ export default function Hero() {
             </p>
             <div className="hero-cta-group">
               {/* Main CTA in Red */}
-              <Link to={CONSULTATION_PATH} className="btn-pill-red">
-                <span>{CONSULTATION_LABEL.toUpperCase()}</span>
+              <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red">
+                <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={15} />
               </Link>
               <Link to="/services" className="btn-pill-ghost">

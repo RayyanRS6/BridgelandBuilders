@@ -7,9 +7,10 @@ import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import Ticker from '../components/Ticker.jsx';
 import { ArrowRightIcon, CheckIcon } from '../components/icons.jsx';
 import { PROJECT_ESTIMATORS } from '../data/estimators.js';
-import { CONSULTATION_LABEL, CONSULTATION_PATH } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_LABEL } from '../data/siteConfig.js';
 
 const FORM_ID = 'service-quote-form';
+const ESTIMATOR_ID = 'service-price-guide';
 
 // The "Type of renovation" answer each service page pre-ticks on its form.
 // Home extensions have no matching option, so that page leaves it open.
@@ -29,6 +30,12 @@ export default function ProjectPage({ project }) {
 
   const scrollToForm = () => {
     document.getElementById(FORM_ID)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  // The instant quote button goes to this page's own estimator, already set to
+  // this service, rather than the general one on /instant-quote.
+  const scrollToEstimator = () => {
+    document.getElementById(ESTIMATOR_ID)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
@@ -257,7 +264,7 @@ export default function ProjectPage({ project }) {
               <BookingAside serviceName={project.breadcrumb} />
             </div>
             <div className="reveal">
-              <div className="lead-card">
+              <div className="lead-card price-guide-card" id={ESTIMATOR_ID}>
                 <div className="lead-card-head">
                   <h3>Get Your Free {project.breadcrumb} Price Guide</h3>
                   <p>Answer a few quick questions to receive a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.</p>
@@ -297,10 +304,10 @@ export default function ProjectPage({ project }) {
               <p>Grab a free quote instead — tell us roughly what you need and we’ll come back with numbers. No appointment required.</p>
             </div>
             <div className="cta-banner-right">
-              <Link to={CONSULTATION_PATH} className="btn-pill-red btn-pill-lg">
-                <span>{CONSULTATION_LABEL.toUpperCase()}</span>
+              <button className="btn-pill-red btn-pill-lg" onClick={scrollToEstimator}>
+                <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={16} />
-              </Link>
+              </button>
             </div>
           </div>
         </div>

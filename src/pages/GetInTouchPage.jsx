@@ -34,7 +34,7 @@ export default function GetInTouchPage() {
         title="SEND US"
         highlight="A MESSAGE"
         description="Questions about a renovation, a quote, or a project we’re already working on? Send us a message and our team will get back to you within one business day."
-        showConsultation={false}
+        showQuote={false}
       />
 
       <section className="lead-section contact-direct-section">
