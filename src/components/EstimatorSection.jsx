@@ -10,7 +10,7 @@ export default function EstimatorSection({ src, eyebrow = 'Free Price Guide', ti
           <p className="section-desc">{description}</p>
         </div>
         <div className="estimator-shell">
-          <EstimatorEmbed src={src} title={`${title} - EstimatorX360`} />
+          <EstimatorEmbed src={src} title={`${title} - Price Calculator`} />
         </div>
       </div>
     </section>

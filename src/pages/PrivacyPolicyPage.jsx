@@ -23,7 +23,7 @@ const LAST_UPDATED = 'October 2, 2026';
 // (src/pages/GetInTouchPage.jsx), the quote form and calendar
 // (src/components/QuoteBookingForm.jsx -> GoHighLevel), the Meta Pixel
 // (index.html, skipped when the browser sends Do Not Track), the LeadConnector
-// chat widget, the PriceGuideX360 price guide, and the fonts and images loaded
+// chat widget, the Price Calculator price guide, and the fonts and images loaded
 // from Google, Unsplash and Wix. If any of those change, update this page.
 //
 // The text-messaging clauses (section 1, and the SMS lines in sections 8 and 9)
@@ -276,7 +276,7 @@ export default function PrivacyPolicyPage() {
               <li><strong>Meta Platforms:</strong> advertising measurement through the Meta Pixel, described in section 7.</li>
               <li><strong>Vercel:</strong> hosts our website and runs the secure server code behind our quote form.</li>
               <li>
-                <strong>PriceGuideX360 by AutomateX360:</strong> powers our online price guide and passes estimate
+                <strong>Price Calculator by AutomateX360:</strong> powers our online price guide and passes estimate
                 requests to our customer management system.
               </li>
               <li>

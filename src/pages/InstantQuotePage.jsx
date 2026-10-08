@@ -30,7 +30,7 @@ export default function InstantQuotePage() {
           </div>
 
           <div className="estimator-shell">
-            <EstimatorEmbed src={ESTIMATOR_URLS.overall} title="Free instant quote - EstimatorX360" />
+            <EstimatorEmbed src={ESTIMATOR_URLS.overall} title="Free instant quote - Price Calculator" />
           </div>
 
           {/* For visitors who are not after a price yet: book a visit or browse. */}

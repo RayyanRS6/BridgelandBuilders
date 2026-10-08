@@ -1,14 +1,24 @@
 const ESTIMATOR_BASE_URL = 'https://estimator.bridgelandbuilders.com/embed';
 
+// Asks the Price Calculator for its Bridgeland theme, so the embed uses this site's
+// colours, buttons and cards. The same link opened on its own (without `theme`)
+// keeps the calculator's original look.
+const ESTIMATOR_THEME = 'bridgeland';
+
+function estimatorUrl(params = {}) {
+  const query = new URLSearchParams({ ...params, theme: ESTIMATOR_THEME });
+  return `${ESTIMATOR_BASE_URL}?${query}`;
+}
+
 export const ESTIMATOR_URLS = {
-  overall: ESTIMATOR_BASE_URL,
-  residential: `${ESTIMATOR_BASE_URL}?category=residential`,
-  commercial: `${ESTIMATOR_BASE_URL}?category=commercial`,
-  basement: `${ESTIMATOR_BASE_URL}?service=basement-renovations`,
-  bathroom: `${ESTIMATOR_BASE_URL}?service=bathroom-renovations`,
-  homeExtension: `${ESTIMATOR_BASE_URL}?service=home-extension`,
-  kitchen: `${ESTIMATOR_BASE_URL}?service=kitchen-renovations`,
-  wholeHome: `${ESTIMATOR_BASE_URL}?service=whole-home`,
+  overall: estimatorUrl(),
+  residential: estimatorUrl({ category: 'residential' }),
+  commercial: estimatorUrl({ category: 'commercial' }),
+  basement: estimatorUrl({ service: 'basement-renovations' }),
+  bathroom: estimatorUrl({ service: 'bathroom-renovations' }),
+  homeExtension: estimatorUrl({ service: 'home-extension' }),
+  kitchen: estimatorUrl({ service: 'kitchen-renovations' }),
+  wholeHome: estimatorUrl({ service: 'whole-home' }),
 };
 
 export const PROJECT_ESTIMATORS = {

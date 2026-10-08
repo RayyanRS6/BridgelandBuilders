@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 const MIN_HEIGHT = 500;
 const MAX_HEIGHT = 5000;
 
-export default function EstimatorEmbed({ src, title = 'EstimatorX360 renovation estimator' }) {
+export default function EstimatorEmbed({ src, title = 'Renovation Price Calculator' }) {
   const frameRef = useRef(null);
 
   useEffect(() => {
