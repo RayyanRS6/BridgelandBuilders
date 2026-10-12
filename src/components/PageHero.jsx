@@ -6,7 +6,7 @@ export default function PageHero({ eyebrow, title, highlight, description, prima
   return (
     <section className="page-hero">
       <div className="container">
-        <div className="page-hero-card reveal">
+        <div className="page-hero-card hero-rise">
           <span className="section-tag">{eyebrow}</span>
           <h1>{title} {highlight && <span>{highlight}</span>}</h1>
           <p>{description}</p>

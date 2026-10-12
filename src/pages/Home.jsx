@@ -1,4 +1,3 @@
-import useScrollReveal from '../hooks/useScrollReveal.js';
 import Hero from '../components/Hero.jsx';
 import Ticker from '../components/Ticker.jsx';
 import Stats from '../components/Stats.jsx';
@@ -12,10 +11,9 @@ import { usePageSeo } from '../hooks/useSeo.js';
 
 export default function Home() {
   usePageSeo('/');
-  useScrollReveal();
 
   return (
-    <>
+    <main>
       {/* 3. HERO SECTION */}
       <Hero />
 
@@ -34,7 +32,7 @@ export default function Home() {
       {/* 8. OUR PROCESS */}
       <Process />
 
-      {/* 9. 5-STAR TESTIMONIAL SPOTLIGHT */}
+      {/* 9. TESTIMONIAL SPOTLIGHT */}
       <Testimonial />
 
       {/* 10. INSPIRATION GALLERY */}
@@ -42,6 +40,6 @@ export default function Home() {
 
       {/* 11. QUICK CTA BANNER */}
       <CtaBanner />
-    </>
+    </main>
   );
 }

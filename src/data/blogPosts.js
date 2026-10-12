@@ -8,494 +8,11 @@ export const BLOG_CATEGORIES = [
   "General Contracting"
 ];
 
+/** Published posts only (blog-raw status "published"), newest first. */
 export const BLOG_POSTS = [
   {
-    "slug": "how-to-choose-the-right-color-palette-for-your-business",
-    "title": "How to Choose the Right Color Palette for Your Business",
-    "metaTitle": "How to Choose the Right Color Palette for Your Business",
-    "metaDescription": "Learn how to choose the right color palette for your business. Discover steps to define your brand identity, explore color psychology, and select colors that…",
-    "excerpt": "Learn how to choose the right color palette for your business. Discover steps to define your brand identity, explore color psychology, and select colors that resonate with your audience.",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-09-15",
-    "readMinutes": 6,
-    "hero": "https://static.wixstatic.com/media/48172a_eb0ac46b34aa4cbbbb4a5c725767b046~mv2.png",
-    "heroAlt": "Two women chat over color swatches and coffee in a bright modern showroom, with coworkers blurred in the background.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "How to Pick Suitable Colors for Your Company"
-      },
-      {
-        "t": "p",
-        "x": "Many people think that picking the right colors is just an aesthetic thing. Each color evokes different emotions and can significantly change how people perceive your company. It is more than just looking good. It is about what sentiment and message the colors convey. Let’s walk you through the process so you can get it right color-wise the first time."
-      },
-      {
-        "t": "h2",
-        "x": "Key Takeaways"
-      },
-      {
-        "t": "li",
-        "x": "Define what your business is about: its mission and vision, what it does, and who it does it for. The answer to these questions will provide guidance to what the colors will be."
-      },
-      {
-        "t": "li",
-        "x": "Review other businesses in your space. Identify what colors are dominant. This will help you decide whether you want to blend in or out."
-      },
-      {
-        "t": "li",
-        "x": "Use the color wheel. It will help you understand how to balance your color choices."
-      },
-      {
-        "t": "li",
-        "x": "Determine whether you want the audience to feel excitement, anger, sadness, calmness, or something else. Different colors evoke different sentiments."
-      },
-      {
-        "t": "li",
-        "x": "Testing is important. Ensure your colors look good and convey the right message when viewing a website or printed on paper."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_1a2a2365c8de4068a2156b49a1b55639~mv2.png",
-        "alt": "Hands in a mustard sweater fan out paint color swatches on a wood table, showing reds, blues, greens, and neutrals."
-      },
-      {
-        "t": "h3",
-        "x": "How to Pick Suitable Colors for Your Company"
-      },
-      {
-        "t": "p",
-        "x": "Consideration goes into choosing the colors of your company. There are no easy choices. There are lots of factors that come into play when choosing color that match the identity of your company. When people see your colors, your clients’ feelings and emotions need to resonate with the identity of your business. If on the other hand, people see your colors and the message and feelings they get are different from the ideation of your business, that would be problematic. For instance, let’s say you are involved with commercial renovations, you would want people to see you as someone with integrity and has the expertise for it."
-      },
-      {
-        "t": "p",
-        "x": "Therefore, your best color choices would be the dark shades of blue and gray. If you are a company doing commercial renovations in Winnipeg, Canada, you would want to differentiate yourself from others in a way that promotes the idea of trust along with the differentiation."
-      },
-      {
-        "t": "p",
-        "x": "Now, the question that comes to mind is how to properly define these colors. First and foremost, you need to be clear about the identity of your company. What are the mission and vision of your organization? What is the purpose of the business? What are your values? If you are a commercial renovation business in Winnipeg, you would ideally want to tell a story that describes the community and/or the environment of the region. Look at other builders in Winnipeg to see what they do. While you don’t want to be exactly the same, you want to know the general vibe. Are renovation Winnipeg companies using earthy tones or something more modern?"
-      },
-      {
-        "t": "h3",
-        "x": "Here's a simple way to think about it:"
-      },
-      {
-        "t": "li",
-        "x": "Define Your Brand Personality: Write descriptive words about your business. Are you modern, classic, playful, serious, or something else? This is your starting point."
-      },
-      {
-        "t": "li",
-        "x": "Explore the Meaning Behind Colors: Each color brings out a different feeling, Blue = trust, green = growth, nature, or even environmentally conscious. Red = energetic, and passionate, and don’t forget that the meaning can change depending on other colors."
-      },
-      {
-        "t": "li",
-        "x": "Analyze the Industry: What common colors do you see in your field? For renovation companies, you often see blues, grays, and even some bolder colors that stand for strength."
-      },
-      {
-        "t": "li",
-        "x": "Audience Based Colors: What colors do you think the audience you want to attract prefer?"
-      },
-      {
-        "t": "li",
-        "x": "Put Ideas into Practice: Once you narrow down some ideas see how they look on different things your on your site, business cards, or a sample of your work if you are one of the renovation Winnipeg companies."
-      },
-      {
-        "t": "p",
-        "x": "Selecting colors is like setting a mood. For a color mood to be most effective, it has to reflect what your business is about. More than just a preference, it is a form of communication. Building a palette communicates, to discerning consumers, that your business is trustworthy and memorable. That extending trust is especially valuable for builders in Winnipeg."
-      },
-      {
-        "t": "p",
-        "x": "Getting opinions is also encouraged. Friends, co-workers, and even potential buyers can be of assistance. Selecting colors can strengthen your brand."
-      },
-      {
-        "t": "h2",
-        "x": "In Conclusion"
-      },
-      {
-        "t": "p",
-        "x": "Selecting colors can improve brand recognition and communicate trust. What you choose has to say what you want about your business. Your target audience matters, as well as the emotions the colors elicit. Explore and evaluate your color selection. Choose wisely, the right color selection can be extremely effective."
-      },
-      {
-        "t": "h2",
-        "x": "Most Asked Questions"
-      },
-      {
-        "t": "p",
-        "x": "What is the significance of brand colors?"
-      },
-      {
-        "t": "p",
-        "x": "Colors carry emotions, and a brand’s color scheme helps express the type of personality and spirit the business embodies. Colors establish a strong emotional bond with customers, forging a lasting and memorable impression. When correctly chosen and combined, colors build brand recognition, repeat business, and trust, igniting positive feelings and a great unique identity for the business."
-      },
-      {
-        "t": "p",
-        "x": "How do I choose a main brand color?"
-      },
-      {
-        "t": "p",
-        "x": "Choosing brand colors is a matter of defining your business. Consider the personality of your business and what feelings it should evoke. Color carries symbolism, e.g., blue stands for trust, green for nature, and yellow for happiness, so your goal is to choose the one that best reflects the spirit of your business and the emotions you want to radiate to your customers."
-      },
-      {
-        "t": "p",
-        "x": "What is the difference between primary, secondary, and neutral colors for a brand?"
-      },
-      {
-        "t": "p",
-        "x": "Your primary color is the one color most people see and the simply put, the main color, while secondary colors are the other colors that match your primary color and also create more depth to your brand. Neutrals, like white black and gray, act as the background to your colors, making everything look more balanced and making your main colors pop."
-      },
-      {
-        "t": "p",
-        "x": "Should I look at other businesses in my industry to see what colors they use?"
-      },
-      {
-        "t": "p",
-        "x": "Absolutely! Analyzing the colors your competitors are using can inspire some ideas and also help you see what is common, allowing you to distinguish your brand better. For example, you can use a color of the same family with a different saturation or use a completely different color."
-      },
-      {
-        "t": "p",
-        "x": "How many colors are appropriate for a brand color palette?"
-      },
-      {
-        "t": "p",
-        "x": "It is best to keep a brand color palette simple, usually a range of about 2 to 6 colors. This number includes the primary color along with a few other accent colors and a neutral color. Having too many colors may make your brand look messy so pick a few colors that are easy to remember and look good together."
-      },
-      {
-        "t": "p",
-        "x": "What's next after picking colors?"
-      },
-      {
-        "t": "p",
-        "x": "Testing is next. Check how colors look on your site, business cards, or social media. Make sure colors go together and check if text is readable against the background. Ask people for feedback to know if colors send the right message."
-      }
-    ]
-  },
-  {
-    "slug": "the-role-of-branding-in-commercial-interior-design",
-    "title": "The Role of Branding in Commercial Interior Design",
-    "metaTitle": "The Role of Branding in Commercial Interior Design",
-    "metaDescription": "Discover the crucial role of branding in commercial interior design. Learn how to create immersive, brand-aligned spaces that enhance customer experience and…",
-    "excerpt": "Discover the crucial role of branding in commercial interior design. Learn how to create immersive, brand-aligned spaces that enhance customer experience and boost recognition.",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-09-09",
-    "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_be12e8247b254da5be99f1cabc437076~mv2.png",
-    "heroAlt": "Modern commercial interior design with vibrant colors and furniture.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "The Role of Branding in Commercial Interior Design"
-      },
-      {
-        "t": "p",
-        "x": "When you set out to create your business, you probably planned everything from your logo to the site design. But, what about your physical space? What about the customer experience in your store or office? This is where commercial interior design comes in - the design of your space is a huge part of your business's brand. It involves more than simply aesthetics. It’s about communicating your story. It’s about creating a sense of comfort. The design of your physical space is a huge part of making it a great experience for your customers!"
-      },
-      {
-        "t": "p",
-        "x": "The Importance of Branding in Commercial Interior Design may not be the first thing that comes to your mind, but it is one of the most important things to consider for your commercial interior design project."
-      },
-      {
-        "t": "h2",
-        "x": "Key Takeaways"
-      },
-      {
-        "t": "li",
-        "x": "Your logo is not your complete brand. It is the entire experience you create for your customers in your space."
-      },
-      {
-        "t": "li",
-        "x": "All elements of your store or office space should reflect the brand the way you want it to be perceived. This includes colors, materials, and the arrangement of the furniture."
-      },
-      {
-        "t": "li",
-        "x": "When design and brand are in sync, customers recall the business more readily and emotionally connect to the business."
-      },
-      {
-        "t": "li",
-        "x": "A well branded workplace can instill a sense of pride in employees and enhance their productivity."
-      },
-      {
-        "t": "li",
-        "x": "Consider how colors, textures, and lighting can influence emotion. These cues and design choices can tell customers what your brand value and focus."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_daf9e70c9f1b45108e4f8112f56e75cb~mv2.png",
-        "alt": "Modern commercial interior design with vibrant colors and furniture."
-      },
-      {
-        "t": "h3",
-        "x": "The Role of Branding in Commercial Interior Design"
-      },
-      {
-        "t": "p",
-        "x": "When entering a space, what do you notice? Its a feeling rather than a color or a piece of furniture. That feeling you capture in an instant, is the prime example of how commercial space design branding works. Its about capturing the essence of a brand, its values, mission, and personality and translating into a physical space. Its storytelling without the need for words."
-      },
-      {
-        "t": "p",
-        "x": "An interior design is not just about aesthetics. It's about creating a unique experience. It's about blending functionalities of the place with the psychology of the people who interact with the space. Employing a robust interior design helps connect with customers and motivate employees. Your interior design helps with brand recognition and brand loyalty. An open space layout with a tech feel, like chunky furniture, could appeal to a tech startup. In contrast, a law firm could use dark wood tones for furniture or walls and pair surfaces with glass to emphasize the law firm`s expertise and reliability."
-      },
-      {
-        "t": "h3",
-        "x": "Here’s how branding elements come into play:"
-      },
-      {
-        "t": "li",
-        "x": "Color palette: A brand’s color has to be strategically used from the walls of the space to the furniture and other accents to help with brand recognition."
-      },
-      {
-        "t": "li",
-        "x": "Materials and texture: firm color and layout choices can signal a business's brand associations and attributes. Aspects like polished concrete for modern minimalist or organic wood for warm and approachable design all play into the experience and associations your users take away."
-      },
-      {
-        "t": "li",
-        "x": "Layout and Flow: The way a space is structured impacts people’s movement and interaction. For example, a workplace with a more collaborative culture might benefit from an open layout, while a business that requires concentration or private discussions may prefer a more enclosed environment."
-      },
-      {
-        "t": "li",
-        "x": "Lighting and Ambiance: Lighting creates an atmosphere. Spaces with warm, low lighting may feel inviting, and spaces with bright, white lighting may feel more efficient."
-      },
-      {
-        "t": "li",
-        "x": "Signage and Graphics: Custom graphics and signage can be more than displaying the logo. They can help direct people and reinforce the message of the brand."
-      },
-      {
-        "t": "p",
-        "x": "Commercial space design is a balance of aesthetics and function. The way a space is designed impacts the way people engage with a business. It fosters familiarity, builds confidence, and creates an experience to remember."
-      },
-      {
-        "t": "p",
-        "x": "For your commercial renovations in Winnipeg, choosing experienced renovation companies Winnipeg makes all the difference. They know the best way to articulate your brand vision into an actual space. There are not many office renovation contractors in Winnipeg, but those that do know the importance of branding, ensure your project looks good and also works really well as a brand space. These commercial renovation services are vital when it comes to building a space that represents your business. If you are thinking of doing a big renovation, Bridgeland Builders has a great reputation for craftsmanship all across Manitoba."
-      },
-      {
-        "t": "p",
-        "x": "The bottom line is, branded interior design is what makes a business unique. It tells a story about who you are, what you do, and why people should work with you, through the atmosphere it creates. It’s about the impact, and doing it with one space at a time."
-      },
-      {
-        "t": "h2",
-        "x": "Putting the Pieces Together"
-      },
-      {
-        "t": "p",
-        "x": "When making your business space visually appealing, choosing furniture, paint colors, or decorations is the least important thing. It's all about the stories the space is able to tell. From the connection people feel to the space, to the pride employees feel. It is about using your business's values to tell stories and create brand recognition. Having a well thought out and appealing office or store space is something that helps a business stand out to customers and is a way to make people remember the business."
-      },
-      {
-        "t": "h2",
-        "x": "The Office Design Questions People Ask Most"
-      },
-      {
-        "t": "p",
-        "x": "The first thing that comes to mind is the office space and company branding. It is designing a space. Building a company's office or store space to promote the brand is like designing the office to give it a personality. the store and brand, the colors, the furniture, the decoration, and the layout all provide branding and personality to the space. Just like the logo and values, it creates a physical environment that embodies the business."
-      },
-      {
-        "t": "p",
-        "x": "Why is it important for businesses to use their brand in their interior design?"
-      },
-      {
-        "t": "p",
-        "x": "Integrating your brand within your space helps people recognize you instantly, increases familiarity, and builds trust with your customers. For employees, it can bolster their pride and motivation to perform. It is a way to tell your company's story without saying a word and stand out from others."
-      },
-      {
-        "t": "p",
-        "x": "Can you give examples of how brands use colors in their spaces?"
-      },
-      {
-        "t": "p",
-        "x": "Certainly! A good example is a spa. Spas tend to use calming greens and blues so customers can feel relaxed. A vigorous café may use bright and warm yellows and reds to stimulate customers and make them hungry. A modern tech firm may use sleek whites and grays to encapsulate modernism. The set colors impact overall customer feelings."
-      },
-      {
-        "t": "p",
-        "x": "How do materials and textures play a role in branding?"
-      },
-      {
-        "t": "p",
-        "x": "The ambiance of a space is important. An upscale store may use cool glittery metals and light marbles to give a high-end feel. A warm wooden and soft textile store may use inviting materials to feel cozier. Quality and style messages about a store come from the feel and look of the colors, equally the materials."
-      },
-      {
-        "t": "p",
-        "x": "What is the distinction between simply adding some décor and creating a branded environment?"
-      },
-      {
-        "t": "p",
-        "x": "When a space is decorated, it means the business has made some aesthetic choices to improve the appearance of the space. However, there is much more involved in terms of space branding. A beautifully designed branded environment needs to support the business's narrative and story through the design. This needs to be done in an intentional way; it cannot be done in a piecemeal way."
-      },
-      {
-        "t": "p",
-        "x": "How can a business ensure that their interior design is truly representative of their brand?"
-      },
-      {
-        "t": "p",
-        "x": "The most effective approach is to engage the services of an interior designer that specializes in branding. They assist in articulating and crystallizing the business's core message and values, and then assist in physically manifesting those concepts into the design of the environment. There is a great deal of advanced design work that needs to be done, including the selection of colors, the types of finishes, and the spatial arrangements, in order to create a meaningful and cohesive design experience."
-      }
-    ]
-  },
-  {
-    "slug": "how-to-create-a-modern-and-timeless-look-in-your-business-space",
-    "title": "How to Create a Modern and Timeless Look in Your Business Space",
-    "metaTitle": "How to Create a Modern and Timeless Look in Your Business Space",
-    "metaDescription": "Learn how to create a modern and timeless look in your business space with simplicity, functionality, and classic colors. Enhance your office design today!",
-    "excerpt": "Learn how to create a modern and timeless look in your business space with simplicity, functionality, and classic colors. Enhance your office design today!",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-09-08",
-    "readMinutes": 5,
-    "hero": "https://static.wixstatic.com/media/48172a_34dc39e9ee1e45849df48e4b91111853~mv2.png",
-    "heroAlt": "Modern business interior with natural light and minimalist decor.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "How to Achieve a Modern and Timeless Aesthetic in Your Business Space"
-      },
-      {
-        "t": "p",
-        "x": "Want your business remodeled to your taste while making it modern? People want spaces that look aesthetically pleasing with a functional design that doesn’t fall out of style year after year. In this article, we’ll look into how to achieve this design style for your office or store. It’s easier than you think and the result will positively impact your business and employees."
-      },
-      {
-        "t": "h2",
-        "x": "Key Takeaways"
-      },
-      {
-        "t": "li",
-        "x": "Make sure the design is functional and simple to meet your needs. An open layout may help achieve this."
-      },
-      {
-        "t": "li",
-        "x": "Use a modern neutral palette like beige for walls and add dark traditional decorative elements like dark green or navy."
-      },
-      {
-        "t": "li",
-        "x": "Use modern design furnishings with natural materials and add plants."
-      },
-      {
-        "t": "li",
-        "x": "Use both natural and modern design artificial light to create a warm atmosphere."
-      },
-      {
-        "t": "li",
-        "x": "Use brand representative meaningful décor, but don’t over decorate."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_77d7d3a25fca468a8b6975bebb48ccf1~mv2.png",
-        "alt": "Modern and timeless business interior design"
-      },
-      {
-        "t": "h3",
-        "x": "How to Achieve a Modern and Timeless Aesthetic in Your Business Space"
-      },
-      {
-        "t": "p",
-        "x": "Achieving a business aesthetic that is both modern and timeless is a bit of a balancing act, but certainly doable. Think about the business impression you want to convey. Making purposeful choices that look good in the moment, but aren't detrimental to the look in a few years will achieve a wonderful balance. A good office renovation contractor will help you to define the space."
-      },
-      {
-        "t": "p",
-        "x": "In terms of design, the safest bet is to center your work around a color palette that is neutral. These colors provide a good foundation that is timeless and space efficient. Out of these colors, you can bring in plants and use furniture that is made of real wood to bring a biophilic design element to the space. An element of nature is a timeless design choice and is a trend that is really here to stay."
-      },
-      {
-        "t": "h3",
-        "x": "Here are a few things to consider:"
-      },
-      {
-        "t": "li",
-        "x": "Open Floor Plans: These make a space feel bigger and more adaptable. It's easier to move around, and it promotes a sense of collaboration. These are a focus of many commercial renovations Winnipeg projects."
-      },
-      {
-        "t": "li",
-        "x": "Natural Light: Large windows or glass doors can make a space more welcoming. Always try and maximize natural light."
-      },
-      {
-        "t": "li",
-        "x": "Quality Materials: Spending more money on a space will mean that it will physically and visually hold up to the test of time."
-      },
-      {
-        "t": "li",
-        "x": "Strategic Storage: Clean and clutter free will always feel more timeless. Custom storage solutions make it easy to stay clean and can work with the design."
-      },
-      {
-        "t": "p",
-        "x": "It's important to think about how a space is more than just functional. It's also an important aspect of a brand. Well designed spaces can encourage work and be an asset to a brand's goals."
-      },
-      {
-        "t": "p",
-        "x": "When you need to make substantial changes, collaborating with an experienced builder in Winnipeg and other Winnipeg renovation companies, will make all the difference and help you bring your vision to life, whether it’s an extensive commercial renovation or a few key updates. A space that feels current and fresh to the eye, and at the same time, is timeless. To gain inspiration for this, consider looking at examples of timeless interior design for 2025 architectural integration."
-      },
-      {
-        "t": "p",
-        "x": "When it comes to commercial renovations, selecting the right approach is key. It could be a business minimalist design or a warm inviting space that you want to create. These core principles will help you to design a business space that you and your clients will appreciate for years to come, and most importantly, will be a pleasure to work from. It’s thoughtful design that is aesthetically pleasing and serves a purpose."
-      },
-      {
-        "t": "h2",
-        "x": "Here is Your Finish"
-      },
-      {
-        "t": "p",
-        "x": "It is not a big puzzle to figure how to create a business space to feel current and as if it will stand the test of time. A consumer space to feel the business is designed and executed with simplicity, functionality, and nature. Elements of design include clean lines, simple color palettes, and the strategic placement of greenery. Getting the basics in design will create a space that will look good and feel good, and will be a place of business for years to come. It is about constructing a space that is built to stand the test of time."
-      },
-      {
-        "t": "h2",
-        "x": "Questions People Most Often Ask"
-      },
-      {
-        "t": "p",
-        "x": "What makes a business space look both modern and timeless?"
-      },
-      {
-        "t": "p",
-        "x": "Simple and functional designs help a lot. Neutral colors, plants, and wood elements add timeless nature. A clean and decluttered space will look better and will last longer."
-      },
-      {
-        "t": "p",
-        "x": "What makes neutral colors beneficial in design?"
-      },
-      {
-        "t": "p",
-        "x": "When people think of office colors, neutral colors like beige, gray, and white can often be overlooked, but they're beneficial because they're warm, relaxing, and calming, and they pair well with every other color in an office, along with giving an illusion of space, height, and brightness in an office, and they will keep an office looking fresh and modern for years without the office needing a redesign because of being timeless."
-      },
-      {
-        "t": "p",
-        "x": "How important is functionality in an office design?"
-      },
-      {
-        "t": "p",
-        "x": "Functionality and comfort are a must. An office design and the space should work well for the people using it, and striking a blend of good looks, comfort, and functionality are of value. An office design and layout that looks nice, but makes it hard for the workers to actually do their job, is a design that has failed."
-      },
-      {
-        "t": "p",
-        "x": "Which natural features can be added to an office?"
-      },
-      {
-        "t": "p",
-        "x": "Adding in some color and making a more lively and peaceful space can be done with some plants. Wood and other natural materials in the office furniture and some other features can make it more inviting and relaxing. Thinking of nearby sourced materials that are environmentally friendly can add in more natural features and a warm ambiance."
-      },
-      {
-        "t": "p",
-        "x": "Should I choose an open office layout for a modern and timeless look?"
-      },
-      {
-        "t": "p",
-        "x": "An open layout can be a great choice. It creates an airy and connected environment that is great for collaboration. It also creates unobstructed pathways and an ease of circulation. Just make sure there are a still a variety of spaces for concentration and quiet work."
-      },
-      {
-        "t": "p",
-        "x": "How can I use décor to make my business space modern and timeless?"
-      },
-      {
-        "t": "p",
-        "x": "When thinking about décor, remember, less is more! Choose modern pieces that stand out and represent your brand. Consider artwork, nice lighting, or a plant, but remember that items that add more to the space also create more clutter. Less is more and quality is better than quantity!"
-      }
-    ]
-  },
-  {
     "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
+    "status": "published",
     "title": "How to Balance Functionality and Aesthetics in a Commercial Space",
     "metaTitle": "How to Balance Functionality and Aesthetics in a Commercial Space",
     "metaDescription": "Learn how to balance functionality and aesthetics in a commercial space. Discover design tips for creating efficient, beautiful, and brand-aligned business…",
@@ -505,15 +22,15 @@ export const BLOG_POSTS = [
       "Commercial Renovations"
     ],
     "date": "2026-09-03",
+    "updated": "2026-09-03",
     "readMinutes": 6,
     "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-balance-functionality-and-aesthetics-in-a-commercial.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/how-to-balance-functionality-and-aesthetics-in-a-commercial.webp 480w, https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-balance-functionality-and-aesthetics-in-a-commercial.webp 880w, https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/how-to-balance-functionality-and-aesthetics-in-a-commercial.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/how-to-balance-functionality-and-aesthetics-in-a-commercial-og.jpg",
     "heroAlt": "Modern commercial space with balanced decor and furniture.",
     "memberOnly": false,
     "blocks": [
-      {
-        "t": "h2",
-        "x": "How to Balance Functionality and Aesthetics in a Commercial Space"
-      },
       {
         "t": "p",
         "x": "Creating a business space that is visually appealing is the ultimate objective for many. The best business spaces consider how the layout and design contribute to the operation of the business as well as how the space engages with the customers. The balance of aesthetic and operational synergy is the key to a successful and functional business space. The following best practices will help you understand how to best achieve this balance."
@@ -544,12 +61,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_1c5dc6d7dc1b4efca877a2597e24e027~mv2.png",
-        "alt": "Modern commercial space balancing furniture and art."
-      },
-      {
-        "t": "h3",
-        "x": "How to Balance Functionality and Aesthetics in a Commercial Space"
+        "src": "https://static.wixstatic.com/media/48172a_1c5dc6d7dc1b4efca877a2597e24e027~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/modern-commercial-space-balancing-furniture-and-art.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_1c5dc6d7dc1b4efca877a2597e24e027~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/modern-commercial-space-balancing-furniture-and-art.webp 480w, https://static.wixstatic.com/media/48172a_1c5dc6d7dc1b4efca877a2597e24e027~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/modern-commercial-space-balancing-furniture-and-art.webp 880w, https://static.wixstatic.com/media/48172a_1c5dc6d7dc1b4efca877a2597e24e027~mv2.png/v1/fill/w_1320,h_742,al_c,q_80,enc_auto/modern-commercial-space-balancing-furniture-and-art.webp 1320w",
+        "alt": "Modern commercial space balancing furniture and art.",
+        "width": 880,
+        "height": 495
       },
       {
         "t": "p",
@@ -651,6 +167,7 @@ export const BLOG_POSTS = [
   },
   {
     "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
+    "status": "published",
     "title": "How to Choose Between a Full Renovation and Partial Upgrades",
     "metaTitle": "How to Choose Between a Full Renovation and Partial Upgrades",
     "metaDescription": "Deciding between a full renovation or partial upgrades? Learn how to choose the best option for your home's needs and budget.",
@@ -661,8 +178,12 @@ export const BLOG_POSTS = [
       "General Contracting"
     ],
     "date": "2026-09-01",
+    "updated": "2026-09-01",
     "readMinutes": 6,
     "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-choose-between-a-full-renovation-and-partial-upgrades.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/how-to-choose-between-a-full-renovation-and-partial-upgrades.webp 480w, https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-choose-between-a-full-renovation-and-partial-upgrades.webp 880w, https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/how-to-choose-between-a-full-renovation-and-partial-upgrades.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/how-to-choose-between-a-full-renovation-and-partial-upgrades-og.jpg",
     "heroAlt": "Comparing full home renovation versus partial upgrades visually.",
     "memberOnly": false,
     "blocks": [
@@ -696,8 +217,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_25ec2aced2b647c7858ea8a5be039885~mv2.png",
-        "alt": "Renovated room versus old room comparison"
+        "src": "https://static.wixstatic.com/media/48172a_25ec2aced2b647c7858ea8a5be039885~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/renovated-room-versus-old-room-comparison.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_25ec2aced2b647c7858ea8a5be039885~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/renovated-room-versus-old-room-comparison.webp 480w, https://static.wixstatic.com/media/48172a_25ec2aced2b647c7858ea8a5be039885~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/renovated-room-versus-old-room-comparison.webp 880w, https://static.wixstatic.com/media/48172a_25ec2aced2b647c7858ea8a5be039885~mv2.png/v1/fill/w_1320,h_742,al_c,q_80,enc_auto/renovated-room-versus-old-room-comparison.webp 1320w",
+        "alt": "Renovated room versus old room comparison",
+        "width": 880,
+        "height": 495
       },
       {
         "t": "h3",
@@ -794,611 +318,8 @@ export const BLOG_POSTS = [
     ]
   },
   {
-    "slug": "how-to-cut-costs-without-compromising-quality-in-a-commercial-remodel",
-    "title": "How to Cut Costs Without Compromising Quality in a Commercial Remodel",
-    "metaTitle": "How to Cut Costs Without Compromising Quality in a Commercial Remodel",
-    "metaDescription": "Learn how to cut costs without compromising quality in a commercial remodel. Discover strategies for budgeting, material selection, and project management.",
-    "excerpt": "Learn how to cut costs without compromising quality in a commercial remodel. Discover strategies for budgeting, material selection, and project management.",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-08-26",
-    "readMinutes": 6,
-    "hero": "https://static.wixstatic.com/media/48172a_dbc10704498f4e658c9440459a0a0c2a~mv2.png",
-    "heroAlt": "Commercial remodel balancing cost savings and quality.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "How to Cut Costs Without Compromising Quality in a Commercial Remodel"
-      },
-      {
-        "t": "p",
-        "x": "Thinking about a commercial remodel but worried about the price tag? As a business owner, it is a common concern for you - wanting a space that not only looks amazing but is also functional while not spending major bucks on it. The good news is, you can keep your budget intact while also having a good business renovation. With a little planning and some strategies, it is possible for you to cut the costs on the remodel and still keep the quality of the business renovation intact. Following planners or strategists from our construction, you can achieve the best costs for your business remodel."
-      },
-      {
-        "t": "h2",
-        "x": "Key Takeaways"
-      },
-      {
-        "t": "li",
-        "x": "From the very beginning, try to keep a budget with a type of range, based on our construction size. This type of planning helps to avoid overspending with your remodel."
-      },
-      {
-        "t": "li",
-        "x": "Look for business grade materials that look good to avoid the high costs of commercial materials to lessen the budget."
-      },
-      {
-        "t": "li",
-        "x": "Change orders minimize. Avoid extra costs and delays on your remodel."
-      },
-      {
-        "t": "li",
-        "x": "Value engineering is a good option. Look for alternatives that keep your remodel at the same quality for lower costs."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_7d481ea70bdf4a3697da784998624354~mv2.png",
-        "alt": "Commercial remodel balancing cost savings and quality."
-      },
-      {
-        "t": "h3",
-        "x": "How to Cut Costs Without Compromising Quality in a Commercial Remodel"
-      },
-      {
-        "t": "p",
-        "x": "Considering a potential commercial refurbishment? There is a lot of excitement associated with the opportunity to create a brand new space, however, this excitement is often diminished by the associated costs. The costs can be mitigated while also achieving a new aesthetically pleasing space. With the adequate strategy, the new space can be obtained without having to break the bank."
-      },
-      {
-        "t": "p",
-        "x": "The first thing to consider would be the materials, one of the most important aspects. Rather than spending large amounts of money to obtain high end and flashy materials, consider other commercially durable materials with a higher value. For instance, some vinyl flooring has the ability to replicate the appearance of real wood or stone, all while being significantly cheaper and able to withstand high traffic areas. Further, while the initial costs of LED lights may be high, over time, those initial costs will be offset by the energy savings. Every choice in materials has a long term effect that must be considered."
-      },
-      {
-        "t": "h3",
-        "x": "Here are a few practical ways to keep costs down:"
-      },
-      {
-        "t": "li",
-        "x": "Try Making a Detailed Budget with Your Contractor: Partner with your contractor to scope a detailed budget with as much breakdown as possible, building in budget variation allowance, bid overage, permitting, etc. A budget is your best ally in controlling careless spending."
-      },
-      {
-        "t": "li",
-        "x": "Avoid Order Changes: Construction is a process and if you start to make changes it can complicate things a lot. Try to avoid changing even small things as it can introduce costs you didn’t expect. Make a plan before you break ground."
-      },
-      {
-        "t": "li",
-        "x": "Try Working in Phases: If doing a complete renovation feels too daunting, consider blocking the project into phases, tackling the biggest and most impactful items first. For example, you can start with the reception and restrooms. This creates a more financially manageable project."
-      },
-      {
-        "t": "p",
-        "x": "When considering renovation companies in Winnipeg, prioritize those who understand this trade-off. Inquire about the use of value engineering and alternative methods to meet your objective at a lower cost. A trustworthy contractor will help you avoid surprises, track expenses in real time and stay on budget."
-      },
-      {
-        "t": "p",
-        "x": "Don't skimp on the essentials. Like with plumbing and electrical work, neglecting certain parts of the project may seem saving on the budget, but can cause larger and more expensive issues later on. Always highlight the quality on foundational elements."
-      },
-      {
-        "t": "p",
-        "x": "Choosing the right team is essential for your commercial renovations Winnipeg project. The reputation and the communication process of Winnipeg builders is important. Commercial renovation services builders have a better chance of more favorable pricing from suppliers, so this is worth considering. Sometimes it take a long time to figure out, but a good renovation should create a flexible, long lasting, and economical solution for your business along with good aesthetics. Bridgeland Builders are a good option for renovation Winnipeg and have a good reputation."
-      },
-      {
-        "t": "h2",
-        "x": "Final Thoughts"
-      },
-      {
-        "t": "p",
-        "x": "Is it possible to do a commercial remodel on a budget and achieve a good result? Yes! It really comes down to the decisions you make early on. Choose affordable but durable materials. Decide on a solid plan, and avoid changes as you start the work. Changes during a remodel can be costly. If you prioritize the important things, communicate effectively with your contractors, and plan to do the work in phases, you can achieve a look and function of the space for a good price. It is about being strategic, not just looking to cut costs."
-      },
-      {
-        "t": "h2",
-        "x": "Questions and Answers"
-      },
-      {
-        "t": "p",
-        "x": "How do I save on materials for a remodel?"
-      },
-      {
-        "t": "p",
-        "x": "If you pick durable materials, like flooring and lights, that are also affordable, you can save. If you are remodeling multiple spaces, buying materials in bulk can lower the price of each item for you."
-      },
-      {
-        "t": "p",
-        "x": "How do I stick to a budget during a renovation?"
-      },
-      {
-        "t": "p",
-        "x": "Having a plan ain't enough. It's just as important to stick to your plan without making too many changes. Small alterations can cumulatively result in your renovation being more expensive than original estimate. If you must make changes, consult your contractor to minimize costs."
-      },
-      {
-        "t": "p",
-        "x": "How do I make budget renovations without getting low quality materials?"
-      },
-      {
-        "t": "p",
-        "x": "Tempting as it may be to pick low quality materials to cut costs, in the long run you will spend more to fix problems caused by low quality materials, or problems from cutting corners. The ideal materials for your renovations are those of good quality and reasonable price."
-      },
-      {
-        "t": "p",
-        "x": "If I have a tight budget, will I have to do my entire remodel at once?"
-      },
-      {
-        "t": "p",
-        "x": "If your budget is tight, you can do the remodel in phases for a more manageable cost. Focus on the key pieces first such as the entry, bathroom, or high traffic areas. Once you’ve worked these areas, you can move on to less critical pieces and your builder can help you plan to avoid disrupting the previous renovations."
-      },
-      {
-        "t": "p",
-        "x": "How do I track expenses during renovations?"
-      },
-      {
-        "t": "p",
-        "x": "Focusing on how money is spent is important. Spend money weekly, track expenses, and consider talking to the contractor or using a program for this. Avoid changing the project once it has started. Set aside a bit more than you think to be safe for other expenses down the road."
-      },
-      {
-        "t": "p",
-        "x": "What is Value Engineering and how does it save money?"
-      },
-      {
-        "t": "p",
-        "x": "Value engineering is budgeting creatively. It is a process where you analyze and choose alternative materials or methods in construction to reduce costs. It is the process of saving money in construction while achieving the same quality."
-      }
-    ]
-  },
-  {
-    "slug": "tax-incentives-for-commercial-renovations-what-you-should-know",
-    "title": "Tax Incentives for Commercial Renovations: What You Should Know",
-    "metaTitle": "Tax Incentives for Commercial Renovations: What You Should Know",
-    "metaDescription": "Learn about tax incentives for commercial renovations. Discover which upgrades qualify, what expenses you can claim, and how to keep the right records.",
-    "excerpt": "Learn about tax incentives for commercial renovations. Discover which upgrades qualify, what expenses you can claim, and how to keep the right records.",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-08-25",
-    "readMinutes": 5,
-    "hero": "https://static.wixstatic.com/media/48172a_23dd2123a5eb4e2bb11e301ee2381bd5~mv2.png",
-    "heroAlt": "Commercial building renovation with workers and materials.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Tax Incentives for Commercial Renovations"
-      },
-      {
-        "t": "p",
-        "x": "Are you thinking about updating your business space? You may be able to receive tax breaks from the government to help pay for the changes as an incentive to help your business make improvements. Understanding the basics may help you save money, even if it's not wholly clear. In this case, we will help you save some money on tax incentives for your commercial renovations."
-      },
-      {
-        "t": "h2",
-        "x": "Key Takeaways"
-      },
-      {
-        "t": "li",
-        "x": "Relating to tax credits, which lower the amount you owe, or add money to your refund, numerous expenses for renovations can qualify."
-      },
-      {
-        "t": "li",
-        "x": "Most of the expenses that can qualify for tax credits can cover the costs of materials, labor from professionals such as plumbers or electricians, and rentals for equipment."
-      },
-      {
-        "t": "li",
-        "x": "If you do some of the work yourself, you can claim costs for building materials and permits, however, you cannot claim costs for your own labor or for tools that you own."
-      },
-      {
-        "t": "li",
-        "x": "Usually, a renovation will have a maximum amount of expenses that you can claim, even if you have spent more."
-      },
-      {
-        "t": "li",
-        "x": "In order to support your tax claims, you need to have very good records of all the expenses of your renovations."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_95d04d5ddb5e4d659f19011591b55623~mv2.png",
-        "alt": "Workers on scaffolding around a modern building under construction, with glass windows, wood planks, and blue sky."
-      },
-      {
-        "t": "h3",
-        "x": "Tax Credit for Commercial Renovations"
-      },
-      {
-        "t": "p",
-        "x": "Are you planning on updating your commercial space? There are some tax incentives that can help subsidize the costs of some renovations. These incentives can help businesses with limited budgets. There are programs that give tax incentives on upgrades that are more than aesthetic like energy efficiency and accessibility."
-      },
-      {
-        "t": "p",
-        "x": "Knowing about these incentives can help your business save a lot of money. We suggest that you do a little research on what tax credit and deductions you can take. These credits and deductions can be for structural upgrades of the interiors. A tip for you is, if you are working with renovation Winnipeg companies, ask them if they know of any provincial or federal incentives for your project. Often, the work done by builders in Winnipeg is qualified for incentives."
-      },
-      {
-        "t": "h3",
-        "x": "Federal and provincial incentives are often in the following areas:"
-      },
-      {
-        "t": "li",
-        "x": "Energy Efficiency Improvements: Tax incentives help cover the cost of energy saving devices like heaters, LED lights, and better insulation."
-      },
-      {
-        "t": "li",
-        "x": "Accessibility Improvements: Tax credits are often available for expanding commercial space accessibility for the disabled. This includes building accessible ramps and restrooms and modifying door widths."
-      },
-      {
-        "t": "li",
-        "x": "Historic Preservation: Specific tax incentives are often available for the renovation of historic buildings. This includes the preservation of historic buildings."
-      },
-      {
-        "t": "p",
-        "x": "When you're planning for commercial renovations, it's useful to plan ahead and speak with a tax professional as they will help you justify the available incentives. It's also best to coordinate with experienced renovation Winnipeg professionals. For example, if you are planning a renovation and need to set your budget, understanding the tax incentives will help set your scope, especially with comprehensive renovations commercial Winnipeg firms help with."
-      },
-      {
-        "t": "p",
-        "x": "To maximize your value and to ensure the renovation is cost-efficient, research tax incentives and consult experts before the project begins."
-      },
-      {
-        "t": "p",
-        "x": "Remember, the specifics of these incentives can change, so it is important to stay informed. If you want to, ask your selected contractors (e.g., Bridgeland Builders) how they handled incentive-related projects. They may have recommendations for you to help with the process."
-      },
-      {
-        "t": "h2",
-        "x": "Putting It All Together"
-      },
-      {
-        "t": "p",
-        "x": "There you have it. Commercial renovation tax incentives help with your bottom line, but how you obtain them can be complicated. You will want to keep track of all the boxes you need to check to claim tax incentives. Don't think of it as work, think of it as part of the overall planning process to finalize your renovation (i.e. deciding on paint colors, selecting flooring). Completing the process so that you receive a tax incentive will allow you to reinvest that money back into your business, or keep it for yourself. It is something to consider for your next major renovation."
-      },
-      {
-        "t": "h2",
-        "x": "Frequently Asked Questions"
-      },
-      {
-        "t": "p",
-        "x": "What kind of renovations can get tax breaks?"
-      },
-      {
-        "t": "p",
-        "x": "You may qualify for tax breaks if the renovations involve creating a living space for a relative needing extra care, such as a basement suite or a separate room for the family member needing care. The renovations must be necessary, reasonable, and directly related to creating the living space."
-      },
-      {
-        "t": "p",
-        "x": "How much money can I get back on my taxes for renovations?"
-      },
-      {
-        "t": "p",
-        "x": "Tax credits for renovations are set at 15% for any of the incurred costs. However, you can only claim the tax credit for renovations up to $7,500 which means you can only receive tax credits for renovations that cost $50,000. If the tax credit exceeds the amount of tax owed, you will receive the difference as a tax refund."
-      },
-      {
-        "t": "p",
-        "x": "Can I claim tax breaks for more than one renovation in a year?"
-      },
-      {
-        "t": "p",
-        "x": "Absolutely! If you do two separate qualifying renovations for two different family members needing help, you can claim the tax credit for both. Keep in mind that you must do separate calculations for each renovation and claim the tax credit separately. You can, however, only cover expenses up to $50,000 for each renovation."
-      },
-      {
-        "t": "p",
-        "x": "What counts as a 'qualifying expense' for these tax breaks?"
-      },
-      {
-        "t": "p",
-        "x": "Qualifying expenses are costs associated with a home renovation. This includes materials, tools, and the payment for subcontractors such as a plumber or electrician. Your own tools and unpaid labor do not count as qualifying expenses."
-      },
-      {
-        "t": "p",
-        "x": "What if a family member helps with the renovation work?"
-      },
-      {
-        "t": "p",
-        "x": "You may be able to include the costs for materials bought by a family member. However, if the family member just provides services for free, you can't claim the value of their work. You can include the value of their work only if they are a licensed contractor and charge a fee for their services."
-      },
-      {
-        "t": "p",
-        "x": "Are there special tax breaks for businesses renovating their own buildings?"
-      },
-      {
-        "t": "p",
-        "x": "The above focus on tax breaks for creating living spaces for family members. While businesses can usually deduct the costs for their own renovations for repair and maintenance and the rental of tools, these specific credits for creating secondary units are meant for individuals helping their family by improving their own homes."
-      }
-    ]
-  },
-  {
-    "slug": "the-pros-and-cons-of-financing-a-commercial-renovation-through-loans",
-    "title": "The Pros and Cons of Financing a Commercial Renovation Through Loans",
-    "metaTitle": "The Pros and Cons of Financing a Commercial Renovation Through Loans",
-    "metaDescription": "Explore the pros and cons of financing a commercial renovation through loans. Understand loan amounts, repayment terms, and interest rates.",
-    "excerpt": "Explore the pros and cons of financing a commercial renovation through loans. Understand loan amounts, repayment terms, and interest rates.",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-08-19",
-    "readMinutes": 4,
-    "hero": "https://static.wixstatic.com/media/48172a_c00d7cba6c6a4b2797a9232d8ee3296a~mv2.png",
-    "heroAlt": "Commercial building renovation financing with loans.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "The Pros and Cons of Financing a Commercial Renovation Through Loans"
-      },
-      {
-        "t": "p",
-        "x": "Do you want to upgrade your commercial property? How to finance the renovations is a different question altogether. You can consider commercial property renovation loans. Like anything else, there are a few pros and several cons to them. Here is a guide to The Pros and Cons of Financing a Commercial Renovation Through Loans to help you decide if this is a good option for your business."
-      },
-      {
-        "t": "h2",
-        "x": "Key Takeaways"
-      },
-      {
-        "t": "li",
-        "x": "You can combine the costs of the property and renovations into one loan."
-      },
-      {
-        "t": "li",
-        "x": "Typically, the property's after-renovation value dictates the loan amount."
-      },
-      {
-        "t": "li",
-        "x": "Progressive funding is a common practice, along with work inspections."
-      },
-      {
-        "t": "li",
-        "x": "Because of the perceived risk, interest rates tend to be higher."
-      },
-      {
-        "t": "li",
-        "x": "Securing the loan is one thing, but repaying it can become almost impossible if the renovations stall or don’t increase the value as expected."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_a5dec23efd9546e5b9ab675ab7b9a3c2~mv2.png",
-        "alt": "Commercial building renovation financing with loans."
-      },
-      {
-        "t": "h3",
-        "x": "Weighing the Benefits and Drawbacks of Using Loans to Finance a Commercial Renovation"
-      },
-      {
-        "t": "p",
-        "x": "Have you ever thought of renovating your commercial space? If you're thinking of doing a small update, or a bigger overhaul, financing is usually part of the equation. Loans can be a way to fund the necessary work, but come with some potential ups and downs to consider."
-      },
-      {
-        "t": "p",
-        "x": "In Winnipeg, loans can be a good option if you are doing large scale renovations. They allow you to make the significant changes necessary to your business and avoid using your operational cash to pay for the changes. This enables you to keep your business running while the renovations occur. After all, a good renovation can also improve the overall value of a space."
-      },
-      {
-        "t": "p",
-        "x": "Finding a great team to work with is a good focal point to start with when you are exploring your options. They can give you a better estimated cost and time frame, and assist you with the paperwork for your loan. Early on, you should reach out to renovation companies Winnipeg or builders Winnipeg to get the ball rolling."
-      },
-      {
-        "t": "p",
-        "x": "To get a loan for a commercial renovation, you need to make detailed plans for a lender. They will turn over your renovation strategy, evaluate your worth of the property after the renovations, and review your finances. Usually, a lender will provide more funding after each review, with an inspector checking the work. This helps balance the finances and keeps the project on schedule."
-      },
-      {
-        "t": "p",
-        "x": "Understanding these factors will help in making one of the more important decisions for your business. It is important to consider all alternatives, including several lenders and estimations from several reliable renovation contractors in Winnipeg."
-      },
-      {
-        "t": "h2",
-        "x": "Conclusion"
-      },
-      {
-        "t": "p",
-        "x": "Getting a loan to finance your commercial renovations is a necessary evil. It is going to be a hassle and a large part of your time will be spent on paperwork. It is easier to finance the renovations along with the purchase of the property, but the lender will take on a large risk and the interest rates will be high. Before you sign anything, get your business plans in order, and make sure you understand the terms. It could benefit your business but decide carefully before going through with this loan."
-      },
-      {
-        "t": "h2",
-        "x": "Frequently Asked Questions"
-      },
-      {
-        "t": "p",
-        "x": "What is a commercial renovation loan?"
-      },
-      {
-        "t": "p",
-        "x": "A commercial renovation loan helps businesses finance the purchase and upgrade of a commercial property. This loan encompasses the purchase of the property as well as the renovations."
-      },
-      {
-        "t": "p",
-        "x": "What expenses can I cover with my loan?"
-      },
-      {
-        "t": "p",
-        "x": "The loans cover quite a lot! To start, they cover the purchase of the land and construction of the building. Additionally, loans cover the landscaping, appliances, materials, and labor, along with obtaining permits."
-      },
-      {
-        "t": "p",
-        "x": "What is the process for loan disbursement?"
-      },
-      {
-        "t": "p",
-        "x": "Typically, you will not receive the total loan amount during the initial disbursement. Once the construction is complete, payments will be made in steps or installments throughout the renovation process."
-      },
-      {
-        "t": "p",
-        "x": "What are the cons of using these loans?"
-      },
-      {
-        "t": "p",
-        "x": "Unfortunately, the drawbacks of the loan add an additional layer of stress. The interest rates tend to be higher than those of regular loans due to the additional risk taken by the lender. Furthermore, if the renovation doesn't add as much value as you anticipated, or if the cost of renovation is greater than what you originally budgeted for, it may create more challenges when it comes to paying off the loan."
-      },
-      {
-        "t": "p",
-        "x": "What is the time frame for paying back the loan?"
-      },
-      {
-        "t": "p",
-        "x": "The time frame for paying back a renovation loan varies based on the lender and type of project. While they can be short term lasting a couple of years, some can be long term lasting 15 to 30 years. It really depends on the deal."
-      },
-      {
-        "t": "p",
-        "x": "What happens if you don't qualify for a renovation loan?"
-      },
-      {
-        "t": "p",
-        "x": "If a renovation loan is not the right option, there are other alternatives. You can consider a business line of credit, a different type of commercial real estate loan, or a business credit card for smaller projects."
-      }
-    ]
-  },
-  {
-    "slug": "cost-saving-strategies-for-large-scale-commercial-renovations",
-    "title": "Cost-Saving Strategies for Large-Scale Commercial Renovations",
-    "metaTitle": "Cost-Saving Strategies for Large-Scale Commercial Renovations",
-    "metaDescription": "Cost-saving strategies for large-scale commercial renovations: plan early, simplify the design, buy standard materials, and track spending throughout.",
-    "excerpt": "Cost-saving strategies for large-scale commercial renovations: plan early, simplify the design, buy standard materials, and track spending throughout.",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-08-18",
-    "readMinutes": 6,
-    "hero": "https://static.wixstatic.com/media/48172a_f0557706843340ea8fa727e3d932c09b~mv2.png",
-    "heroAlt": "Commercial building renovation with scaffolding and workers.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Cost Management During Commercial Renovations"
-      },
-      {
-        "t": "p",
-        "x": "The size of a commercial renovation can make any planner consider the time and the price. Thinking of ways of saving money can keep the pressure low. In this guide, we are going to learn about methods that help keep a commercial renovation within budget. There are several easy ways to approach the renovation without financial headaches."
-      },
-      {
-        "t": "h2",
-        "x": "The Key Points"
-      },
-      {
-        "t": "li",
-        "x": "From the start make a good plan. Headaches can be avoided by spending time detailing the site to make a reasonable budget. Consider value engineering to develop more cost effective ways of maintaining quality."
-      },
-      {
-        "t": "li",
-        "x": "Saving money can sometimes be a function of simplifying design. Bulk buying can be achieved by using the same standard materials and components, and this will streamline the building process."
-      },
-      {
-        "t": "li",
-        "x": "Increasing energy efficiency of your building helps save your money. The initial costs of insulations and solar panels are high, but the savings in energy costs are even higher."
-      },
-      {
-        "t": "li",
-        "x": "Collaborating with your contractors and subcontractors facilitates problem prevention through communication and ensuring clarity on everyone's understanding and avoiding mistakes."
-      },
-      {
-        "t": "li",
-        "x": "During the course of the project, keep an eye on spending and do not let small things get out of control. Continue to monitor spending, keep work quality to your expectations, and manage any changes to prevent small issues from growing into big, costly issues."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_7867bb7b16a74aba8eaad3c7803c3a45~mv2.png",
-        "alt": "Commercial building renovation with construction workers and materials."
-      },
-      {
-        "t": "h3",
-        "x": "Cost Management During Commercial Renovations"
-      },
-      {
-        "t": "p",
-        "x": "Undertaking a new renovation project is a big commitment, especially in a location like Winnipeg. Keeping costs in control is not on just obtaining inexpensive materials, but also on the planning and the people you engage with. It is better to have a proactive budget than a reactive budget."
-      },
-      {
-        "t": "p",
-        "x": "The first step in any commercial renovation in Winnipeg is proper planning. This involves getting detailed site assessments done so that you can avoid surprises later, structural/ environmental concerns that can affect your budget. Partner with Winnipeg renovation contractors so that you can get a realistic budget. This budget should take into consideration, all aspects, including materials, labor, permits, and a budget for contingency. Value engineering is also a big help here; it's basically looking at the design and finding ways to get the same result for less money without losing quality."
-      },
-      {
-        "t": "h3",
-        "x": "Here are some practical ways to save money:"
-      },
-      {
-        "t": "li",
-        "x": "Streamlined Design: Stress on simplicity, and be forewarned that superfluous, pioneering, or elaborate details can guarantee additional time spent, with a cascading effect, leading to additional time, and expense, for the overall project construction."
-      },
-      {
-        "t": "li",
-        "x": "Material Availability: Standard, readily available construction materials streamline the construction, and reduce costs. Construction can be completed in a shorter time."
-      },
-      {
-        "t": "li",
-        "x": "Identify Crucial Upgrades: Identify necessary business operational upgrades, and required finishing, not superfluous facing."
-      },
-      {
-        "t": "p",
-        "x": "When deciding on renovations, it is important to consider energy efficiency, as some upgrades with a higher initial cost will end up saving you money over time because of lower utility bills. Things such as better insulation, improved efficient HVAC systems, and LED lights are good examples of this."
-      },
-      {
-        "t": "p",
-        "x": "In Winnipeg, partnering with certain trusted builders makes a significant impact. A good renovation company in Winnipeg has a great connection with suppliers and subcontractors, so this means better pricing and dependable service. They also steer you through permits and local regulations to prevent time and money losing delays."
-      },
-      {
-        "t": "p",
-        "x": "Identify and account for the less obvious or hidden costs. As your business is losing, during renovations, the downtime adds to costs. Permits, asbestos removal in older structures, and the business downtime losing while the construction is happening are costs that add up. You must add these to your budget to remain on target financially and to keep on track."
-      },
-      {
-        "t": "p",
-        "x": "Finally, consider how to handle your equipment. Sharing equipment across multiple projects, renting versus buying, and maintenance that is regular to prevent breakdowns all add to the significant saving of large-scale renovation Winnipeg projects."
-      },
-      {
-        "t": "h2",
-        "x": "Final Thoughts"
-      },
-      {
-        "t": "p",
-        "x": "Taking on a big commercial renovation always seems daunting, especially when trying to keep an eye on the expenses. We've walked through plenty of options to keep the costs down - from planning to buying the right materials to designing it a certain way. Of course, it isn't just about finding the lowest priced options, it's about being smart, surrounding yourself with the right people, and being organized. The right planning can keep the project within budget and give you a space that functions at a high level for a long time. It's certainly achievable if you front the right efforts."
-      },
-      {
-        "t": "h2",
-        "x": "Questions You Frequently Ask"
-      },
-      {
-        "t": "p",
-        "x": "How can a budget be set for a renovation project that needs big expenses as a start?"
-      },
-      {
-        "t": "p",
-        "x": "The first thing you should do is set the plans as early as possible. Spend time before the first build to analyze what you have to build and what the worst case fallouts could be. You want to set yourself up to avoid the surprise costs that you don't want. How about the space? Are there any overlooked issues with the land? Old piping? Also, draft that budget as detailed as you can, adding a couple layers of cushion for surprise expenses."
-      },
-      {
-        "t": "p",
-        "x": "In what ways can the structure help to save money?"
-      },
-      {
-        "t": "p",
-        "x": "Typically, the less complex a design is the cheaper it is to complete. Instead of going with fancy building details, focus on functionality. Using materials that are standard sizes can also reduce costs as they are less expensive, easier to work with, and can be purchased in bulk. When considering features to reduce long-term operational costs, energy-efficient insulation and HVAC systems may incur costs on the front end, but will save operational costs in the long run."
-      },
-      {
-        "t": "p",
-        "x": "What are the potential unforeseen costs?"
-      },
-      {
-        "t": "p",
-        "x": "Despite good planning, costs can arise out of nowhere. Things such as city permit and inspection fees, as well as the expenses that may arise from the removal of old materials like asbestos if your building is dated. If there are any business closure that coincide with the renovation, there will be loss of business. Additionally, design changes can also be costly."
-      },
-      {
-        "t": "p",
-        "x": "How does the location impact the project's price?"
-      },
-      {
-        "t": "p",
-        "x": "Renovations in bigger cities will have higher costs, and this usually happens because construction services are in higher demand and permits are more expensive. It is also more challenging to transport materials and workers to construction sites. These factors can impact timelines and drive up costs. Being aware of this information prior to construction is important to budgeting."
-      },
-      {
-        "t": "p",
-        "x": "What about labor and material costs?"
-      },
-      {
-        "t": "p",
-        "x": "Your choices of materials will determine the total cost of the project. For example, expensive finishes, such as marble, will add to the project total in comparison to more basic ones, like laminate. Experienced tradesmen are more expensive but often save money long term because they work faster and are less likely to make mistakes. This pushes the project total down, especially if you are budgeting time."
-      },
-      {
-        "t": "p",
-        "x": "How can I keep construction within my budget?"
-      },
-      {
-        "t": "p",
-        "x": "Monitor all expenditures carefully and throughout the duration of the project. Expense tracking programs can help you record and estimate cash flow, and will help you compare spending to your budget. Changes to the original plan can pose a risk to additional costs, so make sure any such changes are strictly necessary, and be sure all adjustments are approved before proceeding. Doing so will help to control and limit budget overruns."
-      }
-    ]
-  },
-  {
     "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
+    "status": "published",
     "title": "Understanding ROI: Which Commercial Renovations Bring the Most Value?",
     "metaTitle": "Understanding ROI: Which Commercial Renovations Bring the Most Value?",
     "metaDescription": "Understanding ROI: Which Commercial Renovations Bring the Most Value? Learn how strategic renovations can boost your property's value and profitability.",
@@ -1408,8 +329,12 @@ export const BLOG_POSTS = [
       "Commercial Renovations"
     ],
     "date": "2026-08-12",
+    "updated": "2026-08-12",
     "readMinutes": 6,
     "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/understanding-roi-which-commercial-renovations-bring-the.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/understanding-roi-which-commercial-renovations-bring-the.webp 480w, https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/understanding-roi-which-commercial-renovations-bring-the.webp 880w, https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/understanding-roi-which-commercial-renovations-bring-the.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/understanding-roi-which-commercial-renovations-bring-the-og.jpg",
     "heroAlt": "Commercial renovation before and after office space.",
     "memberOnly": false,
     "blocks": [
@@ -1447,8 +372,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_27e8041f2b1748f3b01531c1e3c19564~mv2.png",
-        "alt": "Bright modern living room beside a design workspace with blueprints, wood strips, scissors, and pencil on a corkboard surface"
+        "src": "https://static.wixstatic.com/media/48172a_27e8041f2b1748f3b01531c1e3c19564~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/bright-modern-living-room-beside-a-design-workspace-with.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_27e8041f2b1748f3b01531c1e3c19564~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/bright-modern-living-room-beside-a-design-workspace-with.webp 480w, https://static.wixstatic.com/media/48172a_27e8041f2b1748f3b01531c1e3c19564~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/bright-modern-living-room-beside-a-design-workspace-with.webp 880w, https://static.wixstatic.com/media/48172a_27e8041f2b1748f3b01531c1e3c19564~mv2.png/v1/fill/w_1320,h_742,al_c,q_80,enc_auto/bright-modern-living-room-beside-a-design-workspace-with.webp 1320w",
+        "alt": "Bright modern living room beside a design workspace with blueprints, wood strips, scissors, and pencil on a corkboard surface",
+        "width": 880,
+        "height": 495
       },
       {
         "t": "h3",
@@ -1550,6 +478,7 @@ export const BLOG_POSTS = [
   },
   {
     "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
+    "status": "published",
     "title": "How to Finance a Commercial Renovation Without Breaking the Bank",
     "metaTitle": "How to Finance a Commercial Renovation Without Breaking the Bank",
     "metaDescription": "Learn how to finance a commercial renovation without breaking the bank. Explore loan options, strategies, and tips for a successful project.",
@@ -1559,15 +488,15 @@ export const BLOG_POSTS = [
       "Commercial Renovations"
     ],
     "date": "2026-08-11",
+    "updated": "2026-08-11",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-finance-a-commercial-renovation-without-breaking-the.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/how-to-finance-a-commercial-renovation-without-breaking-the.webp 480w, https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-finance-a-commercial-renovation-without-breaking-the.webp 880w, https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/how-to-finance-a-commercial-renovation-without-breaking-the.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/how-to-finance-a-commercial-renovation-without-breaking-the-og.jpg",
     "heroAlt": "Financing commercial renovation with money and blueprints.",
     "memberOnly": false,
     "blocks": [
-      {
-        "t": "h2",
-        "x": "How to Finance a Commercial Renovation Without Breaking the Bank"
-      },
       {
         "t": "p",
         "x": "Do you want to upgrade your business space? Maybe your business just needs to refresh the look or renovate some areas to better serve the needs of the customers. Trying to gather the money to capture your ideas is like trying to complete a jigsaw puzzle. This article explains how to financially plan a Commercial Renovation to ease your stress management. I will explore various options available to you."
@@ -1598,12 +527,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_3e55764f3a964916bb52a6101fd24b3c~mv2.png",
-        "alt": "Commercial renovation financing blueprint with coins and calculator."
-      },
-      {
-        "t": "h3",
-        "x": "How to Finance a Commercial Renovation Without Breaking the Bank"
+        "src": "https://static.wixstatic.com/media/48172a_3e55764f3a964916bb52a6101fd24b3c~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/commercial-renovation-financing-blueprint-with-coins-and.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_3e55764f3a964916bb52a6101fd24b3c~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/commercial-renovation-financing-blueprint-with-coins-and.webp 480w, https://static.wixstatic.com/media/48172a_3e55764f3a964916bb52a6101fd24b3c~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/commercial-renovation-financing-blueprint-with-coins-and.webp 880w, https://static.wixstatic.com/media/48172a_3e55764f3a964916bb52a6101fd24b3c~mv2.png/v1/fill/w_1320,h_742,al_c,q_80,enc_auto/commercial-renovation-financing-blueprint-with-coins-and.webp 1320w",
+        "alt": "Commercial renovation financing blueprint with coins and calculator.",
+        "width": 880,
+        "height": 495
       },
       {
         "t": "p",
@@ -1717,6 +645,7 @@ export const BLOG_POSTS = [
   },
   {
     "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
+    "status": "published",
     "title": "How to Choose the Right Contractor for Your Renovation Project",
     "metaTitle": "How to Choose the Right Contractor for Your Renovation Project",
     "metaDescription": "The success of your renovation depends on finding a contractor you can trust—here’s how to evaluate, compare, and make the right choice.",
@@ -1726,8 +655,12 @@ export const BLOG_POSTS = [
       "Commercial Renovations"
     ],
     "date": "2026-08-05",
+    "updated": "2026-08-05",
     "readMinutes": 6,
     "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-choose-the-right-contractor-for-your-renovation.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/how-to-choose-the-right-contractor-for-your-renovation.webp 480w, https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-choose-the-right-contractor-for-your-renovation.webp 880w, https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/how-to-choose-the-right-contractor-for-your-renovation.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/how-to-choose-the-right-contractor-for-your-renovation-og.jpg",
     "heroAlt": "Commercial remodel project with worker and blueprints.",
     "memberOnly": false,
     "blocks": [
@@ -1765,8 +698,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_9d27d4534f9f4063b37722960d839d11~mv2.png",
-        "alt": "Commercial remodel project with worker and blueprint."
+        "src": "https://static.wixstatic.com/media/48172a_9d27d4534f9f4063b37722960d839d11~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/commercial-remodel-project-with-worker-and-blueprint.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_9d27d4534f9f4063b37722960d839d11~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/commercial-remodel-project-with-worker-and-blueprint.webp 480w, https://static.wixstatic.com/media/48172a_9d27d4534f9f4063b37722960d839d11~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/commercial-remodel-project-with-worker-and-blueprint.webp 880w, https://static.wixstatic.com/media/48172a_9d27d4534f9f4063b37722960d839d11~mv2.png/v1/fill/w_1320,h_742,al_c,q_80,enc_auto/commercial-remodel-project-with-worker-and-blueprint.webp 1320w",
+        "alt": "Commercial remodel project with worker and blueprint.",
+        "width": 880,
+        "height": 495
       },
       {
         "t": "h3",
@@ -1872,6 +808,7 @@ export const BLOG_POSTS = [
   },
   {
     "slug": "the-biggest-cost-factors-in-commercial-renovation-projects",
+    "status": "published",
     "title": "The Biggest Cost Factors in Commercial Renovation Projects",
     "metaTitle": "The Biggest Cost Factors in Commercial Renovation Projects",
     "metaDescription": "Discover the biggest cost factors in commercial renovation projects, from labor and materials to site conditions and regulations. Plan your budget…",
@@ -1881,8 +818,12 @@ export const BLOG_POSTS = [
       "Commercial Renovations"
     ],
     "date": "2026-08-04",
+    "updated": "2026-08-04",
     "readMinutes": 6,
     "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/the-biggest-cost-factors-in-commercial-renovation-projects.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/the-biggest-cost-factors-in-commercial-renovation-projects.webp 480w, https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/the-biggest-cost-factors-in-commercial-renovation-projects.webp 880w, https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/the-biggest-cost-factors-in-commercial-renovation-projects.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/the-biggest-cost-factors-in-commercial-renovation-projects-og.jpg",
     "heroAlt": "Commercial renovation site with construction materials and worker.",
     "memberOnly": false,
     "blocks": [
@@ -2022,6 +963,7 @@ export const BLOG_POSTS = [
   },
   {
     "slug": "how-to-prepare-your-business-for-a-major-renovation",
+    "status": "published",
     "title": "How to Prepare Your Business for a Major Renovation",
     "metaTitle": "How to Prepare Your Business for a Major Renovation",
     "metaDescription": "Learn how to prepare your business for a major renovation. Discover tips on planning, minimizing disruption, and ensuring a smooth transition for a…",
@@ -2031,15 +973,15 @@ export const BLOG_POSTS = [
       "Commercial Renovations"
     ],
     "date": "2026-07-29",
+    "updated": "2026-07-29",
     "readMinutes": 6,
     "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-prepare-your-business-for-a-major-renovation.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/how-to-prepare-your-business-for-a-major-renovation.webp 480w, https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/how-to-prepare-your-business-for-a-major-renovation.webp 880w, https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/how-to-prepare-your-business-for-a-major-renovation.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/how-to-prepare-your-business-for-a-major-renovation-og.jpg",
     "heroAlt": "Business renovation progress with tools and sunlight.",
     "memberOnly": false,
     "blocks": [
-      {
-        "t": "h2",
-        "x": "How to Prepare Your Business for a Major Renovation"
-      },
       {
         "t": "p",
         "x": "Preparing for a large renovation at your business involves more than selecting paint and furniture. Proper planning minimizes disruptions and stress during the process. This guide provides steps to manage operations effectively throughout the project."
@@ -2070,12 +1012,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_d81d6d00672c4eb28bb33f5527e02b4e~mv2.png",
-        "alt": "Business renovation preparation with construction barriers and active staff."
-      },
-      {
-        "t": "h3",
-        "x": "How to Prepare Your Business for a Major Renovation"
+        "src": "https://static.wixstatic.com/media/48172a_d81d6d00672c4eb28bb33f5527e02b4e~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/business-renovation-preparation-with-construction-barriers.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_d81d6d00672c4eb28bb33f5527e02b4e~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/business-renovation-preparation-with-construction-barriers.webp 480w, https://static.wixstatic.com/media/48172a_d81d6d00672c4eb28bb33f5527e02b4e~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/business-renovation-preparation-with-construction-barriers.webp 880w, https://static.wixstatic.com/media/48172a_d81d6d00672c4eb28bb33f5527e02b4e~mv2.png/v1/fill/w_1320,h_742,al_c,q_80,enc_auto/business-renovation-preparation-with-construction-barriers.webp 1320w",
+        "alt": "Business renovation preparation with construction barriers and active staff.",
+        "width": 880,
+        "height": 495
       },
       {
         "t": "p",
@@ -2180,851 +1121,8 @@ export const BLOG_POSTS = [
     ]
   },
   {
-    "slug": "why-pre-construction-planning-is-essential-for-commercial-projects",
-    "title": "Why Pre-Construction Planning Is Essential for Commercial Projects",
-    "metaTitle": "Why Pre-Construction Planning Is Essential for Commercial Projects",
-    "metaDescription": "Discover why pre-construction planning is essential for commercial projects. Learn how it enhances efficiency, controls costs, and mitigates risks for…",
-    "excerpt": "Discover why pre-construction planning is essential for commercial projects. Learn how it enhances efficiency, controls costs, and mitigates risks for project success.",
-    "category": "Commercial Renovations",
-    "categories": [
-      "Commercial Renovations"
-    ],
-    "date": "2026-07-28",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_4b5c625397f34e3ebbac55e801fd411f~mv2.png",
-    "heroAlt": "Blueprint and models for commercial construction planning.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "How to Prepare Your Business for a Major Renovation"
-      },
-      {
-        "t": "p",
-        "x": "Preparing for a large renovation at your business involves far more than choosing paint colors and furniture. Proper planning reduces disruptions and stress throughout the process. This guide outlines essential steps to manage operations effectively during construction."
-      },
-      {
-        "t": "h2",
-        "x": "Key Takeaways"
-      },
-      {
-        "t": "li",
-        "x": "Create a scope of work document covering changes, timelines, and budget to align all parties."
-      },
-      {
-        "t": "li",
-        "x": "Anticipate operational changes and adapt business processes accordingly."
-      },
-      {
-        "t": "li",
-        "x": "Communicate early with customers and employees to set expectations and gain support."
-      },
-      {
-        "t": "li",
-        "x": "Schedule contractors for off-hours work when possible to minimize interruptions."
-      },
-      {
-        "t": "li",
-        "x": "Phase the project into smaller stages to keep portions of the business operational."
-      },
-      {
-        "t": "h2",
-        "x": "Preparation Steps"
-      },
-      {
-        "t": "p",
-        "x": "Business owners often feel anxious about renovation disruptions beyond aesthetics. Managing operations during construction requires treating preparation like detailed trip planning rather than spontaneous travel. Start with a clear blueprint addressing target changes, purpose, and budget to streamline contractor discussions."
-      },
-      {
-        "t": "p",
-        "x": "Secure the right contractor first. Vet Winnipeg companies experienced specifically in commercial projects, not residential work. Knowledgeable office renovation contractors transform potential chaos into manageable tasks."
-      },
-      {
-        "t": "h3",
-        "x": "Pre-renovation adjustments include:"
-      },
-      {
-        "t": "li",
-        "x": "Define objectives: Clarify purposes like improving flow, modernizing appearance, or enhancing functionality."
-      },
-      {
-        "t": "li",
-        "x": "Build realistic budget: Factor in construction delays, temporary relocations, and lost revenue beyond basic building costs."
-      },
-      {
-        "t": "li",
-        "x": "Establish schedule: Coordinate timelines minimizing business disturbance."
-      },
-      {
-        "t": "li",
-        "x": "Prepare staff: Inform teams about the impacts and gather their valuable feedback."
-      },
-      {
-        "t": "li",
-        "x": "Notify clients: Alert customers to access changes, closures, or altered hours."
-      },
-      {
-        "t": "p",
-        "x": "Manage construction impacts. Renovations create noise, dust, restricted movement, and potential relocations that frustrate staff and clients if unaddressed. Phase disruptive work after hours despite added expense to maintain operations. Divide extensive Winnipeg commercial projects into sections, keeping parts of the business functional for continued customer service."
-      },
-      {
-        "t": "h2",
-        "x": "Final Thoughts"
-      },
-      {
-        "t": "p",
-        "x": "Careful planning addresses costs, schedules, team impacts, and customer effects. Challenges yield improved business image, employee environment, and customer attraction. Prioritize communication, backup plans, and experienced contractors for successful outcomes."
-      },
-      {
-        "t": "h2",
-        "x": "Questions We Get Most Often"
-      },
-      {
-        "t": "p",
-        "x": "How will I be able to keep my business open when the renovations are taking place?"
-      },
-      {
-        "t": "p",
-        "x": "After-hours work keeps operations running. Communicate schedules clearly so staff adapts. Schedule closures only for major phases and use phasing to maintain partial access."
-      },
-      {
-        "t": "p",
-        "x": "What do I do first before any work begins?"
-      },
-      {
-        "t": "p",
-        "x": "Develop a solid plan detailing goals, budget allocation, and timeline estimates. This document guides contractor conversations and maintains focus."
-      },
-      {
-        "t": "p",
-        "x": "Why do I need to consider how renovations affect day to day business operations?"
-      },
-      {
-        "t": "p",
-        "x": "Renovations disrupt workflows requiring work relocations and position shifts. Proactive planning mitigates employee and customer impacts."
-      },
-      {
-        "t": "p",
-        "x": "Do I need to consider the future benefits of new renovations?"
-      },
-      {
-        "t": "p",
-        "x": "Every decision weighs ROI. High upfront costs like roof replacements lower future energy bills and boost property value. Prioritize renovations with substantial long-term gains."
-      },
-      {
-        "t": "p",
-        "x": "What are some common issues that can delay renovations?"
-      },
-      {
-        "t": "p",
-        "x": "Unexpected problems like mold, old wiring, permitting delays, material shortages, or scope changes extend timelines."
-      },
-      {
-        "t": "p",
-        "x": "How do I choose the right contractor for my business renovation?"
-      },
-      {
-        "t": "p",
-        "x": "Select contractors with relevant business renovation experience, strong local code knowledge, clear communication, and problem-solving skills. Review previous work samples."
-      }
-    ]
-  },
-  {
-    "slug": "top-tips-for-selecting-the-best-bathroom-renovation-contractors-for-your-vision",
-    "title": "Top Tips for Selecting the Best Bathroom Renovation Contractors for Your Vision",
-    "metaTitle": "Top Tips for Selecting the Best Bathroom Renovation Contractors for Your Vision",
-    "metaDescription": "Choosing the right bathroom renovation contractors can make or break your dream space. A well-executed renovation not only enhances your home's value but…",
-    "excerpt": "Choosing the right bathroom renovation contractors can make or break your dream space. A well-executed renovation not only enhances your home's value but also creates a comfortable, functional, and stylish bathroom. On the other hand, poor workmanship or miscommunication can lead to delays, extra costs, and frustration. This guide offers practical tips to help you find contractors who understand your vision and deliver quality results.",
-    "category": "Bathroom Renovations",
-    "categories": [
-      "Bathroom Renovations"
-    ],
-    "date": "2026-07-24",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_8bc60087bc494525a9320e16f6afda24~mv2.png",
-    "heroAlt": "Eye-level view of a modern bathroom under renovation with tools and materials neatly arranged",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Define Your Vision Clearly"
-      },
-      {
-        "t": "p",
-        "x": "Before reaching out to contractors, clarify what you want from your bathroom renovation. Consider the following:"
-      },
-      {
-        "t": "li",
-        "x": "Style preferences: modern, traditional, minimalist, or eclectic"
-      },
-      {
-        "t": "li",
-        "x": "Functional needs: more storage, better lighting, accessibility features"
-      },
-      {
-        "t": "li",
-        "x": "Budget range: realistic limits to guide material and design choices"
-      },
-      {
-        "t": "li",
-        "x": "Timeline: when you want the project completed"
-      },
-      {
-        "t": "p",
-        "x": "Having a clear vision helps contractors provide accurate quotes and timelines. It also reduces misunderstandings during the project."
-      },
-      {
-        "t": "h2",
-        "x": "Research and Shortlist Qualified Contractors"
-      },
-      {
-        "t": "p",
-        "x": "Start by gathering a list of potential contractors through:"
-      },
-      {
-        "t": "li",
-        "x": "Recommendations from friends, family, or colleagues who recently renovated"
-      },
-      {
-        "t": "li",
-        "x": "Online reviews on trusted platforms like Houzz, Angie’s List, or Google"
-      },
-      {
-        "t": "li",
-        "x": "Local trade associations or licensing boards"
-      },
-      {
-        "t": "p",
-        "x": "Look for contractors who specialize in bathroom renovations. Their experience with plumbing, tiling, and waterproofing is crucial for a successful project."
-      },
-      {
-        "t": "p",
-        "x": "Check each contractor’s credentials:"
-      },
-      {
-        "t": "li",
-        "x": "Valid licenses and insurance"
-      },
-      {
-        "t": "li",
-        "x": "Years of experience in bathroom remodeling"
-      },
-      {
-        "t": "li",
-        "x": "Portfolio of completed projects similar to your vision"
-      },
-      {
-        "t": "p",
-        "x": "Narrow your list to three to five contractors for further evaluation."
-      },
-      {
-        "t": "h2",
-        "x": "Interview Contractors and Ask the Right Questions"
-      },
-      {
-        "t": "p",
-        "x": "Schedule meetings or calls with your shortlisted contractors. Prepare questions that reveal their expertise and working style:"
-      },
-      {
-        "t": "li",
-        "x": "How many bathroom renovations have you completed in the past year?"
-      },
-      {
-        "t": "li",
-        "x": "Can you provide references from recent clients?"
-      },
-      {
-        "t": "li",
-        "x": "What is your process for handling unexpected issues during renovation?"
-      },
-      {
-        "t": "li",
-        "x": "How do you manage project timelines and communication?"
-      },
-      {
-        "t": "li",
-        "x": "Do you offer a written contract with detailed scope and costs?"
-      },
-      {
-        "t": "p",
-        "x": "Pay attention to how clearly they explain their answers and whether they listen to your concerns. Good communication is essential for a smooth renovation."
-      },
-      {
-        "t": "h2",
-        "x": "Review Quotes and Compare Offers"
-      },
-      {
-        "t": "p",
-        "x": "Request detailed written estimates from each contractor. A comprehensive quote should include:"
-      },
-      {
-        "t": "li",
-        "x": "Breakdown of labor, materials, and permits"
-      },
-      {
-        "t": "li",
-        "x": "Timeline with start and completion dates"
-      },
-      {
-        "t": "li",
-        "x": "Payment schedule and terms"
-      },
-      {
-        "t": "li",
-        "x": "Warranty or guarantee on work and materials"
-      },
-      {
-        "t": "p",
-        "x": "Avoid choosing solely based on the lowest price. Consider the value offered, contractor reputation, and quality of materials proposed."
-      },
-      {
-        "t": "h2",
-        "x": "Verify References and Past Work"
-      },
-      {
-        "t": "p",
-        "x": "Contact references provided by contractors to ask about their experience:"
-      },
-      {
-        "t": "li",
-        "x": "Was the project completed on time and within budget?"
-      },
-      {
-        "t": "li",
-        "x": "How was the quality of workmanship?"
-      },
-      {
-        "t": "li",
-        "x": "Did the contractor communicate effectively throughout?"
-      },
-      {
-        "t": "li",
-        "x": "Were there any unexpected problems, and how were they resolved?"
-      },
-      {
-        "t": "p",
-        "x": "If possible, visit completed projects to see the quality firsthand."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_0d2ad6cb043240769fc7581af2eab929~mv2.png",
-        "alt": "High angle view of a contractor reviewing bathroom renovation plans with a client"
-      },
-      {
-        "t": "h2",
-        "x": "Understand the Contract and Legal Details"
-      },
-      {
-        "t": "p",
-        "x": "Before signing, carefully review the contract. Ensure it covers:"
-      },
-      {
-        "t": "li",
-        "x": "Detailed scope of work and materials"
-      },
-      {
-        "t": "li",
-        "x": "Payment terms and schedule"
-      },
-      {
-        "t": "li",
-        "x": "Procedures for change orders or additional work"
-      },
-      {
-        "t": "li",
-        "x": "Liability and insurance coverage"
-      },
-      {
-        "t": "li",
-        "x": "Cleanup and disposal responsibilities"
-      },
-      {
-        "t": "p",
-        "x": "A clear contract protects both you and the contractor and sets expectations for the project."
-      },
-      {
-        "t": "h2",
-        "x": "Prepare for the Renovation Process"
-      },
-      {
-        "t": "p",
-        "x": "Once you select your contractor, prepare your home for the renovation:"
-      },
-      {
-        "t": "li",
-        "x": "Clear the bathroom and adjacent areas"
-      },
-      {
-        "t": "li",
-        "x": "Arrange alternative bathroom access if needed"
-      },
-      {
-        "t": "li",
-        "x": "Discuss daily work hours and site cleanup with the contractor"
-      },
-      {
-        "t": "li",
-        "x": "Stay available for questions or decisions during the project"
-      },
-      {
-        "t": "p",
-        "x": "Good preparation helps the renovation proceed smoothly and on schedule."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_be0248d030f24eab81b1ca1a1929a321~mv2.png",
-        "alt": "Eye-level view of a newly renovated bathroom showcasing modern fixtures and clean design"
-      },
-      {
-        "t": "h2",
-        "x": "Keep Communication Open Throughout the Project"
-      },
-      {
-        "t": "p",
-        "x": "Regular updates from your contractor help you stay informed and address issues early. Agree on a communication method, such as weekly calls or emails. If problems arise, discuss solutions promptly to avoid delays."
-      },
-      {
-        "t": "h2",
-        "x": "Final Walkthrough and Feedback"
-      },
-      {
-        "t": "p",
-        "x": "When the renovation finishes, do a thorough walkthrough with your contractor. Check that all work matches the contract and your expectations. Note any unfinished or unsatisfactory items and agree on a timeline for corrections."
-      },
-      {
-        "t": "p",
-        "x": "Providing honest feedback helps contractors improve and ensures your satisfaction."
-      }
-    ]
-  },
-  {
-    "slug": "top-tips-for-finding-the-best-bath-renovation-services-near-you",
-    "title": "Top Tips for Finding the Best Bath Renovation Services Near You",
-    "metaTitle": "Top Tips for Finding the Best Bath Renovation Services Near You",
-    "metaDescription": "Finding reliable bath renovation services can feel overwhelming. Whether you want to update an outdated bathroom or fix damage, choosing the right…",
-    "excerpt": "Finding reliable bath renovation services can feel overwhelming. Whether you want to update an outdated bathroom or fix damage, choosing the right professionals makes all the difference. Searching for bath renovation near me often leads to many options, but not all offer the same quality or value. This guide shares practical tips to help you find the best service for your needs and budget.",
-    "category": "Bathroom Renovations",
-    "categories": [
-      "Bathroom Renovations"
-    ],
-    "date": "2026-07-21",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_dd418da00d404194b5a55479766cd503~mv2.png",
-    "heroAlt": "Eye-level view of a modern bathroom with new bathtub and tiles",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Understand Your Renovation Needs"
-      },
-      {
-        "t": "p",
-        "x": "Before contacting any company, clarify what you want to achieve with your bath renovation. Are you replacing fixtures, updating tiles, or redesigning the entire space? Knowing your goals helps you communicate clearly and get accurate quotes."
-      },
-      {
-        "t": "li",
-        "x": "List must-have features such as new showerheads, storage solutions, or eco-friendly fixtures."
-      },
-      {
-        "t": "li",
-        "x": "Decide if you want a full remodel or just cosmetic updates."
-      },
-      {
-        "t": "li",
-        "x": "Set a realistic budget based on your priorities."
-      },
-      {
-        "t": "p",
-        "x": "This preparation saves time and prevents misunderstandings later."
-      },
-      {
-        "t": "h2",
-        "x": "Research Local Companies Thoroughly"
-      },
-      {
-        "t": "p",
-        "x": "When you search for bath renovation near me, you’ll find many local contractors. Narrow down your options by checking:"
-      },
-      {
-        "t": "li",
-        "x": "Reviews and ratings on trusted platforms like Google, Yelp, or Angie's List."
-      },
-      {
-        "t": "li",
-        "x": "Portfolio of past projects on company websites or social media."
-      },
-      {
-        "t": "li",
-        "x": "Years of experience in bathroom renovations specifically."
-      },
-      {
-        "t": "li",
-        "x": "Whether they hold necessary licenses and insurance."
-      },
-      {
-        "t": "p",
-        "x": "Look for companies with consistent positive feedback and examples of work similar to your project."
-      },
-      {
-        "t": "h2",
-        "x": "Ask the Right Questions"
-      },
-      {
-        "t": "p",
-        "x": "Contact potential contractors and ask detailed questions to gauge their expertise and reliability:"
-      },
-      {
-        "t": "li",
-        "x": "How long have you been doing bath renovations?"
-      },
-      {
-        "t": "li",
-        "x": "Can you provide references from recent clients?"
-      },
-      {
-        "t": "li",
-        "x": "What is your process for managing unexpected issues during renovation?"
-      },
-      {
-        "t": "li",
-        "x": "Do you handle permits and inspections?"
-      },
-      {
-        "t": "li",
-        "x": "What is the estimated timeline for completion?"
-      },
-      {
-        "t": "p",
-        "x": "Clear communication upfront helps avoid surprises and builds trust."
-      },
-      {
-        "t": "h2",
-        "x": "Compare Multiple Quotes Carefully"
-      },
-      {
-        "t": "p",
-        "x": "Getting several quotes allows you to compare prices and services. Don’t automatically choose the cheapest option. Instead, consider:"
-      },
-      {
-        "t": "li",
-        "x": "What materials and brands are included?"
-      },
-      {
-        "t": "li",
-        "x": "Are labor and cleanup costs part of the quote?"
-      },
-      {
-        "t": "li",
-        "x": "Does the quote cover all aspects of the renovation or only parts?"
-      },
-      {
-        "t": "li",
-        "x": "Are warranties or guarantees offered?"
-      },
-      {
-        "t": "p",
-        "x": "A detailed, transparent quote reflects professionalism and helps you plan financially."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_2226dc65c1254e95a1a9f81d9f795006~mv2.png",
-        "alt": "Close-up view of a contractor measuring bathroom tiles during renovation"
-      },
-      {
-        "t": "h2",
-        "x": "Check for Quality Materials and Workmanship"
-      },
-      {
-        "t": "p",
-        "x": "The durability and look of your renovated bathroom depend on the materials and craftsmanship. Ask about:"
-      },
-      {
-        "t": "li",
-        "x": "Types of tiles, fixtures, and fittings they recommend."
-      },
-      {
-        "t": "li",
-        "x": "Brands and quality standards they use."
-      },
-      {
-        "t": "li",
-        "x": "How they ensure waterproofing and ventilation."
-      },
-      {
-        "t": "li",
-        "x": "Their approach to finishing details like grout and caulking."
-      },
-      {
-        "t": "p",
-        "x": "High-quality materials and skilled installation prevent costly repairs down the line."
-      },
-      {
-        "t": "h2",
-        "x": "Verify Insurance and Warranty"
-      },
-      {
-        "t": "p",
-        "x": "A trustworthy bath renovation company should have:"
-      },
-      {
-        "t": "li",
-        "x": "Liability insurance to cover any damage during work."
-      },
-      {
-        "t": "li",
-        "x": "Workers’ compensation insurance for their team."
-      },
-      {
-        "t": "li",
-        "x": "Warranty on workmanship and materials."
-      },
-      {
-        "t": "p",
-        "x": "This protection gives peace of mind and shows the company stands behind its work."
-      },
-      {
-        "t": "h2",
-        "x": "Plan for Disruption and Timeline"
-      },
-      {
-        "t": "p",
-        "x": "Bathroom renovations can disrupt your daily routine. Discuss:"
-      },
-      {
-        "t": "li",
-        "x": "How long the project will take."
-      },
-      {
-        "t": "li",
-        "x": "Work hours and noise levels."
-      },
-      {
-        "t": "li",
-        "x": "Temporary bathroom arrangements if needed."
-      },
-      {
-        "t": "p",
-        "x": "A clear schedule helps you prepare and reduces stress."
-      },
-      {
-        "t": "h2",
-        "x": "Look for Eco-Friendly Options"
-      },
-      {
-        "t": "p",
-        "x": "If sustainability matters to you, ask about:"
-      },
-      {
-        "t": "li",
-        "x": "Water-saving fixtures like low-flow showerheads and toilets."
-      },
-      {
-        "t": "li",
-        "x": "Energy-efficient lighting."
-      },
-      {
-        "t": "li",
-        "x": "Use of recycled or low-VOC materials."
-      },
-      {
-        "t": "p",
-        "x": "Many contractors now offer green renovation options that save money and reduce environmental impact."
-      },
-      {
-        "t": "h2",
-        "x": "Trust Your Instincts"
-      },
-      {
-        "t": "p",
-        "x": "Finally, choose a company that feels right. Professionalism, responsiveness, and respect for your home are just as important as price and experience. A good contractor listens carefully, answers questions clearly, and respects your preferences."
-      },
-      {
-        "t": "h2",
-        "x": "Take the Next Step"
-      },
-      {
-        "t": "p",
-        "x": "Finding the best bath renovation near me means doing your homework, asking questions, and comparing options. With the right approach, you can transform your bathroom into a comfortable, stylish space that adds value to your home."
-      }
-    ]
-  },
-  {
-    "slug": "top-tips-for-finding-the-best-bathroom-remodel-services-near-you",
-    "title": "Top Tips for Finding the Best Bathroom Remodel Services Near You",
-    "metaTitle": "Top Tips for Finding the Best Bathroom Remodel Services Near You",
-    "metaDescription": "Finding the right bathroom remodel near me can transform your daily routine and add value to your home. Whether you want a modern update, more space, or…",
-    "excerpt": "Finding the right bathroom remodel near me can transform your daily routine and add value to your home. Whether you want a modern update, more space, or better functionality, a bathroom remodel can make a big difference. This guide helps you understand what to look for, how to plan, and what to expect when searching for bathroom remodeling services nearby.",
-    "category": "Bathroom Renovations",
-    "categories": [
-      "Bathroom Renovations"
-    ],
-    "date": "2026-07-19",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_fcde1ee929e94df3909b9a6b4f808522~mv2.png",
-    "heroAlt": "Eye-level view of a modern bathroom with new fixtures and tiles",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Why Choose a Local Bathroom Remodeler"
-      },
-      {
-        "t": "p",
-        "x": "Choosing a local bathroom remodeler has several benefits. Local contractors understand the community’s style preferences, building codes, and climate considerations. They are easier to reach for consultations, site visits, and follow-ups. Plus, supporting local businesses helps your community thrive."
-      },
-      {
-        "t": "p",
-        "x": "Local remodelers often have established relationships with suppliers, which can lead to better pricing and faster delivery of materials. They also tend to be more accountable since their reputation depends on local word-of-mouth and reviews."
-      },
-      {
-        "t": "h2",
-        "x": "Planning Your Bathroom Remodel"
-      },
-      {
-        "t": "p",
-        "x": "Before contacting a remodeler, it’s important to plan your project carefully. Here are some key steps:"
-      },
-      {
-        "t": "li",
-        "x": "Assess your needs: Do you want to increase storage, improve lighting, or update the style? Identifying your priorities helps guide the design."
-      },
-      {
-        "t": "li",
-        "x": "Set a budget: Bathroom remodels can vary widely in cost. Knowing your budget upfront helps avoid surprises."
-      },
-      {
-        "t": "li",
-        "x": "Measure your space: Accurate measurements of your bathroom’s dimensions and existing fixtures are essential."
-      },
-      {
-        "t": "li",
-        "x": "Gather inspiration: Look for design ideas online or in magazines to communicate your vision clearly."
-      },
-      {
-        "t": "li",
-        "x": "Check local regulations: Some remodels require permits or inspections. Your remodeler should help with this."
-      },
-      {
-        "t": "h2",
-        "x": "What to Expect from a Bathroom Remodel Service"
-      },
-      {
-        "t": "p",
-        "x": "When you search for bathroom remodel near me, you want a service that offers clear communication, quality workmanship, and timely completion. Here’s what a good remodeler typically provides:"
-      },
-      {
-        "t": "li",
-        "x": "Initial consultation: They visit your home to discuss your goals and assess the space."
-      },
-      {
-        "t": "li",
-        "x": "Design proposal: You receive a detailed plan with drawings, materials, and cost estimates."
-      },
-      {
-        "t": "li",
-        "x": "Material selection: The remodeler helps you choose tiles, fixtures, cabinets, and finishes."
-      },
-      {
-        "t": "li",
-        "x": "Demolition and installation: The old bathroom is removed, and new elements are installed carefully."
-      },
-      {
-        "t": "li",
-        "x": "Final inspection: The remodeler ensures everything works properly and meets your expectations."
-      },
-      {
-        "t": "h2",
-        "x": "Popular Bathroom Remodel Ideas"
-      },
-      {
-        "t": "p",
-        "x": "Here are some popular ideas that homeowners often choose during a bathroom remodel:"
-      },
-      {
-        "t": "li",
-        "x": "Walk-in showers: Replacing a bathtub with a walk-in shower adds space and accessibility."
-      },
-      {
-        "t": "li",
-        "x": "Double vanities: Ideal for shared bathrooms, double sinks improve convenience."
-      },
-      {
-        "t": "li",
-        "x": "Heated floors: Adding radiant heating makes cold mornings more comfortable."
-      },
-      {
-        "t": "li",
-        "x": "Storage solutions: Built-in shelves, medicine cabinets, and vanity drawers keep clutter away."
-      },
-      {
-        "t": "li",
-        "x": "Energy-efficient fixtures: Low-flow toilets and LED lighting reduce water and energy use."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_24af583086674328918678231dcf07a9~mv2.png",
-        "alt": "Close-up view of a walk-in shower with glass doors and modern tiles"
-      },
-      {
-        "t": "h2",
-        "x": "How to Find the Best Bathroom Remodel Near Me"
-      },
-      {
-        "t": "p",
-        "x": "Finding the right remodeler requires research and careful consideration. Here are some tips:"
-      },
-      {
-        "t": "li",
-        "x": "Read reviews: Look for contractors with positive feedback on local review sites."
-      },
-      {
-        "t": "li",
-        "x": "Ask for references: Contact previous clients to hear about their experience."
-      },
-      {
-        "t": "li",
-        "x": "Compare quotes: Get estimates from multiple remodelers to find a fair price."
-      },
-      {
-        "t": "li",
-        "x": "Verify credentials: Ensure the remodeler is licensed and insured."
-      },
-      {
-        "t": "li",
-        "x": "Check portfolio: Review photos of past projects to assess their style and quality."
-      },
-      {
-        "t": "h2",
-        "x": "Avoiding Common Remodeling Mistakes"
-      },
-      {
-        "t": "p",
-        "x": "Bathroom remodels can be complex, but avoiding these mistakes helps ensure success:"
-      },
-      {
-        "t": "li",
-        "x": "Skipping the plan: A clear design and budget prevent costly changes later."
-      },
-      {
-        "t": "li",
-        "x": "Choosing cheap materials: Quality materials last longer and look better."
-      },
-      {
-        "t": "li",
-        "x": "Ignoring ventilation: Proper ventilation prevents mold and moisture damage."
-      },
-      {
-        "t": "li",
-        "x": "Overlooking lighting: Layered lighting improves functionality and ambiance."
-      },
-      {
-        "t": "li",
-        "x": "Not hiring professionals: DIY can save money but may lead to errors and delays."
-      }
-    ]
-  },
-  {
     "slug": "which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners",
+    "status": "published",
     "title": "Which bathroom remodel upgrades offer the best return on investment for Canadian homeowners?",
     "metaTitle": "Which bathroom remodel upgrades offer the best return on investment for Canadian homeowners?",
     "metaDescription": "Bathroom remodels rank among the most popular home improvement projects in Canada. Yet, with a wide range of options and costs, homeowners often wonder which…",
@@ -3034,8 +1132,12 @@ export const BLOG_POSTS = [
       "Bathroom Renovations"
     ],
     "date": "2026-07-17",
+    "updated": "2026-07-17",
     "readMinutes": 3,
     "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/which-bathroom-remodel-upgrades-offer-the-best-return-on.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/which-bathroom-remodel-upgrades-offer-the-best-return-on.webp 480w, https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/which-bathroom-remodel-upgrades-offer-the-best-return-on.webp 880w, https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/which-bathroom-remodel-upgrades-offer-the-best-return-on.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/which-bathroom-remodel-upgrades-offer-the-best-return-on-og.jpg",
     "heroAlt": "Eye-level view of a modern bathroom with a freestanding tub and large window",
     "memberOnly": false,
     "blocks": [
@@ -3165,8 +1267,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_09c6f7f59d2647b7b90a8b67d5c0035e~mv2.png",
-        "alt": "Close-up view of a sleek bathroom faucet and sink with modern design"
+        "src": "https://static.wixstatic.com/media/48172a_09c6f7f59d2647b7b90a8b67d5c0035e~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/close-up-view-of-a-sleek-bathroom-faucet-and-sink-with.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_09c6f7f59d2647b7b90a8b67d5c0035e~mv2.png/v1/fill/w_480,h_274,al_c,q_80,enc_auto/close-up-view-of-a-sleek-bathroom-faucet-and-sink-with.webp 480w, https://static.wixstatic.com/media/48172a_09c6f7f59d2647b7b90a8b67d5c0035e~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/close-up-view-of-a-sleek-bathroom-faucet-and-sink-with.webp 880w, https://static.wixstatic.com/media/48172a_09c6f7f59d2647b7b90a8b67d5c0035e~mv2.png/v1/fill/w_1320,h_754,al_c,q_80,enc_auto/close-up-view-of-a-sleek-bathroom-faucet-and-sink-with.webp 1320w",
+        "alt": "Close-up view of a sleek bathroom faucet and sink with modern design",
+        "width": 880,
+        "height": 503
       },
       {
         "t": "h2",
@@ -3238,8 +1343,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_37341d9053924df8bdcdf0390fc12bb4~mv2.png",
-        "alt": "High angle view of a renovated bathroom with tiled shower and modern fixtures"
+        "src": "https://static.wixstatic.com/media/48172a_37341d9053924df8bdcdf0390fc12bb4~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/high-angle-view-of-a-renovated-bathroom-with-tiled-shower.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_37341d9053924df8bdcdf0390fc12bb4~mv2.png/v1/fill/w_480,h_274,al_c,q_80,enc_auto/high-angle-view-of-a-renovated-bathroom-with-tiled-shower.webp 480w, https://static.wixstatic.com/media/48172a_37341d9053924df8bdcdf0390fc12bb4~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/high-angle-view-of-a-renovated-bathroom-with-tiled-shower.webp 880w, https://static.wixstatic.com/media/48172a_37341d9053924df8bdcdf0390fc12bb4~mv2.png/v1/fill/w_1320,h_754,al_c,q_80,enc_auto/high-angle-view-of-a-renovated-bathroom-with-tiled-shower.webp 1320w",
+        "alt": "High angle view of a renovated bathroom with tiled shower and modern fixtures",
+        "width": 880,
+        "height": 503
       },
       {
         "t": "h2",
@@ -3248,449 +1356,8 @@ export const BLOG_POSTS = [
     ]
   },
   {
-    "slug": "top-tips-for-choosing-the-right-remodeling-bathroom-contractor",
-    "title": "Top Tips for Choosing the Right Remodeling Bathroom Contractor",
-    "metaTitle": "Top Tips for Choosing the Right Remodeling Bathroom Contractor",
-    "metaDescription": "Remodeling a bathroom can transform your home, adding comfort, style, and value. Yet, the success of your project depends heavily on the contractor you…",
-    "excerpt": "Remodeling a bathroom can transform your home, adding comfort, style, and value. Yet, the success of your project depends heavily on the contractor you choose. Finding the right remodeling bathroom contractor can feel overwhelming with so many options available. This guide offers practical tips to help you select a professional who delivers quality work, stays on budget, and respects your vision.",
-    "category": "Bathroom Renovations",
-    "categories": [
-      "Bathroom Renovations"
-    ],
-    "date": "2026-07-15",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_73dffc507be54ffbb36849e5facb27a5~mv2.png",
-    "heroAlt": "Eye-level view of a modern bathroom under renovation with new tiles and fixtures",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Understand Your Project Needs"
-      },
-      {
-        "t": "p",
-        "x": "Before you start looking for a contractor, clarify what you want from your bathroom remodel. Are you updating fixtures, changing the layout, or doing a full renovation? Knowing the scope helps you find contractors who specialize in the type of work you need."
-      },
-      {
-        "t": "li",
-        "x": "Write down your must-haves and nice-to-haves."
-      },
-      {
-        "t": "li",
-        "x": "Consider your budget and timeline."
-      },
-      {
-        "t": "li",
-        "x": "Think about style preferences and functionality."
-      },
-      {
-        "t": "p",
-        "x": "Having clear goals makes it easier to communicate with contractors and evaluate their proposals."
-      },
-      {
-        "t": "h2",
-        "x": "Research and Gather Recommendations"
-      },
-      {
-        "t": "p",
-        "x": "Start by asking friends, family, or neighbors who have recently remodeled their bathrooms. Personal recommendations often lead to trustworthy contractors. You can also check online reviews on platforms like Google, Yelp, or Angie's List."
-      },
-      {
-        "t": "p",
-        "x": "Look for contractors who:"
-      },
-      {
-        "t": "li",
-        "x": "Have positive reviews and high ratings."
-      },
-      {
-        "t": "li",
-        "x": "Respond promptly and professionally."
-      },
-      {
-        "t": "li",
-        "x": "Show experience with bathroom remodeling specifically."
-      },
-      {
-        "t": "p",
-        "x": "Create a shortlist of at least three contractors to interview."
-      },
-      {
-        "t": "h2",
-        "x": "Verify Credentials and Experience"
-      },
-      {
-        "t": "p",
-        "x": "A reliable remodeling bathroom contractor should have proper licensing and insurance. Licensing ensures they meet local building codes and standards. Insurance protects you from liability in case of accidents or damage during the project."
-      },
-      {
-        "t": "p",
-        "x": "Ask contractors to provide:"
-      },
-      {
-        "t": "li",
-        "x": "Proof of license and insurance."
-      },
-      {
-        "t": "li",
-        "x": "References from past clients."
-      },
-      {
-        "t": "li",
-        "x": "Examples of completed bathroom remodels."
-      },
-      {
-        "t": "p",
-        "x": "Experienced contractors will gladly share this information and may even show you photos or videos of their work."
-      },
-      {
-        "t": "h2",
-        "x": "Interview Potential Contractors"
-      },
-      {
-        "t": "p",
-        "x": "Meeting contractors in person or via video call helps you gauge their communication skills and professionalism. Prepare questions such as:"
-      },
-      {
-        "t": "li",
-        "x": "How long have you been remodeling bathrooms?"
-      },
-      {
-        "t": "li",
-        "x": "Can you provide a detailed written estimate?"
-      },
-      {
-        "t": "li",
-        "x": "What is your process for handling unexpected issues?"
-      },
-      {
-        "t": "li",
-        "x": "How do you manage the project timeline?"
-      },
-      {
-        "t": "p",
-        "x": "Pay attention to how clearly they explain the process and whether they listen to your concerns. A good contractor values your input and keeps you informed."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_823f933104b7449aa7a6f2058a9d303d~mv2.png",
-        "alt": "Close-up view of a contractor discussing bathroom design plans with a homeowner"
-      },
-      {
-        "t": "h2",
-        "x": "Compare Detailed Estimates"
-      },
-      {
-        "t": "p",
-        "x": "Once you receive estimates, compare them carefully. The lowest price is not always the best choice. Look for:"
-      },
-      {
-        "t": "li",
-        "x": "Breakdown of labor, materials, and permits."
-      },
-      {
-        "t": "li",
-        "x": "Timeline for completion."
-      },
-      {
-        "t": "li",
-        "x": "Payment schedule and terms."
-      },
-      {
-        "t": "li",
-        "x": "Warranty or guarantee on work."
-      },
-      {
-        "t": "p",
-        "x": "A detailed estimate shows transparency and helps avoid surprises later. Make sure all your project requirements are included."
-      },
-      {
-        "t": "h2",
-        "x": "Check for Communication and Compatibility"
-      },
-      {
-        "t": "p",
-        "x": "Successful remodeling depends on good communication. Choose a contractor who is easy to reach and responsive. They should explain technical details in simple terms and respect your style preferences."
-      },
-      {
-        "t": "p",
-        "x": "Also, consider how comfortable you feel working with them. Remodeling can be disruptive, so trust and respect matter."
-      },
-      {
-        "t": "h2",
-        "x": "Review Contract Thoroughly"
-      },
-      {
-        "t": "p",
-        "x": "Before signing, read the contract carefully. It should include:"
-      },
-      {
-        "t": "li",
-        "x": "Scope of work and materials to be used."
-      },
-      {
-        "t": "li",
-        "x": "Project start and end dates."
-      },
-      {
-        "t": "li",
-        "x": "Payment terms and schedule."
-      },
-      {
-        "t": "li",
-        "x": "Procedures for changes or additional costs."
-      },
-      {
-        "t": "li",
-        "x": "Cleanup and disposal responsibilities."
-      },
-      {
-        "t": "p",
-        "x": "A clear contract protects both parties and sets expectations."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_cb231f10d84349a89c182334734eda77~mv2.png",
-        "alt": "High angle view of a completed bathroom remodel with new vanity, lighting, and tile flooring"
-      },
-      {
-        "t": "h2",
-        "x": "Plan for Contingencies"
-      },
-      {
-        "t": "p",
-        "x": "Even with the best planning, remodeling projects can face delays or unexpected issues like plumbing problems or material shortages. Discuss how your contractor handles these situations."
-      },
-      {
-        "t": "p",
-        "x": "Ask about:"
-      },
-      {
-        "t": "li",
-        "x": "How changes are communicated and approved."
-      },
-      {
-        "t": "li",
-        "x": "Additional costs and how they are managed."
-      },
-      {
-        "t": "li",
-        "x": "Timeline adjustments."
-      },
-      {
-        "t": "p",
-        "x": "Being prepared helps reduce stress and keeps the project on track."
-      },
-      {
-        "t": "h2",
-        "x": "Final Walkthrough and Payment"
-      },
-      {
-        "t": "p",
-        "x": "When the work is done, do a thorough walkthrough with your contractor. Check that everything matches the contract and your expectations. Note any issues or unfinished work."
-      },
-      {
-        "t": "p",
-        "x": "Only make the final payment after you are satisfied with the results. Keep all receipts and warranties for future reference."
-      }
-    ]
-  },
-  {
-    "slug": "efficient-cooking-top-functional-kitchen-ideas-for-small-spaces",
-    "title": "Efficient Cooking: Top Functional Kitchen Ideas for Small Spaces",
-    "metaTitle": "Efficient Cooking: Top Functional Kitchen Ideas for Small Spaces",
-    "metaDescription": "Discover innovative Kitchen Ideas to transform small spaces into efficient cooking havens. Explore top Kitchen Ideas for maximizing functionality.",
-    "excerpt": "Discover innovative Kitchen Ideas to transform small spaces into efficient cooking havens. Explore top Kitchen Ideas for maximizing functionality.",
-    "category": "Kitchen Renovations",
-    "categories": [
-      "Kitchen Renovations"
-    ],
-    "date": "2026-07-14",
-    "readMinutes": 5,
-    "hero": "https://static.wixstatic.com/media/48172a_5f032884c1654b9a94f6188dd262582d~mv2.jpeg",
-    "heroAlt": "Simple and elegant kitchen counter with sink, faucet, wooden bowls, and induction stove.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Mastering Efficiency in Small Spaces"
-      },
-      {
-        "t": "p",
-        "x": "In today's fast-paced world, efficient cooking has become a vital skill for many, especially for those navigating the challenges of small kitchens. The growing trend of urban living has led to a significant increase in demand for effective kitchen design ideas for small kitchens. Whether you're in a cozy apartment or a compact home, a well-planned kitchen can enhance functionality without sacrificing style. For renovation projects aimed at maximizing space, Bridgeland Builders offers expertise to visualize and implement these innovative solutions."
-      },
-      {
-        "t": "h2",
-        "x": "Understanding the Importance of Functional Kitchen Ideas for Efficient Cooking"
-      },
-      {
-        "t": "p",
-        "x": "Before diving into specific design ideas, it is essential to comprehend how a functional kitchen contributes to efficient cooking. A well-designed kitchen not only optimizes storage but also streamlines the cooking process, allowing you to prepare meals quickly and effectively. Key components of a functional kitchen layout include efficient work zones, strategic storage solutions, and appropriate appliances that fit your cooking style."
-      },
-      {
-        "t": "h3",
-        "x": "Creating Defined Work Zones"
-      },
-      {
-        "t": "p",
-        "x": "Establishing defined work zones is crucial for maintaining order and efficiency in your kitchen. These zones typically include areas for food preparation, cooking, cleaning, and storage."
-      },
-      {
-        "t": "li",
-        "x": "Preparation Zone: Allocate counter space near the refrigerator and pantry for easy access to ingredients. Consider using a cutting board that fits on top of your sink for minimalist design while maximizing usability."
-      },
-      {
-        "t": "li",
-        "x": "Cooking Zone: Locate your stove and oven near the prep area to facilitate a smooth transition between preparation and cooking. Installing magnetic knife strips can save drawer space and keep knives within reach."
-      },
-      {
-        "t": "li",
-        "x": "Cleaning Zone: Position your sink and dishwasher close together to make cleaning up after meals more manageable. Utilize pull-out racks for dish soap and sponges to save space and enhance organization."
-      },
-      {
-        "t": "h3",
-        "x": "Smart Storage Solutions"
-      },
-      {
-        "t": "p",
-        "x": "In a small kitchen, maximizing storage is vital. Here are some creative ways to utilize your vertical and hidden space effectively:"
-      },
-      {
-        "t": "li",
-        "x": "Over-the-Range Microwave: If you have limited counter space, consider an over-the-range microwave that doubles as a space-saver."
-      },
-      {
-        "t": "li",
-        "x": "Open Shelving: Replace upper cabinets with open shelves to create an airy feel while providing easy access to dishes and cookbooks."
-      },
-      {
-        "t": "li",
-        "x": "Pull-Out Pantry: Install a pull-out pantry next to your refrigerator for easy access to canned goods and spices."
-      },
-      {
-        "t": "li",
-        "x": "Hooks and Racks: Use wall-mounted hooks or pegboards to hang utensils or pots; this not only frees counter space but also adds a rustic charm to your kitchen design."
-      },
-      {
-        "t": "h2",
-        "x": "Choosing the Right Appliances"
-      },
-      {
-        "t": "p",
-        "x": "The right appliances can significantly impact your kitchen's efficiency. Consider compact, multifunctional options that can enhance your cooking experience:"
-      },
-      {
-        "t": "li",
-        "x": "Induction Cooktops: These offer rapid heating and cooling, ideal for small spaces where quick cooking can significantly save time and energy."
-      },
-      {
-        "t": "li",
-        "x": "Countertop Ovens: A high-quality countertop oven can serve multiple functions, including baking and toasting, without requiring the footprint of a full-sized oven."
-      },
-      {
-        "t": "li",
-        "x": "Combination Appliances: Appliances like a blender that doubles as a food processor can minimize the need for multiple gadgets while still allowing for diverse meal preparation."
-      },
-      {
-        "t": "h3",
-        "x": "Leveraging Light and Color"
-      },
-      {
-        "t": "p",
-        "x": "Designing a small kitchen isn’t all about practical elements; aesthetics play a vital role as well. To create a spacious and inviting feel, consider these tips:"
-      },
-      {
-        "t": "li",
-        "x": "Color Palette: Light, neutral colors like whites and soft grays can make a small kitchen feel open and bright. Accents of color can be added through appliances or utensils."
-      },
-      {
-        "t": "li",
-        "x": "Lighting: Utilize under-cabinet lighting to illuminate prep areas without overcrowding the space. Ceiling-mounted lights provide general illumination, while pendant lights can serve as a stylish statement piece."
-      },
-      {
-        "t": "h2",
-        "x": "Connecting with Professionals"
-      },
-      {
-        "t": "p",
-        "x": "Implementing these efficient cooking and kitchen design ideas for small kitchens can be complex, especially when it comes to renovations. Collaborating with professionals like Bridgeland Builders can make the process smoother and more efficient. They specialize in providing tailored solutions for any kitchen size, ensuring each detail aligns with your functional needs and aesthetic preferences."
-      },
-      {
-        "t": "h2",
-        "x": "Implementing Your Kitchen Ideas"
-      },
-      {
-        "t": "p",
-        "x": "After narrowing down your functional kitchen ideas, the next step is executing your vision through careful planning and consultation. You may want to:"
-      },
-      {
-        "t": "li",
-        "x": "Prepare a Design Plan: Sketch out where you want each component to go, ensuring a logical flow between work zones."
-      },
-      {
-        "t": "li",
-        "x": "Budget Accordingly: Knowing your budget will help you prioritize investments in appliances or custom cabinetry that will provide long-term benefits."
-      },
-      {
-        "t": "li",
-        "x": "Select Materials Wisely: Choose durable and easy-to-clean materials that cater to both aesthetics and functionality."
-      },
-      {
-        "t": "p",
-        "x": "By considering these aspects, you can efficiently plan a kitchen remodel that maximizes space while ensuring comfort in your day-to-day cooking endeavors."
-      },
-      {
-        "t": "h2",
-        "x": "Frequently Asked Questions"
-      },
-      {
-        "t": "p",
-        "x": "What are the best kitchen layouts for small spaces?"
-      },
-      {
-        "t": "p",
-        "x": "The best layouts for small kitchens typically include L-shaped, U-shaped, or galley designs, which allow you to maximize space effectively and create seamless workflows between work zones."
-      },
-      {
-        "t": "p",
-        "x": "How can I organize a small kitchen without a lot of cabinets?"
-      },
-      {
-        "t": "p",
-        "x": "Consider open shelving, vertical storage solutions like pegboards, and multifunctional furniture. Using drawer organizers can also help keep utensils and tools neatly arranged without the bulk of cabinets."
-      },
-      {
-        "t": "p",
-        "x": "What appliances are essential for a small kitchen?"
-      },
-      {
-        "t": "p",
-        "x": "Essential appliances for small kitchens generally include a compact refrigerator, an induction cooktop, and a combination microwave oven. Choosing versatile, space-saving options will help maximize your kitchen function."
-      },
-      {
-        "t": "p",
-        "x": "How does color choice impact a small kitchen space?"
-      },
-      {
-        "t": "p",
-        "x": "Light and neutral colors can help make a small kitchen appear larger and more open. Accents in bright colors can add personality without overwhelming the space."
-      },
-      {
-        "t": "p",
-        "x": "Can I renovate my kitchen myself?"
-      },
-      {
-        "t": "p",
-        "x": "While DIY renovations are possible, collaborating with renovation professionals can ensure that designs are not only aesthetically pleasing but also meet safety and functional standards."
-      },
-      {
-        "t": "p",
-        "x": "In conclusion, elevating your small kitchen into an efficient culinary space is achievable with the right functional ideas. Remember to incorporate defined work zones, creative storage solutions, and carefully selected appliances. With expert guidance, you can transform your cooking area into a sanctuary that balances both functionality and style, making the most of every inch. Consider consulting with Bridgeland Builders to explore tailored solutions that fit your kitchen needs and aesthetic vision."
-      }
-    ]
-  },
-  {
     "slug": "essential-design-strategies-for-small-kitchen-renovations",
+    "status": "published",
     "title": "Essential Design Strategies for Small Kitchen Renovations",
     "metaTitle": "Essential Design Strategies for Small Kitchen Renovations",
     "metaDescription": "Small kitchens present unique challenges that require thoughtful design to make the most of limited space. A well-planned renovation can transform a cramped…",
@@ -3700,8 +1367,12 @@ export const BLOG_POSTS = [
       "Kitchen Renovations"
     ],
     "date": "2026-07-12",
+    "updated": "2026-07-12",
     "readMinutes": 3,
     "hero": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/essential-design-strategies-for-small-kitchen-renovations.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/essential-design-strategies-for-small-kitchen-renovations.webp 480w, https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/essential-design-strategies-for-small-kitchen-renovations.webp 880w, https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/essential-design-strategies-for-small-kitchen-renovations.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/essential-design-strategies-for-small-kitchen-renovations-og.jpg",
     "heroAlt": "Eye-level view of a compact modern kitchen with efficient storage and lighting",
     "memberOnly": false,
     "blocks": [
@@ -3819,8 +1490,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_54a6ed46264549a88ee3607a0516baaf~mv2.png",
-        "alt": "High angle view of a small kitchen with L-shaped layout and peninsula counter"
+        "src": "https://static.wixstatic.com/media/48172a_54a6ed46264549a88ee3607a0516baaf~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/high-angle-view-of-a-small-kitchen-with-l-shaped-layout-and.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_54a6ed46264549a88ee3607a0516baaf~mv2.png/v1/fill/w_480,h_274,al_c,q_80,enc_auto/high-angle-view-of-a-small-kitchen-with-l-shaped-layout-and.webp 480w, https://static.wixstatic.com/media/48172a_54a6ed46264549a88ee3607a0516baaf~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/high-angle-view-of-a-small-kitchen-with-l-shaped-layout-and.webp 880w, https://static.wixstatic.com/media/48172a_54a6ed46264549a88ee3607a0516baaf~mv2.png/v1/fill/w_1320,h_754,al_c,q_80,enc_auto/high-angle-view-of-a-small-kitchen-with-l-shaped-layout-and.webp 1320w",
+        "alt": "High angle view of a small kitchen with L-shaped layout and peninsula counter",
+        "width": 880,
+        "height": 503
       },
       {
         "t": "h2",
@@ -3896,8 +1570,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_3d74e529500f449ba47b6e15486c1268~mv2.png",
-        "alt": "Close-up view of a kitchen countertop with task lighting and reflective backsplash"
+        "src": "https://static.wixstatic.com/media/48172a_3d74e529500f449ba47b6e15486c1268~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/close-up-view-of-a-kitchen-countertop-with-task-lighting.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_3d74e529500f449ba47b6e15486c1268~mv2.png/v1/fill/w_480,h_274,al_c,q_80,enc_auto/close-up-view-of-a-kitchen-countertop-with-task-lighting.webp 480w, https://static.wixstatic.com/media/48172a_3d74e529500f449ba47b6e15486c1268~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/close-up-view-of-a-kitchen-countertop-with-task-lighting.webp 880w, https://static.wixstatic.com/media/48172a_3d74e529500f449ba47b6e15486c1268~mv2.png/v1/fill/w_1320,h_754,al_c,q_80,enc_auto/close-up-view-of-a-kitchen-countertop-with-task-lighting.webp 1320w",
+        "alt": "Close-up view of a kitchen countertop with task lighting and reflective backsplash",
+        "width": 880,
+        "height": 503
       },
       {
         "t": "h2",
@@ -3922,209 +1599,8 @@ export const BLOG_POSTS = [
     ]
   },
   {
-    "slug": "the-complete-guide-to-designing-a-functional-small-kitchen",
-    "title": "The Complete Guide to Designing a Functional Small Kitchen",
-    "metaTitle": "The Complete Guide to Designing a Functional Small Kitchen",
-    "metaDescription": "Small kitchens can feel cramped and challenging to work in, but with smart design choices, they can become highly functional and enjoyable spaces. This guide…",
-    "excerpt": "Small kitchens can feel cramped and challenging to work in, but with smart design choices, they can become highly functional and enjoyable spaces. This guide will help you understand how to make the most of limited space, improve workflow, and create a kitchen that works well for your daily needs.",
-    "category": "Kitchen Renovations",
-    "categories": [
-      "Kitchen Renovations"
-    ],
-    "date": "2026-07-10",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_95de12d9664f4ceb8a51dd08069f18de~mv2.png",
-    "heroAlt": "Eye-level view of a compact modern kitchen with efficient layout and storage",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "h2",
-        "x": "Why Functional Kitchen Design Matters in Small Homes"
-      },
-      {
-        "t": "p",
-        "x": "In small homes, every inch counts. A kitchen that is not designed with function in mind can quickly become frustrating, making cooking and cleaning feel like chores. A well-planned kitchen improves efficiency, reduces clutter, and makes the space feel larger. Many homeowners struggle with limited counter space, poor storage, and awkward layouts that interrupt the cooking flow."
-      },
-      {
-        "t": "h2",
-        "x": "Understanding Kitchen Workflow"
-      },
-      {
-        "t": "p",
-        "x": "Good kitchen design starts with understanding how you move and work in the space."
-      },
-      {
-        "t": "li",
-        "x": "The kitchen work triangle connects the sink, stove, and refrigerator. Keeping these three points close but not cramped reduces unnecessary steps."
-      },
-      {
-        "t": "li",
-        "x": "Traffic flow means planning pathways that avoid crossing the main work areas, so people can move freely without interrupting cooking."
-      },
-      {
-        "t": "li",
-        "x": "Ergonomics involves placing frequently used items within easy reach and ensuring counters and appliances are at comfortable heights."
-      },
-      {
-        "t": "h2",
-        "x": "Choosing the Right Layout"
-      },
-      {
-        "t": "p",
-        "x": "Selecting a layout that fits your space and lifestyle is key to functionality."
-      },
-      {
-        "t": "li",
-        "x": "Galley kitchens have two parallel counters and work well in narrow spaces. They maximize counter and storage space but can feel tight if too narrow."
-      },
-      {
-        "t": "li",
-        "x": "L-shaped kitchens use two adjoining walls, creating an open area that can accommodate a small dining table or island."
-      },
-      {
-        "t": "li",
-        "x": "U-shaped kitchens wrap around three walls, offering plenty of counter space but requiring enough room to avoid feeling boxed in."
-      },
-      {
-        "t": "li",
-        "x": "One-wall kitchens place all appliances and counters on a single wall, ideal for very small spaces but often needing clever storage solutions."
-      },
-      {
-        "t": "li",
-        "x": "Peninsula vs. island designs: A peninsula extends from a wall or counter, saving space compared to a freestanding island, which requires clearance on all sides."
-      },
-      {
-        "t": "h2",
-        "x": "Maximizing Storage"
-      },
-      {
-        "t": "p",
-        "x": "Storage is often the biggest challenge in small kitchens. Use these ideas to keep your kitchen organized and clutter-free:"
-      },
-      {
-        "t": "li",
-        "x": "Vertical cabinetry takes advantage of wall height, reaching up to the ceiling for extra storage."
-      },
-      {
-        "t": "li",
-        "x": "Pull-out organizers in cabinets make it easier to access items at the back without digging."
-      },
-      {
-        "t": "li",
-        "x": "Corner storage solutions like lazy Susans or pull-out trays use awkward corners efficiently."
-      },
-      {
-        "t": "li",
-        "x": "Drawer systems with dividers keep utensils and tools neatly arranged."
-      },
-      {
-        "t": "li",
-        "x": "Pantry organization with clear containers and labeled shelves helps you find ingredients quickly."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_63d3d318b1b846f7b012fa833a71301f~mv2.png",
-        "alt": "Close-up view of pull-out kitchen cabinet organizer with spices and utensils"
-      },
-      {
-        "t": "h2",
-        "x": "Selecting Appliances"
-      },
-      {
-        "t": "p",
-        "x": "Choosing the right appliances can save space and improve kitchen function."
-      },
-      {
-        "t": "li",
-        "x": "Space-saving appliances include compact dishwashers, slim refrigerators, and combination microwave-ovens."
-      },
-      {
-        "t": "li",
-        "x": "Built-in options integrate appliances into cabinetry, creating a seamless look and freeing up counter space."
-      },
-      {
-        "t": "li",
-        "x": "Energy-efficient models reduce utility bills and often come in smaller sizes suited for small kitchens."
-      },
-      {
-        "t": "h2",
-        "x": "Lighting and Materials"
-      },
-      {
-        "t": "p",
-        "x": "Good lighting and durable materials enhance both function and style."
-      },
-      {
-        "t": "li",
-        "x": "Task lighting under cabinets brightens work areas for chopping and cooking."
-      },
-      {
-        "t": "li",
-        "x": "Natural lighting makes the space feel larger and more inviting."
-      },
-      {
-        "t": "li",
-        "x": "Reflective finishes on cabinets or backsplashes bounce light around the room."
-      },
-      {
-        "t": "li",
-        "x": "Durable countertops like quartz or solid surface materials resist stains and scratches, important in tight spaces where every surface is used."
-      },
-      {
-        "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_06d9837d188f4bb9b8e62afe55302718~mv2.png",
-        "alt": "High angle view of small kitchen with natural light and reflective surfaces"
-      },
-      {
-        "t": "h2",
-        "x": "Budget and Renovation Planning"
-      },
-      {
-        "t": "p",
-        "x": "Planning your budget carefully helps avoid costly mistakes."
-      },
-      {
-        "t": "li",
-        "x": "Prioritize upgrades that improve daily use, such as better storage or lighting."
-      },
-      {
-        "t": "li",
-        "x": "Avoid overloading the space with too many features that reduce movement."
-      },
-      {
-        "t": "li",
-        "x": "Work with a renovation contractor experienced in small kitchens to get practical advice and accurate cost estimates."
-      },
-      {
-        "t": "p",
-        "x": "A clear plan will help you stay on track and create a kitchen that fits your needs and budget."
-      }
-    ]
-  },
-  {
-    "slug": "kitchen-design-ideas-for-small-kitchens",
-    "title": "Kitchen Design Ideas for Small Kitchens",
-    "metaTitle": "Kitchen Design Ideas for Small Kitchens",
-    "metaDescription": "Small Kitchen Design Ideas: Smart Ways to Make Your Kitchen Feel Bigger",
-    "excerpt": "Small Kitchen Design Ideas: Smart Ways to Make Your Kitchen Feel Bigger",
-    "category": "Kitchen Renovations",
-    "categories": [
-      "Kitchen Renovations"
-    ],
-    "date": "2026-07-07",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_1c36111d27604982b4a5f648caa67395~mv2.png",
-    "heroAlt": "Small kitchen design ideas that make the space feel bigger",
-    "memberOnly": true,
-    "blocks": [
-      {
-        "t": "p",
-        "x": "Small kitchens can feel cramped and challenging to work in, but with smart design choices, they can become highly functional and stylish spaces. Whether you live in an apartment, a tiny house, or simply want to make the most of limited space, these kitchen design ideas will help you create a kitchen that feels open, organized, and inviting."
-      }
-    ]
-  },
-  {
     "slug": "mastering-general-contracting-tips-for-your-next-project",
+    "status": "published",
     "title": "Mastering General Contracting: Tips for Your Next Project",
     "metaTitle": "Mastering General Contracting: Tips for Your Next Project",
     "metaDescription": "Unlock the secrets of successful general contracting with our expert tips! Elevate your next project and master the art of efficient management today.",
@@ -4134,8 +1610,12 @@ export const BLOG_POSTS = [
       "General Contracting"
     ],
     "date": "2026-07-06",
+    "updated": "2026-07-06",
     "readMinutes": 12,
     "hero": "https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png",
+    "heroSrc": "https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/mastering-general-contracting-tips-for-your-next-project.webp",
+    "heroSrcSet": "https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png/v1/fill/w_480,h_270,al_c,q_80,enc_auto/mastering-general-contracting-tips-for-your-next-project.webp 480w, https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png/v1/fill/w_880,h_495,al_c,q_80,enc_auto/mastering-general-contracting-tips-for-your-next-project.webp 880w, https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png/v1/fill/w_1320,h_743,al_c,q_80,enc_auto/mastering-general-contracting-tips-for-your-next-project.webp 1320w",
+    "ogImage": "https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png/v1/fill/w_1200,h_630,al_c,q_80/mastering-general-contracting-tips-for-your-next-project-og.jpg",
     "heroAlt": "Eye-level view of a construction site with workers and building materials",
     "memberOnly": false,
     "blocks": [
@@ -4189,8 +1669,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_21090a0f08954449b9fd76ccbbc114a6~mv2.png",
-        "alt": "Close-up view of construction tools and blueprints on a workbench"
+        "src": "https://static.wixstatic.com/media/48172a_21090a0f08954449b9fd76ccbbc114a6~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/close-up-view-of-construction-tools-and-blueprints-on-a.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_21090a0f08954449b9fd76ccbbc114a6~mv2.png/v1/fill/w_480,h_274,al_c,q_80,enc_auto/close-up-view-of-construction-tools-and-blueprints-on-a.webp 480w, https://static.wixstatic.com/media/48172a_21090a0f08954449b9fd76ccbbc114a6~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/close-up-view-of-construction-tools-and-blueprints-on-a.webp 880w, https://static.wixstatic.com/media/48172a_21090a0f08954449b9fd76ccbbc114a6~mv2.png/v1/fill/w_1320,h_754,al_c,q_80,enc_auto/close-up-view-of-construction-tools-and-blueprints-on-a.webp 1320w",
+        "alt": "Close-up view of construction tools and blueprints on a workbench",
+        "width": 880,
+        "height": 503
       },
       {
         "t": "h2",
@@ -4226,8 +1709,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "https://static.wixstatic.com/media/48172a_7c5e7a35b432455385c1c9aba70cc9a3~mv2.png",
-        "alt": "High angle view of a construction site with cranes and building framework"
+        "src": "https://static.wixstatic.com/media/48172a_7c5e7a35b432455385c1c9aba70cc9a3~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/high-angle-view-of-a-construction-site-with-cranes-and.webp",
+        "srcSet": "https://static.wixstatic.com/media/48172a_7c5e7a35b432455385c1c9aba70cc9a3~mv2.png/v1/fill/w_480,h_274,al_c,q_80,enc_auto/high-angle-view-of-a-construction-site-with-cranes-and.webp 480w, https://static.wixstatic.com/media/48172a_7c5e7a35b432455385c1c9aba70cc9a3~mv2.png/v1/fill/w_880,h_503,al_c,q_80,enc_auto/high-angle-view-of-a-construction-site-with-cranes-and.webp 880w, https://static.wixstatic.com/media/48172a_7c5e7a35b432455385c1c9aba70cc9a3~mv2.png/v1/fill/w_1320,h_754,al_c,q_80,enc_auto/high-angle-view-of-a-construction-site-with-cranes-and.webp 1320w",
+        "alt": "High angle view of a construction site with cranes and building framework",
+        "width": 880,
+        "height": 503
       },
       {
         "t": "h2",
@@ -4306,238 +1792,96 @@ export const BLOG_POSTS = [
         "x": "Quality control and safety measures are essential to protect the project's integrity and ensure a safe working environment. Overcoming common challenges, such as managing delays, client expectations, and conflicts, requires a proactive and resourceful approach. By continuously improving your skills and staying updated on industry best practices, you can master the art of general contracting and deliver successful projects that meet the highest standards of quality and safety. Embrace the challenges and opportunities of general contracting, and elevate your skills to become a leader in the field."
       }
     ]
+  }
+];
+
+/** Retired post URLs and their targets (for the SEO audit; served by src/data/redirects.js). */
+export const BLOG_REDIRECTS = [
+  {
+    "from": "/blog/how-to-choose-the-right-color-palette-for-your-business",
+    "to": "/blog/how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
+    "status": "redirect"
   },
   {
-    "slug": "maximize-space-smart-small-kitchen-layout-ideas-for-efficiency",
-    "title": "Maximize Space - Smart Small Kitchen Layout Ideas for Efficiency",
-    "metaTitle": "Maximize Space - Smart Small Kitchen Layout Ideas for Efficiency",
-    "metaDescription": "Maximizing space in small kitchens can be a creative challenge. Explore smart layouts, storage solutions, and appliance choices that make every square inch…",
-    "excerpt": "Maximizing space in small kitchens can be a creative challenge. Explore smart layouts, storage solutions, and appliance choices that make every square inch work harder.",
-    "category": "Kitchen Renovations",
-    "categories": [
-      "Kitchen Renovations"
-    ],
-    "date": "2026-07-01",
-    "readMinutes": 5,
-    "hero": "https://static.wixstatic.com/media/48172a_7e792260efe9420999b774c542d44599~mv2.jpeg",
-    "heroAlt": "Sophisticated kitchen interior with modern appliances, wooden accents, and functional design.",
-    "memberOnly": false,
-    "blocks": [
-      {
-        "t": "p",
-        "x": "Maximizing space in small kitchens can be a creative challenge, especially for homeowners looking to enhance functionality without compromising style. At Bridgeland Builders, we understand the intricacies of kitchen design ideas for small kitchens, emphasizing the importance of an efficient layout. This comprehensive guide will explore innovative solutions to maximize space, making the most of every square inch."
-      },
-      {
-        "t": "h2",
-        "x": "1. Understanding the Importance of Layout"
-      },
-      {
-        "t": "p",
-        "x": "Efficient kitchen design begins with a well-thought-out layout. The arrangement of appliances, counters, and storage can significantly impact both functionality and aesthetics. Ideally, a kitchen layout should facilitate smooth workflow among cooking, cleaning, and preparing areas, adhering to the classic work triangle concept. This concept emphasizes positioning the stove, fridge, and sink in a triangular formation, minimizing unnecessary movement."
-      },
-      {
-        "t": "h3",
-        "x": "Common Layout Types for Small Kitchens"
-      },
-      {
-        "t": "p",
-        "x": "When planning kitchen layouts, several options can be particularly effective in small spaces:"
-      },
-      {
-        "t": "li",
-        "x": "Galley Kitchens: This layout features parallel counters on either side, creating a corridor-like space. It's ideal for maximizing linear footage and ensures all areas are within easy reach."
-      },
-      {
-        "t": "li",
-        "x": "L-Shaped Kitchens: With one corner dedicated to kitchen tasks, L-shaped designs can accommodate open dining areas and living spaces while utilizing corner cabinets effectively."
-      },
-      {
-        "t": "li",
-        "x": "U-Shaped Kitchens: Best for slightly larger small kitchens, this layout encloses the cooking area, providing ample storage while keeping everything within arm's reach."
-      },
-      {
-        "t": "p",
-        "x": "Understanding these common layouts is essential for creating a custom design tailored to your lifestyle."
-      },
-      {
-        "t": "h2",
-        "x": "2. Smart Storage Solutions"
-      },
-      {
-        "t": "p",
-        "x": "In small kitchens, capitalizing on vertical and hidden storage is key to preserving surface space. Here are some smart storage ideas:"
-      },
-      {
-        "t": "li",
-        "x": "Open Shelving: Instead of traditional cabinets, consider open shelves for frequently used items. This keeps them accessible and visually appealing while making the kitchen feel larger."
-      },
-      {
-        "t": "li",
-        "x": "Pull-Out Cabinets: Incorporating pull-out shelves or lazy Susans can maximize corner space and improve accessibility."
-      },
-      {
-        "t": "li",
-        "x": "Under-Counter Storage: Use the area beneath counters for storing pots, pans, and appliances. Custom drawers can be designed to fit your specific needs."
-      },
-      {
-        "t": "li",
-        "x": "Magnetic Strips: Install magnetic strips on walls to hold knives and tools, freeing up drawer and counter space."
-      },
-      {
-        "t": "li",
-        "x": "Multi-Use Furniture: Opt for furniture that serves dual purposes, such as a kitchen island with storage or a fold-down table for dining."
-      },
-      {
-        "t": "p",
-        "x": "These solutions not only enhance efficiency but also create an organized, tidy space."
-      },
-      {
-        "t": "h2",
-        "x": "3. Choosing the Right Appliances"
-      },
-      {
-        "t": "p",
-        "x": "When it comes to appliances in a small kitchen, less is often more. Smart appliance choices can free up space while improving functionality."
-      },
-      {
-        "t": "h3",
-        "x": "Selecting Space-Efficient Appliances"
-      },
-      {
-        "t": "li",
-        "x": "Compact Models: Look for compact or slim-line appliances that offer essential functions without taking up unnecessary room."
-      },
-      {
-        "t": "li",
-        "x": "Stackable Units: Consider stackable washer-dryer combos or multi-functional appliances like oven-ranges with built-in microwaves to save space."
-      },
-      {
-        "t": "li",
-        "x": "Built-In Appliances: These are designed to fit seamlessly into cabinetry, providing a streamlined look and maximizing counter space."
-      },
-      {
-        "t": "p",
-        "x": "Incorporating these advanced appliances allows for a modern aesthetic while prioritizing functionality."
-      },
-      {
-        "t": "h2",
-        "x": "4. Effective Layout Techniques"
-      },
-      {
-        "t": "p",
-        "x": "Design innovations play a crucial role in maximizing space with small kitchen layouts. Here are some expert-driven techniques you may find beneficial:"
-      },
-      {
-        "t": "li",
-        "x": "Floating Counters: Consider floating counters for a minimalist look that saves floor space. They can be used for meal prep without bulky cabinetry."
-      },
-      {
-        "t": "li",
-        "x": "Glass Door Cabinets: Use cabinets with glass doors to maintain visual continuity and create an illusion of more space."
-      },
-      {
-        "t": "li",
-        "x": "Light Colors and Bold Accents: Light colors create a brighter, more open environment, while bold accents can draw attention away from clutter."
-      },
-      {
-        "t": "li",
-        "x": "Maximize Natural Light: Strategically position mirrors or reflective surfaces to bounce light around the space, making it feel larger and more inviting."
-      },
-      {
-        "t": "p",
-        "x": "These techniques align with the philosophies we promote at Bridgeland Builders, aiding clients in creating functional yet stylish small kitchens."
-      },
-      {
-        "t": "h2",
-        "x": "5. Real-Life Examples of Efficient Small Kitchen Designs"
-      },
-      {
-        "t": "p",
-        "x": "To further illustrate maximizing space in small kitchens, consider these impactful case studies:"
-      },
-      {
-        "t": "li",
-        "x": "The Urban Loft Kitchen: A 120-square-foot galley kitchen in a downtown loft utilized open shelving, a compact dishwasher, and a pull-out cutting board. This design minimized clutter while remaining functional for everyday cooking and entertaining."
-      },
-      {
-        "t": "li",
-        "x": "The Home Office Kitchenette: An L-shaped kitchen designed in a home office featured a built-in microwave and refrigerator integrated into the cabinetry, streamlining space for clients who wanted dual functionality."
-      },
-      {
-        "t": "p",
-        "x": "These real-life examples embody effective strategies that can inspire future renovations."
-      },
-      {
-        "t": "h2",
-        "x": "Frequently Asked Questions"
-      },
-      {
-        "t": "p",
-        "x": "What are must-have features for a small kitchen?"
-      },
-      {
-        "t": "p",
-        "x": "Essential features in a small kitchen include adequate storage solutions, efficient appliances, and effective lighting. These elements work together to create functionality without overcrowding the space."
-      },
-      {
-        "t": "p",
-        "x": "How can I choose the best layout for my small kitchen?"
-      },
-      {
-        "t": "p",
-        "x": "Consider your cooking style, traffic flow, and adjacent spaces when selecting a layout. Each of the common layouts mentioned caters to specific needs, so assess which one aligns best with your lifestyle."
-      },
-      {
-        "t": "p",
-        "x": "Is it possible to make a small kitchen look bigger?"
-      },
-      {
-        "t": "p",
-        "x": "Yes! Utilizing light colors, reflective surfaces, and open shelving can visually expand your kitchen's space. Additionally, minimizing clutter is crucial for creating an airy feel."
-      },
-      {
-        "t": "p",
-        "x": "Are there affordable options for small kitchen renovations?"
-      },
-      {
-        "t": "p",
-        "x": "Yes, many cost-effective solutions exist, such as repainting cabinets, adding open shelving, or using peel-and-stick backsplash tiles. Prioritizing functional upgrades often has a strong impact on overall design."
-      },
-      {
-        "t": "p",
-        "x": "How can Bridgeland Builders assist in my small kitchen renovation?"
-      },
-      {
-        "t": "p",
-        "x": "At Bridgeland Builders, we specialize in providing top-tier renovation solutions tailored to your specific needs. We offer comprehensive guidance throughout the design and construction process, ensuring an efficient and stylish kitchen."
-      },
-      {
-        "t": "p",
-        "x": "In conclusion, maximizing space with small kitchen layouts doesn't have to be a daunting task. With thoughtful design choices and innovative storage solutions, you can create a kitchen that is both functional and visually appealing. If you're considering a kitchen renovation, explore our professional construction company specializing in home and office renovations for expert insights. Embrace creativity and efficiency and transform your small kitchen into a space that enhances your cooking experience and everyday life."
-      }
-    ]
+    "from": "/blog/the-role-of-branding-in-commercial-interior-design",
+    "to": "/blog/how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
+    "status": "redirect"
   },
   {
-    "slug": "trending-kitchen-design-ideas-for-small-kitchens-you-ll-love",
-    "title": "Trending Kitchen Design Ideas for Small Kitchens You’ll Love",
-    "metaTitle": "Trending Kitchen Design Ideas for Small Kitchens You’ll Love",
-    "metaDescription": "Discover trending Kitchen Design Ideas for Small Kitchens to transform your space. Explore stylish, functional layouts and storage solutions now!",
-    "excerpt": "Discover trending Kitchen Design Ideas for Small Kitchens to transform your space. Explore stylish, functional layouts and storage solutions now!",
-    "category": "Kitchen Renovations",
-    "categories": [
-      "Kitchen Renovations"
-    ],
-    "date": "2026-06-30",
-    "readMinutes": 3,
-    "hero": "https://static.wixstatic.com/media/48172a_f9ae9d28449c4ef0a816d35836485470~mv2.jpeg",
-    "heroAlt": "Stylish minimalist kitchen interior with wooden cabinets and sleek appliances.",
-    "memberOnly": true,
-    "blocks": [
-      {
-        "t": "p",
-        "x": "Discover trending Kitchen Design Ideas for Small Kitchens to transform your space. Explore stylish, functional layouts and storage solutions now!"
-      }
-    ]
+    "from": "/blog/how-to-create-a-modern-and-timeless-look-in-your-business-space",
+    "to": "/blog/how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/how-to-cut-costs-without-compromising-quality-in-a-commercial-remodel",
+    "to": "/blog/the-biggest-cost-factors-in-commercial-renovation-projects",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/tax-incentives-for-commercial-renovations-what-you-should-know",
+    "to": "/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank",
+    "status": "draft",
+    "temporary": true
+  },
+  {
+    "from": "/blog/the-pros-and-cons-of-financing-a-commercial-renovation-through-loans",
+    "to": "/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/cost-saving-strategies-for-large-scale-commercial-renovations",
+    "to": "/blog/the-biggest-cost-factors-in-commercial-renovation-projects",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/why-pre-construction-planning-is-essential-for-commercial-projects",
+    "to": "/blog/how-to-prepare-your-business-for-a-major-renovation",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/top-tips-for-selecting-the-best-bathroom-renovation-contractors-for-your-vision",
+    "to": "/blog/how-to-choose-the-right-contractor-for-your-renovation-project",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/top-tips-for-finding-the-best-bath-renovation-services-near-you",
+    "to": "/services/bathroom-renovations",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/top-tips-for-finding-the-best-bathroom-remodel-services-near-you",
+    "to": "/services/bathroom-renovations",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/top-tips-for-choosing-the-right-remodeling-bathroom-contractor",
+    "to": "/blog/how-to-choose-the-right-contractor-for-your-renovation-project",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/efficient-cooking-top-functional-kitchen-ideas-for-small-spaces",
+    "to": "/blog/essential-design-strategies-for-small-kitchen-renovations",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/the-complete-guide-to-designing-a-functional-small-kitchen",
+    "to": "/blog/essential-design-strategies-for-small-kitchen-renovations",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/kitchen-design-ideas-for-small-kitchens",
+    "to": "/blog/essential-design-strategies-for-small-kitchen-renovations",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/maximize-space-smart-small-kitchen-layout-ideas-for-efficiency",
+    "to": "/blog/essential-design-strategies-for-small-kitchen-renovations",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/trending-kitchen-design-ideas-for-small-kitchens-you-ll-love",
+    "to": "/blog/essential-design-strategies-for-small-kitchen-renovations",
+    "status": "redirect"
   }
 ];
 

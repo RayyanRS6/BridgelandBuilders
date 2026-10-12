@@ -1,63 +1,929 @@
-import { readFileSync, existsSync } from 'node:fs';
+/**
+ * SEO build gate (plan §3.13 / decision D10).
+ *
+ * Reads the prerendered site (dist/**\/index.html + dist/404.html) together with
+ * its sources of truth — prerender-routes.json, public/sitemap.xml,
+ * public/robots.txt, vercel.json, src/data/seo.js, src/data/redirects.js,
+ * src/data/blogPosts.js and (optionally) scripts/keyword-map.json — and checks
+ * that they agree.
+ *
+ *   ERROR  invariants: route <-> SEO <-> prerender <-> sitemap parity, noindex
+ *          pages kept out of the sitemap, FAQPage text present in the HTML,
+ *          forbidden schema, JSON-LD that parses and whose @ids resolve, one
+ *          page JSON-LD block, one <h1>, one <main>, redirect parity, NAP rules,
+ *          no changefreq/priority, no leaked Suspense fallback.
+ *   WARN   quality: title/description lengths, duplicates, .reveal gating,
+ *          image hygiene, internal-link coverage, lastmod uniformity, keyword
+ *          map, readability, JS budgets.
+ *   INFO   accepted interim states (Wix-hosted images until the migration,
+ *          307 interim redirects, planned pages not live yet).
+ *
+ * Output: a grouped console report and dist-ssr/audit.json.
+ * Exit code: 0, unless --strict is passed and there is at least one ERROR.
+ *
+ * Usage: node scripts/audit-seo.mjs [--strict] [--verbose] [--wix-error]
+ *   --verbose    print every finding (default: first 12 per check)
+ *   --wix-error  treat static.wixstatic.com images as errors (after migration)
+ *
+ * Node built-ins only. The HTML is read with a small tokenizer
+ * (scripts/lib/audit/html.mjs) that understands React's prerendered output.
+ */
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { brotliCompressSync, constants as zlibConstants } from 'node:zlib';
+import { performance } from 'node:perf_hooks';
+import {
+  ancestors,
+  bodyRange,
+  byTag,
+  classesOf,
+  decodeEntities,
+  isInside,
+  mainRange,
+  matchKey,
+  parseHtml,
+  textBetween,
+  textOf,
+  wordCount,
+} from './lib/audit/html.mjs';
+import { conflictingTypes, faqItems, forbiddenSchema, idIndex, jsonLdBlocks, typesOf, walk, walkStrings } from './lib/audit/jsonld.mjs';
+import {
+  classifyHref,
+  cleanPath,
+  isPatternSource,
+  normaliseRedirectList,
+  parseRobots,
+  parseSitemap,
+  robotsAllows,
+  unescapeSource,
+  vercelRedirects,
+} from './lib/audit/site.mjs';
+import { checkKeywords, readKeywordList, readKeywordMap } from './lib/audit/keywords.mjs';
+import { Report, printReport, writeJson } from './lib/audit/report.mjs';
 
-const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
-const routes = JSON.parse(readFileSync(new URL('../prerender-routes.json', import.meta.url)));
+const started = performance.now();
+const ROOT = fileURLToPath(new URL('../', import.meta.url));
+const DIST = join(ROOT, 'dist');
+const OUT_FILE = join(ROOT, 'dist-ssr', 'audit.json');
 
-const grab = (html, re) => { const m = html.match(re); return m ? m[1] : null; };
-const problems = [];
-const typeCount = {};
+const ARGS = new Set(process.argv.slice(2));
+const STRICT = ARGS.has('--strict');
+const VERBOSE = ARGS.has('--verbose');
+const WIX_IS_ERROR = ARGS.has('--wix-error') || process.env.AUDIT_WIX_ERROR === '1';
 
-for (const route of routes) {
-  const file = route === '/' ? join(DIST, 'index.html') : join(DIST, route, 'index.html');
-  if (!existsSync(file)) { problems.push(`${route}: MISSING html`); continue; }
-  const html = readFileSync(file, 'utf8');
+/* ------------------------------------------------------------ policy */
+const SITE_PHONE_TEL = 'tel:+14318665644';
+const PHONE_DIGITS = '4318665644';
+const PHONE_FORMATS = new Set(['431-866-5644', '+1-431-866-5644', '+1 431-866-5644']);
+const SCHEMA_TELEPHONE = '+1-431-866-5644';
+const MAILING_ADDRESS_RE = /845\s+Dakota/i;
+const MAILING_ADDRESS_ROUTES = new Set(['/privacy-policy', '/terms-of-service', '/contact']);
+const LEGAL_ROUTES = new Set(['/privacy-policy', '/terms-of-service']);
+const REVEAL_FORBIDDEN_CLASSES = ['hero-card', 'page-hero-card', 'blog-hero-figure', 'blog-article-body'];
+const TITLE_WARN = 60;
+const TITLE_ERROR = 70;
+const DESC_MIN = 70;
+const DESC_MAX = 160;
+const LONG_PARAGRAPH_WORDS = 90;
+const MIN_INBOUND = 3;
+const STALE_307_DAYS = 45;
+const ESTIMATOR_HOST = 'estimator.bridgelandbuilders.com';
+// Brotli KB of JS loaded before interaction (plan §4 budgets).
+const jsBudgetKb = (route) => {
+  if (route === '/') return 80;
+  if (route === '/instant-quote') return 75;
+  if (route.startsWith('/services/')) return 95;
+  if (route.startsWith('/blog/')) return 85;
+  return 80;
+};
+const EXPECTED_FILES = {
+  error: ['robots.txt', 'sitemap.xml', '404.html'],
+  warn: ['llms.txt', 'llms-full.txt', 'favicon.ico', 'favicon.png', 'favicon.svg', 'site.webmanifest', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png'],
+};
+const NETLIFY_FILES = ['_headers', '_redirects'];
 
-  const title = grab(html, /<title>([^<]*)<\/title>/);
-  const desc = grab(html, /<meta name="description" content="([^"]*)"/);
-  const canon = grab(html, /<link rel="canonical" href="([^"]*)"/);
-  const ogt = grab(html, /<meta property="og:title" content="([^"]*)"/);
-  const ogi = grab(html, /<meta property="og:image" content="([^"]*)"/);
+const report = new Report();
 
-  if (!title) problems.push(`${route}: no title`);
-  else if (title.length > 70) problems.push(`${route}: title ${title.length} chars — "${title}"`);
-  if (!desc) problems.push(`${route}: no meta description`);
-  else if (desc.length < 70 || desc.length > 165) problems.push(`${route}: description ${desc.length} chars`);
-  if (!canon) problems.push(`${route}: no canonical`);
-  else if (!canon.endsWith(route) && !(route === '/' && canon.endsWith('/'))) problems.push(`${route}: canonical mismatch -> ${canon}`);
-  if (!ogt) problems.push(`${route}: no og:title`);
-  if (!ogi) problems.push(`${route}: no og:image`);
+/* ------------------------------------------------------------ inputs */
+const readText = (file) => (existsSync(file) ? readFileSync(file, 'utf8').replace(/^﻿/, '') : null);
 
-  const blocks = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)];
-  if (!blocks.length) problems.push(`${route}: no JSON-LD`);
-  for (const [, raw] of blocks) {
-    let data;
-    try { data = JSON.parse(raw); } catch (e) { problems.push(`${route}: JSON-LD parse error — ${e.message}`); continue; }
-    for (const node of data['@graph'] || [data]) {
-      const t = Array.isArray(node['@type']) ? node['@type'][0] : node['@type'];
-      typeCount[t] = (typeCount[t] || 0) + 1;
+function readJsonFile(rel, { required = false } = {}) {
+  const text = readText(join(ROOT, rel));
+  if (text == null) {
+    if (required) report.error('input.missing', null, `${rel} not found`);
+    return undefined;
+  }
+  try {
+    return JSON.parse(text);
+  } catch (e) {
+    report.error('input.import-failed', null, `${rel} is not valid JSON: ${e.message}`);
+    return undefined;
+  }
+}
+
+/** Imports a module; a missing file or export only warns, a broken module errors. */
+async function importGuarded(rel, wanted = [], optional = []) {
+  const file = join(ROOT, rel);
+  if (!existsSync(file)) {
+    report.warn('input.missing', null, `${rel} not found — checks that need it are skipped`);
+    return {};
+  }
+  try {
+    const mod = await import(pathToFileURL(file).href);
+    for (const name of wanted) {
+      if (!(name in mod)) report.warn('input.export-missing', null, `${rel} has no export "${name}" — checks that need it are skipped`);
+    }
+    for (const name of optional) {
+      if (!(name in mod)) report.info('input.export-missing', null, `${rel} has no export "${name}" (optional)`);
+    }
+    return mod;
+  } catch (e) {
+    report.error('input.import-failed', null, `${rel} failed to import: ${e.message.split('\n')[0]}`);
+    return {};
+  }
+}
+
+const siteConfig = await importGuarded('src/data/siteConfig.js', ['SITE_URL']);
+const SITE_URL = String(siteConfig.SITE_URL || 'https://bridgelandbuilders.com').replace(/\/+$/, '');
+const seo = await importGuarded('src/data/seo.js', ['PAGE_SEO', 'SERVICE_SEO', 'NOINDEX_ROUTES']);
+const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS']);
+const blogModule = await importGuarded('src/data/blogPosts.js', ['BLOG_POSTS'], ['BLOG_REDIRECTS']);
+
+const prerenderJson = readJsonFile('prerender-routes.json', { required: true });
+const PRERENDER = Array.isArray(prerenderJson) ? prerenderJson.map(cleanPath) : [];
+const PRERENDER_SET = new Set(PRERENDER);
+const vercelConfig = readJsonFile('vercel.json', { required: true });
+const sitemapXml = readText(join(ROOT, 'public', 'sitemap.xml'));
+const robotsTxt = readText(join(ROOT, 'public', 'robots.txt'));
+
+/* ------------------------------------------- SEO route model (seo.js) */
+const PAGE_SEO = seo.PAGE_SEO && typeof seo.PAGE_SEO === 'object' ? seo.PAGE_SEO : null;
+const SERVICE_SEO = seo.SERVICE_SEO && typeof seo.SERVICE_SEO === 'object' ? seo.SERVICE_SEO : null;
+const SEO_AVAILABLE = !!(PAGE_SEO && SERVICE_SEO);
+const BLOG_POSTS = Array.isArray(blogModule.BLOG_POSTS) ? blogModule.BLOG_POSTS : [];
+
+const seoEntries = new Map(); // route -> { kind, entry }
+const NOINDEX = new Set();
+if (PAGE_SEO) for (const [path, entry] of Object.entries(PAGE_SEO)) seoEntries.set(cleanPath(path), { kind: 'page', entry });
+if (SERVICE_SEO) for (const [path, entry] of Object.entries(SERVICE_SEO)) seoEntries.set(cleanPath(path), { kind: 'service', entry });
+for (const post of BLOG_POSTS) {
+  if (!post || !post.slug) continue;
+  const route = `/blog/${post.slug}`;
+  const status = post.status || 'published';
+  if (status === 'published' || status === 'noindex') {
+    seoEntries.set(route, { kind: 'blog', entry: post });
+    if (status === 'noindex') NOINDEX.add(route);
+  } else {
+    report.error('blog.unpublished-exported', route, `status "${status}" but exported in BLOG_POSTS (only published posts may be)`);
+  }
+}
+if (Array.isArray(seo.NOINDEX_ROUTES)) seo.NOINDEX_ROUTES.forEach((r) => NOINDEX.add(cleanPath(r)));
+for (const [route, { entry }] of seoEntries) {
+  if (entry && /noindex/i.test(entry.robots || '')) NOINDEX.add(route);
+}
+const INDEXABLE = new Set([...seoEntries.keys()].filter((r) => !NOINDEX.has(r)));
+
+/* ----------------------------------------------- router (AppShell.jsx) */
+function routerPaths() {
+  const out = { literal: [], navigate: [] };
+  for (const rel of ['src/AppShell.jsx', 'src/App.jsx']) {
+    const src = readText(join(ROOT, rel));
+    if (!src) continue;
+    const chunks = src.split(/<Route\b/).slice(1);
+    for (const chunk of chunks) {
+      const body = chunk.split(/<Route\b|<\/Routes>/)[0];
+      const m = body.match(/\bpath=(["'])([^"']+)\1/);
+      if (!m) continue;
+      const path = m[2];
+      if (path === '*' || /[:*]/.test(path)) continue;
+      const nav = body.match(/<Navigate\b[^>]*\bto=(["'])([^"']+)\1/);
+      if (nav) out.navigate.push({ path: cleanPath(path), to: nav[2] });
+      else out.literal.push(cleanPath(path));
     }
   }
-  const h1s = [...html.matchAll(/<h1[\s>]/g)].length;
-  if (h1s !== 1) problems.push(`${route}: ${h1s} h1 tags`);
+  return out;
+}
+const ROUTER = routerPaths();
 
-  const pageLd = [...html.matchAll(/data-seo="page"/g)].length;
-  if (pageLd !== 1) problems.push(`${route}: ${pageLd} page-level JSON-LD blocks (expected 1)`);
+/* --------------------------------------------------------- redirects */
+const REDIRECTS = vercelRedirects(vercelConfig);
+const redirectSourceMatches = (path) =>
+  REDIRECTS.filter((r) => !r.hasConditions && (r.literal === path || (r.pattern && r.pattern.test(path))));
 
-  // A route missing from the router still prerenders — as the 404 page.
-  if (/ISN&#x27;T IN THE|ISN'T IN THE BLUEPRINT/.test(html)) {
-    problems.push(`${route}: renders the 404 page — route missing from the router`);
+/* ------------------------------------------------------ dist helpers */
+const routeFile = (route) => (route === '/' ? join(DIST, 'index.html') : join(DIST, ...route.slice(1).split('/'), 'index.html'));
+const distStaticExists = (path) => /\.[a-z0-9]+$/i.test(path) && existsSync(join(DIST, ...path.slice(1).split('/')));
+const shortUrl = (url) => (url.length > 70 ? `${url.slice(0, 67)}…` : url);
+
+const brotliCache = new Map();
+function brotliKb(path) {
+  if (brotliCache.has(path)) return brotliCache.get(path);
+  const file = join(DIST, ...path.replace(/^\//, '').split('?')[0].split('/'));
+  let kb = 0;
+  if (existsSync(file)) {
+    kb = brotliCompressSync(readFileSync(file), { params: { [zlibConstants.BROTLI_PARAM_QUALITY]: 11 } }).length / 1024;
+  }
+  brotliCache.set(path, kb);
+  return kb;
+}
+
+/* ------------------------------------------------------- page parsing */
+function loadPage(route, file, { is404 = false } = {}) {
+  const html = readText(file);
+  if (html == null) return null;
+  const doc = parseHtml(html);
+  const head = doc.elements.find((el) => el.tag === 'head');
+  const inHead = (el) => (head ? isInside(el, { start: head.start, end: head.end }) : true);
+  const metas = byTag(doc, 'meta').filter(inHead);
+  const metaBy = (attr, key) => {
+    const el = metas.find((m) => (m.attrs[attr] || '').toLowerCase() === key);
+    return el ? el.attrs.content ?? '' : null;
+  };
+  const titleEl = byTag(doc, 'title').find(inHead);
+  const canonicalEl = byTag(doc, 'link').find((l) => inHead(l) && (l.attrs.rel || '').toLowerCase() === 'canonical');
+  const body = bodyRange(doc);
+  const main = mainRange(doc);
+  const h1s = byTag(doc, 'h1').map((el) => textOf(doc, el));
+
+  return {
+    route,
+    file,
+    is404,
+    html,
+    doc,
+    body,
+    main,
+    title: titleEl ? decodeEntities(titleEl.raw || '').trim() : null,
+    description: metaBy('name', 'description'),
+    robots: metaBy('name', 'robots'),
+    canonical: canonicalEl ? canonicalEl.attrs.href : null,
+    ogTitle: metaBy('property', 'og:title'),
+    ogImage: metaBy('property', 'og:image'),
+    h1s,
+    mainCount: byTag(doc, 'main').length,
+    blocks: jsonLdBlocks(doc),
+    links: [],
+    stats: {},
+  };
+}
+
+/* ------------------------------------------------------ per-page checks */
+const ORG_ID = `${SITE_URL}/#organization`;
+const schemaTypeCount = {};
+
+function auditHead(page) {
+  const { route } = page;
+  const indexable = INDEXABLE.has(route) || (!SEO_AVAILABLE && !/noindex/i.test(page.robots || ''));
+  page.indexable = !page.is404 && indexable;
+
+  if (!page.title) report.error('head.title-missing', route, 'no <title>');
+  else {
+    const len = [...page.title].length;
+    page.stats.titleLength = len;
+    // D10: title length is a quality signal, never a build-failing invariant.
+    if (len > TITLE_ERROR) report.warn('head.title-too-long', route, `${len} chars (> ${TITLE_ERROR}, truncated in results) — "${page.title}"`);
+    else if (len > TITLE_WARN && !page.is404) report.warn('head.title-too-long', route, `${len} chars (> ${TITLE_WARN}) — "${page.title}"`);
+  }
+
+  if (!page.description) report.warn('head.description-missing', route, 'no meta description');
+  else {
+    const len = [...page.description].length;
+    page.stats.descriptionLength = len;
+    if ((len < DESC_MIN || len > DESC_MAX) && !page.is404) report.warn('head.description-length', route, `${len} chars (want ${DESC_MIN}-${DESC_MAX})`);
+  }
+
+  if (page.is404) {
+    if (!/noindex/i.test(page.robots || '')) report.error('files.404-indexable', '404.html', 'robots meta lacks noindex');
+    return;
+  }
+
+  const expected = `${SITE_URL}${route === '/' ? '/' : route}`;
+  if (page.indexable) {
+    if (!page.canonical) report.error('head.canonical-missing', route, 'no <link rel="canonical">');
+    else if (page.canonical !== expected && !(route === '/' && page.canonical === SITE_URL)) {
+      report.error('head.canonical-mismatch', route, `canonical ${page.canonical} (expected ${expected})`);
+    }
+  } else if (page.canonical && page.canonical !== expected) {
+    report.warn('head.canonical-mismatch', route, `canonical ${page.canonical} (expected ${expected})`);
+  }
+
+  const missingOg = [!page.ogTitle && 'og:title', !page.ogImage && 'og:image'].filter(Boolean);
+  if (missingOg.length) report.warn('head.og-missing', route, `missing ${missingOg.join(', ')}`);
+
+  if (SEO_AVAILABLE) {
+    const servedNoindex = /noindex/i.test(page.robots || '');
+    if (NOINDEX.has(route) && !servedNoindex) report.error('robots-meta.noindex-expected', route, `robots meta is "${page.robots || '(none)'}"`);
+    if (INDEXABLE.has(route) && servedNoindex) report.error('robots-meta.unexpected-noindex', route, `robots meta is "${page.robots}"`);
   }
 }
 
-// static artefacts
-for (const f of ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt', '_headers', '_redirects', '404.html', 'favicon.png', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png']) {
-  if (!existsSync(join(DIST, f))) problems.push(`dist/${f} MISSING`);
-}
-const notFound = readFileSync(join(DIST, '404.html'), 'utf8');
-if (!/noindex/.test(notFound)) problems.push('404.html is not noindex');
+function auditJsonLd(page) {
+  const { route, blocks } = page;
+  if (!blocks.length) {
+    if (!page.is404) report.warn('jsonld.missing', route, 'no JSON-LD on the page');
+    page.ids = { defs: new Map(), refs: [] };
+    return;
+  }
+  const pageBlocks = blocks.filter((b) => b.isPage);
+  if (pageBlocks.length > 1) report.error('jsonld.page-block-count', route, `${pageBlocks.length} data-seo="page" blocks (expected 1)`);
+  if (!pageBlocks.length && !page.is404) report.warn('jsonld.page-block-missing', route, 'no data-seo="page" block');
+  if (!blocks.some((b) => !b.isPage)) report.warn('jsonld.sitewide-missing', route, 'sitewide Organization/WebSite block not found');
 
-console.log(`routes audited: ${routes.length}`);
-console.log('schema types across site:', Object.entries(typeCount).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${k}×${v}`).join(', '));
-console.log(problems.length ? `\nISSUES (${problems.length}):\n` + problems.join('\n') : '\nNo issues found.');
+  const parsed = [];
+  for (const block of blocks) {
+    if (block.error) {
+      report.error('jsonld.parse-error', route, `${block.isPage ? 'page' : 'sitewide'} block: ${block.error}`);
+      continue;
+    }
+    parsed.push(block.data);
+    if (block.isPage || route === '/') {
+      walk(block.data, (node) => {
+        for (const t of typesOf(node)) schemaTypeCount[t] = (schemaTypeCount[t] || 0) + 1;
+      });
+    }
+    for (const f of forbiddenSchema(block.data, { route, orgId: ORG_ID })) report.add(f.severity, f.code, route, f.message);
+
+    // NAP inside structured data.
+    walkStrings(block.data, (value, key) => {
+      if (key === 'streetAddress') report.error('schema.street-address', route, `streetAddress "${value}"`);
+      else if (MAILING_ADDRESS_RE.test(value)) report.error('schema.street-address', route, `"${shortUrl(value)}"`);
+      if (key === 'postalCode') report.warn('schema.postal-code', route, `postalCode "${value}"`);
+      if (key === 'telephone' && value !== SCHEMA_TELEPHONE) report.error('schema.telephone', route, `telephone "${value}"`);
+    });
+  }
+
+  page.ids = idIndex(parsed);
+  page.faq = parsed.flatMap((data) => faqItems(data));
+
+  // Conflicting @type for one @id (e.g. an Organization stub vs the sitewide GeneralContractor).
+  for (const [id, typeLists] of page.ids.defs) {
+    const conflict = conflictingTypes(typeLists);
+    if (conflict) report.warn('jsonld.type-conflict', route, `${id}: [${conflict[0].join(', ')}] vs [${conflict[1].join(', ')}]`);
+  }
+}
+
+function auditFaq(page) {
+  if (!page.faq || !page.faq.length) return;
+  const haystack = matchKey(textBetween(page.doc, page.body.start, page.body.end, ''));
+  const missing = [];
+  for (const item of page.faq) {
+    if (item.question && !haystack.includes(matchKey(item.question))) missing.push({ part: 'question', text: item.question });
+    if (item.answer && !haystack.includes(matchKey(item.answer))) missing.push({ part: 'answer', question: item.question, text: item.answer });
+  }
+  if (!missing.length) return;
+  const answers = missing.filter((m) => m.part === 'answer').length;
+  const questions = missing.length - answers;
+  const sample = missing[0].part === 'answer' ? `answer to "${missing[0].question}"` : `question "${missing[0].text}"`;
+  report.error(
+    'faq.missing-from-html',
+    page.route,
+    `${answers} of ${page.faq.length} answers${questions ? ` and ${questions} questions` : ''} in FAQPage JSON-LD are not in the HTML (e.g. ${sample})`,
+    missing
+  );
+}
+
+function auditStructure(page) {
+  const { route, doc } = page;
+  if (page.h1s.length !== 1) report.error('html.h1', route, `${page.h1s.length} <h1> elements`);
+  if (page.mainCount !== 1) {
+    if (route === '/' && page.mainCount === 0) report.warn('html.main', route, 'Home has no <main> landmark (plan §2)');
+    else report.error('html.main', route, `${page.mainCount} <main> elements`);
+  }
+  if (/route-loading|Loading page\.\.\./.test(page.html)) report.error('html.loading-fallback', route, 'Suspense "Loading page..." fallback rendered instead of the page');
+
+  // .reveal (opacity: 0 until the observer runs) must never gate the hero,
+  // the <h1>, forms (incl. the estimator) or long article bodies. One finding
+  // per offending .reveal wrapper, naming what it hides.
+  const wrappers = new Map(); // reveal element idx -> { el, forbidden, hides:Set }
+  const wrapper = (el) => {
+    if (!wrappers.has(el.idx)) wrappers.set(el.idx, { el, forbidden: null, hides: new Set() });
+    return wrappers.get(el.idx);
+  };
+  for (const el of doc.elements) {
+    const cls = classesOf(el);
+    if (cls.has('reveal')) {
+      const hit = REVEAL_FORBIDDEN_CLASSES.find((c) => cls.has(c));
+      if (hit) wrapper(el).forbidden = hit;
+    }
+    const hidden = el.tag === 'h1' ? '<h1>' : el.tag === 'form' ? '<form>' : el.tag === 'iframe' && classesOf(el).has('estimator-embed') ? 'estimator' : null;
+    if (hidden) {
+      const anc = ancestors(doc, el).find((a) => classesOf(a).has('reveal'));
+      if (anc) wrapper(anc).hides.add(hidden);
+    }
+  }
+  for (const { el, forbidden, hides } of wrappers.values()) {
+    const cls = [...classesOf(el)].filter((c) => c !== 'reveal');
+    const label = forbidden ? `.${forbidden}` : `${el.tag}${cls.length ? `.${cls.slice(0, 2).join('.')}` : ''}`;
+    report.warn('html.reveal-gated', route, `${label} has .reveal${hides.size ? ` (hides ${[...hides].join(', ')})` : ''}`);
+  }
+
+  // Readability: very long paragraphs in the main content.
+  const long = byTag(doc, 'p')
+    .filter((p) => isInside(p, page.main))
+    .map((p) => wordCount(textOf(doc, p)))
+    .filter((n) => n > LONG_PARAGRAPH_WORDS);
+  if (long.length) report.warn('html.long-paragraph', route, `${long.length} paragraph(s) over ${LONG_PARAGRAPH_WORDS} words (longest ${Math.max(...long)})`);
+}
+
+function auditNap(page) {
+  const { route, doc } = page;
+  const tels = new Map();
+  for (const a of byTag(doc, 'a')) {
+    const href = (a.attrs.href || '').trim();
+    if (!/^tel:/i.test(href) || href === SITE_PHONE_TEL) continue;
+    tels.set(href, (tels.get(href) || 0) + 1);
+  }
+  for (const [href, n] of tels) report.error('nap.tel', route, `${href} ×${n}`);
+
+  if (MAILING_ADDRESS_RE.test(page.html) && !MAILING_ADDRESS_ROUTES.has(route)) {
+    report.error('nap.mailing-address', route, '"845 Dakota" appears (allowed only on /privacy-policy, /terms-of-service, /contact)');
+  }
+
+  const text = textBetween(doc, page.body.start, page.body.end, ' ');
+  const formats = new Map();
+  const others = new Map();
+  const PHONE_RE = /(?:\+1[\s.-]?)?(?:\(\d{3}\)\s?|\b\d{3}[\s.-])\d{3}[\s.-]\d{4}\b/g;
+  for (const m of text.matchAll(PHONE_RE)) {
+    const raw = m[0].trim();
+    let digits = raw.replace(/\D/g, '');
+    if (digits.length === 11 && digits.startsWith('1')) digits = digits.slice(1);
+    if (digits === PHONE_DIGITS) {
+      if (!PHONE_FORMATS.has(raw)) formats.set(raw, (formats.get(raw) || 0) + 1);
+    } else others.set(raw, (others.get(raw) || 0) + 1);
+  }
+  for (const [raw, n] of formats) report.warn('nap.phone-format', route, `"${raw}" ×${n} (allowed: ${[...PHONE_FORMATS].join(', ')})`);
+  for (const [raw, n] of others) report.info('nap.other-phone', route, `"${raw}" ×${n}`);
+  if (/@gmail\.com/i.test(page.html)) report.warn('nap.gmail', route, 'a gmail.com address appears (use info@bridgelandbuilders.com)');
+}
+
+function auditImages(page) {
+  const { route, doc } = page;
+  let wix = 0;
+  const badAttrs = [];
+  const countWix = (value) => {
+    if (value && value.includes('static.wixstatic.com')) wix += 1;
+  };
+  countWix(page.ogImage);
+  for (const el of doc.elements) {
+    if (!isInside(el, page.body)) continue;
+    if (el.tag === 'source') countWix(el.attrs.srcset);
+    if (el.tag !== 'img') continue;
+    const src = el.attrs.src || '';
+    countWix(src || el.attrs.srcset);
+    const missing = ['width', 'height', 'alt'].filter((a) => !(a in el.attrs));
+    if (missing.length) badAttrs.push(`${shortUrl(src || '(no src)')} [no ${missing.join('/')}]`);
+
+    if (src.includes('images.unsplash.com')) {
+      const figure = ancestors(doc, el).find((a) => a.tag === 'figure');
+      const caption = figure
+        ? doc.elements.filter((c) => c.tag === 'figcaption' && isInside(c, { start: figure.start, end: figure.end })).map((c) => textOf(doc, c)).join(' ')
+        : '';
+      const words = `${el.attrs.alt || ''} ${caption}`;
+      const hit = words.match(/\b(winnipeg|our|we)\b/i);
+      if (hit) report.warn('img.stock-claim', route, `Unsplash photo described with "${hit[0]}": "${shortUrl((el.attrs.alt || caption).trim())}"`);
+    }
+  }
+  if (wix) report.add(WIX_IS_ERROR ? 'error' : 'info', 'img.wix-host', route, `${wix} image reference(s) on static.wixstatic.com`);
+  if (badAttrs.length) report.warn('img.attributes', route, `${badAttrs.length} <img> missing attributes, e.g. ${badAttrs.slice(0, 2).join('; ')}`, badAttrs);
+  page.stats.wixImages = wix;
+}
+
+function collectLinks(page) {
+  for (const a of byTag(page.doc, 'a')) {
+    if (!isInside(a, page.body)) continue;
+    const target = classifyHref(a.attrs.href, SITE_URL);
+    if (!target || !target.internal) continue;
+    page.links.push({ ...target, inMain: isInside(a, page.main) });
+  }
+}
+
+function auditPerformance(page) {
+  const scripts = new Set();
+  for (const el of page.doc.elements) {
+    if (el.tag === 'script' && (el.attrs.type || '') === 'module' && (el.attrs.src || '').startsWith('/')) scripts.add(el.attrs.src);
+    if (el.tag === 'link' && (el.attrs.rel || '').toLowerCase() === 'modulepreload' && (el.attrs.href || '').startsWith('/')) scripts.add(el.attrs.href);
+  }
+  const kb = [...scripts].reduce((sum, src) => sum + brotliKb(src), 0);
+  page.stats.jsBrotliKb = Math.round(kb * 10) / 10;
+  const budget = jsBudgetKb(page.route);
+  if (kb > budget) {
+    report.warn('perf.js-budget', page.route, `${page.stats.jsBrotliKb} KB br (entry + modulepreload; lazy route chunks not counted) > ${budget} KB budget`);
+  }
+}
+
+function auditEstimator(page) {
+  const { route } = page;
+  const isServicePage = (SERVICE_SEO && route in SERVICE_SEO) || (/^\/services\/[^/]+$/.test(route) && !route.endsWith('/cost'));
+  if (!isServicePage) return;
+  const ok = byTag(page.doc, 'iframe').some((f) => (f.attrs.src || '').includes(ESTIMATOR_HOST));
+  if (!ok) report.warn('estimator.missing', route, `no <iframe> with an ${ESTIMATOR_HOST} src`);
+}
+
+/* =================================================================== run */
+const pages = new Map(); // route -> page
+let notFound = null;
+
+if (!existsSync(DIST)) {
+  report.error('files.missing', null, 'dist/ not found — run "npm run build" before the audit');
+} else {
+  // Static artefacts.
+  for (const [severity, files] of Object.entries(EXPECTED_FILES)) {
+    for (const f of files) if (!existsSync(join(DIST, f))) report.add(severity, 'files.missing', null, `dist/${f} missing`);
+  }
+  for (const f of NETLIFY_FILES) {
+    if (existsSync(join(DIST, f)) || existsSync(join(ROOT, 'public', f))) report.warn('files.netlify-only', null, `${f} is a Netlify file; Vercel ignores it (plan §1: remove generator + file)`);
+  }
+
+  if (existsSync(join(DIST, '404.html'))) notFound = loadPage('404.html', join(DIST, '404.html'), { is404: true });
+
+  for (const route of PRERENDER) {
+    const file = routeFile(route);
+    if (!existsSync(file)) {
+      report.error('parity.missing-html', route, `${file.slice(ROOT.length).replace(/\\/g, '/')} not found`);
+      continue;
+    }
+    pages.set(route, loadPage(route, file));
+  }
+
+  // Stale HTML in dist/ for routes no longer prerendered.
+  const walkDist = (dir, prefix) => {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (!entry.isDirectory() || entry.name === 'assets' || entry.name.startsWith('.')) continue;
+      const route = `${prefix}/${entry.name}`;
+      if (existsSync(join(dir, entry.name, 'index.html')) && !PRERENDER_SET.has(route)) {
+        report.warn('parity.stale-html', route, 'dist/ holds HTML for a route not in prerender-routes.json');
+      }
+      walkDist(join(dir, entry.name), route);
+    }
+  };
+  walkDist(DIST, '');
+}
+
+// Sitewide graph @ids: from the template's sitewide block and from seo.js.
+const sitewideIds = new Set();
+const home = pages.get('/');
+if (home) {
+  for (const block of home.blocks) {
+    if (!block.isPage && block.data) for (const id of idIndex([block.data]).defs.keys()) sitewideIds.add(id);
+  }
+}
+if (typeof seo.buildOrganizationGraph === 'function') {
+  try {
+    const nodes = seo.buildOrganizationGraph();
+    for (const id of idIndex([nodes]).defs.keys()) sitewideIds.add(id);
+  } catch (e) {
+    report.warn('input.import-failed', null, `buildOrganizationGraph() threw: ${e.message}`);
+  }
+}
+
+const notFoundH1 = notFound && notFound.h1s[0] ? notFound.h1s[0] : null;
+for (const page of [...pages.values(), ...(notFound ? [notFound] : [])]) {
+  auditHead(page);
+  auditJsonLd(page);
+  auditFaq(page);
+  auditStructure(page);
+  auditNap(page);
+  auditImages(page);
+  if (page.is404) continue;
+  collectLinks(page);
+  auditPerformance(page);
+  auditEstimator(page);
+  if ((notFoundH1 && page.h1s[0] === notFoundH1) || /ISN&#x27;T IN THE|ISN'T IN THE BLUEPRINT/.test(page.html)) {
+    report.error('parity.renders-404', page.route, 'prerendered HTML is the 404 page — route missing from the router');
+  }
+}
+
+/* ------------------------------------------------- @id resolution (site) */
+const allDefinedIds = new Set(sitewideIds);
+for (const page of pages.values()) if (page.ids) for (const id of page.ids.defs.keys()) allDefinedIds.add(id);
+for (const page of [...pages.values(), ...(notFound ? [notFound] : [])]) {
+  if (!page.ids) continue;
+  const seen = new Set();
+  for (const ref of page.ids.refs) {
+    if (seen.has(ref.id)) continue;
+    seen.add(ref.id);
+    const local = ref.id.startsWith('#') || ref.id.startsWith(SITE_URL);
+    if (!local) continue; // external entity IRIs (Wikidata etc.) are not ours to resolve
+    if (page.ids.defs.has(ref.id) || sitewideIds.has(ref.id)) continue;
+    if (allDefinedIds.has(ref.id)) report.warn('jsonld.cross-page-id', page.route, `${ref.id} (at ${ref.path}) is only defined on another page`);
+    else report.error('jsonld.unresolved-id', page.route, `${ref.id} (at ${ref.path}) is not defined on the page or in the sitewide graph`);
+  }
+}
+
+/* ------------------------------------------- route <-> SEO <-> prerender */
+if (SEO_AVAILABLE && prerenderJson) {
+  for (const route of seoEntries.keys()) {
+    if (!PRERENDER_SET.has(route)) report.error('parity.not-prerendered', route, 'has an SEO entry but is not in prerender-routes.json');
+  }
+  for (const route of PRERENDER) {
+    if (!seoEntries.has(route)) report.error('parity.no-seo-entry', route, 'in prerender-routes.json without a PAGE_SEO / SERVICE_SEO / blog entry');
+  }
+  for (const route of ROUTER.literal) {
+    if (!seoEntries.has(route)) report.error('parity.router-no-seo', route, 'router path without an SEO entry (prerender skips it, so Vercel serves a 404)');
+  }
+}
+for (const nav of ROUTER.navigate) {
+  if (!redirectSourceMatches(nav.path).length) {
+    report.warn('parity.client-redirect', nav.path, `client-side <Navigate> to ${nav.to} only — add a server redirect in src/data/redirects.js`);
+  }
+}
+
+// Every SEO entry carries an `updated` date (feeds sitemap lastmod).
+if (SEO_AVAILABLE) {
+  const noUpdated = [...seoEntries]
+    .filter(([, { kind, entry }]) => kind !== 'blog' && !/^\d{4}-\d{2}-\d{2}/.test(String(entry.updated || '')))
+    .map(([route]) => route);
+  if (noUpdated.length) report.warn('seo.updated-missing', null, `${noUpdated.length} PAGE_SEO/SERVICE_SEO entries without updated:'YYYY-MM-DD': ${noUpdated.slice(0, 8).join(', ')}${noUpdated.length > 8 ? ', …' : ''}`, noUpdated);
+}
+
+/* ------------------------------------------------------------- sitemap */
+// Latest calendar date anywhere (UTC+14), so a lastmod of "today" is never
+// flagged as future just because the build machine's UTC date lags behind.
+const today = new Date(Date.now() + 14 * 3600 * 1000).toISOString().slice(0, 10);
+const sitemapPaths = new Set();
+if (sitemapXml == null) {
+  report.error('sitemap.missing', null, 'public/sitemap.xml not found');
+} else {
+  const sitemap = parseSitemap(sitemapXml);
+  const withFreq = sitemap.urls.filter((u) => u.changefreq != null || u.priority != null).length;
+  if (withFreq) report.error('sitemap.changefreq-priority', null, `${withFreq} <url> entries carry <changefreq>/<priority> (plan §3.2: drop them)`);
+  const imageMeta = sitemap.urls.reduce((n, u) => n + u.images.filter((i) => i.title || i.caption).length, 0);
+  if (imageMeta) report.warn('sitemap.image-meta', null, `${imageMeta} image entries carry deprecated image:title/image:caption`);
+  const foreignImages = sitemap.urls.reduce((n, u) => n + u.images.filter((i) => i.loc && !i.loc.startsWith(SITE_URL)).length, 0);
+  if (foreignImages) report.warn('sitemap.image-not-owned', null, `${foreignImages} image entries point at third-party hosts (only owned, self-hosted media belong in the sitemap)`);
+
+  const lastmods = [];
+  for (const u of sitemap.urls) {
+    if (!u.loc || !u.loc.startsWith(SITE_URL)) {
+      report.error('sitemap.foreign-loc', null, `<loc>${u.loc}</loc> is not under ${SITE_URL}`);
+      continue;
+    }
+    const path = cleanPath(u.loc.slice(SITE_URL.length) || '/');
+    if (sitemapPaths.has(path)) report.error('sitemap.duplicate', path, 'listed twice');
+    sitemapPaths.add(path);
+
+    if (u.lastmod) {
+      lastmods.push(u.lastmod);
+      if (!/^\d{4}-\d{2}-\d{2}(T[\d:.]+(Z|[+-]\d{2}:\d{2}))?$/.test(u.lastmod)) report.warn('sitemap.lastmod-invalid', path, `lastmod "${u.lastmod}" is not W3C date format`);
+      else if (u.lastmod.slice(0, 10) > today) report.warn('sitemap.lastmod-invalid', path, `lastmod ${u.lastmod} is in the future`);
+    }
+
+    // lastmod should come from the page's `updated` field.
+    const seoEntry = seoEntries.get(path);
+    if (u.lastmod && seoEntry) {
+      let expected = null;
+      if (seoEntry.kind === 'blog') expected = seoEntry.entry.updated || seoEntry.entry.date || null;
+      else if (typeof seo.updatedFor === 'function') {
+        try { expected = seo.updatedFor(path); } catch { expected = null; }
+      } else expected = seoEntry.entry.updated || null;
+      if (expected && String(expected).slice(0, 10) !== u.lastmod.slice(0, 10)) {
+        report.warn('sitemap.lastmod-mismatch', path, `lastmod ${u.lastmod} but updated is ${expected}`);
+      }
+    }
+
+    if (NOINDEX.has(path) || (pages.get(path) && /noindex/i.test(pages.get(path).robots || ''))) {
+      report.error('sitemap.noindex', path, 'noindex page is listed in the sitemap');
+    } else if (redirectSourceMatches(path).length) {
+      report.error('sitemap.redirect-source', path, 'URL is a redirect source');
+    } else if (SEO_AVAILABLE && !INDEXABLE.has(path)) {
+      report.error('sitemap.unknown-route', path, 'no SEO entry for this URL');
+    } else if (!PRERENDER_SET.has(path)) {
+      report.error('sitemap.unknown-route', path, 'not in prerender-routes.json');
+    }
+  }
+  if (lastmods.length > 1 && new Set(lastmods).size === 1) {
+    report.warn('sitemap.lastmod-uniform', null, `all ${lastmods.length} lastmod values are ${lastmods[0]} — use each page's real "updated" date`);
+  }
+  if (SEO_AVAILABLE) {
+    for (const route of INDEXABLE) if (!sitemapPaths.has(route)) report.error('sitemap.missing-route', route, 'indexable route missing from the sitemap');
+  }
+  const distSitemap = readText(join(DIST, 'sitemap.xml'));
+  if (distSitemap != null && distSitemap !== sitemapXml) report.warn('sitemap.stale-dist', null, 'dist/sitemap.xml differs from public/sitemap.xml (dist is stale — rebuild)');
+}
+
+/* -------------------------------------------------------------- robots */
+if (robotsTxt == null) {
+  report.error('robots.missing', null, 'public/robots.txt not found');
+} else {
+  const robots = parseRobots(robotsTxt);
+  // '*' always; named search bots only when they have their own group.
+  const agents = ['*', 'googlebot', 'bingbot'].filter((a) => a === '*' || robots.groups.some((g) => g.agents.includes(a)));
+  for (const agent of agents) {
+    const blocked = [...(INDEXABLE.size ? INDEXABLE : PRERENDER_SET)]
+      .map((route) => [route, robotsAllows(robots, agent, route)])
+      .filter(([, verdict]) => verdict !== true);
+    for (const [route, rule] of blocked) report.error('robots.blocks-route', route, `blocked for ${agent} by "Disallow: ${rule.path}"`);
+  }
+  const wanted = `${SITE_URL}/sitemap.xml`;
+  if (!robots.sitemaps.length) report.warn('robots.sitemap-line', null, `no "Sitemap: ${wanted}" line`);
+  else if (!robots.sitemaps.includes(wanted)) report.warn('robots.sitemap-line', null, `Sitemap line(s) ${robots.sitemaps.join(', ')} — expected ${wanted}`);
+  if (/^\s*Disallow:\s*\/404\.html\s*$/im.test(robotsTxt)) report.warn('robots.legacy-rule', null, '"Disallow: /404.html" (plan §3.1: remove)');
+  if (robots.groups.some((g) => g.agents.includes('anthropic-ai'))) report.warn('robots.legacy-rule', null, '"User-agent: anthropic-ai" is obsolete (plan §3.1: remove)');
+  const distRobots = readText(join(DIST, 'robots.txt'));
+  if (distRobots != null && distRobots !== robotsTxt) report.warn('robots.stale-dist', null, 'dist/robots.txt differs from public/robots.txt (dist is stale — rebuild)');
+}
+
+/* ----------------------------------------------------------- redirects */
+if (vercelConfig) {
+  if (!REDIRECTS.length) report.warn('redirects.missing-config', null, 'vercel.json has no redirects — legacy Wix URLs still 404 (plan §1)');
+  const literalSeen = new Map();
+  const patternSeen = new Map();
+  for (const r of REDIRECTS) {
+    const label = `${r.source} -> ${r.destination}`;
+    if (r.status === 307 || r.status === 302) report.info('redirects.temporary', null, `${label} (${r.status})`);
+
+    // Duplicates.
+    const key = r.literal || unescapeSource(r.source);
+    const seen = r.literal ? literalSeen : patternSeen;
+    const dupKey = `${key}|${r.hasConditions ? JSON.stringify(r.raw.has) : ''}`;
+    if (seen.has(dupKey)) report.error('redirects.duplicate-source', null, `"${r.source}" appears more than once`);
+    seen.set(dupKey, r);
+
+    // Source must not shadow a live route.
+    if (!r.hasConditions) {
+      if (r.literal && PRERENDER_SET.has(r.literal)) report.error('redirects.source-is-route', r.literal, `redirect source is a prerendered route (${label})`);
+      else if (r.literal && [...PRERENDER_SET].some((p) => p.toLowerCase() === r.literal.toLowerCase())) {
+        report.warn('redirects.source-is-route', r.literal, `differs from a prerendered route only by case (${label})`);
+      }
+      if (r.pattern) {
+        const shadowed = PRERENDER.filter((p) => r.pattern.test(p));
+        if (shadowed.length) report.error('redirects.source-is-route', null, `pattern "${r.source}" matches prerendered route(s): ${shadowed.slice(0, 5).join(', ')}`);
+      }
+    }
+
+    // Destination must be a live, indexable route (or '/', or a static file).
+    const dest = String(r.destination || '');
+    if (/(^|\/):[A-Za-z_]|\$\d/.test(dest)) {
+      report.info('redirects.destination-pattern', null, `${label} — pattern destination not checked`);
+      continue;
+    }
+    const target = classifyHref(dest, SITE_URL);
+    if (!target) {
+      report.error('redirects.destination', null, `${label} — destination is not a URL`);
+      continue;
+    }
+    if (!target.internal) {
+      report.warn('redirects.destination', null, `${label} — destination is off-site`);
+      continue;
+    }
+    if (/[?&]category=/.test(target.query)) report.warn('redirects.destination', target.path, `${label} — destination carries ?category=`);
+    const live = target.path === '/' || (PRERENDER_SET.has(target.path) && (!SEO_AVAILABLE || INDEXABLE.has(target.path)));
+    if (!live && !distStaticExists(target.path) && !/\.(xml|txt)$/.test(target.path)) {
+      const why = NOINDEX.has(target.path) ? 'is noindex' : PRERENDER_SET.has(target.path) ? 'is not indexable' : 'is not a prerendered route';
+      report.error('redirects.destination', target.path, `${label} — destination ${why}`);
+    }
+
+    // Chains / loops.
+    if (!r.hasConditions) {
+      const next = redirectSourceMatches(target.path).filter((other) => other !== r);
+      if (next.length) report.error('redirects.chain', null, `${label} -> ${next[0].destination} (chain${next[0].literal === r.literal ? '/loop' : ''})`);
+    }
+  }
+
+  // src/data/redirects.js is the source; vercel.json is generated from it.
+  const managed = normaliseRedirectList(redirectsModule.REDIRECTS);
+  const blogRedirects = normaliseRedirectList(blogModule.BLOG_REDIRECTS, { slugBase: '/blog' });
+  const vercelLiteral = new Set(REDIRECTS.map((r) => r.literal).filter(Boolean));
+  const vercelPatterns = new Set(REDIRECTS.filter((r) => !r.literal).map((r) => unescapeSource(r.source)));
+  const coveredByVercel = (from) => {
+    const raw = unescapeSource(from);
+    return isPatternSource(from) ? vercelPatterns.has(raw) : vercelLiteral.has(cleanPath(raw)) || redirectSourceMatches(cleanPath(raw)).length > 0;
+  };
+  const nowMs = Date.now();
+  for (const entry of managed) {
+    if (!coveredByVercel(entry.from)) report.error('redirects.not-synced', cleanPath(unescapeSource(entry.from)), `in src/data/redirects.js but not in vercel.json (run scripts/sync-redirects.mjs)`);
+    if (entry.temporary && entry.since) {
+      const ageDays = (nowMs - Date.parse(entry.since)) / 86400000;
+      if (ageDays > STALE_307_DAYS) report.warn('redirects.stale-temporary', entry.from, `307 since ${entry.since} (${Math.floor(ageDays)} days) — flip to 308 or retarget`);
+    }
+  }
+  for (const entry of blogRedirects) {
+    const from = cleanPath(unescapeSource(entry.from));
+    if (!redirectSourceMatches(from).length) report.error('redirects.blog-not-redirected', from, `retired post (BLOG_REDIRECTS -> ${entry.to || '?'}) has no vercel.json redirect`);
+  }
+  if (Array.isArray(redirectsModule.REDIRECTS) || (redirectsModule.REDIRECTS && typeof redirectsModule.REDIRECTS === 'object')) {
+    const known = new Set([...managed, ...blogRedirects].map((e) => (isPatternSource(e.from) ? unescapeSource(e.from) : cleanPath(unescapeSource(e.from)))));
+    for (const r of REDIRECTS) {
+      if (r.hasConditions) continue;
+      const key = r.literal || unescapeSource(r.source);
+      if (!known.has(key)) report.warn('redirects.unmanaged', key, `vercel.json redirect not declared in src/data/redirects.js (hand edits are overwritten by sync)`);
+    }
+  }
+}
+
+/* ---------------------------------------------- internal link graph */
+const inbound = new Map(); // target route -> Set(source routes) from <main>
+for (const page of pages.values()) {
+  const reported = new Set();
+  for (const link of page.links) {
+    const { path } = link;
+    const once = (code, message) => {
+      const k = `${code}|${path}${link.query}`;
+      if (reported.has(k)) return;
+      reported.add(k);
+      report.warn(code, page.route, message);
+    };
+    if (/[?&]category=/.test(link.query)) once('links.category-query', `links to ${path}${link.query}`);
+    const isRoute = PRERENDER_SET.has(path) || path === '/';
+    if (!isRoute) {
+      if (redirectSourceMatches(path).length) once('links.to-redirect', `links to redirect source ${path}`);
+      else if (!distStaticExists(path)) once('links.broken', `links to ${path} (no prerendered page or file)`);
+      continue;
+    }
+    if (link.inMain && path !== page.route) {
+      if (!inbound.has(path)) inbound.set(path, new Set());
+      inbound.get(path).add(page.route);
+      if (NOINDEX.has(path) && !LEGAL_ROUTES.has(page.route)) once('links.to-noindex', `contextual link to noindex page ${path}`);
+    }
+  }
+}
+for (const page of pages.values()) {
+  page.stats.inboundContextual = inbound.has(page.route) ? inbound.get(page.route).size : 0;
+  if (!page.indexable || page.route === '/') continue;
+  const n = page.stats.inboundContextual;
+  const severity = LEGAL_ROUTES.has(page.route) ? 'info' : 'warn';
+  if (n === 0) report.add(severity, 'links.orphan', page.route, 'no contextual links from other pages\' main content');
+  else if (n < MIN_INBOUND) report.add(severity, 'links.few-inbound', page.route, `${n} contextual inbound link source(s) (want ≥${MIN_INBOUND})`);
+}
+
+/* --------------------------------------- duplicate titles/descriptions */
+for (const [field, code] of [['title', 'head.duplicate-title'], ['description', 'head.duplicate-description']]) {
+  const groups = new Map();
+  for (const page of pages.values()) {
+    if (!page.indexable || !page[field]) continue;
+    const key = page[field].trim().toLowerCase();
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(page.route);
+  }
+  for (const [value, routes] of groups) {
+    if (routes.length > 1) report.warn(code, null, `${routes.join(', ')} share "${shortUrl(value)}"`);
+  }
+}
+
+/* --------------------------------------------------------- keyword map */
+const keywordMapJson = readJsonFile('scripts/keyword-map.json');
+if (keywordMapJson === undefined) {
+  report.info('keywords.skipped', null, 'scripts/keyword-map.json not present — keyword checks skipped');
+} else {
+  const keywordListJson = readJsonFile('scripts/keyword-list.json');
+  const livePages = new Map([...pages.values()].map((p) => [p.route, { title: p.title, h1: p.h1s[0] || '' }]));
+  checkKeywords({
+    list: keywordListJson === undefined ? null : readKeywordList(keywordListJson),
+    map: readKeywordMap(keywordMapJson),
+    pages: livePages,
+    report,
+  });
+}
+
+/* ------------------------------------------------------------- output */
+const counts = report.counts();
+const durationMs = Math.round(performance.now() - started);
+const pageSummaries = [...pages.values()].map((p) => ({
+  route: p.route,
+  indexable: !!p.indexable,
+  title: p.title,
+  titleLength: p.stats.titleLength ?? null,
+  descriptionLength: p.stats.descriptionLength ?? null,
+  h1: p.h1s,
+  mainCount: p.mainCount,
+  jsonLdBlocks: p.blocks.length,
+  faqItems: p.faq ? p.faq.length : 0,
+  inboundContextual: p.stats.inboundContextual ?? 0,
+  wixImages: p.stats.wixImages ?? 0,
+  jsBrotliKb: p.stats.jsBrotliKb ?? null,
+}));
+
+writeJson(OUT_FILE, {
+  generatedAt: new Date().toISOString(),
+  siteUrl: SITE_URL,
+  strict: STRICT,
+  durationMs,
+  counts,
+  countsByCode: report.countsByCode(),
+  routes: {
+    prerendered: PRERENDER.length,
+    seoEntries: seoEntries.size,
+    indexable: INDEXABLE.size,
+    noindex: [...NOINDEX],
+    sitemap: sitemapPaths.size,
+    redirects: REDIRECTS.length,
+  },
+  schemaTypes: schemaTypeCount,
+  pages: pageSummaries,
+  findings: report.findings,
+});
+
+console.log(`SEO audit — ${pages.size} prerendered pages${notFound ? ' + 404.html' : ''}, ${INDEXABLE.size} indexable, ${sitemapPaths.size} sitemap URLs, ${REDIRECTS.length} redirects`);
+console.log(
+  'schema types:',
+  Object.entries(schemaTypeCount)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `${k}×${v}`)
+    .join(', ') || '(none)'
+);
+printReport(report, { verbose: VERBOSE });
+console.log(`\n${counts.error} errors, ${counts.warn} warnings, ${counts.info} info — ${durationMs} ms — ${OUT_FILE.slice(ROOT.length).replace(/\\/g, '/')}`);
+if (counts.error && !STRICT) console.log('(warn mode: errors do not fail the build; run with --strict to enforce)');
+
+if (STRICT && counts.error > 0) process.exitCode = 1;

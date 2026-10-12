@@ -8,7 +8,7 @@ import {
   SERVICE_AREA,
   validateLead,
 } from '../data/quoteForm.js';
-import { SITE_PHONE } from '../data/siteConfig.js';
+import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { bookSlot, saveLead, trackConversion, utmSource } from '../lib/bookingApi.js';
 import { PRESELECT_EVENT } from '../lib/quoteFormEvents.js';
 import { dateIn, formatLongDate, formatTime } from '../lib/zonedDate.js';
@@ -172,7 +172,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
       <p>{alert.message}</p>
       {alert.offerPhone && (
         <p>
-          Please call us on <a href={`tel:${SITE_PHONE}`}>{SITE_PHONE}</a> and we’ll book you in directly.
+          Please call us on <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a> and we’ll book you in directly.
         </p>
       )}
     </div>
@@ -355,7 +355,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
             We’ll call you on <strong>{values.phone}</strong> for a quick chat about your project.
           </p>
           <p className="qf-fineprint">
-            Need to change the time? Call us on <a href={`tel:${SITE_PHONE}`}>{SITE_PHONE}</a>.
+            Need to change the time? Call us on <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>.
           </p>
         </div>
       )}
@@ -374,7 +374,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
               setStep('details');
             }}
           >
-            <ChevronLeftIcon size={14} /> My project is in Winnipeg or Manitoba
+            <ChevronLeftIcon size={14} /> My project is in Winnipeg or a nearby community
           </button>
         </div>
       )}

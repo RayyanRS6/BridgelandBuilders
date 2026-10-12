@@ -1,5 +1,17 @@
 import { Link } from 'react-router-dom';
-import { PhoneIcon, PinIcon } from './icons.jsx';
+import { SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL, SOCIAL_PROFILES } from '../data/siteConfig.js';
+import { MailIcon, PhoneIcon, PinIcon } from './icons.jsx';
+
+// The round social badges at the bottom of the footer. Each one links to the
+// real profile (rel="me" ties the profiles to this site); a network without a
+// URL in siteConfig.js keeps its plain, unlinked badge. The letters are the
+// signed-off badges, unchanged ("ig"/"in" would be the usual marks for
+// Instagram/LinkedIn — an owner sign-off item, not changed here).
+const SOCIAL_LINKS = [
+  { key: 'facebook', network: 'Facebook', glyph: 'f' },
+  { key: 'instagram', network: 'Instagram', glyph: 'in' },
+  { key: 'linkedin', network: 'LinkedIn', glyph: 'li' },
+];
 
 const FOOTER_COLUMNS = [
   {
@@ -56,7 +68,11 @@ export default function Footer() {
             </p>
             <div className="footer-contact-item">
               <PhoneIcon size={16} strokeWidth="2" />
-              <a href="tel:431-866-5644">431-866-5644</a>
+              <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>
+            </div>
+            <div className="footer-contact-item">
+              <MailIcon size={16} />
+              <a className="footer-contact-email" href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a>
             </div>
             <div className="footer-contact-item">
               <PinIcon size={16} />
@@ -83,9 +99,22 @@ export default function Footer() {
             <Link to="/terms-of-service">Terms of Service</Link>
           </p>
           <div className="footer-social-links">
-            <span title="Facebook">f</span>
-            <span title="Instagram">in</span>
-            <span title="LinkedIn">li</span>
+            {SOCIAL_LINKS.map(({ key, network, glyph }) => {
+              const href = SOCIAL_PROFILES?.[key];
+              return href ? (
+                <a
+                  key={key}
+                  href={href}
+                  rel="me noopener"
+                  target="_blank"
+                  aria-label={`Bridgeland Builders on ${network}`}
+                >
+                  <span title={network} aria-hidden="true">{glyph}</span>
+                </a>
+              ) : (
+                <span key={key} title={network}>{glyph}</span>
+              );
+            })}
           </div>
         </div>
       </div>

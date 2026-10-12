@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon, CheckIcon, PinIcon } from '../components/icons.jsx';
+import { SERVICE_AREA_STATEMENT, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
+// The service area page. The communities named here come from SERVICE_AREAS in
+// siteConfig.js (confirmed ones only), so this page, the schema and the quote
+// form always agree.
 export default function OutsideWinnipegPage() {
   usePageSeo('/outside-winnipeg');
 
@@ -15,57 +19,57 @@ export default function OutsideWinnipegPage() {
                 <PinIcon size={15} /> Our current service area
               </span>
 
-              <p className="service-area-kicker">WE&apos;RE SORRY</p>
+              <p className="service-area-kicker">WHERE WE WORK</p>
+              {/* The space before <br /> keeps the words apart in the page text. */}
               <h1>
-                WE&apos;RE NOT IN<br />
-                <span>YOUR AREA YET.</span>
+                SERVING WINNIPEG{' '}<br />
+                <span>&amp; NEARBY COMMUNITIES</span>
               </h1>
 
-              <p className="service-area-lead">
-                Right now, Bridgeland Builders serves Winnipeg exclusively. Keeping our work
-                close to home helps us protect the quality, communication, and hands-on care
-                every project deserves.
-              </p>
+              <p className="service-area-lead">{SERVICE_AREA_STATEMENT}</p>
 
               <div className="service-area-note">
                 <span className="service-area-note-icon"><CheckIcon size={15} /></span>
+                {/* A phone call, not the form: the quote form answers an
+                    out-of-area project with an automatic "not in your area"
+                    message, so it cannot keep this promise. */}
                 <p>
-                  <strong>We do plan to grow.</strong> As our team expands, we hope to bring the
-                  Bridgeland experience to more Manitoba communities. Thank you for thinking of us,
-                  and please check back as we grow.
+                  <strong>Outside these areas?</strong> Call us on{' '}
+                  <a href={SITE_PHONE_TEL}><strong>{SITE_PHONE}</strong></a> and we’ll tell you honestly
+                  whether we can help.
                 </p>
               </div>
 
               <div className="service-area-actions">
-                <Link to="/" className="btn-pill-red">
-                  Back to Home <ArrowRightIcon size={15} />
+                <Link to="/book-online" className="btn-pill-red">
+                  Send Your Details <ArrowRightIcon size={15} />
                 </Link>
-                <Link to="/projects" className="btn-pill-ghost">
-                  View Our Work
+                <Link to="/" className="btn-pill-ghost">
+                  Back to Home
                 </Link>
               </div>
             </div>
 
-            <div className="service-area-visual" aria-label="Currently serving Winnipeg, Manitoba">
+            <div className="service-area-visual" aria-label="Serving Winnipeg and nearby communities">
               <div className="service-area-orbit service-area-orbit-one" aria-hidden="true" />
               <div className="service-area-orbit service-area-orbit-two" aria-hidden="true" />
               <div className="service-area-pin" aria-hidden="true">
                 <PinIcon size={38} />
               </div>
               <div className="service-area-location">
-                <span>Currently serving</span>
+                <span>Based in</span>
                 <strong>Winnipeg</strong>
                 <small>Manitoba</small>
               </div>
               <div className="service-area-coming-soon">
                 <span className="pulse-dot" />
-                More communities in the future
+                Plus nearby communities
               </div>
             </div>
           </div>
 
           <p className="service-area-thanks">
-            From our Winnipeg team, thank you for your understanding.
+            From our Winnipeg team, thank you for thinking of us.
           </p>
         </div>
       </section>

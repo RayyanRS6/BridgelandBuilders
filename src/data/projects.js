@@ -1,5 +1,10 @@
 // Content for the five project / service pages linked from the home page
 // "Our Portfolio" gallery. Each entry drives src/pages/ProjectPage.jsx.
+//
+// The intro and gallery images are stock inspiration photos, not Bridgeland
+// jobs. Keep their alts and captions to what is visible in the photo (no
+// "Winnipeg", no "our", no finished-job outcomes) until real job photos with
+// client consent replace them.
 
 export const PROJECTS = [
   {
@@ -15,15 +20,15 @@ export const PROJECTS = [
     stats: [
       { num: '60', unit: '+', label: 'Years of combined experience' },
       { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-      { num: '1', unit: '★', label: 'One crew from demo to final coat' },
-      { num: '100', unit: '%', label: 'Satisfaction & clear communication' },
+      { num: '8', unit: '–16', label: 'Weeks for most whole home renovations' },
+      { num: '1', unit: 'day', label: 'Reply within one business day' },
     ],
 
     intro: {
       tag: 'Why a whole home renovation?',
       title: 'Everything gets touched, so everything has to match',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
-      imageAlt: 'Whole home renovation in Winnipeg',
+      imageAlt: 'Modern two-storey house at dusk with dark wood cladding and large glass walls',
       floatingTitle: 'One Crew, Start to Finish',
       floatingText: 'No juggling five contractors. We handle the whole thing.',
       paragraphs: [
@@ -49,13 +54,13 @@ export const PROJECTS = [
     },
 
     gallery: {
-      tag: 'Recent Work',
-      title: 'Whole Home Projects Around Winnipeg',
-      desc: 'A look at how the whole house comes together when one crew handles it end to end.',
+      tag: 'Design Ideas',
+      title: 'Whole Home Renovation Ideas',
+      desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
       items: [
-        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Open living space renovation', title: 'Main Floor Opened Up', text: 'Wall removed between kitchen and living room' },
-        { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Kitchen in a whole home renovation', title: 'New Kitchen & Dining', text: 'Cabinets, counters, and lighting replaced' },
-        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Finished interior after whole home renovation', title: 'Finishes Throughout', text: 'Flooring, trim, and paint across every room' },
+        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Bright Living Room', text: 'Large windows, light wood floors, and a wall of framed photos' },
+        { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Person cooking at a gas cooktop in a white kitchen with a stone island and built-in wall oven', title: 'White Kitchen with Island Cooktop', text: 'Flat-panel cabinets, stone counters, and a built-in wall oven' },
+        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Living room with a grey sofa, wood coffee table, wood floors, and floor-to-ceiling windows', title: 'Warm Wood & Neutrals', text: 'Wood floors, a grey sofa, and floor-to-ceiling corner windows' },
       ],
     },
 
@@ -76,7 +81,7 @@ export const PROJECTS = [
         '“We had our whole main floor redone and honestly expected it to be a nightmare. It wasn’t. The crew showed up when they said they would, the site was swept every single night, and when we changed our minds about the flooring halfway through they just sorted it out. The house finally feels like ours.”',
       initial: 'S',
       name: 'Sandra K.',
-      role: 'Whole Home Renovation, Winnipeg ★★★★★',
+      role: 'Homeowner, Whole Home Renovation',
     },
 
     faqs: [
@@ -102,14 +107,14 @@ export const PROJECTS = [
       { num: '2', unit: '–3', label: 'Weeks for a typical bathroom' },
       { num: '60', unit: '+', label: 'Years of combined experience' },
       { num: '100', unit: '%', label: 'Waterproofed before tile goes on' },
-      { num: '5', unit: '★', label: '5-Star Rated client experience' },
+      { num: '1', unit: 'day', label: 'Reply within one business day' },
     ],
 
     intro: {
       tag: 'Why Bridgeland for your bath?',
       title: 'The part that matters is the part you can’t see',
       image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=80',
-      imageAlt: 'Bathroom renovation in Winnipeg',
+      imageAlt: 'White bathroom with a pedestal sink and black-and-white checkered floor tile',
       floatingTitle: 'Waterproofed Properly',
       floatingText: 'Membrane and sloped base before a single tile goes down.',
       paragraphs: [
@@ -135,13 +140,13 @@ export const PROJECTS = [
     },
 
     gallery: {
-      tag: 'Recent Work',
-      title: 'Bathrooms We’ve Finished in Winnipeg',
-      desc: 'Modern fixtures, clean tiling, and finishes that hold up to daily use.',
+      tag: 'Design Ideas',
+      title: 'Bathroom Renovation Ideas',
+      desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
       items: [
-        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Main bathroom renovation', title: 'Main Bath Rebuild', text: 'Taken to the studs and finished in three weeks' },
-        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Tiled shower renovation', title: 'Walk-In Tile Shower', text: 'Membrane, sloped base, full-height tile' },
-        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Ensuite bathroom renovation', title: 'Ensuite Refresh', text: 'New vanity, lighting, and floor tile' },
+        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Light, Bright Palette', text: 'White walls, pale wood floors, and plenty of daylight' },
+        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Living room with a grey sofa, wood coffee table, wood floors, and floor-to-ceiling windows', title: 'Warm Wood & Greenery', text: 'Wood tones, potted plants, and floor-to-ceiling windows' },
+        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Modern two-storey house at dusk with dark wood cladding and large glass walls', title: 'Modern Home at Dusk', text: 'Dark wood cladding and glass walls lit from inside' },
       ],
     },
 
@@ -162,7 +167,7 @@ export const PROJECTS = [
         '“Our main bathroom hadn’t been touched since the seventies. Bridgeland stripped it out and had us back in it in under three weeks. They showed me the waterproofing before they tiled over it, which no other contractor bothered to do. Clean work and a fair price.”',
       initial: 'D',
       name: 'Denise R.',
-      role: 'Bathroom Renovation, Winnipeg ★★★★★',
+      role: 'Homeowner, Bathroom Renovation',
     },
 
     faqs: [
@@ -188,14 +193,14 @@ export const PROJECTS = [
       { num: '60', unit: '+', label: 'Years of combined experience' },
       { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
       { num: '4', unit: '–6', label: 'Weeks for a typical kitchen' },
-      { num: '100', unit: '%', label: 'Satisfaction & clear communication' },
+      { num: '1', unit: 'day', label: 'Reply within one business day' },
     ],
 
     intro: {
       tag: 'Why Bridgeland for your kitchen?',
       title: 'A kitchen is a workspace before it’s a showpiece',
       image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&q=80',
-      imageAlt: 'Kitchen renovation in Winnipeg',
+      imageAlt: 'White kitchen with an island, black bar stools, and crystal pendant lights',
       floatingTitle: 'Layout First',
       floatingText: 'We plan around how you cook, then pick the finishes.',
       paragraphs: [
@@ -221,13 +226,13 @@ export const PROJECTS = [
     },
 
     gallery: {
-      tag: 'Recent Work',
-      title: 'Kitchens We’ve Built in Winnipeg',
-      desc: 'Layouts that work, finishes that hold up, and storage where you need it.',
+      tag: 'Design Ideas',
+      title: 'Kitchen Renovation Ideas',
+      desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
       items: [
-        { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Kitchen renovation with new cabinetry', title: 'Full Kitchen Rebuild', text: 'New cabinets, counters, and appliance layout' },
-        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Open kitchen and dining renovation', title: 'Kitchen & Dining Opened Up', text: 'Wall removed for one connected space' },
-        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Kitchen island installation', title: 'Island & Storage', text: 'Prep space and seating added to the plan' },
+        { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Person cooking at a gas cooktop in a white kitchen with a stone island and built-in wall oven', title: 'White Kitchen with Island Cooktop', text: 'Flat-panel cabinets, stone counters, and a built-in wall oven' },
+        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Modern two-storey house at dusk with dark wood cladding and large glass walls', title: 'Glass Walls to the Yard', text: 'Floor-to-ceiling glass around a lit dining area' },
+        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Bright Living Room', text: 'Large windows, light wood floors, and a wall of framed photos' },
       ],
     },
 
@@ -248,7 +253,7 @@ export const PROJECTS = [
         '“They caught something our last quote missed — the fridge door would have blocked the pantry. Small thing, but we’d have lived with it for years. They redrew the layout, built it, and the kitchen actually works now. Cooking in it every day is a pleasure.”',
       initial: 'M',
       name: 'Marvin V.',
-      role: 'Kitchen Renovation, Winnipeg ★★★★★',
+      role: 'Homeowner, Kitchen Renovation',
     },
 
     faqs: [
@@ -274,14 +279,14 @@ export const PROJECTS = [
       { num: '60', unit: '+', label: 'Years of combined experience' },
       { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
       { num: '4', unit: '–8', label: 'Weeks for a typical basement' },
-      { num: '5', unit: '★', label: '5-Star Rated client experience' },
+      { num: '1', unit: 'day', label: 'Reply within one business day' },
     ],
 
     intro: {
       tag: 'Why Bridgeland for your basement?',
       title: 'Get the moisture and insulation right, and the rest is easy',
       image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
-      imageAlt: 'Basement renovation in Winnipeg',
+      imageAlt: 'Room with light grey walls, a black loveseat, a white dresser, and a floor lamp',
       floatingTitle: 'Dry First, Finish Second',
       floatingText: 'We check moisture and insulation before any framing goes up.',
       paragraphs: [
@@ -307,13 +312,13 @@ export const PROJECTS = [
     },
 
     gallery: {
-      tag: 'Recent Work',
-      title: 'Basements We’ve Finished in Winnipeg',
-      desc: 'Family space, guest rooms, and suites that stay warm and dry year round.',
+      tag: 'Design Ideas',
+      title: 'Basement Renovation Ideas',
+      desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
       items: [
-        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Finished basement family room', title: 'Family Rec Room', text: 'Insulated, finished, and warm in winter' },
-        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Basement guest suite renovation', title: 'Guest Suite', text: 'Bedroom with a legal egress window' },
-        { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Basement bathroom and bar area', title: 'Bath & Wet Bar', text: 'Plumbing added below grade' },
+        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Living room with a grey sofa, wood coffee table, wood floors, and floor-to-ceiling windows', title: 'Comfortable Lounge Area', text: 'Grey sofa, wood coffee table, and leather ottomans' },
+        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Modern two-storey house at dusk with dark wood cladding and large glass walls', title: 'Modern Home at Dusk', text: 'Dark wood cladding and glass walls lit from inside' },
+        { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Person cooking at a gas cooktop in a white kitchen with a stone island and built-in wall oven', title: 'White Kitchen with Island Cooktop', text: 'Flat-panel cabinets, stone counters, and a built-in wall oven' },
       ],
     },
 
@@ -334,7 +339,7 @@ export const PROJECTS = [
         '“Two contractors quoted us to frame the basement and neither mentioned the damp patch by the back corner. Bridgeland spotted it in the first ten minutes and dealt with it before they built anything. The basement has been dry through two winters now and the kids basically live down there.”',
       initial: 'T',
       name: 'Trevor L.',
-      role: 'Basement Renovation, Winnipeg ★★★★★',
+      role: 'Homeowner, Basement Renovation',
     },
 
     faqs: [
@@ -360,14 +365,14 @@ export const PROJECTS = [
       { num: '60', unit: '+', label: 'Years of combined experience' },
       { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
       { num: '8', unit: '-16', label: 'Weeks for many home extensions' },
-      { num: '100', unit: '%', label: 'Clear communication throughout' },
+      { num: '1', unit: 'day', label: 'Reply within one business day' },
     ],
 
     intro: {
       tag: 'Why extend your home?',
       title: 'More space without starting over somewhere else',
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80',
-      imageAlt: 'Bright home extension in Winnipeg',
+      imageAlt: 'Open-plan living area with a white sectional sofa, a wood feature wall, and sliding glass doors',
       floatingTitle: 'Designed as One Home',
       floatingText: 'Rooflines, floors, trim, and finishes planned to connect naturally.',
       paragraphs: [
@@ -393,13 +398,13 @@ export const PROJECTS = [
     },
 
     gallery: {
-      tag: 'Extension Ideas',
-      title: 'Room to Live the Way You Want',
-      desc: 'Thoughtful additions that improve the home without making the new space feel separate.',
+      tag: 'Design Ideas',
+      title: 'Home Extension Ideas',
+      desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
       items: [
-        { img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80', alt: 'Open-plan home extension', title: 'Kitchen & Dining Extension', text: 'More space for cooking, gathering, and natural light' },
-        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Family room home extension', title: 'New Family Room', text: 'A comfortable everyday living area connected to the home' },
-        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Finished interior connection in a home extension', title: 'Seamless Interior Finish', text: 'Floors, trim, and openings matched across old and new' },
+        { img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80', alt: 'Modern house with wood-slat cladding, dark metal siding, and a tall glass entry', title: 'Mixed Exterior Cladding', text: 'Wood slats, dark metal siding, and a tall glass entry' },
+        { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Bright Living Room', text: 'Large windows, light wood floors, and a wall of framed photos' },
+        { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Modern two-storey house at dusk with dark wood cladding and large glass walls', title: 'Glass Walls to the Yard', text: 'Floor-to-ceiling glass around a lit dining area' },
       ],
     },
 
@@ -420,7 +425,7 @@ export const PROJECTS = [
         'We loved our street but had completely run out of room. Bridgeland helped us add a family room that looks like it was part of the original house. The transitions are clean, the room stays comfortable in winter, and we always knew what was happening next.',
       initial: 'J',
       name: 'Jordan R.',
-      role: 'Home Extension, Winnipeg',
+      role: 'Homeowner, Home Extension',
     },
 
     faqs: [
@@ -445,21 +450,21 @@ export const PROJECTS = [
     stats: [
       { num: '60', unit: '+', label: 'Years of combined experience' },
       { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-      { num: '7', unit: '★', label: 'After-hours & weekend scheduling' },
-      { num: '100', unit: '%', label: 'Satisfaction & clear communication' },
+      { num: '1', unit: '×', label: 'Progress update every week' },
+      { num: '1', unit: 'day', label: 'Reply within one business day' },
     ],
 
     intro: {
       tag: 'Why Bridgeland for your space?',
       title: 'Every day you’re closed costs you money, so we plan around that',
       image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80',
-      imageAlt: 'Commercial renovation in Winnipeg',
+      imageAlt: 'Open office meeting area with a long wood table, pink chairs, and floor-to-ceiling windows',
       floatingTitle: 'Open On Schedule',
       floatingText: 'We build to your opening date, not the other way around.',
       paragraphs: [
         'Commercial work runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. The schedule isn’t a nice-to-have — it’s the whole job.',
         'So we build the plan backwards from your opening date and tell you honestly whether it’s realistic. Where it makes sense, we work evenings and weekends so you can keep trading while we go. Where a section has to close, we phase it so only part of the space is down at a time.',
-        'Offices, retail, restaurants, clinics, hotels, and multi-unit properties — we’ve done all of them around Winnipeg. Property managers and building owners come back to us because we show up when we said we would and we keep them in the loop without being chased for updates.',
+        'We take on offices, retail stores, restaurants, clinics, and multi-unit properties across Winnipeg and nearby communities. For property managers and building owners, that means a crew that shows up when we said we would and keeps you in the loop without being chased for updates.',
       ],
       checklist: ['Offices & Workspaces', 'Retail & Restaurants', 'Medical & Dental', 'Property Managers'],
     },
@@ -474,18 +479,18 @@ export const PROJECTS = [
         { num: '03', title: 'Electrical & Mechanical', text: 'Lighting, power, data runs, and HVAC adjustments to suit the new floor plan and occupancy.' },
         { num: '04', title: 'Washrooms & Accessibility', text: 'Commercial washrooms, accessible entries, and clearances built to code and ready for inspection.' },
         { num: '05', title: 'Finishes & Branding', text: 'Flooring, wall finishes, millwork, and the details that carry your brand through the space.' },
-        { num: '06', title: 'Phased Scheduling', text: 'Evening, overnight, and weekend work so you can keep trading through as much of the project as possible.' },
+        { num: '06', title: 'Phased Scheduling', text: 'Evening and weekend work so you can keep trading through as much of the project as possible.' },
       ],
     },
 
     gallery: {
-      tag: 'Recent Work',
-      title: 'Commercial Projects Around Winnipeg',
-      desc: 'Office and retail spaces that work for you — and opened when they were supposed to.',
+      tag: 'Design Ideas',
+      title: 'Commercial Renovation Ideas',
+      desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
       items: [
-        { img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80', alt: 'Office renovation in Winnipeg', title: 'Office Fit-Out', text: 'Open workspace with meeting rooms added' },
-        { img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80', alt: 'Retail space renovation', title: 'Retail Refresh', text: 'Completed overnight to avoid closing' },
-        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Restaurant and hospitality renovation', title: 'Hospitality Space', text: 'Front of house rebuilt to the opening date' },
+        { img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80', alt: 'Open office with glass-walled rooms, a dark kitchenette, and teal bench seating', title: 'Open Office Layout', text: 'Glass-walled rooms, a kitchenette, and open shelving' },
+        { img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80', alt: 'Room with light grey walls, a black loveseat, a white dresser, and a floor lamp', title: 'Clean, Neutral Room', text: 'Pale grey walls, light floors, and simple furniture' },
+        { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Living room with a grey sofa, wood coffee table, wood floors, and floor-to-ceiling windows', title: 'Lounge Seating Area', text: 'Sofa, leather ottomans, and floor-to-ceiling windows' },
       ],
     },
 
@@ -506,11 +511,11 @@ export const PROJECTS = [
         '“We had six weeks between the lease starting and our opening date, and everyone told us it was tight. Bridgeland scoped it, worked two weekends to keep us on track, and we opened on the day we’d advertised. We’ve used them for two more locations since.”',
       initial: 'A',
       name: 'Amrit S.',
-      role: 'Retail Fit-Out, Winnipeg ★★★★★',
+      role: 'Business owner, Retail Fit-Out',
     },
 
     faqs: [
-      { q: 'Can you work after hours so we stay open?', a: 'Yes, and on a lot of retail and restaurant jobs that’s the plan from the start. Evenings, overnights, and weekends all work. It costs a bit more in labour and usually saves far more in lost trading.' },
+      { q: 'Can you work after hours so we stay open?', a: 'Yes, and on a lot of retail and restaurant jobs that’s the plan from the start. Evenings and weekends both work. It costs a bit more in labour and usually saves far more in lost trading.' },
       { q: 'Do you handle permits and inspections?', a: 'Yes. Commercial permits, occupancy requirements, and inspection scheduling are all part of what we manage. We’ll flag anything in your space that will need attention early.' },
       { q: 'Can you work with our architect or designer?', a: 'Happily. We build to supplied drawings all the time, and we’ll raise anything in them that will cause a problem on site before it costs you money.' },
       { q: 'Do you work with property managers on multiple units?', a: 'Yes — turnovers, common areas, and multi-unit upgrades. If you manage several buildings we’ll set up one point of contact so you’re not re-explaining the situation every time.' },

@@ -2,9 +2,8 @@ import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { preselectRenovationType } from '../lib/quoteFormEvents.js';
 import { ArrowRightIcon, CheckIcon, PhoneIcon, StarIcon } from '../components/icons.jsx';
 import { LANDING_SERVICES } from '../data/landingServices.js';
-import { SITE_PHONE } from '../data/siteConfig.js';
+import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
 // Every call to action on this page lands on the form in the hero. Plain hash
 // links rather than click handlers, so they already work in the prerendered
@@ -29,7 +28,6 @@ const HERO_POINTS = [
  */
 export default function FreeQuotePage() {
   usePageSeo('/free-quote');
-  useScrollReveal();
 
   return (
     <main>
@@ -62,7 +60,7 @@ export default function FreeQuotePage() {
                   <span>GET MY FREE QUOTE</span>
                   <ArrowRightIcon size={15} />
                 </a>
-                <a href={`tel:${SITE_PHONE}`} className="btn-pill-ghost">
+                <a href={SITE_PHONE_TEL} className="btn-pill-ghost">
                   <PhoneIcon size={15} />
                   <span>Call {SITE_PHONE}</span>
                 </a>

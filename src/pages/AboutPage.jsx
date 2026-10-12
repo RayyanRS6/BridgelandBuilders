@@ -4,11 +4,9 @@ import WhyUs from '../components/WhyUs.jsx';
 import Testimonial from '../components/Testimonial.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
 export default function AboutPage() {
   usePageSeo('/about-us');
-  useScrollReveal();
 
   return (
     <main>

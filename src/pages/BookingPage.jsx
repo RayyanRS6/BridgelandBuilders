@@ -3,11 +3,11 @@ import BookingAside from '../components/BookingAside.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
+// The form and its aside skip `.reveal` so they are visible from the first
+// paint, before the JS bundle has loaded.
 export default function BookingPage() {
   usePageSeo('/book-online');
-  useScrollReveal();
 
   return (
     <main>
@@ -22,8 +22,8 @@ export default function BookingPage() {
       <section className="lead-section booking-page-section">
         <div className="container">
           <div className="lead-grid">
-            <div className="reveal"><BookingAside serviceName="project" /></div>
-            <div className="reveal">
+            <div><BookingAside serviceName="project" /></div>
+            <div>
               <QuoteBookingForm id="booking-form" title="Book Your Free Consultation" />
             </div>
           </div>

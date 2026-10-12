@@ -6,11 +6,28 @@ export function formatPostDate(iso) {
   return date.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+/**
+ * Rendered image widths (pages.css): one column up to 680px, two up to 1024px,
+ * then three in the 1300px container (~400px); the featured card's image is
+ * full width up to 1024px, then 52% of the container.
+ */
+const CARD_SIZES = '(max-width: 680px) 100vw, (max-width: 1024px) 50vw, 400px';
+const FEATURED_SIZES = '(max-width: 1024px) 100vw, 652px';
+
 export default function BlogCard({ post, featured = false }) {
   return (
     <article className={`blog-card${featured ? ' is-featured' : ''}`}>
       <Link className="blog-card-media" to={`/blog/${post.slug}`} tabIndex={-1} aria-hidden="true">
-        <img src={post.hero} alt="" width="800" height="450" loading="lazy" decoding="async" />
+        <img
+          srcSet={post.heroSrcSet}
+          sizes={post.heroSrcSet ? (featured ? FEATURED_SIZES : CARD_SIZES) : undefined}
+          src={post.heroSrc || post.hero}
+          alt=""
+          width="800"
+          height="450"
+          loading="lazy"
+          decoding="async"
+        />
       </Link>
       <div className="blog-card-body">
         <span className="section-tag">{post.category}</span>

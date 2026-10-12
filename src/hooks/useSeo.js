@@ -1,17 +1,9 @@
 import { useEffect, useMemo } from 'react';
 import { SITE_LOCALE, SITE_NAME, SITE_URL } from '../data/siteConfig.js';
-import {
-  ROUTE_PAGE_TYPES,
-  ROUTE_TRAILS,
-  buildBreadcrumbs,
-  buildFaqPage,
-  buildService,
-  buildWebPage,
-  graph,
-  seoFor,
-} from '../data/seo.js';
+import { DEFAULT_IMAGE, pageGraph, seoFor } from '../data/seo.js';
 
 const MANAGED = 'data-seo';
+const PAGE_JSON_LD = `script[${MANAGED}="page"]`;
 
 function upsertMeta(attr, key, content) {
   const selector = `meta[${attr}="${key}"]`;
@@ -31,7 +23,12 @@ function upsertMeta(attr, key, content) {
 
 function upsertLink(rel, href) {
   let el = document.head.querySelector(`link[rel="${rel}"]`);
-  if (!href) return;
+  if (!href) {
+    // e.g. a client-side move to the 404 page: a canonical left over from the
+    // previous page (prerendered or not) would point at the wrong URL.
+    if (el) el.remove();
+    return;
+  }
   if (!el) {
     el = document.createElement('link');
     el.setAttribute('rel', rel);
@@ -42,11 +39,38 @@ function upsertLink(rel, href) {
 }
 
 /**
+ * Keeps the one page-level JSON-LD block in sync. The prerendered HTML already
+ * carries it, so on first load this finds that block and leaves it alone when
+ * the content matches; later navigations overwrite it in place. It is never
+ * appended a second time and never removed on unmount (the next page's render
+ * replaces it), only when a page has no JSON-LD at all.
+ */
+function syncJsonLd(jsonLd) {
+  const existing = document.head.querySelectorAll(PAGE_JSON_LD);
+  let script = existing[0];
+  for (let i = 1; i < existing.length; i += 1) existing[i].remove();
+
+  if (!jsonLd) {
+    if (script) script.remove();
+    return;
+  }
+
+  const text = JSON.stringify(jsonLd);
+  if (!script) {
+    script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute(MANAGED, 'page');
+    document.head.appendChild(script);
+  }
+  if (script.textContent !== text) script.textContent = text;
+}
+
+/**
  * Keeps title, description, canonical, Open Graph/Twitter tags and JSON-LD in
  * sync with the current page. Purely head-level: it never touches the DOM the
  * user sees.
  */
-export default function useSeo({ title, description, path, image, jsonLd, type, publishedTime, robots }) {
+export default function useSeo({ title, description, path, image, jsonLd, type, publishedTime, modifiedTime, robots }) {
   useEffect(() => {
     if (title) document.title = title;
     const canonical = path ? `${SITE_URL}${path}` : undefined;
@@ -65,29 +89,23 @@ export default function useSeo({ title, description, path, image, jsonLd, type, 
     upsertMeta('property', 'og:image', absoluteImage);
     upsertMeta('property', 'og:image:alt', absoluteImage ? title : undefined);
     upsertMeta('property', 'article:published_time', publishedTime);
+    upsertMeta('property', 'article:modified_time', modifiedTime);
 
     upsertMeta('name', 'twitter:card', absoluteImage ? 'summary_large_image' : 'summary');
     upsertMeta('name', 'twitter:title', title);
     upsertMeta('name', 'twitter:description', description);
     upsertMeta('name', 'twitter:image', absoluteImage);
-  }, [title, description, path, image, type, publishedTime, robots]);
+  }, [title, description, path, image, type, publishedTime, modifiedTime, robots]);
 
   useEffect(() => {
-    if (!jsonLd) return undefined;
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.setAttribute(MANAGED, 'page');
-    script.textContent = JSON.stringify(jsonLd);
-    document.head.appendChild(script);
-    return () => {
-      if (script.parentNode) script.parentNode.removeChild(script);
-    };
+    syncJsonLd(jsonLd);
   }, [jsonLd]);
 }
 
 /**
  * One-line SEO for a standard page: pulls the title/description for the route
- * and emits WebPage + BreadcrumbList, plus any extra schema nodes supplied.
+ * and emits the same JSON-LD document the prerender does (seo.js pageGraph):
+ * WebPage + BreadcrumbList, plus Service/FAQPage and any extra nodes supplied.
  *
  * @param {string} path        route path, e.g. '/about-us'
  * @param {object} [options]
@@ -95,29 +113,36 @@ export default function useSeo({ title, description, path, image, jsonLd, type, 
  * @param {Array}  [options.faqs]   [{ q, a }] to emit as FAQPage
  * @param {string} [options.serviceType] emit Service schema for this page
  * @param {string} [options.pageType]    WebPage subtype (e.g. 'CollectionPage')
+ * @param {string} [options.image]       Open Graph image
+ * @param {Array}  [options.nodes]       extra JSON-LD nodes (e.g. buildBlogNode) — memoise them
  */
 export function usePageSeo(path, options = {}) {
-  const { faqs, image } = options;
-  const trail = options.trail || ROUTE_TRAILS[path] || [];
-  const pageType = options.pageType || ROUTE_PAGE_TYPES[path];
-  const meta0 = seoFor(path);
-  const serviceType = options.serviceType || meta0.serviceType;
+  const { faqs, image, trail, pageType, nodes } = options;
   const meta = seoFor(path);
+  const serviceType = options.serviceType || meta.serviceType;
 
-  const jsonLd = useMemo(() => {
-    return graph(
-      buildWebPage({ path, title: meta.title, description: meta.description, type: pageType }),
-      buildBreadcrumbs(trail),
-      serviceType ? buildService({ path, serviceType, description: meta.description }) : null,
-      buildFaqPage(path, faqs)
-    );
-  }, [path, meta.title, meta.description, pageType, serviceType, trail, faqs]);
+  const jsonLd = useMemo(
+    () =>
+      pageGraph({
+        path,
+        title: meta.title,
+        description: meta.description,
+        type: pageType,
+        trail,
+        serviceType,
+        faqs,
+        nodes: nodes || [],
+      }),
+    [path, meta.title, meta.description, pageType, trail, serviceType, faqs, nodes]
+  );
 
   useSeo({
     title: meta.title,
     description: meta.description,
     path,
-    image: image || meta.image,
+    // Same fallback as the prerender (head.js), so hydration keeps the
+    // prerendered og:image / summary_large_image card.
+    image: image || meta.image || DEFAULT_IMAGE,
     jsonLd,
     robots: meta.robots,
   });

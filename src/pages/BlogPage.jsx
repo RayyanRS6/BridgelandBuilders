@@ -3,48 +3,22 @@ import PageHero from '../components/PageHero.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import BlogCard from '../components/BlogCard.jsx';
 import { BLOG_CATEGORIES, BLOG_POSTS } from '../data/blogPosts.js';
-import { SITE_URL } from '../data/siteConfig.js';
-import { buildBreadcrumbs, buildWebPage, graph, organizationNamed, seoFor } from '../data/seo.js';
-import useSeo from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
+import { buildBlogNode, seoFor } from '../data/seo.js';
+import { usePageSeo } from '../hooks/useSeo.js';
 
 const ALL = 'All Posts';
+const LATEST = BLOG_POSTS[0];
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState(ALL);
-  useScrollReveal();
 
-  const meta = seoFor('/blog');
-  useSeo({
-    title: meta.title,
-    description: meta.description,
-    path: '/blog',
-    image: BLOG_POSTS[0] && BLOG_POSTS[0].hero,
-    jsonLd: useMemo(
-      () =>
-        graph(
-          buildWebPage({ path: '/blog', title: meta.title, description: meta.description, type: 'CollectionPage' }),
-          buildBreadcrumbs([['Blog', '/blog']]),
-          {
-            '@type': 'Blog',
-            '@id': `${SITE_URL}/blog#blog`,
-            name: 'Bridgeland Builders Blog',
-            url: `${SITE_URL}/blog`,
-            description: meta.description,
-            publisher: organizationNamed,
-            inLanguage: 'en-CA',
-            blogPost: BLOG_POSTS.map((post) => ({
-              '@type': 'BlogPosting',
-              headline: post.title,
-              description: post.excerpt,
-              datePublished: post.date,
-              image: post.hero,
-              url: `${SITE_URL}/blog/${post.slug}`,
-            })),
-          }
-        ),
-      [meta.title, meta.description]
-    ),
+  // Same builders and arguments as the prerendered head (head.js), so the
+  // JSON-LD the client writes is identical to the static HTML.
+  const { description } = seoFor('/blog');
+  const blogNodes = useMemo(() => [buildBlogNode({ posts: BLOG_POSTS, description })], [description]);
+  usePageSeo('/blog', {
+    image: LATEST && (LATEST.ogImage || LATEST.hero),
+    nodes: blogNodes,
   });
 
   const posts = useMemo(
@@ -85,6 +59,8 @@ export default function BlogPage() {
               ))}
             </div>
           </div>
+
+          <h2 className="section-title">Latest guides</h2>
 
           {featured && (
             <div className="reveal">

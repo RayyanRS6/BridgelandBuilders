@@ -1,3 +1,4 @@
+import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { CalendarIcon, CheckIcon, ClockIcon, PhoneIcon, ShieldIcon } from './icons.jsx';
 
 export default function BookingAside({ serviceName }) {
@@ -41,7 +42,7 @@ export default function BookingAside({ serviceName }) {
           <span className="lead-aside-icon"><PhoneIcon size={16} strokeWidth="2" /></span>
           <div>
             <h4>Rather just call?</h4>
-            <p><a href="tel:431-866-5644" style={{ color: '#fff', fontWeight: 700 }}>431-866-5644</a> — Winnipeg, Manitoba</p>
+            <p><a href={SITE_PHONE_TEL} style={{ color: '#fff', fontWeight: 700 }}>{SITE_PHONE}</a> — Winnipeg, Manitoba</p>
           </div>
         </li>
       </ul>

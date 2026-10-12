@@ -2,19 +2,17 @@ import PageHero from '../components/PageHero.jsx';
 import Gallery from '../components/Gallery.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
 export default function ProjectsPage() {
   usePageSeo('/projects');
-  useScrollReveal();
 
   return (
     <main>
       <PageHero
-        eyebrow="Our Portfolio"
-        title="SPACES TRANSFORMED"
-        highlight="ACROSS WINNIPEG"
-        description="Browse our renovation work, then open any project category for its own details, gallery, process, and booking page."
+        eyebrow="Inspiration"
+        title="RENOVATION PROJECTS"
+        highlight="& DESIGN IDEAS"
+        description="Browse design ideas for each type of project, then open any service for its details, process, and booking page. These are inspiration photos for now; case studies of our own projects are coming."
         primaryLink={{ to: '/services', label: 'EXPLORE SERVICES' }}
       />
       <Gallery />

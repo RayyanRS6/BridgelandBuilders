@@ -3,12 +3,9 @@ import FaqAccordion from '../components/FaqAccordion.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { SITE_FAQS } from '../data/faqs.js';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
-
 
 export default function FaqsPage() {
   usePageSeo('/faqs', { faqs: SITE_FAQS });
-  useScrollReveal();
 
   return (
     <main>
