@@ -1,6 +1,7 @@
 import {
   BBB_PROFILE_URL,
   BUSINESS,
+  BUSINESS_HOURS,
   GBP,
   SERVICE_AREAS,
   SERVICE_CATALOG,
@@ -169,7 +170,7 @@ export const SERVICE_SEO = {
   '/services/commercial-renovations': {
     title: 'Commercial Renovation Contractors Winnipeg | Bridgeland Builders',
     description:
-      'Commercial renovation contractors in Winnipeg for offices, retail stores, restaurants and hospitality spaces, and medical and dental clinics.',
+      'Commercial renovation contractors in Winnipeg for offices, retail stores, restaurants, hotels and hospitality spaces, and medical and dental clinics.',
     serviceType: 'Commercial renovation',
     // Service schema audience (plan §3.5). The page is written for business
     // owners and the people who run commercial property.
@@ -303,6 +304,12 @@ export function buildOrganizationGraph() {
       areaServed: areaServedNodes(),
       hasMap: GBP.mapsUrl || undefined,
       sameAs: sameAsLinks(),
+      openingHoursSpecification: BUSINESS_HOURS.map(({ days, opens, closes }) => ({
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: days.map((day) => `https://schema.org/${day}`),
+        opens,
+        closes,
+      })),
       knowsAbout: BUSINESS.knowsAbout,
       contactPoint: {
         '@type': 'ContactPoint',

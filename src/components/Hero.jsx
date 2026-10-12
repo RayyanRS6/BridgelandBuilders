@@ -45,10 +45,8 @@ export default function Hero() {
               <div className="avatar-group">★</div>
               <div className="badge-text">
                 {/* No Google rating next to the main CTA until the profile has
-                    10+ reviews (SEO plan §19), and no new placement of the
-                    60+ years / 100+ projects claims until the owner supplies
-                    evidence (O-2). Free written quotes are stated across the
-                    site (FAQs, booking aside, /free-quote). */}
+                    10+ reviews (SEO plan §19). Free written quotes are stated
+                    across the site (FAQs, booking aside, /free-quote). */}
                 <h4>Free Written Quotes</h4>
                 <p>Over 60 Years Combined Experience</p>
               </div>

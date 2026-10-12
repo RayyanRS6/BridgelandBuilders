@@ -183,19 +183,27 @@ export const SOCIAL_PROFILES = {
   linkedin: 'https://www.linkedin.com/company/bridgeland-builders/',
   youtube: 'https://www.youtube.com/channel/UCKN758eCYFdf-eH9_FFwjgw',
   tiktok: 'https://www.tiktok.com/@bridgeland.builder',
+  // Listed on the Google Business Profile (auto-generated handle; rename it on X).
+  x: 'https://x.com/bridgeland58384',
 };
 
 export const BBB_PROFILE_URL =
   'https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638';
 
-// Google Business Profile. Found in the audit — the owner must confirm this is
-// the business's own (single) profile before it is relied on. reviewUrl stays
-// null until the owner supplies the "Ask for reviews" link from the profile.
+// Google Business Profile, confirmed by the owner 2026-10-13 (same listing:
+// ludocid 6390477049138999065). reviewUrl stays null until the owner supplies
+// the "Ask for reviews" link from the profile.
 export const GBP = {
   mapsUrl: 'https://maps.google.com/?cid=6390477049138999065',
   placeId: 'ChIJx06HPnAAgmoRGW83mwSJr1g',
   reviewUrl: null,
 };
+
+// Opening hours as published on the Google Business Profile (Mon–Fri
+// 8:30 am–4:30 pm, closed weekends). Keep in step with the profile.
+export const BUSINESS_HOURS = [
+  { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:30', closes: '16:30' },
+];
 
 // Text messages: the page whose form carries the SMS consent checkbox, and the
 // confirmation text sent after someone opts in. The Privacy Policy and Terms of

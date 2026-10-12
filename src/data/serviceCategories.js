@@ -41,9 +41,7 @@ export const SERVICE_CATEGORIES = [
       { label: 'Office renovations', description: 'Workspaces, meeting rooms, lighting, and layouts built around your team.' },
       { label: 'Restaurants & hospitality', description: 'Guest-facing spaces and back-of-house areas delivered around your operating schedule.' },
       { label: 'Medical & dental offices', description: 'Professional clinical environments planned for workflow, privacy, and accessibility.' },
-      // "Hotels" is held back until the owner confirms hotel work (SEO plan
-      // guardrail; O-14). To restore: { label: 'Hotels', description: 'Guest
-      // rooms, common areas, and phased upgrades designed to limit disruption.' }
+      { label: 'Hotels', description: 'Guest rooms, common areas, and phased upgrades designed to limit disruption.' },
       { label: 'Property managers & building owners', description: 'Reliable turnovers, common-area improvements, and multi-unit renovation support.' },
       { label: 'Real estate developers & realtors', description: 'Practical improvements that prepare properties for sale, lease, or new occupancy.' },
       { label: 'Architects & designers', description: 'Construction support that turns supplied drawings and specifications into finished spaces.' },

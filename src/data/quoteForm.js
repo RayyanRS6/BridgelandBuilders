@@ -68,11 +68,14 @@ export const OUTSIDE_AREA_TAG = 'outside-service-area';
 
 export const isInServiceArea = (lead) => lead[SERVICE_AREA.key] === SERVICE_AREA.inArea;
 
-// The GoHighLevel calendar the second step books into — the same
-// "Free 15-Minute Discovery Call" calendar used on /book-online.
+// The GoHighLevel calendar the second step books into — the same calendar
+// used on /book-online. Each booking is a free on-site visit (confirmed by the
+// owner 2026-10-13). The calendar is still named "Free 15-Minute Discovery
+// Call" inside GoHighLevel; rename it there so confirmation messages match.
+// durationMinutes is the GoHighLevel slot length, not shown to visitors.
 export const BOOKING_CALENDAR = {
   id: 'RmkDQbRjI83ES3E4K5OA',
-  name: 'Free Discovery Call',
+  name: 'Free On-Site Visit',
   durationMinutes: 15,
   // Slots are fetched and shown in the business's own time zone, so a visitor
   // always sees the same times the crew does.

@@ -1,10 +1,9 @@
 const STATS = [
   { num: '60', unit: '+', label: 'Years of combined experience' },
   { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-  // The booking calendar's free 15-minute call (quoteForm.js BOOKING_CALENDAR).
-  // No Google rating here until the owner confirms the profile and it can be
-  // shown as "Rated 5.0 on Google · N reviews" with a link (SEO plan §11.1).
-  { num: '15', unit: 'min', label: 'Free call to plan your project' },
+  // Google Business Profile rating, confirmed by the owner 2026-10-13 (5.0 from
+  // 4 reviews). Update if the rating changes.
+  { num: '5.0', unit: '', label: 'Rating on Google' },
   { num: '1', unit: 'day', label: 'Reply within one business day' },
 ];
 

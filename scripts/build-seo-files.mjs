@@ -146,11 +146,11 @@ out('llms.txt', doc(
   `# ${SITE_NAME}`,
   `> ${BUSINESS.description} Phone: ${SITE_PHONE}. ${SERVICE_AREA_STATEMENT}`,
   BUSINESS.disambiguatingDescription,
-  // The experience/project-count figures stay out of this file until the
-  // owner supplies evidence for them (SEO plan §11.1, O-2).
-  `${SITE_NAME} is a service-area renovation and construction contractor based in Winnipeg, Manitoba.
-Quotes are free and written, and permits and inspections are coordinated with the City of Winnipeg or
-the local municipality when a project requires them.`,
+  // Experience and project count confirmed by the owner 2026-10-13 (O-2).
+  `${SITE_NAME} is a service-area renovation and construction contractor based in Winnipeg, Manitoba,
+with over 60 years of combined experience and more than 100 completed projects. Quotes are free and
+written, every project starts with a free on-site visit, and permits and inspections are coordinated
+with the City of Winnipeg or the local municipality when a project requires them.`,
   `## Services\n${serviceLines}`,
   `## Key pages\n${keyPages}`,
   articleLines && `## Articles\n${articleLines}`,
