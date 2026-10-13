@@ -320,16 +320,27 @@ async function main() {
   const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard; ${chained} chain(s) collapsed)`;
 
   if (checkOnly) {
-    if (updated !== current) {
-      // Point at the first differing line so a CI log shows what drifted.
-      const a = current.replace(/\r\n/g, '\n').split('\n');
-      const b = updated.replace(/\r\n/g, '\n').split('\n');
-      const line = a.findIndex((text, i) => text !== b[i]);
-      if (line !== -1) {
-        console.error(`[redirects] first difference at vercel.json line ${line + 1}:`);
-        console.error(`  committed: ${a[line]}`);
-        console.error(`  expected:  ${b[line]}`);
+    // Compare the redirect rules, not the file's text: Vercel's build rewrites
+    // vercel.json (minified, one line) before running the build command, so a
+    // text comparison would always fail there.
+    const committed = (JSON.parse(current).redirects || []).map((r) => ({
+      source: r.source,
+      destination: r.destination,
+      permanent: r.permanent,
+    }));
+    const key = (r) => `${r.source} -> ${r.destination} (${r.permanent ? 308 : 307})`;
+    const index = Math.max(committed.length, vercelRules.length);
+    let first = -1;
+    for (let i = 0; i < index; i += 1) {
+      if (!committed[i] || !vercelRules[i] || key(committed[i]) !== key(vercelRules[i])) {
+        first = i;
+        break;
       }
+    }
+    if (first !== -1) {
+      console.error(`[redirects] first difference at redirect #${first + 1}:`);
+      console.error(`  committed: ${committed[first] ? key(committed[first]) : '(missing)'}`);
+      console.error(`  expected:  ${vercelRules[first] ? key(vercelRules[first]) : '(missing)'}`);
       console.error(`[redirects] vercel.json is out of date — run npm run redirects. Expected ${summary}.`);
       process.exit(1);
     }
