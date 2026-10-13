@@ -29,7 +29,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { SITE_URL } from '../src/data/siteConfig.js';
+import { CANONICAL_SITE_URL } from '../src/data/siteConfig.js';
 
 const ROOT = new URL('../', import.meta.url);
 const VERCEL_JSON = new URL('vercel.json', ROOT);
@@ -104,8 +104,13 @@ export function orderRules(rules) {
   return [...rules.filter((r) => !isPattern(r.from)), ...rules.filter((r) => isPattern(r.from))];
 }
 
-/** Absolute apex URL for a site path ("/services" -> "https://…/services"). */
-export const absoluteDestination = (to) => `${SITE_URL.replace(/\/+$/, '')}${to}`;
+/**
+ * Absolute apex URL for a site path ("/services" -> "https://…/services").
+ * Uses the canonical production origin, never the build's SITE_URL: vercel.json
+ * is committed, and a build that sets SITE_URL (Vercel previews can) must still
+ * pass --check.
+ */
+export const absoluteDestination = (to) => `${CANONICAL_SITE_URL.replace(/\/+$/, '')}${to}`;
 
 export const toVercelRules = (rules) =>
   orderRules(rules).map((r) => ({ source: r.from, destination: absoluteDestination(r.to), permanent: !r.temporary }));
@@ -316,6 +321,15 @@ async function main() {
 
   if (checkOnly) {
     if (updated !== current) {
+      // Point at the first differing line so a CI log shows what drifted.
+      const a = current.replace(/\r\n/g, '\n').split('\n');
+      const b = updated.replace(/\r\n/g, '\n').split('\n');
+      const line = a.findIndex((text, i) => text !== b[i]);
+      if (line !== -1) {
+        console.error(`[redirects] first difference at vercel.json line ${line + 1}:`);
+        console.error(`  committed: ${a[line]}`);
+        console.error(`  expected:  ${b[line]}`);
+      }
       console.error(`[redirects] vercel.json is out of date — run npm run redirects. Expected ${summary}.`);
       process.exit(1);
     }
