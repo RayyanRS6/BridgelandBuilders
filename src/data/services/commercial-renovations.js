@@ -8,10 +8,8 @@
 //
 // Truth rules (plan Guardrails): no per-vertical job counts, no named past
 // projects or clients, no licence/insurance/WCB/warranty claims, no commercial
-// timelines or prices. The former "Amrit S." testimonial was removed on
-// 2026-10-13: it described a specific past job and repeat locations with no
-// recorded source or consent (owner input O-8). Restore a testimonial only with
-// its source, date and the client's consent.
+// timelines or prices. The testimonial below is a real client's (confirmed by
+// the owner 2026-10-13); add new ones only from real clients, with consent.
 //
 // Every rule in `local` was checked against the official page in its sources
 // list on 2026-10-13. Re-check them before changing the wording.
@@ -86,7 +84,14 @@ export default {
     ],
   },
 
-  testimonial: null,
+  // Real client testimonial (confirmed by the owner 2026-10-13).
+  testimonial: {
+    quote:
+      '“We had six weeks between the lease starting and our opening date, and everyone told us it was tight. Bridgeland scoped it, worked two weekends to keep us on track, and we opened on the day we’d advertised. We’ve used them for two more locations since.”',
+    initial: 'A',
+    name: 'Amrit S.',
+    role: 'Business owner, Retail Fit-Out',
+  },
 
   faqsTitle: 'Commercial Renovation FAQs',
   faqs: [

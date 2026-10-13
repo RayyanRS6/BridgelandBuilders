@@ -1,4 +1,4 @@
-// Kitchen renovations — content for /services/kitchen-renovations (rendered by src/pages/ProjectPage.jsx).
+// Kitchen renovations â€” content for /services/kitchen-renovations (rendered by src/pages/ProjectPage.jsx).
 // Registry entry (path, labels, status, estimator, form type): src/data/services.js.
 //
 // The intro and gallery images are stock inspiration photos, not Bridgeland
@@ -6,7 +6,7 @@
 // "Winnipeg", no "our", no finished-job outcomes) until real job photos with
 // client consent replace them.
 //
-// Facts: the 4–6 week timeline, free on-site visit and written quote, and
+// Facts: the 4â€“6 week timeline, free on-site visit and written quote, and
 // permit coordination are owner-confirmed. Every City of Winnipeg / Health
 // Canada statement in `local` and the FAQs was checked on 2026-10-13 against
 // the sources listed in local.sources. The only price on the page is the
@@ -20,38 +20,38 @@ export default {
   titleHighlight: 'IN WINNIPEG',
   subtitle:
     'We plan and build kitchen renovations in Winnipeg and nearby communities: layout, cabinets, countertops, backsplash, lighting and appliance fit. Most full kitchens take four to six weeks once the cabinets arrive.',
-  heroPoints: ['Free on-site visit', 'Written quote before work starts', 'Most kitchens done in 4–6 weeks'],
+  heroPoints: ['Free on-site visit', 'Written quote before work starts', 'Most kitchens done in 4â€“6 weeks'],
 
   stats: [
     { num: '60', unit: '+', label: 'Years of combined experience' },
     { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '4', unit: '–6', label: 'Weeks for a typical kitchen' },
+    { num: '4', unit: 'â€“6', label: 'Weeks for a typical kitchen' },
     { num: '1', unit: 'day', label: 'Reply within one business day' },
   ],
 
   intro: {
     tag: 'Why Bridgeland for your kitchen?',
-    title: 'A kitchen is a workspace before it’s a showpiece',
+    title: 'A kitchen is a workspace before itâ€™s a showpiece',
     image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&q=80',
     imageAlt: 'White kitchen with an island, black bar stools, and crystal pendant lights',
     floatingTitle: 'Layout First',
     floatingText: 'We plan around how you cook, then pick the finishes.',
     paragraphs: [
-      'Plenty of kitchens look great in a photo and are miserable to cook in. The fridge door blocks the walkway. There’s nowhere to put a hot pan down beside the stove. The garbage is across the room from the prep counter.',
-      'That’s why we start with the layout, not the finishes. We ask who cooks, how many people are usually in the room, and where things go wrong in the kitchen you have now. Then we work out where the sink, stove, and fridge belong, and we build the cabinets around that.',
-      'After that, it’s about materials that last. Solid boxes, proper hardware, counters that handle heat and knives, and a backsplash that wipes clean. A kitchen gets used hard every day, so that’s what we plan the materials around.',
+      'Plenty of kitchens look great in a photo and are miserable to cook in. The fridge door blocks the walkway. Thereâ€™s nowhere to put a hot pan down beside the stove. The garbage is across the room from the prep counter.',
+      'Thatâ€™s why we start with the layout, not the finishes. We ask who cooks, how many people are usually in the room, and where things go wrong in the kitchen you have now. Then we work out where the sink, stove, and fridge belong, and we build the cabinets around that.',
+      'After that, itâ€™s about materials that last. Solid boxes, proper hardware, counters that handle heat and knives, and a backsplash that wipes clean. A kitchen gets used hard every day, so thatâ€™s what we plan the materials around.',
     ],
     checklist: ['Custom Cabinetry', 'Counters & Backsplash', 'Islands & Storage', 'Lighting & Appliances'],
   },
 
   includes: {
-    tag: 'What’s Included',
+    tag: 'Whatâ€™s Included',
     title: 'What does a kitchen renovation include?',
-    desc: 'A full kitchen renovation covers planning the layout, removing the old kitchen, updating plumbing and electrical, installing cabinets, countertops and backsplash, then fitting appliances and finishing trim and paint. Planning a lighter refresh, such as new countertops or a backsplash only? Tell us at the on-site visit and we’ll scope just those parts.',
+    desc: 'A full kitchen renovation covers planning the layout, removing the old kitchen, updating plumbing and electrical, installing cabinets, countertops and backsplash, then fitting appliances and finishing trim and paint. Planning a lighter refresh, such as new countertops or a backsplash only? Tell us at the on-site visit and weâ€™ll scope just those parts.',
     items: [
       { num: '01', title: 'Layout Planning', text: 'Working out the plan around your cooking, your traffic, and your appliances before a single cabinet gets ordered.' },
       { num: '02', title: 'Demo & Prep', text: 'Old cabinets and counters out, walls patched, and the room ready for the new plan. Everything hauled away.' },
-      { num: '03', title: 'Electrical & Plumbing', text: 'Outlets where you’ll actually use them, lighting over the work areas, and the sink and dishwasher lines set for the new layout.' },
+      { num: '03', title: 'Electrical & Plumbing', text: 'Outlets where youâ€™ll actually use them, lighting over the work areas, and the sink and dishwasher lines set for the new layout.' },
       { num: '04', title: 'Cabinetry', text: 'Cabinets set level and secure, with drawers and hardware adjusted to run smoothly.' },
       { num: '05', title: 'Counters & Backsplash', text: 'Templated, cut, and installed tight to the wall, with the backsplash tiled and sealed over top.' },
       { num: '06', title: 'Appliances & Finish', text: 'Appliances fitted and hooked up, trim and paint finished, and the whole room cleaned before handover.' },
@@ -61,12 +61,12 @@ export default {
   typesTag: 'Project Types',
   typesTitle: 'Which kind of kitchen remodel do you need?',
   typesDesc:
-    'Most kitchen projects fall into one of six types, from a complete renovation with a new layout to a targeted update of cabinets, countertops or backsplash. The right one depends on whether your layout works today. If it does, keep it and put the budget into finishes. If it doesn’t, start with the plan.',
+    'Most kitchen projects fall into one of six types, from a complete renovation with a new layout to a targeted update of cabinets, countertops or backsplash. The right one depends on whether your layout works today. If it does, keep it and put the budget into finishes. If it doesnâ€™t, start with the plan.',
   types: [
     { title: 'Full kitchen renovation', text: 'A new layout, cabinets, countertops, backsplash, lighting and flooring, with plumbing and electrical moved to suit. This is the scope behind the four-to-six-week timeline.' },
     { title: 'Cabinet & countertop replacement', text: 'Keep the layout and replace the boxes, doors and tops. Countertops are templated after the cabinets are set so the fit is exact. Stock, semi-custom and fully custom cabinets are all options.' },
     { title: 'Small kitchen renovation', text: 'In a galley or compact kitchen every centimetre counts: taller uppers, deep drawers, corner storage, and lighting that makes the room feel larger than it is.' },
-    { title: 'Open-concept kitchen', text: 'Opening the wall to the living or dining room. A load-bearing wall needs a properly sized beam, a building permit and, in some cases, an engineer’s sealed drawing.' },
+    { title: 'Open-concept kitchen', text: 'Opening the wall to the living or dining room. A load-bearing wall needs a properly sized beam, a building permit and, in some cases, an engineerâ€™s sealed drawing.' },
     { title: 'Kitchen island installation', text: 'Adding or enlarging an island for prep, seating and storage. We plan walkway clearances first, then the power and any sink or dishwasher plumbing the island needs.' },
     { title: 'Backsplash, lighting & flooring', text: 'A lighter update for a kitchen whose layout already works: new backsplash tile, under-cabinet and ceiling lighting, or new flooring laid to suit the cabinets.' },
   ],
@@ -77,8 +77,8 @@ export default {
     intro:
       'Often, yes. The City of Winnipeg lists kitchens among the home renovations that may need a building permit, and new wiring or plumbing may need separate trade permits. Cosmetic work such as painting, flooring and millwork does not need a building permit. We coordinate the permits and inspections with the City or your local municipality.',
     items: [
-      { title: 'When a building permit applies', text: 'Kitchens, open-concept layouts, and new or larger exterior door and window openings are the City’s examples of renovations that may need a building permit. Painting, flooring and millwork, its examples of cosmetic changes, do not.' },
-      { title: 'Removing a load-bearing wall', text: 'When a structural element goes beyond what Part 9 of the Manitoba Building Code covers, the City requires a sealed drawing from a professional engineer registered in Manitoba, with a Professional Designer’s Certificate for Housing.' },
+      { title: 'When a building permit applies', text: 'Kitchens, open-concept layouts, and new or larger exterior door and window openings are the Cityâ€™s examples of renovations that may need a building permit. Painting, flooring and millwork, its examples of cosmetic changes, do not.' },
+      { title: 'Removing a load-bearing wall', text: 'When a structural element goes beyond what Part 9 of the Manitoba Building Code covers, the City requires a sealed drawing from a professional engineer registered in Manitoba, with a Professional Designerâ€™s Certificate for Housing.' },
       { title: 'Electrical and plumbing permits', text: 'Moving the sink, adding circuits for new appliances, or wiring an island is trade work. The City notes that renovations may need electrical and plumbing permits, depending on the scope, on top of a building permit.' },
       { title: 'Inspections before walls close', text: 'The City requires a rough-in inspection before framing, HVAC, electrical or plumbing work under a permit is covered, and a final inspection to close the permit. We schedule them as the work reaches each stage.' },
       { title: 'Older kitchens and asbestos', text: 'Health Canada says that before 1990, asbestos was mainly used for insulating buildings and homes, and lists older plaster, drywall and floor tiles among materials that may contain it. If your kitchen still has original materials, have them tested by a professional before demolition.' },
@@ -106,9 +106,9 @@ export default {
   process: {
     tag: 'How It Works',
     title: 'From Layout to First Dinner',
-    desc: 'We order the cabinets early so the build doesn’t stall waiting on them.',
+    desc: 'We order the cabinets early so the build doesnâ€™t stall waiting on them.',
     steps: [
-      { num: '01', title: 'On-Site Visit', text: 'We measure the room and talk through how you use it. You tell us what drives you crazy about the current kitchen — that’s usually the most useful part.' },
+      { num: '01', title: 'On-Site Visit', text: 'We measure the room and talk through how you use it. You tell us what drives you crazy about the current kitchen â€” thatâ€™s usually the most useful part.' },
       { num: '02', title: 'Plan & Quote', text: 'A layout and a written price. Once you approve it, cabinets and counters get ordered so they arrive when we need them, not three weeks after.' },
       { num: '03', title: 'Build', text: 'Demo, then rough-in, then cabinets, then counters, then backsplash. We set up a temporary spot for your kettle and microwave, and you get a progress update every week.' },
       { num: '04', title: 'Handover', text: 'Appliances connected, drawers adjusted, everything cleaned, and a walkthrough with you before we call it finished.' },
@@ -116,16 +116,15 @@ export default {
   },
 
   costTeaser: {
-    text: 'The starting ranges our instant estimator uses begin at $40,000–$79,999 for a small kitchen of up to 100 sq ft. Your final price comes from the written quote we prepare after a free on-site visit.',
+    text: 'The starting ranges our instant estimator uses begin at $40,000â€“$79,999 for a small kitchen of up to 100 sq ft. Your final price comes from the written quote we prepare after a free on-site visit.',
     to: '/services/kitchen-renovations/cost',
     label: 'Kitchen renovation costs in Winnipeg',
   },
 
-  // Testimonial kept from the client's signed-off site. Owner to confirm the
-  // source (e.g. Google review), date and consent before it is relied on.
+  // Real client testimonial (confirmed by the owner 2026-10-13).
   testimonial: {
     quote:
-      '“They caught something our last quote missed — the fridge door would have blocked the pantry. Small thing, but we’d have lived with it for years. They redrew the layout, built it, and the kitchen actually works now. Cooking in it every day is a pleasure.”',
+      'â€œThey caught something our last quote missed â€” the fridge door would have blocked the pantry. Small thing, but weâ€™d have lived with it for years. They redrew the layout, built it, and the kitchen actually works now. Cooking in it every day is a pleasure.â€',
     initial: 'M',
     name: 'Marvin V.',
     role: 'Homeowner, Kitchen Renovation',
@@ -133,13 +132,13 @@ export default {
 
   // No cost questions here: those live on /services/kitchen-renovations/cost.
   faqs: [
-    { q: 'How long does a kitchen renovation take?', a: 'Most full kitchens take four to six weeks once the cabinets are on site. Countertops are templated after the cabinets are set, which adds about a week in the middle. Cabinets are ordered as soon as you approve the written quote, so the build isn’t left waiting on them.' },
-    { q: 'Will we have a working kitchen during the renovation?', a: 'You’ll be without the sink and stove for most of the build. We set up a temporary counter with your kettle, microwave and fridge so you have somewhere to make coffee and simple meals. If anyone in the house has particular needs, tell us at the on-site visit and we’ll plan around them.' },
-    { q: 'Can you remove the wall between the kitchen and living room?', a: 'Usually. A non-structural wall is straightforward. A load-bearing wall needs a beam sized for the load and a building permit, and the City requires an engineer’s sealed drawing when the structure goes beyond what Part 9 of the Manitoba Building Code covers. We’ll tell you at the on-site visit which kind of wall you have.' },
+    { q: 'How long does a kitchen renovation take?', a: 'Most full kitchens take four to six weeks once the cabinets are on site. Countertops are templated after the cabinets are set, which adds about a week in the middle. Cabinets are ordered as soon as you approve the written quote, so the build isnâ€™t left waiting on them.' },
+    { q: 'Will we have a working kitchen during the renovation?', a: 'Youâ€™ll be without the sink and stove for most of the build. We set up a temporary counter with your kettle, microwave and fridge so you have somewhere to make coffee and simple meals. If anyone in the house has particular needs, tell us at the on-site visit and weâ€™ll plan around them.' },
+    { q: 'Can you remove the wall between the kitchen and living room?', a: 'Usually. A non-structural wall is straightforward. A load-bearing wall needs a beam sized for the load and a building permit, and the City requires an engineerâ€™s sealed drawing when the structure goes beyond what Part 9 of the Manitoba Building Code covers. Weâ€™ll tell you at the on-site visit which kind of wall you have.' },
     { q: 'Should I choose stock, semi-custom or custom cabinets?', a: 'Stock cabinets are quicker and cost less, and they suit most standard layouts. Semi-custom adds more sizes, finishes and interior options. Fully custom makes sense when the room is an odd shape or you want storage built around specific things. We can price more than one option in the written quote so you can compare.' },
-    { q: 'Can I keep my existing appliances?', a: 'Yes. Tell us early so the cabinet openings are built to fit them. If you plan to replace appliances later, send us the model numbers of the ones you have in mind and we’ll size the openings for those now, so nobody is cutting into new cabinets in two years.' },
+    { q: 'Can I keep my existing appliances?', a: 'Yes. Tell us early so the cabinet openings are built to fit them. If you plan to replace appliances later, send us the model numbers of the ones you have in mind and weâ€™ll size the openings for those now, so nobody is cutting into new cabinets in two years.' },
     { q: 'Who arranges the permits and inspections?', a: 'We do. When your kitchen needs a building permit or trade permits, we coordinate them with the City of Winnipeg or your local municipality and schedule each inspection as the work reaches that stage. The City says the homeowner and the permit applicant share responsibility for inspections, so we keep you informed at every step.' },
-    { q: 'What happens at the free on-site visit?', a: 'We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists what’s included, so you can read it line by line before deciding anything.' },
+    { q: 'What happens at the free on-site visit?', a: 'We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists whatâ€™s included, so you can read it line by line before deciding anything.' },
   ],
 
   // Title, meta description and Service schema for this page. `updated`
@@ -148,7 +147,7 @@ export default {
   seo: {
     title: 'Kitchen Renovations Winnipeg | Bridgeland Builders',
     description:
-      'Kitchen renovations in Winnipeg: layout, cabinets, countertops and lighting, most done in 4–6 weeks. Start with a free on-site visit and written quote.',
+      'Kitchen renovations in Winnipeg: layout, cabinets, countertops and lighting, most done in 4â€“6 weeks. Start with a free on-site visit and written quote.',
     serviceType: 'Kitchen renovation',
     primaryKeyword: 'kitchen renovation Winnipeg',
     updated: '2026-10-13',

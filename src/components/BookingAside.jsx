@@ -40,7 +40,7 @@ export default function BookingAside({ serviceName, showHours = false }) {
           <span className="lead-aside-icon"><ClockIcon size={16} /></span>
           <div>
             <h4>Reply within one business day</h4>
-            <p>Emma gets back to you by phone, text, or email — your pick.</p>
+            <p>Our team gets back to you by phone, text, or email — your pick.</p>
           </div>
         </li>
         <li className="lead-aside-item">
