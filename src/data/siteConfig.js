@@ -1,3 +1,5 @@
+import { liveServices } from './services.js';
+
 // Single source of truth for everything URL- and identity-related.
 // When the domain changes, change CANONICAL_SITE_URL here (or pass SITE_URL= to
 // the build) and every canonical, Open Graph tag, sitemap entry and JSON-LD id
@@ -90,7 +92,7 @@ export const SERVICE_AREAS = [
     type: 'Place',
     municipality: 'RM of Macdonald',
     wikipedia: 'https://en.wikipedia.org/wiki/Oak_Bluff,_Manitoba',
-    permitAuthority: 'verify',
+    permitAuthority: 'RM of Macdonald',
     confirmed: true,
   },
   {
@@ -99,7 +101,9 @@ export const SERVICE_AREAS = [
     type: 'City',
     municipality: 'City of Selkirk',
     wikipedia: 'https://en.wikipedia.org/wiki/Selkirk,_Manitoba',
-    permitAuthority: 'verify',
+    // Confirmed through search results from the city's own domain only (its
+    // site blocked automated access on 2026-10-13): re-check in a browser.
+    permitAuthority: 'City of Selkirk',
     confirmed: true,
   },
   {
@@ -108,7 +112,7 @@ export const SERVICE_AREAS = [
     type: 'City',
     municipality: 'City of Steinbach',
     wikipedia: 'https://en.wikipedia.org/wiki/Steinbach,_Manitoba',
-    permitAuthority: 'verify',
+    permitAuthority: 'City of Steinbach',
     confirmed: true,
   },
   {
@@ -231,7 +235,7 @@ export const BUSINESS = {
   name: SITE_NAME,
   legalName: 'Bridgeland Builders',
   description:
-    'Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home extensions and general contracting across Winnipeg and nearby communities.',
+    'Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home additions and general contracting across Winnipeg and nearby communities.',
   // The short (≤25-word) description reused across schema, llms files and
   // listings, so every source describes the business the same way.
   shortDescription:
@@ -252,8 +256,13 @@ export const BUSINESS = {
     'Kitchen renovations',
     'Bathroom renovations',
     'Basement renovations',
-    'Home extensions',
+    'Home additions',
     'Commercial renovations',
+    // Commercial verticals the owner confirmed on 2026-10-13 (hotels included).
+    'Office renovations',
+    'Retail renovations',
+    'Restaurant and hospitality renovations',
+    'Medical and dental office renovations',
     'General contracting',
     'Windows and doors installation',
     'Exterior painting',
@@ -263,11 +272,10 @@ export const BUSINESS = {
   ],
 };
 
-export const SERVICE_CATALOG = [
-  { name: 'Whole home renovations', path: '/services/whole-home-renovations' },
-  { name: 'Kitchen renovations', path: '/services/kitchen-renovations' },
-  { name: 'Bathroom renovations', path: '/services/bathroom-renovations' },
-  { name: 'Basement renovations', path: '/services/basement-renovations' },
-  { name: 'Home extensions', path: '/services/home-extensions' },
-  { name: 'Commercial renovations', path: '/services/commercial-renovations' },
-];
+// Every live service page, from the registry (src/data/services.js): the
+// Organization's hasOfferCatalog and the llms files list exactly these.
+export const SERVICE_CATALOG = liveServices().map((service) => ({
+  name: service.navLabel,
+  path: service.path,
+  projectSlug: service.projectSlug,
+}));

@@ -1,0 +1,290 @@
+{
+  "slug": "clinic-renovation-permits-winnipeg",
+  "status": "published",
+  "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
+  "metaTitle": "Clinic Renovation Permits in Winnipeg | Bridgeland Builders",
+  "metaDescription": "Renovating a medical, dental or physio clinic in Winnipeg? The permits, sealed drawings, X-ray approvals, accessibility rules and occupancy steps to plan.",
+  "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
+  "date": "2026-10-13",
+  "cats": [
+    "Commercial",
+    "Permits & Planning"
+  ],
+  "services": [
+    "/services/medical-dental-office-renovations",
+    "/services/commercial-renovations"
+  ],
+  "cluster": "commercial-permits",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Most clinic renovations in Winnipeg need a commercial building permit, applied for with the City's Commercial Alteration Design Summary, and many need a building occupancy permit before patients return. Clinics add their own steps: an electrical declaration for patient care areas, provincial approval and a shielding specification for X-ray rooms, and accessible design under the Manitoba Building Code.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+      "url": "https://www.winnipeg.ca/media/6330",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Commercial projects",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+      "url": "https://www.winnipeg.ca/media/6131",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Building occupancy permits (video transcript)",
+      "url": "https://www.winnipeg.ca/media/6472",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Commercial inspections",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+      "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Zoning bylaws",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/zoning",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Province of Manitoba: 2020 Construction Codes Adoption",
+      "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
+      "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
+      "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Laws: X-Ray Safety Regulation, M.R. 341/88 R",
+      "url": "https://web2.gov.mb.ca/laws/regs/current/341-88r.php?lang=en",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Clinic renovation permit questions",
+  "faqs": [
+    {
+      "q": "Do I need a permit just to repaint and replace flooring in my clinic?",
+      "a": "It depends on what else changes. If the use of the space changes, the City expects a permit application even when the work is only cosmetic. If the use stays the same and nothing touches walls, exits, electrical, plumbing or ventilation, confirm with the City's permit office before you start. We check this with you at the on-site visit."
+    },
+    {
+      "q": "Who applies for the permit, the clinic or the landlord?",
+      "a": "Either can. The City's CADS form says the applicant can be the tenant, contractor, design professional, property manager, owner or another authorized person. Either way, the package needs a letter of authorization from the building owner or property manager, or an owner statement when an architect or engineer is involved."
+    },
+    {
+      "q": "Does a physiotherapy clinic need the same approvals as a dental clinic?",
+      "a": "Many are the same: a building permit for alterations, trade permits, inspections and often an occupancy permit. The patient care area declaration applies wherever treatment, therapy, monitoring or care of people takes place, so it can cover physiotherapy rooms too. X-ray approvals apply only if you install X-ray equipment. The City decides what applies to your space."
+    },
+    {
+      "q": "Can we open on an interim occupancy permit?",
+      "a": "The City issues both interim and final building occupancy permits, and its occupancy bulletin says you need one or the other before occupying a space. Progress inspections must be completed to the final stage before you can request occupancy, so plan your opening date around finished inspections rather than counting on an interim permit."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "A clinic renovation has more moving parts than most commercial projects: treatment rooms have their own electrical requirements, X-ray rooms need provincial approval, and patients rely on an accessible entrance every day. This guide covers the approvals a medical, dental or physiotherapy clinic in Winnipeg usually needs, in the order they come up."
+    },
+    {
+      "t": "h2",
+      "x": "Do you need a permit to renovate a clinic in Winnipeg?"
+    },
+    {
+      "t": "p",
+      "x": "In most cases, yes. The City of Winnipeg handles interior alterations and changes of use in commercial buildings through a building permit, applied for with its Commercial Alteration Design Summary (CADS) form. Electrical, plumbing and mechanical work also need their own trade permits, which the City requires licensed contractors to apply for."
+    },
+    {
+      "t": "p",
+      "x": "Expect to provide a letter of authorization from the building owner or property manager for the intended use, a key plan showing where your unit sits, and a scaled tenant floor plan with dimensions, labelled rooms and walls marked existing, new or demolished. The form also asks for neighbouring tenants, because fire separation requirements depend on what is next door."
+    },
+    {
+      "t": "p",
+      "x": "If the space was used for something else, check the zoning before you sign the lease: the City's zoning by-laws decide whether a use is permitted, conditional or not allowed. A development permit, where needed, can be reviewed before or alongside the building permit. Our [commercial renovation services](/services/commercial-renovations) page explains how we run a commercial project from site visit to handover."
+    },
+    {
+      "t": "h2",
+      "x": "When does a clinic renovation need an architect or engineer?"
+    },
+    {
+      "t": "p",
+      "x": "When the work is complex. The City's CADS form lists the triggers, including any structural change, significant changes to fire alarm or sprinkler systems, and, in a Part 3 building, significant work on exits, public corridors, fire separations or the building envelope. If any item applies, the drawings must be prepared, signed and sealed by an architect or engineer."
+    },
+    {
+      "t": "p",
+      "x": "Part 3 and Part 9 are parts of the Manitoba Building Code; if nobody knows which applies, the City asks you to confirm before applying. Simpler work, such as partitions that leave exits and fire separations alone, can be drawn by someone other than an architect if the drawings show the scope clearly."
+    },
+    {
+      "t": "table",
+      "caption": "Common clinic work and what the City's CADS form asks for",
+      "head": [
+        "Clinic work",
+        "What to expect"
+      ],
+      "rows": [
+        [
+          "Partitions, doors, millwork and finishes",
+          "Scaled floor plan; sealed drawings only for significant exit, corridor or fire separation work in a Part 3 building"
+        ],
+        [
+          "Rooms where treatment or care is given",
+          "Electrical Patient Care Areas Declaration"
+        ],
+        [
+          "New ductwork or rooftop units",
+          "Mechanical drawings and permit; sealed if significant HVAC changes come from a change of use"
+        ],
+        [
+          "Sprinkler or fire alarm changes",
+          "Sprinkler drawings; sealed if the changes are significant"
+        ],
+        [
+          "Change of major occupancy in a Part 3 building",
+          "Sealed drawings and a building occupancy permit"
+        ]
+      ],
+      "note": "Summarized from the City's CADS form (October 2025). The City decides what applies to your space."
+    },
+    {
+      "t": "h2",
+      "x": "What extra approvals does a medical or dental clinic need?"
+    },
+    {
+      "t": "p",
+      "x": "Clinics usually add three items to a standard commercial permit: an electrical declaration for patient care areas, provincial approval and a shielding specification before any X-ray room is built or moved, and an accessible layout that meets the Manitoba Building Code. Your regulator and equipment suppliers may have their own requirements, so ask them early too."
+    },
+    {
+      "t": "h3",
+      "x": "Patient care areas"
+    },
+    {
+      "t": "p",
+      "x": "The CADS form asks for an Electrical Patient Care Areas Declaration whenever treatment, diagnosis, therapy, monitoring or care of people will take place, naming dental clinics and physicians' offices as examples. Mark every care room on the floor plan so its electrical design is settled before rough-in."
+    },
+    {
+      "t": "h3",
+      "x": "X-ray rooms"
+    },
+    {
+      "t": "p",
+      "x": "Under Manitoba's X-Ray Safety Regulation, X-ray equipment must be registered, and installing a machine in a permanent location needs the minister's prior approval, with scaled drawings showing the shielding built into the room's boundaries. Substantial alterations to an approved X-ray area need approval too. Get the shielding design and approval started as soon as the layout is fixed, because shielding goes in before the walls are closed."
+    },
+    {
+      "t": "h3",
+      "x": "Accessibility"
+    },
+    {
+      "t": "p",
+      "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings. How much of your space must be upgraded is settled in plan review."
+    },
+    {
+      "t": "p",
+      "x": "During construction, Manitoba's Accessible Customer Service Standard applies to every organization with at least one employee and requires letting the public know when and why an accessibility feature is unavailable, such as an accessible entrance or washroom closed for the work."
+    },
+    {
+      "t": "h2",
+      "x": "Can patients be seen while the clinic is renovated?"
+    },
+    {
+      "t": "p",
+      "x": "Sometimes, if the work is phased and the occupied part of the clinic stays separate, safe and accessible. What you cannot do is use a renovated area before the City issues an interim or final occupancy permit where one is required. The City's occupancy bulletin counts meeting clients and conducting business as occupying a space."
+    },
+    {
+      "t": "p",
+      "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits. Construction and the delivery and installation of fixed equipment and furnishings, such as reception desks, dental chairs and X-ray machines, are allowed before it is issued; bringing in supplies or personal belongings, installing computers and printers, training staff and seeing patients are not. Progress inspections must reach the final stage, and professional certifications be submitted, before you can request occupancy."
+    },
+    {
+      "t": "p",
+      "x": "Evening and weekend work helps when the clinic cannot close, but within 150 metres of a home the City allows loud construction only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays. Our guide to [preparing your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation) covers phasing in more detail."
+    },
+    {
+      "t": "h2",
+      "x": "What sets the schedule for a clinic renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Approvals and long-lead items often set the pace as much as the construction does. Whether sealed drawings are needed, how quickly plan review comments are answered, when the X-ray shielding specification and equipment arrive, and how many inspection stages the City needs all affect your opening date. Build each one into your lease and move-in plans."
+    },
+    {
+      "t": "table",
+      "caption": "Clinic renovation steps in order",
+      "head": [
+        "Step",
+        "Who is involved",
+        "Timing"
+      ],
+      "rows": [
+        [
+          "Zoning, landlord consent, code Part",
+          "You, landlord, City",
+          "Before signing the lease"
+        ],
+        [
+          "Drawings, sealed if complex",
+          "Designer, architect or engineer",
+          "Before applying"
+        ],
+        [
+          "X-ray shielding drawings and approval",
+          "You, your X-ray supplier and the Province (X-Ray Safety Regulation)",
+          "Before construction"
+        ],
+        [
+          "Building and trade permits",
+          "Applicant and licensed trades",
+          "Before work starts"
+        ],
+        [
+          "Progress inspections",
+          "City commercial inspector, requested by the applicant",
+          "During construction"
+        ],
+        [
+          "Occupancy permit",
+          "City of Winnipeg",
+          "Before staff training or patients"
+        ]
+      ],
+      "note": "Outside Winnipeg, the permit authority for your municipality takes the City's role."
+    },
+    {
+      "t": "h2",
+      "x": "Questions to ask at the on-site visit"
+    },
+    {
+      "t": "li",
+      "x": "Will any of our work need sealed drawings, and who will prepare them?"
+    },
+    {
+      "t": "li",
+      "x": "Which rooms are patient care areas, and where will X-ray equipment go?"
+    },
+    {
+      "t": "li",
+      "x": "How will the accessible entrance and washroom stay usable, or how will we tell patients?"
+    },
+    {
+      "t": "li",
+      "x": "What are the inspection stages, and when can we realistically request occupancy?"
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** Bridgeland Builders renovates medical, dental and physiotherapy clinics in Winnipeg and nearby communities, and we coordinate permits and inspections with the City of Winnipeg or your local municipality. Every project starts with a free on-site visit and a free written quote. [Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
+    }
+  ]
+}

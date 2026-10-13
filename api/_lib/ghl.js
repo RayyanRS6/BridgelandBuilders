@@ -11,10 +11,11 @@
 // server sets it (see vite.config.js), and only when no token is configured.
 import {
   BOOKING_CALENDAR,
-  LEAD_SOURCE,
   OUTSIDE_AREA_TAG,
   QUOTE_QUESTIONS,
+  attributionCustomFields,
   isInServiceArea,
+  sourceFor,
   tagsForLead,
 } from '../../src/data/quoteForm.js';
 
@@ -118,12 +119,24 @@ export async function getFreeSlots(start, end) {
  * Creates the contact, or updates it when the email/phone already exists, with
  * the survey answers in the same custom fields the old GoHighLevel survey used,
  * and tags it with each answer (see tagsForLead). Returns { contactId, tags }.
+ *
+ * `attribution` (cleaned by cleanAttribution) only adds custom fields whose
+ * ids are set in ATTRIBUTION_FIELDS (empty by default), and only changes the
+ * page tag / source when TAG_BY_FORM_PAGE is on (off by default). With the
+ * defaults the contact is saved exactly as before.
  */
-export async function upsertLead(lead, { utmSource } = {}) {
-  if (isMock()) return { contactId: `mock-contact-${Date.now()}`, tags: tagsForLead(lead) };
+export async function upsertLead(lead, { utmSource, attribution } = {}) {
+  const context = { formPage: attribution?.formPage, channel: attribution?.channel };
+  if (isMock()) return { contactId: `mock-contact-${Date.now()}`, tags: tagsForLead(lead, context) };
 
   const { token, locationId } = config();
   const [firstName, ...rest] = lead.name.split(/\s+/);
+  let extraFields = [];
+  try {
+    extraFields = attributionCustomFields(attribution);
+  } catch {
+    extraFields = [];
+  }
 
   const data = await ghl('/contacts/upsert', {
     method: 'POST',
@@ -139,11 +152,14 @@ export async function upsertLead(lead, { utmSource } = {}) {
       address1: lead.address,
       city: lead.city,
       postalCode: lead.postalCode || undefined,
-      source: utmSource ? `${LEAD_SOURCE} (${utmSource})` : LEAD_SOURCE,
-      customFields: QUOTE_QUESTIONS.map((question) => ({
-        id: question.fieldId,
-        field_value: lead[question.key],
-      })),
+      source: sourceFor({ utmSource, ...context }),
+      customFields: [
+        ...QUOTE_QUESTIONS.map((question) => ({
+          id: question.fieldId,
+          field_value: lead[question.key],
+        })),
+        ...extraFields,
+      ],
     },
   });
 
@@ -156,7 +172,7 @@ export async function upsertLead(lead, { utmSource } = {}) {
     method: 'POST',
     version: CONTACTS_VERSION,
     token,
-    body: { tags: tagsForLead(lead) },
+    body: { tags: tagsForLead(lead, context) },
   });
 
   // Someone who first answered "outside the area" and then corrected it keeps

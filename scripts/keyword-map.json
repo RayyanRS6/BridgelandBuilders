@@ -66,7 +66,7 @@
       "note": "primary is a plan addition (validate volume)"
     },
     "/services/general-contracting": {
-      "status": "planned",
+      "status": "live",
       "primary": ["general contractor Winnipeg"],
       "secondary": [
         "general contractors Winnipeg",
@@ -89,7 +89,7 @@
       "note": "on-page copy says \"price calculator\""
     },
     "/renovation-cost-winnipeg": {
-      "status": "planned",
+      "status": "live",
       "primary": ["home renovation cost Winnipeg"],
       "secondary": [
         "renovation cost Winnipeg",
@@ -107,7 +107,7 @@
         "renovation financing Winnipeg",
         "home renovation cost"
       ],
-      "note": "renovation financing Winnipeg is an explainer only, no financing offer; data-gated on owner input O-3"
+      "note": "renovation financing Winnipeg is an explainer only, no financing offer; prices are the estimator's own starting ranges (published 2026-10-13); owner sign-off pending"
     },
     "/services/kitchen-renovations": {
       "status": "live",
@@ -157,7 +157,7 @@
       "note": "kitchen renovation timeline Winnipeg goes in an FAQ; no cost H2 or cost FAQ on the service page"
     },
     "/services/kitchen-renovations/cost": {
-      "status": "planned",
+      "status": "live",
       "primary": ["kitchen renovation cost Winnipeg"],
       "secondary": [
         "kitchen remodel cost Winnipeg",
@@ -171,7 +171,7 @@
         "kitchen renovation cost",
         "kitchen renovation costs"
       ],
-      "note": "data-gated on owner input O-3"
+      "note": "prices are the estimator's own starting ranges (published 2026-10-13); owner sign-off pending"
     },
     "/services/bathroom-renovations": {
       "status": "live",
@@ -228,7 +228,7 @@
       "note": "bathroom renovation timeline Winnipeg goes in an FAQ; no cost H2 or cost FAQ on the service page"
     },
     "/services/bathroom-renovations/cost": {
-      "status": "planned",
+      "status": "live",
       "primary": ["bathroom renovation cost Winnipeg"],
       "secondary": [
         "bathroom remodel cost Winnipeg",
@@ -241,7 +241,7 @@
         "bathroom renovation cost Canada",
         "bathroom renovation cost"
       ],
-      "note": "data-gated on owner input O-3"
+      "note": "prices are the estimator's own starting ranges (published 2026-10-13); owner sign-off pending"
     },
     "/services/basement-renovations": {
       "status": "live",
@@ -284,7 +284,7 @@
       "note": "moisture remediation is worded \"moisture control before finishing\"; waterproofing is a section (what we check + when to call a specialist), not a service; links to the basement permit guide with no permit H2 of its own"
     },
     "/services/basement-suites": {
-      "status": "planned",
+      "status": "live",
       "primary": ["basement suite renovation Winnipeg"],
       "secondary": [
         "basement apartment development Winnipeg",
@@ -295,7 +295,7 @@
       "note": "no secondary-suite rule numbers until re-verified on winnipeg.ca after the June 2025 zoning changes"
     },
     "/services/basement-renovations/cost": {
-      "status": "planned",
+      "status": "live",
       "primary": ["basement renovation cost Winnipeg"],
       "secondary": [
         "basement finishing cost Winnipeg",
@@ -306,7 +306,7 @@
         "affordable basement renovation Winnipeg",
         "basement renovation cost Canada"
       ],
-      "note": "data-gated on owner input O-3"
+      "note": "prices are the estimator's own starting ranges (published 2026-10-13); owner sign-off pending"
     },
     "/services/whole-home-renovations": {
       "status": "live",
@@ -351,8 +351,7 @@
       "note": "data-gated on owner input O-3"
     },
     "/services/home-additions": {
-      "status": "planned",
-      "currentUrl": "/services/home-extensions",
+      "status": "live",
       "primary": [
         "home addition Winnipeg",
         "home additions Winnipeg"
@@ -369,7 +368,7 @@
         "home addition contractor"
       ],
       "ownerConfirms": ["second storey addition Winnipeg"],
-      "note": "rename with a 308 from /services/home-extensions (plan D6); project slug home-extension and the estimator param stay unchanged"
+      "note": "renamed from /services/home-extensions (308, plan D6); project slug home-extension and the estimator param unchanged"
     },
     "/services/home-additions/cost": {
       "status": "planned",
@@ -422,7 +421,7 @@
       "note": "secondaries map to the #office, #restaurant and #retail sections; data-gated on owner input O-3"
     },
     "/services/office-renovations": {
-      "status": "planned",
+      "status": "live",
       "primary": [
         "office renovation Winnipeg",
         "office renovations Winnipeg"
@@ -445,7 +444,7 @@
       ]
     },
     "/services/restaurant-renovations": {
-      "status": "planned",
+      "status": "live",
       "primary": [
         "restaurant renovation Winnipeg",
         "restaurant renovations Winnipeg"
@@ -473,7 +472,7 @@
       "note": "hotels are a section until the owner confirms hotel work"
     },
     "/services/retail-renovations": {
-      "status": "planned",
+      "status": "live",
       "primary": [
         "retail renovation Winnipeg",
         "retail renovations Winnipeg"
@@ -489,7 +488,7 @@
       ]
     },
     "/services/medical-dental-office-renovations": {
-      "status": "planned",
+      "status": "live",
       "primary": [
         "dental office renovation Winnipeg",
         "medical office renovation Winnipeg"
@@ -506,28 +505,28 @@
       "note": "Canadian accessibility wording (Manitoba Building Code), never \"ADA\""
     },
     "/services/flooring": {
-      "status": "planned",
+      "status": "live",
       "primary": ["flooring installation Winnipeg"],
       "secondary": ["commercial flooring renovation Winnipeg"],
       "supporting": [],
       "note": "primary is a plan addition (validate volume)"
     },
     "/blog/winnipeg-renovation-permits": {
-      "status": "planned",
+      "status": "live",
       "primary": ["renovation permit Winnipeg"],
       "secondary": [],
       "supporting": [],
       "note": "primary is a plan addition (validate volume)"
     },
     "/blog/basement-development-permits-winnipeg": {
-      "status": "planned",
+      "status": "live",
       "primary": ["basement permit Winnipeg"],
       "secondary": [],
       "supporting": [],
       "note": "the basement service page links here and does not duplicate a permit H2"
     },
     "/blog/basement-flood-protection-winnipeg": {
-      "status": "planned",
+      "status": "live",
       "primary": ["basement flooding Winnipeg"],
       "secondary": [],
       "supporting": [],
@@ -572,25 +571,24 @@
       "note": "post #14 (keeper; #15 redirects here)"
     },
     "/blog/manitoba-renovation-tax-credits-rebates": {
-      "status": "planned",
-      "currentUrl": "/blog/tax-incentives-for-commercial-renovations-what-you-should-know",
+      "status": "live",
       "primary": [
         "home renovation grants Manitoba",
         "renovation tax credits Manitoba"
       ],
       "secondary": [],
       "supporting": [],
-      "note": "post #7 rewrite: draft + 307 to #11 until published, then 308 to this slug; CPA-reviewed; closed programs shown as closed; primaries are plan additions (validate)"
+      "note": "replaces post #7 (published 2026-10-13; /blog/tax-incentives-for-commercial-renovations-what-you-should-know now 308s here); accountant review pending (reviewedBy empty); closed programs shown as closed; primaries are plan additions (validate)"
     },
     "/blog/home-renovation-planning-guide-canada": {
-      "status": "planned",
+      "status": "live",
       "primary": ["home renovation planning Canada"],
       "secondary": [
         "home renovation guide Canada",
         "home renovation checklist Canada"
       ],
       "supporting": ["home renovation budget Canada"],
-      "note": "Canada planning guide + checklist (calendar Jul 2027); slug proposed, not fixed in plan D6"
+      "note": "Canada planning guide + checklist (published 2026-10-13)"
     },
     "/blog/home-renovation-cost-canada": {
       "status": "planned",
@@ -600,11 +598,186 @@
       "note": "Canada cost guide (calendar Aug 2027), only with credible national sources; slug proposed, not fixed in plan D6"
     },
     "/blog/home-renovation-financing-canada": {
-      "status": "planned",
+      "status": "live",
       "primary": ["home renovation financing Canada"],
       "secondary": [],
       "supporting": [],
-      "note": "Canada financing guide (calendar Sep 2027): HELOC, refinance, CMHC suite refinance, what is closed; no financing offer; slug proposed, not fixed in plan D6"
+      "note": "Canada financing guide (published 2026-10-13): HELOC, refinance, CMHC suite refinance, what is closed; no financing offer"
+    },
+    "/services/windows-and-doors": {
+      "status": "live",
+      "primary": ["window and door installation Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "service page (launched 2026-10-13); primary is a plan addition (validate volume)"
+    },
+    "/services/exterior-painting": {
+      "status": "live",
+      "primary": ["exterior painting Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "service page (launched 2026-10-13); primary is a plan addition (validate volume)"
+    },
+    "/services/masonry-stucco": {
+      "status": "live",
+      "primary": ["masonry and stucco Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "service page (launched 2026-10-13); primary is a plan addition (validate volume)"
+    },
+    "/services/demolition": {
+      "status": "live",
+      "primary": ["interior demolition Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "service page (launched 2026-10-13), interior demolition only; primary is a plan addition (validate volume)"
+    },
+    "/blog/secondary-suite-rules-winnipeg": {
+      "status": "live",
+      "primary": ["secondary suite rules Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; parking figure from the City page may predate the 2025 zoning changes; writer pick (validate volume)"
+    },
+    "/blog/spring-flood-prep-winnipeg-basements": {
+      "status": "live",
+      "primary": ["spring flood prep Winnipeg basements"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/clay-soil-basement-cracks-winnipeg": {
+      "status": "live",
+      "primary": ["clay soil basement cracks Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/radon-testing-before-finishing-a-basement": {
+      "status": "live",
+      "primary": ["radon testing before finishing a basement"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/planning-a-winter-basement-development-winnipeg": {
+      "status": "live",
+      "primary": ["winter basement development Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/insulation-rebates-during-a-renovation-manitoba": {
+      "status": "live",
+      "primary": ["insulation rebate Manitoba"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/renovating-a-character-home-in-winnipeg": {
+      "status": "live",
+      "primary": ["heritage district renovation Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; character home renovation Winnipeg stays a supporting term on the whole-home page; writer pick (validate volume)"
+    },
+    "/blog/ensuite-renovation-winnipeg": {
+      "status": "live",
+      "primary": ["how much should an ensuite renovation cost"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13 (no prices: links the bathroom cost guide); ensuite renovation Winnipeg stays supporting on the bathroom page; writer pick (validate volume)"
+    },
+    "/blog/window-and-door-replacement-winnipeg": {
+      "status": "live",
+      "primary": ["window and door replacement Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/home-additions-and-zoning-winnipeg": {
+      "status": "live",
+      "primary": ["home addition zoning Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/exterior-painting-winnipeg-when-to-paint": {
+      "status": "live",
+      "primary": ["when to paint house exterior Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/clinic-renovation-permits-winnipeg": {
+      "status": "live",
+      "primary": ["clinic renovation permits Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/restaurant-renovation-permits-winnipeg": {
+      "status": "live",
+      "primary": ["restaurant renovation permits Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/office-fit-up-lease-planning-winnipeg": {
+      "status": "live",
+      "primary": ["office fit-up Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; office fit out Winnipeg stays secondary on the office page; writer pick (validate volume)"
+    },
+    "/blog/what-does-a-general-contractor-do": {
+      "status": "live",
+      "primary": ["what does a general contractor do"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13, replaces post #25 (mastering-general-contracting-tips-for-your-next-project now 308s here); writer pick (validate volume)"
+    },
+    "/blog/how-to-check-a-contractors-wcb-clearance-manitoba": {
+      "status": "live",
+      "primary": ["WCB clearance Manitoba"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/winnipeg-renovation-show-questions-to-ask": {
+      "status": "live",
+      "primary": ["Winnipeg Renovation Show"],
+      "secondary": [],
+      "supporting": [],
+      "note": "new post 2026-10-13 (show dates January 15-17, 2027 — refresh after the show); writer pick (validate volume)"
+    },
+    "/blog/how-to-balance-functionality-and-aesthetics-in-a-commercial-space": {
+      "status": "live",
+      "primary": ["commercial interior design"],
+      "secondary": [],
+      "supporting": [],
+      "note": "post #4, rewritten in place 2026-10-13 (#1-3 redirect here); writer pick (validate volume)"
+    },
+    "/blog/understanding-roi-which-commercial-renovations-bring-the-most-value": {
+      "status": "live",
+      "primary": ["commercial renovation ROI"],
+      "secondary": [],
+      "supporting": [],
+      "note": "post #10, rewritten in place 2026-10-13; writer pick (validate volume)"
+    },
+    "/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank": {
+      "status": "live",
+      "primary": ["commercial renovation financing Manitoba"],
+      "secondary": [],
+      "supporting": [],
+      "note": "post #11, rewritten in place 2026-10-13 (#8 redirects here); no financing offer; writer pick (validate volume)"
+    },
+    "/blog/the-biggest-cost-factors-in-commercial-renovation-projects": {
+      "status": "live",
+      "primary": ["commercial renovation cost factors"],
+      "secondary": [],
+      "supporting": [],
+      "note": "post #13, rewritten in place 2026-10-13 (#6 and #9 redirect here); writer pick (validate volume)"
     }
   },
   "gbpOnly": [
@@ -624,7 +797,7 @@
     { "keyword": "commercial renovation contractors near me", "fallback": "/services/commercial-renovations" },
     { "keyword": "office renovation near me", "fallback": "/services/office-renovations", "interimFallback": "/services/commercial-renovations" },
     { "keyword": "retail renovation contractor near me", "fallback": "/services/retail-renovations", "interimFallback": "/services/commercial-renovations" },
-    { "keyword": "home addition contractor near me", "fallback": "/services/home-additions", "interimFallback": "/services/home-extensions" }
+    { "keyword": "home addition contractor near me", "fallback": "/services/home-additions" }
   ],
   "notTargeted": [
     { "keyword": "best kitchen renovation Winnipeg", "reason": "Superlative; earned through reviews and the GBP, never claimed on-site." },

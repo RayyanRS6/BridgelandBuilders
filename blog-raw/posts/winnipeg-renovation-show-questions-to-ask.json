@@ -1,0 +1,144 @@
+{
+  "slug": "winnipeg-renovation-show-questions-to-ask",
+  "status": "published",
+  "title": "Winnipeg Renovation Show: Questions to Ask Contractors",
+  "metaTitle": "Winnipeg Renovation Show: Questions to Ask Contractors",
+  "metaDescription": "Going to the Winnipeg Renovation Show on January 15–17, 2027? What to bring, the questions to ask at each contractor's booth, and what to do afterwards.",
+  "excerpt": "How to use the 2027 Winnipeg Renovation Show to build a contractor shortlist: what to bring, what to ask at each booth, and how to compare the answers once you're home.",
+  "date": "2026-10-13",
+  "cats": [
+    "Hiring a Contractor"
+  ],
+  "services": [
+    "/services/kitchen-renovations",
+    "/services/bathroom-renovations",
+    "/services/basement-renovations"
+  ],
+  "cluster": "hiring-a-contractor",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "The 2027 Winnipeg Renovation Show runs January 15 to 17 at the RBC Convention Centre. Bring photos, rough measurements and a budget range, ask every contractor the same questions about scope, permits, WCB coverage, insurance, schedule, payments and warranty, and don't sign anything until you have written quotes to compare.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    { "label": "Winnipeg Renovation Show: Frequently asked questions (dates, venue, organizer)", "url": "https://www.winnipegrenovationshow.com/attendee-info/faqs", "accessed": "2026-10-13" },
+    { "label": "Manitoba Consumer Protection Office: Direct sales", "url": "https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html", "accessed": "2026-10-13" },
+    { "label": "City of Winnipeg: Home improvement projects (permits)", "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects", "accessed": "2026-10-13" },
+    { "label": "City of Winnipeg: List of licensed contractors", "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors", "accessed": "2026-10-13" },
+    { "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)", "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/", "accessed": "2026-10-13" },
+    { "label": "The Builders' Liens Act, C.C.S.M. c. B91 (s. 24, holdback)", "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php", "accessed": "2026-10-13" }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Are contractors at the Winnipeg Renovation Show vetted?",
+      "a": "Don't assume so. A booth tells you a company is exhibiting, not that its WCB account, insurance or licences have been checked on your behalf. Run the same checks on show exhibitors as on anyone else: a WCB clearance, an insurance certificate, the business registration, references, and a written quote after a site visit."
+    },
+    {
+      "q": "Is the show worth it if I'm not ready to renovate yet?",
+      "a": "Yes, if you treat it as research. You can compare materials and products side by side, get a feel for how different contractors communicate, and learn what drives cost for your type of project. Starting early also leaves time for design decisions, permits and ordering before the date you'd like work to begin."
+    },
+    {
+      "q": "What should I ask about permits at the show?",
+      "a": "Ask who applies for the building permit and any electrical or plumbing permits, and how inspections are booked. The City of Winnipeg says homeowners are responsible for getting permits before a project starts, whoever applies. Outside the city, permits come from your local municipality, so ask whether the contractor has worked with it before."
+    },
+    {
+      "q": "How do I compare quotes from contractors I met at the show?",
+      "a": "Make sure each quote covers the same scope, then compare line items, allowances for finishes, exclusions, schedule and payment terms. A lower total often reflects lower allowances or missing items, such as permits, disposal or electrical upgrades. Ask each contractor to fill any gaps in writing so you're comparing like with like."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "A renovation show packs a season's worth of contractor conversations into an afternoon. That's useful if you arrive with a plan, and overwhelming if you don't. This guide covers the essentials for the Winnipeg show in January, the questions worth asking at every booth, and what to do with the answers once you're home."
+    },
+    {
+      "t": "h2",
+      "x": "When is the 2027 Winnipeg Renovation Show?"
+    },
+    {
+      "t": "p",
+      "x": "The Winnipeg Renovation Show runs January 15 to 17, 2027, at the RBC Convention Centre. It's produced by Marketplace Events and lists more than 150 booths. Hours, ticket prices and any special admission offers are posted on the [organizer's website](https://www.winnipegrenovationshow.com/attendee-info/faqs), so check there before you go, as details can change."
+    },
+    {
+      "t": "h2",
+      "x": "What should you bring to a renovation show?"
+    },
+    {
+      "t": "p",
+      "x": "Bring enough information for a contractor to understand your project in five minutes: photos, rough measurements, a budget range, your must-haves and your timing. The more specific you are, the more specific the answers you get back, and the easier it is to compare contractors later. A short checklist:"
+    },
+    { "t": "li", "x": "**Photos of the space** from each corner, plus anything that worries you, such as cracks, water stains or an old electrical panel." },
+    { "t": "li", "x": "**Rough measurements** of the room, and the ceiling height if it's a basement." },
+    { "t": "li", "x": "**A budget range** you're comfortable sharing, so contractors can tell you whether the scope and the number line up." },
+    { "t": "li", "x": "**Must-haves and nice-to-haves**, written down, so every contractor hears the same project." },
+    { "t": "li", "x": "**Timing**, including any fixed dates such as a new baby, a lease or family coming to stay." },
+    { "t": "li", "x": "**A page per contractor** with the questions below, so the answers are easy to compare later." },
+    {
+      "t": "p",
+      "x": "If you'd like a ballpark before the show, our [instant renovation estimate](/instant-quote) gives you a starting range, and the [Winnipeg renovation cost guide](/renovation-cost-winnipeg) explains what moves the price up or down."
+    },
+    {
+      "t": "h2",
+      "x": "What questions should you ask contractors at the show?"
+    },
+    {
+      "t": "p",
+      "x": "Ask every contractor the same short set of questions, write the answers down, and compare them afterwards. Good answers are specific: names, numbers, documents and examples. The table lists the questions that tell you the most in a five-minute booth conversation, why each one matters, and what a solid answer sounds like."
+    },
+    {
+      "t": "table",
+      "caption": "Questions to ask at each contractor's booth",
+      "head": ["Question", "Why it matters", "A solid answer sounds like"],
+      "rows": [
+        ["How many projects like mine have you done in the last two years?", "Recent, similar experience is the best predictor of how your job will go", "A number, the type of home and the size of those jobs"],
+        ["Will you visit before giving a price?", "Hidden conditions drive cost in older homes and basements", "Yes, with a written quote after the visit"],
+        ["Who applies for permits and books inspections?", "In Winnipeg, homeowners are responsible for having permits before work starts", "We do, and it's written into the contract"],
+        ["Can you send a WCB clearance letter and an insurance certificate?", "Construction is a mandatory industry for WCB coverage in Manitoba", "Yes, before you sign"],
+        ["Who does the electrical and plumbing?", "In Winnipeg, a contractor doing that work must be licensed by the City", "Named licensed trades, or a licence holder on staff"],
+        ["How long would a project like mine take, and when could you start?", "You need a duration and start date you can plan around", "A range in weeks, plus what could stretch it"],
+        ["How do the deposit and progress payments work?", "Payments should follow completed work", "A modest deposit, payments tied to stages, and the Manitoba 7.5% holdback explained"],
+        ["How are changes handled?", "Changes are where budgets drift", "Written change orders, priced before the work"],
+        ["What does your warranty cover, in writing?", "Verbal promises are hard to rely on later", "Written terms and who to contact"],
+        ["Who will be my day-to-day contact?", "Communication gaps cause most renovation frustration", "A named person and how often you'll get updates"]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "Should you sign a show special on the spot?"
+    },
+    {
+      "t": "p",
+      "x": "No. A show price only helps if it covers the same scope another contractor would quote after seeing your home. Ask for the special in writing, with its expiry date, and get a site visit and written quote before you commit. Manitoba's Consumer Protection Office mentions home show displays as one place salespeople may encourage you to sign."
+    },
+    {
+      "t": "p",
+      "x": "Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Whether a contract signed at a show counts as a direct sale depends on the circumstances, so if you do sign, get the cancellation terms in writing and check with the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html) if you're unsure."
+    },
+    {
+      "t": "h2",
+      "x": "What should you do after the show?"
+    },
+    {
+      "t": "p",
+      "x": "Narrow your list to two or three contractors whose answers were specific, book on-site visits, and compare written quotes line by line for the same scope. Then verify before you sign: WCB clearance, insurance certificate, business registration and references. The lowest quote is only a good deal if it includes everything the others do."
+    },
+    { "t": "oli", "x": "Within a week, sort your notes and drop anyone who couldn't answer the permit, WCB or payment questions." },
+    { "t": "oli", "x": "Book site visits with your shortlist, and give each contractor the same written list of must-haves and finishes." },
+    { "t": "oli", "x": "Compare quotes for scope, allowances, exclusions, schedule and payment terms, not just the total." },
+    { "t": "oli", "x": "Verify documents using our [contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) and the steps to [check a contractor's WCB clearance](/blog/how-to-check-a-contractors-wcb-clearance-manitoba)." },
+    { "t": "oli", "x": "Line up financing if you need it; our [renovation financing guide](/blog/home-renovation-financing-canada) explains the main options." },
+    {
+      "t": "p",
+      "x": "January is a sensible time to start if you'd like work done in spring or summer, since design, permits and ordering all take time. Whether it's a [kitchen renovation](/services/kitchen-renovations), a bathroom or a [basement development](/services/basement-renovations), our [home renovation planning guide](/blog/home-renovation-planning-guide-canada) sets out the steps in order."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Can't make the show, or want a second opinion on what you heard there? [Book a free on-site visit](/book-online) and we'll walk the space with you, answer your questions, and follow up with a free written quote."
+    }
+  ]
+}

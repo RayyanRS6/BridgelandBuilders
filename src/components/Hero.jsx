@@ -8,23 +8,26 @@ export default function Hero() {
       <div className="container">
         <div className="hero-card hero-rise">
           <div className="hero-content">
+            {/* The tagline (BUSINESS.slogan) sits in the badge: in the H1 it
+                would push the heading to five or six lines at 320px, so the
+                plan's fallback H1 is used (SEO plan §7). */}
             <div className="badge-soft">
               <StarIcon size={13} />
-              Your Winnipeg Trusted Renovation and Construction Company
+              Bridging Dreams Into Reality
             </div>
             <h1 className="hero-title">
-              BRIDGING DREAMS <span>INTO REALITY</span>
+              WINNIPEG RENOVATION <span>CONTRACTOR</span>
             </h1>
             <p className="hero-subtitle">
-              Bridgeland Builders can boast of excellence in the completion of every single project we undertake. Our expert team of professionals helps turn your ideas on paper to an actual structure. Our skillful work makes sure we leave every client satisfied and happy.
+              Kitchens, bathrooms, basements, whole homes, additions and commercial spaces in Winnipeg and nearby communities. Every project starts with a free on-site visit and a free written quote.
             </p>
             <div className="hero-cta-group">
               {/* Main CTA in Red */}
-              <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red">
+              <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red" data-cta="home-hero-instant-quote">
                 <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={15} />
               </Link>
-              <Link to="/services" className="btn-pill-ghost">
+              <Link to="/services" className="btn-pill-ghost" data-cta="home-hero-services">
                 <span>Our Services</span>
               </Link>
             </div>
@@ -38,7 +41,6 @@ export default function Hero() {
                 width="1000"
                 height="667"
                 fetchpriority="high"
-                decoding="async"
               />
             </div>
             <div className="hero-floating-badge">

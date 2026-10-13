@@ -10,10 +10,17 @@
  *                                   warning (only while a merge is in progress)
  *
  * What it does:
+ *   - resolves `planned` rules (SEO plan C8): planned page live -> permanent
+ *     308 to it; not live yet -> temporary 307 to the fallback `to`; no
+ *     fallback (`to: null`) -> no rule until the planned page is live and the
+ *     source is no longer a live route. "Live" = a route src/data/head.js
+ *     prerenders (SITE_ROUTES: static pages, live services from
+ *     src/data/services.js, live cost guides, published areas / case studies /
+ *     videos / blog posts);
  *   - resolves chains (A -> B -> C becomes A -> C; any temporary hop makes the
  *     whole rule temporary) and rejects loops;
  *   - errors: duplicate or malformed sources, a source that is a live route
- *     (PAGE_SEO / SERVICE_SEO key or published blog post), a wildcard that
+ *     (static page, live service or published blog post), a wildcard that
  *     swallows a live route or a LEAVE_404 URL, an off-site destination;
  *   - warnings: destinations that are not a known route or file, destinations
  *     that are noindex, sources still listed in a stale prerender-routes.json,
@@ -65,11 +72,42 @@ export function samplePath(source) {
 const pathOnly = (to) => to.replace(/[?#].*$/, '');
 
 /**
+ * C8: turns `planned` rules into ordinary rules for the current state of the
+ * site. `isLive(path)` says whether a path is a live page.
+ *   planned live (and, for a rule without fallback, its source not live)
+ *                            -> { to: planned, permanent }
+ *   not live, fallback `to`  -> { to, temporary }
+ *   not live, no fallback    -> dropped
+ * Rules without `planned` pass through unchanged. Each output rule carries
+ * `state`: 'final' | 'interim' (and the original `planned` for reporting).
+ */
+export function applyPlanned(rules, isLive) {
+  const out = [];
+  for (const rule of rules) {
+    if (!rule.planned) {
+      if (typeof rule.to === 'string') out.push(rule);
+      continue;
+    }
+    const plannedLive = isLive(rule.planned);
+    const hasFallback = typeof rule.to === 'string';
+    if (plannedLive && (hasFallback || !isLive(rule.from))) {
+      out.push({ ...rule, to: rule.planned, temporary: false, state: 'final' });
+    } else if (hasFallback) {
+      out.push({ ...rule, temporary: true, state: 'interim' });
+    }
+  }
+  return out;
+}
+
+/**
  * Follows each rule's destination through the other rules until it reaches a
  * URL that is not itself redirected. Returns new rule objects with the final
  * `to`, the effective `temporary` flag and the `chain` that was collapsed.
+ * `planned` rules are resolved first (applyPlanned) against `isLive`, which
+ * defaults to the site's live routes as built from src/data.
  */
-export function resolveRedirects(rules) {
+export function resolveRedirects(inputRules, isLive = DEFAULT_IS_LIVE) {
+  const rules = applyPlanned(inputRules, isLive);
   const explicit = new Map();
   const wildcards = [];
   for (const rule of rules) {
@@ -199,13 +237,16 @@ export function writeRedirectsInto(text, vercelRules) {
 
 /* ----------------------------------------------------------- validation */
 
+/**
+ * The site's live routes, from the same inventory the prerender and sitemap
+ * use (src/data/head.js SITE_ROUTES), split into pages and blog posts.
+ */
 export async function loadKnownRoutes() {
+  const head = await import('../src/data/head.js');
   const seo = await import('../src/data/seo.js');
   const blog = await import('../src/data/blogPosts.js');
-  const pageRoutes = new Set(['/', ...Object.keys(seo.PAGE_SEO || {}), ...Object.keys(seo.SERVICE_SEO || {})]);
-  const postRoutes = new Set(
-    blog.BLOG_POSTS.filter((p) => (p.status || 'published') === 'published').map((p) => `/blog/${p.slug}`)
-  );
+  const pageRoutes = new Set(['/', ...head.SITE_ROUTES.filter((r) => r.kind !== 'post').map((r) => r.path)]);
+  const postRoutes = new Set(head.SITE_ROUTES.filter((r) => r.kind === 'post').map((r) => r.path));
   const prerendered = existsSync(PRERENDER_ROUTES)
     ? new Set(JSON.parse(readFileSync(PRERENDER_ROUTES, 'utf8')))
     : new Set();
@@ -215,37 +256,58 @@ export async function loadKnownRoutes() {
     to: b.to || b.redirectTo || null,
     temporary: b.temporary === true || b.permanent === false,
   }));
-  return { pageRoutes, postRoutes, prerendered, retiredPosts, noindex: new Set(seo.NOINDEX_ROUTES || []) };
+  const noindex = new Set([
+    ...(seo.NOINDEX_ROUTES || []),
+    ...head.SITE_ROUTES.filter((r) => r.noindex).map((r) => r.path),
+  ]);
+  const live = new Set([...pageRoutes, ...postRoutes]);
+  return { pageRoutes, postRoutes, prerendered, retiredPosts, noindex, live, isLive: (path) => live.has(path) };
 }
 
-function validate(rules, resolved, known, leave404, { allowLivePosts }) {
+// Live routes as built from src/data, for resolveRedirects()'s default (so
+// check-redirects.mjs resolves planned rules the same way the sync does).
+const DEFAULT_KNOWN = await loadKnownRoutes();
+const DEFAULT_IS_LIVE = DEFAULT_KNOWN.isLive;
+
+export function validate(rules, effective, resolved, known, leave404, { allowLivePosts }) {
   const errors = [];
   const warnings = [];
-  const live = new Set([...known.pageRoutes, ...known.postRoutes]);
+  const { live } = known;
 
+  // Every rule as written (planned or not).
   const seen = new Map();
   rules.forEach((rule, i) => {
     const where = `#${i + 1} ${rule.from}`;
-    if (typeof rule.from !== 'string' || typeof rule.to !== 'string') {
-      errors.push(`${where}: "from" and "to" must be strings`);
+    const toOk = typeof rule.to === 'string' || (rule.to === null && typeof rule.planned === 'string');
+    if (typeof rule.from !== 'string' || !toOk) {
+      errors.push(`${where}: "from" must be a string, "to" a string (or null with "planned")`);
       return;
     }
     if (isPattern(rule.from) ? !WILDCARD_RE.test(rule.from) : !LITERAL_RE.test(rule.from)) {
       errors.push(`${where}: source must be a lowercase path without trailing slash, query or hash (wildcards: "/prefix/:path*")`);
     }
-    if (!/^\/(?!\/)/.test(rule.to) || /\s/.test(rule.to)) {
-      errors.push(`${where}: destination "${rule.to}" must be a path on this site`);
+    for (const [field, dest] of [['to', rule.to], ['planned', rule.planned]]) {
+      if (typeof dest === 'string' && (!/^\/(?!\/)/.test(dest) || /\s/.test(dest))) {
+        errors.push(`${where}: ${field} "${dest}" must be a path on this site`);
+      }
+    }
+    if (rule.planned !== undefined && (typeof rule.planned !== 'string' || isPattern(rule.from))) {
+      errors.push(`${where}: "planned" must be a path, on an explicit (non-wildcard) rule`);
     }
     if (!EVIDENCE.has(rule.evidence)) errors.push(`${where}: evidence must be W, S or A`);
     if (seen.has(rule.from)) errors.push(`${where}: duplicate source (also #${seen.get(rule.from) + 1})`);
     else seen.set(rule.from, i);
+  });
 
+  // The rules that are written to vercel.json for the site as it is now.
+  effective.forEach((rule) => {
+    const where = rule.from;
     if (isPattern(rule.from)) {
       const re = sourceToRegExp(rule.from);
       const hit = [...live].find((route) => re.test(route));
       if (hit) errors.push(`${where}: wildcard matches live route ${hit}`);
     } else if (known.pageRoutes.has(rule.from)) {
-      errors.push(`${where}: source is a live page (PAGE_SEO/SERVICE_SEO)`);
+      errors.push(`${where}: source is a live page`);
     } else if (known.postRoutes.has(rule.from)) {
       const msg = `${where}: source is a published blog post — unpublish it (status in blog-raw) before redirecting`;
       (allowLivePosts ? warnings : errors).push(msg);
@@ -253,16 +315,16 @@ function validate(rules, resolved, known, leave404, { allowLivePosts }) {
       warnings.push(`${where}: still listed in prerender-routes.json (stale file? run npm run seo)`);
     }
 
-    if (rule.temporary && rule.since) {
+    if (rule.state === 'interim' && rule.since) {
       const days = (Date.now() - Date.parse(rule.since)) / 86400000;
       if (days > STALE_INTERIM_DAYS) {
-        warnings.push(`${where}: interim 307 is ${Math.floor(days)} days old — launch ${rule.planned || 'the page'} and flip to 308`);
+        warnings.push(`${where}: interim 307 is ${Math.floor(days)} days old — launch ${rule.planned} and it becomes a 308`);
       }
     }
   });
 
   for (const post of known.retiredPosts) {
-    const rule = rules.find((r) => r.from === post.from);
+    const rule = effective.find((r) => r.from === post.from);
     if (!rule) {
       errors.push(`retired post ${post.from}: no rule in src/data/redirects.js (blog data says -> ${post.to || '?'})`);
     } else if ((post.to && rule.to !== post.to) || Boolean(rule.temporary) !== post.temporary) {
@@ -270,6 +332,8 @@ function validate(rules, resolved, known, leave404, { allowLivePosts }) {
     }
   }
 
+  // Checked against every rule as written, so a planned rule can never start
+  // swallowing a URL that must stay 404 when its page launches.
   for (const path of leave404) {
     const target = samplePath(path);
     const hit = rules.find((r) => sourceToRegExp(r.from).test(target));
@@ -299,9 +363,10 @@ async function main() {
   const allowLivePosts = args.has('--allow-live-posts');
 
   const { REDIRECTS, LEAVE_404 = [] } = await import('../src/data/redirects.js');
-  const resolved = resolveRedirects(REDIRECTS);
-  const known = await loadKnownRoutes();
-  const { errors, warnings } = validate(REDIRECTS, resolved, known, LEAVE_404, { allowLivePosts });
+  const known = DEFAULT_KNOWN;
+  const effective = applyPlanned(REDIRECTS, known.isLive);
+  const resolved = resolveRedirects(REDIRECTS, known.isLive);
+  const { errors, warnings } = validate(REDIRECTS, effective, resolved, known, LEAVE_404, { allowLivePosts });
 
   for (const w of warnings) console.warn(`[redirects] warning: ${w}`);
   if (errors.length) {
@@ -317,7 +382,10 @@ async function main() {
   const permanent = vercelRules.filter((r) => r.permanent).length;
   const wildcard = vercelRules.filter((r) => isPattern(r.source)).length;
   const chained = resolved.filter((r) => r.chain.length).length;
-  const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard; ${chained} chain(s) collapsed)`;
+  const plannedFinal = effective.filter((r) => r.state === 'final').length;
+  const plannedInterim = effective.filter((r) => r.state === 'interim').length;
+  const plannedPending = REDIRECTS.filter((r) => r.planned).length - plannedFinal - plannedInterim;
+  const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard; ${chained} chain(s) collapsed; planned: ${plannedFinal} live, ${plannedInterim} interim, ${plannedPending} pending)`;
 
   if (checkOnly) {
     // Compare the redirect rules, not the file's text: Vercel's build rewrites
@@ -341,7 +409,7 @@ async function main() {
       console.error(`[redirects] first difference at redirect #${first + 1}:`);
       console.error(`  committed: ${committed[first] ? key(committed[first]) : '(missing)'}`);
       console.error(`  expected:  ${vercelRules[first] ? key(vercelRules[first]) : '(missing)'}`);
-      console.error(`[redirects] vercel.json is out of date — run npm run redirects. Expected ${summary}.`);
+      console.error(`[redirects] vercel.json is out of date — run npm run redirects (or npm run seo) and commit vercel.json. Expected ${summary}.`);
       process.exit(1);
     }
     console.log(`[redirects] vercel.json is up to date: ${summary}`);

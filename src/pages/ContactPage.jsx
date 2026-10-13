@@ -1,10 +1,35 @@
+import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import BookingAside from '../components/BookingAside.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
+import { ArrowRightIcon } from '../components/icons.jsx';
+import { OFFICE_HOURS_TEXT } from '../data/faqs.js';
+import { SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
+// What happens after someone gets in touch (owner-confirmed steps).
+const NEXT_STEPS = [
+  {
+    num: '01',
+    title: 'We reply within one business day',
+    text: 'We get back to you by phone, text or email, ask a few questions about the project and set up a time to see the space.',
+  },
+  {
+    num: '02',
+    title: 'Free on-site visit',
+    text: 'We come to your home or business, look at the space with you, take measurements and talk through what you want, your budget and your timing.',
+  },
+  {
+    num: '03',
+    title: 'Free written quote',
+    text: 'You get a written quote with the scope, price and schedule, with taxes shown. There is no obligation, and nothing starts until you approve it.',
+  },
+];
+
 // The form and its aside skip `.reveal` so they are visible from the first
-// paint, before the JS bundle has loaded.
+// paint, before the JS bundle has loaded. No street address here: the business
+// is a service-area business (siteConfig.js), so the mailing address appears
+// only on the legal pages.
 export default function ContactPage() {
   usePageSeo('/contact-us');
 
@@ -19,10 +44,74 @@ export default function ContactPage() {
       <section className="lead-section contact-page-form">
         <div className="container">
           <div className="lead-grid">
-            <div><BookingAside serviceName="project" /></div>
+            <div><BookingAside serviceName="project" showHours /></div>
             <div>
               <QuoteBookingForm id="contact-form" title="Request Your Free Quote" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT DETAILS */}
+      <section className="process-section includes-section" id="contact-details">
+        <div className="container">
+          <div className="section-header center">
+            <span className="section-tag">Contact details</span>
+            <h2 className="section-title">How to reach Bridgeland Builders</h2>
+          </div>
+          <div className="includes-grid">
+            <div className="include-card">
+              <div className="include-num">PHONE &amp; EMAIL</div>
+              <h3>Call or email us</h3>
+              <p>
+                Call <a href={SITE_PHONE_TEL}><strong>{SITE_PHONE}</strong></a> or email{' '}
+                <a href={`mailto:${SITE_EMAIL}`} className="wrap-anywhere"><strong>{SITE_EMAIL}</strong></a>. We reply within one business day.
+              </p>
+            </div>
+            <div className="include-card">
+              <div className="include-num">OFFICE HOURS</div>
+              <h3>When we are in the office</h3>
+              <p>
+                {OFFICE_HOURS_TEXT}
+                {OFFICE_HOURS_TEXT.endsWith('.') ? '' : '.'} Commercial renovation work can be scheduled after hours
+                or on weekends.
+              </p>
+            </div>
+            <div className="include-card">
+              <div className="include-num">WE COME TO YOU</div>
+              <h3>Winnipeg and nearby communities</h3>
+              <p>
+                We come to your home or business for the free on-site visit, in Winnipeg and nearby communities
+                within about an hour of the city.
+              </p>
+              <Link className="blog-card-link" to="/service-areas">
+                SEE OUR SERVICE AREA <ArrowRightIcon size={13} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT HAPPENS NEXT */}
+      <section className="process-section includes-section" id="what-happens-next">
+        <div className="container">
+          <div className="section-header center">
+            <span className="section-tag">What happens next</span>
+            <h2 className="section-title">What happens after you contact us?</h2>
+            <p className="section-desc">
+              We reply within one business day and set up a free on-site visit. At the visit we look at the space and
+              talk through what you want. Then you get a free written quote with the scope, price and schedule, and
+              nothing starts until you approve it.
+            </p>
+          </div>
+          <div className="includes-grid">
+            {NEXT_STEPS.map((step) => (
+              <div className="include-card" key={step.num}>
+                <div className="include-num">{step.num}</div>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

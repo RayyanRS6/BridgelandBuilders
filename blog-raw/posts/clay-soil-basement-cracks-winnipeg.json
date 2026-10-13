@@ -1,0 +1,222 @@
+{
+  "slug": "clay-soil-basement-cracks-winnipeg",
+  "status": "published",
+  "title": "Clay Soil and Basement Cracks in Winnipeg: What’s Normal",
+  "metaTitle": "Clay Soil and Basement Cracks in Winnipeg | Bridgeland",
+  "metaDescription": "Why Winnipeg’s clay moves foundations, which basement cracks to watch, when to call a structural engineer, and how to finish a basement on moving soil.",
+  "excerpt": "Winnipeg’s clay swells and shrinks with moisture, and basements show it. How to read the cracks, when an engineer should look, and how to build finishes that allow for movement.",
+  "date": "2026-10-13",
+  "cats": [
+    "Basements & Suites",
+    "Older Homes"
+  ],
+  "services": [
+    "/services/basement-renovations"
+  ],
+  "cluster": "basement-water",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Winnipeg’s clay soil swells when it gets wet and shrinks as it dries, so foundations and basement floors move with the seasons. Fine, dry cracks are common, but a crack that is horizontal, widening, offset or leaking, or a wall that bows, should be assessed by a structural engineer before you finish the basement. Structural foundation repairs need a permit.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "University of Manitoba – House damage costs in Winnipeg due to shifting foundations (J. Kostanski, M.Sc. thesis, 1986)",
+      "url": "https://mspace.lib.umanitoba.ca/items/9eb14b0c-0b8b-4f14-b1a4-7a23a2ba703b/full",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Basement/lower level development: construction information (updated October 2025)",
+      "url": "https://www.winnipeg.ca/media/6349",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Building permit application form: basement/lower level development (updated October 2025)",
+      "url": "https://www.winnipeg.ca/media/6968",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Foundation repairs",
+      "url": "https://legacy.winnipeg.ca/ppd/permits/Residential/FoundationRepair.stm",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Information Bulletin 2025-001: Sump pit installations for housing",
+      "url": "https://www.winnipeg.ca/media/6154",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Information Bulletin 2026-008-B: Vapour barrier & insulation in housing inspections",
+      "url": "https://www.winnipeg.ca/media/6147",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – 5 tips for keeping your basement dry during the spring melt",
+      "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/5-tips-keeping-your-basement-dry-during-spring-melt",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Are basement wall cracks normal in Winnipeg?",
+      "a": "Fine, dry cracks that don’t change are common in Winnipeg basements, because the clay under most homes swells and shrinks with moisture. Mark and date the ends, photograph them with a tape measure and recheck each season. Horizontal, widening, offset or leaking cracks are different, and a structural engineer should assess them."
+    },
+    {
+      "q": "Do I need a permit to repair a cracked foundation in Winnipeg?",
+      "a": "If the repair installs or replaces structural components, such as steel teleposts or wall bracing, the City requires a building permit, and structural foundation repairs must be reviewed and sealed by a structural engineer licensed in Manitoba. If the work adds or replaces weeping tile, the City also requires a sump pit, with its own permits."
+    },
+    {
+      "q": "Why do basement walls need a gap at the top or bottom?",
+      "a": "The City of Winnipeg recommends building non-loadbearing basement partitions as floating walls, with about 25 mm (1 inch) or more of space at the top or bottom. Concrete basement floors can rise when the soil gets wetter, and the gap stops the walls from being pushed up into the floor joists above."
+    },
+    {
+      "q": "Can I finish a basement that has cracks?",
+      "a": "Often, once you know what the cracks are doing. Dry hairline cracks that don’t change can usually be recorded and watched. Anything leaking, widening or horizontal should be assessed, and repaired if needed, before framing, because finishes hide the evidence and make later repairs harder and more expensive."
+    },
+    {
+      "q": "Can Winnipeg’s clay make doors stick?",
+      "a": "Yes. A 1986 University of Manitoba engineering thesis on Winnipeg houses links soil volume changes under shallow footings to cracks, uneven floors and distorted door frames. Doors that bind in one season and free up in another point to movement. Mention them at any assessment, so the engineer or contractor sees the whole picture."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Ask anyone who has owned a Winnipeg house for a few years about sticking doors or a crack in the basement wall, and you’ll hear a story. The cause is usually underfoot. This guide explains what the clay does, how to read the cracks you can see, and how to finish a basement so it tolerates some movement. It’s general guidance, not an engineering assessment of your house."
+    },
+    {
+      "t": "h2",
+      "x": "Why does Winnipeg’s soil move?"
+    },
+    {
+      "t": "p",
+      "x": "Much of Winnipeg is built on clay that changes volume with moisture, swelling when wet and shrinking as it dries. A 1986 University of Manitoba engineering thesis describes most single-family homes here as sitting on shallow spread footings on this expansive clay, and links its volume changes to cracks, uneven floors, distorted door frames and leaking basement walls."
+    },
+    {
+      "t": "p",
+      "x": "Basement floors move too. The City of Winnipeg’s basement development guide notes that concrete basement floors can move upward when the moisture content of the soil increases, which is why it recommends floating partition walls in finished basements."
+    },
+    {
+      "t": "h2",
+      "x": "Which basement cracks are a concern?"
+    },
+    {
+      "t": "p",
+      "x": "Fine, dry cracks that stay the same width are common in Winnipeg basements. Cracks that are horizontal, stepped, wider at one end, offset so one side sits proud of the other, growing over time or letting water in suggest ongoing movement or pressure, and a structural engineer should see them before anything is covered."
+    },
+    {
+      "t": "table",
+      "caption": "Reading basement cracks: what to do next",
+      "head": [
+        "What you see",
+        "What it can mean",
+        "Next step"
+      ],
+      "rows": [
+        [
+          "Fine vertical or diagonal crack, dry, not changing",
+          "Shrinkage or minor settlement",
+          "Mark and date the ends, photograph it with a tape measure, recheck each season"
+        ],
+        [
+          "A crack that lets water in",
+          "A path for groundwater or surface water",
+          "Fix grading and drainage, then have the crack assessed before finishing"
+        ],
+        [
+          "Horizontal crack, or a wall that bows or leans",
+          "Soil pressure on the wall",
+          "Structural engineer before any framing"
+        ],
+        [
+          "Crack that is widening, offset or wider at one end",
+          "Ongoing movement",
+          "Structural engineer; keep recording it"
+        ],
+        [
+          "Floor slab heaving, or partitions pushing up on the joists",
+          "Slab moving with soil moisture",
+          "Floating partitions; have it assessed before finishing"
+        ],
+        [
+          "Sticking doors or new drywall cracks upstairs",
+          "Movement of the structure",
+          "Mention it at the assessment and to the engineer"
+        ]
+      ],
+      "note": "General guidance only. A structural engineer licensed in Manitoba should assess any crack you’re unsure about."
+    },
+    {
+      "t": "p",
+      "x": "To monitor a crack, draw a short pencil line across each end with the date, measure its width at two or three marked points, and photograph it with a tape measure in the frame. Recheck in spring and fall. A crack that changes between seasons is exactly the kind of information an engineer will ask for."
+    },
+    {
+      "t": "h2",
+      "x": "When do you need a structural engineer?"
+    },
+    {
+      "t": "p",
+      "x": "Whenever the foundation itself needs repair. The City of Winnipeg requires a building permit when structural components are installed or replaced to repair or stabilize a deteriorating foundation, such as replacing wood columns with steel teleposts or bracing walls, and says all structural foundation repairs must be reviewed and sealed by a structural engineer licensed in Manitoba."
+    },
+    {
+      "t": "p",
+      "x": "The City’s basement permit form says the same thing another way: removing or altering teleposts or beams, making openings, or making structural repairs to foundation walls requires engineered structural drawings. If you plan to develop a basement against a wall that has moved, the engineer’s assessment, and any repair, comes first."
+    },
+    {
+      "t": "p",
+      "x": "Foundation repair and waterproofing are specialist trades. If we see signs of movement or water at the on-site visit, we’ll point them out so they can be assessed before money goes into finishes."
+    },
+    {
+      "t": "h2",
+      "x": "How do you finish a basement on moving soil?"
+    },
+    {
+      "t": "p",
+      "x": "Build so the finishes can move a little. The City recommends non-loadbearing partitions built as floating walls, leaving about 25 mm (1 inch) or more at the top or bottom, so a rising slab doesn’t push the walls into the floor joists above. Keep water away from the foundation, and don’t cover cracks you haven’t diagnosed."
+    },
+    {
+      "t": "li",
+      "x": "Use floating partitions for non-loadbearing walls, as the City recommends."
+    },
+    {
+      "t": "li",
+      "x": "Watch known cracks for at least a season before you cover them, and keep dated photos for your records."
+    },
+    {
+      "t": "li",
+      "x": "Fix grading, downspouts and window wells so water moves away from the walls. The City advises watching where meltwater goes around paths, patios, decks and driveways so it drains away from the house."
+    },
+    {
+      "t": "li",
+      "x": "Keep batt insulation off the concrete. The City’s inspection bulletin says batts can’t touch the foundation, so a moisture barrier or air space is needed."
+    },
+    {
+      "t": "li",
+      "x": "Leave access where you’ll need it later, such as at the sump pit and the backwater valve."
+    },
+    {
+      "t": "p",
+      "x": "Our [basement development permits guide](/blog/basement-development-permits-winnipeg) covers the rest of the City’s requirements, and the [basement flood protection guide](/blog/basement-flood-protection-winnipeg) explains sump pits and backwater valves."
+    },
+    {
+      "t": "h2",
+      "x": "Can you keep the soil around the house more stable?"
+    },
+    {
+      "t": "p",
+      "x": "You can reduce the swings. The City’s advice for keeping basements dry, which is to slope the ground away from the house, keep eavestroughs and downspouts directing water away, and watch where water runs around paths, patios, decks and driveways, also limits how wet the clay beside the foundation gets in spring and after heavy rain."
+    },
+    {
+      "t": "p",
+      "x": "Weeping tile work is the other piece. The City’s January 2025 bulletin says adding, replacing or extending a perimeter weeping tile system requires a sump pit, a building permit, and plumbing and electrical permits for the backwater valve and the pump’s receptacle."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "If you’re thinking about finishing a basement with a few cracks in it, start with a look at the walls. Our [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote. [Book your visit](/book-online), or see [basement renovation costs in Winnipeg](/services/basement-renovations/cost) first."
+    }
+  ]
+}

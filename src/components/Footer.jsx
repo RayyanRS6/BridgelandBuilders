@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { liveServicesIn } from '../data/services.js';
 import { SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL, SOCIAL_PROFILES } from '../data/siteConfig.js';
 import { MailIcon, PhoneIcon, PinIcon } from './icons.jsx';
 
@@ -13,6 +14,11 @@ const SOCIAL_LINKS = [
   { key: 'linkedin', network: 'LinkedIn', glyph: 'li' },
 ];
 
+// Service links come from the page registry (src/data/services.js): only live
+// pages are listed, so a page appears here the day its status flips to 'live'.
+const serviceLinks = (category) =>
+  liveServicesIn(category).map((service) => ({ label: service.navLabel.toUpperCase(), to: service.path }));
+
 const FOOTER_COLUMNS = [
   {
     title: 'COMPANY',
@@ -21,27 +27,26 @@ const FOOTER_COLUMNS = [
       { label: 'OUR SERVICES', to: '/services' },
       { label: 'OUR PROCESS', to: '/our-process' },
       { label: 'OUR PROJECTS', to: '/projects' },
+      { label: 'RENOVATION COSTS', to: '/renovation-cost-winnipeg' },
       { label: 'FAQs', to: '/faqs' },
       { label: 'BLOGS & ARTICLES', to: '/blog' },
+      { label: 'SERVICE AREAS', to: '/service-areas' },
       { label: 'BOOK ONLINE', to: '/book-online' },
       { label: 'CONTACT US', to: '/contact-us' },
     ],
   },
   {
     title: 'RESIDENTIAL',
-    links: [
-      { label: 'BASEMENT RENOVATIONS', to: '/services/basement-renovations' },
-      { label: 'BATHROOM RENOVATIONS', to: '/services/bathroom-renovations' },
-      { label: 'HOME EXTENSIONS', to: '/services/home-extensions' },
-      { label: 'KITCHEN RENOVATIONS', to: '/services/kitchen-renovations' },
-      { label: 'WHOLE HOME RENOVATIONS', to: '/services/whole-home-renovations' },
-    ],
+    links: serviceLinks('residential'),
   },
   {
+    // Commercial hub first, then the live vertical pages and general
+    // contracting (plan §10).
     title: 'COMMERCIAL',
     links: [
-      { label: 'COMMERCIAL RENOVATIONS', to: '/services/commercial-renovations' },
-      { label: 'REQUEST A SITE VISIT', to: '/contact-us' },
+      ...serviceLinks('commercial'),
+      // /book-online is the page that books the free on-site visit (plan D8).
+      { label: 'REQUEST A SITE VISIT', to: '/book-online' },
     ],
   },
 ];
@@ -96,7 +101,8 @@ export default function Footer() {
           <p>
             © 2026 Bridgeland Builders. Winnipeg, Manitoba. All rights reserved. ·{' '}
             <Link to="/privacy-policy">Privacy Policy</Link> ·{' '}
-            <Link to="/terms-of-service">Terms of Service</Link>
+            <Link to="/terms-of-service">Terms of Service</Link> ·{' '}
+            <Link to="/editorial-policy">Editorial Policy</Link>
           </p>
           <div className="footer-social-links">
             {SOCIAL_LINKS.map(({ key, network, glyph }) => {

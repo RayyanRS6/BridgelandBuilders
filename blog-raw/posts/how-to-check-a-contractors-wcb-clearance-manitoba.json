@@ -1,0 +1,152 @@
+{
+  "slug": "how-to-check-a-contractors-wcb-clearance-manitoba",
+  "status": "published",
+  "title": "How to Check a Contractor's WCB Clearance in Manitoba",
+  "metaTitle": "How to Check a Contractor's WCB Clearance in Manitoba",
+  "metaDescription": "Step by step: how Manitoba homeowners request a contractor's WCB clearance letter online, what it proves, and what to do if the contractor isn't listed.",
+  "excerpt": "A WCB clearance letter takes a few minutes to get and tells you whether a contractor is in good standing with the Workers Compensation Board of Manitoba. Here's how to request one.",
+  "date": "2026-10-13",
+  "cats": [
+    "Hiring a Contractor"
+  ],
+  "services": [
+    "/services/whole-home-renovations",
+    "/services/commercial-renovations"
+  ],
+  "cluster": "hiring-a-contractor",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Go to WCB Manitoba's website, open the Clearances page and choose the public Clearance Request System. Search by the contractor's business name or seven-digit WCB account number, tick the business, add it to your list, then click Request Letter and Submit. Print or save the letter. You don't need an account or registration.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    { "label": "WCB Manitoba: Clearances", "url": "https://www.wcb.mb.ca/employers/clearances/", "accessed": "2026-10-13" },
+    { "label": "WCB Manitoba: A Guide for Using WCB's Online Clearance Request System", "url": "https://www.wcb.mb.ca/uploads/2025/09/0504.pdf", "accessed": "2026-10-13" },
+    { "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)", "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/", "accessed": "2026-10-13" },
+    { "label": "WCB Manitoba: Building construction classification", "url": "https://www.wcb.mb.ca/classifications/building-construction/", "accessed": "2026-10-13" },
+    { "label": "Manitoba Companies Office", "url": "https://companiesoffice.gov.mb.ca/", "accessed": "2026-10-13" },
+    { "label": "City of Winnipeg: List of licensed contractors", "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors", "accessed": "2026-10-13" }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Do I need to register to get a WCB clearance letter?",
+      "a": "No. Anyone can use the search and print functions of WCB Manitoba's online Clearance Request System. Registration is for businesses that want to save lists of subcontractors and get email updates when a firm's status changes. It's arranged by phoning the WCB Technical Support Team at 204-954-4573 in Winnipeg, or 1-855-954-4321, extension 4573."
+    },
+    {
+      "q": "How often should I check a contractor's WCB clearance?",
+      "a": "Check before you sign and again before the final payment, and on a longer job before large progress payments too. WCB advises businesses that hire contractors to get clearance information before work begins and before any payment is made, because a firm's standing can change, for example if it stops complying with a WCB payroll order."
+    },
+    {
+      "q": "What does it mean if a contractor isn't in good standing?",
+      "a": "It means the business hasn't met WCB Manitoba's requirements, for example by not complying with a payroll order, and it can't get a clearance until the issue is resolved. Ask the contractor to sort it out and send you a new letter before any work starts. If they can't, treat it as a reason to choose someone else."
+    },
+    {
+      "q": "Does WCB coverage replace liability insurance?",
+      "a": "No. WCB coverage is for the contractor's workers if they're injured on the job. Liability insurance is what responds if the contractor damages your home or injures someone else. Ask for both, a WCB clearance letter and a certificate of insurance, then confirm the insurance with the insurer or broker named on the certificate."
+    },
+    {
+      "q": "Do subcontractors need their own WCB clearance?",
+      "a": "Subtrades that run their own businesses with workers need their own WCB coverage, and WCB says general contractors should get clearance information on their subcontractors before work starts and before paying them. Ask your contractor which subtrades will be on your job and whether those clearances have been checked. You can also search the subtrades yourself."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Of all the checks you can run on a contractor, a WCB clearance is one of the quickest. It's a letter from the Workers Compensation Board of Manitoba showing whether a business is in good standing, and anyone can request one online. This guide shows the steps, what the letter does and doesn't prove, and what to do when a contractor doesn't show up in the search."
+    },
+    {
+      "t": "h2",
+      "x": "What is a WCB clearance letter?"
+    },
+    {
+      "t": "p",
+      "x": "A clearance letter tells you whether a business, contractor or subcontractor has complied with WCB Manitoba's requirements and is in good standing. Each letter carries a unique WCB reference number so its authenticity can be checked. It shows status on the day you request it, so ask for a fresh one rather than relying on an old copy."
+    },
+    {
+      "t": "p",
+      "x": "Construction is one of Manitoba's mandatory industries for workers compensation. Businesses in a mandatory industry must cover everyone who works for them, including contract workers, which is why a clearance letter is a standard request when you hire a renovation contractor."
+    },
+    {
+      "t": "h2",
+      "x": "How do you request a WCB clearance in Manitoba?"
+    },
+    {
+      "t": "p",
+      "x": "Use the public side of WCB Manitoba's online Clearance Request System. It's available 24 hours a day and doesn't need an account. WCB notes that creating letters in Microsoft Edge can cause formatting problems and suggests another browser. Have the contractor's exact business name, or their WCB account number, ready before you start:"
+    },
+    { "t": "oli", "x": "Go to the [WCB Manitoba Clearances page](https://www.wcb.mb.ca/employers/clearances/), listed under Employers." },
+    { "t": "oli", "x": "Open the public Clearance Request System (general public access)." },
+    { "t": "oli", "x": "Search by firm name, entering at least the first three characters of the business name, or by firm number, which is the seven-digit WCB account number. Add leading zeros if the number is shorter." },
+    { "t": "oli", "x": "Tick the business in the results and click Add to List. Use View List to check your list or search for more firms." },
+    { "t": "oli", "x": "Select the firms you need letters for, click Request Letter, then Submit." },
+    { "t": "oli", "x": "Print or save the clearance letter. Your list is temporary and is erased when you leave the system." },
+    {
+      "t": "p",
+      "x": "Use the business name from the contractor's quote or contract. If it doesn't match the name on the clearance letter, ask why before you sign. A name search only shows active registered accounts, so a missing result is worth a follow-up question."
+    },
+    {
+      "t": "h2",
+      "x": "When should you check a contractor's WCB clearance?"
+    },
+    {
+      "t": "p",
+      "x": "Check before you sign the contract and again before the final payment. WCB advises businesses that hire contractors to get clearance information before work starts and before any payment is made. On a longer project, such as a basement development or whole-home renovation, ask for a fresh letter before each large progress payment as well."
+    },
+    {
+      "t": "h2",
+      "x": "What if the contractor isn't in the WCB system?"
+    },
+    {
+      "t": "p",
+      "x": "It may mean the business isn't registered, or isn't required to register, such as a self-employed contractor with no workers. Don't guess. WCB says to verify whether the contractor is required to register and, if so, that they're in good standing. Call WCB Assessment Services at 204-954-4505, or toll free at 1-855-954-4321."
+    },
+    {
+      "t": "p",
+      "x": "A business owner with no workers isn't required to have WCB coverage, though they can choose to buy personal coverage. If that's the situation, ask how any helpers or subtrades on your job are covered, and ask to see clearance letters for those subtrades too."
+    },
+    {
+      "t": "h2",
+      "x": "Why does WCB coverage matter to a homeowner?"
+    },
+    {
+      "t": "p",
+      "x": "It means the people working in your home are covered through their employer's WCB account if they're hurt on the job. WCB Manitoba's classification rules say homeowners renovating their own home who hire professional work through subcontracting aren't eligible to buy WCB coverage, so the contractor's account being in good standing is what matters."
+    },
+    {
+      "t": "p",
+      "x": "For businesses, WCB is direct about the risk: if you hire a contractor who isn't in good standing, you may be responsible for including the labour portion of their earnings in your own assessable payroll, and could be liable for their assessment costs. If you're renovating an office, shop or restaurant, that applies to you. See our [commercial renovation services](/services/commercial-renovations) for how we plan fit-ups. Homeowners with questions about their own situation should ask WCB directly and check what their home insurance covers."
+    },
+    {
+      "t": "h2",
+      "x": "What does a WCB clearance prove, and what doesn't it?"
+    },
+    {
+      "t": "p",
+      "x": "A clearance proves one thing: the business is registered with WCB Manitoba and in good standing on the date of the letter. It says nothing about liability insurance, trade licences, permits or the quality of the work. Run it alongside three other checks, each of which answers a different question, as the table shows."
+    },
+    {
+      "t": "table",
+      "caption": "WCB clearance compared with other contractor checks",
+      "head": ["Check", "What it proves", "What it doesn't prove"],
+      "rows": [
+        ["WCB clearance letter", "The business is registered with WCB Manitoba and in good standing on the date of the letter", "Liability insurance, trade licences or quality of work"],
+        ["Certificate of liability insurance", "The contractor holds a liability policy, with its limits and expiry date", "Workers compensation coverage for their workers"],
+        ["[Manitoba Companies Office](https://companiesoffice.gov.mb.ca/) record", "The business name is registered, with details of who operates it", "Good standing with WCB, or insurance"],
+        ["[City of Winnipeg licensed contractor list](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors)", "A contractor holds a City licence for electrical, plumbing, mechanical or demolition work", "That a permit has been issued for your project"]
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Our full [contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) adds references, contract terms, deposits and warranty, and our guide to [what a general contractor does](/blog/what-does-a-general-contractor-do) explains who is responsible for the subtrades on a multi-trade job. Meeting contractors in person at a home show? Take our [Winnipeg Renovation Show questions](/blog/winnipeg-renovation-show-questions-to-ask) with you."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "When you're ready to compare quotes, [book a free on-site visit](/book-online) and we'll follow up with a free written quote, or get a ballpark first with our [instant renovation estimate](/instant-quote). For whole-house projects, our [whole-home renovation](/services/whole-home-renovations) page explains how the work is staged."
+    }
+  ]
+}

@@ -6,10 +6,12 @@ import {
   OUTSIDE_AREA_MESSAGE,
   QUOTE_QUESTIONS,
   SERVICE_AREA,
-  validateLead,
 } from '../data/quoteForm.js';
 import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { newEventId, track } from '../lib/analytics.js';
+import { getAttribution } from '../lib/attribution.js';
 import { bookSlot, saveLead, trackConversion, utmSource } from '../lib/bookingApi.js';
+import { channelFor } from '../lib/channel.js';
 import { PRESELECT_EVENT } from '../lib/quoteFormEvents.js';
 import { dateIn, formatLongDate, formatTime } from '../lib/zonedDate.js';
 import { ArrowRightIcon, CheckIcon, ChevronLeftIcon, PinIcon } from './icons.jsx';
@@ -26,7 +28,10 @@ const EMPTY = {
   postalCode: '',
   winnipeg: '',
   types: [],
-  company: '',
+  // Honeypot. Named so browser autofill never recognises it (a field called
+  // 'company' can be autofilled with a saved organisation, which would make the
+  // server discard a real lead).
+  bb_hp: '',
 };
 
 const ALERTS = {
@@ -37,6 +42,52 @@ const ALERTS = {
 };
 
 const cx = (...classes) => classes.filter(Boolean).join(' ');
+
+// Validation needs the phone-number library, so it is downloaded on first
+// focus or idle time rather than with the page (src/data/leadValidation.js).
+// The same module validates on the server, which stays the final check.
+let validationModule = null; // promise
+let validation = null; // the loaded module
+function loadValidation() {
+  if (!validationModule) {
+    validationModule = import('../data/leadValidation.js').then(
+      (mod) => {
+        validation = mod;
+        return mod;
+      },
+      (error) => {
+        validationModule = null;
+        throw error;
+      }
+    );
+  }
+  return validationModule;
+}
+
+// How long a submit waits for the validation download before sending the lead
+// anyway. A slow or stalled download must never hold up saving the lead: the
+// server runs the same check and its errors are shown the same way.
+const VALIDATION_WAIT_MS = 1500;
+
+/** The validation module, or null if it isn't available within the wait. */
+function validationWithin(ms) {
+  if (validation) return Promise.resolve(validation);
+  let timer;
+  const timeout = new Promise((resolve) => {
+    timer = window.setTimeout(() => resolve(null), ms);
+  });
+  return Promise.race([loadValidation().catch(() => null), timeout]).finally(() => window.clearTimeout(timer));
+}
+
+/** Shared analytics parameters for this form's events. */
+function leadParams(values, attribution) {
+  return {
+    form_id: 'quote_booking',
+    form_page: typeof window !== 'undefined' ? window.location.pathname : undefined,
+    renovation_types: values.types,
+    lead_channel: channelFor(attribution && (attribution.last || attribution.first)),
+  };
+}
 
 /**
  * The /free-quote lead form: project details first (saved to GoHighLevel right
@@ -65,6 +116,15 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
     if (mounted.current) headingRef.current?.focus();
     mounted.current = true;
   }, [step]);
+
+  // Fetch the validation module while the visitor reads the form.
+  useEffect(() => {
+    const preload = () => loadValidation().catch(() => {});
+    const idle = window.requestIdleCallback
+      ? window.requestIdleCallback(preload, { timeout: 4000 })
+      : window.setTimeout(preload, 2500);
+    return () => (window.cancelIdleCallback ? window.cancelIdleCallback(idle) : window.clearTimeout(idle));
+  }, []);
 
   useEffect(() => {
     const onPreselect = (event) => {
@@ -99,7 +159,8 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
     requestAnimationFrame(() => formRef.current?.querySelector('[aria-invalid="true"], [data-invalid="true"] button')?.focus());
   };
 
-  const fail = (error) => {
+  const fail = (error, stage) => {
+    track('booking_error', { form_id: 'quote_booking', error_code: error.code || 'unknown', form_stage: stage });
     if (error.code === 'invalid' && error.fields) {
       setStep('details');
       showErrors(error.fields);
@@ -111,25 +172,38 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
 
   const submitDetails = async (event) => {
     event.preventDefault();
+    if (busy) return;
     setAlert(null);
-    const { errors: found } = validateLead(values);
-    if (found) return showErrors(found);
-
     setBusy(true);
     try {
+      // Validate in the browser first (the module is normally preloaded). If
+      // it can't be downloaded quickly (slow or flaky connection), the
+      // server's identical check decides and its errors are shown the same way.
+      const validator = await validationWithin(VALIDATION_WAIT_MS);
+      const found = validator && validator.validateLead(values).errors;
+      if (found) {
+        showErrors(found);
+        return;
+      }
+
+      const attribution = getAttribution();
+      const eventId = newEventId();
       // Everyone's details are saved first. Only then does an out-of-area lead
       // learn we can't take the job — nothing on the form hints at it before.
-      const result = await saveLead({ ...values, utmSource: utmSource() });
+      const result = await saveLead({ ...values, utmSource: utmSource(), attribution, eventId });
       if (result.inServiceArea === false) {
+        track('lead_out_of_area', { ...leadParams(values, attribution), in_service_area: false });
         setStep('outside');
       } else {
         // Only in-area leads count as ad conversions, so Meta optimises for
-        // people the crew can actually serve.
-        trackConversion('Lead');
+        // people the crew can actually serve. The event id lets Meta match
+        // this with the server's copy (api/_lib/meta.js) and count it once.
+        trackConversion('Lead', eventId);
+        track('generate_lead', { ...leadParams(values, attribution), in_service_area: true });
         setStep('schedule');
       }
     } catch (error) {
-      fail(error);
+      fail(error, 'details');
     } finally {
       setBusy(false);
     }
@@ -140,12 +214,15 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
     setAlert(null);
     setBusy(true);
     try {
-      const result = await bookSlot({ ...values, utmSource: utmSource(), startTime: slot });
-      trackConversion('Schedule');
+      const attribution = getAttribution();
+      const eventId = newEventId();
+      const result = await bookSlot({ ...values, utmSource: utmSource(), attribution, eventId, startTime: slot });
+      trackConversion('Schedule', eventId);
+      track('book_appointment', leadParams(values, attribution));
       setBooking(result.booking?.startTime ? result.booking : { startTime: slot });
       setStep('done');
     } catch (error) {
-      fail(error);
+      fail(error, 'schedule');
       if (error.code === 'slot_unavailable') {
         setSlot(null);
         setRefreshKey((key) => key + 1);
@@ -195,7 +272,15 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
       )}
 
       {step === 'details' && (
-        <form className="quote-form qf-form" method="post" noValidate onSubmit={submitDetails} ref={formRef}>
+        <form
+          className="quote-form qf-form"
+          method="post"
+          noValidate
+          onSubmit={submitDetails}
+          onFocus={() => loadValidation().catch(() => {})}
+          ref={formRef}
+          data-form-id="quote_booking"
+        >
           <div className="booking-card-head">
             <h2 className="qf-title" ref={headingRef} tabIndex={-1}>{title}</h2>
             <p>Takes about a minute. Next, you’ll pick a time for your free on-site visit.</p>
@@ -290,8 +375,8 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
           {/* Honeypot — hidden from people, filled in by bots. */}
           <div className="qf-hp" aria-hidden="true">
             <label>
-              Company
-              <input type="text" name="company" tabIndex={-1} autoComplete="off" value={values.company} onChange={(event) => setField('company', event.target.value)} />
+              Leave this field empty
+              <input type="text" name="bb_hp" tabIndex={-1} autoComplete="off" value={values.bb_hp} onChange={(event) => setField('bb_hp', event.target.value)} />
             </label>
           </div>
 

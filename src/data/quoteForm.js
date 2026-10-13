@@ -7,28 +7,17 @@
 // form land in the same contact fields as leads from the old survey.
 // If an option is renamed in GoHighLevel, rename it here too.
 //
-// Phone numbers are read against the country picked next to the field (Canada
-// by default) and always sent to GoHighLevel in international E.164 form, e.g.
-// +12045550123, so a number typed in its local format still reaches the right
-// place.
+// Plain data (plus small pure helpers) only: no libraries. Validation, which
+// needs the phone-number library, lives in src/data/leadValidation.js so pages
+// can import this file without downloading it.
 //
 // `tagPrefix`: every answer to that question is also added to the contact as a
 // GoHighLevel tag, e.g. "renovation: kitchen". The prefix keeps each group
 // together and unambiguous in the tag list; set it to '' to tag with the bare
 // answer instead.
-import { parsePhoneNumberFromString } from 'libphonenumber-js';
 
+/** The phone field's default country (validation: src/data/leadValidation.js). */
 export const DEFAULT_PHONE_COUNTRY = 'CA';
-
-/**
- * Reads a phone number typed for `country` (ISO code). A number typed with a
- * leading "+" carries its own country code, which wins over the picker.
- * Returns the parsed number when it is valid, otherwise null.
- */
-export function parsePhone(value, country = DEFAULT_PHONE_COUNTRY) {
-  const parsed = parsePhoneNumberFromString(String(value ?? ''), country);
-  return parsed && parsed.isValid() ? parsed : null;
-}
 
 export const QUOTE_QUESTIONS = [
   {
@@ -89,14 +78,54 @@ export const LEAD_TAG = 'free-quote-page';
 export const FORM_FILLED_TAG = 'website-form-filled';
 export const LEAD_SOURCE = 'Free Quote Page';
 
+// Per-page tags and a channel label (SEO plan §18). OFF until the GoHighLevel
+// admin has audited every workflow that triggers on LEAD_TAG / LEAD_SOURCE and
+// test leads confirm follow-ups still run (plan O-19). While false, tags and
+// source are exactly as above for every page. When true:
+//   - /free-quote keeps LEAD_TAG and LEAD_SOURCE;
+//   - other pages get "form-page:<page>" instead of LEAD_TAG and the source
+//     WEBSITE_FORM_SOURCE;
+//   - every lead also gets "channel:<channel>" and the channel in its source,
+//     e.g. "Website Form (facebook) · paid-social".
+export const TAG_BY_FORM_PAGE = false;
+export const WEBSITE_FORM_SOURCE = 'Website Form';
+const LEAD_TAG_PAGE = '/free-quote';
+
+// GoHighLevel custom-field ids for lead attribution, supplied by the GHL admin
+// (plan O-19). Empty means nothing is written; fill in only the ones that
+// exist, e.g. channel: 'AbC123…'. Values come from the cleaned attribution
+// (api/_lib/http.js cleanAttribution):
+//   channel, formPage, landingPage, referrer, firstSource, firstMedium,
+//   firstCampaign, firstReferrer, lastSource, lastMedium, lastCampaign,
+//   lastTerm, lastContent, gclid, gbraid, wbraid, fbclid, msclkid, gaClientId
+export const ATTRIBUTION_FIELDS = {};
+
+/** "/services/kitchen-renovations" -> "services-kitchen-renovations" ("/" -> "home"). */
+const pageSlug = (path) => String(path || '').replace(/^\/+|\/+$/g, '').replace(/[^a-z0-9]+/gi, '-').toLowerCase() || 'home';
+
+/** The page tag for a lead: LEAD_TAG unless TAG_BY_FORM_PAGE is on. */
+export function pageTagFor(formPage) {
+  if (!TAG_BY_FORM_PAGE || !formPage || formPage === LEAD_TAG_PAGE) return LEAD_TAG;
+  return `form-page:${pageSlug(formPage)}`;
+}
+
+/** The GoHighLevel contact source. Unchanged from LEAD_SOURCE unless TAG_BY_FORM_PAGE is on. */
+export function sourceFor({ utmSource, formPage, channel } = {}) {
+  const base = TAG_BY_FORM_PAGE && formPage && formPage !== LEAD_TAG_PAGE ? WEBSITE_FORM_SOURCE : LEAD_SOURCE;
+  const withUtm = utmSource ? `${base} (${utmSource})` : base;
+  return TAG_BY_FORM_PAGE && channel ? `${withUtm} · ${channel}` : withUtm;
+}
+
 /**
  * Every tag a lead should carry: the website-form-filled tag, the page tag,
  * one per answer for each question that has a tagPrefix, and OUTSIDE_AREA_TAG
  * when out of the service area. GoHighLevel stores tags in lower case, so they
- * are built that way here.
+ * are built that way here. `context` ({ formPage, channel }) only matters when
+ * TAG_BY_FORM_PAGE is on.
  */
-export function tagsForLead(lead) {
-  const tags = [FORM_FILLED_TAG, LEAD_TAG];
+export function tagsForLead(lead, context = {}) {
+  const tags = [FORM_FILLED_TAG, pageTagFor(context.formPage)];
+  if (TAG_BY_FORM_PAGE && context.channel) tags.push(`channel:${context.channel}`);
   if (!isInServiceArea(lead)) tags.push(OUTSIDE_AREA_TAG);
   for (const question of QUOTE_QUESTIONS) {
     if (question.tagPrefix === undefined) continue;
@@ -107,44 +136,37 @@ export function tagsForLead(lead) {
   return [...new Set(tags)];
 }
 
-/** Validates and normalises a submission. Returns { lead } or { errors }. */
-export function validateLead(input = {}) {
-  const errors = {};
-  const text = (value, max = 120) => String(value ?? '').trim().slice(0, max);
-
-  const name = text(input.name);
-  const email = text(input.email, 160).toLowerCase();
-  const phoneCountry = /^[A-Z]{2}$/.test(input.phoneCountry) ? input.phoneCountry : DEFAULT_PHONE_COUNTRY;
-  const phone = parsePhone(text(input.phone, 40), phoneCountry);
-
-  // The project address is needed for the free on-site visit. Postal code is
-  // optional, and checked only loosely so out-of-area answers aren't blocked.
-  const address = text(input.address, 160);
-  const city = text(input.city, 80);
-  const postalCode = text(input.postalCode, 12).toUpperCase();
-
-  if (name.length < 2) errors.name = 'Please enter your name.';
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errors.email = 'Please enter a valid email address.';
-  if (!phone) errors.phone = 'Please check the phone number and the country next to it.';
-  if (address.length < 5) errors.address = 'Please enter the project’s street address.';
-  if (city.length < 2) errors.city = 'Please enter the city or town.';
-  if (postalCode && !/^[A-Z0-9][A-Z0-9 -]{2,10}$/.test(postalCode)) errors.postalCode = 'Please check the postal code.';
-
-  const answers = {};
-  for (const question of QUOTE_QUESTIONS) {
-    const raw = input[question.key];
-    if (question.multiple) {
-      const picked = (Array.isArray(raw) ? raw : []).filter((option) => question.options.includes(option));
-      if (!picked.length) errors[question.key] = 'Please choose at least one.';
-      answers[question.key] = [...new Set(picked)];
-    } else {
-      if (!question.options.includes(raw)) errors[question.key] = 'Please choose one.';
-      answers[question.key] = raw;
-    }
-  }
-
-  if (Object.keys(errors).length) return { errors };
-
-  // E.164 (no extension), which GoHighLevel can call and text.
-  return { lead: { name, email, phone: phone.number, address, city, postalCode, ...answers } };
+/**
+ * GoHighLevel customFields entries for the attribution fields that have an id
+ * in ATTRIBUTION_FIELDS. Returns [] while the map is empty. `attribution` is
+ * the server-cleaned object from cleanAttribution().
+ */
+export function attributionCustomFields(attribution, ids = ATTRIBUTION_FIELDS) {
+  if (!attribution || !ids || !Object.keys(ids).length) return [];
+  const first = attribution.first || {};
+  const last = attribution.last || {};
+  const values = {
+    channel: attribution.channel,
+    formPage: attribution.formPage,
+    landingPage: attribution.landing || last.landing,
+    referrer: last.referrer,
+    firstSource: first.source,
+    firstMedium: first.medium,
+    firstCampaign: first.campaign,
+    firstReferrer: first.referrer,
+    lastSource: last.source,
+    lastMedium: last.medium,
+    lastCampaign: last.campaign,
+    lastTerm: last.term,
+    lastContent: last.content,
+    gclid: last.gclid || first.gclid,
+    gbraid: last.gbraid || first.gbraid,
+    wbraid: last.wbraid || first.wbraid,
+    fbclid: last.fbclid || first.fbclid,
+    msclkid: last.msclkid || first.msclkid,
+    gaClientId: attribution.gaClientId,
+  };
+  return Object.entries(ids)
+    .filter(([key, id]) => typeof id === 'string' && id && values[key])
+    .map(([key, id]) => ({ id, field_value: String(values[key]) }));
 }

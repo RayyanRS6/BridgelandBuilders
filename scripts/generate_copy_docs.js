@@ -244,7 +244,7 @@ export const pagesData = [
             list: [
               'BASEMENT RENOVATIONS (/services/basement-renovations)',
               'BATHROOM RENOVATIONS (/services/bathroom-renovations)',
-              'HOME EXTENSIONS (/services/home-extensions)',
+              'HOME EXTENSIONS (/services/home-additions)',
               'KITCHEN RENOVATIONS (/services/kitchen-renovations)',
               'WHOLE HOME RENOVATIONS (/services/whole-home-renovations)',
             ],
@@ -432,7 +432,7 @@ export const pagesData = [
               'Bathroom Renovation: Modern fixtures & clean tiling (Link: /services/bathroom-renovations)',
               'Kitchen Renovation: Built for comfort, cooking, and durability (Link: /services/kitchen-renovations)',
               'Basement Renovation: Finished family area and guest space (Link: /services/basement-renovations)',
-              'Home Extension: More room, built to feel like it was always there (Link: /services/home-extensions)',
+              'Home Extension: More room, built to feel like it was always there (Link: /services/home-additions)',
               'Commercial Renovation: Office and retail spaces that work for you (Link: /services/commercial-renovations)',
             ],
           },
@@ -477,7 +477,7 @@ export const pagesData = [
             list: [
               'Basement renovations Winnipeg: Turn an unfinished or outdated basement into warm, dry, useful living space. (Page: /services/basement-renovations)',
               'Bathroom renovations Winnipeg: Well-planned bathrooms with reliable waterproofing, durable finishes, and practical storage. (Page: /services/bathroom-renovations)',
-              'Home extensions Winnipeg: Add the room your home is missing with an extension designed to feel like it has always belonged. (Page: /services/home-extensions)',
+              'Home extensions Winnipeg: Add the room your home is missing with an extension designed to feel like it has always belonged. (Page: /services/home-additions)',
               'Kitchen renovations Winnipeg: Improve the layout, storage, lighting, and finishes in the hardest-working room in your home. (Page: /services/kitchen-renovations)',
               'Whole home renovations Winnipeg: Coordinate every room under one clear plan, one crew, and one consistent finish. (Page: /services/whole-home-renovations)',
             ],
@@ -553,7 +553,7 @@ PROJECTS.forEach((proj, idx) => {
   pagesData.push({
     id: `0${idx + 3}_${pluralSlug.toUpperCase().replace(/-/g, '_')}`,
     title: `Bridgeland Builders — ${proj.breadcrumb} Page Copy`,
-    route: `/services/${proj.slug === 'whole-home-renovation' ? 'whole-home-renovations' : proj.slug === 'bathroom-renovation' ? 'bathroom-renovations' : proj.slug === 'kitchen-renovation' ? 'kitchen-renovations' : proj.slug === 'basement-renovation' ? 'basement-renovations' : proj.slug === 'home-extension' ? 'home-extensions' : 'commercial-renovations'}`,
+    route: `/services/${proj.slug === 'whole-home-renovation' ? 'whole-home-renovations' : proj.slug === 'bathroom-renovation' ? 'bathroom-renovations' : proj.slug === 'kitchen-renovation' ? 'kitchen-renovations' : proj.slug === 'basement-renovation' ? 'basement-renovations' : proj.slug === 'home-extension' ? 'home-additions' : 'commercial-renovations'}`,
     description: `Dedicated landing page for ${proj.breadcrumb} with booking survey, detailed scope, process, testimonial, estimator, and FAQs.`,
     sections: [
       {
@@ -584,14 +584,15 @@ PROJECTS.forEach((proj, idx) => {
           value: `${s.num}${s.unit} — ${s.label}`,
         })),
       },
-      {
+      // intro, gallery and testimonial are optional on a service page (null = section not shown).
+      ...(proj.intro ? [{
         heading: `3. Why Choose Bridgeland for ${proj.breadcrumb}`,
         notes: 'Detailed pitch and philosophy.',
         items: [
           { type: 'label-value', label: 'Section Tag', value: proj.intro.tag },
           { type: 'label-value', label: 'Section Title (H2)', value: proj.intro.title },
           { type: 'label-value', label: 'Floating Badge', value: `${proj.intro.floatingTitle}: ${proj.intro.floatingText}` },
-          ...proj.intro.paragraphs.map((p, i) => ({
+          ...(proj.intro.paragraphs || []).map((p, i) => ({
             type: 'para',
             label: `Paragraph ${i + 1}`,
             text: p,
@@ -599,11 +600,11 @@ PROJECTS.forEach((proj, idx) => {
           {
             type: 'list',
             label: 'Service Checklist',
-            list: proj.intro.checklist,
+            list: proj.intro.checklist || [],
           },
           { type: 'label-value', label: 'CTA Button', value: 'CHECK AVAILABLE DATES' },
         ],
-      },
+      }] : []),
       {
         heading: '4. What Is Included in the Scope',
         notes: 'Detailed breakdown of standard deliverables.',
@@ -619,7 +620,7 @@ PROJECTS.forEach((proj, idx) => {
           })),
         ],
       },
-      {
+      ...(proj.gallery && Array.isArray(proj.gallery.items) ? [{
         heading: '5. Recent Work & Project Gallery',
         notes: 'Visual showcase examples and captions.',
         items: [
@@ -632,7 +633,7 @@ PROJECTS.forEach((proj, idx) => {
             list: proj.gallery.items.map((item) => `${item.title}: ${item.text}`),
           },
         ],
-      },
+      }] : []),
       {
         heading: '6. How the Process Works',
         notes: 'Step-by-step project progression.',
@@ -648,7 +649,7 @@ PROJECTS.forEach((proj, idx) => {
           })),
         ],
       },
-      {
+      ...(proj.testimonial && proj.testimonial.quote ? [{
         heading: '7. Verified Client Testimonial',
         notes: 'Direct client review for this project category.',
         items: [
@@ -657,7 +658,7 @@ PROJECTS.forEach((proj, idx) => {
           { type: 'label-value', label: 'Author', value: proj.testimonial.name },
           { type: 'label-value', label: 'Project / Role', value: proj.testimonial.role },
         ],
-      },
+      }] : []),
       {
         heading: '8. Lead Consultation & Price Guide Section',
         notes: 'Side-by-side booking benefits and interactive price guide.',
@@ -918,7 +919,7 @@ pagesData.push(
             list: [
               'Title: Home Extension',
               'Subtitle: More room, built to feel like it was always there',
-              'Dedicated Page: /services/home-extensions',
+              'Dedicated Page: /services/home-additions',
             ],
           },
           {
@@ -1407,7 +1408,7 @@ This folder contains all copy and content from the **Bridgeland Builders** websi
 | 04 | Bathroom Renovations | \`/services/bathroom-renovations\` | \`04_BATHROOM_RENOVATIONS.md\` | \`04_BATHROOM_RENOVATIONS.docx\` |
 | 05 | Kitchen Renovations | \`/services/kitchen-renovations\` | \`05_KITCHEN_RENOVATIONS.md\` | \`05_KITCHEN_RENOVATIONS.docx\` |
 | 06 | Basement Renovations | \`/services/basement-renovations\` | \`06_BASEMENT_RENOVATIONS.md\` | \`06_BASEMENT_RENOVATIONS.docx\` |
-| 07 | Home Extensions | \`/services/home-extensions\` | \`07_HOME_EXTENSIONS.md\` | \`07_HOME_EXTENSIONS.docx\` |
+| 07 | Home Extensions | \`/services/home-additions\` | \`07_HOME_EXTENSIONS.md\` | \`07_HOME_EXTENSIONS.docx\` |
 | 08 | Commercial Renovations | \`/services/commercial-renovations\` | \`08_COMMERCIAL_RENOVATIONS.md\` | \`08_COMMERCIAL_RENOVATIONS.docx\` |
 | 09 | About Us | \`/about-us\` | \`09_ABOUT_US.md\` | \`09_ABOUT_US.docx\` |
 | 10 | Our Process | \`/our-process\` | \`10_OUR_PROCESS.md\` | \`10_OUR_PROCESS.docx\` |

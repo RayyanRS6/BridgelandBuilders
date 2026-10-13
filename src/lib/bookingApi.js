@@ -1,4 +1,5 @@
 // Browser side of the /api/booking functions.
+import { trackMetaStandard } from './analytics.js';
 
 async function request(path, options = {}) {
   let response;
@@ -37,9 +38,11 @@ export function bookSlot(payload) {
 /**
  * Reports a conversion to the Meta Pixel when one is installed on the page.
  * Without a pixel this does nothing, so the form works the same either way.
+ * The pixel script itself loads after the page (index.html); until then the
+ * event waits in the pixel's queue. `eventId` pairs it with the server copy.
  */
-export function trackConversion(event) {
-  if (typeof window !== 'undefined' && typeof window.fbq === 'function') window.fbq('track', event);
+export function trackConversion(event, eventId) {
+  trackMetaStandard(event, eventId);
 }
 
 /** utm_source from the landing URL (e.g. "facebook"), for lead attribution. */

@@ -1,3 +1,4 @@
+import { SERVICES, serviceByPath, serviceBySlug } from './services.js';
 import {
   BBB_PROFILE_URL,
   BUSINESS,
@@ -10,8 +11,42 @@ import {
   SOCIAL_PROFILES,
 } from './siteConfig.js';
 
-export const DEFAULT_IMAGE =
-  'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80';
+/** The renovation cost hub (plan §8). Its page only renders once its guide is live. */
+export const COST_HUB_PATH = '/renovation-cost-winnipeg';
+
+/**
+ * Branded 1200x630 share image (public/og/, made by scripts/build-images.mjs),
+ * used wherever a page has no image of its own (plan §3.3).
+ */
+export const DEFAULT_IMAGE = `${SITE_URL}/og/default-1200x630.jpg`;
+export const DEFAULT_IMAGE_ALT = 'Bridgeland Builders logo: Winnipeg renovation and construction contractor';
+
+/** A site-relative URL ("/images/…") as an absolute one; absolute URLs unchanged. */
+export const absoluteUrl = (url) =>
+  url && !/^https?:\/\//.test(url) ? `${SITE_URL}${url.startsWith('/') ? '' : '/'}${url}` : url;
+
+const IMAGE_TYPES = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'image/gif', avif: 'image/avif' };
+
+/**
+ * og:image width/height/type when they can be known: from explicit values,
+ * else from a "-1200x630." file name (the default and the self-hosted blog OG
+ * images, optionally followed by a content hash) or a Wix transform URL
+ * (".../w_1200,h_630,..."); the type from the file extension. Shared by the
+ * prerender (scripts/prerender.mjs) and useSeo, so both emit the same tags.
+ */
+export function imageMeta(image, { width, height, type } = {}) {
+  if (!image) return {};
+  const path = String(image).split(/[?#]/)[0];
+  const named = /-(\d{2,4})x(\d{2,4})(?:\.[a-f0-9]{8})?\.(?:jpe?g|png|webp|avif)$/i.exec(path);
+  const wix = /\/w_(\d+),h_(\d+)[,/]/.exec(path);
+  const dims = width && height ? [width, height] : (named || wix || []).slice(1, 3);
+  const ext = (/\.([a-z0-9]+)$/i.exec(path) || [])[1];
+  return {
+    width: dims[0] ? String(dims[0]) : undefined,
+    height: dims[1] ? String(dims[1]) : undefined,
+    type: type || IMAGE_TYPES[(ext || '').toLowerCase()],
+  };
+}
 
 /**
  * Date (YYYY-MM-DD) every route's `updated` was seeded with. Each entry below
@@ -27,70 +62,81 @@ export const SEO_DEFAULT_UPDATED = '2026-10-13';
  */
 export const PAGE_SEO = {
   '/': {
-    title: 'Winnipeg Renovation & Construction Company | Bridgeland Builders',
+    title: 'Winnipeg Renovation Contractor | Bridgeland Builders',
     description:
-      'Winnipeg renovation contractor for kitchens, bathrooms, basement development, home additions and commercial fit-ups. Written quotes and permits handled.',
+      'Winnipeg renovation contractor for kitchens, bathrooms, basement development, additions and commercial spaces. Free on-site visit and free written quote.',
     image: DEFAULT_IMAGE,
     updated: '2026-10-13',
   },
   '/services': {
-    title: 'Renovation Services & Business Remodeling | Bridgeland Builders',
+    title: 'Renovation Services in Winnipeg | Bridgeland Builders',
     description:
-      'Expert renovation services and business remodeling in Winnipeg: whole-home, kitchen, bathroom, basement, commercial fit-outs, flooring, masonry, windows and more.',
+      'Renovation services in Winnipeg for homes and businesses: kitchens, bathrooms, basements, whole homes, additions, commercial fit-ups, flooring and more.',
     updated: '2026-10-13',
   },
   '/about-us': {
-    title: 'About Bridgeland Builders | Winnipeg Renovation Team',
+    title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
-      'Meet Bridgeland Builders, a Winnipeg renovation and construction team working on residential and commercial projects in Winnipeg and nearby communities.',
+      'Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over 60 years of combined experience and 100+ projects.',
     updated: '2026-10-13',
   },
   '/our-process': {
     title: 'Our Renovation Process | Bridgeland Builders Winnipeg',
     description:
-      'How a Bridgeland Builders renovation runs, from the first walkthrough and written quote through permits, construction and the final inspection.',
+      'How a Bridgeland Builders renovation runs, from a free on-site visit and written quote to permits, weekly updates, inspections and handover.',
     updated: '2026-10-13',
   },
   '/projects': {
     title: 'Renovation Projects & Ideas | Bridgeland Builders Winnipeg',
     description:
-      'Design ideas for kitchen, bathroom, basement, whole-home and commercial renovations. Case studies of our Winnipeg projects are on the way.',
+      'Design ideas for kitchen, bathroom, basement, whole-home and commercial renovations, with links to each service. Case studies of our own work to follow.',
     updated: '2026-10-13',
   },
   '/faqs': {
-    title: 'Renovation FAQs | Bridgeland Builders Winnipeg',
+    title: 'Winnipeg Renovation FAQs | Bridgeland Builders',
     description:
-      'Answers to common Winnipeg renovation questions: written quotes, permits and inspections, living in your home during work, timelines and how to get started.',
+      'Answers to common Winnipeg renovation questions: costs and written quotes, permits, timelines, living through the work, where we work and how to start.',
     updated: '2026-10-13',
   },
   '/instant-quote': {
-    title: 'Free Instant Renovation Quote | Bridgeland Builders Winnipeg',
+    title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',
     description:
-      'Get a free instant renovation quote from Bridgeland Builders in Winnipeg. Choose your project, answer a few quick questions and see a starting price range.',
+      'Get a free instant renovation quote in Winnipeg. Answer a few questions for a starting price range, then book a free on-site visit for a written quote.',
     updated: '2026-10-13',
   },
   '/book-online': {
-    title: 'Book an Appointment Online | Bridgeland Builders Winnipeg',
+    title: 'Book a Free On-Site Renovation Visit | Bridgeland Builders',
     description:
-      'Book a free on-site renovation consultation with Bridgeland Builders in Winnipeg. Pick a date and time in our calendar and get instant confirmation.',
+      'Book a free on-site renovation visit in Winnipeg or a nearby community. We look at the space with you, then send a free written quote. No obligation.',
     updated: '2026-10-13',
   },
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
-      'Contact Bridgeland Builders about your Winnipeg renovation. Call 431-866-5644 or send your project details and we reply within one business day.',
+      'Contact Bridgeland Builders about your Winnipeg renovation. Call 431-866-5644, email us or send your project details. We reply within one business day.',
     updated: '2026-10-13',
   },
-  '/outside-winnipeg': {
-    title: 'Service Areas Around Winnipeg | Bridgeland Builders',
+  // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
+  // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in siteConfig.js.
+  // The page passes the content module's seo (same values) to usePageSeo.
+  '/service-areas': {
+    title: 'Service Areas: Winnipeg & Nearby | Bridgeland Builders',
     description:
-      'Bridgeland Builders serves Winnipeg and nearby communities, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach.',
+      'Renovation contractor serving Winnipeg and communities within about an hour: Headingley, East and West St. Paul, Oak Bluff, Selkirk and Steinbach.',
+    updated: '2026-10-13',
+  },
+  // How guides, cost pages and service pages are written, sourced and reviewed
+  // (plan §11.3). Page content: src/data/editorialPolicy.js.
+  '/editorial-policy': {
+    title: 'Editorial Policy | Bridgeland Builders',
+    description:
+      'How Bridgeland Builders writes, sources, reviews and updates the renovation guides, cost information and service pages published on this website.',
     updated: '2026-10-13',
   },
   '/blog': {
-    title: 'Renovation Blogs & Articles | Bridgeland Builders Winnipeg',
+    title: 'Winnipeg Renovation Guides | Bridgeland Builders',
     description:
-      'Renovation inspiration, expert tips and industry insights from Bridgeland Builders, covering residential and commercial renovation ideas for Winnipeg properties.',
+      'Renovation guides for Winnipeg homes and businesses: costs, permits, basements, kitchens and bathrooms, hiring a contractor, commercial work and money.',
     updated: '2026-10-13',
   },
   // Second contact page, holding the GoHighLevel form with the SMS consent
@@ -107,7 +153,7 @@ export const PAGE_SEO = {
   '/privacy-policy': {
     title: 'Privacy Policy | Bridgeland Builders',
     description:
-      'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, live chat and text messages.',
+      'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, chat and texts.',
     updated: '2026-10-13',
   },
   '/terms-of-service': {
@@ -130,54 +176,24 @@ export const PAGE_SEO = {
   },
 };
 
-/** Service pages get their own titles, descriptions and Service schema. */
-export const SERVICE_SEO = {
-  '/services/whole-home-renovations': {
-    title: 'Whole Home Renovations Winnipeg | Bridgeland Builders',
-    description:
-      'Whole home renovations in Winnipeg under one plan — layout, kitchen, baths, flooring and paint coordinated to a single finish date. Free walkthrough.',
-    serviceType: 'Whole home renovation',
-    updated: '2026-10-13',
-  },
-  '/services/kitchen-renovations': {
-    title: 'Kitchen Renovations Winnipeg | Bridgeland Builders',
-    description:
-      'Kitchen renovations in Winnipeg: better layout, storage, lighting and durable finishes, installed to a clear written scope. Book a free walkthrough.',
-    serviceType: 'Kitchen renovation',
-    updated: '2026-10-13',
-  },
-  '/services/bathroom-renovations': {
-    title: 'Bathroom Renovations Winnipeg | Bridgeland Builders',
-    description:
-      'Bathroom renovations in Winnipeg with reliable waterproofing, durable tile and practical storage. Clear written quotes and a free in-home walkthrough.',
-    serviceType: 'Bathroom renovation',
-    updated: '2026-10-13',
-  },
-  '/services/basement-renovations': {
-    title: 'Basement Renovations Winnipeg | Bridgeland Builders',
-    description:
-      'Basement renovations in Winnipeg — turn an unfinished or dated basement into warm, dry, usable living space. Framing, insulation, egress and finishing handled.',
-    serviceType: 'Basement renovation',
-    updated: '2026-10-13',
-  },
-  '/services/home-extensions': {
-    title: 'Home Extensions Winnipeg | Bridgeland Builders',
-    description:
-      'Home extensions and additions in Winnipeg designed to match the existing house, with permits, structure and finishing coordinated by one contractor.',
-    serviceType: 'Home extension',
-    updated: '2026-10-13',
-  },
-  '/services/commercial-renovations': {
-    title: 'Commercial Renovation Contractors Winnipeg | Bridgeland Builders',
-    description:
-      'Commercial renovation contractors in Winnipeg for offices, retail stores, restaurants, hotels and hospitality spaces, and medical and dental clinics.',
-    serviceType: 'Commercial renovation',
-    // Service schema audience (plan §3.5). The page is written for business
-    // owners and the people who run commercial property.
-    audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
-    updated: '2026-10-13',
-  },
-};
+/**
+ * Service pages' SEO entries ({ title, description, serviceType, audience?,
+ * primaryKeyword, updated }), keyed by path, for LIVE services only.
+ *
+ * The source of truth is each page's content module (`seo` in
+ * src/data/services/<slug>.js). This object is deliberately EMPTY in the
+ * browser — seo.js must not import the service modules, and a service page
+ * passes its module's `seo` to usePageSeo instead. It is filled at build time
+ * by src/data/projects.js (which imports every module), so any build script
+ * that needs it (head.js, build-seo-files, sync-redirects, the audit) must
+ * import src/data/projects.js (or head.js) before reading it.
+ */
+export const SERVICE_SEO = {};
+
+/** Registers a live service page's seo (called by src/data/projects.js). */
+export function registerServiceSeo(path, seo) {
+  SERVICE_SEO[path] = seo;
+}
 
 const ORG_ID = `${SITE_URL}/#organization`;
 const SITE_ID = `${SITE_URL}/#website`;
@@ -405,8 +421,13 @@ export function buildWebPage({
   };
 }
 
-/** Service schema for a single service page (audience from SERVICE_SEO). */
-export function buildService({ path, serviceType, description }) {
+/**
+ * Service schema for a single page. `audience` comes from the page's seo
+ * (commercial pages: BusinessAudience) and is passed in explicitly, so the
+ * prerender and the browser build the same node. `areaServed` defaults to the
+ * whole confirmed service area; an area page passes its one community.
+ */
+export function buildService({ path, serviceType, description, audience, areaServed }) {
   return {
     '@type': 'Service',
     '@id': `${SITE_URL}${path}#service`,
@@ -414,9 +435,55 @@ export function buildService({ path, serviceType, description }) {
     name: serviceType,
     description,
     provider: organizationRef,
-    areaServed: areaServedNodes(),
-    audience: (SERVICE_SEO[path] && SERVICE_SEO[path].audience) || undefined,
+    areaServed: areaServed || areaServedNodes(),
+    audience: audience || undefined,
     url: `${SITE_URL}${path}`,
+  };
+}
+
+/**
+ * VideoObject — only ever on a /videos/<slug> watch page (plan §3.5: the audit
+ * forbids it anywhere else). Real footage only. src/data/videos.js
+ * buildVideoNode() builds it from a video entry.
+ */
+export function buildVideoObject({ path, name, description, thumbnailUrl, uploadDate, duration, embedUrl, contentUrl, transcript }) {
+  return {
+    '@type': 'VideoObject',
+    '@id': `${SITE_URL}${path}#video`,
+    name,
+    description,
+    thumbnailUrl: thumbnailUrl || undefined,
+    uploadDate: isoWinnipeg(uploadDate),
+    duration: duration || undefined,
+    embedUrl: embedUrl || undefined,
+    contentUrl: contentUrl || undefined,
+    transcript: transcript || undefined,
+    url: `${SITE_URL}${path}`,
+    publisher: organizationRef,
+    inLanguage: 'en-CA',
+  };
+}
+
+/**
+ * Article node for cost guides (plan §3.5, §8; added by resolvePageSeo). `about`
+ * is an { '@id' } reference to the service page's Service node.
+ */
+export function buildArticle({ path, headline, description, image, datePublished, dateModified, about }) {
+  const url = `${SITE_URL}${path}`;
+  return {
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline,
+    description,
+    image: image || undefined,
+    datePublished: isoWinnipeg(datePublished || dateModified),
+    dateModified: isoWinnipeg(dateModified || datePublished),
+    mainEntityOfPage: { '@id': `${url}#webpage` },
+    author: organizationRef,
+    publisher: organizationRef,
+    about: about || undefined,
+    isPartOf: { '@id': SITE_ID },
+    inLanguage: 'en-CA',
   };
 }
 
@@ -453,7 +520,7 @@ export function buildBlogNode({ posts, description }) {
       headline: post.title,
       description: post.metaDescription,
       datePublished: isoWinnipeg(post.date),
-      image: post.ogImage || post.hero,
+      image: absoluteUrl(post.ogImage || post.hero),
       author: organizationRef,
       url: `${SITE_URL}/blog/${post.slug}`,
     })),
@@ -471,15 +538,28 @@ export function graph(...nodes) {
  * nodes. The prerender (head.js) and the runtime hook (usePageSeo) both call
  * this, so the static HTML and the client render cannot drift.
  */
-export function pageGraph({ path, title, description, type, trail, serviceType, faqs, nodes = [] }) {
-  const crumbs = buildBreadcrumbs(trail || ROUTE_TRAILS[path] || [], path);
-  const service = serviceType ? buildService({ path, serviceType, description }) : null;
+export function pageGraph({
+  path,
+  title,
+  description,
+  type,
+  trail,
+  serviceType,
+  audience,
+  areaServed,
+  updated,
+  faqs,
+  nodes = [],
+}) {
+  const crumbs = buildBreadcrumbs(trail || trailFor(path, title), path);
+  const service = serviceType ? buildService({ path, serviceType, description, audience, areaServed }) : null;
   const faqPage = buildFaqPage(path, faqs);
-  // The page's main node: its Service, else a Blog node passed in (/blog),
-  // else the FAQ list on the FAQ page itself.
+  // The page's main node: its Service, else a main node passed in (the /blog
+  // Blog node, a cost guide's Article, a watch page's VideoObject), else the
+  // FAQ list on the FAQ page itself.
   const main =
     service ||
-    nodes.find((node) => node && node['@type'] === 'Blog') ||
+    nodes.find((node) => node && MAIN_NODE_TYPES.includes(node['@type'])) ||
     (path === '/faqs' ? faqPage : null);
   return graph(
     buildWebPage({
@@ -488,6 +568,7 @@ export function pageGraph({ path, title, description, type, trail, serviceType, 
       description,
       type: type || ROUTE_PAGE_TYPES[path],
       breadcrumb: crumbs ? { '@id': crumbs['@id'] } : false,
+      dateModified: updated,
       mainEntity: main && main['@id'] ? { '@id': main['@id'] } : undefined,
     }),
     crumbs,
@@ -497,10 +578,30 @@ export function pageGraph({ path, title, description, type, trail, serviceType, 
   );
 }
 
+const MAIN_NODE_TYPES = ['Blog', 'Article', 'BlogPosting', 'VideoObject'];
+
+/**
+ * A service page's breadcrumb trail from the registry: Services › (parent) ›
+ * page, e.g. Services › Commercial Renovations › Office Renovations. The
+ * visible breadcrumb on the page renders this same trail.
+ */
+export function serviceTrail(service) {
+  if (!service) return [];
+  const trail = [['Services', '/services']];
+  const parent = service.parent ? serviceByPath(service.parent) : null;
+  if (parent) trail.push([crumbName(parent), parent.path]);
+  trail.push([crumbName(service), service.path]);
+  return trail;
+}
+
+/** A service page's breadcrumb name: its registry `crumb`, else its label. */
+const crumbName = (service) => service.crumb || service.label;
+
 /**
  * Breadcrumb trail per route, as [label, path] pairs (Home is implicit). The
- * labels match the visible breadcrumbs (service pages show project.breadcrumb
- * from projects.js, e.g. "Kitchen Renovation").
+ * labels match the visible breadcrumbs. Service pages come from the registry
+ * (src/data/services.js); template routes (cost guides, areas, case studies,
+ * videos) are resolved by trailFor().
  */
 export const ROUTE_TRAILS = {
   '/': [],
@@ -512,19 +613,46 @@ export const ROUTE_TRAILS = {
   '/contact-us': [['Contact Us', '/contact-us']],
   '/instant-quote': [['Instant Quote', '/instant-quote']],
   '/book-online': [['Book Online', '/book-online']],
-  '/outside-winnipeg': [['Outside Winnipeg', '/outside-winnipeg']],
+  '/service-areas': [['Service Areas', '/service-areas']],
+  '/editorial-policy': [['Editorial Policy', '/editorial-policy']],
   '/blog': [['Blog', '/blog']],
   '/free-quote': [['Free Quote', '/free-quote']],
   '/contact': [['Get in Touch', '/contact']],
   '/privacy-policy': [['Privacy Policy', '/privacy-policy']],
   '/terms-of-service': [['Terms of Service', '/terms-of-service']],
-  '/services/whole-home-renovations': [['Services', '/services'], ['Whole Home Renovation', '/services/whole-home-renovations']],
-  '/services/bathroom-renovations': [['Services', '/services'], ['Bathroom Renovation', '/services/bathroom-renovations']],
-  '/services/kitchen-renovations': [['Services', '/services'], ['Kitchen Renovation', '/services/kitchen-renovations']],
-  '/services/basement-renovations': [['Services', '/services'], ['Basement Renovation', '/services/basement-renovations']],
-  '/services/home-extensions': [['Services', '/services'], ['Home Extension', '/services/home-extensions']],
-  '/services/commercial-renovations': [['Services', '/services'], ['Commercial Renovation', '/services/commercial-renovations']],
+  ...Object.fromEntries(SERVICES.map((service) => [service.path, serviceTrail(service)])),
 };
+
+/** "Kitchen Renovation Cost Winnipeg | Bridgeland Builders" -> "Kitchen Renovation Cost Winnipeg". */
+const pageName = (title) => String(title || '').split(' | ')[0].trim();
+
+/**
+ * The default breadcrumb trail for any route: ROUTE_TRAILS, else the template
+ * routes' pattern (cost hub and /services/<svc>/cost, /service-areas/<slug>,
+ * /projects/<slug>, /videos/<slug>). `title` (the page's SEO title) names the
+ * last crumb where no registry label exists. A page that renders a different
+ * visible breadcrumb passes that trail to usePageSeo (and head.js passes the
+ * same one, through the page's *SeoOptions builder).
+ */
+export function trailFor(path, title) {
+  if (ROUTE_TRAILS[path]) return ROUTE_TRAILS[path];
+  if (path === COST_HUB_PATH) return [['Renovation Costs', COST_HUB_PATH]];
+  let match = /^\/services\/([^/]+)\/cost$/.exec(path);
+  if (match) {
+    const service = serviceBySlug(match[1]);
+    return service ? [['Services', '/services'], [crumbName(service), service.path], ['Cost Guide', path]] : [];
+  }
+  match = /^\/service-areas\/([^/]+)$/.exec(path);
+  if (match) {
+    const area = SERVICE_AREAS.find((item) => item.slug === match[1]);
+    return [['Service Areas', '/service-areas'], [area ? area.name : pageName(title), path]];
+  }
+  match = /^\/projects\/([^/]+)$/.exec(path);
+  if (match) return [['Projects', '/projects'], [pageName(title), path]];
+  match = /^\/videos\/([^/]+)$/.exec(path);
+  if (match) return [[pageName(title), path]];
+  return [];
+}
 
 /** WebPage subtype per route. */
 export const ROUTE_PAGE_TYPES = {
@@ -537,6 +665,102 @@ export const ROUTE_PAGE_TYPES = {
 
 export function seoFor(path) {
   return PAGE_SEO[path] || SERVICE_SEO[path] || {};
+}
+
+const definedOnly = (object) =>
+  Object.fromEntries(Object.entries(object || {}).filter(([, value]) => value !== undefined && value !== null));
+
+// Page fields a page may pass straight in its usePageSeo options — e.g.
+// usePageSeo(path, { title, description, updated, trail, faqs }) — or grouped
+// under `meta` (a data module's whole `seo` object).
+const META_KEYS = ['title', 'description', 'robots', 'updated', 'published', 'audience', 'headline'];
+const pickMeta = (options) => definedOnly(Object.fromEntries(META_KEYS.map((key) => [key, options[key]])));
+
+/** /renovation-cost-winnipeg or /services/<slug>/cost. */
+export const isCostGuidePath = (path) => path === COST_HUB_PATH || /^\/services\/[^/]+\/cost$/.test(path);
+
+const serviceRef = (service) =>
+  service && service.status === 'live' ? { '@id': `${SITE_URL}${service.path}#service` } : undefined;
+
+/**
+ * Nodes a template route always carries, built from its path and meta alone,
+ * so the page and the prerender add them without the page passing anything:
+ *   cost guides  Article, about the service page's Service (plan §3.5, §8),
+ *                with the page's og:image as its image
+ */
+function templateNodes(path, meta, nodes, image) {
+  if (isCostGuidePath(path) && !nodes.some((node) => node['@type'] === 'Article')) {
+    const match = /^\/services\/([^/]+)\/cost$/.exec(path);
+    return [
+      buildArticle({
+        path,
+        headline: meta.headline || pageName(meta.title),
+        description: meta.description,
+        image: absoluteUrl(image),
+        datePublished: meta.published,
+        dateModified: meta.updated,
+        about: serviceRef(match ? serviceBySlug(match[1]) : null),
+      }),
+    ];
+  }
+  return [];
+}
+
+/**
+ * Everything a page's <head> needs, from its path and usePageSeo options. The
+ * single implementation behind both usePageSeo (browser) and headFor
+ * (prerender), so the two cannot drift.
+ *
+ * options: { title, description, robots, updated, audience, meta, faqs, image,
+ *            trail, pageType, nodes, serviceType, areaServed }
+ *   title…audience  page fields merged over the route's PAGE_SEO/SERVICE_SEO
+ *                   entry; `meta` does the same with a whole seo object (a
+ *                   service module's `seo`), and wins over the loose fields.
+ */
+export function resolvePageSeo(path, options = {}) {
+  const meta = { ...seoFor(path), ...pickMeta(options), ...definedOnly(options.meta) };
+  const nodes = (options.nodes || []).filter(Boolean);
+  // Same fallback on both sides, so hydration keeps the prerendered
+  // og:image / summary_large_image card (and the cost-guide Article image).
+  const image = options.image || meta.image || DEFAULT_IMAGE;
+  const jsonLd = pageGraph({
+    path,
+    title: meta.title,
+    description: meta.description,
+    type: options.pageType,
+    trail: options.trail,
+    serviceType: options.serviceType || meta.serviceType,
+    audience: meta.audience,
+    areaServed: options.areaServed,
+    updated: meta.updated,
+    faqs: options.faqs,
+    nodes: [...nodes, ...templateNodes(path, meta, nodes, image)],
+  });
+  return {
+    title: meta.title,
+    description: meta.description,
+    path,
+    image,
+    imageAlt: options.imageAlt || meta.imageAlt || (image === DEFAULT_IMAGE ? DEFAULT_IMAGE_ALT : undefined),
+    robots: meta.robots,
+    updated: meta.updated || updatedFor(path),
+    jsonLd,
+  };
+}
+
+/**
+ * usePageSeo options for a service page (ServiceRoute.jsx). head.js passes the
+ * same object to resolvePageSeo, so prerendered and client JSON-LD match.
+ */
+export function serviceSeo(content) {
+  return {
+    meta: content.seo,
+    faqs: content.faqs,
+    // No page image: the intro photos are stock (Unsplash) images, which must
+    // not be shared as if they were Bridgeland's work (plan §11.2), and their
+    // size is unknown. The branded 1200×630 default is used until a page has
+    // a real project photo (content.seo.image / imageAlt).
+  };
 }
 
 /**

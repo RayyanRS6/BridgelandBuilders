@@ -1,0 +1,250 @@
+{
+  "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
+  "status": "published",
+  "title": "Commercial Renovation ROI: Which Upgrades Pay Back?",
+  "metaTitle": "Commercial Renovation ROI in Winnipeg | Bridgeland Builders",
+  "metaDescription": "How to judge the return on a commercial renovation: a simple ROI method, upgrades that tend to pay back, leasing versus owning, and what lowers the return.",
+  "excerpt": "A plain-language way to judge whether a commercial renovation will pay for itself, which kinds of upgrades tend to earn their cost back, and what quietly eats into the return.",
+  "date": "2026-08-12",
+  "updated": "2026-10-13",
+  "cats": [
+    "Commercial",
+    "Costs & Budgets"
+  ],
+  "services": [
+    "/services/commercial-renovations",
+    "/services/retail-renovations",
+    "/services/restaurant-renovations",
+    "/services/office-renovations"
+  ],
+  "cluster": "commercial-costs",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "No renovation comes with a guaranteed return. The upgrades most likely to pay back are tied to a measurable result: more customers or seats served, fewer staff hours lost to a poor layout, lower energy and maintenance bills, or a space that is easier to lease or sell. Estimate each one against how long you will use the space.",
+  "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
+  "heroAlt": "Commercial renovation before and after office space.",
+  "sources": [
+    {
+      "label": "Efficiency Manitoba: Business programs",
+      "url": "https://efficiencymb.ca/business/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Business Lighting Program",
+      "url": "https://efficiencymb.ca/business/business-lighting/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: 13 commercial leasing terms you need to know",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+      "url": "https://www.winnipeg.ca/media/6131",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+      "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Renovation ROI questions",
+  "faqs": [
+    {
+      "q": "What does ROI mean for a business renovation?",
+      "a": "Return on investment compares what a renovation gives back with what it costs. For a business, the return usually comes as extra gross margin from more or faster sales, savings on energy and maintenance, or a property that is easier to lease or sell. If the total benefit over the time you use the space exceeds the total cost, the return is positive."
+    },
+    {
+      "q": "Is there a typical ROI for commercial renovations?",
+      "a": "Not one you can rely on. Returns depend on your business, location, lease, the condition of the space and how the work is done, so averages from other markets or property types rarely transfer. A better approach is to estimate the benefit of each part of the project using your own sales, staffing and utility data."
+    },
+    {
+      "q": "Do energy-efficiency upgrades qualify for incentives in Manitoba?",
+      "a": "Some do. Efficiency Manitoba offers business programs for lighting, building envelope, HVAC and controls, refrigeration and more. Program rules differ, and the Business Lighting Program says not to buy materials or start work until your application is approved, so check the current program page before you order equipment or sign for that part of the work."
+    },
+    {
+      "q": "Should a tenant invest in renovating a leased space?",
+      "a": "It can make sense when the lease is long enough for the benefit to cover the cost, or when the landlord contributes through an allowance or rent-free months. Attached improvements usually stay with the building when you leave, so tenants on shorter leases often get more value from movable fixtures and furniture."
+    },
+    {
+      "q": "How do I reduce the cost of closing during a renovation?",
+      "a": "Phase the work so part of the space keeps operating, and schedule disruptive tasks for evenings and weekends where building and City noise rules allow. Bridgeland Builders offers after-hours and weekend scheduling for commercial work and sends weekly progress updates, so you can plan staffing and customer notices around each phase."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Return on investment (ROI) is the question behind every commercial renovation: will the money come back as higher sales, lower costs or a more valuable property? Published averages rarely match a specific business, so this guide skips them. Instead, it gives you a way to estimate the return for your own space, using numbers you can check."
+    },
+    {
+      "t": "h2",
+      "x": "How do you calculate ROI on a commercial renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Add up the total cost, including construction, design, permits, downtime and financing, then estimate the yearly benefit in extra margin, savings or avoided costs. ROI is total benefit over the time you will use the space, minus total cost, divided by total cost. Payback period is total cost divided by yearly benefit."
+    },
+    {
+      "t": "table",
+      "caption": "What goes into a renovation ROI estimate",
+      "head": [
+        "Line",
+        "What to include",
+        "Where the number comes from"
+      ],
+      "rows": [
+        [
+          "Project cost",
+          "Construction, design and engineering fees, permit fees, contingency",
+          "Your written quote and your designer's fees"
+        ],
+        [
+          "Disruption cost",
+          "Sales lost during closures, temporary space, overtime, moving",
+          "Your own sales records"
+        ],
+        [
+          "Financing cost",
+          "Interest and fees over the loan term",
+          "Your lender"
+        ],
+        [
+          "Yearly benefit",
+          "Extra gross margin, energy and maintenance savings, staff time saved",
+          "Sales data, utility bills, repair history"
+        ],
+        [
+          "Useful life",
+          "Remaining lease term or the life of the work, whichever is shorter",
+          "Your lease and product information"
+        ]
+      ],
+      "note": "Use gross margin, not sales: a renovation that adds sales also adds the cost of the goods you sell."
+    },
+    {
+      "t": "p",
+      "x": "Run the numbers for each part of the project, not just the total. A new entrance and a lighting retrofit may pay back on very different timelines, and splitting them shows which parts are carrying the project."
+    },
+    {
+      "t": "h2",
+      "x": "Which commercial upgrades tend to pay back?"
+    },
+    {
+      "t": "p",
+      "x": "Upgrades that remove a bottleneck or cut a recurring cost are the easiest to justify, because you can measure the before and after. Layout changes that speed up service, lighting and HVAC improvements that lower energy use, and durable finishes that end repeated repairs usually have the clearest case. Purely cosmetic changes are harder to prove."
+    },
+    {
+      "t": "table",
+      "caption": "Common upgrades and how they can pay back",
+      "head": [
+        "Upgrade",
+        "How it can pay back",
+        "Measure this first"
+      ],
+      "rows": [
+        [
+          "Service layout (counters, checkout, kitchen flow)",
+          "More customers served per hour, less staff walking",
+          "Peak-hour transactions and wait times"
+        ],
+        [
+          "Lighting retrofit",
+          "Lower electricity use and fewer lamp replacements",
+          "Fixtures, hours of use, electricity bills"
+        ],
+        [
+          "Heating, ventilation and controls",
+          "Lower energy use, better comfort",
+          "Gas and electricity bills, comfort complaints"
+        ],
+        [
+          "Windows, doors and insulation",
+          "Lower heating costs, fewer drafts at entrances",
+          "Heating bills, cold spots"
+        ],
+        [
+          "Washrooms and accessible entrances",
+          "Better customer experience, fewer complaints",
+          "Customer feedback, existing barriers"
+        ],
+        [
+          "Storefront and entrance",
+          "Stronger street presence and first impressions",
+          "Foot traffic before and after"
+        ],
+        [
+          "High-wear finishes",
+          "Fewer repairs and replacements",
+          "Recent repair invoices"
+        ]
+      ],
+      "note": "A way to rank options, not a promise of returns. Results depend on your business and space."
+    },
+    {
+      "t": "h2",
+      "x": "Does owning or leasing change the return?"
+    },
+    {
+      "t": "p",
+      "x": "Yes. If you own the building, improvements add to an asset you keep, and better finishes or systems can help with future tenants or a sale. If you lease, attached improvements usually stay with the landlord when you leave, so the payback has to fit inside your remaining lease term, or be offset by a landlord allowance."
+    },
+    {
+      "t": "p",
+      "x": "Tenants can improve the return by negotiating a tenant improvement allowance or rent-free months, and by putting more of the budget into trade fixtures, such as furniture and display systems, that move with the business. Our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) explains landlord allowances and loans."
+    },
+    {
+      "t": "h2",
+      "x": "How can energy upgrades improve the return?"
+    },
+    {
+      "t": "p",
+      "x": "By lowering a cost you pay every month and, in some cases, by qualifying for incentives that reduce the upfront price. Efficiency Manitoba lists business programs for lighting, building envelope, HVAC and controls, refrigeration, energy audits and deep retrofits. Check eligibility before you order anything, because some programs require approval first."
+    },
+    {
+      "t": "p",
+      "x": "The Business Lighting Program is a clear example: Efficiency Manitoba says not to purchase materials or start the project until your application is approved, and applications can come from the building owner or from a contractor or vendor on the owner's behalf. Build that approval step into the schedule so an early order does not cost you the incentive."
+    },
+    {
+      "t": "h2",
+      "x": "What lowers the return on a renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Mostly the things that raise cost or delay reopening: scope changes after construction starts, hidden conditions found during demolition, long closures, finishes chosen for looks in high-wear areas, and opening dates set before the occupancy permit is in hand. Each one adds cost without adding benefit, so plan them out early."
+    },
+    {
+      "t": "p",
+      "x": "Timing matters as much as cost. The City of Winnipeg's occupancy bulletin counts stocking shelves, training staff and conducting business as occupying a space, so none of that can start in a renovated area until the occupancy permit is issued where one is required. Our guide to [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) covers overruns in detail."
+    },
+    {
+      "t": "h2",
+      "x": "Questions to answer before you commit"
+    },
+    {
+      "t": "li",
+      "x": "What specific result should this renovation change, and how will we measure it?"
+    },
+    {
+      "t": "li",
+      "x": "How many years will we use the space, and what does the lease say about improvements?"
+    },
+    {
+      "t": "li",
+      "x": "Which parts pay back fastest if the budget has to shrink?"
+    },
+    {
+      "t": "li",
+      "x": "Can we stay open through phasing or after-hours work instead of closing?"
+    },
+    {
+      "t": "li",
+      "x": "Are there incentives we must apply for before ordering equipment?"
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** For a first number to test your ROI, try the [instant renovation estimate](/instant-quote). For a figure you can plan around, [book a free on-site visit](/book-online) and get a free written quote. Bridgeland Builders renovates [retail stores](/services/retail-renovations) and other [commercial spaces](/services/commercial-renovations) in Winnipeg and nearby communities."
+    }
+  ]
+}

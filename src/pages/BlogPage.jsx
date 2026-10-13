@@ -2,7 +2,10 @@ import { useMemo, useState } from 'react';
 import PageHero from '../components/PageHero.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import BlogCard from '../components/BlogCard.jsx';
-import { BLOG_CATEGORIES, BLOG_POSTS } from '../data/blogPosts.js';
+// Metadata only: post bodies are separate chunks (src/data/posts/), so the
+// blog index never downloads article text. BLOG_CATEGORIES is the plan's
+// category set once posts carry it, else the categories posts carry today.
+import { BLOG_CATEGORIES, BLOG_POSTS } from '../data/blogIndex.js';
 import { buildBlogNode, seoFor } from '../data/seo.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
@@ -34,10 +37,10 @@ export default function BlogPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Blogs & Articles"
-        title="RENOVATION ADVICE"
+        eyebrow="Renovation Guides"
+        title="WINNIPEG RENOVATION GUIDES"
         highlight="FROM OUR CREW"
-        description="Straight-talking guides on planning, budgeting, and getting renovation work done properly — written by the team behind Winnipeg renovations."
+        description="Practical guides for planning a renovation in Winnipeg: costs, permits, basements, kitchens, bathrooms, older homes, contractors and commercial projects."
         primaryLink={{ to: '/services', label: 'VIEW OUR SERVICES' }}
       />
 

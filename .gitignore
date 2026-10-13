@@ -8,3 +8,6 @@ dist-ssr
 .claude/
 .env.local
 .env.example
+# Original images downloaded for scripts/build-images.mjs (re-fetch with
+# node scripts/fetch-legacy-images.mjs)
+media-src/
