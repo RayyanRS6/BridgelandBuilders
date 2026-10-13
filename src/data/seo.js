@@ -64,56 +64,56 @@ export const PAGE_SEO = {
   '/': {
     title: 'Winnipeg Renovation Contractor | Bridgeland Builders',
     description:
-      'Winnipeg renovation contractor for kitchens, bathrooms, basement development, home additions and commercial fit-ups. Written quotes and permits handled.',
+      'Winnipeg renovation contractor for kitchens, bathrooms, basement development, additions and commercial spaces. Free on-site visit and free written quote.',
     image: DEFAULT_IMAGE,
     updated: '2026-10-13',
   },
   '/services': {
     title: 'Renovation Services in Winnipeg | Bridgeland Builders',
     description:
-      'Renovation services in Winnipeg for homes and businesses: whole-home, kitchen, bathroom, basement, commercial fit-outs, flooring, masonry, windows and more.',
+      'Renovation services in Winnipeg for homes and businesses: kitchens, bathrooms, basements, whole homes, additions, commercial fit-ups, flooring and more.',
     updated: '2026-10-13',
   },
   '/about-us': {
-    title: 'About Bridgeland Builders | Winnipeg Renovation Team',
+    title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
-      'Meet Bridgeland Builders, a Winnipeg renovation and construction team working on residential and commercial projects in Winnipeg and nearby communities.',
+      'Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over 60 years of combined experience and 100+ projects.',
     updated: '2026-10-13',
   },
   '/our-process': {
     title: 'Our Renovation Process | Bridgeland Builders Winnipeg',
     description:
-      'How a Bridgeland Builders renovation runs, from the first walkthrough and written quote through permits, construction and the final inspection.',
+      'How a Bridgeland Builders renovation runs, from a free on-site visit and written quote to permits, weekly updates, inspections and handover.',
     updated: '2026-10-13',
   },
   '/projects': {
     title: 'Renovation Projects & Ideas | Bridgeland Builders Winnipeg',
     description:
-      'Design ideas for kitchen, bathroom, basement, whole-home and commercial renovations. Case studies of our Winnipeg projects are on the way.',
+      'Design ideas for kitchen, bathroom, basement, whole-home and commercial renovations, with links to each service. Case studies of our own work to follow.',
     updated: '2026-10-13',
   },
   '/faqs': {
-    title: 'Renovation FAQs | Bridgeland Builders Winnipeg',
+    title: 'Winnipeg Renovation FAQs | Bridgeland Builders',
     description:
-      'Answers to common Winnipeg renovation questions: written quotes, permits and inspections, living in your home during work, timelines and how to get started.',
+      'Answers to common Winnipeg renovation questions: costs and written quotes, permits, timelines, living through the work, where we work and how to start.',
     updated: '2026-10-13',
   },
   '/instant-quote': {
-    title: 'Free Instant Renovation Quote | Bridgeland Builders Winnipeg',
+    title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',
     description:
-      'Get a free instant renovation quote from Bridgeland Builders in Winnipeg. Choose your project, answer a few quick questions and see a starting price range.',
+      'Get a free instant renovation quote in Winnipeg. Answer a few questions for a starting price range, then book a free on-site visit for a written quote.',
     updated: '2026-10-13',
   },
   '/book-online': {
-    title: 'Book an Appointment Online | Bridgeland Builders Winnipeg',
+    title: 'Book a Free On-Site Renovation Visit | Bridgeland Builders',
     description:
-      'Book a free on-site renovation consultation with Bridgeland Builders in Winnipeg. Pick a date and time in our calendar and get instant confirmation.',
+      'Book a free on-site renovation visit in Winnipeg or a nearby community. We look at the space with you, then send a free written quote. No obligation.',
     updated: '2026-10-13',
   },
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
-      'Contact Bridgeland Builders about your Winnipeg renovation. Call 431-866-5644 or send your project details and we reply within one business day.',
+      'Contact Bridgeland Builders about your Winnipeg renovation. Call 431-866-5644, email us or send your project details. We reply within one business day.',
     updated: '2026-10-13',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
@@ -134,9 +134,9 @@ export const PAGE_SEO = {
     updated: '2026-10-13',
   },
   '/blog': {
-    title: 'Renovation Blogs & Articles | Bridgeland Builders Winnipeg',
+    title: 'Winnipeg Renovation Guides | Bridgeland Builders',
     description:
-      'Renovation tips, planning guides and ideas from Bridgeland Builders, covering residential and commercial renovation projects in Winnipeg.',
+      'Renovation guides for Winnipeg homes and businesses: costs, permits, basements, kitchens and bathrooms, hiring a contractor, commercial work and money.',
     updated: '2026-10-13',
   },
   // Second contact page, holding the GoHighLevel form with the SMS consent
@@ -153,7 +153,7 @@ export const PAGE_SEO = {
   '/privacy-policy': {
     title: 'Privacy Policy | Bridgeland Builders',
     description:
-      'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, live chat and text messages.',
+      'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, chat and texts.',
     updated: '2026-10-13',
   },
   '/terms-of-service': {
@@ -685,9 +685,10 @@ const serviceRef = (service) =>
 /**
  * Nodes a template route always carries, built from its path and meta alone,
  * so the page and the prerender add them without the page passing anything:
- *   cost guides  Article, about the service page's Service (plan §3.5, §8)
+ *   cost guides  Article, about the service page's Service (plan §3.5, §8),
+ *                with the page's og:image as its image
  */
-function templateNodes(path, meta, nodes) {
+function templateNodes(path, meta, nodes, image) {
   if (isCostGuidePath(path) && !nodes.some((node) => node['@type'] === 'Article')) {
     const match = /^\/services\/([^/]+)\/cost$/.exec(path);
     return [
@@ -695,6 +696,7 @@ function templateNodes(path, meta, nodes) {
         path,
         headline: meta.headline || pageName(meta.title),
         description: meta.description,
+        image: absoluteUrl(image),
         datePublished: meta.published,
         dateModified: meta.updated,
         about: serviceRef(match ? serviceBySlug(match[1]) : null),
@@ -718,6 +720,9 @@ function templateNodes(path, meta, nodes) {
 export function resolvePageSeo(path, options = {}) {
   const meta = { ...seoFor(path), ...pickMeta(options), ...definedOnly(options.meta) };
   const nodes = (options.nodes || []).filter(Boolean);
+  // Same fallback on both sides, so hydration keeps the prerendered
+  // og:image / summary_large_image card (and the cost-guide Article image).
+  const image = options.image || meta.image || DEFAULT_IMAGE;
   const jsonLd = pageGraph({
     path,
     title: meta.title,
@@ -729,11 +734,8 @@ export function resolvePageSeo(path, options = {}) {
     areaServed: options.areaServed,
     updated: meta.updated,
     faqs: options.faqs,
-    nodes: [...nodes, ...templateNodes(path, meta, nodes)],
+    nodes: [...nodes, ...templateNodes(path, meta, nodes, image)],
   });
-  // Same fallback on both sides, so hydration keeps the prerendered
-  // og:image / summary_large_image card.
-  const image = options.image || meta.image || DEFAULT_IMAGE;
   return {
     title: meta.title,
     description: meta.description,

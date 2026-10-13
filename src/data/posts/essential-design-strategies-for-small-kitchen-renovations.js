@@ -5,230 +5,224 @@
 export default {
   "blocks": [
     {
-      "t": "h2",
-      "x": "Why Functional Kitchen Design Matters in Small Homes"
-    },
-    {
       "t": "p",
-      "x": "In small homes, the kitchen often serves multiple roles: cooking, dining, socializing, and storage. Without careful planning, it can quickly become cluttered and frustrating to use. Functional design helps you:"
-    },
-    {
-      "t": "li",
-      "x": "Maximize every inch of space"
-    },
-    {
-      "t": "li",
-      "x": "Improve workflow and reduce unnecessary movement"
-    },
-    {
-      "t": "li",
-      "x": "Create a pleasant environment that encourages cooking and gathering"
-    },
-    {
-      "t": "p",
-      "x": "Many homeowners struggle with limited counter space, awkward layouts, and insufficient storage. Understanding how to address these issues is key to a successful renovation."
+      "x": "Plenty of kitchens in older bungalows and two-storey houses were designed for one cook and far less stuff than people own today. A renovation can make a small kitchen work much better without making it any bigger, but only if the decisions happen in the right order: layout first, then storage, then appliances, lighting and finishes."
     },
     {
       "t": "h2",
-      "x": "Understanding Kitchen Workflow"
+      "x": "Which layout works best in a small kitchen?"
     },
     {
       "t": "p",
-      "x": "A smooth kitchen workflow reduces effort and makes cooking more enjoyable. Three important concepts guide this:"
+      "x": "The one that fits your room's shape and doorways. Galley kitchens suit narrow rooms, L-shaped layouts suit corners and open plans, U-shaped layouts give the most counter in a square room, and a peninsula adds seating and workspace where an island will not fit. Walkways and traffic matter more than style."
     },
     {
-      "t": "h3",
-      "x": "The Kitchen Work Triangle"
-    },
-    {
-      "t": "p",
-      "x": "The work triangle connects the three main areas: the sink, stove, and refrigerator. In small kitchens, keeping these points close but unobstructed saves time and energy. For example, placing the sink between the stove and fridge allows easy movement while preparing meals."
-    },
-    {
-      "t": "h3",
-      "x": "Traffic Flow"
-    },
-    {
-      "t": "p",
-      "x": "Avoid placing the kitchen in a way that forces people to walk through the cooking zone. Clear pathways prevent accidents and keep the space comfortable during busy times."
-    },
-    {
-      "t": "h3",
-      "x": "Ergonomics"
-    },
-    {
-      "t": "p",
-      "x": "Consider countertop height, cabinet reach, and appliance placement to reduce bending and stretching. For instance, pull-out drawers and wall-mounted shelves can keep frequently used items within easy reach."
-    },
-    {
-      "t": "h2",
-      "x": "Choosing the Right Layout"
-    },
-    {
-      "t": "p",
-      "x": "Selecting a layout that fits your space and lifestyle is crucial. Common small kitchen layouts include:"
-    },
-    {
-      "t": "h3",
-      "x": "Galley Kitchens"
-    },
-    {
-      "t": "p",
-      "x": "Two parallel counters with a walkway in between. This layout is efficient for cooking but can feel narrow. Use light colors and open shelving to avoid a cramped feeling."
-    },
-    {
-      "t": "h3",
-      "x": "L-Shaped Kitchens"
-    },
-    {
-      "t": "p",
-      "x": "Counters on two adjoining walls create an open corner. This layout offers flexibility and can accommodate a small dining area or island."
-    },
-    {
-      "t": "h3",
-      "x": "U-Shaped Kitchens"
-    },
-    {
-      "t": "p",
-      "x": "Counters on three walls provide ample workspace and storage. In small spaces, keep one side open to avoid feeling boxed in."
-    },
-    {
-      "t": "h3",
-      "x": "One-Wall Kitchens"
-    },
-    {
-      "t": "p",
-      "x": "All appliances and cabinets line a single wall. This layout works well in studio apartments or open-plan spaces but requires smart storage solutions to maximize efficiency."
-    },
-    {
-      "t": "h3",
-      "x": "Peninsula vs. Island Designs"
-    },
-    {
-      "t": "li",
-      "x": "Peninsula: Extends from a wall or cabinet run, creating extra counter space without needing a full island."
-    },
-    {
-      "t": "li",
-      "x": "Island: A freestanding unit that can add storage, seating, and prep space but requires enough room to move around."
-    },
-    {
-      "t": "p",
-      "x": "In small kitchens, a peninsula often fits better than an island."
+      "t": "table",
+      "caption": "Small kitchen layouts compared",
+      "head": [
+        "Layout",
+        "Suits",
+        "Strengths",
+        "Trade-offs"
+      ],
+      "rows": [
+        [
+          "Galley",
+          "Narrow rooms with a door at one or both ends",
+          "Short distances between sink, cooktop and fridge; lots of counter for the footprint",
+          "Tight for two cooks; through-traffic crosses the work area"
+        ],
+        [
+          "L-shaped",
+          "Corners and kitchens open to a dining area",
+          "Keeps traffic out of the work zone; leaves room for a table",
+          "The corner cabinet needs good hardware to be useful"
+        ],
+        [
+          "U-shaped",
+          "Square rooms with one entry",
+          "The most counter and storage in a small footprint",
+          "Can feel boxed in; two awkward corners"
+        ],
+        [
+          "Peninsula",
+          "Rooms too small for an island",
+          "Adds counter, storage and seating without a walkway on every side",
+          "Can block the route into the kitchen if it is placed badly"
+        ]
+      ],
+      "note": "An island needs walking space on all four sides, which is why a peninsula is usually the better fit in a small kitchen."
     },
     {
       "t": "img",
       "src": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp",
       "srcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.b89f7a97.webp 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.735220d1.webp 1320w",
       "avifSrcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.4b933c9f.avif 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.46acd47b.avif 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.8309e247.avif 1320w",
-      "alt": "High angle view of a small kitchen with L-shaped layout and peninsula counter",
+      "alt": "Small L-shaped kitchen with a peninsula counter",
       "width": 880,
       "height": 503
     },
     {
-      "t": "h2",
-      "x": "Maximizing Storage"
+      "t": "h3",
+      "x": "Galley kitchens"
     },
     {
       "t": "p",
-      "x": "Storage is a top concern in small kitchens. Use these strategies to keep clutter off counters and organized:"
+      "x": "Keep the sink and cooktop on the same side if you can, so you are not turning across the aisle with a hot pot. If the galley is also the route to the back door, think about closing one end so the kitchen stops being a hallway."
     },
     {
-      "t": "li",
-      "x": "Vertical Cabinetry: Extend cabinets to the ceiling to use all available wall space."
-    },
-    {
-      "t": "li",
-      "x": "Pull-Out Organizers: Install pull-out shelves and racks inside cabinets for easy access."
-    },
-    {
-      "t": "li",
-      "x": "Corner Storage Solutions: Use lazy Susans or corner drawers to make awkward corners useful."
-    },
-    {
-      "t": "li",
-      "x": "Drawer Systems: Deep drawers for pots and pans improve accessibility."
-    },
-    {
-      "t": "li",
-      "x": "Pantry Organization: Use clear containers, labels, and adjustable shelves to keep pantry items tidy."
-    },
-    {
-      "t": "h2",
-      "x": "Selecting Appliances"
+      "t": "h3",
+      "x": "L-shaped kitchens"
     },
     {
       "t": "p",
-      "x": "Choosing the right appliances can save space and improve function:"
+      "x": "Put the fridge at the end of a run, opening toward the work area, so people can grab a drink without walking through the cooking zone. Use a corner drawer or pull-out instead of a blind corner where things disappear."
     },
     {
-      "t": "li",
-      "x": "Space-Saving Appliances: Compact dishwashers, narrow refrigerators, and combination microwave-ovens fit better in small kitchens."
-    },
-    {
-      "t": "li",
-      "x": "Built-In Options: Built-in ovens or cooktops free up counter space."
-    },
-    {
-      "t": "li",
-      "x": "Energy-Efficient Models: These reduce utility bills and often come in smaller sizes suitable for limited spaces."
-    },
-    {
-      "t": "h2",
-      "x": "Lighting and Materials"
+      "t": "h3",
+      "x": "U-shaped kitchens"
     },
     {
       "t": "p",
-      "x": "Good lighting and durable materials enhance both usability and appearance:"
+      "x": "Keep upper cabinets on two walls instead of three, or turn one leg of the U into a peninsula with seating. Either change makes the room feel larger without losing much storage."
     },
     {
-      "t": "li",
-      "x": "Task Lighting: Under-cabinet lights illuminate work areas."
-    },
-    {
-      "t": "li",
-      "x": "Natural Lighting: Maximize window space or use glass cabinet doors to reflect light."
-    },
-    {
-      "t": "li",
-      "x": "Reflective Finishes: Glossy tiles and light-colored surfaces make the kitchen feel larger."
-    },
-    {
-      "t": "li",
-      "x": "Durable Countertops: Materials like quartz or solid surface resist stains and scratches, ideal for busy kitchens."
-    },
-    {
-      "t": "img",
-      "src": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.1145290b.webp",
-      "srcSet": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-480.ec8264fe.webp 480w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.1145290b.webp 880w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-1320.32111089.webp 1320w",
-      "avifSrcSet": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-480.90a7e04d.avif 480w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.91d92874.avif 880w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-1320.bfe49533.avif 1320w",
-      "alt": "Close-up view of a kitchen countertop with task lighting and reflective backsplash",
-      "width": 880,
-      "height": 503
-    },
-    {
-      "t": "h2",
-      "x": "Budget and Renovation Planning"
+      "t": "h3",
+      "x": "Peninsulas"
     },
     {
       "t": "p",
-      "x": "Renovations can quickly become expensive, so plan carefully:"
+      "x": "A peninsula with a counter overhang gives you seating without a table. Before you commit, check that the fridge, oven and dishwasher doors can open fully without hitting it."
+    },
+    {
+      "t": "h2",
+      "x": "How do you get more storage in a small kitchen?"
+    },
+    {
+      "t": "p",
+      "x": "Use height and depth. Take upper cabinets to the ceiling, replace base cabinet doors with deep drawers, and make corners and narrow gaps work with pull-outs. A tall pantry cabinet often holds more than the same width of upper and lower cabinets, and an organized pantry keeps counters clear for cooking."
     },
     {
       "t": "li",
-      "x": "Prioritize Upgrades: Focus on changes that improve function first, like storage and layout, before cosmetic updates."
+      "x": "**Full-height uppers:** cabinets to the ceiling use space that otherwise collects dust; keep everyday items on the lower shelves."
     },
     {
       "t": "li",
-      "x": "Avoid Common Mistakes: Don’t overcrowd the space with too many features; keep pathways clear."
+      "x": "**Drawers instead of doors:** deep drawers for pots and dishes mean no kneeling to reach the back of a cabinet."
     },
     {
       "t": "li",
-      "x": "Work with a Renovation Contractor: Experienced professionals can help you avoid costly errors and suggest practical solutions."
+      "x": "**Corner hardware:** a lazy Susan, swing-out shelves or corner drawers make the corner usable."
+    },
+    {
+      "t": "li",
+      "x": "**Narrow pull-outs:** a 6- to 9-inch gap beside the range can hold oils, spices or baking sheets."
+    },
+    {
+      "t": "li",
+      "x": "**Pantry organization:** adjustable shelves and clear containers make it easy to see what you have."
+    },
+    {
+      "t": "h2",
+      "x": "Which appliances suit a small kitchen?"
+    },
+    {
+      "t": "p",
+      "x": "Appliances sized to the room. A counter-depth fridge keeps the walkway clear, a 24-inch dishwasher or range frees cabinet space, and a combination microwave and range hood saves counter space. Decide on appliances before cabinets are ordered, because the cabinet openings are built around the exact model sizes."
+    },
+    {
+      "t": "p",
+      "x": "Ventilation matters more in a small kitchen, because moisture and cooking smells have less room to go. Health Canada recommends using a range hood exhaust fan whenever you cook and keeping it vented to the outside. If you are keeping your current appliances, or replacing them later, share the model numbers early so the openings fit."
+    },
+    {
+      "t": "h2",
+      "x": "How can lighting and finishes make a small kitchen feel bigger?"
+    },
+    {
+      "t": "p",
+      "x": "Light it in layers and keep surfaces light and simple. Under-cabinet lighting puts light on the counter where you work, ceiling fixtures light the room, and light-coloured cabinets, counters and backsplash reflect it. Fewer visual breaks, such as continuous counters and matching cabinet fronts, make the room read as larger."
+    },
+    {
+      "t": "li",
+      "x": "Under-cabinet lighting is the single most useful light in a small kitchen."
+    },
+    {
+      "t": "li",
+      "x": "Glass-front or open shelving on one wall can lighten a run of upper cabinets."
+    },
+    {
+      "t": "li",
+      "x": "Hard-wearing counters such as quartz handle heat, knives and daily cleaning."
+    },
+    {
+      "t": "li",
+      "x": "A backsplash that wipes clean saves time every day."
+    },
+    {
+      "t": "h2",
+      "x": "Should you open a small kitchen to the living room?"
+    },
+    {
+      "t": "p",
+      "x": "Often it is the change that does the most for a small kitchen, because it borrows light and space from the next room. If the wall is load-bearing, it needs a beam sized for the load, and the City of Winnipeg lists creating open-concept living spaces among renovations that may need a building permit."
+    },
+    {
+      "t": "p",
+      "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains how the permit process works."
+    },
+    {
+      "t": "h2",
+      "x": "Where should you spend in a small kitchen renovation?"
+    },
+    {
+      "t": "p",
+      "x": "On the things that change how the kitchen works: layout, storage, lighting and ventilation. Finishes can be upgraded later; moving a sink or a wall cannot. A small kitchen also uses less material, so a better counter or cabinet line costs less in total than it would in a large room."
+    },
+    {
+      "t": "p",
+      "x": "For current Winnipeg price ranges, see our [kitchen renovation cost guide](/services/kitchen-renovations/cost). Most full kitchens we renovate take four to six weeks once the cabinets are on site. If you are weighing a kitchen against a larger project, our guide to [choosing between a full renovation and partial upgrades](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) may help."
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** see how we plan and build a [kitchen renovation](/services/kitchen-renovations), then [book a free on-site visit](/book-online). We look at your room, talk through the layout and send a free written quote. Want a number first? Try the [instant estimate](/instant-quote)."
     }
   ],
-  "faqs": [],
-  "answer": "",
-  "sources": [],
+  "faqsTitle": "Common questions",
+  "faqs": [
+    {
+      "q": "What is the most efficient layout for a small kitchen?",
+      "a": "In a narrow room, a galley is usually the most efficient, because everything is a step or two away. In a square room, a U-shape gives the most counter. If the kitchen opens to a dining area, an L-shape with a peninsula keeps traffic out of the work zone. The room's doors and windows often make the decision."
+    },
+    {
+      "q": "Can a small kitchen have an island?",
+      "a": "Only if there is a comfortable walkway on every side, with room to open the dishwasher and oven while someone walks past. In most small kitchens a peninsula fits better: it gives the same extra counter and seating, but because it attaches to a wall or cabinet run it needs walkway on fewer sides."
+    },
+    {
+      "q": "How long does a small kitchen renovation take?",
+      "a": "Most full kitchens we renovate take four to six weeks once the cabinets are on site. A smaller kitchen does not always go much faster, because the steps are the same: demolition, rough-in, cabinets, counter templating and installation, then the backsplash. Ordering cabinets early keeps the schedule from stalling halfway through."
+    },
+    {
+      "q": "Do I need a permit for a kitchen renovation in Winnipeg?",
+      "a": "It depends on the scope. The City of Winnipeg lists kitchens and creating open-concept living spaces among renovations that may need a building permit, and plumbing or electrical work can need trade permits. Interior work such as painting, patching and installing cabinets does not need a building permit. We coordinate the permits a project needs."
+    }
+  ],
+  "answer": "Good small kitchen renovation ideas start with the layout, not the finishes. Choose the layout your room can actually hold, whether galley, L-shaped, U-shaped or peninsula, then add storage that reaches the ceiling, lighting under the upper cabinets and appliances sized for the space. Spend first on what changes how the kitchen works.",
+  "sources": [
+    {
+      "label": "City of Winnipeg: Home renovations (building permits)",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+      "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Health Canada: Guide to addressing moisture and mould indoors",
+      "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/addressing-moisture-mould-your-home.html",
+      "accessed": "2026-10-13"
+    }
+  ],
   "reviewedBy": ""
 };

@@ -27,6 +27,7 @@ const FOOTER_COLUMNS = [
       { label: 'OUR SERVICES', to: '/services' },
       { label: 'OUR PROCESS', to: '/our-process' },
       { label: 'OUR PROJECTS', to: '/projects' },
+      { label: 'RENOVATION COSTS', to: '/renovation-cost-winnipeg' },
       { label: 'FAQs', to: '/faqs' },
       { label: 'BLOGS & ARTICLES', to: '/blog' },
       { label: 'SERVICE AREAS', to: '/service-areas' },

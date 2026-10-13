@@ -5,101 +5,323 @@
 export default {
   "blocks": [
     {
-      "t": "h2",
-      "x": "How to Avoid Cost Overruns in Commercial Remodeling"
-    },
-    {
       "t": "p",
-      "x": "Remodeling your commercial space can become expensive quickly, especially with unexpected expenses like old plumbing or permit issues. Proper planning helps steer clear of these added costs. This guide outlines strategies to keep your commercial remodel on budget."
-    },
-    {
-      "t": "takeaways",
-      "title": "Key Takeaways",
-      "items": [
-        "Make sure the goals of your remodel are clear to everyone involved. Specify the objectives, the needs of the business, the preferred workflow, and the aesthetic to be achieved.",
-        "Construct a thorough budget, make sure to add about 5-10% of extra space in the budget to allow for unexpected expenses, this will be important for you.",
-        "Make sure to choose your contractor wisely. Look for experience, good communication, and solid references.",
-        "Please ensure that any building rules and requirements are followed to minimize regulatory consequences. Not taking rules into consideration can result in costly delays and fines.",
-        "Make sure not to rush the timeline. Plan to have extra time for delays that arise such as weather, etc., to avoid incurring more costs from a labor disruption or more costly business interruptions."
-      ]
-    },
-    {
-      "t": "h3",
-      "x": "Avoiding Common Pitfalls in Commercial Renovations"
-    },
-    {
-      "t": "p",
-      "x": "It is likely that there will be costs that arise as you begin a project. Starting a project, such as a commercial renovation, is likely an expensive endeavor. In Winnipeg, commercial renovations can be exciting to cost. Starting with a commercial renovation in Winnipeg can feel like a big undertaking. Excitement can be as simple as a fresh new look. New looks can lead to excitement. A little bit of planning can keep things from getting out of hand financially. Overspending is the likely outcome when things are not planned for or are not seen to begin with."
-    },
-    {
-      "t": "p",
-      "x": "Winnipeg is home to a variety of commercial renovation options, but not all options can be chosen. Choosing the right one is of utmost importance. To ensure quality service, choose the right service with the right qualifications to ensure commercial renovations are handled. Look for builders with a solid history of commercial renovations to avoid placing yourself in liability. Look for builders that are not residential. Home references are not accepted when determining quality builders. Provide your service provider with their business space requirements. Quality service builders will have significant experience in commercial renovations."
-    },
-    {
-      "t": "h3",
-      "x": "Here are some areas where costs can pile up, and how to get ahead of them:"
-    },
-    {
-      "t": "li",
-      "x": "Scope Creep: This happens when the project's goals change or get expanded once it is already underway. Adding that 'one thing' gets 'super expensive' and takes a lot of time. Stick to what was initially planned and approved as much as possible."
-    },
-    {
-      "t": "li",
-      "x": "Hidden Issues: Old buildings can hide surprises like outdated wiring, plumbing problems, or structural questions. A thorough pre-renovation inspection by seasoned professionals can help come to a lot of these issues to hold down expenses."
-    },
-    {
-      "t": "li",
-      "x": "Regulation Issues: Leaving the right permits unaddressed or local building codes may cause cuts, and further do work. Your contractor should be up to speed on these surefire issues."
-    },
-    {
-      "t": "li",
-      "x": "Material Choices: It seems that the cheapest material is going to be the best option, however, poof…they are going to fine. It will be a lot of a hassle and in the future, it will be anything but cheap, and then guess what, it will shattered."
-    },
-    {
-      "t": "p",
-      "x": "A contingency fund is your best friend. Aim for 10-15% of your total budget set 'just in case' funds. It is better to have a cushion to absorb surprises rather than having to undo work already completed."
-    },
-    {
-      "t": "p",
-      "x": "A contract is one of the most important aspects of a renovation project. Be sure a contract is detailed with the following information: scope of the project, materials to be used, timelines, and payment plans. A detailed contract protects both parties from misunderstandings and overcharging, and reputable renovation Winnipeg companies will have honest and open communication regarding the potential costs and the process."
+      "x": "Most renovation problems trace back to decisions made before any work started: who was hired, and what was written down. This checklist is built for homeowners in Winnipeg and nearby communities, but the same steps answer how to choose a renovation contractor anywhere in Canada. Each check takes a few minutes, and most use public tools from the Province, the City or the Workers Compensation Board."
     },
     {
       "t": "h2",
-      "x": "Wrapping Up Your Commercial Remodel"
+      "x": "What should you check before hiring a renovation contractor?"
     },
     {
       "t": "p",
-      "x": "We've discussed to some extent, the many ways a commercial remodel can go wrong, and there is no doubt that knowing what you want, and what contractor to go with, is an important part of the process. At the end of the day, it is all about planning and not trying to be too cheap. If you spend the time outlining your objectives, creating a realistic budget with some flexibility, and hiring the right people, you will set yourself up for success. It will require a little effort, so don't be afraid to ask questions and stay communicative. A well thought out strategy will prevent a lot of issues down the line and will save you money, so do it right the first time."
+      "x": "Check twelve things before you sign: WCB clearance, liability insurance, business registration, reviews, references, a written scope, who pulls permits, the deposit, how changes are handled, the warranty, licensed trades and the schedule. The table shows how to verify each one in Manitoba and where to look, so every contractor on your list is held to the same standard."
+    },
+    {
+      "t": "table",
+      "caption": "Winnipeg contractor checklist: 12 checks and how to verify them",
+      "head": [
+        "Check",
+        "How to verify it",
+        "Where to look"
+      ],
+      "rows": [
+        [
+          "WCB clearance",
+          "Search the business and print a clearance letter showing it is in good standing. Construction is a mandatory industry for WCB coverage in Manitoba.",
+          "[WCB Manitoba clearances](https://www.wcb.mb.ca/employers/clearances/)"
+        ],
+        [
+          "Liability insurance",
+          "Ask for a certificate of insurance that names you as the certificate holder, then call the insurer or broker listed to confirm the policy is current.",
+          "The contractor's insurer or broker"
+        ],
+        [
+          "Business registration",
+          "Search the business or operating name in the provincial registry and check that it matches the name on the quote and contract.",
+          "[Manitoba Companies Office](https://companiesoffice.gov.mb.ca/)"
+        ],
+        [
+          "Reviews",
+          "Read recent reviews on more than one site, and look at how the contractor replies to complaints, not only the star rating.",
+          "Google, HomeStars, Better Business Bureau"
+        ],
+        [
+          "References with photos",
+          "Ask for two or three recent clients with a similar project, and for photos taken during the work (framing, waterproofing, insulation), not only finished rooms.",
+          "The contractor"
+        ],
+        [
+          "Written quote and scope",
+          "Get a written quote listing the work, materials, allowances, exclusions, total cost, schedule, deposit and progress payments.",
+          "[Consumer Protection Office: hiring a contractor](https://www.gov.mb.ca/consumerinfo/initiatives/building-or-renovating/hiring-a-contractor.html)"
+        ],
+        [
+          "Who pulls permits",
+          "The contract should name who applies for the building and trade permits. Once a permit is issued, you can look it up by address.",
+          "[City of Winnipeg permit search](https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp) or your municipality"
+        ],
+        [
+          "Deposit size",
+          "The Consumer Protection Office calls a 10% down payment reasonable and advises never prepaying in full. Ask what any larger deposit pays for.",
+          "[Consumer Protection Office: home improvements](https://www.gov.mb.ca/cp/cpo/info/home_improvements.html)"
+        ],
+        [
+          "Change orders in writing",
+          "Every change should be written and signed, with its price and effect on the schedule, before the extra work starts.",
+          "Your contract"
+        ],
+        [
+          "Written warranty",
+          "Ask for the warranty in writing: what it covers, for how long, and how you report a problem.",
+          "Your contract"
+        ],
+        [
+          "Licensed trades",
+          "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors (a homeowner can do their own electrical or plumbing work in the single detached house they live in). Ask who those trades are and search the names.",
+          "[City of Winnipeg licensed contractors](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors)"
+        ],
+        [
+          "Realistic schedule",
+          "Get a written start date and duration, ask what could delay it, and compare it with other quotes for the same scope.",
+          "Your contract"
+        ]
+      ],
+      "note": "Sources checked October 13, 2026. Outside Winnipeg, ask your local municipality which permits and trade licences apply."
+    },
+    {
+      "t": "h2",
+      "x": "How do you check a contractor's WCB clearance?"
+    },
+    {
+      "t": "p",
+      "x": "Use WCB Manitoba's public Clearance Request System. Search by the contractor's business name or WCB account number, add the business to a list, request the clearance letter and print it. You don't need to register. If the business doesn't appear, call WCB Assessment Services and ask whether it is required to register."
+    },
+    {
+      "t": "p",
+      "x": "Our step-by-step guide to [checking a contractor's WCB clearance](/blog/how-to-check-a-contractors-wcb-clearance-manitoba) covers what the letter shows, what it doesn't, and what to do when a contractor is missing from the search."
+    },
+    {
+      "t": "h2",
+      "x": "What should a renovation contract include?"
+    },
+    {
+      "t": "p",
+      "x": "A renovation contract should list the business's details, the full scope and materials, allowances for unchosen finishes, the total cost with taxes, the schedule and completion date, the deposit and progress payments, who handles permits, how changes are approved, and the warranty. Manitoba's Consumer Protection Office recommends getting estimates from several contractors before you sign. Use this as the minimum:"
+    },
+    {
+      "t": "li",
+      "x": "The contractor's business name, address and contact information."
+    },
+    {
+      "t": "li",
+      "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on a [kitchen renovation](/services/kitchen-renovations), where cabinets and counters drive the price."
+    },
+    {
+      "t": "li",
+      "x": "The total estimated cost, with taxes shown."
+    },
+    {
+      "t": "li",
+      "x": "A work schedule and a completion date."
+    },
+    {
+      "t": "li",
+      "x": "The deposit and the progress-payment schedule, with each payment tied to a stage of work."
+    },
+    {
+      "t": "li",
+      "x": "Who obtains the permits and books the inspections."
+    },
+    {
+      "t": "li",
+      "x": "How changes are priced and approved, and the warranty terms."
+    },
+    {
+      "t": "p",
+      "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment. The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
+    },
+    {
+      "t": "h2",
+      "x": "Who should pull the permits?"
+    },
+    {
+      "t": "p",
+      "x": "Usually the contractor applies, but the contract should say so. The City of Winnipeg says homeowners are responsible for getting permits before a project starts, so ask for the permit number and check it. Electrical and plumbing permits in Winnipeg go to City-licensed contractors, or to homeowners doing their own work in a single detached home they live in."
+    },
+    {
+      "t": "p",
+      "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits. A contractor who suggests skipping a required permit, or asks you to apply for work they will do, is a reason to walk away."
+    },
+    {
+      "t": "h2",
+      "x": "How do you find the best renovation contractor in Winnipeg?"
+    },
+    {
+      "t": "p",
+      "x": "The right contractor for your project passes every verification check, has recent experience with your type of work, quotes in writing after seeing the space, and communicates clearly from the first call. Price only becomes a fair comparison once the quotes cover the same scope. Use these criteria to compare the contractors on your list:"
+    },
+    {
+      "t": "li",
+      "x": "**Relevant experience.** Ask how many projects like yours they've finished recently and what went wrong on one of them. A specific answer tells you more than a portfolio."
+    },
+    {
+      "t": "li",
+      "x": "**A site visit before the price.** A contractor who prices a basement or kitchen without seeing it is guessing about what's behind the walls."
+    },
+    {
+      "t": "li",
+      "x": "**Clear communication.** Notice how quickly calls and emails are returned while you're still deciding, and ask how often you'll get updates once work starts."
+    },
+    {
+      "t": "li",
+      "x": "**Detailed, comparable quotes.** Line items, allowances and exclusions make quotes comparable. A single lump sum doesn't."
+    },
+    {
+      "t": "li",
+      "x": "**Straight answers about surprises.** Ask what happens if they find rot, old wiring or moisture after demolition, and how that work is priced."
+    },
+    {
+      "t": "li",
+      "x": "**Local permit knowledge.** They should know whether your project needs a City of Winnipeg permit or one from your municipality, and how inspections are booked."
+    },
+    {
+      "t": "p",
+      "x": "Treat a quote far below the others with caution and ask what it leaves out. It's also worth understanding [what a general contractor does](/blog/what-does-a-general-contractor-do) on a multi-trade job, so you know who is responsible for the subtrades."
+    },
+    {
+      "t": "h2",
+      "x": "What are the warning signs of a bad contractor?"
+    },
+    {
+      "t": "p",
+      "x": "Walk away from a contractor who wants most of the price up front, won't put the scope or changes in writing, can't produce a WCB clearance or insurance certificate, suggests skipping permits, or pushes you to sign the same day. Each of these shifts risk from the contractor to you."
+    },
+    {
+      "t": "li",
+      "x": "A discount for paying cash with no paperwork, or for skipping a permit."
+    },
+    {
+      "t": "li",
+      "x": "Pressure to sign today to keep a price."
+    },
+    {
+      "t": "li",
+      "x": "A business name on the contract that doesn't match the provincial registry or the WCB clearance letter."
+    },
+    {
+      "t": "li",
+      "x": "Vague answers about who the electrician, plumber and other subtrades will be."
+    },
+    {
+      "t": "p",
+      "x": "If you sign with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Direct sellers must also be licensed by the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html), so ask to see the licence. Meeting contractors at a home show? See our [questions to ask at the Winnipeg Renovation Show](/blog/winnipeg-renovation-show-questions-to-ask)."
+    },
+    {
+      "t": "h2",
+      "x": "What is a realistic renovation schedule?"
+    },
+    {
+      "t": "p",
+      "x": "A realistic schedule names a start date, a duration in weeks and what could stretch it, like permits, back-ordered materials or surprises behind walls. Our typical timelines once work starts are two to three weeks for a bathroom, four to six for a kitchen, four to eight for a basement, and eight to sixteen for whole-home renovations and additions."
+    },
+    {
+      "t": "p",
+      "x": "A schedule much shorter than the others for the same scope deserves a question. If you're still at the planning stage, our [home renovation planning guide](/blog/home-renovation-planning-guide-canada) sets out the steps in order."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and the [Winnipeg renovation cost guide](/renovation-cost-winnipeg) explains what drives the price."
     }
   ],
   "faqsTitle": "Frequently Asked Questions",
   "faqs": [
     {
-      "q": "What mistakes should I avoid when starting a remodel?",
-      "a": "A mistake that happens a lot is when people begin a remodel without clear goals. Many people remodel just for cosmetic reasons without assessing how the changes will help the function of the space. Will it improve the way customers or employees move through the space? These are the types of questions that will help formulate goals for the remodel and create a practical framework for the changes that will be made."
+      "q": "How many renovation quotes should I get?",
+      "a": "Two or three detailed written quotes for the same scope is usually enough to see a fair range. Manitoba's Consumer Protection Office recommends getting estimates from several contractors before you sign. Collecting many more tends to blur the comparison, especially when each contractor prices a slightly different project, so give everyone the same written list of must-haves and finishes."
     },
     {
-      "q": "What should I consider when creating a budget?",
-      "a": "Underestimating costs is a big problem when it comes to budgeting for a remodel. Be sure to include all aspects of the remodel that include construction costs, designer fees, permit fees, and add a cushion to cover unknown costs, ideally around 10-20% of your estimated total. It will help master your expectations, and consulting with a knowledgeable contractor should help provide more realistic expectations of costs."
+      "q": "Is it a red flag if a contractor asks for a large deposit?",
+      "a": "Not always, but ask what it pays for. The Consumer Protection Office calls a 10% down payment reasonable and advises never prepaying in full. A larger deposit can make sense when custom items such as cabinets or windows are ordered early. If so, tie it to the order in writing and link later payments to completed stages of work."
     },
     {
-      "q": "Why does it matter which contractor you go with?",
-      "a": "Using a contractor who is inexperienced can lead to headaches. If a contractor has no knowledge of handling commercial jobs and is ultimately unreliable, the quality of the work will suffer, the timelines will be extended and the costs will go up. So, review their projects, ask how other clients view their work and be sure they know how to handle the specifics of your job."
+      "q": "Should the contractor or the homeowner get the building permit?",
+      "a": "Usually the contractor applies, but put it in the contract. The City of Winnipeg says homeowners are responsible for getting permits before starting a project, whoever fills in the application. Electrical and plumbing permits go to City-licensed contractors unless you do the work yourself in a single detached home you live in. Ask for the permit numbers and check them."
     },
     {
-      "q": "What laws do I need to worry about?",
-      "a": "You can't just go and destroy everything. Pulling permits will be necessary with your local municipality, and you have to stay within the building codes and zoning laws. If you choose to ignore these things, you will have fines, delays and possible legal issues. Hiring someone who is familiar with the laws and has all of the permits you need will be best."
+      "q": "What does a WCB clearance prove?",
+      "a": "A clearance letter from WCB Manitoba shows whether a business has met the Workers Compensation Board's requirements and is in good standing when you request it. It doesn't prove insurance, trade licences or quality of work, so treat it as one check among several, and ask for a fresh letter before you make the final payment."
     },
     {
-      "q": "How can I prevent delays and keep the remodel on track?",
-      "a": "If you try to remodel and do it quickly just to get it done, you will get bad results. Create a timeline with a lot of extra time for issues that may pop up, like broken supplies, new materials that need to be ordered, bad weather, etc. If you try to cut the work into smaller projects, this may help keep the remodel on track."
-    },
-    {
-      "q": "Should I care about the opinions of my employees and customers?",
-      "a": "Of course. The people who spend time in your space have important feedback. Talk to your employees to find out how they do their tasks and what changes would help them. Employees and customers can give feedback about the functionality and atmosphere of the space. They'll help you find out if you are making any design errors and help ensure that the remodel is a success."
+      "q": "Can I cancel a renovation contract after signing?",
+      "a": "It depends on the contract and how it was sold. If you signed with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel without giving a reason. Otherwise, the cancellation terms in your contract apply, so read them before signing and call the Consumer Protection Office if you're unsure."
     }
   ],
-  "answer": "",
-  "sources": [],
+  "answer": "Verify before you compare prices: a current WCB Manitoba clearance, a liability insurance certificate, a registered business name, recent reviews and references, and a written contract that names who pulls permits, sets the deposit and payment schedule, and puts every change in writing. Then compare detailed written quotes for the same scope.",
+  "sources": [
+    {
+      "label": "WCB Manitoba: Clearances",
+      "url": "https://www.wcb.mb.ca/employers/clearances/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)",
+      "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Companies Office",
+      "url": "https://companiesoffice.gov.mb.ca/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Consumer Protection Office: Hiring a contractor",
+      "url": "https://www.gov.mb.ca/consumerinfo/initiatives/building-or-renovating/hiring-a-contractor.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Consumer Protection Office: Home improvements",
+      "url": "https://www.gov.mb.ca/cp/cpo/info/home_improvements.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Consumer Protection Office: Direct sales",
+      "url": "https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "The Builders' Liens Act, C.C.S.M. c. B91 (s. 24, holdback)",
+      "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Home improvement projects (permits)",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Home renovations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Electrical installations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Plumbing installations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: List of licensed contractors",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
+      "accessed": "2026-10-13"
+    }
+  ],
   "reviewedBy": ""
 };

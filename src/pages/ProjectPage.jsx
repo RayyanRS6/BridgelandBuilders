@@ -17,6 +17,17 @@ const ESTIMATOR_ID = 'service-price-guide';
 
 const has = (list) => Array.isArray(list) && list.length > 0;
 const pad = (n) => String(n).padStart(2, '0');
+// "a kitchen renovation" / "an office renovation".
+const withArticle = (text) => `${/^[aeiou]/i.test(text) ? 'an' : 'a'} ${text}`;
+// A type card's `to` is linked only while it is a live service page (never a draft or a 404).
+const liveServicePath = (to) => {
+  const target = to ? serviceByPath(to) : null;
+  return target && target.status === 'live' ? target.path : null;
+};
+// The instant estimator has price data for these services only (its API lists
+// kitchen, bathroom and basement). Other pages keep the same embed, but the
+// card doesn't promise a price range for their own service.
+const PRICED_ESTIMATOR_KEYS = new Set(['kitchen', 'bathroom', 'basement']);
 // Same stagger as before: every card after the first carries a transition delay.
 const delay = (index, seconds) => (index > 0 ? { transitionDelay: `${seconds}s` } : undefined);
 
@@ -38,6 +49,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
     PROJECT_ESTIMATORS[project.slug] ||
     (service && ESTIMATOR_URLS[service.estimatorKey]);
   const formType = service ? service.formType : null;
+  const hasPriceData = Boolean(service && PRICED_ESTIMATOR_KEYS.has(service.estimatorKey));
 
   // The visible trail is the schema trail (seo.js serviceTrail): Services ›
   // (parent) › page.
@@ -226,17 +238,21 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             </div>
 
             <div className="includes-grid">
-              {types.map((item, index) => (
-                <div
-                  className="include-card reveal"
-                  key={item.title}
-                  style={delay(index, (index % 3) * 0.1)}
-                >
-                  <div className="include-num">{item.num || pad(index + 1)}</div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              ))}
+              {types.map((item, index) => {
+                const to = liveServicePath(item.to);
+                return (
+                  <div
+                    className="include-card reveal"
+                    key={item.title}
+                    style={delay(index, (index % 3) * 0.1)}
+                  >
+                    <div className="include-num">{item.num || pad(index + 1)}</div>
+                    {/* Same linked-title pattern as the /service-areas cards. */}
+                    <h3>{to ? <Link to={to}>{item.title}</Link> : item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -386,8 +402,17 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div>
               <div className="lead-card price-guide-card" id={ESTIMATOR_ID}>
                 <div className="lead-card-head">
-                  <h3>Get Your Free {name} Price Guide</h3>
-                  <p>Answer a few quick questions to receive a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.</p>
+                  {hasPriceData ? (
+                    <>
+                      <h3>Get Your Free {name} Price Guide</h3>
+                      <p>Answer a few quick questions to receive a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.</p>
+                    </>
+                  ) : (
+                    <>
+                      <h3>Get a Free Instant Price Guide</h3>
+                      <p>Our instant price guide gives starting ranges for kitchen, bathroom and basement renovations. {name} projects are priced in the free written quote that follows an on-site visit.</p>
+                    </>
+                  )}
                 </div>
                 {estimatorSrc && (
                   <EstimatorEmbed
@@ -408,7 +433,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">Questions</span>
               <h2 className="section-title">{project.faqsTitle || 'Frequently Asked Questions'}</h2>
-              <p className="section-desc">The things people ask us most before booking a {name.toLowerCase()}.</p>
+              <p className="section-desc">The things people ask us most before booking {withArticle(name.toLowerCase())}.</p>
             </div>
             <div className="reveal">
               <FaqAccordion items={project.faqs} />

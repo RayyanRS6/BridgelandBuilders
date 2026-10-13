@@ -90,7 +90,7 @@ const KEPT_POSTS = [
   'the-biggest-cost-factors-in-commercial-renovation-projects', // #13
   'how-to-prepare-your-business-for-a-major-renovation', // #14
   'which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners', // #19
-  'mastering-general-contracting-tips-for-your-next-project', // #25 (rewrite planned)
+  'mastering-general-contracting-tips-for-your-next-project', // #25 (retired: its /post/ URL follows the #25 rule below in one hop)
   'essential-design-strategies-for-small-kitchen-renovations', // #27
 ];
 

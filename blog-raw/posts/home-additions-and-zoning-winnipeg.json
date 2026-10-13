@@ -1,0 +1,265 @@
+{
+  "slug": "home-additions-and-zoning-winnipeg",
+  "status": "published",
+  "title": "Home Addition Zoning in Winnipeg: Permits and Variances",
+  "metaTitle": "Home Addition Zoning in Winnipeg: What to Check First",
+  "metaDescription": "Planning an addition in Winnipeg? What the development and building permits check, how variances work, and what the 2025 infill zoning changes mean.",
+  "excerpt": "Before an addition is designed, it has to fit two sets of rules: zoning, which decides where and how big you can build, and the building code, which decides how it is built. Here is how both work in Winnipeg, and what changed in 2025.",
+  "date": "2026-10-13",
+  "cats": [
+    "Permits & Planning"
+  ],
+  "services": [
+    "/services/home-additions"
+  ],
+  "cluster": "permits-zoning",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Every house addition in Winnipeg needs a development permit under the Winnipeg Zoning By-law and a building permit under the Winnipeg Building By-law. Zoning controls where the addition sits and how big it can be; if a design does not fit, a variance may be possible. The 2025 zoning changes mainly affect two- to four-unit homes.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "City of Winnipeg: Additions & attached garages",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/additions-attached-garages",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Residential Variance application form, single-family or two-family dwelling (updated April 2026)",
+      "url": "https://www.winnipeg.ca/media/5732",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Zoning changes to accommodate infill housing",
+      "url": "https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Housing Accelerator Fund",
+      "url": "https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Winnipeg Zoning By-law Rewrite",
+      "url": "https://engage.winnipeg.ca/zoning-rewrite",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Heritage permits",
+      "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Common questions",
+  "faqs": [
+    {
+      "q": "Do I need a development permit for a small addition?",
+      "a": "Yes. The City of Winnipeg says all house additions and attached garages need a development permit under the Zoning By-law, as well as a building permit under the Building By-law. A small footprint does not remove either requirement, and any electrical or plumbing work in the addition needs its own trade permit too."
+    },
+    {
+      "q": "Can I build closer to the property line than zoning allows?",
+      "a": "Only with an approved variance. A variance can modify a setback, height or lot coverage standard for your property without rezoning it. The City checks that it is the minimum change needed and fair to neighbours, notices are posted for 14 days, and neighbours can appeal. Allow about six to eight weeks from a complete application."
+    },
+    {
+      "q": "Did the 2025 zoning changes make additions easier?",
+      "a": "The June 2025 amendments focus on allowing two-, three- and four-unit homes as of right in many neighbourhoods. The City's pages describe no separate change for a single-family addition, which still needs development and building permits. If you are thinking of adding a unit rather than a room, check whether your lot qualifies under the new rules."
+    },
+    {
+      "q": "How long does a home addition take to build?",
+      "a": "Many straightforward additions take roughly eight to sixteen weeks of construction once permits and materials are ready. Size, foundation conditions, structural changes and custom finishes all affect the schedule. Design and permits come before that, and a variance, if you need one, takes about six to eight weeks on its own."
+    },
+    {
+      "q": "Can we stay in the house while an addition is built?",
+      "a": "Usually, for most of the project. The new structure is built and closed in first, and the opening into the existing house is made later, so most of the disruption comes near the end. Expect noise, dust protection between old and new, and some days when part of the house is hard to use."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "An addition is often the answer when you like your street but have run out of room: a bigger kitchen, a family room, a main-floor bedroom or a proper mudroom. Before anyone draws it, though, the addition has to fit your lot's zoning, and before anyone builds it, the drawings have to pass a building permit review. Knowing how those two steps work saves design time and avoids surprises."
+    },
+    {
+      "t": "h2",
+      "x": "What permits does a home addition need in Winnipeg?"
+    },
+    {
+      "t": "p",
+      "x": "Two main permits, plus trade permits. The City says all house additions and attached garages need a development permit under the Winnipeg Zoning By-law and a building permit under the Winnipeg Building By-law. Electrical and plumbing work need their own permits. Applications go through the City's Permits Online system, and incomplete applications cause delays."
+    },
+    {
+      "t": "table",
+      "caption": "Approvals for a house addition in Winnipeg",
+      "head": [
+        "Approval",
+        "What it covers",
+        "When"
+      ],
+      "rows": [
+        [
+          "Development permit",
+          "Zoning: where the addition sits on the lot, setbacks, height and similar limits",
+          "Reviewed before or alongside the building permit (sequential or concurrent review)"
+        ],
+        [
+          "Variance (only if needed)",
+          "Relief from a dimensional standard such as a setback, height or lot coverage",
+          "Before permits, if the design does not comply"
+        ],
+        [
+          "Building permit",
+          "Construction drawings reviewed against the building code and other standards",
+          "Before construction starts"
+        ],
+        [
+          "Electrical and plumbing permits",
+          "Trade work inside the addition",
+          "Before that work starts"
+        ],
+        [
+          "Heritage permit (only if applicable)",
+          "Properties on the List of Historical Resources or in a heritage conservation district",
+          "Before the design is final"
+        ]
+      ],
+      "note": "Outside Winnipeg, the local municipality issues permits. We coordinate permits and inspections with the City of Winnipeg or the local municipality."
+    },
+    {
+      "t": "h2",
+      "x": "What does zoning control for an addition?"
+    },
+    {
+      "t": "p",
+      "x": "Zoning sets the dimensional limits for your lot: how close you can build to each property line, how tall a building can be and how much of the lot buildings may cover. The numbers depend on your property's zoning district, so the first step is to confirm the zoning and measure the existing house against those limits."
+    },
+    {
+      "t": "p",
+      "x": "A building location certificate, prepared by a Manitoba land surveyor, shows exactly where the existing house sits on the lot. The City may ask for one with a variance application, and even when it is not required it is a reliable starting point for design. Riverside lots need extra care, because site plans for variance applications show floodway and flood fringe levels where they apply."
+    },
+    {
+      "t": "h2",
+      "x": "What if your addition does not fit the zoning rules?"
+    },
+    {
+      "t": "p",
+      "x": "You can apply for a variance, which modifies a dimensional standard such as a setback, height or lot coverage for your property without changing its zoning. The City says the process takes about six to eight weeks from a complete application, and approved variances are posted on the property for 14 days so neighbours can appeal."
+    },
+    {
+      "t": "li",
+      "x": "The City considers whether the variance is consistent with Plan Winnipeg and any secondary plan, avoids a substantial adverse effect on neighbouring properties, and is the minimum change needed."
+    },
+    {
+      "t": "li",
+      "x": "The application includes a letter of intent explaining why the by-law cannot be met, scaled plans, a current status of title and, where possible, written support from adjoining neighbours."
+    },
+    {
+      "t": "li",
+      "x": "If a variance is ultimately rejected on appeal, you cannot re-apply for the same variance for one year, and no permit can be issued for that work."
+    },
+    {
+      "t": "p",
+      "x": "The City recommends meeting a zoning development officer before applying and checking with the area planner whether they would support the proposal. Talking to your neighbours early costs nothing and feeds directly into the application."
+    },
+    {
+      "t": "h2",
+      "x": "What changed with Winnipeg's 2025 zoning amendments?"
+    },
+    {
+      "t": "p",
+      "x": "In June 2025, City Council approved Zoning By-law and local area plan amendments that allow two-, three- and four-unit homes as of right in many neighbourhoods, and taller four-unit homes, up to 39 feet, on certain lots within 800 metres of frequent transit. The City says the amendments are now in effect."
+    },
+    {
+      "t": "p",
+      "x": "For a typical single-family addition, such as a family room or a larger kitchen, the City's pages do not describe new addition rules: you still need the development permit and building permit above. The changes matter more if you are thinking of adding a unit rather than a room, and whether your lot qualifies depends on its zoning and other conditions. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) covers the suite side of that question."
+    },
+    {
+      "t": "p",
+      "x": "A full rewrite of the Winnipeg Zoning By-law is also under way. The City's project page shows drafting in summer to fall 2026, Council review in late 2027 and implementation from 2028, subject to Council adoption. The rules in effect when you apply are the ones that count."
+    },
+    {
+      "t": "h2",
+      "x": "How long does it take to plan and build an addition?"
+    },
+    {
+      "t": "p",
+      "x": "Plan for two stages. Design, zoning review and permits come first and depend on how complex the project is; a variance alone takes about six to eight weeks. Construction of many straightforward additions then takes roughly eight to sixteen weeks once permits and materials are ready, depending on size, foundation conditions and finishes."
+    },
+    {
+      "t": "table",
+      "caption": "Stages of a home addition",
+      "head": [
+        "Stage",
+        "What happens"
+      ],
+      "rows": [
+        [
+          "Site visit and feasibility",
+          "Look at the lot, the existing house, access and where an addition could connect"
+        ],
+        [
+          "Zoning check and survey",
+          "Confirm the zoning, setbacks and lot coverage; get a building location certificate if needed"
+        ],
+        [
+          "Design and drawings",
+          "Layout, structure, foundation and how floor heights and rooflines meet the house"
+        ],
+        [
+          "Variance (if needed)",
+          "About six to eight weeks from a complete application, including the 14-day posting"
+        ],
+        [
+          "Development, building and trade permits",
+          "Applications through Permits Online"
+        ],
+        [
+          "Construction",
+          "Foundation, framing, closing in, systems, then the opening into the existing house"
+        ],
+        [
+          "Inspections and handover",
+          "Required inspections, final walkthrough and clean-up"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "What should you ask before designing an addition?"
+    },
+    {
+      "t": "p",
+      "x": "Ask questions that test whether the idea fits the lot and the existing house before money goes into drawings. Zoning limits, the survey, structure, how the addition connects to the house and which costs sit outside the quote are the questions that most often change a plan, so settle them first."
+    },
+    {
+      "t": "li",
+      "x": "What is my lot's zoning, and how close is the house already to the setback limits?"
+    },
+    {
+      "t": "li",
+      "x": "Do I need a building location certificate or a new survey?"
+    },
+    {
+      "t": "li",
+      "x": "Who prepares the drawings, and will the structure or foundation need an engineer?"
+    },
+    {
+      "t": "li",
+      "x": "How will the addition's foundation, floor height and roofline meet the existing house?"
+    },
+    {
+      "t": "li",
+      "x": "Is the property in a heritage conservation district or on the List of Historical Resources? Our guide to [renovating a character home](/blog/renovating-a-character-home-in-winnipeg) explains what that changes."
+    },
+    {
+      "t": "li",
+      "x": "Which costs are in the written quote, and which, such as drawings, surveys and permit fees, are separate?"
+    },
+    {
+      "t": "p",
+      "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and for current price ranges by project type, our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** [book a free on-site visit](/book-online). We look at the lot, the existing house and where an addition could connect, and you receive a free written quote for the work. For a first range, try the [instant estimate](/instant-quote)."
+    }
+  ]
+}

@@ -284,10 +284,17 @@ function routePreloads(url, appHtml = '') {
   // too saves hydration a round trip.
   const wanted = new Set([last]);
   if (/\bid="guides"/.test(appHtml)) wanted.add('blogIndex');
+  // A cost guide (/services/<slug>/cost) loads src/data/costGuides/<slug>.js.
+  // Its last segment is "cost", and the service page's own chunk has the same
+  // file name, so it is matched by manifest key.
+  const wantedKeys = new Set();
+  const costGuide = /^\/services\/([^/]+)\/cost\/?$/.exec(url);
+  if (costGuide) wantedKeys.add(`src/data/costGuides/${costGuide[1]}.js`);
   for (const key of pageChunks) {
     for (const dyn of manifest[key].dynamicImports || []) {
       const name = posix.basename(dyn).replace(/\.[^.]+$/, '');
-      if (name && wanted.has(name) && !keys.includes(dyn)) keys.push(dyn);
+      if (keys.includes(dyn)) continue;
+      if (wantedKeys.has(dyn) || (name && wanted.has(name))) keys.push(dyn);
     }
   }
   const { files, css } = chunkClosure(keys);

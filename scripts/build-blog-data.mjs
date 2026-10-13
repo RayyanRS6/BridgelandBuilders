@@ -8,9 +8,9 @@
  * Generated files (edit blog-raw/posts/*.json, never these):
  *   src/data/blogIndex.js     CLIENT. Published post metadata without bodies,
  *                             plus helpers (getPostBySlug, getRelatedPosts,
- *                             getPostsForService, BLOG_CATEGORIES,
- *                             BLOG_REDIRECTS). Pages and components import
- *                             blog data from here.
+ *                             getPostsForService, BLOG_CATEGORIES). Pages and
+ *                             components import blog data from here.
+ *                             (BLOG_REDIRECTS is build-only: blogPosts.js.)
  *   src/data/posts/<slug>.js  CLIENT. One body per published post, loaded
  *                             lazily by the post page:
  *                             { blocks, faqsTitle, faqs, answer, sources, reviewedBy }.
@@ -120,6 +120,9 @@ const servicesModule = await optionalModule('src/data/services.js');
 const SERVICES = servicesModule && Array.isArray(servicesModule.SERVICES) ? servicesModule.SERVICES : null;
 const seoModule = await optionalModule('src/data/seo.js');
 const redirectsModule = await optionalModule('src/data/redirects.js');
+const costGuidesModule = await optionalModule('src/data/costGuides/index.js');
+// Live cost guides are pages too (hub + /services/<slug>/cost spokes); drafts are not linked.
+const COST_GUIDES = costGuidesModule && Array.isArray(costGuidesModule.COST_GUIDES) ? costGuidesModule.COST_GUIDES : [];
 
 /* ------------------------------------------------------------ images */
 const WIX_MEDIA = /^https:\/\/static\.wixstatic\.com\/media\/[^/?#]+$/;
@@ -161,6 +164,20 @@ const mediaFor = (src) => (MEDIA && src && MEDIA[src]) || null;
 
 /** Hero fields. The layout always shows the hero at 16:9 (object-fit: cover). */
 function heroImages(p) {
+  if (!p.hero) {
+    // No photo: the branded title card from scripts/build-images.mjs ('card:<slug>').
+    const card = MEDIA && MEDIA[`card:${p.slug}`];
+    if (!card) {
+      warn(`${p.slug}: no hero and no title card yet — run node scripts/build-images.mjs --only=cards`);
+      return { heroSrc: null, ogImage: '/og/default-1200x630.jpg' };
+    }
+    return {
+      heroSrc: card.src,
+      ...(card.srcSet ? { heroSrcSet: card.srcSet } : {}),
+      ...(card.avifSrcSet ? { heroAvifSrcSet: card.avifSrcSet } : {}),
+      ogImage: card.og,
+    };
+  }
   const media = mediaFor(p.hero);
   if (media) {
     // `hero` is the 16:9 cut when the same original is also a body image;
@@ -354,7 +371,7 @@ let posts = published.map((p) => {
     readMinutes: Math.max(3, Math.round(postTexts(p).reduce((n, text) => n + countWords(text), 0) / 200)),
     hero: p.hero,
     ...heroImages(p),
-    heroAlt: p.heroAlt || p.title,
+    heroAlt: p.hero ? p.heroAlt || p.title : MEDIA && MEDIA[`card:${p.slug}`] ? `Title card: ${p.title}` : p.title,
     author: p.author || '',
     reviewedBy: p.reviewedBy || '',
     services: p.services || [],
@@ -371,15 +388,20 @@ posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.slug.locale
  * (each post's first category, newest post first).
  */
 const CATEGORY_SET = [
-  'Costs',
-  'Permits',
+  'Costs & Budgets',
+  'Permits & Planning',
   'Basements & Suites',
   'Kitchens & Baths',
   'Older Homes',
-  'Hiring',
+  'Hiring a Contractor',
   'Commercial',
   'Money & Rebates',
 ];
+for (const p of published) {
+  for (const cat of p.cats || []) {
+    if (!CATEGORY_SET.includes(cat)) warn(`${p.slug}: category "${cat}" is not in the plan's category set`);
+  }
+}
 const carried = new Set(posts.flatMap((p) => p.categories));
 const categories = [
   ...CATEGORY_SET.filter((c) => carried.has(c)),
@@ -418,9 +440,13 @@ const knownPages = new Set([
   ...Object.keys((seoModule && seoModule.PAGE_SEO) || {}),
   ...Object.keys((seoModule && seoModule.SERVICE_SEO) || {}),
   ...(SERVICES || []).filter((s) => s.status === 'live').map((s) => s.path),
+  ...COST_GUIDES.filter((g) => g.status === 'live').map((g) => g.path),
   ...publishedPaths,
 ].map(cleanPath));
-const draftServices = new Set((SERVICES || []).filter((s) => s.status !== 'live').map((s) => s.path));
+const draftServices = new Set([
+  ...(SERVICES || []).filter((s) => s.status !== 'live').map((s) => s.path),
+  ...COST_GUIDES.filter((g) => g.status !== 'live').map((g) => g.path),
+]);
 
 for (const p of published) {
   for (const text of postTexts(p)) {
@@ -518,9 +544,6 @@ export const BLOG_CATEGORIES = ${json(categories)};
 
 /** Published posts only (blog-raw status "published"), newest first, without bodies. */
 export const BLOG_POSTS = ${json(posts)};
-
-/** Retired post URLs and their targets (for the SEO audit; served by src/data/redirects.js). */
-export const BLOG_REDIRECTS = ${json(redirects)};
 ${HELPERS}`;
 
 const fullPosts = posts.map((post) => ({ ...post, status: 'published', ...bodies.get(post.slug) }));

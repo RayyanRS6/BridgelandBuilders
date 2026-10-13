@@ -6,92 +6,243 @@ export default {
   "blocks": [
     {
       "t": "p",
-      "x": "Creating a business space that is visually appealing is the ultimate objective for many. The best business spaces consider how the layout and design contribute to the operation of the business as well as how the space engages with the customers. The balance of aesthetic and operational synergy is the key to a successful and functional business space. The following best practices will help you understand how to best achieve this balance."
+      "x": "A good commercial interior earns its keep twice: once in how smoothly staff and customers move through it, and again in how clearly it says who you are. When the two clash, function should usually win, because a space that slows service or fails an inspection costs money every day. This guide sets out an order of decisions that keeps both in view, whether you run a shop, an office, a restaurant or a clinic in Winnipeg."
     },
     {
-      "t": "takeaways",
-      "title": "Key Takeaways",
-      "items": [
-        "The first focus of design should be centered around the intended purpose of the space. Easy movement should be optimized to create a functional work environment without needless obstacles.",
-        "Select materials that can withstand regular use for high activity areas.",
-        "The first impression a visitor has of your business, brand, or organization will be influenced by the way your building looks. Select design elements that represent your brand.",
-        "Choose light sources that support the function of a space. The right light will improve the quality of a space and improve productivity.",
-        "The design of the space should allow for future adjustments. A flexible design will support the continued success of the business as adjustments to the scope and function of the business occur."
+      "t": "h2",
+      "x": "Why should function come before finishes?"
+    },
+    {
+      "t": "p",
+      "x": "Because the functional parts of a commercial space are the expensive parts to change. Walls that form exits, plumbing for washrooms and sinks, ductwork and electrical are set by code, permits and the building, while paint, décor and loose furniture can change later at modest cost. Fix the first group early and the second group has room to move."
+    },
+    {
+      "t": "table",
+      "caption": "Decide early, decide later",
+      "head": [
+        "Element",
+        "Decide early because",
+        "Where looks come in"
+      ],
+      "rows": [
+        [
+          "Exits, corridors and fire separations",
+          "Significant changes can require sealed drawings and permit review",
+          "Door styles, glazing, wall finishes"
+        ],
+        [
+          "Accessible entrance, route and washroom",
+          "Checked against the Manitoba Building Code in plan review",
+          "Fixtures, tile, signage"
+        ],
+        [
+          "Plumbing locations",
+          "Moving drains and supply lines adds trades and cost",
+          "Sinks, counters and fixtures"
+        ],
+        [
+          "Heating, ventilation and power",
+          "New ductwork, units or panels need permits and lead time",
+          "Grilles, diffusers, outlet placement"
+        ],
+        [
+          "Lighting layout",
+          "Wiring is set before ceilings close",
+          "Fixture style and colour temperature"
+        ],
+        [
+          "Finishes, furniture and décor",
+          "Can usually change later at lower cost",
+          "Most of your brand expression"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "How do Manitoba's accessibility rules shape a commercial layout?"
+    },
+    {
+      "t": "p",
+      "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard. How they apply to your alteration is settled in plan review, so design for them from the start."
+    },
+    {
+      "t": "p",
+      "x": "Manitoba also kept three amendments of its own: wider use of visual signal devices, handrails on both sides of stairs and ramps, and rules on how some requirements apply to existing buildings. Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
+    },
+    {
+      "t": "p",
+      "x": "Accessibility does not stop at the drawings. Under Manitoba's Accessible Customer Service Standard, every organization with at least one employee must let the public know when and why an accessibility feature is unavailable, including during a renovation. A separate standard for outdoor public spaces, such as sidewalks and parks, is still in development."
+    },
+    {
+      "t": "h2",
+      "x": "Which finishes hold up in busy commercial spaces?"
+    },
+    {
+      "t": "p",
+      "x": "Commercial-grade finishes chosen for the traffic and cleaning each area gets. Entrances take grit and winter salt, washrooms and kitchens need surfaces that can be scrubbed, and counters and door hardware take constant contact. Spend on durability where wear is heaviest, and save in areas customers rarely see, such as back offices and storage rooms."
+    },
+    {
+      "t": "table",
+      "caption": "Where finishes work hardest",
+      "head": [
+        "Space",
+        "Hard-working areas",
+        "What to look for"
+      ],
+      "rows": [
+        [
+          "Retail store",
+          "Entrance, checkout, fitting rooms, display walls",
+          "Flooring that handles grit and salt, impact-resistant walls, display systems you can change"
+        ],
+        [
+          "Office",
+          "Reception, meeting rooms, kitchenette, washrooms",
+          "Durable entry flooring, sound-absorbing ceilings or panels, cleanable counters"
+        ],
+        [
+          "Restaurant or café",
+          "Kitchen, dish area, bar, washrooms",
+          "Finishes that meet Manitoba's food premises guideline"
+        ],
+        [
+          "Clinic",
+          "Treatment rooms, waiting room, washrooms",
+          "Seamless, cleanable surfaces and hardware that stands up to frequent disinfection"
+        ]
       ]
     },
     {
       "t": "p",
-      "x": "In any commercial renovations in Winnipeg, or really anywhere, the questions will always come down to how to make a space look good, while also making it functional for the business. It is easy to get distracted by how every thing looks, while ignoring the functionality, like how its usability is affected by the lighting. Focusing on the functional needs while giving it a practical visual appeal makes the space look impressive while making it operationally effective."
-    },
-    {
-      "t": "p",
-      "x": "What does your business really do in a day to day basis? Who will be using the space? What activities and operational tasks must the space facilitate? For instance, a retail business needs to have clear lines for customers to flow, and the merchandise must be easy to access. Meanwhile, in a business space, the employees must have enough place to do their work and there should be areas where employees will have silence for them to do tasks that require concentration. A good office renovation will definitely try to get these needs at the start."
-    },
-    {
-      "t": "h3",
-      "x": "Consider these additional practical aspects."
-    },
-    {
-      "t": "li",
-      "x": "Layout and Flow: Once the space is set-up, how do people move through or navigate the place? Are there areas that get crowded or bottleneck? Are the customers able to easily find everything? When a space is designed to have good pathways and flow to it, it makes the area feel more open and welcoming."
-    },
-    {
-      "t": "li",
-      "x": "Materials: Sure, things may look good, but how do they function? In areas with a lot of foot traffic, the materials used need to be sturdy. Try to consider the materials used in construction. Do they look inviting? Do they feel good to the touch? Do they feel like they belong?"
-    },
-    {
-      "t": "li",
-      "x": "Lighting: This one is big. Sunlight is wonderful, but for working purposes, should be accompanied by artificial means. If the lights are too dim, the space is rendered useless for working. If the lights are too bright, it feels more like a hospital. The right balance makes for a space that is warm, welcoming, calm, and productive."
-    },
-    {
-      "t": "li",
-      "x": "Brand Identity: Your space should communicate to the world who you are. It can be through the choice of materials, color, texture, and even in the quirks of the construction. It's about creating a consistent experience."
-    },
-    {
-      "t": "p",
-      "x": "It's not about selecting nice looking furniture. It's about integrating good design. A builder in Winnipeg, for example, could recommend furniture that is modular; it could be rearranged as your needs change, and clever storage solutions that keep clutter hidden."
-    },
-    {
-      "t": "p",
-      "x": "When a good design meets the needs of the space used along with the purpose of the design, it adds layers to the space. It’s important that renovation companies in Winnipeg understand this balance. A successful renovation Winnipeg project leaves you with a space that looks great and makes your business operate better."
+      "x": "Food premises have the most specific rules: Manitoba's guideline calls for smooth, impervious floors in food preparation and dishwashing areas, coved and sealed 10 cm (4 inches) up the wall, and washable, non-absorbent walls and ceilings. Our guide to [restaurant renovation permits in Winnipeg](/blog/restaurant-renovation-permits-winnipeg) covers the rest."
     },
     {
       "t": "h2",
-      "x": "Wrapping It Up"
+      "x": "How much does lighting change a commercial space?"
     },
     {
       "t": "p",
-      "x": "While considering your commercial space, remember that it is not only about how it looks or how it performs, it is about how it does both. Consider the daily users of the space and incorporate the design elements that align with your brand and clientele. This balance is what makes the commercial space both visually appealing and practically functional, making your business more comfortable to operate. It’s a win-win."
+      "x": "More than most owners expect. Lighting decides whether staff can work comfortably, whether products and food look right, and whether the room feels calm or harsh. Plan general lighting for safety and cleaning, task lighting where work happens, and accent lighting for displays or brand features, then choose fixture styles to suit."
+    },
+    {
+      "t": "p",
+      "x": "Some spaces have minimum levels: Manitoba's food premises guideline requires at least 215 lux (20 foot-candles) on food preparation and dishwashing work surfaces, with shielded fixtures. If you are replacing lighting, Efficiency Manitoba runs a Business Lighting Program; apply first, because it says not to buy materials or start the project until your application is approved."
+    },
+    {
+      "t": "h2",
+      "x": "How do you carry a brand through a space without overspending?"
+    },
+    {
+      "t": "p",
+      "x": "Choose a small palette and repeat it. Two or three brand colours, one or two signature materials and a consistent signage style, used at the entrance, the main counter and one feature wall, do more than scattering branded details everywhere. Standard materials elsewhere keep the budget for the places customers actually look."
+    },
+    {
+      "t": "li",
+      "x": "**Colour:** test paint and laminate samples under your actual lighting before you commit."
+    },
+    {
+      "t": "li",
+      "x": "**Materials:** give customers one surface to touch that carries the brand, such as a wood counter edge or a tiled service front."
+    },
+    {
+      "t": "li",
+      "x": "**Flow:** a clear path from the door to the counter or reception tells people where to go before any sign does."
+    },
+    {
+      "t": "li",
+      "x": "**Signage:** plan sign locations, power and wall blocking before drywall. The City handles signs separately, and illuminated signs need an electrical sign permit."
+    },
+    {
+      "t": "li",
+      "x": "**Lease length:** attached improvements usually stay with the building, so on a short lease put more of the brand into furniture and fixtures you can take with you."
+    },
+    {
+      "t": "h2",
+      "x": "How do you keep a commercial layout flexible?"
+    },
+    {
+      "t": "p",
+      "x": "Build in what will not change and keep the rest movable. Fixed walls, plumbing and ventilation should follow the long-term plan, while workstations, displays and seating should be furniture you can rearrange. Extra power and data capacity, and lighting that does not depend on today's furniture layout, make later changes cheaper."
+    },
+    {
+      "t": "p",
+      "x": "If you are planning a move, our guide to [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg) explains which improvements usually stay with the landlord."
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote, or start with the [instant renovation estimate](/instant-quote). See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
     }
   ],
-  "faqsTitle": "Most Common Questions",
+  "faqsTitle": "Commercial design questions",
   "faqs": [
     {
-      "q": "What is the significance of both aesthetics and functionality in a business environment?",
-      "a": "Achieving aesthetic and functional requirements in any business environment is important. An aesthetically pleasing business environment helps make customers feel comfortable and build a professional image of the business. An environment conducive to business operations increases workflow and decreases obstructions. It's like having a car that looks great, but doesn't drive. Both attributes are important!"
+      "q": "What matters more in a commercial space, function or looks?",
+      "a": "Function comes first, because exits, accessibility, plumbing, ventilation and lighting are set by code and are expensive to move. Looks still matter: they shape first impressions and how staff feel at work. The practical answer is to lock in the functional layout, then spend the design budget on the finishes customers see and touch most."
     },
     {
-      "q": "How do I ensure my business environment is functional?",
-      "a": "To achieve a functional environment, consider all the ways in which people will move and arrange the furniture and objects in the business environment. Provide spaces that allow people to move and designated areas for entrances and exits and make sure that critical zones are easy to locate. Arrange seating and workspaces."
+      "q": "How do I choose colours for my business space?",
+      "a": "Start from your brand colours and limit the palette to two or three, plus neutrals. Test samples on site under the lighting you will actually use, since warm and cool LED lighting can change how a colour reads. Use the strongest colour where it does the most work, such as the entrance or a feature wall."
     },
     {
-      "q": "What considerations should you take when choosing materials and colors for a business space?",
-      "a": "When choosing colors and materials, think about the personality of your business. Do you want to be feeling energetic and bold, or calm and professional? Select colors matching your brand. For the materials, if they look good, but are tough enough to withstand a lot of people walking on or touching it, that's ideal. A busy place needs durable materials!"
+      "q": "How can I make a small commercial space feel bigger?",
+      "a": "Keep sightlines open from the entrance, use lighter colours and the same flooring through connected areas, and light the walls as well as the floor. Glass partitions let light reach interior rooms, and built-in storage keeps clutter off the floor. Make sure any layout change still keeps exits and accessible routes clear."
     },
     {
-      "q": "What impact does lighting have on a business space?",
-      "a": "Lighting can be a positive or negative influence on a space. Good lighting helps when people are working. Working becomes even easier when you have good lighting. But the mood of the area can change with the light, too. Bright light can create a positive feeling, but soft lights can be a negative influence, and create an uneasy or even scary atmosphere. Mood lighting can be used to light up specific areas of the space, and can even be used to make the space more welcoming."
+      "q": "Are there rules for finishes in a restaurant kitchen?",
+      "a": "Yes. Manitoba's guideline for food handling establishments calls for smooth, impervious floors coved and sealed 10 cm up the wall in food preparation and dishwashing areas, smooth, washable, non-absorbent walls and ceilings, and shielded lighting with at least 215 lux on work surfaces. Your public health inspector reviews the plans before construction starts."
     },
     {
-      "q": "Is space reusable when a business expands or needs to change what it does?",
-      "a": "Yes, planning for such changes is a good idea. Consider, for example, movable furniture or redefinable spaces. This way, when your business requires additional desks, storage, or a different configuration, your space can accommodate those changes without extensive renovations. Any business location can benefit from being flexible."
-    },
-    {
-      "q": "What is the most important thing to remember when designing a business space?",
-      "a": "Probably the most critical thing to consider is that the space will be used by people, and those people will be in there every day. So, as much as it needs to look good, it absolutely must function well, whether it be for customers or for employees. Achieving a balance between function and aesthetics is the goal."
+      "q": "Do signs need City approval in Winnipeg?",
+      "a": "The City handles sign approvals separately from the building permit, and illuminated signs also need an electrical sign permit taken out by a licensed contractor. Check the City's sign requirements before you order a storefront sign, and plan the wall blocking and power for it before the drywall goes up."
     }
   ],
-  "answer": "",
-  "sources": [],
+  "answer": "Decide how the space has to work first, then make it look like your brand within those limits. Settle exits, accessible routes, washrooms, plumbing, ventilation and lighting before choosing finishes, because they are costly to move later. Then pick durable materials, a consistent colour palette and signage that helps customers find their way.",
+  "sources": [
+    {
+      "label": "Province of Manitoba: 2020 Construction Codes Adoption",
+      "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
+      "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
+      "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Accessibility Office: Accessibility standards under the Act",
+      "url": "https://accessibilitymb.ca/accessibility/act-standards.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Health: Guideline for the Design, Construction and Reconstruction of a Food Handling Establishment",
+      "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/protection/docs/construction.pdf",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Business Lighting Program",
+      "url": "https://efficiencymb.ca/business/business-lighting/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+      "url": "https://www.winnipeg.ca/media/6330",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Permits Online",
+      "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: 13 commercial leasing terms you need to know",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+      "accessed": "2026-10-13"
+    }
+  ],
   "reviewedBy": ""
 };

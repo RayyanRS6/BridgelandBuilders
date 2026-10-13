@@ -107,7 +107,7 @@ export const EDITORIAL_POLICY = {
     {
       h2: 'How we keep pages up to date',
       blocks: [
-        { t: 'li', x: 'Cost pages, when we publish them, say which period their prices cover and are refreshed at least once a year.' },
+        { t: 'li', x: 'Cost pages say which period their prices cover and are refreshed at least once a year.' },
         { t: 'li', x: 'Pages that mention government programs, rebates, tax credits or permit rules are re-checked against the official source at least once a year, and the source link shows the date we last checked it.' },
         { t: 'li', x: 'Our guides show the date they were last updated. We change that date only when the content actually changes.' },
       ],

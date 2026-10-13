@@ -5,97 +5,228 @@
 export default {
   "blocks": [
     {
+      "t": "p",
+      "x": "Return on investment (ROI) is the question behind every commercial renovation: will the money come back as higher sales, lower costs or a more valuable property? Published averages rarely match a specific business, so this guide skips them. Instead, it gives you a way to estimate the return for your own space, using numbers you can check."
+    },
+    {
       "t": "h2",
-      "x": "Calculating ROI: Which Commercial Renovations Are Most Profitable"
+      "x": "How do you calculate ROI on a commercial renovation?"
     },
     {
       "t": "p",
-      "x": "Your commercial property represents your business to your community. Promoting your brand and explaining what services or products you offer to potential customers. A well maintained and attractive building has the potential of increasing customers. Renovation projects improve business and operational efficiencies. These projects come with significant costs so business owners need to think about them as an investment instead of an expense. Let's explore the potential of these projects and how to maximize the returns."
+      "x": "Add up the total cost, including construction, design, permits, downtime and financing, then estimate the yearly benefit in extra margin, savings or avoided costs. ROI is total benefit over the time you will use the space, minus total cost, divided by total cost. Payback period is total cost divided by yearly benefit."
     },
     {
-      "t": "takeaways",
-      "title": "Key Takeaways",
-      "items": [
-        "Your commercial space is an investment and so is the potential renovation. The right renovation increases the business potential, operational efficiencies, and increases the commercial property value.",
-        "Identify your business goals prior to the renovation. Do you want to appeal to more customers or tenants? Do you want to improve your brand image? Do you want to provide your employees with a better work environment?",
-        "Prioritize renovations to spaces that have a high flow of traffic, both operationally and aesthetically. Focus on areas like lobbies and restrooms.",
-        "Installing energy efficient systems and appliances are a great renovation project. They decrease operating expenses and increase the appeal of the property.",
-        "It is important to crunch the numbers. By doing cost analyses, you will be able to understand cost-benefit analyses by determining how much a renovation will cost versus how much additional income or valuation it will generate."
-      ]
-    },
-    {
-      "t": "h3",
-      "x": "Calculating ROI: Which Commercial Renovations Are Most Profitable"
-    },
-    {
-      "t": "p",
-      "x": "The excitement of getting new designs and features for your business is something that will always be there, however, the new design and features have to make sense for the cost. When you get your new designs, features, and layouts, how much will they cost? When you get your new designs and features will the ROI be positive? Will the renovations help you generate more business? The answer will determine how you cryptocurrency and how much more you will make by implementing the renovations. Having the answer to that question will allow you to legally get rich by the renovations implementing the new designs and features. The answer will come from the renovations taking time, and from there the renovations will create a return."
-    },
-    {
-      "t": "p",
-      "x": "It often comes down to a few key areas that we look for bang for our buck."
-    },
-    {
-      "t": "p",
-      "x": "Consider your building an asset, increasing its worth. Modern upgrades to your building's infrastructure, building tech, or fresh paint, updated finishes, etc. increases property appeal to buyers or tenants. This can be very important if you are considering a sale in the future."
-    },
-    {
-      "t": "p",
-      "x": "A renovation is a perfect time to try a new way for the space to function. Optimized layouts, new tech, and improved common areas can make employees and operations more productive. More productive operations means more savings."
-    },
-    {
-      "t": "p",
-      "x": "Your and your employees' first impressions are often the first impression of your business that customers and clients are Interacting with. Your building's complex, modern look can signal new customers, and even improve their perception of your brand. Especially if your building is well maintained, a modern look can signal your industry to other companies growing your business."
-    },
-    {
-      "t": "p",
-      "x": "Upgrades like LED's or updated HVAC systems you can feel good about for the environment, but they also lower utility costs. New equipment also tends to require less maintenance, increasing savings in the long run."
-    },
-    {
-      "t": "p",
-      "x": "It is important to work with knowledgeable builders in Winnipeg when considering any type of commercial renovation services. This is because they assist in understanding which renovations suit your goals and align with current local market conditions."
+      "t": "table",
+      "caption": "What goes into a renovation ROI estimate",
+      "head": [
+        "Line",
+        "What to include",
+        "Where the number comes from"
+      ],
+      "rows": [
+        [
+          "Project cost",
+          "Construction, design and engineering fees, permit fees, contingency",
+          "Your written quote and your designer's fees"
+        ],
+        [
+          "Disruption cost",
+          "Sales lost during closures, temporary space, overtime, moving",
+          "Your own sales records"
+        ],
+        [
+          "Financing cost",
+          "Interest and fees over the loan term",
+          "Your lender"
+        ],
+        [
+          "Yearly benefit",
+          "Extra gross margin, energy and maintenance savings, staff time saved",
+          "Sales data, utility bills, repair history"
+        ],
+        [
+          "Useful life",
+          "Remaining lease term or the life of the work, whichever is shorter",
+          "Your lease and product information"
+        ]
+      ],
+      "note": "Use gross margin, not sales: a renovation that adds sales also adds the cost of the goods you sell."
     },
     {
       "t": "p",
-      "x": "For businesses in Winnipeg, the first step is selecting the appropriate builders in Winnipeg. A quality contractor is able to pick up on the details regarding the commercial renovation services, and will assist you with the entire process, from the first plans to the final details. Whether your renovations involve a simple facelift or a complete overhaul, they will assist you in focusing on the renovations that will provide the greatest ROI. Keep in mind that any renovation project in Winnipeg should be viewed from a strategic perspective, as it is an investment and not an expense."
+      "x": "Run the numbers for each part of the project, not just the total. A new entrance and a lighting retrofit may pay back on very different timelines, and splitting them shows which parts are carrying the project."
     },
     {
-      "t": "h3",
-      "x": "Wrapping It Up: Smart Renovations, Smarter Business"
+      "t": "h2",
+      "x": "Which commercial upgrades tend to pay back?"
     },
     {
       "t": "p",
-      "x": "With the different examples of how to improve your commercial property, the question that needs to be answers is whether those improvements will make you money, or save you money. Renovations should be a mix of aesthetic improvements and smart changes that allow your business to grow. Consider the true needs of your customers and your team. Upgrading your lobby, your bathrooms, or making the whole place a bit more energy efficient can go a long way. Renovations can be cost efficient, or be a huge drain. The best way to determine how cost effective a renovation would be is to do the math, it may feel a bit like homework, but it is worth it. Keep some of these ideas in mind to ensure you are making the most valuable renovations to your property."
+      "x": "Upgrades that remove a bottleneck or cut a recurring cost are the easiest to justify, because you can measure the before and after. Layout changes that speed up service, lighting and HVAC improvements that lower energy use, and durable finishes that end repeated repairs usually have the clearest case. Purely cosmetic changes are harder to prove."
+    },
+    {
+      "t": "table",
+      "caption": "Common upgrades and how they can pay back",
+      "head": [
+        "Upgrade",
+        "How it can pay back",
+        "Measure this first"
+      ],
+      "rows": [
+        [
+          "Service layout (counters, checkout, kitchen flow)",
+          "More customers served per hour, less staff walking",
+          "Peak-hour transactions and wait times"
+        ],
+        [
+          "Lighting retrofit",
+          "Lower electricity use and fewer lamp replacements",
+          "Fixtures, hours of use, electricity bills"
+        ],
+        [
+          "Heating, ventilation and controls",
+          "Lower energy use, better comfort",
+          "Gas and electricity bills, comfort complaints"
+        ],
+        [
+          "Windows, doors and insulation",
+          "Lower heating costs, fewer drafts at entrances",
+          "Heating bills, cold spots"
+        ],
+        [
+          "Washrooms and accessible entrances",
+          "Better customer experience, fewer complaints",
+          "Customer feedback, existing barriers"
+        ],
+        [
+          "Storefront and entrance",
+          "Stronger street presence and first impressions",
+          "Foot traffic before and after"
+        ],
+        [
+          "High-wear finishes",
+          "Fewer repairs and replacements",
+          "Recent repair invoices"
+        ]
+      ],
+      "note": "A way to rank options, not a promise of returns. Results depend on your business and space."
+    },
+    {
+      "t": "h2",
+      "x": "Does owning or leasing change the return?"
+    },
+    {
+      "t": "p",
+      "x": "Yes. If you own the building, improvements add to an asset you keep, and better finishes or systems can help with future tenants or a sale. If you lease, attached improvements usually stay with the landlord when you leave, so the payback has to fit inside your remaining lease term, or be offset by a landlord allowance."
+    },
+    {
+      "t": "p",
+      "x": "Tenants can improve the return by negotiating a tenant improvement allowance or rent-free months, and by putting more of the budget into trade fixtures, such as furniture and display systems, that move with the business. Our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) explains landlord allowances and loans."
+    },
+    {
+      "t": "h2",
+      "x": "How can energy upgrades improve the return?"
+    },
+    {
+      "t": "p",
+      "x": "By lowering a cost you pay every month and, in some cases, by qualifying for incentives that reduce the upfront price. Efficiency Manitoba lists business programs for lighting, building envelope, HVAC and controls, refrigeration, energy audits and deep retrofits. Check eligibility before you order anything, because some programs require approval first."
+    },
+    {
+      "t": "p",
+      "x": "The Business Lighting Program is a clear example: Efficiency Manitoba says not to purchase materials or start the project until your application is approved, and applications can come from the building owner or from a contractor or vendor on the owner's behalf. Build that approval step into the schedule so an early order does not cost you the incentive."
+    },
+    {
+      "t": "h2",
+      "x": "What lowers the return on a renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Mostly the things that raise cost or delay reopening: scope changes after construction starts, hidden conditions found during demolition, long closures, finishes chosen for looks in high-wear areas, and opening dates set before the occupancy permit is in hand. Each one adds cost without adding benefit, so plan them out early."
+    },
+    {
+      "t": "p",
+      "x": "Timing matters as much as cost. The City of Winnipeg's occupancy bulletin counts stocking shelves, training staff and conducting business as occupying a space, so none of that can start in a renovated area until the occupancy permit is issued where one is required. Our guide to [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) covers overruns in detail."
+    },
+    {
+      "t": "h2",
+      "x": "Questions to answer before you commit"
+    },
+    {
+      "t": "li",
+      "x": "What specific result should this renovation change, and how will we measure it?"
+    },
+    {
+      "t": "li",
+      "x": "How many years will we use the space, and what does the lease say about improvements?"
+    },
+    {
+      "t": "li",
+      "x": "Which parts pay back fastest if the budget has to shrink?"
+    },
+    {
+      "t": "li",
+      "x": "Can we stay open through phasing or after-hours work instead of closing?"
+    },
+    {
+      "t": "li",
+      "x": "Are there incentives we must apply for before ordering equipment?"
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** For a first number to test your ROI, try the [instant renovation estimate](/instant-quote). For a figure you can plan around, [book a free on-site visit](/book-online) and get a free written quote. Bridgeland Builders renovates [retail stores](/services/retail-renovations) and other [commercial spaces](/services/commercial-renovations) in Winnipeg and nearby communities."
     }
   ],
-  "faqsTitle": "Business Renovation FAQs",
+  "faqsTitle": "Renovation ROI questions",
   "faqs": [
     {
-      "q": "What does ROI mean for business renovations?",
-      "a": "ROI refers to Return on Investment - a measurement that helps businesses determine if the financial value of renovating a business space is worth the expense. You may want to ask yourself, 'Will the changes I make help my business make more profit than I spent on them?'"
+      "q": "What does ROI mean for a business renovation?",
+      "a": "Return on investment compares what a renovation gives back with what it costs. For a business, the return usually comes as extra gross margin from more or faster sales, savings on energy and maintenance, or a property that is easier to lease or sell. If the total benefit over the time you use the space exceeds the total cost, the return is positive."
     },
     {
-      "q": "Which types of renovations give the best return?",
-      "a": "Renovations that improve the aesthetics of a business and optimize operational efficiency tend to have the greatest payback. Examples would be making the entrance more inviting, retail store upgrades, customizing the layout of the offices, or enhancing the building's energy efficiency. These changes can attract more customers or make your workforce more productive."
+      "q": "Is there a typical ROI for commercial renovations?",
+      "a": "Not one you can rely on. Returns depend on your business, location, lease, the condition of the space and how the work is done, so averages from other markets or property types rarely transfer. A better approach is to estimate the benefit of each part of the project using your own sales, staffing and utility data."
     },
     {
-      "q": "How can a renovation increase my property's value?",
-      "a": "Improving the internal and external appearance of your building, upgrading its operational systems, and installing value-adding eco-friendly features can increase the value of your building as an asset, especially if you decide to dispose of it."
+      "q": "Do energy-efficiency upgrades qualify for incentives in Manitoba?",
+      "a": "Some do. Efficiency Manitoba offers business programs for lighting, building envelope, HVAC and controls, refrigeration and more. Program rules differ, and the Business Lighting Program says not to buy materials or start work until your application is approved, so check the current program page before you order equipment or sign for that part of the work."
     },
     {
-      "q": "Can renovations help save money?",
-      "a": "Yes! Putting in energy saving lights (like LEDs), better heating systems, and better cooling systems can save you money on your monthly bills. In addition, newer equipment often doesn't need fixing, which saves you on maintenance costs."
+      "q": "Should a tenant invest in renovating a leased space?",
+      "a": "It can make sense when the lease is long enough for the benefit to cover the cost, or when the landlord contributes through an allowance or rent-free months. Attached improvements usually stay with the building when you leave, so tenants on shorter leases often get more value from movable fixtures and furniture."
     },
     {
-      "q": "How do I know if a renovation is worth the cost?",
-      "a": "You need to figure out how much the renovations will cost versus the money your business will make after the renovations. Will you get more customers? Will you raise your prices? If the additional money coming in is more than the cost, go for it."
-    },
-    {
-      "q": "Does the location of my business affect renovation ROI?",
-      "a": "Yes! If your business is in a place with a lot of people living and working, or in an area with a lot of new businesses, your renovations are more likely to be worth it. More people means more potential customers, which creates more demand for your services. More demand makes the upgrades more valuable."
+      "q": "How do I reduce the cost of closing during a renovation?",
+      "a": "Phase the work so part of the space keeps operating, and schedule disruptive tasks for evenings and weekends where building and City noise rules allow. Bridgeland Builders offers after-hours and weekend scheduling for commercial work and sends weekly progress updates, so you can plan staffing and customer notices around each phase."
     }
   ],
-  "answer": "",
-  "sources": [],
+  "answer": "No renovation comes with a guaranteed return. The upgrades most likely to pay back are tied to a measurable result: more customers or seats served, fewer staff hours lost to a poor layout, lower energy and maintenance bills, or a space that is easier to lease or sell. Estimate each one against how long you will use the space.",
+  "sources": [
+    {
+      "label": "Efficiency Manitoba: Business programs",
+      "url": "https://efficiencymb.ca/business/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Business Lighting Program",
+      "url": "https://efficiencymb.ca/business/business-lighting/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: 13 commercial leasing terms you need to know",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+      "url": "https://www.winnipeg.ca/media/6131",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+      "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+      "accessed": "2026-10-13"
+    }
+  ],
   "reviewedBy": ""
 };

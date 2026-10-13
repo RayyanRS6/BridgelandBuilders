@@ -7,28 +7,6420 @@
 
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = [
-  "Commercial Renovations",
-  "Whole Home Renovations",
-  "Bathroom Renovations",
-  "Kitchen Renovations",
-  "General Contracting"
+  "Costs & Budgets",
+  "Permits & Planning",
+  "Basements & Suites",
+  "Kitchens & Baths",
+  "Older Homes",
+  "Hiring a Contractor",
+  "Commercial",
+  "Money & Rebates"
 ];
 
 /** Published posts only (blog-raw status "published"), newest first, with bodies. */
 export const BLOG_POSTS = [
   {
-    "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
-    "title": "How to Balance Functionality and Aesthetics in a Commercial Space",
-    "metaTitle": "How to Balance Functionality and Aesthetics in a Commercial Space",
-    "metaDescription": "Learn how to balance functionality and aesthetics in a commercial space. Discover design tips for creating efficient, beautiful, and brand-aligned…",
-    "excerpt": "Learn how to balance functionality and aesthetics in a commercial space. Discover design tips for creating efficient, beautiful, and brand-aligned business environments.",
-    "category": "Commercial Renovations",
+    "slug": "basement-development-permits-winnipeg",
+    "title": "Basement Development Permits in Winnipeg: How to Apply",
+    "metaTitle": "Basement Development Permits in Winnipeg | Bridgeland",
+    "metaDescription": "What Winnipeg requires to finish a basement: when you need a permit, ceiling heights, bedroom windows, insulation, alarms, drawings and inspections.",
+    "excerpt": "What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.",
+    "category": "Permits & Planning",
     "categories": [
-      "Commercial Renovations"
+      "Permits & Planning",
+      "Basements & Suites"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 9,
+    "hero": null,
+    "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
+    "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w",
+    "ogImage": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x630.e8c47488.jpg",
+    "heroAlt": "Title card: Basement Development Permits in Winnipeg: How to Apply",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations"
+    ],
+    "cluster": "winnipeg-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Basement development is the City of Winnipeg’s term for turning an unfinished lower level into rooms, bedrooms or living space. The City updated its basement construction guide and permit application form in October 2025, and most of the rules that shape a layout, such as ceiling heights, bedroom windows and door widths, are in them. Here’s what they say in plain terms, checked on October 13, 2026. If anything here differs from the City’s documents or by-laws, theirs govern."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a permit to finish a basement in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Yes, if you’re adding rooms, bedrooms or living space. The City says a building permit is needed, and it must match any development permit approval or application. Cosmetic changes such as painting, flooring and millwork don’t need one. Electrical and plumbing work each need a separate permit."
+      },
+      {
+        "t": "p",
+        "x": "A development permit is a separate zoning approval. The basement application form asks you to declare whether you need one and warns that the building permit will be refused if it turns out you did. One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite."
+      },
+      {
+        "t": "h2",
+        "x": "What are the requirements for basement development in the City of Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s October 2025 basement guide sets minimum ceiling heights, bedroom window sizes, door widths, stair handrails and guards, interconnected smoke and carbon monoxide alarms, foundation-wall insulation, bathroom exhaust, return air in bedrooms, electrical outlets and lighting, and a backwater valve for new below-grade plumbing. The table summarizes the numbers you’ll plan around."
+      },
+      {
+        "t": "table",
+        "caption": "Key City of Winnipeg basement development requirements",
+        "head": [
+          "Item",
+          "What the City’s guide says"
+        ],
+        "rows": [
+          [
+            "Bedroom ceiling height",
+            "2.1 m (6 ft. 11 in.) over the lesser of the room’s area or 3.5 m² (38 sq. ft.)"
+          ],
+          [
+            "Bathroom ceiling height",
+            "2.1 m (6 ft. 11 in.) over the lesser of the room’s area or 2.2 m² (24 sq. ft.)"
+          ],
+          [
+            "Halls and other finished rooms",
+            "2.1 m (6 ft. 11 in.) over the whole space; hallways at least 860 mm (2 ft. 10 in.) wide"
+          ],
+          [
+            "Unfinished laundry and storage routes",
+            "2 m (6 ft. 7 in.) under beams"
+          ],
+          [
+            "Bedroom window",
+            "Opens from inside without tools; at least 0.35 m² (3.77 sq. ft.) clear opening with no dimension under 380 mm (15 in.); 760 mm (2 ft. 6 in.) clear in front of it in a window well"
+          ],
+          [
+            "Door widths",
+            "Main bathroom and bedrooms 760 mm (2 ft. 6 in.); other bathrooms and walk-in closets 610 mm (2 ft.); all other doors 810 mm (2 ft. 8 in.); all 1980 mm (6 ft. 6 in.) high"
+          ],
+          [
+            "Stairs with more than two risers",
+            "Handrail on at least one side, 865–1070 mm (2 ft. 10 in. to 3 ft. 6 in.) high; guards at least 900 mm (2 ft. 11.5 in.) where required"
+          ],
+          [
+            "Smoke and CO alarms",
+            "Smoke alarm on every level and in each bedroom; CO alarms for bedrooms where there is a fuel-burning appliance or attached garage; all interconnected"
+          ],
+          [
+            "Foundation-wall insulation",
+            "RSI 2.8 (R-15.9) with an HRV, or RSI 3.46 (R-19.6) without; vapour barrier on the warm side"
+          ],
+          [
+            "Bathroom ventilation",
+            "Fan of at least 25 L/s (50 cfm), exhausted outdoors or through an HRV"
+          ],
+          [
+            "Heating",
+            "A return-air duct in every bedroom and one central return in the living area"
+          ],
+          [
+            "Electrical",
+            "Separate permit; receptacles in finished walls, a light in each room, a three-way switched stair light, and arc-fault protection on basement receptacles (with listed exceptions)"
+          ],
+          [
+            "Plumbing",
+            "Separate permit; an approved backwater valve protecting all new below-grade plumbing; water and drain lines on the warm side of the insulation"
+          ]
+        ],
+        "note": "Summary of the City of Winnipeg’s Basement/Lower Level Development guide (updated October 2025). The guide, the Winnipeg Building By-law and the Manitoba Building Code govern."
+      },
+      {
+        "t": "h2",
+        "x": "Can an existing basement window be used for a bedroom?"
+      },
+      {
+        "t": "p",
+        "x": "Only if it meets the size rule. The City’s guide says that if existing lower-level windows don’t meet the required size, they have to be replaced or the bedroom won’t be permitted. A bedroom door that leads directly outside removes the need for the window."
+      },
+      {
+        "t": "p",
+        "x": "Any window added or enlarged in the foundation wall needs drawings stamped by an engineer, plus a site plan and elevations with the application. For choosing the window itself, see [window and door replacement in Winnipeg](/blog/window-and-door-replacement-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "What documents does the City ask for?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s basement building permit form asks for one fully dimensioned copy of each document that applies: a floor plan, a site plan and elevations if foundation-wall openings change, structural or engineered drawings for structural work, the basement development checklist, and the owner and declaration forms. Here’s what each covers:"
+      },
+      {
+        "t": "li",
+        "x": "A floor plan showing every room labelled by use, room sizes, all doors and windows with width and height, and the electrical and plumbing layout."
+      },
+      {
+        "t": "li",
+        "x": "A site plan and elevations when new or larger windows or doors are proposed in the foundation walls."
+      },
+      {
+        "t": "li",
+        "x": "Structural drawings when joists or beams are altered, stairs are installed or moved, or load-bearing walls are opened, moved or removed; engineered drawings for major work such as altering teleposts or beams or repairing foundation walls."
+      },
+      {
+        "t": "li",
+        "x": "The basement development checklist: bedrooms being created, bedroom window types and unobstructed opening sizes, window wells, door sizes, finished ceiling heights, height under beams and bulkheads, and headroom at the stairs."
+      },
+      {
+        "t": "li",
+        "x": "An owner statement if a contractor applies, the declaration form, and the development permit exemption declaration if your project is exempt."
+      },
+      {
+        "t": "p",
+        "x": "Any new bedroom triggers a review by the City’s Plan Examination staff. A house with more than five bedrooms in total also needs a residential ventilation record or engineered mechanical drawings."
+      },
+      {
+        "t": "h2",
+        "x": "How do you apply?"
+      },
+      {
+        "t": "oli",
+        "x": "Confirm whether you need a development permit by calling Permits Direct Line at 204-986-5140 or emailing ppd-zdo@winnipeg.ca."
+      },
+      {
+        "t": "oli",
+        "x": "Assemble the drawings and checklist described above."
+      },
+      {
+        "t": "oli",
+        "x": "Submit through [Permits Online](https://www.winnipeg.ca/permitsonline), by email to ppd-permit@winnipeg.ca, or as one paper package at the Zoning & Permits office, Unit 31-30 Fort Street."
+      },
+      {
+        "t": "oli",
+        "x": "Arrange the separate electrical and plumbing permits for that work."
+      },
+      {
+        "t": "oli",
+        "x": "Book each inspection before the work it covers is closed in."
+      },
+      {
+        "t": "h2",
+        "x": "Which inspections will a basement need?"
+      },
+      {
+        "t": "p",
+        "x": "Before any new work is covered, an inspection has to be requested through the City’s housing inspection request form. Wiring and plumbing are inspected before insulation or drywall. Insulated walls need a rough-in inspection, then a preboard inspection of insulation and vapour barrier, which the City requires for any basement developed after the house was built."
+      },
+      {
+        "t": "p",
+        "x": "Two details from the City’s insulation bulletin catch people out. Batt insulation can’t touch the concrete foundation; a moisture barrier or air space is required. And builders were allowed to leave the basement vapour barrier partly unsealed, so whoever develops the basement is responsible for reinstalling insulation where needed, sealing the vapour barrier and having it inspected."
+      },
+      {
+        "t": "p",
+        "x": "The City also recommends building non-loadbearing partitions as floating walls, with about 25 mm (1 in.) of space at the top or bottom, because concrete basement floors can move upward when soil moisture increases. Our guide to [clay soil and basement cracks](/blog/clay-soil-basement-cracks-winnipeg) explains why that matters here."
+      },
+      {
+        "t": "h2",
+        "x": "What should you check before you apply?"
+      },
+      {
+        "t": "li",
+        "x": "Moisture: find and fix the source of any dampness before framing. The [basement flood protection guide](/blog/basement-flood-protection-winnipeg) covers backwater valves and sump pits."
+      },
+      {
+        "t": "li",
+        "x": "Radon: Health Canada recommends a test of at least three months, ideally in fall or winter. See [radon testing before finishing a basement](/blog/radon-testing-before-finishing-a-basement)."
+      },
+      {
+        "t": "li",
+        "x": "Height under beams and ducts: the checklist asks for it separately from the ceiling height, so measure it before you place bedrooms and bathrooms."
+      },
+      {
+        "t": "li",
+        "x": "Bedroom windows: measure the clear opening of each existing window against the 0.35 m² and 380 mm minimums."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "A typical basement takes about 4–8 weeks to build. Our [basement renovation](/services/basement-renovations) projects start with a free on-site visit and a free written quote, and permits and inspections are coordinated with the City or your local municipality. For a starting range, see [basement renovation costs in Winnipeg](/services/basement-renovations/cost) or try the [instant estimate](/instant-quote), then [book your visit](/book-online) when you’re ready."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "How do I apply for a development permit in Winnipeg?",
+        "a": "First confirm whether you need one by calling the Permits Direct Line at 204-986-5140 or emailing ppd-zdo@winnipeg.ca. Then submit the development permit application and checklist through Permits Online. The City can review it at the same time as your building permit (concurrent review) or before it (sequential review)."
+      },
+      {
+        "q": "Do I need a permit to add a bedroom in my basement?",
+        "a": "Yes. Creating a bedroom needs a building permit and a review by the City’s Plan Examination staff. The room needs a window that opens without tools, with at least 0.35 m² (3.77 sq. ft.) of clear opening and no side under 380 mm (15 in.), or a door straight outside. It also needs its own smoke alarm."
+      },
+      {
+        "q": "What ceiling height do I need to finish a basement in Winnipeg?",
+        "a": "The City’s guide sets 2.1 m (6 ft. 11 in.) from finished floor to ceiling for bedrooms, bathrooms, halls and other finished rooms; bedrooms and bathrooms need it over only part of the floor, next to the entry. Under beams on the way to laundry and storage, 2 m (6 ft. 7 in.) is allowed. Measure under beams and ducts first."
+      },
+      {
+        "q": "Can I do my own basement electrical and plumbing in Winnipeg?",
+        "a": "Possibly. The City lets homeowners take out electrical and plumbing permits only for work they do personally in a single detached house that is their primary residence, and some electrical work, such as service upgrades, is excluded. Otherwise a licensed contractor takes out the permit. Either way, the work is inspected before it’s covered."
+      },
+      {
+        "q": "Does a basement bathroom need a backwater valve?",
+        "a": "Yes. The City’s basement guide says an approved backwater valve must protect all new plumbing installed below grade, and it needs a plumbing permit. Homes built after 1979 were required to have a backwater valve, but it has to sit where it protects the new branches, so check its location before you plan the bathroom."
+      }
+    ],
+    "answer": "In Winnipeg, you need a building permit to develop a basement when you add rooms, bedrooms or living space; painting, flooring and millwork alone don’t need one. Electrical and plumbing work need separate permits. A development permit may also apply, for example when added cooking equipment means the space may count as a secondary suite.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Basement/lower level development",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/basementlower-level-development",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Basement/lower level development: construction information (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6349",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application form: basement/lower level development (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6968",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-008-B: Vapour barrier & insulation in housing inspections",
+        "url": "https://www.winnipeg.ca/media/6147",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Electrical installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Plumbing installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Permits Online",
+        "url": "https://www.winnipeg.ca/permitsonline",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Basement & overland flooding",
+        "url": "https://www.winnipeg.ca/services-programs/water-wastewater/flooding/basement-overland-flooding",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada – Radon: What you need to know",
+        "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radon-what-you-need-to-know.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "basement-flood-protection-winnipeg",
+    "title": "Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits",
+    "metaTitle": "Basement Flooding in Winnipeg | Bridgeland Builders",
+    "metaDescription": "How backwater valves and sump pits protect Winnipeg basements, which homes must have them, the permits involved, and why the City subsidy no longer exists.",
+    "excerpt": "Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.",
+    "category": "Basements & Suites",
+    "categories": [
+      "Basements & Suites"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.9f921e14.webp",
+    "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1320.89704a8b.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1320.99427962.avif 1320w",
+    "ogImage": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1200x630.bca545a6.jpg",
+    "heroAlt": "Title card: Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations"
+    ],
+    "cluster": "basement-water",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "If you’re planning to finish a basement, the most expensive mistake is building over a water problem. In Winnipeg, water usually reaches a basement in one of three ways, and each has a different fix. This guide uses the City of Winnipeg’s flooding pages and permit bulletins, checked on October 13, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "How does water get into a Winnipeg basement?"
+      },
+      {
+        "t": "p",
+        "x": "Three common ways. Sewer backup happens when heavy rain or snowmelt overloads the sewer and water comes up through the floor drain. Groundwater collects in the weeping tile around the foundation and needs somewhere to go. Surface water from snowmelt, downspouts and poor grading soaks in along the walls and through cracks."
+      },
+      {
+        "t": "table",
+        "caption": "Common sources of basement water and the usual protection",
+        "head": [
+          "Source",
+          "How it shows up",
+          "Usual protection"
+        ],
+        "rows": [
+          [
+            "Sewer backup",
+            "Water or sewage rising from the floor drain during heavy rain or melt",
+            "Backwater valve on the sewer line, installed by a licensed plumber"
+          ],
+          [
+            "Groundwater",
+            "Water collecting at the footing and weeping tile",
+            "Sump pit and pump that discharge outside"
+          ],
+          [
+            "Surface water",
+            "Damp walls, or leaks at cracks and window wells in spring",
+            "Ground sloped away from the house, clear eavestroughs, snow cleared from the foundation"
+          ],
+          [
+            "River or overland flooding",
+            "Water reaching the house over land",
+            "Follow provincial flood outlooks and local advisories; talk to your insurer about coverage"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "What does a backwater valve do?"
+      },
+      {
+        "t": "p",
+        "x": "A backwater valve sits on the sewer line in the basement and keeps sewage in an overloaded main sewer from backing up into the house. The City advises having a licensed plumber install one, and it needs a plumbing permit and inspection. If your home was built after 1979, it was required by law to have one."
+      },
+      {
+        "t": "p",
+        "x": "The valve matters again when you finish a basement. The City’s basement guide says an approved backwater valve must protect all new plumbing branches installed below grade, so a new basement bathroom or bar sink has to drain through one."
+      },
+      {
+        "t": "h2",
+        "x": "What does a sump pit do?"
+      },
+      {
+        "t": "p",
+        "x": "A sump pit is set into the basement floor and collects water from the weeping tiles around your foundation; the pump pushes it outside through a discharge pipe. Homes built in Winnipeg since 1990 are required to have one, and some older homes have had one added."
+      },
+      {
+        "t": "p",
+        "x": "The City says homes not protected by a backwater valve or sump pit drainage system are at greater risk of basement flooding. The two work together: if the weeping tile drains into the sewer line and there is no sump pit, that water has nowhere to go while the backwater valve is closed. Ask a licensed plumber how your house is connected before you decide what to add."
+      },
+      {
+        "t": "h2",
+        "x": "Which permits do you need to add a sump pit or backwater valve?"
+      },
+      {
+        "t": "p",
+        "x": "Under the City’s January 2025 bulletin, installing a sump pit that drains a new or existing weeping tile system needs a building permit for alterations. A plumbing permit covers the required backwater valve and any other plumbing, and an electrical permit covers the sump pump’s dedicated receptacle. Inspections are booked once permits are issued and the work is ready."
+      },
+      {
+        "t": "li",
+        "x": "A sump pit is required if you add or replace a perimeter weeping tile system, replace all the weeping tile leads, or alter or extend the system. Repairing only a section of weeping tile doesn’t require one."
+      },
+      {
+        "t": "li",
+        "x": "The pit has to meet current code; a smaller pit isn’t allowed just because the house is older."
+      },
+      {
+        "t": "li",
+        "x": "Book inspections at winnipeg.ca/housinginspection or by phone at 204-986-5300, weekdays 8:30 a.m. to 4 p.m."
+      },
+      {
+        "t": "p",
+        "x": "Outside Winnipeg, the same devices are common, but the permit office and its rules belong to your municipality. Our [renovation permits guide](/blog/winnipeg-renovation-permits) lists the offices for nearby communities."
+      },
+      {
+        "t": "h2",
+        "x": "Is there still a City subsidy for backwater valves?"
+      },
+      {
+        "t": "p",
+        "x": "No. The City and Province ran a Basement Flooding Protection Subsidy Program, but it didn’t receive funding for the 2017 program year and City Council cancelled it; applications received after December 30, 2016 weren’t processed. Some older articles still describe it as available. Budget for the work yourself, and call 311 if you want to confirm."
+      },
+      {
+        "t": "h2",
+        "x": "Where should the sump pump discharge?"
+      },
+      {
+        "t": "p",
+        "x": "Onto your own yard, away from the foundation. The City says draining sump water into a floor drain is illegal and raises the flooding risk for you and your neighbours, and the discharge can’t drain onto neighbouring properties, lanes, sidewalks, boulevards or streets. Keep the end of the hose well away from your property line."
+      },
+      {
+        "t": "h2",
+        "x": "What should you sort out before finishing a basement?"
+      },
+      {
+        "t": "li",
+        "x": "Confirm what you have. If you’re unsure whether the house has a backwater valve or sump pit, the City suggests a licensed plumber can check."
+      },
+      {
+        "t": "li",
+        "x": "Keep both reachable. You’ll need to test the pump, clean the pit and check the valve after the basement is finished, so plan access panels or an unfinished utility area."
+      },
+      {
+        "t": "li",
+        "x": "Plan the electrical. The City requires a dedicated receptacle for the sump pump."
+      },
+      {
+        "t": "li",
+        "x": "Fix the outside. Improve drainage so water flows away from the house without affecting neighbours, and watch for paths, patios, decks and driveways that have settled toward the walls."
+      },
+      {
+        "t": "li",
+        "x": "Protect what’s stored. The City notes backups are often only a few inches deep, so raise appliances on blocks and use shelves and plastic totes rather than cardboard boxes on the floor."
+      },
+      {
+        "t": "p",
+        "x": "If the walls themselves are leaking or cracked, that’s a job for a foundation specialist or structural engineer before any framing goes up. See [clay soil and basement cracks](/blog/clay-soil-basement-cracks-winnipeg) for what to look for."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "A dry basement is the starting point for any [basement renovation](/services/basement-renovations). Every project starts with a free on-site visit and a free written quote; ask us to look at drainage and moisture while we’re there. [Book your visit](/book-online), or see [what a basement renovation costs in Winnipeg](/services/basement-renovations/cost) first. If spring is coming, our [spring flood prep checklist](/blog/spring-flood-prep-winnipeg-basements) has the seasonal steps."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Does my Winnipeg home have a backwater valve?",
+        "a": "If it was built after 1979, it was required by law to have one, and homes built since 1990 were also required to have a sump pit. Older homes may have had either added later. If you can’t tell what your house has, or whether it works, the City suggests asking a licensed plumber to check."
+      },
+      {
+        "q": "Can I install a backwater valve myself?",
+        "a": "The City advises having a licensed plumber install a backwater valve or sump pit drainage system. A homeowner can take out a plumbing permit only for a single detached house that is their primary residence and only if they do the work themselves. Either way the work needs a plumbing permit and a City inspection. If the work includes a sump pit with new or replaced weeping tile, a building permit and an electrical permit are needed too."
+      },
+      {
+        "q": "How often should I test my sump pump?",
+        "a": "The City suggests testing it by pouring water into the pit at the start of spring and before you leave home for a long time, and cleaning the pump at least once a year. Check that the discharge hose points into your own yard, away from the foundation, and remember the pump won’t run without power."
+      },
+      {
+        "q": "Is the Winnipeg basement flooding subsidy still available?",
+        "a": "No. The City’s Basement Flooding Protection Subsidy Program didn’t receive funding for the 2017 program year and was cancelled by City Council, and applications received after December 30, 2016 weren’t processed. The City’s current flooding page lists no replacement, so plan the cost of a valve or sump pit into your budget."
+      },
+      {
+        "q": "Who do I call if my basement floods?",
+        "a": "Report flooding to 311 and call your home insurance company. The City notes that if you have a claim for injury or property damage, you can file it with the City. Once the water is out, find the cause, whether sewer backup, groundwater or surface water, before you replace any finishes."
+      }
+    ],
+    "answer": "Most Winnipeg basement flooding comes from sewer backup or groundwater. A backwater valve stops sewage backing up through the floor drain; a sump pit collects weeping-tile water and pumps it outside. Homes built after 1979 were required to have a backwater valve, and homes built since 1990 a sump pit. The City’s old subsidy for both was cancelled.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Basement & overland flooding",
+        "url": "https://www.winnipeg.ca/services-programs/water-wastewater/flooding/basement-overland-flooding",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – How to prepare for potential basement flooding",
+        "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/how-prepare-potential-basement-flooding",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – 5 tips for keeping your basement dry during the spring melt",
+        "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/5-tips-keeping-your-basement-dry-during-spring-melt",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2025-001: Sump pit installations for housing",
+        "url": "https://www.winnipeg.ca/media/6154",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Basement/lower level development: construction information (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6349",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Plumbing installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Basement Flooding Protection Subsidy Program (cancelled)",
+        "url": "https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "clay-soil-basement-cracks-winnipeg",
+    "title": "Clay Soil and Basement Cracks in Winnipeg: What’s Normal",
+    "metaTitle": "Clay Soil and Basement Cracks in Winnipeg | Bridgeland",
+    "metaDescription": "Why Winnipeg’s clay moves foundations, which basement cracks to watch, when to call a structural engineer, and how to finish a basement on moving soil.",
+    "excerpt": "Winnipeg’s clay swells and shrinks with moisture, and basements show it. How to read the cracks, when an engineer should look, and how to build finishes that allow for movement.",
+    "category": "Basements & Suites",
+    "categories": [
+      "Basements & Suites",
+      "Older Homes"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp",
+    "heroSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.cb6497ea.webp 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.e8b10ffb.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.035b039f.avif 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.4b566bcc.avif 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.20bbbec2.avif 1320w",
+    "ogImage": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x630.1ca49e3e.jpg",
+    "heroAlt": "Title card: Clay Soil and Basement Cracks in Winnipeg: What’s Normal",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations"
+    ],
+    "cluster": "basement-water",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Ask anyone who has owned a Winnipeg house for a few years about sticking doors or a crack in the basement wall, and you’ll hear a story. The cause is usually underfoot. This guide explains what the clay does, how to read the cracks you can see, and how to finish a basement so it tolerates some movement. It’s general guidance, not an engineering assessment of your house."
+      },
+      {
+        "t": "h2",
+        "x": "Why does Winnipeg’s soil move?"
+      },
+      {
+        "t": "p",
+        "x": "Much of Winnipeg is built on clay that changes volume with moisture, swelling when wet and shrinking as it dries. A 1986 University of Manitoba engineering thesis describes most single-family homes here as sitting on shallow spread footings on this expansive clay, and links its volume changes to cracks, uneven floors, distorted door frames and leaking basement walls."
+      },
+      {
+        "t": "p",
+        "x": "Basement floors move too. The City of Winnipeg’s basement development guide notes that concrete basement floors can move upward when the moisture content of the soil increases, which is why it recommends floating partition walls in finished basements."
+      },
+      {
+        "t": "h2",
+        "x": "Which basement cracks are a concern?"
+      },
+      {
+        "t": "p",
+        "x": "Fine, dry cracks that stay the same width are common in Winnipeg basements. Cracks that are horizontal, stepped, wider at one end, offset so one side sits proud of the other, growing over time or letting water in suggest ongoing movement or pressure, and a structural engineer should see them before anything is covered."
+      },
+      {
+        "t": "table",
+        "caption": "Reading basement cracks: what to do next",
+        "head": [
+          "What you see",
+          "What it can mean",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Fine vertical or diagonal crack, dry, not changing",
+            "Shrinkage or minor settlement",
+            "Mark and date the ends, photograph it with a tape measure, recheck each season"
+          ],
+          [
+            "A crack that lets water in",
+            "A path for groundwater or surface water",
+            "Fix grading and drainage, then have the crack assessed before finishing"
+          ],
+          [
+            "Horizontal crack, or a wall that bows or leans",
+            "Soil pressure on the wall",
+            "Structural engineer before any framing"
+          ],
+          [
+            "Crack that is widening, offset or wider at one end",
+            "Ongoing movement",
+            "Structural engineer; keep recording it"
+          ],
+          [
+            "Floor slab heaving, or partitions pushing up on the joists",
+            "Slab moving with soil moisture",
+            "Floating partitions; have it assessed before finishing"
+          ],
+          [
+            "Sticking doors or new drywall cracks upstairs",
+            "Movement of the structure",
+            "Mention it at the assessment and to the engineer"
+          ]
+        ],
+        "note": "General guidance only. A structural engineer licensed in Manitoba should assess any crack you’re unsure about."
+      },
+      {
+        "t": "p",
+        "x": "To monitor a crack, draw a short pencil line across each end with the date, measure its width at two or three marked points, and photograph it with a tape measure in the frame. Recheck in spring and fall. A crack that changes between seasons is exactly the kind of information an engineer will ask for."
+      },
+      {
+        "t": "h2",
+        "x": "When do you need a structural engineer?"
+      },
+      {
+        "t": "p",
+        "x": "Whenever the foundation itself needs repair. The City of Winnipeg requires a building permit when structural components are installed or replaced to repair or stabilize a deteriorating foundation, such as replacing wood columns with steel teleposts or bracing walls, and says all structural foundation repairs must be reviewed and sealed by a structural engineer licensed in Manitoba."
+      },
+      {
+        "t": "p",
+        "x": "The City’s basement permit form says the same thing another way: removing or altering teleposts or beams, making openings, or making structural repairs to foundation walls requires engineered structural drawings. If you plan to develop a basement against a wall that has moved, the engineer’s assessment, and any repair, comes first."
+      },
+      {
+        "t": "p",
+        "x": "Foundation repair and waterproofing are specialist trades. If we see signs of movement or water at the on-site visit, we’ll point them out so they can be assessed before money goes into finishes."
+      },
+      {
+        "t": "h2",
+        "x": "How do you finish a basement on moving soil?"
+      },
+      {
+        "t": "p",
+        "x": "Build so the finishes can move a little. The City recommends non-loadbearing partitions built as floating walls, leaving about 25 mm (1 inch) or more at the top or bottom, so a rising slab doesn’t push the walls into the floor joists above. Keep water away from the foundation, and don’t cover cracks you haven’t diagnosed."
+      },
+      {
+        "t": "li",
+        "x": "Use floating partitions for non-loadbearing walls, as the City recommends."
+      },
+      {
+        "t": "li",
+        "x": "Watch known cracks for at least a season before you cover them, and keep dated photos for your records."
+      },
+      {
+        "t": "li",
+        "x": "Fix grading, downspouts and window wells so water moves away from the walls. The City advises watching where meltwater goes around paths, patios, decks and driveways so it drains away from the house."
+      },
+      {
+        "t": "li",
+        "x": "Keep batt insulation off the concrete. The City’s inspection bulletin says batts can’t touch the foundation, so a moisture barrier or air space is needed."
+      },
+      {
+        "t": "li",
+        "x": "Leave access where you’ll need it later, such as at the sump pit and the backwater valve."
+      },
+      {
+        "t": "p",
+        "x": "Our [basement development permits guide](/blog/basement-development-permits-winnipeg) covers the rest of the City’s requirements, and the [basement flood protection guide](/blog/basement-flood-protection-winnipeg) explains sump pits and backwater valves."
+      },
+      {
+        "t": "h2",
+        "x": "Can you keep the soil around the house more stable?"
+      },
+      {
+        "t": "p",
+        "x": "You can reduce the swings. The City’s advice for keeping basements dry, which is to slope the ground away from the house, keep eavestroughs and downspouts directing water away, and watch where water runs around paths, patios, decks and driveways, also limits how wet the clay beside the foundation gets in spring and after heavy rain."
+      },
+      {
+        "t": "p",
+        "x": "Weeping tile work is the other piece. The City’s January 2025 bulletin says adding, replacing or extending a perimeter weeping tile system requires a sump pit, a building permit, and plumbing and electrical permits for the backwater valve and the pump’s receptacle."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "If you’re thinking about finishing a basement with a few cracks in it, start with a look at the walls. Our [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote. [Book your visit](/book-online), or see [basement renovation costs in Winnipeg](/services/basement-renovations/cost) first."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Are basement wall cracks normal in Winnipeg?",
+        "a": "Fine, dry cracks that don’t change are common in Winnipeg basements, because the clay under most homes swells and shrinks with moisture. Mark and date the ends, photograph them with a tape measure and recheck each season. Horizontal, widening, offset or leaking cracks are different, and a structural engineer should assess them."
+      },
+      {
+        "q": "Do I need a permit to repair a cracked foundation in Winnipeg?",
+        "a": "If the repair installs or replaces structural components, such as steel teleposts or wall bracing, the City requires a building permit, and structural foundation repairs must be reviewed and sealed by a structural engineer licensed in Manitoba. If the work adds or replaces weeping tile, the City also requires a sump pit, with its own permits."
+      },
+      {
+        "q": "Why do basement walls need a gap at the top or bottom?",
+        "a": "The City of Winnipeg recommends building non-loadbearing basement partitions as floating walls, with about 25 mm (1 inch) or more of space at the top or bottom. Concrete basement floors can rise when the soil gets wetter, and the gap stops the walls from being pushed up into the floor joists above."
+      },
+      {
+        "q": "Can I finish a basement that has cracks?",
+        "a": "Often, once you know what the cracks are doing. Dry hairline cracks that don’t change can usually be recorded and watched. Anything leaking, widening or horizontal should be assessed, and repaired if needed, before framing, because finishes hide the evidence and make later repairs harder and more expensive."
+      },
+      {
+        "q": "Can Winnipeg’s clay make doors stick?",
+        "a": "Yes. A 1986 University of Manitoba engineering thesis on Winnipeg houses links soil volume changes under shallow footings to cracks, uneven floors and distorted door frames. Doors that bind in one season and free up in another point to movement. Mention them at any assessment, so the engineer or contractor sees the whole picture."
+      }
+    ],
+    "answer": "Winnipeg’s clay soil swells when it gets wet and shrinks as it dries, so foundations and basement floors move with the seasons. Fine, dry cracks are common, but a crack that is horizontal, widening, offset or leaking, or a wall that bows, should be assessed by a structural engineer before you finish the basement. Structural foundation repairs need a permit.",
+    "sources": [
+      {
+        "label": "University of Manitoba – House damage costs in Winnipeg due to shifting foundations (J. Kostanski, M.Sc. thesis, 1986)",
+        "url": "https://mspace.lib.umanitoba.ca/items/9eb14b0c-0b8b-4f14-b1a4-7a23a2ba703b/full",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Basement/lower level development: construction information (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6349",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application form: basement/lower level development (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6968",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Foundation repairs",
+        "url": "https://legacy.winnipeg.ca/ppd/permits/Residential/FoundationRepair.stm",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2025-001: Sump pit installations for housing",
+        "url": "https://www.winnipeg.ca/media/6154",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-008-B: Vapour barrier & insulation in housing inspections",
+        "url": "https://www.winnipeg.ca/media/6147",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – 5 tips for keeping your basement dry during the spring melt",
+        "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/5-tips-keeping-your-basement-dry-during-spring-melt",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "clinic-renovation-permits-winnipeg",
+    "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
+    "metaTitle": "Clinic Renovation Permits in Winnipeg | Bridgeland Builders",
+    "metaDescription": "Renovating a medical, dental or physio clinic in Winnipeg? The permits, sealed drawings, X-ray approvals, accessibility rules and occupancy steps to plan.",
+    "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
+    "category": "Commercial",
+    "categories": [
+      "Commercial",
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.6b2a1b51.webp",
+    "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1320.0e8b8a5a.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1320.75e30f7c.avif 1320w",
+    "ogImage": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1200x630.bc757f21.jpg",
+    "heroAlt": "Title card: Clinic Renovation Permits in Winnipeg: What to Plan For",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/medical-dental-office-renovations",
+      "/services/commercial-renovations"
+    ],
+    "cluster": "commercial-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "A clinic renovation has more moving parts than most commercial projects: treatment rooms have their own electrical requirements, X-ray rooms need provincial approval, and patients rely on an accessible entrance every day. This guide covers the approvals a medical, dental or physiotherapy clinic in Winnipeg usually needs, in the order they come up."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a permit to renovate a clinic in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "In most cases, yes. The City of Winnipeg handles interior alterations and changes of use in commercial buildings through a building permit, applied for with its Commercial Alteration Design Summary (CADS) form. Electrical, plumbing and mechanical work also need their own trade permits, which the City requires licensed contractors to apply for."
+      },
+      {
+        "t": "p",
+        "x": "Expect to provide a letter of authorization from the building owner or property manager for the intended use, a key plan showing where your unit sits, and a scaled tenant floor plan with dimensions, labelled rooms and walls marked existing, new or demolished. The form also asks for neighbouring tenants, because fire separation requirements depend on what is next door."
+      },
+      {
+        "t": "p",
+        "x": "If the space was used for something else, check the zoning before you sign the lease: the City's zoning by-laws decide whether a use is permitted, conditional or not allowed. A development permit, where needed, can be reviewed before or alongside the building permit. Our [commercial renovation services](/services/commercial-renovations) page explains how we run a commercial project from site visit to handover."
+      },
+      {
+        "t": "h2",
+        "x": "When does a clinic renovation need an architect or engineer?"
+      },
+      {
+        "t": "p",
+        "x": "When the work is complex. The City's CADS form lists the triggers, including any structural change, significant changes to fire alarm or sprinkler systems, and, in a Part 3 building, significant work on exits, public corridors, fire separations or the building envelope. If any item applies, the drawings must be prepared, signed and sealed by an architect or engineer."
+      },
+      {
+        "t": "p",
+        "x": "Part 3 and Part 9 are parts of the Manitoba Building Code; if nobody knows which applies, the City asks you to confirm before applying. Simpler work, such as partitions that leave exits and fire separations alone, can be drawn by someone other than an architect if the drawings show the scope clearly."
+      },
+      {
+        "t": "table",
+        "caption": "Common clinic work and what the City's CADS form asks for",
+        "head": [
+          "Clinic work",
+          "What to expect"
+        ],
+        "rows": [
+          [
+            "Partitions, doors, millwork and finishes",
+            "Scaled floor plan; sealed drawings only for significant exit, corridor or fire separation work in a Part 3 building"
+          ],
+          [
+            "Rooms where treatment or care is given",
+            "Electrical Patient Care Areas Declaration"
+          ],
+          [
+            "New ductwork or rooftop units",
+            "Mechanical drawings and permit; sealed if significant HVAC changes come from a change of use"
+          ],
+          [
+            "Sprinkler or fire alarm changes",
+            "Sprinkler drawings; sealed if the changes are significant"
+          ],
+          [
+            "Change of major occupancy in a Part 3 building",
+            "Sealed drawings and a building occupancy permit"
+          ]
+        ],
+        "note": "Summarized from the City's CADS form (October 2025). The City decides what applies to your space."
+      },
+      {
+        "t": "h2",
+        "x": "What extra approvals does a medical or dental clinic need?"
+      },
+      {
+        "t": "p",
+        "x": "Clinics usually add three items to a standard commercial permit: an electrical declaration for patient care areas, provincial approval and a shielding specification before any X-ray room is built or moved, and an accessible layout that meets the Manitoba Building Code. Your regulator and equipment suppliers may have their own requirements, so ask them early too."
+      },
+      {
+        "t": "h3",
+        "x": "Patient care areas"
+      },
+      {
+        "t": "p",
+        "x": "The CADS form asks for an Electrical Patient Care Areas Declaration whenever treatment, diagnosis, therapy, monitoring or care of people will take place, naming dental clinics and physicians' offices as examples. Mark every care room on the floor plan so its electrical design is settled before rough-in."
+      },
+      {
+        "t": "h3",
+        "x": "X-ray rooms"
+      },
+      {
+        "t": "p",
+        "x": "Under Manitoba's X-Ray Safety Regulation, X-ray equipment must be registered, and installing a machine in a permanent location needs the minister's prior approval, with scaled drawings showing the shielding built into the room's boundaries. Substantial alterations to an approved X-ray area need approval too. Get the shielding design and approval started as soon as the layout is fixed, because shielding goes in before the walls are closed."
+      },
+      {
+        "t": "h3",
+        "x": "Accessibility"
+      },
+      {
+        "t": "p",
+        "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings. How much of your space must be upgraded is settled in plan review."
+      },
+      {
+        "t": "p",
+        "x": "During construction, Manitoba's Accessible Customer Service Standard applies to every organization with at least one employee and requires letting the public know when and why an accessibility feature is unavailable, such as an accessible entrance or washroom closed for the work."
+      },
+      {
+        "t": "h2",
+        "x": "Can patients be seen while the clinic is renovated?"
+      },
+      {
+        "t": "p",
+        "x": "Sometimes, if the work is phased and the occupied part of the clinic stays separate, safe and accessible. What you cannot do is use a renovated area before the City issues an interim or final occupancy permit where one is required. The City's occupancy bulletin counts meeting clients and conducting business as occupying a space."
+      },
+      {
+        "t": "p",
+        "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits. Construction and the delivery and installation of fixed equipment and furnishings, such as reception desks, dental chairs and X-ray machines, are allowed before it is issued; bringing in supplies or personal belongings, installing computers and printers, training staff and seeing patients are not. Progress inspections must reach the final stage, and professional certifications be submitted, before you can request occupancy."
+      },
+      {
+        "t": "p",
+        "x": "Evening and weekend work helps when the clinic cannot close, but within 150 metres of a home the City allows loud construction only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays. Our guide to [preparing your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation) covers phasing in more detail."
+      },
+      {
+        "t": "h2",
+        "x": "What sets the schedule for a clinic renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Approvals and long-lead items often set the pace as much as the construction does. Whether sealed drawings are needed, how quickly plan review comments are answered, when the X-ray shielding specification and equipment arrive, and how many inspection stages the City needs all affect your opening date. Build each one into your lease and move-in plans."
+      },
+      {
+        "t": "table",
+        "caption": "Clinic renovation steps in order",
+        "head": [
+          "Step",
+          "Who is involved",
+          "Timing"
+        ],
+        "rows": [
+          [
+            "Zoning, landlord consent, code Part",
+            "You, landlord, City",
+            "Before signing the lease"
+          ],
+          [
+            "Drawings, sealed if complex",
+            "Designer, architect or engineer",
+            "Before applying"
+          ],
+          [
+            "X-ray shielding drawings and approval",
+            "You, your X-ray supplier and the Province (X-Ray Safety Regulation)",
+            "Before construction"
+          ],
+          [
+            "Building and trade permits",
+            "Applicant and licensed trades",
+            "Before work starts"
+          ],
+          [
+            "Progress inspections",
+            "City commercial inspector, requested by the applicant",
+            "During construction"
+          ],
+          [
+            "Occupancy permit",
+            "City of Winnipeg",
+            "Before staff training or patients"
+          ]
+        ],
+        "note": "Outside Winnipeg, the permit authority for your municipality takes the City's role."
+      },
+      {
+        "t": "h2",
+        "x": "Questions to ask at the on-site visit"
+      },
+      {
+        "t": "li",
+        "x": "Will any of our work need sealed drawings, and who will prepare them?"
+      },
+      {
+        "t": "li",
+        "x": "Which rooms are patient care areas, and where will X-ray equipment go?"
+      },
+      {
+        "t": "li",
+        "x": "How will the accessible entrance and washroom stay usable, or how will we tell patients?"
+      },
+      {
+        "t": "li",
+        "x": "What are the inspection stages, and when can we realistically request occupancy?"
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** Bridgeland Builders renovates medical, dental and physiotherapy clinics in Winnipeg and nearby communities, and we coordinate permits and inspections with the City of Winnipeg or your local municipality. Every project starts with a free on-site visit and a free written quote. [Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Clinic renovation permit questions",
+    "faqs": [
+      {
+        "q": "Do I need a permit just to repaint and replace flooring in my clinic?",
+        "a": "It depends on what else changes. If the use of the space changes, the City expects a permit application even when the work is only cosmetic. If the use stays the same and nothing touches walls, exits, electrical, plumbing or ventilation, confirm with the City's permit office before you start. We check this with you at the on-site visit."
+      },
+      {
+        "q": "Who applies for the permit, the clinic or the landlord?",
+        "a": "Either can. The City's CADS form says the applicant can be the tenant, contractor, design professional, property manager, owner or another authorized person. Either way, the package needs a letter of authorization from the building owner or property manager, or an owner statement when an architect or engineer is involved."
+      },
+      {
+        "q": "Does a physiotherapy clinic need the same approvals as a dental clinic?",
+        "a": "Many are the same: a building permit for alterations, trade permits, inspections and often an occupancy permit. The patient care area declaration applies wherever treatment, therapy, monitoring or care of people takes place, so it can cover physiotherapy rooms too. X-ray approvals apply only if you install X-ray equipment. The City decides what applies to your space."
+      },
+      {
+        "q": "Can we open on an interim occupancy permit?",
+        "a": "The City issues both interim and final building occupancy permits, and its occupancy bulletin says you need one or the other before occupying a space. Progress inspections must be completed to the final stage before you can request occupancy, so plan your opening date around finished inspections rather than counting on an interim permit."
+      }
+    ],
+    "answer": "Most clinic renovations in Winnipeg need a commercial building permit, applied for with the City's Commercial Alteration Design Summary, and many need a building occupancy permit before patients return. Clinics add their own steps: an electrical declaration for patient care areas, provincial approval and a shielding specification for X-ray rooms, and accessible design under the Manitoba Building Code.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+        "url": "https://www.winnipeg.ca/media/6330",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+        "url": "https://www.winnipeg.ca/media/6131",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Building occupancy permits (video transcript)",
+        "url": "https://www.winnipeg.ca/media/6472",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial inspections",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+        "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Zoning bylaws",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/zoning",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba: 2020 Construction Codes Adoption",
+        "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
+        "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
+        "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Laws: X-Ray Safety Regulation, M.R. 341/88 R",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/341-88r.php?lang=en",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "ensuite-renovation-winnipeg",
+    "title": "How Much Should an Ensuite Renovation Cost in Winnipeg?",
+    "metaTitle": "How Much Should an Ensuite Renovation Cost in Winnipeg?",
+    "metaDescription": "What sets the cost of an ensuite renovation in Winnipeg: layout, shower, plumbing moves and finishes, plus timelines, permits and where to see prices.",
+    "excerpt": "An ensuite costs what its decisions cost: whether the toilet and shower stay where they are, how big the shower is, how much tile goes on the walls and whether the room grows into a closet. Here is how to think those choices through before you ask for a price.",
+    "category": "Kitchens & Baths",
+    "categories": [
+      "Kitchens & Baths"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.fe4be3e4.webp",
+    "heroSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1320.1282306c.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-480.e5e54e79.avif 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.6a5c883c.avif 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1320.6cd34f58.avif 1320w",
+    "ogImage": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1200x630.ccbdff08.jpg",
+    "heroAlt": "Title card: How Much Should an Ensuite Renovation Cost in Winnipeg?",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/bathroom-renovations"
+    ],
+    "cluster": "bathrooms",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "An ensuite is the bathroom attached to a bedroom, usually the main bedroom. Because it is private, people tend to want more from it than from a hall bathroom: a bigger shower, two sinks, better lighting, sometimes a soaker tub. Each of those choices moves the price, and a few of them move it a lot. This guide explains what drives the cost so you can decide where your money does the most."
+      },
+      {
+        "t": "h2",
+        "x": "Where do ensuite renovation prices come from?"
+      },
+      {
+        "t": "p",
+        "x": "Our current price ranges for bathrooms, including ensuites, are in the bathroom cost guide linked above: the starting ranges our own instant estimator uses, not national averages. An ensuite sits in those ranges according to its size and the options you choose. The decisions below decide whether it lands at the lower or higher end of its range."
+      },
+      {
+        "t": "p",
+        "x": "For a range on your own room, the [instant estimate](/instant-quote) asks a few questions about size and finishes. It is an estimate, not a quote: the price you sign is the free written quote that follows a free on-site visit, once the drains, walls and floor have been looked at."
+      },
+      {
+        "t": "h2",
+        "x": "What changes the cost of an ensuite the most?"
+      },
+      {
+        "t": "p",
+        "x": "Moving plumbing, changing the type of shower and adding tile and glass usually move the price the most. Keeping the toilet, shower drain and vanity where they are is the single biggest saving. Finishes matter too, but layout decisions set the floor of the budget before any tile is chosen, so settle the layout first."
+      },
+      {
+        "t": "table",
+        "caption": "Ensuite decisions and how they affect the price",
+        "head": [
+          "Decision",
+          "Lower-cost choice",
+          "Higher-cost choice",
+          "Why the price changes"
+        ],
+        "rows": [
+          [
+            "Layout",
+            "Keep the toilet, drain and vanity in place",
+            "Move the toilet or shower drain",
+            "Moving drains means opening floors and new rough-in; on a concrete slab it means cutting concrete"
+          ],
+          [
+            "Shower",
+            "Prefabricated base and walls",
+            "Tiled walk-in or curbless shower",
+            "More waterproofing, a sloped floor and more tile labour"
+          ],
+          [
+            "Tub",
+            "No tub, or keep the existing one",
+            "Freestanding soaker tub",
+            "Floor space, new plumbing and sometimes floor reinforcement under a heavy tub"
+          ],
+          [
+            "Vanity",
+            "Single sink",
+            "Double vanity with two sinks",
+            "Extra supply and drain lines and a longer counter"
+          ],
+          [
+            "Tile",
+            "Tiled floor and shower walls",
+            "Floor-to-ceiling tile throughout",
+            "More material, more cuts and more layout time"
+          ],
+          [
+            "Glass",
+            "Standard shower door",
+            "Custom frameless glass",
+            "Custom glass is measured after tiling and made to order"
+          ],
+          [
+            "Floor heating",
+            "None",
+            "Electric heated floor",
+            "Heating mat, thermostat and electrical work"
+          ],
+          [
+            "Room size",
+            "Work within the existing walls",
+            "Borrow space from a closet or the bedroom",
+            "Framing, drywall, flooring and electrical work in two rooms"
+          ]
+        ],
+        "note": "If you want to swap a tile or a vanity after the quote, we re-price it before anything is ordered."
+      },
+      {
+        "t": "h2",
+        "x": "Which ensuite layout works for your space?"
+      },
+      {
+        "t": "p",
+        "x": "The right layout depends on the room's width and where the drains and stack run. A narrow ensuite usually suits fixtures in a single row along one wall, while a wider room can take a separate shower and a double vanity. If the bedroom can spare closet space, a modest expansion often solves more than a more expensive finish would."
+      },
+      {
+        "t": "table",
+        "caption": "Common ensuite layouts",
+        "head": [
+          "Layout",
+          "Works best when",
+          "Watch for"
+        ],
+        "rows": [
+          [
+            "Fixtures in a row along one wall",
+            "The room is narrow",
+            "Door swing and the shower door's clearance"
+          ],
+          [
+            "Shower across the end wall",
+            "The room is long and narrow",
+            "Keeping the vanity area dry; a fixed glass panel helps"
+          ],
+          [
+            "Separate shower and double vanity",
+            "The room is wide enough for two zones",
+            "More plumbing runs and more tile"
+          ],
+          [
+            "Tub and shower combination",
+            "You want a tub without giving up floor area",
+            "Wall backing for grab bars and a slip-resistant tub floor"
+          ],
+          [
+            "Expanded into a closet",
+            "The closet backs onto the ensuite",
+            "Where the bedroom's clothes storage goes instead"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "How long does an ensuite renovation take?"
+      },
+      {
+        "t": "p",
+        "x": "Most bathrooms we renovate take two to three weeks of on-site work, from demolition to the final bead of caulking. An ensuite with plumbing moves, custom glass or an expansion into the bedroom can take longer, mainly because custom glass is measured after the tile is done and some fixtures and finishes have long lead times."
+      },
+      {
+        "t": "p",
+        "x": "Because it is not usually the only bathroom in the house, an ensuite is easier to live through than a main bathroom. Plan where you will sleep if dust and noise are next to the bedroom, and choose the vanity, fixtures and tile before demolition so nothing waits on a delivery. You get weekly progress updates while the work is under way."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a permit for an ensuite renovation in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Often, yes. The City of Winnipeg lists bathrooms among the home renovations that may need a building permit, and plumbing or electrical work can need separate trade permits. Cosmetic changes such as painting and flooring do not need a building permit. We coordinate the permits and inspections with the City, or with your local municipality outside Winnipeg."
+      },
+      {
+        "t": "p",
+        "x": "Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits and how the inspections fit into the schedule."
+      },
+      {
+        "t": "h2",
+        "x": "Which ensuite upgrades are worth paying for?"
+      },
+      {
+        "t": "p",
+        "x": "Spend on what you use every day and what is hard to change later: a properly waterproofed shower, ventilation that removes moisture, good light at the mirror and enough storage. Backing in the walls for future grab bars costs little while the walls are open and a lot once the tile is up."
+      },
+      {
+        "t": "li",
+        "x": "An exhaust fan vented outdoors, not into the attic. Health Canada recommends running a bathroom fan when you shower and for at least 30 minutes afterwards."
+      },
+      {
+        "t": "li",
+        "x": "Plywood backing behind the walls around the toilet, tub and shower. CMHC notes that it allows grab bars and handrails to be installed later without opening the walls."
+      },
+      {
+        "t": "li",
+        "x": "Layered lighting: a ceiling fixture for the room and lighting at the mirror for grooming."
+      },
+      {
+        "t": "li",
+        "x": "A vanity with drawers rather than only doors, so storage is easy to reach and organize."
+      },
+      {
+        "t": "li",
+        "x": "A heated floor if the budget allows, since it is simplest to add while the floor is open."
+      },
+      {
+        "t": "p",
+        "x": "For more ideas, sorted by the everyday value they add, see [bathroom renovation ideas that add value in Winnipeg homes](/blog/which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners)."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** when you are ready for a price on your own ensuite, [book a free on-site visit](/book-online). We look at the drains, walls and floor, talk through the layout with you and send a free written quote. To see how we approach the work, start with our [bathroom renovation service](/services/bathroom-renovations)."
+      }
+    ],
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Is an ensuite cheaper to renovate than a main bathroom?",
+        "a": "Not on its own. An ensuite and a main bathroom of the same size and finish level cost about the same to renovate. Ensuites often end up costing more because people choose larger showers, double vanities and more tile for a private space. Keeping the existing plumbing layout is the most reliable way to control the price."
+      },
+      {
+        "q": "Can I turn the tub in my ensuite into a walk-in shower?",
+        "a": "Usually, yes. Building a walk-in shower where the tub was reuses the existing drain area, which keeps costs down. A curbless shower needs the floor sloped to the drain, which can mean work on the floor framing. We check the floor structure and the drain location during the free on-site visit before quoting it."
+      },
+      {
+        "q": "How long will my ensuite be out of use?",
+        "a": "Plan on two to three weeks of on-site work for a typical bathroom, and longer if plumbing moves, the room is enlarged or custom glass is ordered after the tile is finished. Because an ensuite is rarely the only bathroom in the house, it can usually stay closed off while the work is done."
+      },
+      {
+        "q": "Should I add a heated floor to my ensuite?",
+        "a": "If the budget allows, a renovation is the time to do it, because the floor is already open. Electric floor heating adds materials, a thermostat and electrical work, so it is a modest line item rather than a small one. In a Winnipeg winter it is the difference between a cold tile floor and a comfortable one."
+      },
+      {
+        "q": "Where can I see current ensuite renovation prices?",
+        "a": "Our bathroom renovation cost guide lists the starting ranges our instant estimator uses for bathrooms, by size and option, and an ensuite falls within those ranges. The instant estimate gives a range for your own room, and the free written quote after an on-site visit gives you a price you can sign."
+      }
+    ],
+    "answer": "An ensuite should cost about the same as a full bathroom of the same size and finish level, so start with our [bathroom renovation cost guide](/services/bathroom-renovations/cost) for current Winnipeg price ranges. Where your ensuite lands in that range depends mostly on plumbing moves, the type of shower, how much tile and glass it has, and whether the room is enlarged.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Home renovations (building permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Guide to addressing moisture and mould indoors",
+        "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/addressing-moisture-mould-your-home.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "CMHC: Renovating for Accessibility: Bathrooms",
+        "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/industry-innovation-and-leadership/industry-expertise/accessible-adaptable-housing/renovating-for-accessibility/bathrooms-en.pdf",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "exterior-painting-winnipeg-when-to-paint",
+    "title": "When to Paint Your House Exterior in Winnipeg",
+    "metaTitle": "When to Paint Your House Exterior in Winnipeg",
+    "metaDescription": "When to paint a house exterior in Winnipeg, how weather affects paint, prep for older homes with possible lead paint, and what a quote should cover.",
+    "excerpt": "Winnipeg's painting season is short, and the weather decides more than the calendar does. Here is how to time an exterior paint job, prepare the surfaces properly and avoid the mistakes that make paint fail early.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp",
+    "heroSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.acff5638.webp 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.5f986ef8.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.0b02a5a2.avif 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.17af2839.avif 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.bb4a7cd2.avif 1320w",
+    "ogImage": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x630.8d9272ff.jpg",
+    "heroAlt": "Title card: When to Paint Your House Exterior in Winnipeg",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/exterior-painting",
+      "/services/whole-home-renovations"
+    ],
+    "cluster": "exterior",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Exterior paint protects siding, trim and soffits from sun, rain and Winnipeg's freeze-thaw cycles, and it is the first thing people notice about a house. The quality of the job depends on two things more than the brand of paint: when it is applied and how well the surfaces are prepared. This guide covers both."
+      },
+      {
+        "t": "h2",
+        "x": "What is the best time of year to paint a house in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Late spring to early fall. Paint needs the air and the surface to stay above the minimum temperature on its label through application and drying, often including at night, and it needs dry surfaces. In Winnipeg that rules out much of the year. Within the season, mild, dry, settled stretches give the best results."
+      },
+      {
+        "t": "table",
+        "caption": "Exterior painting through a Winnipeg year (a general guide)",
+        "head": [
+          "Period",
+          "Typical conditions",
+          "Painting outlook"
+        ],
+        "rows": [
+          [
+            "Winter",
+            "Well below freezing",
+            "Not suitable for exterior paint"
+          ],
+          [
+            "Early spring",
+            "Cold nights; surfaces wet from snowmelt",
+            "Inspect, plan, choose colours and book the work"
+          ],
+          [
+            "Late spring",
+            "Warming days; nights can still be cool",
+            "Possible in settled weather; watch the night-time lows"
+          ],
+          [
+            "Summer",
+            "Warm, with hot sun and storms",
+            "Good; avoid painting surfaces in hot direct sun and get ahead of storms"
+          ],
+          [
+            "Early fall",
+            "Mild days, cooler nights and heavier dew",
+            "Good while it lasts; finish early in the day so paint sets before dew"
+          ],
+          [
+            "Late fall",
+            "Frost and cold nights",
+            "Usually too cold for most products"
+          ]
+        ],
+        "note": "Minimum application temperatures and recoat times differ between products, so the label for the paint or stain you are using always wins."
+      },
+      {
+        "t": "h2",
+        "x": "How does the weather affect exterior paint?"
+      },
+      {
+        "t": "p",
+        "x": "Temperature, moisture and sun all change how paint cures. Too cold, and it may not form a proper film. A wet or dewy surface, or rain before the paint has set, can cause poor adhesion or wash the paint off. Strong sun on hot siding can make paint dry too fast and leave visible lap marks."
+      },
+      {
+        "t": "li",
+        "x": "Start after the morning dew has dried, and stop early enough that the last coat sets before evening dew."
+      },
+      {
+        "t": "li",
+        "x": "Follow the sun around the house: paint each wall after the sun has moved off it."
+      },
+      {
+        "t": "li",
+        "x": "Check the forecast for night-time lows and rain across the label's drying time, not just the painting day."
+      },
+      {
+        "t": "li",
+        "x": "Stucco and masonry hold moisture after rain; give them time to dry before coating them."
+      },
+      {
+        "t": "h2",
+        "x": "How much preparation does an exterior paint job need?"
+      },
+      {
+        "t": "p",
+        "x": "Most of the work in a lasting paint job is preparation: washing, scraping loose paint, repairing wood, caulking gaps, sanding glossy areas and priming bare spots. Paint fails when it goes over dirt, chalky old coatings, moisture or rot, so the condition of the surfaces decides how much preparation the job needs."
+      },
+      {
+        "t": "oli",
+        "x": "Inspect for rot, failed caulking and moisture sources such as overflowing eavestroughs or lawn sprinklers."
+      },
+      {
+        "t": "oli",
+        "x": "Wash the surfaces and let them dry fully."
+      },
+      {
+        "t": "oli",
+        "x": "Remove loose and peeling paint, testing for lead first on older houses."
+      },
+      {
+        "t": "oli",
+        "x": "Repair or replace damaged boards and trim."
+      },
+      {
+        "t": "oli",
+        "x": "Caulk joints and gaps, and spot-prime bare wood and metal."
+      },
+      {
+        "t": "oli",
+        "x": "Apply the finish coats, respecting the label's recoat times."
+      },
+      {
+        "t": "oli",
+        "x": "Protect plants, windows, walkways and vehicles throughout, and clean up at the end."
+      },
+      {
+        "t": "h2",
+        "x": "What if your house has old paint?"
+      },
+      {
+        "t": "p",
+        "x": "Test it before anyone scrapes or sands. Health Canada says a home built before 1960 probably contains lead-based paint, and exterior paint on homes built between 1960 and 1990 may contain lead too. It advises against using sanders, heat guns or blowlamps to remove old paint, and says to keep children and pregnant people away from the work."
+      },
+      {
+        "t": "p",
+        "x": "Lead-safe preparation takes longer and needs containment and careful clean-up, which affects both the schedule and the price. It is far easier to plan for at the quote stage than to discover in the middle of the job. Our guide to [renovating a character home in Winnipeg](/blog/renovating-a-character-home-in-winnipeg) covers other things to check in older houses."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a permit to paint the outside of your house?"
+      },
+      {
+        "t": "p",
+        "x": "Not a building permit. The City of Winnipeg treats painting as a cosmetic change that does not need one, and replacing siding or stucco with the same material is also exempt. Properties on the City's List of Historical Resources or in a heritage conservation district may need a heritage permit for exterior work, depending on the listing or plan."
+      },
+      {
+        "t": "p",
+        "x": "Outside Winnipeg, check with your local municipality. If your project grows into new siding materials, new window openings or an addition, permits may come into play; our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need one."
+      },
+      {
+        "t": "h2",
+        "x": "How do you plan exterior painting alongside other work?"
+      },
+      {
+        "t": "p",
+        "x": "Do the messy work first. If windows, doors, siding repairs or stucco patching are planned, finish them before painting so the new trim and patches are painted with everything else. Interior work carries on year-round, so a renovation done over the winter can be followed by exterior painting once the weather allows."
+      },
+      {
+        "t": "li",
+        "x": "Replacing windows or doors this year? Put them in before the paint; see [window and door replacement in Winnipeg](/blog/window-and-door-replacement-winnipeg)."
+      },
+      {
+        "t": "li",
+        "x": "On a [whole home renovation](/services/whole-home-renovations), the exterior can be scheduled for the warm months while interior work continues around it."
+      },
+      {
+        "t": "li",
+        "x": "For businesses, exterior work can be planned around opening hours; we offer after-hours and weekend scheduling on [commercial renovations](/services/commercial-renovations)."
+      },
+      {
+        "t": "h2",
+        "x": "What should an exterior painting quote include?"
+      },
+      {
+        "t": "p",
+        "x": "A useful quote lists every surface to be painted, the products and number of coats, and the preparation steps in plain language. It should say how repairs are handled, including rot that only shows up once old paint comes off, and whether lead-safe practices are needed. Protection, clean-up and taxes should be on it too."
+      },
+      {
+        "t": "li",
+        "x": "Surfaces: siding, trim, soffits, fascia, doors, railings, garage"
+      },
+      {
+        "t": "li",
+        "x": "Products, colours and number of coats"
+      },
+      {
+        "t": "li",
+        "x": "Preparation: washing, scraping, sanding, caulking and priming"
+      },
+      {
+        "t": "li",
+        "x": "Repairs found during the work, and how they are priced"
+      },
+      {
+        "t": "li",
+        "x": "Protection of plants, windows and walkways, and the clean-up"
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** see what our [exterior painting](/services/exterior-painting) work includes, then [book a free on-site visit](/book-online) and we will look at the siding, trim and soffits with you and send a free written quote that spells out the preparation and any repairs. For a first range on a larger renovation, try the [instant estimate](/instant-quote), or call [431-866-5644](tel:+14318665644), Monday to Friday, 8:30 to 4:30."
+      }
+    ],
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Can you paint a house exterior in October in Winnipeg?",
+        "a": "Sometimes, early in the month and on mild, dry days, but it gets riskier as nights cool and dew lingers into the morning. Each product lists a minimum temperature that has to hold while it dries, often including at night. If the forecast cannot meet the label, wait for spring rather than risk a coat that fails early."
+      },
+      {
+        "q": "How long does exterior paint need before it rains?",
+        "a": "It depends on the product, the temperature and the humidity, so check the label for how long it needs before it is rain-safe. Plan for a dry forecast through the whole drying period, not just the painting day, and finish early enough in the afternoon that the paint has set before evening dew."
+      },
+      {
+        "q": "Should I paint damaged siding or replace it first?",
+        "a": "Paint only over sound siding. Soft, rotted or split boards should be repaired or replaced first, or the new paint will fail along with them. Replacing siding with the same material does not need a City building permit. We look at siding, trim and soffits during the on-site visit, and repairs are shown on the written quote."
+      },
+      {
+        "q": "Is lead paint a concern on Winnipeg houses?",
+        "a": "It can be. Health Canada says a home built before 1960 probably contains lead-based paint, and exterior paint on homes built from 1960 to 1990 may contain it too. Test before scraping or sanding, avoid sanders, heat guns and blowlamps on old paint, contain the debris and keep children and pregnant people away."
+      }
+    ],
+    "answer": "In Winnipeg, exterior painting is done between late spring and early fall, when days and nights stay warm enough for the paint and surfaces are dry. The exact limits are on the product label: follow its minimum temperature and drying times, avoid painting before rain or heavy dew, and allow more time for preparation than for painting.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Home renovations (cosmetic changes and building permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Heritage permits",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Reduce your exposure to lead",
+        "url": "https://www.canada.ca/en/health-canada/services/home-garden-safety/reduce-your-exposure-lead.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "home-additions-and-zoning-winnipeg",
+    "title": "Home Addition Zoning in Winnipeg: Permits and Variances",
+    "metaTitle": "Home Addition Zoning in Winnipeg: What to Check First",
+    "metaDescription": "Planning an addition in Winnipeg? What the development and building permits check, how variances work, and what the 2025 infill zoning changes mean.",
+    "excerpt": "Before an addition is designed, it has to fit two sets of rules: zoning, which decides where and how big you can build, and the building code, which decides how it is built. Here is how both work in Winnipeg, and what changed in 2025.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.b9f76c7b.webp",
+    "heroSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1320.b7b5971a.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1320.4c809500.avif 1320w",
+    "ogImage": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1200x630.420c23b0.jpg",
+    "heroAlt": "Title card: Home Addition Zoning in Winnipeg: Permits and Variances",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/home-additions"
+    ],
+    "cluster": "permits-zoning",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "An addition is often the answer when you like your street but have run out of room: a bigger kitchen, a family room, a main-floor bedroom or a proper mudroom. Before anyone draws it, though, the addition has to fit your lot's zoning, and before anyone builds it, the drawings have to pass a building permit review. Knowing how those two steps work saves design time and avoids surprises."
+      },
+      {
+        "t": "h2",
+        "x": "What permits does a home addition need in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Two main permits, plus trade permits. The City says all house additions and attached garages need a development permit under the Winnipeg Zoning By-law and a building permit under the Winnipeg Building By-law. Electrical and plumbing work need their own permits. Applications go through the City's Permits Online system, and incomplete applications cause delays."
+      },
+      {
+        "t": "table",
+        "caption": "Approvals for a house addition in Winnipeg",
+        "head": [
+          "Approval",
+          "What it covers",
+          "When"
+        ],
+        "rows": [
+          [
+            "Development permit",
+            "Zoning: where the addition sits on the lot, setbacks, height and similar limits",
+            "Reviewed before or alongside the building permit (sequential or concurrent review)"
+          ],
+          [
+            "Variance (only if needed)",
+            "Relief from a dimensional standard such as a setback, height or lot coverage",
+            "Before permits, if the design does not comply"
+          ],
+          [
+            "Building permit",
+            "Construction drawings reviewed against the building code and other standards",
+            "Before construction starts"
+          ],
+          [
+            "Electrical and plumbing permits",
+            "Trade work inside the addition",
+            "Before that work starts"
+          ],
+          [
+            "Heritage permit (only if applicable)",
+            "Properties on the List of Historical Resources or in a heritage conservation district",
+            "Before the design is final"
+          ]
+        ],
+        "note": "Outside Winnipeg, the local municipality issues permits. We coordinate permits and inspections with the City of Winnipeg or the local municipality."
+      },
+      {
+        "t": "h2",
+        "x": "What does zoning control for an addition?"
+      },
+      {
+        "t": "p",
+        "x": "Zoning sets the dimensional limits for your lot: how close you can build to each property line, how tall a building can be and how much of the lot buildings may cover. The numbers depend on your property's zoning district, so the first step is to confirm the zoning and measure the existing house against those limits."
+      },
+      {
+        "t": "p",
+        "x": "A building location certificate, prepared by a Manitoba land surveyor, shows exactly where the existing house sits on the lot. The City may ask for one with a variance application, and even when it is not required it is a reliable starting point for design. Riverside lots need extra care, because site plans for variance applications show floodway and flood fringe levels where they apply."
+      },
+      {
+        "t": "h2",
+        "x": "What if your addition does not fit the zoning rules?"
+      },
+      {
+        "t": "p",
+        "x": "You can apply for a variance, which modifies a dimensional standard such as a setback, height or lot coverage for your property without changing its zoning. The City says the process takes about six to eight weeks from a complete application, and approved variances are posted on the property for 14 days so neighbours can appeal."
+      },
+      {
+        "t": "li",
+        "x": "The City considers whether the variance is consistent with Plan Winnipeg and any secondary plan, avoids a substantial adverse effect on neighbouring properties, and is the minimum change needed."
+      },
+      {
+        "t": "li",
+        "x": "The application includes a letter of intent explaining why the by-law cannot be met, scaled plans, a current status of title and, where possible, written support from adjoining neighbours."
+      },
+      {
+        "t": "li",
+        "x": "If a variance is ultimately rejected on appeal, you cannot re-apply for the same variance for one year, and no permit can be issued for that work."
+      },
+      {
+        "t": "p",
+        "x": "The City recommends meeting a zoning development officer before applying and checking with the area planner whether they would support the proposal. Talking to your neighbours early costs nothing and feeds directly into the application."
+      },
+      {
+        "t": "h2",
+        "x": "What changed with Winnipeg's 2025 zoning amendments?"
+      },
+      {
+        "t": "p",
+        "x": "In June 2025, City Council approved Zoning By-law and local area plan amendments that allow two-, three- and four-unit homes as of right in many neighbourhoods, and taller four-unit homes, up to 39 feet, on certain lots within 800 metres of frequent transit. The City says the amendments are now in effect."
+      },
+      {
+        "t": "p",
+        "x": "For a typical single-family addition, such as a family room or a larger kitchen, the City's pages do not describe new addition rules: you still need the development permit and building permit above. The changes matter more if you are thinking of adding a unit rather than a room, and whether your lot qualifies depends on its zoning and other conditions. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) covers the suite side of that question."
+      },
+      {
+        "t": "p",
+        "x": "A full rewrite of the Winnipeg Zoning By-law is also under way. The City's project page shows drafting in summer to fall 2026, Council review in late 2027 and implementation from 2028, subject to Council adoption. The rules in effect when you apply are the ones that count."
+      },
+      {
+        "t": "h2",
+        "x": "How long does it take to plan and build an addition?"
+      },
+      {
+        "t": "p",
+        "x": "Plan for two stages. Design, zoning review and permits come first and depend on how complex the project is; a variance alone takes about six to eight weeks. Construction of many straightforward additions then takes roughly eight to sixteen weeks once permits and materials are ready, depending on size, foundation conditions and finishes."
+      },
+      {
+        "t": "table",
+        "caption": "Stages of a home addition",
+        "head": [
+          "Stage",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "Site visit and feasibility",
+            "Look at the lot, the existing house, access and where an addition could connect"
+          ],
+          [
+            "Zoning check and survey",
+            "Confirm the zoning, setbacks and lot coverage; get a building location certificate if needed"
+          ],
+          [
+            "Design and drawings",
+            "Layout, structure, foundation and how floor heights and rooflines meet the house"
+          ],
+          [
+            "Variance (if needed)",
+            "About six to eight weeks from a complete application, including the 14-day posting"
+          ],
+          [
+            "Development, building and trade permits",
+            "Applications through Permits Online"
+          ],
+          [
+            "Construction",
+            "Foundation, framing, closing in, systems, then the opening into the existing house"
+          ],
+          [
+            "Inspections and handover",
+            "Required inspections, final walkthrough and clean-up"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "What should you ask before designing an addition?"
+      },
+      {
+        "t": "p",
+        "x": "Ask questions that test whether the idea fits the lot and the existing house before money goes into drawings. Zoning limits, the survey, structure, how the addition connects to the house and which costs sit outside the quote are the questions that most often change a plan, so settle them first."
+      },
+      {
+        "t": "li",
+        "x": "What is my lot's zoning, and how close is the house already to the setback limits?"
+      },
+      {
+        "t": "li",
+        "x": "Do I need a building location certificate or a new survey?"
+      },
+      {
+        "t": "li",
+        "x": "Who prepares the drawings, and will the structure or foundation need an engineer?"
+      },
+      {
+        "t": "li",
+        "x": "How will the addition's foundation, floor height and roofline meet the existing house?"
+      },
+      {
+        "t": "li",
+        "x": "Is the property in a heritage conservation district or on the List of Historical Resources? Our guide to [renovating a character home](/blog/renovating-a-character-home-in-winnipeg) explains what that changes."
+      },
+      {
+        "t": "li",
+        "x": "Which costs are in the written quote, and which, such as drawings, surveys and permit fees, are separate?"
+      },
+      {
+        "t": "p",
+        "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and for current price ranges by project type, our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** [book a free on-site visit](/book-online). We look at the lot, the existing house and where an addition could connect, and you receive a free written quote for the work. For a first range, try the [instant estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Do I need a development permit for a small addition?",
+        "a": "Yes. The City of Winnipeg says all house additions and attached garages need a development permit under the Zoning By-law, as well as a building permit under the Building By-law. A small footprint does not remove either requirement, and any electrical or plumbing work in the addition needs its own trade permit too."
+      },
+      {
+        "q": "Can I build closer to the property line than zoning allows?",
+        "a": "Only with an approved variance. A variance can modify a setback, height or lot coverage standard for your property without rezoning it. The City checks that it is the minimum change needed and fair to neighbours, notices are posted for 14 days, and neighbours can appeal. Allow about six to eight weeks from a complete application."
+      },
+      {
+        "q": "Did the 2025 zoning changes make additions easier?",
+        "a": "The June 2025 amendments focus on allowing two-, three- and four-unit homes as of right in many neighbourhoods. The City's pages describe no separate change for a single-family addition, which still needs development and building permits. If you are thinking of adding a unit rather than a room, check whether your lot qualifies under the new rules."
+      },
+      {
+        "q": "How long does a home addition take to build?",
+        "a": "Many straightforward additions take roughly eight to sixteen weeks of construction once permits and materials are ready. Size, foundation conditions, structural changes and custom finishes all affect the schedule. Design and permits come before that, and a variance, if you need one, takes about six to eight weeks on its own."
+      },
+      {
+        "q": "Can we stay in the house while an addition is built?",
+        "a": "Usually, for most of the project. The new structure is built and closed in first, and the opening into the existing house is made later, so most of the disruption comes near the end. Expect noise, dust protection between old and new, and some days when part of the house is hard to use."
+      }
+    ],
+    "answer": "Every house addition in Winnipeg needs a development permit under the Winnipeg Zoning By-law and a building permit under the Winnipeg Building By-law. Zoning controls where the addition sits and how big it can be; if a design does not fit, a variance may be possible. The 2025 zoning changes mainly affect two- to four-unit homes.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Additions & attached garages",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/additions-attached-garages",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Residential Variance application form, single-family or two-family dwelling (updated April 2026)",
+        "url": "https://www.winnipeg.ca/media/5732",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Zoning changes to accommodate infill housing",
+        "url": "https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Housing Accelerator Fund",
+        "url": "https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Winnipeg Zoning By-law Rewrite",
+        "url": "https://engage.winnipeg.ca/zoning-rewrite",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Heritage permits",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "home-renovation-financing-canada",
+    "title": "Home Renovation Financing in Canada: Your Options",
+    "metaTitle": "Home Renovation Financing in Canada: Your Options",
+    "metaDescription": "How Canadians pay for renovations: HELOCs, refinancing, home equity and personal loans, lines of credit, CMHC suite refinancing, and which programs closed.",
+    "excerpt": "A plain-language comparison of the main ways Canadians finance a renovation, what each one means for risk and flexibility, and which federal programs have closed.",
+    "category": "Money & Rebates",
+    "categories": [
+      "Money & Rebates",
+      "Costs & Budgets"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-880.311eab5d.webp",
+    "heroSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-1320.1e034cbf.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-1320.a983957b.avif 1320w",
+    "ogImage": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-1200x630.fdd817b3.jpg",
+    "heroAlt": "Title card: Home Renovation Financing in Canada: Your Options",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations",
+      "/services/basement-suites",
+      "/services/whole-home-renovations"
+    ],
+    "cluster": "renovation-money",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "callout",
+        "title": "Information, not financial advice",
+        "x": "This guide explains how common borrowing options work, using the Financial Consumer Agency of Canada, CMHC and other official sources checked on October 13, 2026. It doesn't quote interest rates or recommend a product. Talk to your lender or a financial advisor about what suits your situation."
+      },
+      {
+        "t": "p",
+        "x": "How you pay for a renovation affects more than the monthly payment. It decides how much flexibility you have when the project changes, what happens if rates move, and whether your home is on the line. This guide compares the main options open to Canadian homeowners and notes the federal programs that have closed."
+      },
+      {
+        "t": "h2",
+        "x": "What are the main ways to finance a home renovation in Canada?"
+      },
+      {
+        "t": "p",
+        "x": "The main options are savings, a home equity line of credit, refinancing or a home equity loan, a second mortgage, a personal loan or line of credit, and for new suites, CMHC-insured refinancing. Borrowing against your home usually costs less than unsecured credit, but it puts the home up as security. The table compares them."
+      },
+      {
+        "t": "table",
+        "caption": "Renovation financing options compared",
+        "head": [
+          "Option",
+          "How it works",
+          "Limit",
+          "Watch for"
+        ],
+        "rows": [
+          [
+            "Savings",
+            "Pay the deposit and stage payments from money set aside",
+            "What you've saved",
+            "Keep an emergency fund separate from the renovation budget"
+          ],
+          [
+            "Home equity line of credit (HELOC)",
+            "Revolving credit secured by your home; draw funds as work progresses",
+            "Up to 65% of the home's value",
+            "Variable rates; interest-only payments don't reduce what you owe"
+          ],
+          [
+            "Home equity loan",
+            "A one-time lump sum with fixed payments over a fixed term",
+            "Up to 80% of the home's value, less what you owe",
+            "Once repaid, you can't borrow it again"
+          ],
+          [
+            "Refinancing your mortgage",
+            "Renegotiate your mortgage for a larger amount",
+            "Generally up to 80% of the home's value in total",
+            "A prepayment penalty if you break a closed mortgage, plus fees"
+          ],
+          [
+            "Second mortgage",
+            "A separate loan secured by your home, alongside your first mortgage",
+            "Up to 80% of the home's value, less your first mortgage",
+            "Rates generally higher than a first mortgage; two payments"
+          ],
+          [
+            "Personal loan",
+            "A fixed amount repaid over a set term, secured or unsecured",
+            "Most range from $100 to $50,000, over 6 to 60 months",
+            "Some lenders charge to pay it off early"
+          ],
+          [
+            "Personal line of credit",
+            "Revolving credit, secured or unsecured",
+            "Set by the lender",
+            "Usually variable rates; the minimum payment is often just the interest"
+          ],
+          [
+            "CMHC-insured refinance for a secondary suite",
+            "Insured refinancing to build a self-contained suite",
+            "Up to 90% of the as-improved value, under $2 million",
+            "Extra financing can't exceed the project's cost"
+          ]
+        ],
+        "note": "Limits from the Financial Consumer Agency of Canada and the Department of Finance, checked October 13, 2026. Lenders set their own approval criteria."
+      },
+      {
+        "t": "h2",
+        "x": "How does a HELOC work for a renovation?"
+      },
+      {
+        "t": "p",
+        "x": "A HELOC lets you borrow against your home's equity as you need it, up to a credit limit, and you pay interest only on what you've drawn. That suits a renovation paid in stages. The limit is up to 65% of your home's value, you need more than 35% equity for a stand-alone HELOC, and rates are usually variable."
+      },
+      {
+        "t": "p",
+        "x": "The Financial Consumer Agency of Canada is plain about the risks: rising rates make repayment harder, interest-only payments don't reduce the principal, and easy access can lead to borrowing more than you planned. If you use a HELOC, set a repayment plan for the renovation balance rather than leaving it open-ended."
+      },
+      {
+        "t": "h2",
+        "x": "Should you refinance your mortgage to pay for a renovation?"
+      },
+      {
+        "t": "p",
+        "x": "It can suit a large project: borrowing secured by your home usually costs less than unsecured credit, and repayment is spread out. The cost is in breaking your current mortgage: a closed mortgage usually carries a prepayment penalty that can cost thousands of dollars, plus appraisal and discharge fees. Ask your lender for the exact figure first."
+      },
+      {
+        "t": "p",
+        "x": "If you're close to renewal, timing the renovation around it may avoid the penalty. Some lenders also offer a blend-and-extend, where your old rate is blended with a new term's rate; it generally avoids the prepayment penalty, though administrative fees may apply."
+      },
+      {
+        "t": "h2",
+        "x": "How does CMHC's secondary suite refinance work?"
+      },
+      {
+        "t": "p",
+        "x": "Since January 2025, approved lenders can offer CMHC-insured refinancing to homeowners building a secondary suite, such as a basement suite or laneway home. You can borrow up to 90% of the home's value, including the value the suite adds, with up to a 30-year amortization, as long as the as-improved value is under $2 million."
+      },
+      {
+        "t": "li",
+        "x": "The property can have up to four units in total, including the existing one."
+      },
+      {
+        "t": "li",
+        "x": "You, or a close relative, must live in one of the current units."
+      },
+      {
+        "t": "li",
+        "x": "The suite must be self-contained, meet local bylaws and regulations, and not be used as a short-term rental, which CMHC defines as renting for any period under 90 consecutive days."
+      },
+      {
+        "t": "li",
+        "x": "The extra money must go to building the suite and can't exceed the project's cost."
+      },
+      {
+        "t": "p",
+        "x": "Because the lender needs to see what you're building and what it costs, a detailed written quote and a building permit come early. Before you design a suite in Winnipeg, read our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg), and see how we plan [basement development](/services/basement-renovations)."
+      },
+      {
+        "t": "h2",
+        "x": "Which renovation financing programs are closed?"
+      },
+      {
+        "t": "p",
+        "x": "The Canada Greener Homes Loan is closed because its funding is fully committed, and the Canada Greener Homes Grant is closed too. The Canada Secondary Suite Loan Program, announced in 2024, won't happen: Budget 2025 says the program, which was not yet operational, will not be implemented. Treat any site still advertising these as out of date."
+      },
+      {
+        "t": "h2",
+        "x": "What other help can lower the cost?"
+      },
+      {
+        "t": "p",
+        "x": "Federal tax credits can offset part of the cost of building a secondary unit for a senior or an adult eligible for the disability tax credit, or of accessibility work, and some provinces and utilities offer energy-efficiency rebates. In Manitoba, Manitoba Hydro's Home Energy Efficiency Loan finances qualifying upgrades on your energy bill, with approval needed before work starts."
+      },
+      {
+        "t": "p",
+        "x": "Our guide to [renovation grants and tax credits in Manitoba](/blog/manitoba-renovation-tax-credits-rebates) lists each program's current status, with links to the official pages."
+      },
+      {
+        "t": "h2",
+        "x": "How do you match financing to a contractor's payment schedule?"
+      },
+      {
+        "t": "p",
+        "x": "Line up financing before you sign, so the deposit and each stage payment are covered when they fall due. Get the contractor's written payment schedule, share it with your lender, and confirm how funds are released. A HELOC or savings handles staged payments easily; a lump-sum loan works if the money is in place before work starts."
+      },
+      {
+        "t": "p",
+        "x": "In Manitoba, the Builders' Liens Act requires the person paying to hold back 7.5% of each payment for at least 60 days after substantial performance is certified or the work is completed or abandoned, whichever comes first, so part of the money is released later rather than all at once. Our free written quote sets out the scope and the taxes, which is the document to take to your lender. Winnipeg price ranges are in our [renovation cost guide](/renovation-cost-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Before you talk to a lender, get a number you can rely on. [Book a free on-site visit](/book-online) for a free written quote, or start with our [instant renovation estimate](/instant-quote) for a quick ballpark."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What's the cheapest way to pay for a renovation?",
+        "a": "Savings cost nothing in interest, so they're usually the least expensive option. Among borrowing options, credit secured by your home, such as a HELOC, usually comes with a lower rate than unsecured loans and lines of credit, but your home is the security. Compare the total cost, including fees and any penalties, not just the rate."
+      },
+      {
+        "q": "How much can I borrow against my home for a renovation?",
+        "a": "The Financial Consumer Agency of Canada says you can generally borrow up to 80% of your home's value through home equity products, and what you still owe on your mortgage counts against that limit. A HELOC is limited to 65% of the value. For a new secondary suite, CMHC-insured refinancing can go up to 90%, subject to its conditions."
+      },
+      {
+        "q": "Is the Canada Greener Homes Loan still available?",
+        "a": "No. Natural Resources Canada says funding for the Canada Greener Homes Loan is fully committed and new loan applications cannot be approved. The Canada Greener Homes Grant is closed too. For energy upgrades, check your province or utility; in Manitoba, Efficiency Manitoba offers rebates and Manitoba Hydro offers an on-bill Home Energy Efficiency Loan."
+      },
+      {
+        "q": "Can I use a personal loan for a renovation?",
+        "a": "Yes. The Financial Consumer Agency of Canada lists home renovations as a typical use for personal loans, which mostly range from $100 to $50,000 over 6 to 60 months. They can suit smaller projects, or cases where you don't want to borrow against your home. Check the total cost, including fees, and any charge for paying it off early."
+      },
+      {
+        "q": "Do I need a quote before applying for renovation financing?",
+        "a": "It helps, and for some products it's essential. CMHC-insured refinancing for a secondary suite, for example, limits the extra financing to the project's cost, so the lender needs a clear figure. A detailed written quote shows what's being built and what it costs, so you borrow the right amount rather than a guess."
+      }
+    ],
+    "answer": "Most Canadians finance a renovation with savings, a home equity line of credit (up to 65% of the home's value), a refinance or home equity loan (generally up to 80%, including the existing mortgage), a personal loan or line of credit, or, for a new suite, CMHC-insured refinancing. The federal Greener Homes Loan is closed.",
+    "sources": [
+      {
+        "label": "Financial Consumer Agency of Canada: Borrowing against home equity",
+        "url": "https://www.canada.ca/en/financial-consumer-agency/services/mortgages/borrow-home-equity.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Financial Consumer Agency of Canada: Home equity lines of credit",
+        "url": "https://www.canada.ca/en/financial-consumer-agency/services/mortgages/home-equity-line-credit.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Financial Consumer Agency of Canada: Breaking your mortgage contract",
+        "url": "https://www.canada.ca/en/financial-consumer-agency/services/mortgages/break-mortgage-contract.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Financial Consumer Agency of Canada: Personal loans",
+        "url": "https://www.canada.ca/en/financial-consumer-agency/services/loans/personal-loans.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Financial Consumer Agency of Canada: Lines of credit",
+        "url": "https://www.canada.ca/en/financial-consumer-agency/services/loans/loans-lines-credit.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Department of Finance Canada: Mortgage insurance rule changes to enable homeowners to add secondary suites",
+        "url": "https://www.canada.ca/en/department-finance/news/2024/10/mortgage-insurance-rule-changes-to-enable-homeowners-to-add-secondary-suites.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "CMHC: Refinance for building secondary suites (fact sheet)",
+        "url": "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-refinance.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Canada Greener Homes Loan (closed)",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Closed — Canada Greener Homes Grant",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Budget 2025, Annex 3: Canada Secondary Suite Loan program will not be implemented",
+        "url": "https://budget.canada.ca/2025/report-rapport/anx3-en.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Hydro: Home Energy Efficiency Loan",
+        "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "The Builders' Liens Act, C.C.S.M. c. B91 (s. 24, holdback)",
+        "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "home-renovation-planning-guide-canada",
+    "title": "Home Renovation Planning in Canada: Guide and Checklist",
+    "metaTitle": "Home Renovation Planning in Canada: Guide and Checklist",
+    "metaDescription": "Plan a home renovation in Canada step by step: goals, budget, permits, timeline, asbestos and radon checks before demolition, and a full checklist.",
+    "excerpt": "A step-by-step plan for Canadian homeowners: set goals and a budget, understand permits and codes, build a realistic timeline, and run the safety checks that belong before demolition.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning",
+      "Costs & Budgets"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
+    "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w",
+    "ogImage": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x630.95c71e72.jpg",
+    "heroAlt": "Title card: Home Renovation Planning in Canada: Guide and Checklist",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/whole-home-renovations",
+      "/services/kitchen-renovations",
+      "/services/basement-renovations"
+    ],
+    "cluster": "renovation-planning",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Renovations that run over budget or past their finish date are usually under-planned rather than badly built. This guide sets out the planning steps in order for homeowners anywhere in Canada. Where local rules matter, we use Winnipeg as the example, because that's where we work; your own municipality's rules may differ."
+      },
+      {
+        "t": "h2",
+        "x": "Where do you start when planning a home renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Start with what isn't working and what you need the space to do, not with finishes. List the problems, the must-haves and the nice-to-haves, decide whether you're renovating one room or several, and note anything that's expensive to move, such as a structural wall or the main plumbing stack. That list becomes the brief every contractor quotes against."
+      },
+      {
+        "t": "p",
+        "x": "If you're weighing everything at once against working in phases, our guide to [full versus partial renovations](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) compares the two. Projects that touch several rooms are often planned as a [whole-home renovation](/services/whole-home-renovations) so trades, permits and finishes are coordinated once."
+      },
+      {
+        "t": "h2",
+        "x": "How do you set a home renovation budget in Canada?"
+      },
+      {
+        "t": "p",
+        "x": "Build the budget from the parts of the project rather than one guess: construction, finishes, permits, design or engineering if needed, living costs during the work, and a contingency for what's found behind the walls. Decide the number you're comfortable spending before you collect quotes, then compare each quote against it line by line."
+      },
+      {
+        "t": "table",
+        "caption": "What goes into a renovation budget",
+        "head": [
+          "Budget line",
+          "What it covers",
+          "Planning note"
+        ],
+        "rows": [
+          [
+            "Construction",
+            "Labour, materials, subtrades, site supervision and disposal",
+            "Comes from written quotes for the same scope"
+          ],
+          [
+            "Finishes and allowances",
+            "Cabinets, counters, tile, flooring, fixtures and lighting",
+            "Allowances in a quote should match the finishes you actually want"
+          ],
+          [
+            "Permits and inspections",
+            "Building and trade permit fees set by your municipality",
+            "Check the fee schedule on your municipality's website"
+          ],
+          [
+            "Design and engineering",
+            "Drawings, structural engineering and energy evaluations",
+            "Needed for structural changes, additions and some suites"
+          ],
+          [
+            "Living costs during the work",
+            "Eating out, temporary accommodation and storage",
+            "Larger for kitchen and whole-home projects"
+          ],
+          [
+            "Contingency",
+            "Hidden conditions such as rot, old wiring or moisture",
+            "Older homes warrant a larger cushion; agree in writing how it's used"
+          ],
+          [
+            "Taxes",
+            "Sales taxes on the contract",
+            "Ask for taxes to be shown on every quote so totals compare"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "For Winnipeg price ranges, see our [renovation cost guide](/renovation-cost-winnipeg). If you'll borrow for part of it, read the [home renovation financing guide](/blog/home-renovation-financing-canada) before you lock in the budget."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a permit to renovate in Canada?"
+      },
+      {
+        "t": "p",
+        "x": "Often, yes. Provinces and territories adopt the building code, most of them based on the National Building Code, and enforcement is usually delegated to municipal building officials who issue permits and inspect the work. In Winnipeg, for example, creating a new bedroom requires a building permit, kitchens, bathrooms and new or larger exterior openings may need one, and painting and flooring don't."
+      },
+      {
+        "t": "p",
+        "x": "Trade work usually has its own permit. In Winnipeg, electrical and plumbing permits go to City-licensed contractors, or to homeowners doing their own work in a single detached home they live in. Check your municipality's website before you finalize the plan, make sure the contract says who applies, and if you're in Winnipeg, start with our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits)."
+      },
+      {
+        "t": "h2",
+        "x": "How long does a home renovation take?"
+      },
+      {
+        "t": "p",
+        "x": "Longer than the construction itself. Allow time for decisions, quotes, permits and ordering before work starts, then the construction period, then a short closeout for deficiencies and final inspections. Lead times for cabinets, windows and custom items often decide the start date, so make those choices early. The table shows each phase and what sets its pace."
+      },
+      {
+        "t": "table",
+        "caption": "Typical renovation phases",
+        "head": [
+          "Phase",
+          "What happens",
+          "What sets the pace"
+        ],
+        "rows": [
+          [
+            "Planning",
+            "Goals, budget, contractor visits and written quotes",
+            "How quickly decisions are made"
+          ],
+          [
+            "Design and permits",
+            "Drawings if needed, finish selections and permit applications",
+            "Project complexity and your municipality's review"
+          ],
+          [
+            "Ordering",
+            "Cabinets, windows, doors, fixtures and specialty items",
+            "Supplier lead times"
+          ],
+          [
+            "Construction",
+            "Demolition through finishing, with inspections at set stages",
+            "Scope, trade availability, inspection booking and what's found behind walls"
+          ],
+          [
+            "Closeout",
+            "Deficiency list, final inspection and warranty documents",
+            "Booking the final inspection"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "For reference, our typical construction periods in Winnipeg, once materials and permits are ready, are two to three weeks for a bathroom, four to six weeks for a kitchen, four to eight weeks for a basement, and eight to sixteen weeks for whole-home renovations and additions."
+      },
+      {
+        "t": "h2",
+        "x": "What safety checks should happen before demolition?"
+      },
+      {
+        "t": "p",
+        "x": "Two checks matter most in older Canadian homes. Asbestos was widely used in homes before 1990, so have suspect materials tested by a professional before anything is disturbed. If you're finishing a basement, test for radon first: levels are generally highest in basements, and Health Canada's guideline is 200 Bq/m³."
+      },
+      {
+        "t": "li",
+        "x": "**Asbestos:** Health Canada lists older plaster, drywall and spackling, floor and ceiling tiles, roofing, pipe insulation and vermiculite insulation among possible sources. Don't disturb vermiculite yourself, and if asbestos is found, hire a qualified removal specialist."
+      },
+      {
+        "t": "li",
+        "x": "**Radon:** Health Canada recommends a long-term test of about three months, ideally in fall or winter. Our guide to [radon testing before finishing a basement](/blog/radon-testing-before-finishing-a-basement) explains the timing."
+      },
+      {
+        "t": "li",
+        "x": "**Moisture and structure:** look for water stains, white mineral deposits and cracks before finishing anything below grade, and have a structural engineer assess significant cracks."
+      },
+      {
+        "t": "h2",
+        "x": "Home renovation checklist"
+      },
+      {
+        "t": "p",
+        "x": "Use this checklist to keep decisions ahead of the work. It runs from first ideas to final payment. Tick each item before moving to the next stage, because most renovation delays trace back to a decision that wasn't made in time."
+      },
+      {
+        "t": "table",
+        "caption": "Home renovation checklist for Canadian homeowners",
+        "head": [
+          "Stage",
+          "Checklist item",
+          "Done when"
+        ],
+        "rows": [
+          [
+            "Goals",
+            "List the problems, must-haves and nice-to-haves",
+            "One page every contractor can quote from"
+          ],
+          [
+            "Budget",
+            "Set a total, including contingency and living costs",
+            "You know your ceiling before quotes arrive"
+          ],
+          [
+            "Financing",
+            "Confirm savings, a line of credit or lender approval",
+            "Funds cover the deposit and stage payments"
+          ],
+          [
+            "Contractors",
+            "Get two or three written quotes for the same scope",
+            "Quotes compare line by line"
+          ],
+          [
+            "Verification",
+            "Check the workers compensation clearance, insurance and business registration",
+            "Documents are on file"
+          ],
+          [
+            "Contract",
+            "Scope, allowances, schedule, payments, change process, warranty and who pulls permits",
+            "Signed by both parties"
+          ],
+          [
+            "Permits",
+            "Building and trade permits issued",
+            "Permit numbers are in your file"
+          ],
+          [
+            "Safety",
+            "Asbestos testing for older materials; radon test before finishing a basement",
+            "Results are in hand"
+          ],
+          [
+            "Ordering",
+            "Long-lead items ordered",
+            "Delivery dates fit the schedule"
+          ],
+          [
+            "Living plan",
+            "Decide whether to stay or move out; set up a temporary kitchen or bathroom",
+            "In place before demolition"
+          ],
+          [
+            "Construction",
+            "Regular updates; changes approved in writing",
+            "Inspections passed at each stage"
+          ],
+          [
+            "Closeout",
+            "Deficiency walk-through, final inspection, warranty and manuals",
+            "Final payment made"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "Are there grants or tax credits for renovating in Canada?"
+      },
+      {
+        "t": "p",
+        "x": "A few. Federal tax credits help with building a secondary unit so a senior or an adult eligible for the disability tax credit can live with a relative, and with accessibility work. Some provinces and utilities offer energy rebates, and the Canada Greener Homes Grant is closed. In Manitoba, see [our Manitoba grants and tax credits guide](/blog/manitoba-renovation-tax-credits-rebates)."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Planning a renovation in Winnipeg or a nearby community, such as a [kitchen renovation](/services/kitchen-renovations) or [basement development](/services/basement-renovations)? [Book a free on-site visit](/book-online). We'll walk through your list, flag likely permits and hidden-condition risks, and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "How much contingency should I add to a renovation budget?",
+        "a": "It depends on the age and condition of the home and how much you're opening up. A cosmetic update in a newer home needs less than a basement or whole-home renovation in an older house, where wiring, plumbing or moisture problems can appear after demolition. Ask your contractor which items carry the most uncertainty, and size the contingency around those."
+      },
+      {
+        "q": "What's the first step in planning a home renovation?",
+        "a": "Write down what isn't working and what you need the space to do, then separate must-haves from nice-to-haves. That short brief lets you set a realistic budget and gives every contractor the same project to quote, which makes the quotes comparable. Finish choices come later, once the layout and budget are settled."
+      },
+      {
+        "q": "Do I need a permit to renovate a kitchen or bathroom?",
+        "a": "Sometimes. Replacing cabinets, counters or flooring is usually cosmetic, but moving plumbing, adding circuits or changing walls typically needs permits. In Winnipeg, the City says kitchens and bathrooms may need a building permit, and plumbing and electrical permits are separate. Check with your municipality before you finalize the design."
+      },
+      {
+        "q": "When is the best time of year to renovate in Canada?",
+        "a": "Interior work such as kitchens, bathrooms and basements can go ahead year-round. Exterior work, additions and anything involving foundations or concrete is easier to schedule in warmer months. Whatever the project, start planning several months ahead so design, permits and ordering are finished before the date you'd like work to begin."
+      },
+      {
+        "q": "Should I test for radon before renovating?",
+        "a": "If the work involves a basement or the lowest lived-in floor, yes. Health Canada recommends a long-term test of about three months, ideally in fall or winter, and its guideline is 200 Bq/m³. Testing before you finish a basement means any fix can go in before new walls and flooring cover the slab."
+      }
+    ],
+    "answer": "Plan a renovation in this order: write down goals and must-haves, set a budget with a contingency, check which permits your municipality requires, get written quotes for the same scope, build a timeline around ordering and inspections, and test for asbestos and radon where relevant before demolition. Deciding early is what keeps the work on schedule.",
+    "sources": [
+      {
+        "label": "National Research Council Canada: Canada's construction system, the context for model codes",
+        "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/canadas-construction-system-context-model-codes",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "National Research Council Canada: Model code adoption across Canada",
+        "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/model-code-adoption-across-canada",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home renovations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Electrical installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Plumbing installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Asbestos and your health",
+        "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Radon, what you need to know",
+        "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radon-what-you-need-to-know.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Canada Revenue Agency: Multigenerational home renovation tax credit (line 45355)",
+        "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Closed — Canada Greener Homes Grant",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-007-B: Building permit requirements for housing",
+        "url": "https://www.winnipeg.ca/media/6116",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "how-to-check-a-contractors-wcb-clearance-manitoba",
+    "title": "How to Check a Contractor's WCB Clearance in Manitoba",
+    "metaTitle": "How to Check a Contractor's WCB Clearance in Manitoba",
+    "metaDescription": "Step by step: how Manitoba homeowners request a contractor's WCB clearance letter online, what it proves, and what to do if the contractor isn't listed.",
+    "excerpt": "A WCB clearance letter takes a few minutes to get and tells you whether a contractor is in good standing with the Workers Compensation Board of Manitoba. Here's how to request one.",
+    "category": "Hiring a Contractor",
+    "categories": [
+      "Hiring a Contractor"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.abd27f5e.webp",
+    "heroSrcSet": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1320.a1fe8363.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1320.b0d9c3f3.avif 1320w",
+    "ogImage": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1200x630.8a999200.jpg",
+    "heroAlt": "Title card: How to Check a Contractor's WCB Clearance in Manitoba",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/whole-home-renovations",
+      "/services/commercial-renovations"
+    ],
+    "cluster": "hiring-a-contractor",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Of all the checks you can run on a contractor, a WCB clearance is one of the quickest. It's a letter from the Workers Compensation Board of Manitoba showing whether a business is in good standing, and anyone can request one online. This guide shows the steps, what the letter does and doesn't prove, and what to do when a contractor doesn't show up in the search."
+      },
+      {
+        "t": "h2",
+        "x": "What is a WCB clearance letter?"
+      },
+      {
+        "t": "p",
+        "x": "A clearance letter tells you whether a business, contractor or subcontractor has complied with WCB Manitoba's requirements and is in good standing. Each letter carries a unique WCB reference number so its authenticity can be checked. It shows status on the day you request it, so ask for a fresh one rather than relying on an old copy."
+      },
+      {
+        "t": "p",
+        "x": "Construction is one of Manitoba's mandatory industries for workers compensation. Businesses in a mandatory industry must cover everyone who works for them, including contract workers, which is why a clearance letter is a standard request when you hire a renovation contractor."
+      },
+      {
+        "t": "h2",
+        "x": "How do you request a WCB clearance in Manitoba?"
+      },
+      {
+        "t": "p",
+        "x": "Use the public side of WCB Manitoba's online Clearance Request System. It's available 24 hours a day and doesn't need an account. WCB notes that creating letters in Microsoft Edge can cause formatting problems and suggests another browser. Have the contractor's exact business name, or their WCB account number, ready before you start:"
+      },
+      {
+        "t": "oli",
+        "x": "Go to the [WCB Manitoba Clearances page](https://www.wcb.mb.ca/employers/clearances/), listed under Employers."
+      },
+      {
+        "t": "oli",
+        "x": "Open the public Clearance Request System (general public access)."
+      },
+      {
+        "t": "oli",
+        "x": "Search by firm name, entering at least the first three characters of the business name, or by firm number, which is the seven-digit WCB account number. Add leading zeros if the number is shorter."
+      },
+      {
+        "t": "oli",
+        "x": "Tick the business in the results and click Add to List. Use View List to check your list or search for more firms."
+      },
+      {
+        "t": "oli",
+        "x": "Select the firms you need letters for, click Request Letter, then Submit."
+      },
+      {
+        "t": "oli",
+        "x": "Print or save the clearance letter. Your list is temporary and is erased when you leave the system."
+      },
+      {
+        "t": "p",
+        "x": "Use the business name from the contractor's quote or contract. If it doesn't match the name on the clearance letter, ask why before you sign. A name search only shows active registered accounts, so a missing result is worth a follow-up question."
+      },
+      {
+        "t": "h2",
+        "x": "When should you check a contractor's WCB clearance?"
+      },
+      {
+        "t": "p",
+        "x": "Check before you sign the contract and again before the final payment. WCB advises businesses that hire contractors to get clearance information before work starts and before any payment is made. On a longer project, such as a basement development or whole-home renovation, ask for a fresh letter before each large progress payment as well."
+      },
+      {
+        "t": "h2",
+        "x": "What if the contractor isn't in the WCB system?"
+      },
+      {
+        "t": "p",
+        "x": "It may mean the business isn't registered, or isn't required to register, such as a self-employed contractor with no workers. Don't guess. WCB says to verify whether the contractor is required to register and, if so, that they're in good standing. Call WCB Assessment Services at 204-954-4505, or toll free at 1-855-954-4321."
+      },
+      {
+        "t": "p",
+        "x": "A business owner with no workers isn't required to have WCB coverage, though they can choose to buy personal coverage. If that's the situation, ask how any helpers or subtrades on your job are covered, and ask to see clearance letters for those subtrades too."
+      },
+      {
+        "t": "h2",
+        "x": "Why does WCB coverage matter to a homeowner?"
+      },
+      {
+        "t": "p",
+        "x": "It means the people working in your home are covered through their employer's WCB account if they're hurt on the job. WCB Manitoba's classification rules say homeowners renovating their own home who hire professional work through subcontracting aren't eligible to buy WCB coverage, so the contractor's account being in good standing is what matters."
+      },
+      {
+        "t": "p",
+        "x": "For businesses, WCB is direct about the risk: if you hire a contractor who isn't in good standing, you may be responsible for including the labour portion of their earnings in your own assessable payroll, and could be liable for their assessment costs. If you're renovating an office, shop or restaurant, that applies to you. See our [commercial renovation services](/services/commercial-renovations) for how we plan fit-ups. Homeowners with questions about their own situation should ask WCB directly and check what their home insurance covers."
+      },
+      {
+        "t": "h2",
+        "x": "What does a WCB clearance prove, and what doesn't it?"
+      },
+      {
+        "t": "p",
+        "x": "A clearance proves one thing: the business is registered with WCB Manitoba and in good standing on the date of the letter. It says nothing about liability insurance, trade licences, permits or the quality of the work. Run it alongside three other checks, each of which answers a different question, as the table shows."
+      },
+      {
+        "t": "table",
+        "caption": "WCB clearance compared with other contractor checks",
+        "head": [
+          "Check",
+          "What it proves",
+          "What it doesn't prove"
+        ],
+        "rows": [
+          [
+            "WCB clearance letter",
+            "The business is registered with WCB Manitoba and in good standing on the date of the letter",
+            "Liability insurance, trade licences or quality of work"
+          ],
+          [
+            "Certificate of liability insurance",
+            "The contractor holds a liability policy, with its limits and expiry date",
+            "Workers compensation coverage for their workers"
+          ],
+          [
+            "[Manitoba Companies Office](https://companiesoffice.gov.mb.ca/) record",
+            "The business name is registered, with details of who operates it",
+            "Good standing with WCB, or insurance"
+          ],
+          [
+            "[City of Winnipeg licensed contractor list](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors)",
+            "A contractor holds a City licence for electrical, plumbing, mechanical or demolition work",
+            "That a permit has been issued for your project"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "Our full [contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) adds references, contract terms, deposits and warranty, and our guide to [what a general contractor does](/blog/what-does-a-general-contractor-do) explains who is responsible for the subtrades on a multi-trade job. Meeting contractors in person at a home show? Take our [Winnipeg Renovation Show questions](/blog/winnipeg-renovation-show-questions-to-ask) with you."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "When you're ready to compare quotes, [book a free on-site visit](/book-online) and we'll follow up with a free written quote, or get a ballpark first with our [instant renovation estimate](/instant-quote). For whole-house projects, our [whole-home renovation](/services/whole-home-renovations) page explains how the work is staged."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Do I need to register to get a WCB clearance letter?",
+        "a": "No. Anyone can use the search and print functions of WCB Manitoba's online Clearance Request System. Registration is for businesses that want to save lists of subcontractors and get email updates when a firm's status changes. It's arranged by phoning the WCB Technical Support Team at 204-954-4573 in Winnipeg, or 1-855-954-4321, extension 4573."
+      },
+      {
+        "q": "How often should I check a contractor's WCB clearance?",
+        "a": "Check before you sign and again before the final payment, and on a longer job before large progress payments too. WCB advises businesses that hire contractors to get clearance information before work begins and before any payment is made, because a firm's standing can change, for example if it stops complying with a WCB payroll order."
+      },
+      {
+        "q": "What does it mean if a contractor isn't in good standing?",
+        "a": "It means the business hasn't met WCB Manitoba's requirements, for example by not complying with a payroll order, and it can't get a clearance until the issue is resolved. Ask the contractor to sort it out and send you a new letter before any work starts. If they can't, treat it as a reason to choose someone else."
+      },
+      {
+        "q": "Does WCB coverage replace liability insurance?",
+        "a": "No. WCB coverage is for the contractor's workers if they're injured on the job. Liability insurance is what responds if the contractor damages your home or injures someone else. Ask for both, a WCB clearance letter and a certificate of insurance, then confirm the insurance with the insurer or broker named on the certificate."
+      },
+      {
+        "q": "Do subcontractors need their own WCB clearance?",
+        "a": "Subtrades that run their own businesses with workers need their own WCB coverage, and WCB says general contractors should get clearance information on their subcontractors before work starts and before paying them. Ask your contractor which subtrades will be on your job and whether those clearances have been checked. You can also search the subtrades yourself."
+      }
+    ],
+    "answer": "Go to WCB Manitoba's website, open the Clearances page and choose the public Clearance Request System. Search by the contractor's business name or seven-digit WCB account number, tick the business, add it to your list, then click Request Letter and Submit. Print or save the letter. You don't need an account or registration.",
+    "sources": [
+      {
+        "label": "WCB Manitoba: Clearances",
+        "url": "https://www.wcb.mb.ca/employers/clearances/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "WCB Manitoba: A Guide for Using WCB's Online Clearance Request System",
+        "url": "https://www.wcb.mb.ca/uploads/2025/09/0504.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)",
+        "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "WCB Manitoba: Building construction classification",
+        "url": "https://www.wcb.mb.ca/classifications/building-construction/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Companies Office",
+        "url": "https://companiesoffice.gov.mb.ca/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: List of licensed contractors",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "insulation-rebates-during-a-renovation-manitoba",
+    "title": "Insulation Rebates in Manitoba: How to Use Them During a Renovation",
+    "metaTitle": "Manitoba Insulation Rebate: Get Approval Before You Renovate",
+    "metaDescription": "Efficiency Manitoba's insulation rebate needs approval before drywall comes down. Rates by area, the steps, and which programs are open or closed in 2026.",
+    "excerpt": "Planning to finish a basement, open up walls or re-side the house? Efficiency Manitoba's Home Insulation Rebate can help with the insulation, but only if the paperwork happens before the demolition does.",
+    "category": "Money & Rebates",
+    "categories": [
+      "Money & Rebates"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 9,
+    "hero": null,
+    "heroSrc": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.b1620437.webp",
+    "heroSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1320.707c702f.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1320.70228dd9.avif 1320w",
+    "ogImage": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1200x630.5496f199.jpg",
+    "heroAlt": "Title card: Insulation Rebates in Manitoba: How to Use Them During a Renovation",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations",
+      "/services/whole-home-renovations"
+    ],
+    "cluster": "energy-rebates",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "A renovation is often the easiest time to add insulation. The basement is bare studs, the walls are open, or the old siding is coming off anyway. In Manitoba, the main program that helps with the cost of the insulation itself is Efficiency Manitoba's Home Insulation Rebate. The catch is timing: the rebate is approved before work starts, so it has to be part of the plan from the first conversation, not something you remember once the old drywall is in the bin."
+      },
+      {
+        "t": "p",
+        "x": "Everything below was checked against the official program pages on October 13, 2026. Programs change, so confirm the details with Efficiency Manitoba before you sign a contract."
+      },
+      {
+        "t": "h2",
+        "x": "Can you get an insulation rebate during a renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Yes, if the area qualifies and the application is approved before work begins. Efficiency Manitoba's Home Insulation Rebate covers attics, roofs, wall cavities, exterior walls during re-siding, and foundation walls and joist headers. Projects that have already started or are finished are not eligible, so the rebate has to be lined up while you are still planning."
+      },
+      {
+        "t": "p",
+        "x": "The program page lists these basics:"
+      },
+      {
+        "t": "li",
+        "x": "You own the home, rental property or cottage, it has active Manitoba Hydro residential service, and it is heated for the whole heating season, September to May."
+      },
+      {
+        "t": "li",
+        "x": "The home is detached, semi-detached, or a mobile or modular home on a permanent foundation with a permanent water supply."
+      },
+      {
+        "t": "li",
+        "x": "Each area is at least 100 square feet (joist headers are the exception), and you have not already received a rebate for that area."
+      },
+      {
+        "t": "li",
+        "x": "Garages, three-season sunrooms, porches, verandas, seasonal homes, apartments and converting unheated space to heated space are not eligible."
+      },
+      {
+        "t": "h2",
+        "x": "How much does the rebate pay for each area?"
+      },
+      {
+        "t": "p",
+        "x": "The rebate is a set rate multiplied by the R-value you add and the square footage you insulate. Each area must start at or below a set R-value and finish within a required range. The rebate for an area cannot be more than the cost of the insulation material needed to reach that range, taxes included."
+      },
+      {
+        "t": "table",
+        "caption": "Efficiency Manitoba Home Insulation Rebate rates (checked October 13, 2026)",
+        "head": [
+          "Area",
+          "Existing insulation",
+          "Required final level",
+          "Rebate rate"
+        ],
+        "rows": [
+          [
+            "Open attic",
+            "R-34 or less",
+            "R-50 to R-60",
+            "$0.03 × R-value added × sq. ft."
+          ],
+          [
+            "Cathedral, sloped or flat roof",
+            "R-30 or less",
+            "R-28 to R-60",
+            "$0.03 × R-value added × sq. ft."
+          ],
+          [
+            "Attic kneewall",
+            "R-12 or less",
+            "R-24",
+            "$0.03 × R-value added × sq. ft."
+          ],
+          [
+            "Wall cavities (between studs)",
+            "R-12 or less",
+            "R-12 to R-24",
+            "$0.06 × R-value added × sq. ft."
+          ],
+          [
+            "Exterior wall, during re-siding",
+            "R-0",
+            "R-3.75 to R-15",
+            "$0.15 × R-value added × sq. ft."
+          ],
+          [
+            "Foundation walls and joist headers",
+            "R-12 or less",
+            "R-22 to R-24",
+            "$0.06 × R-value added × sq. ft."
+          ]
+        ],
+        "note": "Source: Efficiency Manitoba. Insulation beyond the required final level is not rebated, and when old insulation is replaced only the R-value added above the original level counts."
+      },
+      {
+        "t": "p",
+        "x": "To see how the arithmetic works: taking 600 square feet of uninsulated foundation wall to R-24 adds 24 R-value points, so the calculation is $0.06 × 24 × 600, or $864, as long as that does not exceed the cost of the insulation material. Your actual rebate depends on the measured areas and the existing R-values Efficiency Manitoba accepts."
+      },
+      {
+        "t": "h2",
+        "x": "Why does approval have to come before demolition?"
+      },
+      {
+        "t": "p",
+        "x": "Because Efficiency Manitoba needs to see what is there before it changes. Approval must come before you buy materials or start any work, including removing drywall, stucco or original insulation, and your home may be selected for an inspection to check the existing R-values and measure the area. Once a wall is gutted, there is nothing left to verify."
+      },
+      {
+        "t": "p",
+        "x": "This is the step that catches people out on renovations, because a basement development or a kitchen gut usually starts with demolition. Build the rebate into the schedule like this:"
+      },
+      {
+        "t": "oli",
+        "x": "Decide which areas you want insulated, such as foundation walls, the attic or exterior walls during re-siding, before the scope is final."
+      },
+      {
+        "t": "oli",
+        "x": "Choose a registered contractor or retailer from Efficiency Manitoba's supplier directory. The supplier starts the application, and the materials must be bought from the supplier named on it."
+      },
+      {
+        "t": "oli",
+        "x": "Wait for approval, including a pre-verification inspection if your home is selected."
+      },
+      {
+        "t": "oli",
+        "x": "Do the work: demolition, any air sealing, then the insulation, which must be installed within 12 months of the approval date."
+      },
+      {
+        "t": "oli",
+        "x": "Once the insulation is installed and paid for, your registered supplier starts the completion process, or you can contact Efficiency Manitoba; keep every receipt and invoice. A post-verification inspection may be needed before the cheque is mailed."
+      },
+      {
+        "t": "h2",
+        "x": "How does the air sealing bonus work?"
+      },
+      {
+        "t": "p",
+        "x": "Efficiency Manitoba adds an air sealing bonus of up to $1,000 to the insulation rebate. A pre-retrofit EnerGuide evaluation is the required first step, the air sealing must be done before the insulation goes in, and a post-retrofit evaluation measures the change in air leakage. Both evaluation reports are submitted with your paperwork."
+      },
+      {
+        "t": "p",
+        "x": "Separately, Efficiency Manitoba offers a $400 rebate for a pre-retrofit EnerGuide evaluation when you plan at least one energy efficiency upgrade within the next 12 months; apply within 90 days of the evaluation. On a large renovation, booking the evaluation early gives you a baseline and keeps the air sealing bonus open."
+      },
+      {
+        "t": "h2",
+        "x": "Which programs are open, and which are closed?"
+      },
+      {
+        "t": "p",
+        "x": "As of October 13, 2026, Efficiency Manitoba's insulation rebate and Manitoba Hydro's Home Energy Efficiency Loan are both presented as current offers on their official pages. The federal Canada Greener Homes Grant and Canada Greener Homes Loan are closed, so do not build a renovation budget around either one."
+      },
+      {
+        "t": "table",
+        "caption": "Program status, checked October 13, 2026",
+        "head": [
+          "Program",
+          "Run by",
+          "Status",
+          "What to know"
+        ],
+        "rows": [
+          [
+            "Home Insulation Rebate",
+            "Efficiency Manitoba",
+            "Current offer",
+            "Approval before any work or purchases"
+          ],
+          [
+            "Air sealing bonus (up to $1,000)",
+            "Efficiency Manitoba",
+            "Current offer",
+            "Needs pre- and post-retrofit EnerGuide evaluations"
+          ],
+          [
+            "EnerGuide Home Evaluation Rebate ($400)",
+            "Efficiency Manitoba",
+            "Current offer",
+            "Pre-retrofit evaluation only; apply within 90 days"
+          ],
+          [
+            "Home Energy Efficiency Loan",
+            "Manitoba Hydro",
+            "Current offer",
+            "On-bill financing; approval before work starts"
+          ],
+          [
+            "Canada Greener Homes Grant",
+            "Natural Resources Canada",
+            "Closed",
+            "Not accepting new applications"
+          ],
+          [
+            "Canada Greener Homes Loan",
+            "Natural Resources Canada",
+            "Closed",
+            "Funding fully committed; new loans cannot be approved"
+          ]
+        ],
+        "note": "Each program's official page is listed under Sources. Check them again before you rely on any of these."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba Hydro's Home Energy Efficiency Loan can finance insulation, with payments added to your energy bill. Manitoba Hydro must approve the application before any work starts or materials are bought, and the loan becomes due when the house is sold. Households that meet income requirements may qualify for free insulation upgrades through Efficiency Manitoba's Energy Efficiency Assistance Program, and there are separate First Nation and Métis offers. For the wider picture, see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [financing a home renovation in Canada](/blog/home-renovation-financing-canada)."
+      },
+      {
+        "t": "h2",
+        "x": "Where does insulation fit in a basement or whole-home renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Insulation goes in after framing and the plumbing and electrical rough-in, and before drywall. In a basement development that usually means the foundation walls and joist headers; in a whole-home renovation it can also mean exterior walls opened from inside and the attic. Any moisture problem should be fixed before insulation covers a wall."
+      },
+      {
+        "t": "p",
+        "x": "A few practical points from the planning stage:"
+      },
+      {
+        "t": "li",
+        "x": "A basement development needs a building permit from the City of Winnipeg. We coordinate permits and inspections with the City, or with your local municipality outside Winnipeg, as part of a [basement development](/services/basement-renovations)."
+      },
+      {
+        "t": "li",
+        "x": "If the basement has a history of water, deal with that first. Our guide to [protecting a Winnipeg basement from flooding](/blog/basement-flood-protection-winnipeg) covers where to start."
+      },
+      {
+        "t": "li",
+        "x": "If the attic or walls contain loose, pebble-like vermiculite insulation, Health Canada advises not disturbing it and having a professional test for asbestos before renovating, with removal by a qualified specialist if it is found."
+      },
+      {
+        "t": "li",
+        "x": "On a [whole home renovation](/services/whole-home-renovations), list every area you might insulate before the rebate application goes in, because each area is approved on its own."
+      },
+      {
+        "t": "h2",
+        "x": "What to ask at the on-site visit"
+      },
+      {
+        "t": "li",
+        "x": "Which areas of my house are likely to meet the starting R-value limits?"
+      },
+      {
+        "t": "li",
+        "x": "Who is the registered supplier on the rebate application, and when will approval come relative to demolition?"
+      },
+      {
+        "t": "li",
+        "x": "Is air sealing part of the scope, and is the EnerGuide bonus worth it for my house?"
+      },
+      {
+        "t": "li",
+        "x": "How does the 12-month installation window fit the construction schedule?"
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** if you are planning a basement or whole-home renovation and want the rebate in the plan, [book a free on-site visit](/book-online). We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Can I still get the rebate if the drywall is already off?",
+        "a": "Generally not for that area. Efficiency Manitoba requires approval before any work, including removing drywall, stucco or original insulation, and lists projects already started as ineligible. If demolition has begun, call Efficiency Manitoba before going further and ask whether areas you have not touched yet, such as the attic, could still qualify."
+      },
+      {
+        "q": "Does finishing my basement qualify for the insulation rebate?",
+        "a": "Foundation walls and joist headers can qualify when the existing insulation is R-12 or less and the finished level reaches R-22 to R-24, with at least 100 square feet per area. Converting unheated space to heated space is not eligible, so an unheated cold room may not count. Confirm your areas with Efficiency Manitoba before you apply."
+      },
+      {
+        "q": "How long do I have to finish the work after approval?",
+        "a": "Efficiency Manitoba gives you 12 months from the approval date to install the insulation. Your supplier then starts the completion paperwork. On a long renovation, time the application close to the start of construction so the clock does not run out before the walls are insulated."
+      },
+      {
+        "q": "Is the Canada Greener Homes Grant still available?",
+        "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Canada Greener Homes Loan is closed because its funding is fully committed and new loans cannot be approved. In Manitoba, the programs to check are Efficiency Manitoba's rebates and Manitoba Hydro's Home Energy Efficiency Loan."
+      },
+      {
+        "q": "Can I combine the rebate with Manitoba Hydro financing?",
+        "a": "Efficiency Manitoba's insulation page says you can use Manitoba Hydro's Home Energy Efficiency Loan alongside the rebate. Manitoba Hydro must approve the loan before any work starts or materials are bought, so both applications belong in the planning stage, before demolition. Loan payments are added to your energy bill."
+      }
+    ],
+    "answer": "Yes, you can claim Efficiency Manitoba's Home Insulation Rebate during a renovation, but only if it is approved before you buy materials or remove drywall, stucco or old insulation. A registered contractor or retailer starts the application, the rebate is paid per R-value added per square foot, and the insulation must be installed within 12 months of approval.",
+    "sources": [
+      {
+        "label": "Efficiency Manitoba: Home Insulation Rebate",
+        "url": "https://efficiencymb.ca/my-home/home-insulation-rebate/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: EnerGuide Home Evaluation Rebate",
+        "url": "https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Hydro: Home Energy Efficiency Loan",
+        "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Closed: Canada Greener Homes Grant",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Canada Greener Homes Loan (closed)",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Asbestos and your health",
+        "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "manitoba-renovation-tax-credits-rebates",
+    "title": "Home Renovation Grants and Tax Credits in Manitoba",
+    "metaTitle": "Home Renovation Grants and Tax Credits in Manitoba",
+    "metaDescription": "Which renovation tax credits, rebates and loans Manitoba homeowners can still use, which programs have closed, and how to avoid losing a rebate.",
+    "excerpt": "A status check of the renovation tax credits, rebates and loans Manitoba homeowners can still use, the programs that have closed, and the steps that keep a claim valid.",
+    "category": "Money & Rebates",
+    "categories": [
+      "Money & Rebates"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 10,
+    "hero": null,
+    "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
+    "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.6094b92a.avif 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.e8f9c620.avif 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.a075d7e8.avif 1320w",
+    "ogImage": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x630.a6d534f4.jpg",
+    "heroAlt": "Title card: Home Renovation Grants and Tax Credits in Manitoba",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations",
+      "/services/basement-suites",
+      "/services/bathroom-renovations"
+    ],
+    "cluster": "renovation-money",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "callout",
+        "title": "General information, not tax advice",
+        "x": "Program details were checked on official government and utility websites on October 13, 2026. Rules and amounts change, and eligibility depends on your situation, so confirm with the program and with an accountant before you rely on a credit or rebate."
+      },
+      {
+        "t": "p",
+        "x": "Renovation help in Manitoba changed a lot between 2024 and 2026. Well-known federal programs closed, a promised federal suite loan was dropped, and the help that remains mostly comes through your tax return, Efficiency Manitoba, Manitoba Hydro or your mortgage lender. Here's where things stand, with a link to the official page for each program."
+      },
+      {
+        "t": "h2",
+        "x": "Which renovation programs are open in Manitoba?"
+      },
+      {
+        "t": "p",
+        "x": "As of October 13, 2026, the programs below are listed as available on their official pages. Each has its own eligibility rules, and the Efficiency Manitoba rebates and the Manitoba Hydro loan need approval before you buy materials or start work. Amounts are what each program publishes; what you receive depends on your project and tax situation."
+      },
+      {
+        "t": "table",
+        "caption": "Open or listed as available (checked October 13, 2026)",
+        "head": [
+          "Program",
+          "Who it helps",
+          "Amount",
+          "Status"
+        ],
+        "rows": [
+          [
+            "[Multigenerational Home Renovation Tax Credit (federal)](https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html)",
+            "Households creating a self-contained secondary unit so a senior, or an adult eligible for the disability tax credit, can live with a relative",
+            "Refundable credit on up to $50,000 of qualifying costs per renovation; CRA lists 14.5% (up to $7,250) for 2025",
+            "Open, claimed on your tax return (line 45355)"
+          ],
+          [
+            "[Home Accessibility Tax Credit (federal)](https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31285-home-accessibility-expenses.html)",
+            "People 65 or older, or eligible for the disability tax credit, and certain family members",
+            "Non-refundable credit on up to $20,000 of eligible expenses per year",
+            "Open, claimed on your tax return (line 31285)"
+          ],
+          [
+            "[CMHC-insured refinance for secondary suites](https://www.canada.ca/en/department-finance/news/2024/10/mortgage-insurance-rule-changes-to-enable-homeowners-to-add-secondary-suites.html)",
+            "Owners adding a suite (up to four units in total), with the owner or a close relative living in one unit",
+            "Insured refinancing up to 90% of the as-improved value, which must be under $2 million; up to 30-year amortization",
+            "Available through approved lenders since January 2025"
+          ],
+          [
+            "[Efficiency Manitoba Home Insulation Rebate](https://efficiencymb.ca/my-home/home-insulation-rebate/)",
+            "Owners of detached, semi-detached and mobile or modular homes on a permanent foundation, with Manitoba Hydro service",
+            "$0.03 to $0.15 per square foot for each R-value added, depending on the area",
+            "Listed; approval needed before work"
+          ],
+          [
+            "[Efficiency Manitoba Windows and Doors Rebate](https://efficiencymb.ca/my-home/windows-and-doors/)",
+            "Homeowners and landlords",
+            "$100 per ENERGY STAR certified triple-pane window or door ($300 for income-qualified households)",
+            "Listed"
+          ],
+          [
+            "[Efficiency Manitoba EnerGuide evaluation rebate](https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/)",
+            "Owners planning at least one efficiency upgrade within 12 months",
+            "$400 toward a pre-retrofit EnerGuide evaluation",
+            "Listed"
+          ],
+          [
+            "[Efficiency Manitoba Home Energy Retrofits](https://efficiencymb.ca/my-home/home-energy-retrofit-program/)",
+            "Owner-occupied detached homes, duplexes and triplexes doing deep energy renovations",
+            "$75 per gigajoule of energy saved, and $150 per gigajoule beyond a typical new-home rating",
+            "Listed; apply and complete an EnerGuide evaluation before work"
+          ],
+          [
+            "[Manitoba Hydro Home Energy Efficiency Loan](https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/)",
+            "Homeowners making qualifying energy upgrades through a participating contractor or retailer",
+            "Up to $12,500 per residence; ground source heat pumps and solar PV can be financed up to $20,000, with all loans combined capped at $20,000. Repaid on your energy bill",
+            "Listed; approval needed before work or purchases"
+          ],
+          [
+            "[Manitoba Green Energy Equipment Tax Credit](https://www.gov.mb.ca/finance/tao/green.html)",
+            "Owners installing a geothermal heat pump system",
+            "15% of the system's capital cost other than the heat pump when the installer is certified by the Manitoba Geothermal Energy Alliance, plus 7.5% on heat pumps made in Manitoba",
+            "Listed by Manitoba Finance (no date shown); confirm current availability with Manitoba Finance"
+          ]
+        ],
+        "note": "Status as published on each official page on the checked date. Interest rates are not shown; ask Manitoba Hydro for current loan terms."
+      },
+      {
+        "t": "table",
+        "caption": "Closed or not available (checked October 13, 2026)",
+        "head": [
+          "Program",
+          "Who it helped",
+          "Amount",
+          "Status"
+        ],
+        "rows": [
+          [
+            "[Canada Greener Homes Grant](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant)",
+            "Homeowners doing energy retrofits",
+            "None",
+            "Closed"
+          ],
+          [
+            "[Canada Greener Homes Loan](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan)",
+            "Homeowners financing energy retrofits",
+            "None",
+            "Closed: funding fully committed, new applications can't be approved"
+          ],
+          [
+            "[City of Winnipeg Basement Flooding Protection Subsidy](https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm)",
+            "Homeowners installing backwater valves and sump pits",
+            "None",
+            "Cancelled: no funding from 2017, cancelled by City Council"
+          ],
+          [
+            "[Canada Secondary Suite Loan Program](https://budget.canada.ca/2025/report-rapport/anx3-en.html)",
+            "Homeowners building suites (announced, never launched)",
+            "None",
+            "Not available: Budget 2025 says it will not be implemented"
+          ],
+          [
+            "[Manitoba Housing renovation and repair programs](https://www.gov.mb.ca/housing/progs/repair.html)",
+            "Homeowners needing repair assistance",
+            "None",
+            "No longer available"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "How does the Multigenerational Home Renovation Tax Credit work?"
+      },
+      {
+        "t": "p",
+        "x": "It's a refundable federal credit for building a self-contained secondary unit, such as a basement suite, so a senior or an adult who is eligible for the disability tax credit can live with a relative. You can claim up to $50,000 of qualifying costs per completed renovation, in the tax year the renovation is finished."
+      },
+      {
+        "t": "p",
+        "x": "CRA's page for the 2025 tax year lists the credit at 14.5%, or up to $7,250 per claim. Federal credit rates moved with the 2025 and 2026 income tax changes, so check CRA's page for the year you file. The renovation period ends when the work is complete, for example when it passes final inspection, which is one more reason to have the permit in place."
+      },
+      {
+        "t": "p",
+        "x": "You can't claim the same expense under more than one credit, and expenses are reduced by any related assistance you receive. If you're planning a suite, read our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) before you design it, and see how we approach [basement development](/services/basement-renovations)."
+      },
+      {
+        "t": "h2",
+        "x": "What counts for the Home Accessibility Tax Credit?"
+      },
+      {
+        "t": "p",
+        "x": "Renovations that help a senior or a person eligible for the disability tax credit get into and move around their home, or that reduce the risk of harm, can qualify. CRA's examples include wheelchair ramps, walk-in bathtubs, wheel-in showers and grab bars. Up to $20,000 of eligible expenses can be claimed per year, and that cap applies per home when more than one person qualifies."
+      },
+      {
+        "t": "li",
+        "x": "**Usually eligible:** paid work by an electrician, plumber, carpenter or architect, plus building materials, fixtures, equipment rentals, building plans and permits."
+      },
+      {
+        "t": "li",
+        "x": "**Not eligible:** household appliances, routine repairs and maintenance, financing costs, items that won't become a permanent part of the home, and renovations made mainly to increase the home's value."
+      },
+      {
+        "t": "p",
+        "x": "CRA's page for this credit says an expense that also qualifies as a medical expense can be claimed under both credits, but Budget 2025 proposed ending that double claim from the 2026 tax year, so ask your accountant which rule applies to the year you file. If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
+      },
+      {
+        "t": "h2",
+        "x": "Which Efficiency Manitoba rebates fit a renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Insulation, windows and doors, and deep energy retrofits are the rebates most likely to line up with a renovation. The catch is timing: Efficiency Manitoba wants approval before you buy materials or start work, including removing drywall, stucco or old insulation. Plan the rebate into the schedule at the quote stage, not after demolition."
+      },
+      {
+        "t": "p",
+        "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application. Our guide to [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba) walks through the order of steps, and the [window and door replacement guide](/blog/window-and-door-replacement-winnipeg) covers triple-pane upgrades."
+      },
+      {
+        "t": "h2",
+        "x": "Which renovation programs are closed?"
+      },
+      {
+        "t": "p",
+        "x": "The Canada Greener Homes Grant and Canada Greener Homes Loan are closed, the City of Winnipeg's Basement Flooding Protection Subsidy hasn't been funded since 2017 and was cancelled, and the Canada Secondary Suite Loan Program will not be launched. If a website or salesperson presents any of these as available today, treat the rest of their information with caution."
+      },
+      {
+        "t": "p",
+        "x": "Backwater valves and sump pits are still worth considering in a basement project, just without the City subsidy; see our guide to [basement flood protection in Winnipeg](/blog/basement-flood-protection-winnipeg). For suites, CMHC-insured refinancing is the federal measure that did go ahead, and our [home renovation financing guide](/blog/home-renovation-financing-canada) explains how it works."
+      },
+      {
+        "t": "h2",
+        "x": "What about commercial renovations?"
+      },
+      {
+        "t": "p",
+        "x": "The programs above are aimed at homeowners. Businesses usually handle renovation costs through their own tax and financing planning, so ask your accountant how a fit-up is treated for your business before you commit. Our guide to [financing a commercial renovation](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) covers the main options."
+      },
+      {
+        "t": "h2",
+        "x": "How do you avoid losing a rebate or tax credit?"
+      },
+      {
+        "t": "p",
+        "x": "Most lost rebates come down to timing or paperwork, not eligibility. Get any required approval before buying materials or opening walls, use registered contractors where a program requires them, keep every invoice, and make sure permits and final inspections are done. A few minutes of checking at the quote stage protects the claim:"
+      },
+      {
+        "t": "li",
+        "x": "Apply and get approval before you buy materials or start work, for Efficiency Manitoba rebates and the Manitoba Hydro loan."
+      },
+      {
+        "t": "li",
+        "x": "Use a registered contractor or retailer where the program requires one."
+      },
+      {
+        "t": "li",
+        "x": "Keep every invoice and receipt, with the work and the address described."
+      },
+      {
+        "t": "li",
+        "x": "Make sure permits are in place and inspections are passed, since completion is often marked by the final inspection."
+      },
+      {
+        "t": "li",
+        "x": "Don't count the same expense twice across federal credits, and ask your accountant before filing if more than one family member is claiming."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Planning a suite, an accessible bathroom or an energy upgrade? Bring your rebate questions to a [free on-site visit](/book-online) so any pre-approval steps can be timed before work starts; you'll get a free written quote afterwards. For a first number, try our [instant renovation estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Is there a home renovation grant in Manitoba?",
+        "a": "There's no general renovation grant for Manitoba homeowners. The help that exists is targeted: Efficiency Manitoba rebates for energy upgrades, federal tax credits for multigenerational suites and accessibility work, and Manitoba Hydro's on-bill loan. Manitoba Housing says its renovation and repair programs are no longer available. Check each program's own page, because offers and amounts change."
+      },
+      {
+        "q": "Can I still get the Canada Greener Homes Grant?",
+        "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Canada Greener Homes Loan is closed too because its funding is fully committed. For energy upgrades in Manitoba today, look at Efficiency Manitoba's rebates and Manitoba Hydro's Home Energy Efficiency Loan, both of which need approval before any work starts."
+      },
+      {
+        "q": "Does the City of Winnipeg still pay for backwater valves?",
+        "a": "No. The City's Basement Flooding Protection Subsidy Program didn't receive funding for 2017 and was cancelled by City Council. Backwater valves and sump pits still need a permit and inspection in Winnipeg, and the City recommends having both, so they're worth pricing into a basement renovation even without a subsidy."
+      },
+      {
+        "q": "Can I claim both the Multigenerational and Home Accessibility credits?",
+        "a": "Not for the same expense. CRA says you can't claim one expense under more than one of these credits. If a project includes both a new secondary unit and separate accessibility work, keep the costs clearly separated on invoices, and ask your accountant how to split the claim before you file."
+      },
+      {
+        "q": "Is the Canada Secondary Suite Loan Program available?",
+        "a": "No. It was announced in 2024, but Budget 2025 states that the program, which was not yet operational, will not be implemented. The federal option for financing a suite is CMHC-insured refinancing, which lets approved lenders refinance up to 90% of the home's value, including the value the new suite adds, subject to the program's conditions."
+      }
+    ],
+    "answer": "Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates for insulation, windows and doors, Manitoba Hydro's on-bill Home Energy Efficiency Loan, and CMHC-insured refinancing to build a suite. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.",
+    "sources": [
+      {
+        "label": "Canada Revenue Agency: Multigenerational home renovation tax credit (line 45355)",
+        "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Canada Revenue Agency: How to claim the MHRTC",
+        "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc/how-claim-mhrtc.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Canada Revenue Agency: Home accessibility expenses (line 31285)",
+        "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31285-home-accessibility-expenses.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Canada Revenue Agency: Budget 2025, CRA information on select measures (home accessibility and medical expense credits)",
+        "url": "https://www.canada.ca/en/revenue-agency/programs/about-canada-revenue-agency-cra/federal-government-budgets/budget-2025-cra-information-select-measures.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Department of Finance Canada: Mortgage insurance rule changes to enable homeowners to add secondary suites",
+        "url": "https://www.canada.ca/en/department-finance/news/2024/10/mortgage-insurance-rule-changes-to-enable-homeowners-to-add-secondary-suites.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "CMHC: Refinance for building secondary suites (fact sheet)",
+        "url": "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-refinance.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Home Insulation Rebate",
+        "url": "https://efficiencymb.ca/my-home/home-insulation-rebate/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Window and door upgrades",
+        "url": "https://efficiencymb.ca/my-home/windows-and-doors/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: EnerGuide home evaluation rebate",
+        "url": "https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Home Energy Retrofits",
+        "url": "https://efficiencymb.ca/my-home/home-energy-retrofit-program/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Hydro: Home Energy Efficiency Loan",
+        "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Finance: Green Energy Equipment Tax Credit",
+        "url": "https://www.gov.mb.ca/finance/tao/green.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Closed — Canada Greener Homes Grant",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Canada Greener Homes Loan (closed)",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Basement Flooding Protection Subsidy Program (cancelled)",
+        "url": "https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Budget 2025, Annex 3: Canada Secondary Suite Loan program will not be implemented",
+        "url": "https://budget.canada.ca/2025/report-rapport/anx3-en.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Housing: Repair and renovation programs",
+        "url": "https://www.gov.mb.ca/housing/progs/repair.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "office-fit-up-lease-planning-winnipeg",
+    "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
+    "metaTitle": "Office Fit-Up Planning in Winnipeg | Bridgeland Builders",
+    "metaDescription": "Plan a Winnipeg office fit-up around your lease: landlord consent, tenant allowances, City permits, inspections and the occupancy permit before move-in.",
+    "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
+    "category": "Commercial",
+    "categories": [
+      "Commercial",
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.9079ee23.webp",
+    "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1320.1977b93b.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1320.b33e68fe.avif 1320w",
+    "ogImage": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1200x630.96b0b61e.jpg",
+    "heroAlt": "Title card: Office Fit-Up in Winnipeg: Planning Around Your Lease",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/office-renovations",
+      "/services/commercial-renovations"
+    ],
+    "cluster": "commercial-planning",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "A fit-up, also called tenant or leasehold improvements, is the work that turns a leased space into your office: walls, doors, lighting, power and data, finishes and sometimes mechanical changes. The construction is only part of the timeline. The lease decides who pays and what you may build, and the City decides when people can work there. Our [office renovation services](/services/office-renovations) page covers the build; this guide covers the planning around it."
+      },
+      {
+        "t": "h2",
+        "x": "What should you settle with the landlord before signing?"
+      },
+      {
+        "t": "p",
+        "x": "Get the landlord's consent to your plans, confirm the lease allows future changes, and find out what the landlord will contribute: a tenant improvement allowance, rent-free months or work done by the landlord. Also confirm which improvements stay with the building when you leave, because attached improvements usually do unless the lease says otherwise."
+      },
+      {
+        "t": "table",
+        "caption": "Lease terms that shape an office fit-up",
+        "head": [
+          "Term",
+          "What it means",
+          "Why it matters for the build"
+        ],
+        "rows": [
+          [
+            "Leasehold (tenant) improvements",
+            "Renovations that make the space suit your business",
+            "Attached improvements usually stay with the landlord"
+          ],
+          [
+            "Tenant improvement allowance",
+            "Landlord cash toward renovations, often per square foot",
+            "Sets how much of the fit-up you fund yourself"
+          ],
+          [
+            "Tenant inducements",
+            "Rent-free months or help paying for improvements",
+            "Can offset rent while construction is under way"
+          ],
+          [
+            "Turnkey improvements",
+            "Work the landlord completes at your request when you sign",
+            "Spell out exactly what is included and to what standard"
+          ],
+          [
+            "Trade fixtures",
+            "Movable items such as furniture and computers",
+            "Usually leave with you"
+          ]
+        ],
+        "note": "Definitions summarized from BDC's guide to commercial leasing terms. Have a commercial real estate lawyer review the lease."
+      },
+      {
+        "t": "p",
+        "x": "BDC also suggests confirming that the building can structurally support your work and equipment. On the City side, the permit application needs a letter of authorization from the building owner or property manager for your intended use, so landlord sign-off is part of the permit, not just the lease."
+      },
+      {
+        "t": "h2",
+        "x": "Does an office fit-up need a building permit in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Usually, yes. Interior alterations in a commercial building go through a City building permit using the Commercial Alteration Design Summary (CADS) form, with electrical and mechanical permits taken out by licensed contractors. Significant work on exits, public corridors or fire separations in a Part 3 building, significant sprinkler or fire alarm changes and any structural change need sealed drawings."
+      },
+      {
+        "t": "p",
+        "x": "Office projects have a few specifics. In a multi-tenant building, the form asks for your neighbouring tenants because fire separation requirements depend on their uses. Tenant fit-ups in new Part 3 buildings need a Manitoba Energy Code for Buildings declaration. Projects exempt from a development permit file a declaration instead; otherwise the development permit can be reviewed before or alongside the building permit."
+      },
+      {
+        "t": "p",
+        "x": "For simpler fit-ups, the architectural drawings do not have to come from an architect. The City asks for someone who can show the scope clearly and professionally: a key plan of where your unit sits, and a scaled floor plan with dimensions, labelled rooms and walls marked existing, new or demolished."
+      },
+      {
+        "t": "h2",
+        "x": "When can your team move in?"
+      },
+      {
+        "t": "p",
+        "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space. Construction and the delivery and installation of furniture such as desks, workstations and cubicle partitions are allowed earlier, but storing personal belongings is not, so plan IT set-up and move day around the permit."
+      },
+      {
+        "t": "p",
+        "x": "Before you can request occupancy, the City's progress inspections must be complete to the final stage, and any architect or engineer involved must submit their professional certifications. The permit applicant requests the inspections, so build inspection dates into the schedule rather than treating the last week as finishing time."
+      },
+      {
+        "t": "table",
+        "caption": "Lining up the fit-up with your lease",
+        "head": [
+          "Stage",
+          "What happens",
+          "Lease question to ask"
+        ],
+        "rows": [
+          [
+            "Before signing",
+            "On-site visit, layout options, written quote, zoning check",
+            "Can the offer be conditional on landlord consent to our plans?"
+          ],
+          [
+            "Design",
+            "Floor plan and, if needed, sealed drawings",
+            "Does the allowance depend on approved drawings?"
+          ],
+          [
+            "Permits",
+            "Building permit, development permit if needed, trade permits",
+            "Will the landlord sign the authorization letter promptly?"
+          ],
+          [
+            "Construction",
+            "Phased or after-hours work, progress inspections",
+            "When does rent start, and are there rent-free months?"
+          ],
+          [
+            "Occupancy and move-in",
+            "Final inspections, occupancy permit, IT and furniture",
+            "Does the lease start date leave room for the permit?"
+          ]
+        ],
+        "note": "Ask your lawyer about lease conditions and your contractor for a schedule with the written quote."
+      },
+      {
+        "t": "h2",
+        "x": "Can an office be renovated while people keep working?"
+      },
+      {
+        "t": "p",
+        "x": "Often, if the work is phased and noisy tasks are scheduled carefully. Evening and weekend work keeps daytime disruption down, but within 150 metres of a home the City limits loud construction to 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays. Building rules set by your landlord also apply."
+      },
+      {
+        "t": "p",
+        "x": "Ask the property manager about elevator bookings, after-hours access and restricted tasks. If clients visit and an accessible entrance or washroom will be out of use, Manitoba's Accessible Customer Service Standard requires you to let the public know when and why. Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps and sends a progress update every week. More on staying open is in our guide to [preparing your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation)."
+      },
+      {
+        "t": "h2",
+        "x": "What should an office fit-up budget include?"
+      },
+      {
+        "t": "p",
+        "x": "More than construction. Include design and any engineering fees, permit fees, the build itself, furniture, IT and phone systems, moving costs, any rent you pay before you can occupy, and a contingency. BDC recommends setting aside a contingency fund and leaving buffer room in your timeline, because renovations often run over budget and past deadline."
+      },
+      {
+        "t": "p",
+        "x": "If you need to borrow, our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) compares term loans, leasehold improvement loans and landlord allowances. For a first number, try the [instant renovation estimate](/instant-quote); the free written quote after an on-site visit is the figure to plan around."
+      },
+      {
+        "t": "h2",
+        "x": "Questions to ask at the on-site visit"
+      },
+      {
+        "t": "li",
+        "x": "Can the layout reuse existing walls, doors, ceilings and lighting?"
+      },
+      {
+        "t": "li",
+        "x": "Will any work touch exits, corridors, fire separations or sprinklers?"
+      },
+      {
+        "t": "li",
+        "x": "Which tasks need after-hours scheduling under the building's rules?"
+      },
+      {
+        "t": "li",
+        "x": "What has to be finished before we can request occupancy, and when is that realistic?"
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** [Book a free on-site visit](/book-online). We will walk the space with you, talk through your lease dates and follow up with a free written quote. Bridgeland Builders renovates offices across Winnipeg and nearby communities; see our full range of [commercial renovation services](/services/commercial-renovations)."
+      }
+    ],
+    "faqsTitle": "Office fit-up questions",
+    "faqs": [
+      {
+        "q": "What is the difference between an office fit-up and a renovation?",
+        "a": "A fit-up is the work that prepares a leased space for a particular tenant: walls, doors, lighting, power and data, finishes and sometimes washrooms or mechanical changes. A renovation can be any upgrade to an existing space. The approvals are the same either way: commercial interior alterations in Winnipeg go through a City building permit."
+      },
+      {
+        "q": "Who pays for an office fit-up?",
+        "a": "It depends on the lease. Landlords may offer a tenant improvement allowance, often set per square foot, rent-free months, or turnkey work they complete before you move in. Whatever the landlord does not cover, you fund. Put the allowance amount, what it can be spent on and when it is paid into the lease itself."
+      },
+      {
+        "q": "Can we move furniture and computers in before the occupancy permit?",
+        "a": "Furniture, yes; computers, no. The City's occupancy bulletin allows desks, workstations, chairs and tables to be delivered and installed before the permit, but lists storing personal belongings and installing loose equipment such as computers, printers and copiers among the things you can't do yet, along with training staff and meeting clients. Plan IT installation and your first workday for after the interim or final occupancy permit is issued."
+      },
+      {
+        "q": "Do I need an architect for an office fit-up?",
+        "a": "Not always. Architectural drawings for a commercial alteration do not have to come from an architect unless the work is complex. The City's form lists the triggers, such as structural changes, significant fire alarm or sprinkler changes, or significant work on exits, corridors or fire separations in a Part 3 building. Then sealed drawings are required."
+      },
+      {
+        "q": "How early should we start planning?",
+        "a": "As soon as you are seriously considering a space, and ideally before you sign. An on-site visit at that stage shows whether the layout works, what the building needs and which approvals apply. Bridgeland Builders offers that visit free, follows it with a free written quote, and replies to enquiries within one business day."
+      }
+    ],
+    "answer": "Plan an office fit-up backwards from your lease. Before signing, get the landlord's consent to your plans, and settle what the landlord will build or pay for and who owns the improvements when you leave. Then allow time for drawings, a City building permit, inspections and an occupancy permit before your team moves in.",
+    "sources": [
+      {
+        "label": "BDC: Leasehold improvements, the 8 steps to follow",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: 13 commercial leasing terms you need to know",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+        "url": "https://www.winnipeg.ca/media/6330",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+        "url": "https://www.winnipeg.ca/media/6131",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial inspections",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+        "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
+        "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "planning-a-winter-basement-development-winnipeg",
+    "title": "Planning a Winter Basement Development in Winnipeg",
+    "metaTitle": "Winter Basement Development in Winnipeg | Bridgeland",
+    "metaDescription": "How to plan a basement development over a Winnipeg winter: permit timing, radon testing, egress windows in frozen ground, inspections and a timeline.",
+    "excerpt": "Winter suits basement work in Winnipeg: the job is indoors and permit applications avoid the construction-season rush. Here’s how to plan it, month by month.",
+    "category": "Basements & Suites",
+    "categories": [
+      "Basements & Suites",
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp",
+    "heroSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.565cba54.webp 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.3669a5da.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.59e02b43.avif 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.b83b3c92.avif 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.c31bba81.avif 1320w",
+    "ogImage": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x630.d192608b.jpg",
+    "heroAlt": "Title card: Planning a Winter Basement Development in Winnipeg",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations"
+    ],
+    "cluster": "basement-planning",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Most basement questions in Winnipeg arrive in spring, when the snow melts and the basement reminds people it exists. But a basement is one of the few renovations that barely notices the weather outside, so planning in fall can mean a finished space before the next spring rush. Here’s how to plan a winter basement development, using City of Winnipeg and Health Canada guidance checked on October 13, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "Why develop a basement in winter?"
+      },
+      {
+        "t": "p",
+        "x": "Because nearly all of the work happens inside. Planning and applying for permits in the fall means the drawings and approvals can be ready when the build starts. Winter is also when Health Canada recommends a long-term radon test, so testing and planning can run together."
+      },
+      {
+        "t": "p",
+        "x": "Winter also shows you how the basement behaves at its coldest. During a cold snap, look for frost or condensation on foundation walls, rim joists and windows, and mention what you find at the on-site visit, because insulation and vapour control are planned around it."
+      },
+      {
+        "t": "h2",
+        "x": "What does a winter basement timeline look like?"
+      },
+      {
+        "t": "p",
+        "x": "Work back from when you want to use the space. Allow time for the on-site visit, design and written quote, then the permit application, then about 4–8 weeks of construction for a typical basement once permits are issued. Bedrooms that need new windows, a bathroom with new plumbing under the slab, or structural changes add steps."
+      },
+      {
+        "t": "table",
+        "caption": "Sample plan for a winter basement development in Winnipeg",
+        "head": [
+          "When",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "September–October",
+            "Free on-site visit: moisture, ceiling heights, windows and the location of the furnace, water heater and sump; start a long-term radon test"
+          ],
+          [
+            "October–November",
+            "Layout and written quote; permit drawings and checklist; confirm whether a development permit is needed"
+          ],
+          [
+            "November–December",
+            "Submit the building permit through Permits Online; arrange electrical and plumbing permits"
+          ],
+          [
+            "January–March",
+            "Build: framing, rough-ins and inspections, insulation and vapour barrier, preboard inspection, drywall and finishes (about 4–8 weeks for a typical basement)"
+          ],
+          [
+            "Spring",
+            "Exterior follow-up such as window-well grading, downspouts and landscaping around any new window"
+          ]
+        ],
+        "note": "An example only. Actual dates depend on scope, permit review and inspection scheduling."
+      },
+      {
+        "t": "h2",
+        "x": "Can you install an egress window in winter?"
+      },
+      {
+        "t": "p",
+        "x": "It’s possible, but plan it early: it’s the one part of a basement job that happens outside. A new or larger window in the foundation wall needs a building permit with engineer-stamped drawings, a site plan and elevations, and it means digging beside the wall."
+      },
+      {
+        "t": "p",
+        "x": "Frozen ground adds work, so ask at the on-site visit whether to cut the window before freeze-up or schedule it with the rest of the job."
+      },
+      {
+        "t": "p",
+        "x": "Check the existing windows first. The City’s guide says a bedroom window must open from inside without tools and give at least 0.35 m² (3.77 sq. ft.) of clear opening with no side under 380 mm (15 in.). If existing windows don’t meet that, they have to be replaced or the room can’t be a bedroom. The full list is in our [basement development permits guide](/blog/basement-development-permits-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "What inspections happen during a basement build?"
+      },
+      {
+        "t": "p",
+        "x": "Wiring and plumbing are inspected before they’re covered. Insulated walls and ceilings need a rough-in inspection, then a preboard inspection of insulation and vapour barrier, and a basement developed after the house was built needs its own insulation and vapour barrier inspection. Each is requested as its stage is ready, so the schedule allows for them."
+      },
+      {
+        "t": "p",
+        "x": "Two notes from the City’s insulation bulletin are worth knowing in winter. Between November 1 and April 30, the City says conditions in unheated buildings aren’t suited to spray foam, so cavities waiting for foam are marked for later; a heated basement is a different case, but ask how insulation will be sequenced. And batt insulation can’t touch the concrete foundation, so a moisture barrier or air space is needed."
+      },
+      {
+        "t": "h2",
+        "x": "How do you live in the house during a winter build?"
+      },
+      {
+        "t": "p",
+        "x": "Basement work is dusty and noisy, and in winter the windows stay shut. Before the job starts, ask how dust will be contained at the stairwell, when trades will be on site, how materials will come in, and how the furnace, water heater and panel stay reachable. On our projects you get weekly progress updates."
+      },
+      {
+        "t": "h2",
+        "x": "Which decisions should you make before the build starts?"
+      },
+      {
+        "t": "p",
+        "x": "The fewer open questions there are once framing begins, the smoother a winter build runs, because a change after rough-in can mean reopening work that has already been inspected. Settle the layout, bathroom, flooring, lighting and storage decisions during design and the written quote:"
+      },
+      {
+        "t": "li",
+        "x": "Room layout, including which rooms are bedrooms, since that decides the window work."
+      },
+      {
+        "t": "li",
+        "x": "Bathroom location and fixtures, so new drains can be planned behind the backwater valve."
+      },
+      {
+        "t": "li",
+        "x": "Flooring suited to below-grade use, and how it meets the stairs."
+      },
+      {
+        "t": "li",
+        "x": "Lighting, outlets and any data or TV locations, which are fixed at rough-in."
+      },
+      {
+        "t": "li",
+        "x": "Storage and access around the furnace, water heater, panel and sump pit."
+      },
+      {
+        "t": "h2",
+        "x": "What should you check before you commit?"
+      },
+      {
+        "t": "li",
+        "x": "Moisture: look for damp patches, staining or past water marks, and read about [basement flood protection](/blog/basement-flood-protection-winnipeg)."
+      },
+      {
+        "t": "li",
+        "x": "Cracks: anything horizontal, widening or leaking should be assessed by an engineer before framing; see [clay soil and basement cracks](/blog/clay-soil-basement-cracks-winnipeg)."
+      },
+      {
+        "t": "li",
+        "x": "Radon: start the long-term test early; see [radon testing before finishing a basement](/blog/radon-testing-before-finishing-a-basement)."
+      },
+      {
+        "t": "li",
+        "x": "Ceiling height: the City’s minimum for finished rooms is 2.1 m (6 ft. 11 in.), so measure under beams and ducts as well as open areas."
+      },
+      {
+        "t": "li",
+        "x": "Insulation: the City’s guide sets foundation-wall insulation at RSI 2.8 (R-15.9) with an HRV or RSI 3.46 (R-19.6) without. If you’re upgrading, read about [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba)."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "The earlier the visit, the more of the winter you can use. Our [basement renovation](/services/basement-renovations) projects start with a free on-site visit and a free written quote, with permits and inspections coordinated with the City. For a starting range, see [basement renovation costs in Winnipeg](/services/basement-renovations/cost), or [book your visit](/book-online) now."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Is winter a good time to finish a basement in Winnipeg?",
+        "a": "For most basements, yes. The work is indoors, a fall start gives time to get drawings and permits in place, and winter is when Health Canada recommends running a long-term radon test. The main exception is a new egress window, which means digging outside and is simpler to plan before the ground freezes."
+      },
+      {
+        "q": "How long does a basement development take in Winnipeg?",
+        "a": "A typical basement takes about 4–8 weeks to build. Before that, allow time for the on-site visit, design, written quote and permit review. Allow more if the job includes a new egress window, a bathroom with new plumbing under the slab, or structural changes that need engineered drawings."
+      },
+      {
+        "q": "Can I live at home during a basement renovation?",
+        "a": "Usually, yes. The main floors stay usable while the basement is built, but expect dust, noise and trades coming and going. Plan for access to the furnace, water heater and electrical panel, and agree on how the work area will be closed off from the rest of the house before the job starts."
+      },
+      {
+        "q": "When should I apply for a basement permit?",
+        "a": "Once the layout is settled and the drawings are complete, because the City says incomplete applications result in delays. Applying in fall or early winter gives the permit time to come through before a winter build starts. Confirm first whether a development permit is needed."
+      },
+      {
+        "q": "Can spray foam insulation be installed in winter?",
+        "a": "The City’s insulation bulletin says conditions in unheated buildings between November 1 and April 30 aren’t suited to spray foam, and cavities waiting for it must be marked at inspection. A heated basement is a different situation, so ask how and when any foam will be applied and inspected before the schedule is set."
+      }
+    ],
+    "answer": "A Winnipeg winter is a practical time to develop a basement: the work is indoors, so it can carry on through the cold months. Plan the layout and permits in fall, run a radon test over the winter, sort out any egress window early, and expect 4–8 weeks of construction for a typical basement.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Basement/lower level development: construction information (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6349",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application form: basement/lower level development (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6968",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-008-B: Vapour barrier & insulation in housing inspections",
+        "url": "https://www.winnipeg.ca/media/6147",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Permits Online",
+        "url": "https://www.winnipeg.ca/permitsonline",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada – Radon: What you need to know",
+        "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radon-what-you-need-to-know.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Health – Radon",
+        "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/radon.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "radon-testing-before-finishing-a-basement",
+    "title": "Radon Testing Before Finishing a Basement in Manitoba",
+    "metaTitle": "Radon Testing Before Finishing a Basement | Bridgeland",
+    "metaDescription": "Why to test for radon before finishing a Manitoba basement: Health Canada’s 200 Bq/m³ guideline, three-month tests, timing, mitigation and retesting.",
+    "excerpt": "About 19% of Manitobans live in homes above Health Canada’s radon guideline. How to test before you finish a basement, and what to do with the result.",
+    "category": "Basements & Suites",
+    "categories": [
+      "Basements & Suites"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 6,
+    "hero": null,
+    "heroSrc": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.4fd769ec.webp",
+    "heroSrcSet": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1320.76850913.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1320.2b128494.avif 1320w",
+    "ogImage": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1200x630.2a82280e.jpg",
+    "heroAlt": "Title card: Radon Testing Before Finishing a Basement in Manitoba",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations"
+    ],
+    "cluster": "basement-planning",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Radon is a radioactive gas that comes from uranium in the ground. You can’t see, smell or taste it, and it tends to build up most in basements, the part of a house closest to the soil. Health Canada calls radon the leading cause of lung cancer in non-smokers. Manitoba Health, citing Health Canada’s 2012 cross-Canada survey, says about 19 per cent of Manitobans live in homes above the radon guideline."
+      },
+      {
+        "t": "p",
+        "x": "If you’re about to turn a basement into living space, this is the easiest time to find out, and a test takes little effort: you place a detector, leave it for the test period, then send it to a lab."
+      },
+      {
+        "t": "h2",
+        "x": "Why test for radon before finishing a basement?"
+      },
+      {
+        "t": "p",
+        "x": "Because finishing changes two things: people start spending hours down there, and the space often gets tighter. Health Canada notes that energy retrofits can reduce air exchange and raise radon levels. If a test shows a problem, the usual fix draws soil gas from under the floor and vents it outside, which is easier to route before drywall goes up."
+      },
+      {
+        "t": "p",
+        "x": "Radon gets in through cracks in foundation walls and floor slabs, construction joints, and gaps around pipes, floor drains and sumps. A newer house isn’t immune; Health Canada’s advice is that all homes need to be tested."
+      },
+      {
+        "t": "h2",
+        "x": "How do you test for radon?"
+      },
+      {
+        "t": "p",
+        "x": "Use a long-term test. Health Canada recommends at least three months, ideally in fall or winter, with the detector on the lowest lived-in level in a room used four or more hours a day. You can buy a test kit or hire a professional certified under the Canadian National Radon Proficiency Program (C-NRPP)."
+      },
+      {
+        "t": "li",
+        "x": "Where to get a kit: the Province’s radon page points to Take Action on Radon’s list of Manitoba test kit providers and to the Manitoba Lung Association."
+      },
+      {
+        "t": "li",
+        "x": "When: Manitoba Health suggests testing during the winter, for example between October and April, and notes that longer tests give a more accurate picture of the annual average."
+      },
+      {
+        "t": "li",
+        "x": "Where: once the basement is finished, it becomes the lowest lived-in level, so tell your test provider about your plans when you choose a spot."
+      },
+      {
+        "t": "li",
+        "x": "How long: a test shorter than 91 days that misses most of the heating season can underestimate the annual average."
+      },
+      {
+        "t": "table",
+        "caption": "A radon timeline for a basement development",
+        "head": [
+          "When",
+          "Step"
+        ],
+        "rows": [
+          [
+            "October–November",
+            "Start a long-term test as the heating season begins"
+          ],
+          [
+            "After at least three months",
+            "Send the detector to the lab and compare the result with 200 Bq/m³"
+          ],
+          [
+            "Before framing",
+            "If the result is above the guideline, have a C-NRPP certified mitigation professional plan a system that fits the new layout"
+          ],
+          [
+            "During the build",
+            "Leave space for the pipe and fan route the mitigation professional specifies"
+          ],
+          [
+            "Next heating season",
+            "Retest, because Health Canada advises retesting after renovations that affect the structure or ventilation"
+          ]
+        ],
+        "note": "Based on Health Canada and Manitoba Health guidance, checked October 13, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "What do the results mean?"
+      },
+      {
+        "t": "p",
+        "x": "Health Canada’s guideline is 200 becquerels per cubic metre (Bq/m³), measured as the average level in your home. Above that, Health Canada recommends fixing the home, generally within a year, and sooner if the level is higher. The guideline isn’t a safe threshold to stop at; if it’s reasonable to get the level lower, Health Canada encourages it."
+      },
+      {
+        "t": "h2",
+        "x": "How is radon reduced?"
+      },
+      {
+        "t": "p",
+        "x": "Health Canada calls active soil depressurization (ASD) the most trusted and effective solution, able to cut radon by 90% or more: a fan draws soil gas from below the foundation and vents it outside. Health Canada recommends a C-NRPP certified mitigation professional and says a system can usually be installed in less than a day."
+      },
+      {
+        "t": "p",
+        "x": "Health Canada describes the cost as similar to other common home improvements. Other measures help less: balanced ventilation with an HRV or ERV generally lowers radon by only 20% to 50% and has to run continuously, and sealing cracks and gaps around pipes supports other measures rather than replacing them."
+      },
+      {
+        "t": "h2",
+        "x": "How do you plan a basement around a radon system?"
+      },
+      {
+        "t": "p",
+        "x": "Treat the mitigation system like any other mechanical item in the layout. Share your test result at the on-site visit, then settle where the pipe, fan and exterior vent will go with the mitigation professional before framing, so walls, bulkheads and storage are planned around them rather than built and cut open later."
+      },
+      {
+        "t": "li",
+        "x": "Agree on the order of work: who installs what, and whether the system goes in before or during framing."
+      },
+      {
+        "t": "li",
+        "x": "Keep the sump pit reachable. Health Canada notes that certified installers adapt the system to the house, including homes with a sump pit."
+      },
+      {
+        "t": "li",
+        "x": "Plan any bulkhead or chase the pipe needs, and keep the fan’s location accessible for service."
+      },
+      {
+        "t": "li",
+        "x": "Put the retest on the calendar for the first heating season after the work is done."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need to retest after the basement is finished?"
+      },
+      {
+        "t": "p",
+        "x": "Yes. Health Canada advises retesting in the next heating season after any renovation that affects the structure or ventilation of the home, and after a mitigation system is installed, to confirm it works. Homes with an active mitigation system should be retested every five years."
+      },
+      {
+        "t": "p",
+        "x": "If the renovation includes new insulation or air sealing, the same advice applies. Our guide to [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba) covers the envelope side of a basement upgrade."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Start the test this fall and use the three months to plan. Our [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote. Get a starting range from the [instant estimate](/instant-quote), read about [planning a winter basement development](/blog/planning-a-winter-basement-development-winnipeg), or [book your visit](/book-online)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "How long should a radon test take?",
+        "a": "Health Canada recommends a long-term test of at least three months, ideally in fall or winter, when the heating season is under way. A test shorter than 91 days that misses most of the heating season can underestimate your home’s average radon level, so it may need repeating the following winter."
+      },
+      {
+        "q": "What is Canada’s radon guideline?",
+        "a": "Health Canada’s guideline is 200 becquerels per cubic metre (Bq/m³), based on the average level in the home. If your long-term test is above it, Health Canada recommends reducing the level, generally within a year and sooner if it’s higher. The guideline isn’t a stopping point: going lower is encouraged where it’s reasonable."
+      },
+      {
+        "q": "Is radon a problem in Manitoba?",
+        "a": "It’s common here. Manitoba Health, citing Health Canada’s 2012 cross-Canada survey, says about 19 per cent of Manitobans live in homes above the radon guideline, compared with about 7 per cent of Canadians. The only way to know your own home’s level is to test it."
+      },
+      {
+        "q": "Should I test a new house for radon before finishing the basement?",
+        "a": "Yes. Health Canada says all homes need to be tested, new or old. Run a test of at least three months during the heating season before you plan the layout. If the house was built with a passive soil depressurization pipe, a certified mitigation professional can tell you whether adding a fan is the next step."
+      },
+      {
+        "q": "Who fixes high radon levels?",
+        "a": "Health Canada recommends a mitigation professional certified under the Canadian National Radon Proficiency Program (C-NRPP); certified professionals are listed on the program’s website. Plan the system before the basement is framed, so the pipe and fan route suits the new layout, then retest once it’s installed to confirm the level dropped."
+      }
+    ],
+    "answer": "Test before you finish. Health Canada recommends a long-term radon test of at least three months, ideally in fall or winter, and action if the result is above 200 Bq/m³. The usual fix, active soil depressurization by a C-NRPP certified professional, is easier to plan before walls and ceilings close in. Retest after the renovation.",
+    "sources": [
+      {
+        "label": "Health Canada – Radon: What you need to know",
+        "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radon-what-you-need-to-know.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada – Guide for radon measurements in homes",
+        "url": "https://www.canada.ca/en/health-canada/services/publications/health-risks-safety/guide-radon-measurements-residential-dwellings.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada – Reduce radon in your home",
+        "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radiation/reduce-radon-home.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada – Radon and energy retrofits",
+        "url": "https://www.canada.ca/en/health-canada/services/publications/health-risks-safety/radon-energy-retrofits.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Health – Radon",
+        "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/radon.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "renovating-a-character-home-in-winnipeg",
+    "title": "Heritage District Renovations: Updating a Character Home in Winnipeg",
+    "metaTitle": "Heritage District Renovation in Winnipeg: What to Know",
+    "metaDescription": "Renovating an older Winnipeg home? When a heritage permit applies, what Armstrong's Point and Crescentwood–Enderton Park mean, and what to test first.",
+    "excerpt": "Most older Winnipeg houses are renovated with ordinary permits. A smaller group, on the City's List of Historical Resources or inside a heritage conservation district, needs a heritage permit too. Here is how to tell which applies to your home and how to plan around it.",
+    "category": "Older Homes",
+    "categories": [
+      "Older Homes"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp",
+    "heroSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.2997bc1a.webp 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.e90ea283.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.b3c11039.avif 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.1baeecae.avif 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.dbf07dd3.avif 1320w",
+    "ogImage": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x630.608d8208.jpg",
+    "heroAlt": "Title card: Heritage District Renovations: Updating a Character Home in Winnipeg",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/whole-home-renovations",
+      "/services/home-additions"
+    ],
+    "cluster": "older-homes",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Many older Winnipeg houses have plaster walls, tall baseboards, wood windows and front porches, and their owners usually call them character homes. That is a description, not a legal category. What matters for a renovation is whether the City protects the property, and what is behind the plaster."
+      },
+      {
+        "t": "h2",
+        "x": "Is my character home protected by heritage rules?"
+      },
+      {
+        "t": "p",
+        "x": "Only if it is on the City of Winnipeg's List of Historical Resources or inside a designated heritage conservation district. Listed resources are protected from demolition, and alterations to their protected character-defining elements need a heritage permit. A house that is simply old, and neither listed nor in a district, follows the ordinary permit process."
+      },
+      {
+        "t": "p",
+        "x": "To check, look up the address on the City's List of Historical Resources and compare it with the district boundary maps on the City's heritage pages. The City also keeps a Nominated List of properties being evaluated, and a Commemorative List that recognizes heritage value without restricting demolition or alterations. If anything is unclear, the City's heritage staff can be reached at [ppd-heritage@winnipeg.ca](mailto:ppd-heritage@winnipeg.ca)."
+      },
+      {
+        "t": "h2",
+        "x": "What are Winnipeg's heritage conservation districts?"
+      },
+      {
+        "t": "p",
+        "x": "Winnipeg has two, both created under the City's Heritage Conservation Districts By-law. Council designated Armstrong's Point on April 25, 2019, and Crescentwood–Enderton Park on March 23, 2023. Each district has a plan that applies to every property inside its boundary, and alterations and new development there are reviewed for consistency with that plan."
+      },
+      {
+        "t": "table",
+        "caption": "Winnipeg's heritage conservation districts (City of Winnipeg, checked October 13, 2026)",
+        "head": [
+          "District",
+          "Designated by Council",
+          "What it means for a renovation"
+        ],
+        "rows": [
+          [
+            "Armstrong's Point",
+            "April 25, 2019",
+            "An owner must get a heritage permit before work that the district plan covers"
+          ],
+          [
+            "Crescentwood–Enderton Park",
+            "March 23, 2023",
+            "Same rule: check the district plan, then apply for a heritage permit where it is required"
+          ]
+        ],
+        "note": "The district plans set out which work needs a heritage permit. Read the plan for your district, or ask heritage staff, before design starts."
+      },
+      {
+        "t": "h2",
+        "x": "What work needs a heritage permit?"
+      },
+      {
+        "t": "p",
+        "x": "For a listed property, any alteration that affects its listed character-defining elements. For a house in a district, whatever work the district plan requires a permit for. The City treats additions and new infill as major projects and recommends a pre-application meeting at the concept stage with the relevant heritage committee; the meeting has no fee."
+      },
+      {
+        "t": "p",
+        "x": "Windows get specific attention. A heritage permit application for window work asks for a window condition assessment, photos of the existing windows, drawings of the originals and shop drawings of the replacements. Leave time to prepare those documents before you order anything."
+      },
+      {
+        "t": "p",
+        "x": "A heritage permit is a separate approval. Work that needs a building, electrical or plumbing permit still needs one. We coordinate the permits and inspections a project needs with the City of Winnipeg, and heritage approval is one more step to schedule at the start. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+      },
+      {
+        "t": "h2",
+        "x": "What hidden issues are common in older Winnipeg homes?"
+      },
+      {
+        "t": "p",
+        "x": "Older houses can hide lead paint, materials that may contain asbestos, outdated wiring and plumbing, and framing changed by earlier renovations. None of these is a reason to avoid renovating, but each should be identified before demolition so it can be priced and handled safely instead of being discovered halfway through the job."
+      },
+      {
+        "t": "table",
+        "caption": "What to check before opening walls in an older house",
+        "head": [
+          "Concern",
+          "Why it matters",
+          "What to do first"
+        ],
+        "rows": [
+          [
+            "Lead paint",
+            "Health Canada says a home built before 1960 probably contains lead-based paint; exterior paint on homes from 1960 to 1990 may too",
+            "Test before sanding or stripping; do not use sanders, heat guns or blowlamps on old paint"
+          ],
+          [
+            "Asbestos-containing materials",
+            "Health Canada notes vermiculite insulation may contain asbestos, and older plaster, tiles, siding and roofing can too",
+            "Avoid disturbing it; have a professional test before renovating and a qualified specialist remove it"
+          ],
+          [
+            "Old wiring",
+            "Original circuits may not suit a modern kitchen, bathroom or added load",
+            "Have an electrician assess it; electrical installations need a City permit"
+          ],
+          [
+            "Earlier alterations",
+            "Past renovations may have moved walls, cut framing or hidden water damage",
+            "Look in the basement and attic, and open a small inspection area before final design where practical"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "How do you modernize a character home without losing its character?"
+      },
+      {
+        "t": "p",
+        "x": "Decide early what gives the house its character, such as the trim, staircase, built-ins, windows or front porch, and plan around keeping it. Route new systems where they are least visible, match new trim and openings to the old, and keep part of the budget for repairing original materials rather than replacing them."
+      },
+      {
+        "t": "li",
+        "x": "Keep and refinish original trim, doors and hardware where you can. They are hard to match once they are gone."
+      },
+      {
+        "t": "li",
+        "x": "Run new wiring, plumbing and ductwork through closets, floors and the basement to avoid cutting decorative plaster."
+      },
+      {
+        "t": "li",
+        "x": "Add insulation where walls are already open, and look at the [Efficiency Manitoba insulation rebate](/blog/insulation-rebates-during-a-renovation-manitoba) before demolition, because it must be approved first."
+      },
+      {
+        "t": "li",
+        "x": "If windows need replacing, match the original proportions and check heritage requirements first; our guide to [window and door replacement in Winnipeg](/blog/window-and-door-replacement-winnipeg) covers permits and glass."
+      },
+      {
+        "t": "li",
+        "x": "For more space, a [home addition](/services/home-additions) at the back of the house usually changes the street view the least."
+      },
+      {
+        "t": "h2",
+        "x": "How should you plan the budget and schedule?"
+      },
+      {
+        "t": "p",
+        "x": "Plan for discovery. In an older house, a written quote can only price what can be seen and reasonably expected, so keep a contingency for what turns up behind the plaster. If a heritage permit or hazardous-materials testing is needed, add that time before construction. Weekly progress updates help you make decisions as findings come up."
+      },
+      {
+        "t": "p",
+        "x": "Once permits and materials are ready, most [whole home renovations](/services/whole-home-renovations) we take on run 8 to 16 weeks, and many straightforward additions take a similar time. For current price ranges by project type, see our [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      },
+      {
+        "t": "p",
+        "x": "The City also lists heritage incentive programs. One of them, the Gail Parvin Hammerquist Fund City-wide Heritage Program, has an annual intake with a February 1 deadline for individuals and organizations. Eligibility depends on the program criteria, so ask heritage staff whether your project could qualify before you count on it."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, note what looks original and what has been changed, and flag what should be tested or checked with the City before design. You then receive a free written quote. Prefer to start with a number? Try the [instant estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Do I need a heritage permit to renovate the inside of my house?",
+        "a": "It depends on how the property is protected. For a property on the List of Historical Resources, a heritage permit is needed when work affects the listed character-defining elements, so check what the listing protects. For a house in a heritage conservation district, the district plan decides. Ask the City's heritage staff before you finalize the design."
+      },
+      {
+        "q": "Is every older house in Crescentwood in the heritage district?",
+        "a": "No. The Crescentwood–Enderton Park heritage conservation district has a defined boundary, shown on the City's district page, so being in or near Crescentwood does not by itself put a house in it. Houses outside the boundary that are not on the List of Historical Resources follow the normal permit process, however old they are."
+      },
+      {
+        "q": "Should I test for lead paint before renovating an older home?",
+        "a": "Yes, if you plan to disturb old paint. Health Canada says a home built before 1960 probably contains lead-based paint, and exterior paint on homes built from 1960 to 1990 may contain it too. Test before sanding or stripping, avoid sanders, heat guns and blowlamps, and keep children and pregnant people away from the work."
+      },
+      {
+        "q": "Can I build an addition on a house in a heritage conservation district?",
+        "a": "Possibly, but treat it as a major project. The City's heritage permit page recommends a pre-application meeting, which has no fee, for additions and new infill, held at the concept or early design stage. The addition will also need the usual development and building permits that every house addition in Winnipeg requires."
+      },
+      {
+        "q": "Will a heritage permit slow down my renovation?",
+        "a": "It adds a step at the start. Heritage staff review each application, and some are referred to a heritage committee or a district advisory committee, so leave time before construction begins. The City's heritage permit page does not publish a standard review time, so ask staff about current timing when you prepare your application."
+      }
+    ],
+    "answer": "Most character homes in Winnipeg need only the usual building permits. Heritage rules apply when a house is on the City's List of Historical Resources or inside one of its two heritage conservation districts, Armstrong's Point and Crescentwood–Enderton Park. There, a heritage permit is needed before work that the listing or the district plan covers.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Heritage conservation",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Heritage permits",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Armstrong's Point Heritage Conservation District",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-conservation-districts/armstrongs-point",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Crescentwood-Enderton Park Heritage Conservation District",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-conservation-districts/crescentwood-enderton-park",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Heritage incentive programs",
+        "url": "https://www.winnipeg.ca/building-development/city-planning-design/heritage-conservation/incentive-programs",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Reduce your exposure to lead",
+        "url": "https://www.canada.ca/en/health-canada/services/home-garden-safety/reduce-your-exposure-lead.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Asbestos and your health",
+        "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "restaurant-renovation-permits-winnipeg",
+    "title": "Restaurant Renovation Permits in Winnipeg: What You Need",
+    "metaTitle": "Restaurant Renovation Permits Winnipeg | Bridgeland Builders",
+    "metaDescription": "Renovating a restaurant, café or bar in Winnipeg? City permits, health plan review, kitchen hoods, LGCA notice, patios and after-hours work explained.",
+    "excerpt": "The City, health and liquor approvals a restaurant, café or bar renovation in Winnipeg usually needs, and the order to tackle them in.",
+    "category": "Commercial",
+    "categories": [
+      "Commercial",
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
+    "heroSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.7231ee98.webp 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.9713d7f1.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.0a935fa4.avif 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.6b028ea6.avif 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.4c3faba8.avif 1320w",
+    "ogImage": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x630.00900e3d.jpg",
+    "heroAlt": "Title card: Restaurant Renovation Permits in Winnipeg: What You Need",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/restaurant-renovations",
+      "/services/commercial-renovations"
+    ],
+    "cluster": "commercial-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "A restaurant renovation answers to more offices than most commercial projects. The City of Winnipeg looks at the building, a public health inspector looks at the kitchen, and if you serve alcohol, the Liquor, Gaming and Cannabis Authority of Manitoba (LGCA) wants to hear about major changes. This guide covers restaurants, cafés, bars and hotel food service. For the build itself, see our [restaurant and hospitality renovations](/services/restaurant-renovations)."
+      },
+      {
+        "t": "h2",
+        "x": "Which approvals does a restaurant renovation need?"
+      },
+      {
+        "t": "p",
+        "x": "Most restaurant projects in Winnipeg need a City building permit, trade permits for electrical, plumbing and mechanical work, a public health plan review before construction, and a building occupancy permit before reopening when the work is a substantial alteration or change of use. Zoning, kitchen ventilation, liquor licensing and patios can each add a step."
+      },
+      {
+        "t": "table",
+        "caption": "Restaurant renovation approvals in Winnipeg",
+        "head": [
+          "Approval",
+          "Who handles it",
+          "When it matters"
+        ],
+        "rows": [
+          [
+            "Development permit",
+            "City of Winnipeg",
+            "If the zoning use changes; reviewed before or with the building permit"
+          ],
+          [
+            "Building permit (CADS form)",
+            "City of Winnipeg",
+            "Before construction starts"
+          ],
+          [
+            "Electrical, plumbing and mechanical permits",
+            "City; applied for by licensed contractors",
+            "Before that work starts"
+          ],
+          [
+            "Food premises plan review",
+            "Your area public health inspector",
+            "Before any construction or renovation"
+          ],
+          [
+            "Hood and fire suppression sign-off",
+            "Building and fire authority, with the health inspector",
+            "Written confirmation before the health permit"
+          ],
+          [
+            "Building occupancy permit",
+            "City of Winnipeg",
+            "Before reopening"
+          ],
+          [
+            "Liquor licence notice",
+            "LGCA",
+            "When major renovations are made to licensed premises"
+          ]
+        ],
+        "note": "Requirements depend on your space and scope. Outside Winnipeg, your municipality's permit authority takes the City's role."
+      },
+      {
+        "t": "h2",
+        "x": "When does a restaurant need a new occupancy permit?"
+      },
+      {
+        "t": "p",
+        "x": "When the work is construction, a substantial alteration or a change of use. The City gives a retail space becoming a restaurant as an example of a change of use. Until the permit is issued, the space can be used for construction and for delivering and installing fixed equipment such as hard-wired kitchen equipment, but bringing in food and supplies, stocking shelves, training staff and conducting business count as occupying it."
+      },
+      {
+        "t": "p",
+        "x": "A change of use also changes what the code expects. For an assembly occupancy with an occupant load over 100 people, the City's CADS form treats an increase or change in that occupant load as complex work, which means drawings sealed by an architect or engineer. The same applies to significant changes to fire alarms or sprinklers, any structural change, and significant exit or fire separation work in a Part 3 building. Progress inspections must reach the final stage before you can request occupancy."
+      },
+      {
+        "t": "h2",
+        "x": "What does the public health inspector review?"
+      },
+      {
+        "t": "p",
+        "x": "Before any construction or renovation, you submit the Food Handling Permit Registration Form, your menu and a detailed floor plan to your area public health inspector. The plan must be to scale and show food preparation, storage, dishwashing, dining, staff and washroom areas, every piece of equipment and plumbing fixture, finish materials and your hours. Inside Winnipeg, Manitoba's guideline says plans and specifications go to the City's One Stop Plan Approval office at Unit 31–30 Fort Street."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba's design guideline treats an operating restaurant as extensively remodelled when the work changes the structural or equipment layout or demolishes walls, ceilings or floors. The form also asks for construction, finishing and equipment installation dates and your expected opening date. If plans change, contact the inspector and submit a revised plan first. Give at least five working days' notice for the opening inspection; the permit is issued only once construction is complete and requirements are met."
+      },
+      {
+        "t": "h3",
+        "x": "Kitchen details the guideline spells out"
+      },
+      {
+        "t": "li",
+        "x": "A separate handwash basin with hot and cold water in the food preparation area; a washroom basin does not count."
+      },
+      {
+        "t": "li",
+        "x": "A stainless steel three-compartment sink for dishwashing unless the inspector approves otherwise."
+      },
+      {
+        "t": "li",
+        "x": "Grease traps or interceptors sized to the Manitoba Plumbing Code and reachable for cleaning."
+      },
+      {
+        "t": "li",
+        "x": "Smooth, impervious floors in food and dishwashing areas, coved and sealed 10 cm (4 inches) up the wall, with washable, non-absorbent walls and ceilings."
+      },
+      {
+        "t": "li",
+        "x": "Shielded lighting with at least 215 lux (20 foot-candles) on food preparation and dishwashing work surfaces."
+      },
+      {
+        "t": "li",
+        "x": "At least 91 cm (36 inches) of clear walkway, with 107 to 123 cm (42 to 48 inches) recommended for work aisles."
+      },
+      {
+        "t": "h2",
+        "x": "Who approves the kitchen hood and fire suppression?"
+      },
+      {
+        "t": "p",
+        "x": "Both the building and fire authority having jurisdiction and the public health inspector are involved. Manitoba's guideline requires every new or renovated food premises to have an approved Type I or Type II hood suited to the menu, meeting the Building Code, the Fire Code and NFPA 96, with written confirmation from that authority before the health permit."
+      },
+      {
+        "t": "p",
+        "x": "Type I hoods serve cooking that leaves grease, such as frying and grilling; Type II hoods handle steam, heat and odours from baking, boiling or dishwashing. Settle the menu before the mechanical design. In an existing restaurant with a Type II hood, a new owner or menu may mean upgrading the ventilation, and menu or cooking-equipment changes must be submitted in writing for review."
+      },
+      {
+        "t": "h2",
+        "x": "Do licensed restaurants and bars need to tell the LGCA about renovations?"
+      },
+      {
+        "t": "p",
+        "x": "Yes. The LGCA says it is the licensee's responsibility to notify it when major renovations are made to licensed premises. Its licence requirements also include municipal zoning approval, occupancy and fire safety approvals, and health approval, so the City and health steps above feed directly into keeping or getting your liquor service licence."
+      },
+      {
+        "t": "p",
+        "x": "Before changing the bar, seating or layout, ask the LGCA's licensing staff how the change affects your licensed area and maximum capacity."
+      },
+      {
+        "t": "h2",
+        "x": "Can a restaurant be renovated after hours?"
+      },
+      {
+        "t": "p",
+        "x": "Often, yes. Evening and weekend work lets many restaurants keep serving while the renovation moves ahead in phases. The limit is noise: within 150 metres of a home, the City allows loud construction work only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so plan demolition and cutting accordingly."
+      },
+      {
+        "t": "p",
+        "x": "Food must stay protected from dust and debris, so ask your inspector before cooking beside an active work area. Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps and sends a progress update every week. For staff and customer planning, see [how to prepare your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation)."
+      },
+      {
+        "t": "h3",
+        "x": "Patios"
+      },
+      {
+        "t": "p",
+        "x": "Seasonal patios need a free City registration but no occupancy permit; one on a sidewalk or street also needs a certificate of insurance. Permanent patios need a building permit and an occupancy permit, a development permit if there will be outdoor drinking and dining, and an encroachment agreement if they sit on a sidewalk or street."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** Bridgeland Builders renovates restaurants, cafés, bars and hotel spaces in Winnipeg and nearby communities, coordinating permits and inspections with the City or your local municipality. [Book a free on-site visit](/book-online) for a free written quote, or start with the [instant renovation estimate](/instant-quote). For budgeting, read [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects), or see all our [commercial renovation services](/services/commercial-renovations)."
+      }
+    ],
+    "faqsTitle": "Restaurant renovation permit questions",
+    "faqs": [
+      {
+        "q": "Do I need a new health inspection after renovating my restaurant?",
+        "a": "Plan for one. Manitoba's guideline asks for plans before renovating an existing food premises and treats work that changes the structural or equipment layout, or demolishes walls, ceilings or floors, as an extensive remodel. Ask your public health inspector what is needed before you reopen, and give at least five working days' notice for an opening inspection."
+      },
+      {
+        "q": "Can I take over a former restaurant without renovating?",
+        "a": "On the building side, the City ties occupancy permits to construction or a change in major occupancy, so a straight change of tenant may not need one; confirm with the City. On the health side, a change of ownership needs a new registration form, menu and floor plan for your public health inspector, and a new menu can mean ventilation upgrades."
+      },
+      {
+        "q": "Do cafés and bars follow the same rules as restaurants?",
+        "a": "Largely, yes. Manitoba's regulation covers any place where food is prepared, stored, handled or sold, so cafés and bars that serve food go through the same health plan review. Bars and other licensed premises must also notify the LGCA of major renovations. Building permit needs depend on the scope of the work, not the type of business."
+      },
+      {
+        "q": "Who is responsible for safety before the occupancy permit?",
+        "a": "The City's occupancy bulletin says the general contractor is responsible for the safety of everyone entering the construction site before the occupancy permit is issued. That is one reason staff training, stocking and soft openings wait until the permit is in hand, and why owners and staff should check in with the site lead before entering work areas."
+      }
+    ],
+    "answer": "A restaurant renovation in Winnipeg usually needs a City building permit, trade permits for electrical, plumbing and mechanical work, and a building occupancy permit before reopening. Before any construction, a Manitoba public health inspector reviews your floor plan, equipment and menu, and licensed premises must tell the Liquor, Gaming and Cannabis Authority about major renovations.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+        "url": "https://www.winnipeg.ca/media/6330",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+        "url": "https://www.winnipeg.ca/media/6131",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Building occupancy permits (video transcript)",
+        "url": "https://www.winnipeg.ca/media/6472",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+        "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Seasonal and permanent patios",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects/patios",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Health: Food Handling Establishment Inspections and Health Permits",
+        "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/protection/food.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Health: Guideline for the Design, Construction and Reconstruction of a Food Handling Establishment",
+        "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/protection/docs/construction.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Liquor, Gaming and Cannabis Authority of Manitoba: How to Apply for a Liquor Service Licence",
+        "url": "https://lgcamb.ca/liquor/liquor-service-licences-2/how-to-apply/",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "secondary-suite-rules-winnipeg",
+    "title": "Secondary Suite Rules in Winnipeg: What the City Requires",
+    "metaTitle": "Secondary Suite Rules in Winnipeg | Bridgeland Builders",
+    "metaDescription": "Winnipeg secondary suite rules as the City lists them: permits, size limits, separation, the 2025 zoning changes, and which suite funding programs exist.",
+    "excerpt": "Permits, size limits, separation and the 2025 zoning changes for basement and garden suites in Winnipeg, plus the federal programs that do and don’t exist.",
+    "category": "Basements & Suites",
+    "categories": [
+      "Basements & Suites",
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 9,
+    "hero": null,
+    "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.cc7d6942.webp",
+    "heroSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1320.61116791.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1320.fc70213a.avif 1320w",
+    "ogImage": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1200x630.05e576ee.jpg",
+    "heroAlt": "Title card: Secondary Suite Rules in Winnipeg: What the City Requires",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-suites",
+      "/services/basement-renovations"
+    ],
+    "cluster": "winnipeg-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "A basement suite can house a family member or bring in rent, but Winnipeg treats it differently from an ordinary finished basement. A suite is a separate dwelling unit, so it needs zoning approval, a smoke-separated layout and its own access to services. This guide follows the City of Winnipeg’s secondary suites page and bulletins as they read on October 13, 2026. The Zoning By-law was amended in 2024 and again in June 2025, so confirm the rules for your address with the City before you design."
+      },
+      {
+        "t": "h2",
+        "x": "What counts as a secondary suite in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "The City describes a secondary suite as living space attached to a single-family home or located on its property, with basic living, sleeping, cooking and sanitary facilities. An attached suite is created within or added to the house and has a separate entrance; a detached suite stands alone or sits over or attached to a detached garage."
+      },
+      {
+        "t": "p",
+        "x": "For basements, the line usually comes down to cooking. The City’s basement permit form says that if kitchen or cooking equipment will be installed, a development permit for a secondary suite may be required. If a downstairs kitchen is part of the plan, raise it with a Zoning Development Officer (Permits Direct Line, 204-986-5140) before the layout is drawn."
+      },
+      {
+        "t": "h2",
+        "x": "Which permits does a secondary suite need?"
+      },
+      {
+        "t": "p",
+        "x": "Both a development permit and a building permit, before construction starts, plus separate electrical and plumbing permits. The City offers concurrent review, where the building permit application goes in once the development application is confirmed complete, or sequential review, after development approval. Apply through Permits Online or at the Zoning & Permits office, Unit 31-30 Fort Street."
+      },
+      {
+        "t": "p",
+        "x": "A detached suite that doesn’t meet the zoning standards may also need a conditional use application. The basement rules still apply to an attached suite, too: bedroom windows, ceiling heights, alarms and insulation are covered in our guide to [basement development permits](/blog/basement-development-permits-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "What does the City list for attached (basement) suites?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s secondary suites page sets out the number of suites, size limits, zoning districts, parking and uses for attached suites. That’s the zoning side of the approval; the building code side, covered next, deals with smoke separation and access to services. Because the Zoning By-law changed recently, confirm each item for your lot."
+      },
+      {
+        "t": "table",
+        "caption": "Attached secondary suite: zoning items listed on the City of Winnipeg’s page",
+        "head": [
+          "Item",
+          "What the City lists"
+        ],
+        "rows": [
+          [
+            "Number of suites",
+            "One attached or detached suite per single-family property"
+          ],
+          [
+            "Maximum size",
+            "33% of the combined floor area of the house and suite, or 74 m² (800 sq. ft.), whichever is less"
+          ],
+          [
+            "Minimum size",
+            "32.5 m² (350 sq. ft.)"
+          ],
+          [
+            "Zoning districts",
+            "A, RR5, RR2, R1, R2, RMF, RMU and C1"
+          ],
+          [
+            "Parking",
+            "A minimum of two off-street parking spaces"
+          ],
+          [
+            "Uses not allowed",
+            "Home-based business, care home or neighbourhood rehabilitation facility"
+          ],
+          [
+            "Ownership",
+            "Neither unit can be strata-titled or subdivided; both stay on one title"
+          ]
+        ],
+        "note": "Sources: City of Winnipeg secondary suites page and Information Bulletin 2021-006-B, checked October 13, 2026. The Zoning By-law and the City’s staff govern for your property."
+      },
+      {
+        "t": "p",
+        "x": "The size cap catches people out. If the house and the suite together total 2,000 sq. ft., 33% is about 660 sq. ft., so the suite may not be able to take the whole basement. Where the suite stops, the rest of the lower level stays with the main house or becomes common space."
+      },
+      {
+        "t": "h2",
+        "x": "What does the building code require for a basement suite?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s bulletin on attached suites says the suite must be self-contained and suitably separated. That means a smoke separation between the suite, the main house and any common spaces, and each household being able to reach its own services, such as breakers and mechanical equipment, without going through the other unit."
+      },
+      {
+        "t": "li",
+        "x": "Smoke separation: walls between units need at least ½-inch drywall on both sides, taped and sealed at joints and penetrations, with ½-inch drywall on the ceiling below the main floor. Doors in the separation are at least 1¾-inch solid-core wood with a self-closer."
+      },
+      {
+        "t": "li",
+        "x": "Common spaces, such as shared laundry, storage or stairs, must be reachable from both units through common areas, never only through one suite."
+      },
+      {
+        "t": "li",
+        "x": "A shared service room, for example one water heater serving both units or one panel feeding both, needs a smoke separation, a sound transmission (STC) rating and access from a common area."
+      },
+      {
+        "t": "li",
+        "x": "Where a suite separation needs a sound rating, the acoustic insulation and resilient channel are inspected with the insulation and vapour barrier."
+      },
+      {
+        "t": "p",
+        "x": "That bulletin dates from December 2021, and Manitoba moved to the 2020 national model codes on January 1, 2024, so have the City’s plan examiners confirm current requirements for your drawings."
+      },
+      {
+        "t": "h2",
+        "x": "What changed with Winnipeg’s 2025 zoning amendments?"
+      },
+      {
+        "t": "p",
+        "x": "City Council gave the infill housing amendments second and third reading on June 26, 2025, and they’re in effect. They allow two-, three- and four-unit homes as of right in many neighbourhoods, and four-unit homes up to 39 feet tall on certain lots within 800 metres of a frequent transit route. Height, setback and landscaping rules still apply."
+      },
+      {
+        "t": "p",
+        "x": "For a homeowner, that means a suite isn’t the only way to add a unit. Converting a house into a duplex or triplex is a different approval from a secondary suite, so ask the City which route fits your lot before you commit to a layout. Our guide to [home additions and zoning](/blog/home-additions-and-zoning-winnipeg) covers the zoning questions behind building out."
+      },
+      {
+        "t": "h2",
+        "x": "What about detached garden or garage suites?"
+      },
+      {
+        "t": "p",
+        "x": "The City lists a minimum lot size of 325 m² (3,500 sq. ft.), a floor area between 32.5 m² and 55.7 m² (350 to 600 sq. ft.), and a height limit of 4.57 m (15 ft.) on grade or 7.62 m (25 ft.) above a detached garage. Detached suites are permitted only in R1 and R2 zones."
+      },
+      {
+        "t": "p",
+        "x": "The suite has to sit in the rear yard, at least 3.05 m (10 ft.) from the house, and can’t be subdivided from the main building. Water and sewer servicing needs a site servicing plan prepared by a Manitoba land surveyor or professional civil engineer, so budget time for that design work."
+      },
+      {
+        "t": "h2",
+        "x": "Are there any granny suite grants available in Manitoba?"
+      },
+      {
+        "t": "p",
+        "x": "Not in the way many websites suggest. The federal Canada Secondary Suite Loan Program was never launched, and Budget 2025 confirmed it will not be implemented. What does exist is federal: insured mortgage refinancing for adding suites, and the Multigenerational Home Renovation Tax Credit when the suite lets a senior or an adult with a disability live with a relative."
+      },
+      {
+        "t": "table",
+        "caption": "Secondary suite funding programs and their status",
+        "head": [
+          "Program",
+          "Status",
+          "Key terms"
+        ],
+        "rows": [
+          [
+            "Canada Secondary Suite Loan Program",
+            "Not available",
+            "Budget 2025: not operational and will not be implemented"
+          ],
+          [
+            "Insured mortgage refinancing for secondary suites",
+            "In effect for applications from January 15, 2025",
+            "Up to 90% of the as-improved value (under $2 million), up to 30-year amortization, up to four units in total; new units must be self-contained, meet municipal zoning and not be short-term rentals"
+          ],
+          [
+            "Multigenerational Home Renovation Tax Credit (federal)",
+            "Available (2025 tax year figures)",
+            "14.5% of up to $50,000 in eligible costs, to a maximum of $7,250, for a self-contained unit that lets a senior or an adult eligible for the disability tax credit live with a qualifying relative"
+          ]
+        ],
+        "note": "Checked October 13, 2026 against Budget 2025, Department of Finance Canada and Canada Revenue Agency pages."
+      },
+      {
+        "t": "p",
+        "x": "For anything provincial or municipal, check with Manitoba Housing and your municipality before you count on a grant, and talk to your lender and tax professional before relying on either federal option. Our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [home renovation financing in Canada](/blog/home-renovation-financing-canada) go further."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Every suite starts as a basement, so the first questions are the same: is it dry, is the ceiling high enough, and can the windows work for bedrooms? Our [basement suite](/services/basement-suites) and [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote, with permits and inspections coordinated with the City. Get a starting range from the [instant estimate](/instant-quote), or [book your visit](/book-online)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Can I have both a basement suite and a garden suite in Winnipeg?",
+        "a": "No. The City’s secondary suites page allows only one secondary suite, attached or detached, per single-family property. If you want more units than that, the June 2025 zoning amendments allow two-, three- and four-unit homes as of right on many lots, but that is a different approval with its own requirements."
+      },
+      {
+        "q": "Does a basement suite need its own entrance?",
+        "a": "Yes. The City describes an attached secondary suite as a self-contained unit with a separate entrance, and its bulletin requires each household to reach its own services and any shared spaces without passing through the other unit. Plan the entrance and stairs first, because they shape the rest of the floor plan."
+      },
+      {
+        "q": "How big can a basement suite be in Winnipeg?",
+        "a": "The City’s page caps an attached suite at 33% of the combined floor area of the house and suite, or 74 m² (800 sq. ft.), whichever is less, with a minimum of 32.5 m² (350 sq. ft.). If the house and suite total 2,000 sq. ft., the suite tops out at about 660 sq. ft. Confirm current limits with the City."
+      },
+      {
+        "q": "Is the Canada Secondary Suite Loan Program available?",
+        "a": "No. It was announced in 2024 but never launched, and Budget 2025 says it will not be implemented because it had a large potential to overlap with the insured mortgage rule changes announced in January 2025. If you’re adding a suite, ask your lender about insured refinancing of up to 90% of the home’s value after the suite is built."
+      },
+      {
+        "q": "Do I need an engineer for a basement suite?",
+        "a": "Often, for parts of it. The City asks for engineer-stamped drawings when a window is added or enlarged in a foundation wall, and for engineered drawings when major structural work, such as changing beams or teleposts, is involved. A detached suite’s water and sewer plan must come from a Manitoba land surveyor or professional civil engineer."
+      }
+    ],
+    "answer": "Winnipeg allows one secondary suite per single-family property. It needs a development permit and a building permit before construction, plus electrical and plumbing permits. The City lists an attached suite’s size as no more than 33% of the combined floor area or 74 m² (800 sq. ft.), whichever is less, and at least 32.5 m² (350 sq. ft.).",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Secondary suites",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/secondary-suites",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2021-006-B: Containment & separation for attached secondary suite design",
+        "url": "https://www.winnipeg.ca/media/6119",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application form: basement/lower level development (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6968",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-008-B: Vapour barrier & insulation in housing inspections",
+        "url": "https://www.winnipeg.ca/media/6147",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Zoning changes to accommodate infill housing",
+        "url": "https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba – Adoption of the 2020 national model construction codes",
+        "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Government of Canada – Budget 2025, Annex 3: Comprehensive Expenditure Review",
+        "url": "https://budget.canada.ca/2025/report-rapport/anx3-en.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Department of Finance Canada – Mortgage insurance rule changes to enable homeowners to add secondary suites",
+        "url": "https://www.canada.ca/en/department-finance/news/2024/10/mortgage-insurance-rule-changes-to-enable-homeowners-to-add-secondary-suites.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Canada Revenue Agency – Multigenerational home renovation tax credit (line 45355)",
+        "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "spring-flood-prep-winnipeg-basements",
+    "title": "Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist",
+    "metaTitle": "Spring Flood Prep for Winnipeg Basements | Bridgeland",
+    "metaDescription": "A spring checklist for Winnipeg basements: snow, eavestroughs, sump pump tests, backwater valves, belongings, and what to do if water gets in.",
+    "excerpt": "Snow clearing, sump tests, backwater valves and what to lift off the floor before the spring melt, using City of Winnipeg and Province of Manitoba guidance.",
+    "category": "Basements & Suites",
+    "categories": [
+      "Basements & Suites"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.75d2d894.webp",
+    "heroSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1320.cbfdceb0.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1320.05e224cb.avif 1320w",
+    "ogImage": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1200x630.8405f91a.jpg",
+    "heroAlt": "Title card: Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations"
+    ],
+    "cluster": "basement-water",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Winnipeg’s spring melt puts a lot of water against foundations in a short time. Most of the protection is maintenance you can do in an afternoon, before the snow starts to go. This checklist follows the City of Winnipeg’s spring melt and basement flooding advice and the Province of Manitoba’s flood information, checked on October 13, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "When should you start preparing?"
+      },
+      {
+        "t": "p",
+        "x": "In late winter, before the melt begins. The Province’s Hydrologic Forecast Centre publishes spring flood outlooks over the winter; in 2026 the first came in February. Use the outlook as your reminder to work through the list, clear snow as soon as a thaw is forecast, and test the sump pump at the start of spring."
+      },
+      {
+        "t": "table",
+        "caption": "Spring flood prep checklist for a Winnipeg basement",
+        "head": [
+          "When",
+          "Task",
+          "Why"
+        ],
+        "rows": [
+          [
+            "February–March",
+            "Read the provincial flood outlook at manitoba.ca/flooding",
+            "River and overland flood risk varies by year and by basin"
+          ],
+          [
+            "Before the thaw",
+            "Clear snow away from the foundation and out of window wells",
+            "Snowmelt can seep in through basement walls"
+          ],
+          [
+            "Before the thaw",
+            "Clear eavestroughs and point downspouts away from the house",
+            "Keeps roof water away from the foundation"
+          ],
+          [
+            "Start of spring",
+            "Test the sump pump by pouring water into the pit",
+            "Confirms the pump starts and moves water out"
+          ],
+          [
+            "Start of spring",
+            "Check and clean the backwater valve and remove anything that could block it",
+            "It has to close freely when the sewer is overloaded"
+          ],
+          [
+            "Start of spring",
+            "Make sure the sump discharge points into your yard, away from the foundation and property line",
+            "Discharging to a floor drain or a neighbour’s property isn’t allowed"
+          ],
+          [
+            "Before heavy rain or melt",
+            "Raise washers, dryers and freezers on blocks; move stored items onto shelves or into plastic totes",
+            "Backups are often less than a few inches deep"
+          ],
+          [
+            "Before a long trip",
+            "Test the sump pump again",
+            "The City recommends a test before any extended absence"
+          ]
+        ],
+        "note": "Based on City of Winnipeg spring melt and basement flooding guidance, checked October 13, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "How do you test a sump pump?"
+      },
+      {
+        "t": "p",
+        "x": "Pour water into the pit until the pump switches on, then watch that the water leaves through the discharge pipe and lands in your yard, away from the foundation. The City suggests doing this at the start of spring and before you leave home for a long time, and cleaning the pump at least once a year."
+      },
+      {
+        "t": "p",
+        "x": "If it doesn’t start, call a plumber before the melt rather than during it. A sump pump also needs power to work: the City notes it won’t run during an outage, and that generators should only ever be operated outdoors."
+      },
+      {
+        "t": "h2",
+        "x": "What should you check on the backwater valve?"
+      },
+      {
+        "t": "p",
+        "x": "Check and clean it regularly, and remove anything that could stop it closing. Homes built after 1979 were required to have one, and homes built since 1990 a sump pit as well. If you’re unsure what your house has, or whether it works, the City suggests asking a licensed plumber."
+      },
+      {
+        "t": "p",
+        "x": "Our [basement flood protection guide](/blog/basement-flood-protection-winnipeg) explains how a backwater valve and sump pit work together, and which permits apply if you add either one."
+      },
+      {
+        "t": "h2",
+        "x": "How do you keep surface water away from the house?"
+      },
+      {
+        "t": "p",
+        "x": "Make sure the ground slopes away from the house, and check whether paths, patios, decks and driveways have settled toward it, since they can send water back to the walls. Keep eavestroughs clear and pointed away, and keep nearby drains free of debris. The City asks that you grade so water flows away without affecting your neighbours."
+      },
+      {
+        "t": "li",
+        "x": "Walk the outside of the house during the first thaw and note where water pools against the foundation."
+      },
+      {
+        "t": "li",
+        "x": "Check window wells: clear snow out, and make sure the well isn’t collecting runoff from a downspout."
+      },
+      {
+        "t": "li",
+        "x": "Look at the low spots in the basement afterwards, such as corners and the bottom of foundation cracks, for damp patches."
+      },
+      {
+        "t": "p",
+        "x": "On Winnipeg’s clay, wet and dry cycles around the foundation also show up as cracks. See [clay soil and basement cracks](/blog/clay-soil-basement-cracks-winnipeg) for which ones to watch."
+      },
+      {
+        "t": "h2",
+        "x": "What should you check after the melt?"
+      },
+      {
+        "t": "p",
+        "x": "Once the snow is gone, walk the basement and the outside of the house while the signs are still fresh. Damp patches, water marks and new cracks tell you where water got in, and spring is the time to fix them before heavy summer rain puts the sewers and the ground under pressure again."
+      },
+      {
+        "t": "li",
+        "x": "Inside: look at corners, the bottom of foundation walls, around the floor drain and under stairs for damp or staining."
+      },
+      {
+        "t": "li",
+        "x": "Outside: check that downspout extensions survived the winter, that window wells drained, and where water pooled against the house."
+      },
+      {
+        "t": "li",
+        "x": "Records: photograph anything you find, with the date, so you can compare next spring or show a contractor."
+      },
+      {
+        "t": "li",
+        "x": "Planning: if you want to finish the basement, fix what you found first; finishing over a known leak only hides it."
+      },
+      {
+        "t": "h2",
+        "x": "What if your finished basement takes on water?"
+      },
+      {
+        "t": "p",
+        "x": "Report flooding to 311 and contact your home insurance company; the City also notes you can file a claim with it for injury or property damage. Photograph everything and ask your insurer before tearing out finishes. When you rebuild, fix what let the water in first, whether that’s a missing backwater valve, a sump problem or grading."
+      },
+      {
+        "t": "p",
+        "x": "If you’re in a river community or low-lying area, the Province’s flood information page lists current bulletins, preparedness advice and any active Disaster Financial Assistance programs."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "If every spring reminds you about the basement, plan the fix before the next one. Our [basement renovation](/services/basement-renovations) projects start with a free on-site visit and a free written quote; ask us to look at drainage and moisture while we’re there. [Book your visit](/book-online), or get a starting range with the [instant estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Should I clear snow away from my house in spring?",
+        "a": "Yes. The City of Winnipeg recommends clearing snow away from your foundation and out of window wells, because meltwater can seep in through basement walls. Move it to ground that slopes away from the house, and keep eavestroughs and downspouts clear so roof water doesn’t end up in the same place."
+      },
+      {
+        "q": "Can I drain my sump pump into the floor drain during the melt?",
+        "a": "No. The City says draining sump water into a floor drain is illegal and increases the flooding risk for you and your neighbours. The discharge also can’t run onto neighbouring properties, lanes, sidewalks, boulevards or streets. Point it into your own yard, well away from the foundation and the property line."
+      },
+      {
+        "q": "Where can I check Manitoba’s spring flood outlook?",
+        "a": "The Province of Manitoba posts its Hydrologic Forecast Centre outlooks, flood bulletins and preparedness information on its flood information page at manitoba.ca/flooding. In 2026 the first spring outlook came out in February. If you live near a river or in a low-lying area, keep checking it through the melt."
+      },
+      {
+        "q": "How can I protect belongings in an unfinished basement?",
+        "a": "Raise washers, dryers and freezers on wood blocks, store things on shelves or in plastic totes instead of cardboard boxes on the floor, and keep anything irreplaceable upstairs during the melt. The City points out that sewer backups are often less than a few inches deep, so a little height goes a long way."
+      },
+      {
+        "q": "Does a backwater valve need maintenance?",
+        "a": "Yes. The City advises checking and cleaning your backwater valve and sump system regularly and removing anything that could block the valve. If you can’t find yours or aren’t sure it works, a licensed plumber can check it. If you finish the basement later, keep the valve reachable."
+      }
+    ],
+    "answer": "Before the spring melt, clear snow away from your foundation and window wells, make sure eavestroughs and downspouts drain away from the house, test the sump pump by pouring water into the pit, check and clean the backwater valve, and lift appliances and belongings off the basement floor. Watch the Province’s flood outlooks and report flooding to 311.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – 5 tips for keeping your basement dry during the spring melt",
+        "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/5-tips-keeping-your-basement-dry-during-spring-melt",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – How to prepare for potential basement flooding",
+        "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/how-prepare-potential-basement-flooding",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Basement & overland flooding",
+        "url": "https://www.winnipeg.ca/services-programs/water-wastewater/flooding/basement-overland-flooding",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba – Flood information",
+        "url": "https://www.gov.mb.ca/flooding/index.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Hydrologic Forecast Centre – February 2026 flood outlook report",
+        "url": "https://www.gov.mb.ca/floodinfo/pdf/2026/february_2026_flood_outlook_report.pdf",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "what-does-a-general-contractor-do",
+    "title": "What Does a General Contractor Do?",
+    "metaTitle": "What Does a General Contractor Do? | Bridgeland Builders",
+    "metaDescription": "What a general contractor does on a renovation, from pricing and permits to trades, schedule and handover, plus how GCs charge and when you need one.",
+    "excerpt": "A plain-language guide for homeowners and business owners: what a general contractor is responsible for, how general contractors price work, and when hiring one makes sense.",
+    "category": "Hiring a Contractor",
+    "categories": [
+      "Hiring a Contractor"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
+    "heroSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.270da013.webp 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.ff3bbe5d.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.f7c418f1.avif 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e88bc988.avif 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.e94c26ca.avif 1320w",
+    "ogImage": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x630.d9be107c.jpg",
+    "heroAlt": "Title card: What Does a General Contractor Do?",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/general-contracting",
+      "/services/commercial-renovations",
+      "/services/whole-home-renovations"
+    ],
+    "cluster": "hiring-a-contractor",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "General contractor is a term people use loosely, so it helps to know what the role covers before you compare quotes. This guide explains the job in plain terms, how general contractors price their work, and when a project needs one. It's written for homeowners and business owners in Winnipeg and nearby communities, but the basics apply across Canada."
+      },
+      {
+        "t": "h2",
+        "x": "What does a general contractor do on a renovation?"
+      },
+      {
+        "t": "p",
+        "x": "On a renovation, the general contractor turns a plan into finished work and carries the responsibility for getting it built. That covers the price, the schedule, the trades, the materials, permits and inspections, site safety and cleanup. The table shows what the role looks like at each stage of a typical project, from the first visit to handover."
+      },
+      {
+        "t": "table",
+        "caption": "A general contractor's job, stage by stage",
+        "head": [
+          "Stage",
+          "What the general contractor does"
+        ],
+        "rows": [
+          [
+            "Before the quote",
+            "Visits the site, asks how you use the space, checks what is likely behind walls and floors, and notes what will need a permit."
+          ],
+          [
+            "Quote and contract",
+            "Prices the work line by line, lists allowances and exclusions, sets the schedule and payment stages, and puts it all in a written contract."
+          ],
+          [
+            "Pre-construction",
+            "Applies for permits, orders long-lead items such as cabinets and windows, books trades in sequence and plans how the rest of the home or business is protected."
+          ],
+          [
+            "Construction",
+            "Runs the site day to day, coordinates trades, keeps the work to code and the approved plans, books inspections and reports progress."
+          ],
+          [
+            "Changes",
+            "Prices any change in writing before the work is done and shows how it affects the schedule."
+          ],
+          [
+            "Handover",
+            "Completes deficiencies, cleans up, closes out permits and gives you warranty details and product information."
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "What's the difference between a general contractor and a subcontractor?"
+      },
+      {
+        "t": "p",
+        "x": "A general contractor holds the contract with you and is responsible for the whole job. Subcontractors, or subtrades, are specialists the general contractor brings in for parts of it: electricians, plumbers, heating technicians, drywallers, tilers and others. You pay the general contractor, who pays the subtrades and answers to you for their work and their schedule."
+      },
+      {
+        "t": "p",
+        "x": "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors, apart from electrical or plumbing work a homeowner does personally in the single detached house they live in, so a general contractor either holds those licences or brings in licensed trades. Manitoba also treats construction as a mandatory industry for workers compensation coverage. Our [contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) shows how to verify both before you sign."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a general contractor?"
+      },
+      {
+        "t": "p",
+        "x": "You need one when a project involves several trades, a permit, structural changes or a tight schedule. A kitchen, bathroom, basement development, addition or commercial fit-up usually ticks most of those boxes. A single-trade job, like painting a room or swapping a faucet in the same spot, usually doesn't. The comparison below shows where the responsibility sits either way."
+      },
+      {
+        "t": "table",
+        "caption": "Managing trades yourself vs. hiring a general contractor",
+        "head": [
+          "Question",
+          "Managing trades yourself",
+          "Hiring a general contractor"
+        ],
+        "rows": [
+          [
+            "Who books and sequences the trades?",
+            "You do, and gaps between trades are yours to fill",
+            "The contractor"
+          ],
+          [
+            "Who applies for permits and books inspections?",
+            "You, or each trade for its own permit",
+            "The contractor, as set out in the contract"
+          ],
+          [
+            "Who is responsible if one trade's work damages another's?",
+            "Often unclear",
+            "The contractor"
+          ],
+          [
+            "How many contracts and payments?",
+            "One per trade",
+            "One contract with staged payments"
+          ],
+          [
+            "Best suited to",
+            "Small, single-trade jobs",
+            "Multi-trade renovations, additions and commercial work"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "What do most general contractors charge?"
+      },
+      {
+        "t": "p",
+        "x": "There's no single rate. Most general contractors price renovations either as a fixed price for a defined scope, or as cost-plus, where you pay the actual costs plus an agreed fee. Either way, the price covers labour, materials, subtrades, permits, site supervision, overhead and profit. How the price is built matters as much as the total."
+      },
+      {
+        "t": "table",
+        "caption": "Common ways general contractors charge",
+        "head": [
+          "Method",
+          "How it works",
+          "Works well when",
+          "Watch for"
+        ],
+        "rows": [
+          [
+            "Fixed price",
+            "One price for a written scope; changes are priced separately",
+            "The scope and finishes are settled before work starts",
+            "Allowances set too low, and how changes are priced"
+          ],
+          [
+            "Cost-plus",
+            "You pay actual costs for labour, materials and subtrades, plus an agreed fee",
+            "The scope is uncertain, such as older buildings with unknown conditions",
+            "An open-ended total; ask for a budget estimate and regular cost reports"
+          ],
+          [
+            "Time and materials",
+            "Hourly labour plus materials",
+            "Small or repair jobs",
+            "No ceiling unless one is agreed in writing"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "Ask every contractor which method they use, what's included and how allowances work. A quote that looks cheaper may simply carry lower allowances for cabinets, tile or fixtures. At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "How does a general contractor handle permits and inspections?"
+      },
+      {
+        "t": "p",
+        "x": "The general contractor usually applies for the building permit, coordinates the trade permits, and books inspections at the stages the permit requires. The City of Winnipeg says homeowners are responsible for getting permits before a project starts, so make sure the contract says who applies, and ask for the permit numbers once they're issued."
+      },
+      {
+        "t": "p",
+        "x": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City of Winnipeg or the local municipality on every project. Our guide to [Winnipeg renovation permits](/blog/winnipeg-renovation-permits) covers which projects need one."
+      },
+      {
+        "t": "h2",
+        "x": "What does a general contractor do on a commercial project?"
+      },
+      {
+        "t": "p",
+        "x": "On commercial work, the general contractor also plans around the business: the lease start, the opening date, operating hours, the landlord's requirements and the building's rules for contractors. Work is often phased or scheduled after hours so the business can keep running, and the contractor builds to the drawings prepared by your architect or designer."
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders handles office, retail, restaurant, hotel and clinic renovations, with after-hours and weekend scheduling for commercial work and weekly progress updates. See our [general contracting](/services/general-contracting) and [commercial renovation services](/services/commercial-renovations), or read how to [prepare your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation)."
+      },
+      {
+        "t": "h2",
+        "x": "What should you ask a general contractor before hiring?"
+      },
+      {
+        "t": "p",
+        "x": "Ask who runs the site, which trades are subcontracted, who handles permits, how changes are priced, how often you'll get updates, what triggers each payment, and what the written warranty covers. Ask every contractor the same questions, in the same words, so the answers are easy to compare side by side:"
+      },
+      {
+        "t": "li",
+        "x": "Who will be on site day to day, and who is my main contact?"
+      },
+      {
+        "t": "li",
+        "x": "Which trades are your own staff, and which are subtrades?"
+      },
+      {
+        "t": "li",
+        "x": "Who applies for permits and books inspections?"
+      },
+      {
+        "t": "li",
+        "x": "How do you price changes, and when do I approve them?"
+      },
+      {
+        "t": "li",
+        "x": "How often will I get progress updates?"
+      },
+      {
+        "t": "li",
+        "x": "What is the payment schedule, and what triggers each payment?"
+      },
+      {
+        "t": "li",
+        "x": "What does your written warranty cover?"
+      },
+      {
+        "t": "p",
+        "x": "Then check the paperwork: a WCB clearance, an insurance certificate and the business registration. If you're planning a home project that touches several rooms, our [whole-home renovation](/services/whole-home-renovations) page explains how that kind of work is staged."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "If your project involves more than one trade, [book a free on-site visit](/book-online). We'll look at the space, talk through scope and schedule, and follow up with a free written quote. We reply within one business day."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Is a general contractor the same as a builder?",
+        "a": "The terms overlap. Builder usually describes a company that constructs new homes or buildings, while general contractor describes the role of running a whole construction project under one contract, whether it's new work or a renovation. For a renovation, what matters is whether the company takes responsibility for the full scope, the trades, the permits and the schedule."
+      },
+      {
+        "q": "Does a general contractor do the work or just manage it?",
+        "a": "Both, depending on the company. Many general contractors have their own carpenters and labourers for demolition, framing and finishing, and bring in licensed subtrades for electrical, plumbing and heating. Ask who will do each part of your job and who supervises the site day to day, so you know who to talk to when questions come up."
+      },
+      {
+        "q": "How do general contractors charge for small jobs?",
+        "a": "Small or repair jobs are often priced as time and materials, meaning hourly labour plus materials, or as a fixed price for a short written scope. If the work is hourly, ask for a not-to-exceed amount so the total can't drift. Some contractors also have a minimum job size, so ask about it early."
+      },
+      {
+        "q": "Can I act as my own general contractor?",
+        "a": "You can, but you take on the scheduling, trade coordination, permits and the risk when one trade's work delays or damages another's. In Winnipeg, electrical and plumbing permits go to City-licensed contractors unless you do that work yourself in a single detached home you live in. For multi-trade projects, most homeowners find one contract simpler to manage."
+      },
+      {
+        "q": "What's the difference between a general contractor and a project manager?",
+        "a": "A general contractor holds the construction contract and is responsible for getting the work built. A project manager can be someone you or your company hire separately to represent you, review schedules and costs, and check the contractor's progress. On most home renovations, the general contractor's own site lead handles day-to-day project management."
+      }
+    ],
+    "answer": "A general contractor takes responsibility for delivering the whole project: pricing it, hiring and scheduling the trades, ordering materials, arranging permits and inspections, keeping the site safe, and handing over finished work. Instead of managing an electrician, plumber, framer and finisher separately, you sign one contract and deal with one point of contact.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Home improvement projects (permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: List of licensed contractors",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Electrical installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Plumbing installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)",
+        "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "window-and-door-replacement-winnipeg",
+    "title": "Window and Door Replacement in Winnipeg: Permits, Glass and Rebates",
+    "metaTitle": "Window and Door Replacement in Winnipeg: What to Know",
+    "metaDescription": "When replacing windows and doors in Winnipeg needs a permit, what ENERGY STAR and triple-pane mean, and how the Efficiency Manitoba rebate works in 2026.",
+    "excerpt": "Replacing windows and doors is one of the more straightforward upgrades for a Winnipeg home, as long as you know when the City needs a permit, what the labels mean and how the rebate works. Here is the short version, checked against official sources.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 8,
+    "hero": null,
+    "heroSrc": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp",
+    "heroSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.361346b2.webp 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.5ed3c5b7.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.ae94dcd2.avif 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.35d0a738.avif 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.9bd3384b.avif 1320w",
+    "ogImage": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x630.1dd372eb.jpg",
+    "heroAlt": "Title card: Window and Door Replacement in Winnipeg: Permits, Glass and Rebates",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/windows-and-doors",
+      "/services/whole-home-renovations"
+    ],
+    "cluster": "windows-doors",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, frost on the inside of the glass, and doors that stick or let in cold air at the sill. Replacing them is a well-defined job, but there are three things worth knowing before you order: when the City needs a permit, what the energy labels mean, and how the rebate works. Everything below was checked against official sources on October 13, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a permit to replace windows in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Not for a same-size replacement. The City of Winnipeg lists replacing doors and windows with the same size among projects that do not need a building permit, while noting that building code and zoning requirements still apply. Creating a new opening or enlarging an existing one may need a building permit, and development permit requirements should be confirmed first."
+      },
+      {
+        "t": "table",
+        "caption": "Window and door work and City of Winnipeg permits (checked October 13, 2026)",
+        "head": [
+          "Project",
+          "Building permit?",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "Same-size window or door replacement",
+            "Not required",
+            "Building code and zoning rules still apply"
+          ],
+          [
+            "New or larger window or exterior door opening",
+            "May be required",
+            "Confirm development permit requirements before applying"
+          ],
+          [
+            "Replacing siding or stucco with the same material",
+            "Not required",
+            "Often done at the same time as window work"
+          ],
+          [
+            "Windows on a listed historical resource or in a heritage conservation district",
+            "A heritage permit may be required",
+            "Window applications need a condition assessment and drawings"
+          ]
+        ],
+        "note": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City or the municipality where the work is done."
+      },
+      {
+        "t": "p",
+        "x": "If a new window serves a bedroom, especially in a basement, ask how the building code's bedroom window requirements apply before you choose a size. Our guides to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) and [basement development permits](/blog/basement-development-permits-winnipeg) go into more detail."
+      },
+      {
+        "t": "h2",
+        "x": "What do ENERGY STAR and triple-pane mean for windows?"
+      },
+      {
+        "t": "p",
+        "x": "ENERGY STAR certification sets a performance bar for windows and doors sold in Canada. Under Natural Resources Canada's current specification, version 5.0, in effect since January 1, 2020, a window or door needs a U-factor of 1.22 W/m²·K or lower, or an Energy Rating of at least 34. Triple-pane describes how the glass is built, not a certification."
+      },
+      {
+        "t": "table",
+        "caption": "Reading a window label",
+        "head": [
+          "Term",
+          "What it tells you",
+          "Better is"
+        ],
+        "rows": [
+          [
+            "U-factor",
+            "How much heat passes through the whole unit",
+            "Lower"
+          ],
+          [
+            "Energy Rating (ER)",
+            "A combined score for heat loss, air leakage and solar heat gain",
+            "Higher"
+          ],
+          [
+            "ENERGY STAR mark",
+            "The model meets the certification criteria",
+            "Confirm the model on NRCan's list of certified products"
+          ],
+          [
+            "Triple-pane",
+            "Three layers of glass in the sealed unit",
+            "Required for the Efficiency Manitoba rebate"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "Natural Resources Canada keeps a searchable list of certified windows and doors, which is the quickest way to confirm that a quoted model is current. It also suggests keeping the product labels until any rebate or incentive claim has gone through, and collecting them if the installers remove them."
+      },
+      {
+        "t": "h2",
+        "x": "Is there a rebate for new windows and doors in Manitoba?"
+      },
+      {
+        "t": "p",
+        "x": "Yes. As of October 13, 2026, Efficiency Manitoba offers $100 for each ENERGY STAR certified triple-pane window and door installed in your or your tenant's primary residence. Products must replace existing units between heated and unheated space; new openings do not qualify. You install first, then apply online within 90 days of installation and full payment."
+      },
+      {
+        "t": "li",
+        "x": "Doors with glass must be at least triple-pane, and entry doors without glass must still be ENERGY STAR certified."
+      },
+      {
+        "t": "li",
+        "x": "Each product needs its NRCan reference number on the application, so ask your supplier to show it on the invoice."
+      },
+      {
+        "t": "li",
+        "x": "Seasonal and commercial properties are not eligible."
+      },
+      {
+        "t": "li",
+        "x": "Households that qualify for Efficiency Manitoba's income-based or Indigenous offers may receive $300 per eligible window or door instead."
+      },
+      {
+        "t": "li",
+        "x": "Manitoba Hydro's Home Energy Efficiency Loan can finance qualifying windows and doors on your energy bill, but it must be approved before any work starts or products are bought."
+      },
+      {
+        "t": "p",
+        "x": "The federal Canada Greener Homes Grant is closed, so it is not an option for new projects. For a fuller list of what is open and closed, see [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates)."
+      },
+      {
+        "t": "h2",
+        "x": "When is the best time of year to replace windows in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Late spring to early fall is easiest, because each opening is exposed to the weather while the old unit is out. Winter replacement is possible when openings are done one at a time and closed the same day, but sealants and exterior finishing have temperature limits, so ask how cold-weather work will be handled."
+      },
+      {
+        "t": "p",
+        "x": "Custom-sized windows are made to order, so the order usually has to go in well before the installation date. If you are combining windows with other work, such as siding, stucco repair or exterior paint, put the windows in first so the new trim is finished with everything else."
+      },
+      {
+        "t": "h2",
+        "x": "What should a window replacement quote include?"
+      },
+      {
+        "t": "p",
+        "x": "A clear quote names the product and its certification for every opening, explains how each unit is installed and sealed, and lists the finishing inside and out. It should say how the gap around the frame is insulated, how the exterior is flashed and trimmed, and whether interior casing and paint touch-ups are included."
+      },
+      {
+        "t": "li",
+        "x": "Model, glass type and ENERGY STAR status for each window and door"
+      },
+      {
+        "t": "li",
+        "x": "Removal and disposal of the old units"
+      },
+      {
+        "t": "li",
+        "x": "Insulation and air sealing around each frame"
+      },
+      {
+        "t": "li",
+        "x": "Exterior flashing, trim or capping"
+      },
+      {
+        "t": "li",
+        "x": "Interior casing, sills, drywall returns and paint touch-ups"
+      },
+      {
+        "t": "li",
+        "x": "Who records the NRCan reference numbers for the rebate"
+      },
+      {
+        "t": "li",
+        "x": "Taxes, shown on the written quote"
+      },
+      {
+        "t": "p",
+        "x": "Our checklist on [how to choose a renovation contractor](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) covers the questions to ask about the company behind the quote."
+      },
+      {
+        "t": "h2",
+        "x": "What about older and heritage homes?"
+      },
+      {
+        "t": "p",
+        "x": "If the house is on the City's List of Historical Resources or in a heritage conservation district, check heritage permit requirements before ordering. Window applications ask for a condition assessment, photos, drawings of the original windows and shop drawings of the replacements. Older houses may also have lead paint on window trim and sashes."
+      },
+      {
+        "t": "p",
+        "x": "Health Canada says a home built before 1960 probably contains lead-based paint, and advises against sanders, heat guns or blowlamps on old paint. Test before the old trim comes off. Our guide to [renovating a character home in Winnipeg](/blog/renovating-a-character-home-in-winnipeg) covers the heritage rules in more detail."
+      },
+      {
+        "t": "p",
+        "x": "Replacing windows as part of a larger project? On a [whole home renovation](/services/whole-home-renovations), it makes sense to schedule windows alongside insulation and exterior work, so each opening is opened, sealed and finished only once."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** see what our [window and door installation](/services/windows-and-doors) work includes, then [book a free on-site visit](/book-online) so we can look at each window and door with you and send a free written quote. For a first range on a larger renovation, try the [instant estimate](/instant-quote)."
+      }
+    ],
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Do I need a permit to replace a door in Winnipeg?",
+        "a": "Not if the new door fits the same opening. The City lists same-size door and window replacement among projects that do not need a building permit. Widening an opening or adding a new exterior door may need a building permit, and development permit requirements should be confirmed first. Building code and zoning rules apply either way."
+      },
+      {
+        "q": "Does the Efficiency Manitoba rebate cover a new window opening?",
+        "a": "No. The rebate is for products that replace existing windows or doors between heated and unheated space, and installations in new openings are not eligible. A new or larger opening may also need a City building permit. Replacing an existing window with an eligible ENERGY STAR certified triple-pane unit can qualify."
+      },
+      {
+        "q": "Is triple-pane glass worth it in Winnipeg?",
+        "a": "Triple-pane glass loses less heat than double-pane, and it is required for Efficiency Manitoba's rebate. Compare certified models by U-factor or Energy Rating rather than by the number of panes alone, because the frame, spacers and the quality of the installation also affect how warm and draft-free a window feels in January."
+      },
+      {
+        "q": "When do I apply for the window and door rebate?",
+        "a": "After the work. Efficiency Manitoba asks you to install the products first, then apply online within 90 days of installation and payment in full, with the invoice and an NRCan reference number for each unit. Manitoba Hydro financing works the other way round: that loan must be approved before work starts."
+      },
+      {
+        "q": "Can windows be replaced in winter?",
+        "a": "Often, if openings are replaced one at a time and closed up the same day. Cold weather affects sealants, foams and exterior finishing, so ask how low temperatures are handled and whether any exterior caulking or trim will be finished in spring. Interior finishing can usually go ahead whatever the weather is doing."
+      }
+    ],
+    "answer": "In Winnipeg, replacing windows and doors with the same size does not need a building permit, although building code and zoning rules still apply. New or larger openings may need one. Efficiency Manitoba pays $100 for each ENERGY STAR certified triple-pane window or door that replaces an existing unit; install first, then apply within 90 days.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home renovations (building permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Heritage permits",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Windows and Doors Rebate",
+        "url": "https://efficiencymb.ca/my-home/windows-and-doors-rebate/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Hydro: Home Energy Efficiency Loan",
+        "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: ENERGY STAR technical specification for windows, doors and skylights",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/windows-doors-skylights-energy-star-canada-technical-specification",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Buyer's guide when shopping for windows and doors",
+        "url": "https://natural-resources.canada.ca/stories/spotlight-energy-efficiency/buyer-s-guide-when-shopping-windows-doors",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Natural Resources Canada: Closed: Canada Greener Homes Grant",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Reduce your exposure to lead",
+        "url": "https://www.canada.ca/en/health-canada/services/home-garden-safety/reduce-your-exposure-lead.html",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "winnipeg-renovation-permits",
+    "title": "Renovation Permits in Winnipeg: What Needs One and How to Apply",
+    "metaTitle": "Renovation Permits in Winnipeg | Bridgeland Builders",
+    "metaDescription": "Which Winnipeg renovations need a building permit, which don’t, how development permits fit in, and what inspections to expect, checked against City pages.",
+    "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 9,
+    "hero": null,
+    "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.55b461dd.webp",
+    "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1320.5c78c717.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1320.53975749.avif 1320w",
+    "ogImage": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1200x630.69ac1710.jpg",
+    "heroAlt": "Title card: Renovation Permits in Winnipeg: What Needs One and How to Apply",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations",
+      "/services/basement-renovations",
+      "/services/whole-home-renovations",
+      "/services/home-additions",
+      "/services/basement-suites"
+    ],
+    "cluster": "winnipeg-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Permits are the part of a renovation most people would rather skip, but in Winnipeg they’re also how the work gets checked by an inspector before it disappears behind drywall. This guide sorts common home projects into what needs a permit and what doesn’t, using the City of Winnipeg’s own pages, checked on October 13, 2026. Rules change, so treat it as a starting point and confirm your project with the City’s Permits Direct Line at 204-986-5140."
+      },
+      {
+        "t": "h2",
+        "x": "Which renovations need a building permit in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s home renovations page lists kitchens, bathrooms, adding or converting rooms to bedrooms, creating open-concept living space, and new or larger exterior door or window openings as work that may need a building permit under the Winnipeg Building By-law. Since February 2026, the By-law requires one to create a new bedroom or finish a previously undeveloped level. Basements, additions, higher decks, larger sheds and garages, and secondary suites need one too."
+      },
+      {
+        "t": "table",
+        "caption": "Common Winnipeg home projects and the permits they usually need",
+        "head": [
+          "Project",
+          "Building permit?",
+          "Also check"
+        ],
+        "rows": [
+          [
+            "Painting, flooring, cabinets, shelves, millwork",
+            "No",
+            "Building code and zoning still apply"
+          ],
+          [
+            "Replacing doors and windows with the same size",
+            "No",
+            "Same size only; see [window and door replacement in Winnipeg](/blog/window-and-door-replacement-winnipeg)"
+          ],
+          [
+            "New or larger exterior door or window opening",
+            "Yes",
+            "A development permit may apply; new or enlarged openings in a foundation wall need engineer-stamped drawings"
+          ],
+          [
+            "Kitchen or bathroom renovation",
+            "Often; the City lists both",
+            "Plumbing and electrical permits for any changes to those systems"
+          ],
+          [
+            "Removing walls for an open-concept layout",
+            "Yes",
+            "Expect structural drawings if load-bearing walls, beams or joists change"
+          ],
+          [
+            "Finishing a basement (rooms, bedrooms, living space)",
+            "Yes",
+            "See [basement development permits](/blog/basement-development-permits-winnipeg)"
+          ],
+          [
+            "Secondary suite",
+            "Yes",
+            "Development permit, plus electrical and plumbing permits"
+          ],
+          [
+            "Addition or attached garage",
+            "Yes",
+            "Development permit and zoning; see [home additions and zoning](/blog/home-additions-and-zoning-winnipeg)"
+          ],
+          [
+            "Deck more than 600 mm (2 ft.) above ground and over 3.4 m² (36 sq. ft.)",
+            "Yes",
+            "Open decks under 600 mm don’t need a permit"
+          ],
+          [
+            "Detached shed, garage or other accessory structure over 10 m² (108 sq. ft.)",
+            "Yes",
+            "Separate electrical permit for detached garages and carports"
+          ],
+          [
+            "Sump pit when adding or replacing weeping tile",
+            "Yes",
+            "Plumbing permit for the backwater valve; electrical permit for the pump’s dedicated receptacle"
+          ],
+          [
+            "Re-shingling or re-siding with the same material",
+            "No",
+            "Code still applies"
+          ]
+        ],
+        "note": "Sources: City of Winnipeg home renovations, home improvement projects, decks and accessory structures pages, and Information Bulletin 2025-001, checked October 13, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "What doesn’t need a permit?"
+      },
+      {
+        "t": "p",
+        "x": "The City lists these as projects that typically don’t need a permit: barrier-free ramps, fences on single- and two-family lots, replacing stucco, siding or shingles with the same material, small detached accessory structures, low open decks, interior finishing work, and same-size door and window replacement. Building code and zoning rules still apply."
+      },
+      {
+        "t": "p",
+        "x": "The limits matter. Detached accessory structures have to be under 10 m² (108 sq. ft.), open decks under 600 mm (2 ft.) high, and interior work means painting, patching, decorating or installing cabinets and shelves."
+      },
+      {
+        "t": "p",
+        "x": "Trade work has its own exemptions. In an owner-occupied single detached house, swapping a light fixture, switch or receptacle in the same location doesn’t need an electrical permit, as long as the existing copper branch circuit isn’t modified. Repairing a leak or replacing a fixture such as a faucet or water heater in the same location doesn’t need a plumbing permit if the system itself isn’t changed. Moving or adding outlets, circuits or drains does."
+      },
+      {
+        "t": "h2",
+        "x": "Do you also need a development permit?"
+      },
+      {
+        "t": "p",
+        "x": "Sometimes. A development permit checks zoning, such as land use and where a structure sits on the lot; a building permit checks construction against code. Secondary suites, additions and some exterior changes can need both. Confirm before you apply, because the City’s forms warn that a building permit will be refused if a development permit was needed."
+      },
+      {
+        "t": "p",
+        "x": "If the project involves a basement or lower-level suite, the rules are stricter than for a rec room. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) covers what the City asks for."
+      },
+      {
+        "t": "h2",
+        "x": "How do I apply for a development permit in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Confirm whether you need one, then apply through Permits Online. Since October 2025 the City reviews development and building permit applications at the same time for projects that need both (concurrent review); you can still wait for development approval before applying for the building permit (sequential review). The building permit must match the development approval."
+      },
+      {
+        "t": "oli",
+        "x": "Ask the City whether your project needs a development permit: call Permits Direct Line at 204-986-5140 or email ppd-zdo@winnipeg.ca to reach a Zoning Development Officer."
+      },
+      {
+        "t": "oli",
+        "x": "Prepare the development permit application and the City’s checklist for your type of building; there is one for single- and two-family residential properties."
+      },
+      {
+        "t": "oli",
+        "x": "Submit it through [Permits Online](https://www.winnipeg.ca/permitsonline), or drop it off at the Zoning & Permits office, Unit 31-30 Fort Street, weekdays 8:30 a.m. to 4:30 p.m."
+      },
+      {
+        "t": "oli",
+        "x": "Choose concurrent or sequential review when you apply for the building permit."
+      },
+      {
+        "t": "oli",
+        "x": "If your project is exempt, include the City’s declaration form for development permit exemption with the building permit application."
+      },
+      {
+        "t": "h2",
+        "x": "Who takes out the permit: you or your contractor?"
+      },
+      {
+        "t": "p",
+        "x": "The City says homeowners are responsible for getting permits before a project starts, and that if you hire a contractor, you should make sure the permit is in place before work begins. In other words, the responsibility stays with you even when someone else fills in the forms, so ask to see the permit."
+      },
+      {
+        "t": "p",
+        "x": "Trade permits have their own rules. Electrical and plumbing permits go to licensed contractors, or to a homeowner who does the work personally in the single detached house that is their primary residence. Homeowners can’t take out electrical permits for some work, including electrical services, work over 200 amps, generators and EV chargers."
+      },
+      {
+        "t": "p",
+        "x": "On our projects, permits and inspections are coordinated with the City of Winnipeg or the local municipality, and your written quote spells out what’s included. Whoever you hire, ask the same question before you sign."
+      },
+      {
+        "t": "h2",
+        "x": "How long does a Winnipeg permit take?"
+      },
+      {
+        "t": "p",
+        "x": "There’s no single number. The City publishes building permit processing times, measured in average business days to confirm a complete application and to reach a decision. Incomplete applications are delayed, so complete, dimensioned drawings are the part of the timeline you control."
+      },
+      {
+        "t": "h2",
+        "x": "What inspections should you expect?"
+      },
+      {
+        "t": "p",
+        "x": "Permitted work is inspected before it’s covered. Request inspections through the City’s housing inspection request form at winnipeg.ca/housinginspection, or by phone at 204-986-5300 on weekdays. Insulated walls and ceilings get a rough-in inspection and then a preboard inspection of insulation and vapour barrier before drywall. Wiring and plumbing are inspected before they’re covered too."
+      },
+      {
+        "t": "h2",
+        "x": "What happens if you renovate without a permit?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s Permit Amnesty page says renovations done without permits must be brought up to current codes through permits and inspections, that post-construction penalty fees are waived only where amnesty is approved, and that undeclared work can lead to notices or orders, with fines or penalties. Amnesty covers a homeowner’s primary residence, not rental properties."
+      },
+      {
+        "t": "p",
+        "x": "In practice, a missing permit can mean opening finished walls so an inspector can see what’s inside, adding cost and delay at the end of a project."
+      },
+      {
+        "t": "h2",
+        "x": "Which building code applies in Manitoba?"
+      },
+      {
+        "t": "p",
+        "x": "Manitoba adopted the 2020 editions of the national model building, plumbing, energy and fire codes effective January 1, 2024. Building and plumbing permits approved from that date are reviewed against the 2020 codes, while inspections on permits approved earlier check the plans approved under the previous codes."
+      },
+      {
+        "t": "h2",
+        "x": "Renovating outside Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Permits come from the municipality where the house is. Around Winnipeg, that means the RM of Headingley; the Red River Planning District for East St. Paul and West St. Paul; the RM of Macdonald for Oak Bluff; and the cities of Selkirk and Steinbach. Requirements and forms differ, so confirm the permit office and its process before you finalize drawings."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Permit questions are easier to answer with the space in front of you, whether you’re planning a [kitchen renovation](/services/kitchen-renovations), a [bathroom renovation](/services/bathroom-renovations) or an [addition](/services/home-additions). Every project starts with a free on-site visit and a free written quote, so [book your visit](/book-online), or get a starting range first with our [instant estimate](/instant-quote). For budgets, see the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "What is the biggest structure you can build without a permit in Winnipeg?",
+        "a": "A detached accessory structure, such as a shed, of 10 m² (108 sq. ft.) or less doesn’t need a building permit in Winnipeg; the City requires one above that size. Smaller structures still have to meet zoning rules such as setbacks, and electrical work in them needs its own permit. Outside Winnipeg, check with your municipality."
+      },
+      {
+        "q": "Do I need a permit to replace windows in Winnipeg?",
+        "a": "Not if the new windows and doors are the same size as the old ones; the City lists same-size replacement as work that typically doesn’t need a permit. Making an opening larger, or cutting a new one, needs a building permit, and a new or enlarged opening in a foundation wall needs drawings stamped by an engineer."
+      },
+      {
+        "q": "Does a kitchen or bathroom renovation need a permit if I keep the layout?",
+        "a": "It depends on the scope. The City lists kitchens and bathrooms among renovations that may need a building permit, and altering plumbing or adding circuits needs plumbing or electrical permits. Swapping a faucet or fixture in the same spot, or replacing cabinets and counters without plumbing or wiring changes, is much closer to the work the City exempts."
+      },
+      {
+        "q": "Can a homeowner get their own building permit in Winnipeg?",
+        "a": "Yes. The City makes homeowners responsible for permits, and you can apply through Permits Online or at the Zoning & Permits office at Unit 31-30 Fort Street. Electrical and plumbing permits are narrower: a homeowner can take them out only for work they do personally in the single detached house that is their primary residence."
+      },
+      {
+        "q": "How much does a renovation permit cost in Winnipeg?",
+        "a": "Permit fees are set by the City’s fees and charges schedule and vary with the permit type and project. On the basement permit form, the declared construction value is used for statistics and doesn’t affect the permit cost. When you compare written quotes, check whether permit fees are included so you’re comparing the same scope."
+      }
+    ],
+    "answer": "In Winnipeg, a building permit is usually needed when a renovation changes layout or structure: kitchens, bathrooms, new bedrooms, open-concept work, new or larger exterior openings, basements, additions and secondary suites. Cosmetic work such as painting, flooring and millwork doesn’t need one. Electrical and plumbing work need their own permits, and some projects also need a development permit.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Home renovations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Home improvement projects (projects that need, and don’t need, a permit)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Detached garages & accessory structures",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects/detached-garages-accessory-structures",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Decks",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects/decks",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Electrical installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Plumbing installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application form: basement/lower level development (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6968",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2025-001: Sump pit installations for housing",
+        "url": "https://www.winnipeg.ca/media/6154",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-008-B: Vapour barrier & insulation in housing inspections",
+        "url": "https://www.winnipeg.ca/media/6147",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – City rolls out improvements to its permit services (October 30, 2025)",
+        "url": "https://www.winnipeg.ca/news/2025-10-30-city-rolls-out-improvements-its-permit-services",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application processing times",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/timelines-performance/building-permit-processing-times",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Permits Online",
+        "url": "https://www.winnipeg.ca/permitsonline",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba – Adoption of the 2020 national model construction codes",
+        "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Red River Planning District",
+        "url": "https://www.redriverplanning.com",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Permit Amnesty program",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/programs-incentives/permit-amnesty-program",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-007-B: Building permit requirements for housing",
+        "url": "https://www.winnipeg.ca/media/6116",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "winnipeg-renovation-show-questions-to-ask",
+    "title": "Winnipeg Renovation Show: Questions to Ask Contractors",
+    "metaTitle": "Winnipeg Renovation Show: Questions to Ask Contractors",
+    "metaDescription": "Going to the Winnipeg Renovation Show on January 15–17, 2027? What to bring, the questions to ask at each contractor's booth, and what to do afterwards.",
+    "excerpt": "How to use the 2027 Winnipeg Renovation Show to build a contractor shortlist: what to bring, what to ask at each booth, and how to compare the answers once you're home.",
+    "category": "Hiring a Contractor",
+    "categories": [
+      "Hiring a Contractor"
+    ],
+    "date": "2026-10-13",
+    "updated": "2026-10-13",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.77698d54.webp",
+    "heroSrcSet": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w",
+    "ogImage": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg",
+    "heroAlt": "Title card: Winnipeg Renovation Show: Questions to Ask Contractors",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations",
+      "/services/basement-renovations"
+    ],
+    "cluster": "hiring-a-contractor",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "A renovation show packs a season's worth of contractor conversations into an afternoon. That's useful if you arrive with a plan, and overwhelming if you don't. This guide covers the essentials for the Winnipeg show in January, the questions worth asking at every booth, and what to do with the answers once you're home."
+      },
+      {
+        "t": "h2",
+        "x": "When is the 2027 Winnipeg Renovation Show?"
+      },
+      {
+        "t": "p",
+        "x": "The Winnipeg Renovation Show runs January 15 to 17, 2027, at the RBC Convention Centre. It's produced by Marketplace Events and lists more than 150 booths. Hours, ticket prices and any special admission offers are posted on the [organizer's website](https://www.winnipegrenovationshow.com/attendee-info/faqs), so check there before you go, as details can change."
+      },
+      {
+        "t": "h2",
+        "x": "What should you bring to a renovation show?"
+      },
+      {
+        "t": "p",
+        "x": "Bring enough information for a contractor to understand your project in five minutes: photos, rough measurements, a budget range, your must-haves and your timing. The more specific you are, the more specific the answers you get back, and the easier it is to compare contractors later. A short checklist:"
+      },
+      {
+        "t": "li",
+        "x": "**Photos of the space** from each corner, plus anything that worries you, such as cracks, water stains or an old electrical panel."
+      },
+      {
+        "t": "li",
+        "x": "**Rough measurements** of the room, and the ceiling height if it's a basement."
+      },
+      {
+        "t": "li",
+        "x": "**A budget range** you're comfortable sharing, so contractors can tell you whether the scope and the number line up."
+      },
+      {
+        "t": "li",
+        "x": "**Must-haves and nice-to-haves**, written down, so every contractor hears the same project."
+      },
+      {
+        "t": "li",
+        "x": "**Timing**, including any fixed dates such as a new baby, a lease or family coming to stay."
+      },
+      {
+        "t": "li",
+        "x": "**A page per contractor** with the questions below, so the answers are easy to compare later."
+      },
+      {
+        "t": "p",
+        "x": "If you'd like a ballpark before the show, our [instant renovation estimate](/instant-quote) gives you a starting range, and the [Winnipeg renovation cost guide](/renovation-cost-winnipeg) explains what moves the price up or down."
+      },
+      {
+        "t": "h2",
+        "x": "What questions should you ask contractors at the show?"
+      },
+      {
+        "t": "p",
+        "x": "Ask every contractor the same short set of questions, write the answers down, and compare them afterwards. Good answers are specific: names, numbers, documents and examples. The table lists the questions that tell you the most in a five-minute booth conversation, why each one matters, and what a solid answer sounds like."
+      },
+      {
+        "t": "table",
+        "caption": "Questions to ask at each contractor's booth",
+        "head": [
+          "Question",
+          "Why it matters",
+          "A solid answer sounds like"
+        ],
+        "rows": [
+          [
+            "How many projects like mine have you done in the last two years?",
+            "Recent, similar experience is the best predictor of how your job will go",
+            "A number, the type of home and the size of those jobs"
+          ],
+          [
+            "Will you visit before giving a price?",
+            "Hidden conditions drive cost in older homes and basements",
+            "Yes, with a written quote after the visit"
+          ],
+          [
+            "Who applies for permits and books inspections?",
+            "In Winnipeg, homeowners are responsible for having permits before work starts",
+            "We do, and it's written into the contract"
+          ],
+          [
+            "Can you send a WCB clearance letter and an insurance certificate?",
+            "Construction is a mandatory industry for WCB coverage in Manitoba",
+            "Yes, before you sign"
+          ],
+          [
+            "Who does the electrical and plumbing?",
+            "In Winnipeg, a contractor doing that work must be licensed by the City",
+            "Named licensed trades, or a licence holder on staff"
+          ],
+          [
+            "How long would a project like mine take, and when could you start?",
+            "You need a duration and start date you can plan around",
+            "A range in weeks, plus what could stretch it"
+          ],
+          [
+            "How do the deposit and progress payments work?",
+            "Payments should follow completed work",
+            "A modest deposit, payments tied to stages, and the Manitoba 7.5% holdback explained"
+          ],
+          [
+            "How are changes handled?",
+            "Changes are where budgets drift",
+            "Written change orders, priced before the work"
+          ],
+          [
+            "What does your warranty cover, in writing?",
+            "Verbal promises are hard to rely on later",
+            "Written terms and who to contact"
+          ],
+          [
+            "Who will be my day-to-day contact?",
+            "Communication gaps cause most renovation frustration",
+            "A named person and how often you'll get updates"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "Should you sign a show special on the spot?"
+      },
+      {
+        "t": "p",
+        "x": "No. A show price only helps if it covers the same scope another contractor would quote after seeing your home. Ask for the special in writing, with its expiry date, and get a site visit and written quote before you commit. Manitoba's Consumer Protection Office mentions home show displays as one place salespeople may encourage you to sign."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Whether a contract signed at a show counts as a direct sale depends on the circumstances, so if you do sign, get the cancellation terms in writing and check with the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html) if you're unsure."
+      },
+      {
+        "t": "h2",
+        "x": "What should you do after the show?"
+      },
+      {
+        "t": "p",
+        "x": "Narrow your list to two or three contractors whose answers were specific, book on-site visits, and compare written quotes line by line for the same scope. Then verify before you sign: WCB clearance, insurance certificate, business registration and references. The lowest quote is only a good deal if it includes everything the others do."
+      },
+      {
+        "t": "oli",
+        "x": "Within a week, sort your notes and drop anyone who couldn't answer the permit, WCB or payment questions."
+      },
+      {
+        "t": "oli",
+        "x": "Book site visits with your shortlist, and give each contractor the same written list of must-haves and finishes."
+      },
+      {
+        "t": "oli",
+        "x": "Compare quotes for scope, allowances, exclusions, schedule and payment terms, not just the total."
+      },
+      {
+        "t": "oli",
+        "x": "Verify documents using our [contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) and the steps to [check a contractor's WCB clearance](/blog/how-to-check-a-contractors-wcb-clearance-manitoba)."
+      },
+      {
+        "t": "oli",
+        "x": "Line up financing if you need it; our [renovation financing guide](/blog/home-renovation-financing-canada) explains the main options."
+      },
+      {
+        "t": "p",
+        "x": "January is a sensible time to start if you'd like work done in spring or summer, since design, permits and ordering all take time. Whether it's a [kitchen renovation](/services/kitchen-renovations), a bathroom or a [basement development](/services/basement-renovations), our [home renovation planning guide](/blog/home-renovation-planning-guide-canada) sets out the steps in order."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Can't make the show, or want a second opinion on what you heard there? [Book a free on-site visit](/book-online) and we'll walk the space with you, answer your questions, and follow up with a free written quote."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Are contractors at the Winnipeg Renovation Show vetted?",
+        "a": "Don't assume so. A booth tells you a company is exhibiting, not that its WCB account, insurance or licences have been checked on your behalf. Run the same checks on show exhibitors as on anyone else: a WCB clearance, an insurance certificate, the business registration, references, and a written quote after a site visit."
+      },
+      {
+        "q": "Is the show worth it if I'm not ready to renovate yet?",
+        "a": "Yes, if you treat it as research. You can compare materials and products side by side, get a feel for how different contractors communicate, and learn what drives cost for your type of project. Starting early also leaves time for design decisions, permits and ordering before the date you'd like work to begin."
+      },
+      {
+        "q": "What should I ask about permits at the show?",
+        "a": "Ask who applies for the building permit and any electrical or plumbing permits, and how inspections are booked. The City of Winnipeg says homeowners are responsible for getting permits before a project starts, whoever applies. Outside the city, permits come from your local municipality, so ask whether the contractor has worked with it before."
+      },
+      {
+        "q": "How do I compare quotes from contractors I met at the show?",
+        "a": "Make sure each quote covers the same scope, then compare line items, allowances for finishes, exclusions, schedule and payment terms. A lower total often reflects lower allowances or missing items, such as permits, disposal or electrical upgrades. Ask each contractor to fill any gaps in writing so you're comparing like with like."
+      }
+    ],
+    "answer": "The 2027 Winnipeg Renovation Show runs January 15 to 17 at the RBC Convention Centre. Bring photos, rough measurements and a budget range, ask every contractor the same questions about scope, permits, WCB coverage, insurance, schedule, payments and warranty, and don't sign anything until you have written quotes to compare.",
+    "sources": [
+      {
+        "label": "Winnipeg Renovation Show: Frequently asked questions (dates, venue, organizer)",
+        "url": "https://www.winnipegrenovationshow.com/attendee-info/faqs",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Consumer Protection Office: Direct sales",
+        "url": "https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home improvement projects (permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: List of licensed contractors",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)",
+        "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "The Builders' Liens Act, C.C.S.M. c. B91 (s. 24, holdback)",
+        "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
+        "accessed": "2026-10-13"
+      }
+    ]
+  },
+  {
+    "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
+    "title": "Commercial Interior Design: Balancing Function and Looks",
+    "metaTitle": "Commercial Interior Design: Function and Looks | Bridgeland",
+    "metaDescription": "Plan a commercial interior that works first and looks right: code-driven layout choices, durable finishes, lighting, brand colour and flexible design.",
+    "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
+    "category": "Commercial",
+    "categories": [
+      "Commercial"
     ],
     "date": "2026-09-03",
-    "updated": "2026-09-03",
-    "readMinutes": 6,
+    "updated": "2026-10-13",
+    "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
     "heroSrc": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp",
     "heroSrcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1320.34a27d10.webp 1320w",
@@ -38,116 +6430,268 @@ export const BLOG_POSTS = [
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/commercial-renovations"
+      "/services/commercial-renovations",
+      "/services/retail-renovations",
+      "/services/office-renovations"
     ],
-    "cluster": "",
+    "cluster": "commercial-design",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
         "t": "p",
-        "x": "Creating a business space that is visually appealing is the ultimate objective for many. The best business spaces consider how the layout and design contribute to the operation of the business as well as how the space engages with the customers. The balance of aesthetic and operational synergy is the key to a successful and functional business space. The following best practices will help you understand how to best achieve this balance."
+        "x": "A good commercial interior earns its keep twice: once in how smoothly staff and customers move through it, and again in how clearly it says who you are. When the two clash, function should usually win, because a space that slows service or fails an inspection costs money every day. This guide sets out an order of decisions that keeps both in view, whether you run a shop, an office, a restaurant or a clinic in Winnipeg."
       },
       {
-        "t": "takeaways",
-        "title": "Key Takeaways",
-        "items": [
-          "The first focus of design should be centered around the intended purpose of the space. Easy movement should be optimized to create a functional work environment without needless obstacles.",
-          "Select materials that can withstand regular use for high activity areas.",
-          "The first impression a visitor has of your business, brand, or organization will be influenced by the way your building looks. Select design elements that represent your brand.",
-          "Choose light sources that support the function of a space. The right light will improve the quality of a space and improve productivity.",
-          "The design of the space should allow for future adjustments. A flexible design will support the continued success of the business as adjustments to the scope and function of the business occur."
+        "t": "h2",
+        "x": "Why should function come before finishes?"
+      },
+      {
+        "t": "p",
+        "x": "Because the functional parts of a commercial space are the expensive parts to change. Walls that form exits, plumbing for washrooms and sinks, ductwork and electrical are set by code, permits and the building, while paint, décor and loose furniture can change later at modest cost. Fix the first group early and the second group has room to move."
+      },
+      {
+        "t": "table",
+        "caption": "Decide early, decide later",
+        "head": [
+          "Element",
+          "Decide early because",
+          "Where looks come in"
+        ],
+        "rows": [
+          [
+            "Exits, corridors and fire separations",
+            "Significant changes can require sealed drawings and permit review",
+            "Door styles, glazing, wall finishes"
+          ],
+          [
+            "Accessible entrance, route and washroom",
+            "Checked against the Manitoba Building Code in plan review",
+            "Fixtures, tile, signage"
+          ],
+          [
+            "Plumbing locations",
+            "Moving drains and supply lines adds trades and cost",
+            "Sinks, counters and fixtures"
+          ],
+          [
+            "Heating, ventilation and power",
+            "New ductwork, units or panels need permits and lead time",
+            "Grilles, diffusers, outlet placement"
+          ],
+          [
+            "Lighting layout",
+            "Wiring is set before ceilings close",
+            "Fixture style and colour temperature"
+          ],
+          [
+            "Finishes, furniture and décor",
+            "Can usually change later at lower cost",
+            "Most of your brand expression"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "How do Manitoba's accessibility rules shape a commercial layout?"
+      },
+      {
+        "t": "p",
+        "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard. How they apply to your alteration is settled in plan review, so design for them from the start."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba also kept three amendments of its own: wider use of visual signal devices, handrails on both sides of stairs and ramps, and rules on how some requirements apply to existing buildings. Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
+      },
+      {
+        "t": "p",
+        "x": "Accessibility does not stop at the drawings. Under Manitoba's Accessible Customer Service Standard, every organization with at least one employee must let the public know when and why an accessibility feature is unavailable, including during a renovation. A separate standard for outdoor public spaces, such as sidewalks and parks, is still in development."
+      },
+      {
+        "t": "h2",
+        "x": "Which finishes hold up in busy commercial spaces?"
+      },
+      {
+        "t": "p",
+        "x": "Commercial-grade finishes chosen for the traffic and cleaning each area gets. Entrances take grit and winter salt, washrooms and kitchens need surfaces that can be scrubbed, and counters and door hardware take constant contact. Spend on durability where wear is heaviest, and save in areas customers rarely see, such as back offices and storage rooms."
+      },
+      {
+        "t": "table",
+        "caption": "Where finishes work hardest",
+        "head": [
+          "Space",
+          "Hard-working areas",
+          "What to look for"
+        ],
+        "rows": [
+          [
+            "Retail store",
+            "Entrance, checkout, fitting rooms, display walls",
+            "Flooring that handles grit and salt, impact-resistant walls, display systems you can change"
+          ],
+          [
+            "Office",
+            "Reception, meeting rooms, kitchenette, washrooms",
+            "Durable entry flooring, sound-absorbing ceilings or panels, cleanable counters"
+          ],
+          [
+            "Restaurant or café",
+            "Kitchen, dish area, bar, washrooms",
+            "Finishes that meet Manitoba's food premises guideline"
+          ],
+          [
+            "Clinic",
+            "Treatment rooms, waiting room, washrooms",
+            "Seamless, cleanable surfaces and hardware that stands up to frequent disinfection"
+          ]
         ]
       },
       {
         "t": "p",
-        "x": "In any commercial renovations in Winnipeg, or really anywhere, the questions will always come down to how to make a space look good, while also making it functional for the business. It is easy to get distracted by how every thing looks, while ignoring the functionality, like how its usability is affected by the lighting. Focusing on the functional needs while giving it a practical visual appeal makes the space look impressive while making it operationally effective."
-      },
-      {
-        "t": "p",
-        "x": "What does your business really do in a day to day basis? Who will be using the space? What activities and operational tasks must the space facilitate? For instance, a retail business needs to have clear lines for customers to flow, and the merchandise must be easy to access. Meanwhile, in a business space, the employees must have enough place to do their work and there should be areas where employees will have silence for them to do tasks that require concentration. A good office renovation will definitely try to get these needs at the start."
-      },
-      {
-        "t": "h3",
-        "x": "Consider these additional practical aspects."
-      },
-      {
-        "t": "li",
-        "x": "Layout and Flow: Once the space is set-up, how do people move through or navigate the place? Are there areas that get crowded or bottleneck? Are the customers able to easily find everything? When a space is designed to have good pathways and flow to it, it makes the area feel more open and welcoming."
-      },
-      {
-        "t": "li",
-        "x": "Materials: Sure, things may look good, but how do they function? In areas with a lot of foot traffic, the materials used need to be sturdy. Try to consider the materials used in construction. Do they look inviting? Do they feel good to the touch? Do they feel like they belong?"
-      },
-      {
-        "t": "li",
-        "x": "Lighting: This one is big. Sunlight is wonderful, but for working purposes, should be accompanied by artificial means. If the lights are too dim, the space is rendered useless for working. If the lights are too bright, it feels more like a hospital. The right balance makes for a space that is warm, welcoming, calm, and productive."
-      },
-      {
-        "t": "li",
-        "x": "Brand Identity: Your space should communicate to the world who you are. It can be through the choice of materials, color, texture, and even in the quirks of the construction. It's about creating a consistent experience."
-      },
-      {
-        "t": "p",
-        "x": "It's not about selecting nice looking furniture. It's about integrating good design. A builder in Winnipeg, for example, could recommend furniture that is modular; it could be rearranged as your needs change, and clever storage solutions that keep clutter hidden."
-      },
-      {
-        "t": "p",
-        "x": "When a good design meets the needs of the space used along with the purpose of the design, it adds layers to the space. It’s important that renovation companies in Winnipeg understand this balance. A successful renovation Winnipeg project leaves you with a space that looks great and makes your business operate better."
+        "x": "Food premises have the most specific rules: Manitoba's guideline calls for smooth, impervious floors in food preparation and dishwashing areas, coved and sealed 10 cm (4 inches) up the wall, and washable, non-absorbent walls and ceilings. Our guide to [restaurant renovation permits in Winnipeg](/blog/restaurant-renovation-permits-winnipeg) covers the rest."
       },
       {
         "t": "h2",
-        "x": "Wrapping It Up"
+        "x": "How much does lighting change a commercial space?"
       },
       {
         "t": "p",
-        "x": "While considering your commercial space, remember that it is not only about how it looks or how it performs, it is about how it does both. Consider the daily users of the space and incorporate the design elements that align with your brand and clientele. This balance is what makes the commercial space both visually appealing and practically functional, making your business more comfortable to operate. It’s a win-win."
+        "x": "More than most owners expect. Lighting decides whether staff can work comfortably, whether products and food look right, and whether the room feels calm or harsh. Plan general lighting for safety and cleaning, task lighting where work happens, and accent lighting for displays or brand features, then choose fixture styles to suit."
+      },
+      {
+        "t": "p",
+        "x": "Some spaces have minimum levels: Manitoba's food premises guideline requires at least 215 lux (20 foot-candles) on food preparation and dishwashing work surfaces, with shielded fixtures. If you are replacing lighting, Efficiency Manitoba runs a Business Lighting Program; apply first, because it says not to buy materials or start the project until your application is approved."
+      },
+      {
+        "t": "h2",
+        "x": "How do you carry a brand through a space without overspending?"
+      },
+      {
+        "t": "p",
+        "x": "Choose a small palette and repeat it. Two or three brand colours, one or two signature materials and a consistent signage style, used at the entrance, the main counter and one feature wall, do more than scattering branded details everywhere. Standard materials elsewhere keep the budget for the places customers actually look."
+      },
+      {
+        "t": "li",
+        "x": "**Colour:** test paint and laminate samples under your actual lighting before you commit."
+      },
+      {
+        "t": "li",
+        "x": "**Materials:** give customers one surface to touch that carries the brand, such as a wood counter edge or a tiled service front."
+      },
+      {
+        "t": "li",
+        "x": "**Flow:** a clear path from the door to the counter or reception tells people where to go before any sign does."
+      },
+      {
+        "t": "li",
+        "x": "**Signage:** plan sign locations, power and wall blocking before drywall. The City handles signs separately, and illuminated signs need an electrical sign permit."
+      },
+      {
+        "t": "li",
+        "x": "**Lease length:** attached improvements usually stay with the building, so on a short lease put more of the brand into furniture and fixtures you can take with you."
+      },
+      {
+        "t": "h2",
+        "x": "How do you keep a commercial layout flexible?"
+      },
+      {
+        "t": "p",
+        "x": "Build in what will not change and keep the rest movable. Fixed walls, plumbing and ventilation should follow the long-term plan, while workstations, displays and seating should be furniture you can rearrange. Extra power and data capacity, and lighting that does not depend on today's furniture layout, make later changes cheaper."
+      },
+      {
+        "t": "p",
+        "x": "If you are planning a move, our guide to [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg) explains which improvements usually stay with the landlord."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote, or start with the [instant renovation estimate](/instant-quote). See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
       }
     ],
-    "faqsTitle": "Most Common Questions",
+    "faqsTitle": "Commercial design questions",
     "faqs": [
       {
-        "q": "What is the significance of both aesthetics and functionality in a business environment?",
-        "a": "Achieving aesthetic and functional requirements in any business environment is important. An aesthetically pleasing business environment helps make customers feel comfortable and build a professional image of the business. An environment conducive to business operations increases workflow and decreases obstructions. It's like having a car that looks great, but doesn't drive. Both attributes are important!"
+        "q": "What matters more in a commercial space, function or looks?",
+        "a": "Function comes first, because exits, accessibility, plumbing, ventilation and lighting are set by code and are expensive to move. Looks still matter: they shape first impressions and how staff feel at work. The practical answer is to lock in the functional layout, then spend the design budget on the finishes customers see and touch most."
       },
       {
-        "q": "How do I ensure my business environment is functional?",
-        "a": "To achieve a functional environment, consider all the ways in which people will move and arrange the furniture and objects in the business environment. Provide spaces that allow people to move and designated areas for entrances and exits and make sure that critical zones are easy to locate. Arrange seating and workspaces."
+        "q": "How do I choose colours for my business space?",
+        "a": "Start from your brand colours and limit the palette to two or three, plus neutrals. Test samples on site under the lighting you will actually use, since warm and cool LED lighting can change how a colour reads. Use the strongest colour where it does the most work, such as the entrance or a feature wall."
       },
       {
-        "q": "What considerations should you take when choosing materials and colors for a business space?",
-        "a": "When choosing colors and materials, think about the personality of your business. Do you want to be feeling energetic and bold, or calm and professional? Select colors matching your brand. For the materials, if they look good, but are tough enough to withstand a lot of people walking on or touching it, that's ideal. A busy place needs durable materials!"
+        "q": "How can I make a small commercial space feel bigger?",
+        "a": "Keep sightlines open from the entrance, use lighter colours and the same flooring through connected areas, and light the walls as well as the floor. Glass partitions let light reach interior rooms, and built-in storage keeps clutter off the floor. Make sure any layout change still keeps exits and accessible routes clear."
       },
       {
-        "q": "What impact does lighting have on a business space?",
-        "a": "Lighting can be a positive or negative influence on a space. Good lighting helps when people are working. Working becomes even easier when you have good lighting. But the mood of the area can change with the light, too. Bright light can create a positive feeling, but soft lights can be a negative influence, and create an uneasy or even scary atmosphere. Mood lighting can be used to light up specific areas of the space, and can even be used to make the space more welcoming."
+        "q": "Are there rules for finishes in a restaurant kitchen?",
+        "a": "Yes. Manitoba's guideline for food handling establishments calls for smooth, impervious floors coved and sealed 10 cm up the wall in food preparation and dishwashing areas, smooth, washable, non-absorbent walls and ceilings, and shielded lighting with at least 215 lux on work surfaces. Your public health inspector reviews the plans before construction starts."
       },
       {
-        "q": "Is space reusable when a business expands or needs to change what it does?",
-        "a": "Yes, planning for such changes is a good idea. Consider, for example, movable furniture or redefinable spaces. This way, when your business requires additional desks, storage, or a different configuration, your space can accommodate those changes without extensive renovations. Any business location can benefit from being flexible."
-      },
-      {
-        "q": "What is the most important thing to remember when designing a business space?",
-        "a": "Probably the most critical thing to consider is that the space will be used by people, and those people will be in there every day. So, as much as it needs to look good, it absolutely must function well, whether it be for customers or for employees. Achieving a balance between function and aesthetics is the goal."
+        "q": "Do signs need City approval in Winnipeg?",
+        "a": "The City handles sign approvals separately from the building permit, and illuminated signs also need an electrical sign permit taken out by a licensed contractor. Check the City's sign requirements before you order a storefront sign, and plan the wall blocking and power for it before the drywall goes up."
       }
     ],
-    "answer": "",
-    "sources": []
+    "answer": "Decide how the space has to work first, then make it look like your brand within those limits. Settle exits, accessible routes, washrooms, plumbing, ventilation and lighting before choosing finishes, because they are costly to move later. Then pick durable materials, a consistent colour palette and signage that helps customers find their way.",
+    "sources": [
+      {
+        "label": "Province of Manitoba: 2020 Construction Codes Adoption",
+        "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
+        "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
+        "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Accessibility Office: Accessibility standards under the Act",
+        "url": "https://accessibilitymb.ca/accessibility/act-standards.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Health: Guideline for the Design, Construction and Reconstruction of a Food Handling Establishment",
+        "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/protection/docs/construction.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Business Lighting Program",
+        "url": "https://efficiencymb.ca/business/business-lighting/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+        "url": "https://www.winnipeg.ca/media/6330",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Permits Online",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: 13 commercial leasing terms you need to know",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
-    "title": "How to Choose Between a Full Renovation and Partial Upgrades",
-    "metaTitle": "How to Choose Between a Full Renovation and Partial Upgrades",
-    "metaDescription": "Deciding between a full renovation or partial upgrades? Learn how to choose the best option for your home's needs and budget.",
-    "excerpt": "Deciding between a full renovation or partial upgrades? Learn how to choose the best option for your home's needs and budget.",
-    "category": "Whole Home Renovations",
+    "title": "Full vs Partial Renovation: How to Choose for Your Winnipeg Home",
+    "metaTitle": "Full vs Partial Renovation in Winnipeg: How to Decide",
+    "metaDescription": "Full renovation or room-by-room upgrades? A decision table, what older Winnipeg homes hide behind the walls, and how to phase work without paying twice.",
+    "excerpt": "A full renovation fixes everything at once; partial upgrades spread the work and the cost over time. The right choice depends on the condition of your house, your plans and how much disruption you can live with. Here is a practical way to decide.",
+    "category": "Permits & Planning",
     "categories": [
-      "Whole Home Renovations",
-      "General Contracting"
+      "Permits & Planning"
     ],
     "date": "2026-09-01",
-    "updated": "2026-09-01",
-    "readMinutes": 6,
+    "updated": "2026-10-13",
+    "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
     "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp",
     "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.a3d281b8.webp 1320w",
@@ -160,112 +6704,261 @@ export const BLOG_POSTS = [
       "/services/whole-home-renovations",
       "/services/general-contracting"
     ],
-    "cluster": "",
+    "cluster": "renovation-planning",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
+        "t": "p",
+        "x": "Most renovation plans start with a list: the kitchen is tired, the bathroom leaks, the basement is unfinished, the windows are drafty. The big decision is whether to tackle the list all at once or one room at a time. Both can be the right answer. The difference is usually in the parts of the house you cannot see."
+      },
+      {
         "t": "h2",
-        "x": "How to Choose Between Complete Renovation and Partial Upgrades"
+        "x": "What is the difference between a full and a partial renovation?"
       },
       {
         "t": "p",
-        "x": "Considering giving your house a makeover? If you are wondering whether to do a complete renovation or a few cosmetic changes, the answer is quite important for your pocket, your mental health, and the look of your house. We will help you find the best solution regarding complete renovations or additional updates."
+        "x": "A full renovation brings most of the house to a common standard at once: the layout, systems such as wiring and plumbing, and the finishes. A partial renovation, or room-by-room upgrade, renovates one area at a time, such as the kitchen or a bathroom, while the rest of the house stays as it is."
       },
       {
-        "t": "takeaways",
-        "title": "Key Takeaways",
-        "items": [
-          "A complete renovation is basically rebuilding your house inside and out. It comes with many different changes and can fully remodel the look of your house. It’s the biggest investment you can make in your house.",
-          "Additional updates are small upgrades to specific areas like a room, the kitchen, or the bathroom. This takes a lot less time than a complete remodel and is more cost-effective.",
-          "Think about your future plans and how much money you have at hand. If you are going to sell your house anytime soon, small updates may give you a better profit.",
-          "A complete renovation is sometimes a better option if your house has a lot of core issues, antique wiring, plumbing problems, or a bad layout. Sometimes, mixing is best. You could do a complete renovation on a main area such as the kitchen, while doing just cosmetic updates in other areas."
+        "t": "p",
+        "x": "Between the two sits the phased renovation: one plan for the whole house, built in stages over months or years. It is often the most realistic option for a family that needs to live in the house and pay for the work as it goes."
+      },
+      {
+        "t": "h2",
+        "x": "How do you decide between them?"
+      },
+      {
+        "t": "p",
+        "x": "Start with the condition of the house, not the finishes. If the wiring, plumbing, insulation or layout need work across the house, a full renovation usually avoids opening the same walls twice. If those are sound and one room is the problem, a partial upgrade gives most of the benefit with less cost and disruption."
+      },
+      {
+        "t": "table",
+        "caption": "Full renovation or partial upgrades?",
+        "head": [
+          "Your situation",
+          "Leans toward",
+          "Why"
+        ],
+        "rows": [
+          [
+            "Wiring, plumbing or insulation need updating in several rooms",
+            "Full",
+            "Systems run through the whole house; doing them once avoids reopening finished rooms"
+          ],
+          [
+            "The layout does not work: walls, flow or room sizes",
+            "Full",
+            "Moving walls affects floors, ceilings and finishes in the rooms around them"
+          ],
+          [
+            "Systems are sound; one room is dated or worn out",
+            "Partial",
+            "Most of the benefit for less cost and disruption"
+          ],
+          [
+            "You plan to sell within a few years",
+            "Partial",
+            "Fix condition problems and first impressions; a full overhaul is a long-term choice"
+          ],
+          [
+            "You can move out for a few months",
+            "Full",
+            "Doing everything at once is usually faster overall than working around you"
+          ],
+          [
+            "You need to stay in the house and budget year by year",
+            "Phased",
+            "Stages that each leave the house usable"
+          ],
+          [
+            "You have just bought an older home",
+            "Full or phased",
+            "Find and fix hidden issues before new finishes go in"
+          ]
         ]
       },
       {
-        "t": "h3",
-        "x": "How to Choose the Difference Between a Complete Renovation and Partial Upgrades"
+        "t": "h2",
+        "x": "What do older Winnipeg homes hide behind the walls?"
       },
       {
         "t": "p",
-        "x": "Deciding to go all in on a complete renovation versus sticking with partial upgrades is a big decision; because yes, it is a big decision. Considerations go beyond just the looks. You also have to factor in your budget, timelines, and your home needs. A complete renovation means you have to take everything down to the studs, and start over. This means new layouts, updated systems, and a totally new look and feel. This is the best option if the bones of your home are weak, the layout isn’t working anymore, or you want to add a significant amount of value, energy efficiency, and property to the overall renovation. It is a big job, but it gives you a totally blank canvas to work with."
+        "x": "Older houses can hide lead paint, materials that may contain asbestos, outdated wiring, and framing changed by earlier renovations. Health Canada says a home built before 1960 probably contains lead-based paint, and that vermiculite insulation may contain asbestos. Finding these early can tip a partial job toward a fuller one, or at least change the order of work."
       },
       {
         "t": "p",
-        "x": "Conversely, partial upgrades are more specific. Maybe your kitchen is out of date, but still works. Maybe your bathroom is old, but everything else about the bathroom is great. These types of projects only focus on individual parts, updating the surfaces, finishing the details, and changing some of the components. Partial restorations are perfect when the basic systems of your house are great, you probably enjoy the layout, or the budget is more limited. These upgrades take less time, and cause less disruption to your daily routine. You can always complete other renovations and upgrades when it works out for you."
-      },
-      {
-        "t": "h3",
-        "x": "A good rule of thumb when thinking about upgrades is:"
-      },
-      {
-        "t": "p",
-        "x": "Full Renovation is Best When:"
-      },
-      {
-        "t": "p",
-        "x": "Partial Upgrades are Best When:"
-      },
-      {
-        "t": "p",
-        "x": "However, the truth is that most of the time, you need a combination of both options. A partial gut renovation encompasses completely remodeling the kitchen, and just a fresh coat of paint and new floors in the other rooms. This way you can address the most important things and stay within budget on the areas that are still good. It’s about balancing solving the actual problems, and getting the most value for your money."
-      },
-      {
-        "t": "p",
-        "x": "While considering these options, particularly for commercial renovations in Winnipeg, it makes sense to speak to seasoned renovation companies Winnipeg. They should be able to evaluate your property, go over your goals, and give realistic quotes for full and partial projects. Finding the right builder in Winnipeg is important for a positive outcome on any renovation Winnipeg project. Whether you want a full renovation or just a couple of additions, they can help you with Winnipeg renovation services."
+        "x": "That does not mean every older house needs to be gutted. It means testing and an honest look at the systems should come before design. Health Canada advises having a professional test for asbestos before renovating, and testing old paint before sanding or stripping it. Our guide to [renovating a character home in Winnipeg](/blog/renovating-a-character-home-in-winnipeg) covers what to check first."
       },
       {
         "t": "h2",
-        "x": "What’s the Verdict?"
+        "x": "Can you phase a renovation without paying twice?"
       },
       {
         "t": "p",
-        "x": "There can be a lot of anxiety when it comes to making the decision to do a complete renovation or just touch a few things up. There are a few things to consider. How much can you afford? What do you want your home to do for you? What kind of disruption do you want to deal with? Sometimes a few little renovations can do a lot. On other occasions, you might have to really gut your space to new. Whatever the answer is, reviewing your options with a renovation company can point you in the best direction for your home and your budget."
+        "x": "Yes, if the phases follow the house's systems rather than its rooms. Plan the whole house first, then do the work that runs behind walls, such as the electrical service, main plumbing lines and insulation, before the finishes it would disturb. Each phase should leave the house usable and avoid tearing out recent work later."
+      },
+      {
+        "t": "oli",
+        "x": "Make a whole-house plan, even if you build it in stages."
+      },
+      {
+        "t": "oli",
+        "x": "Do structural and system work first: foundation repairs, the electrical service, main plumbing lines and insulation."
+      },
+      {
+        "t": "oli",
+        "x": "Renovate rooms that share walls or plumbing together, such as a kitchen and a bathroom stacked above it."
+      },
+      {
+        "t": "oli",
+        "x": "Leave purely cosmetic work, such as paint, light fixtures and hardware, for later."
+      },
+      {
+        "t": "oli",
+        "x": "Get each phase permitted and inspected where required, so the next phase builds on approved work."
+      },
+      {
+        "t": "p",
+        "x": "On permits: the City of Winnipeg lists basement development, additions and many home renovations, including kitchens, bathrooms and open-concept changes, among projects that may need a building permit, while cosmetic work such as painting and flooring does not. We coordinate permits and inspections with the City or your local municipality."
+      },
+      {
+        "t": "h2",
+        "x": "How do cost and timeline compare?"
+      },
+      {
+        "t": "p",
+        "x": "A full renovation costs more at once but usually avoids repeating the set-up, demolition and trade visits that come with doing rooms separately. Partial upgrades spread the cost over time. On timing, most of our whole home renovations take 8 to 16 weeks, while a single kitchen or bathroom takes much less."
+      },
+      {
+        "t": "table",
+        "caption": "Typical on-site time for common projects (Bridgeland Builders)",
+        "head": [
+          "Project",
+          "Typical on-site time"
+        ],
+        "rows": [
+          [
+            "Bathroom",
+            "2 to 3 weeks"
+          ],
+          [
+            "Kitchen",
+            "4 to 6 weeks, once cabinets are on site"
+          ],
+          [
+            "Basement development",
+            "4 to 8 weeks"
+          ],
+          [
+            "Whole home renovation or addition",
+            "8 to 16 weeks"
+          ]
+        ],
+        "note": "Permits, product lead times and what is found when walls are opened can move these dates. Your written quote includes a schedule."
+      },
+      {
+        "t": "p",
+        "x": "For current price ranges, see our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). For a full-house project, our [whole home renovation](/services/whole-home-renovations) page explains how the work is planned and staged."
+      },
+      {
+        "t": "h2",
+        "x": "What should you ask at the on-site visit?"
+      },
+      {
+        "t": "p",
+        "x": "Ask questions that separate what needs doing now from what can wait. A good visit should leave you knowing which systems are near the end of their life, which rooms are linked by plumbing or structure, what needs a permit, and whether the work can be staged so you can stay in the house."
+      },
+      {
+        "t": "li",
+        "x": "Which systems in my house need work now, and which can wait?"
+      },
+      {
+        "t": "li",
+        "x": "If I renovate this room now, what would a later phase have to reopen?"
+      },
+      {
+        "t": "li",
+        "x": "Which parts of the plan need permits?"
+      },
+      {
+        "t": "li",
+        "x": "Can the work be staged so we can live here?"
+      },
+      {
+        "t": "li",
+        "x": "What should be tested before demolition?"
+      },
+      {
+        "t": "p",
+        "x": "Our checklist on [how to choose a renovation contractor](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) covers the questions to ask about the company itself, and [what a general contractor does](/blog/what-does-a-general-contractor-do) explains who coordinates a multi-trade project."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, sort what needs doing now from what can wait, and send a free written quote for the scope you choose. For a first range, try the [instant estimate](/instant-quote)."
       }
     ],
-    "faqsTitle": "Common Questions",
+    "faqsTitle": "Common questions",
     "faqs": [
       {
-        "q": "When are full renovations different than partial renovations?",
-        "a": "Consider a full renovation as a full makeover of a house. Think of everything new. A partial upgrade is an upgrade. It is like giving a few rooms a new look. It is a facelift."
+        "q": "When does a partial renovation make more sense than a full one?",
+        "a": "When the house's wiring, plumbing, insulation and layout are in reasonable shape and only one or two rooms hold you back. A partial upgrade then gives most of the benefit with less cost and disruption. It also suits budgets that work year by year, as long as each stage fits a plan for the whole house."
       },
       {
-        "q": "When is it reasonable to have a partial upgrade over a full renovation?",
-        "a": "Consider a partial upgrade if the house’s core systems are secure (plumbing, electrical, etc.); or, if the full upgrade is resolving a couple of rooms (kitchen, bathrooms) and the goal is to merely bring new visuals, then it is also reasonable. A partial upgrade also is the right approach if the disruption during renovations is a concern or if the budget is restricted."
+        "q": "Is it cheaper to renovate everything at once?",
+        "a": "Per room, it often is, because set-up, demolition, permits and trade visits happen once instead of several times. It costs more up front, though, and means more disruption at one time. If the budget is the limit, a phased plan that does the system work first keeps many of the same savings."
       },
       {
-        "q": "Why choose a full renovation?",
-        "a": "With full renovations, it is possible to rearrange the set up of the house and transform to make it entirely different and from better systems then it is possible to rearrange to transform to different systems than the current outdated ones to better energy efficient ones, and the external visuals will also be new. A full upgrade will be a fix to almost all issues and also a transform to the whole living space and it will add a new level of value to the house."
+        "q": "Can we live in the house during a full renovation?",
+        "a": "Often, yes, if the work is staged in sections and a kitchen and bathroom stay usable. Sometimes it is faster to move out for a few weeks. Both options can be laid out at the on-site visit, so you can weigh the time saved against the disruption before you decide."
       },
       {
-        "q": "Can a partial uplift add value to my home?",
-        "a": "Definitely! Updating a kitchen with new cabinets and countertops, or modernizing a bathroom can make a home more attractive to buyers and increase market value! Investing in specific measurable areas is smart."
+        "q": "What if problems turn up once the walls are open?",
+        "a": "Older homes in particular can reveal water damage, old wiring or altered framing once walls come down. The work should stop, you should be shown what was found, and the fix should be priced before work continues. A contingency in your budget means a discovery changes the plan, not the whole project."
       },
       {
-        "q": "What if I find unexpected problems during a reno?",
-        "a": "This can happen, especially with older homes. You might run into issues with a partial uplift. With a full renovation, you have a higher likelihood of problems anywhere. Surprises happen and it's a good idea to have more money just in case, whatever renovation you go with."
-      },
-      {
-        "q": "How do I decide which is my best option?",
-        "a": "Think about your budget, the time you have for the project, your home’s structural and systems condition, and your overall goals. If your home works well and only looks outdated, a partial uplift may very well be your best option. If you have major issues to resolve or want a totally new feel, a full renovation is the better option."
+        "q": "How do I know if my house needs a full renovation?",
+        "a": "Look at the systems and the layout, not just the finishes. Signs include wiring that cannot handle modern loads, plumbing problems in several places, cold rooms from poor insulation, or a layout that no longer suits how you live. An on-site visit can separate what needs doing now from what can wait."
       }
     ],
-    "answer": "",
-    "sources": []
+    "answer": "Choose a full renovation when the wiring, plumbing, insulation or layout need work in several rooms, or when you want the whole house finished to one standard at once. Choose partial upgrades when those systems are sound and only one or two rooms hold you back. Many homes suit a phased plan that does the system work first.",
+    "sources": [
+      {
+        "label": "Health Canada: Reduce your exposure to lead",
+        "url": "https://www.canada.ca/en/health-canada/services/home-garden-safety/reduce-your-exposure-lead.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Asbestos and your health",
+        "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home renovations (building permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
-    "title": "Understanding ROI: Which Commercial Renovations Bring the Most Value?",
-    "metaTitle": "Understanding ROI: Which Commercial Renovations Bring the Most Value?",
-    "metaDescription": "Understanding ROI: Which Commercial Renovations Bring the Most Value? Learn how strategic renovations can boost your property's value and profitability.",
-    "excerpt": "Understanding ROI: Which Commercial Renovations Bring the Most Value? Learn how strategic renovations can boost your property's value and profitability.",
-    "category": "Commercial Renovations",
+    "title": "Commercial Renovation ROI: Which Upgrades Pay Back?",
+    "metaTitle": "Commercial Renovation ROI in Winnipeg | Bridgeland Builders",
+    "metaDescription": "How to judge the return on a commercial renovation: a simple ROI method, upgrades that tend to pay back, leasing versus owning, and what lowers the return.",
+    "excerpt": "A plain-language way to judge whether a commercial renovation will pay for itself, which kinds of upgrades tend to earn their cost back, and what quietly eats into the return.",
+    "category": "Commercial",
     "categories": [
-      "Commercial Renovations"
+      "Commercial",
+      "Costs & Budgets"
     ],
     "date": "2026-08-12",
-    "updated": "2026-08-12",
-    "readMinutes": 6,
+    "updated": "2026-10-13",
+    "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
     "heroSrc": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp",
     "heroSrcSet": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1320.e95b1d18.webp 1320w",
@@ -275,118 +6968,253 @@ export const BLOG_POSTS = [
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/commercial-renovations"
+      "/services/commercial-renovations",
+      "/services/retail-renovations",
+      "/services/restaurant-renovations",
+      "/services/office-renovations"
     ],
-    "cluster": "",
+    "cluster": "commercial-costs",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
+        "t": "p",
+        "x": "Return on investment (ROI) is the question behind every commercial renovation: will the money come back as higher sales, lower costs or a more valuable property? Published averages rarely match a specific business, so this guide skips them. Instead, it gives you a way to estimate the return for your own space, using numbers you can check."
+      },
+      {
         "t": "h2",
-        "x": "Calculating ROI: Which Commercial Renovations Are Most Profitable"
+        "x": "How do you calculate ROI on a commercial renovation?"
       },
       {
         "t": "p",
-        "x": "Your commercial property represents your business to your community. Promoting your brand and explaining what services or products you offer to potential customers. A well maintained and attractive building has the potential of increasing customers. Renovation projects improve business and operational efficiencies. These projects come with significant costs so business owners need to think about them as an investment instead of an expense. Let's explore the potential of these projects and how to maximize the returns."
+        "x": "Add up the total cost, including construction, design, permits, downtime and financing, then estimate the yearly benefit in extra margin, savings or avoided costs. ROI is total benefit over the time you will use the space, minus total cost, divided by total cost. Payback period is total cost divided by yearly benefit."
       },
       {
-        "t": "takeaways",
-        "title": "Key Takeaways",
-        "items": [
-          "Your commercial space is an investment and so is the potential renovation. The right renovation increases the business potential, operational efficiencies, and increases the commercial property value.",
-          "Identify your business goals prior to the renovation. Do you want to appeal to more customers or tenants? Do you want to improve your brand image? Do you want to provide your employees with a better work environment?",
-          "Prioritize renovations to spaces that have a high flow of traffic, both operationally and aesthetically. Focus on areas like lobbies and restrooms.",
-          "Installing energy efficient systems and appliances are a great renovation project. They decrease operating expenses and increase the appeal of the property.",
-          "It is important to crunch the numbers. By doing cost analyses, you will be able to understand cost-benefit analyses by determining how much a renovation will cost versus how much additional income or valuation it will generate."
-        ]
-      },
-      {
-        "t": "h3",
-        "x": "Calculating ROI: Which Commercial Renovations Are Most Profitable"
-      },
-      {
-        "t": "p",
-        "x": "The excitement of getting new designs and features for your business is something that will always be there, however, the new design and features have to make sense for the cost. When you get your new designs, features, and layouts, how much will they cost? When you get your new designs and features will the ROI be positive? Will the renovations help you generate more business? The answer will determine how you cryptocurrency and how much more you will make by implementing the renovations. Having the answer to that question will allow you to legally get rich by the renovations implementing the new designs and features. The answer will come from the renovations taking time, and from there the renovations will create a return."
-      },
-      {
-        "t": "p",
-        "x": "It often comes down to a few key areas that we look for bang for our buck."
-      },
-      {
-        "t": "p",
-        "x": "Consider your building an asset, increasing its worth. Modern upgrades to your building's infrastructure, building tech, or fresh paint, updated finishes, etc. increases property appeal to buyers or tenants. This can be very important if you are considering a sale in the future."
-      },
-      {
-        "t": "p",
-        "x": "A renovation is a perfect time to try a new way for the space to function. Optimized layouts, new tech, and improved common areas can make employees and operations more productive. More productive operations means more savings."
-      },
-      {
-        "t": "p",
-        "x": "Your and your employees' first impressions are often the first impression of your business that customers and clients are Interacting with. Your building's complex, modern look can signal new customers, and even improve their perception of your brand. Especially if your building is well maintained, a modern look can signal your industry to other companies growing your business."
-      },
-      {
-        "t": "p",
-        "x": "Upgrades like LED's or updated HVAC systems you can feel good about for the environment, but they also lower utility costs. New equipment also tends to require less maintenance, increasing savings in the long run."
-      },
-      {
-        "t": "p",
-        "x": "It is important to work with knowledgeable builders in Winnipeg when considering any type of commercial renovation services. This is because they assist in understanding which renovations suit your goals and align with current local market conditions."
+        "t": "table",
+        "caption": "What goes into a renovation ROI estimate",
+        "head": [
+          "Line",
+          "What to include",
+          "Where the number comes from"
+        ],
+        "rows": [
+          [
+            "Project cost",
+            "Construction, design and engineering fees, permit fees, contingency",
+            "Your written quote and your designer's fees"
+          ],
+          [
+            "Disruption cost",
+            "Sales lost during closures, temporary space, overtime, moving",
+            "Your own sales records"
+          ],
+          [
+            "Financing cost",
+            "Interest and fees over the loan term",
+            "Your lender"
+          ],
+          [
+            "Yearly benefit",
+            "Extra gross margin, energy and maintenance savings, staff time saved",
+            "Sales data, utility bills, repair history"
+          ],
+          [
+            "Useful life",
+            "Remaining lease term or the life of the work, whichever is shorter",
+            "Your lease and product information"
+          ]
+        ],
+        "note": "Use gross margin, not sales: a renovation that adds sales also adds the cost of the goods you sell."
       },
       {
         "t": "p",
-        "x": "For businesses in Winnipeg, the first step is selecting the appropriate builders in Winnipeg. A quality contractor is able to pick up on the details regarding the commercial renovation services, and will assist you with the entire process, from the first plans to the final details. Whether your renovations involve a simple facelift or a complete overhaul, they will assist you in focusing on the renovations that will provide the greatest ROI. Keep in mind that any renovation project in Winnipeg should be viewed from a strategic perspective, as it is an investment and not an expense."
+        "x": "Run the numbers for each part of the project, not just the total. A new entrance and a lighting retrofit may pay back on very different timelines, and splitting them shows which parts are carrying the project."
       },
       {
-        "t": "h3",
-        "x": "Wrapping It Up: Smart Renovations, Smarter Business"
+        "t": "h2",
+        "x": "Which commercial upgrades tend to pay back?"
       },
       {
         "t": "p",
-        "x": "With the different examples of how to improve your commercial property, the question that needs to be answers is whether those improvements will make you money, or save you money. Renovations should be a mix of aesthetic improvements and smart changes that allow your business to grow. Consider the true needs of your customers and your team. Upgrading your lobby, your bathrooms, or making the whole place a bit more energy efficient can go a long way. Renovations can be cost efficient, or be a huge drain. The best way to determine how cost effective a renovation would be is to do the math, it may feel a bit like homework, but it is worth it. Keep some of these ideas in mind to ensure you are making the most valuable renovations to your property."
+        "x": "Upgrades that remove a bottleneck or cut a recurring cost are the easiest to justify, because you can measure the before and after. Layout changes that speed up service, lighting and HVAC improvements that lower energy use, and durable finishes that end repeated repairs usually have the clearest case. Purely cosmetic changes are harder to prove."
+      },
+      {
+        "t": "table",
+        "caption": "Common upgrades and how they can pay back",
+        "head": [
+          "Upgrade",
+          "How it can pay back",
+          "Measure this first"
+        ],
+        "rows": [
+          [
+            "Service layout (counters, checkout, kitchen flow)",
+            "More customers served per hour, less staff walking",
+            "Peak-hour transactions and wait times"
+          ],
+          [
+            "Lighting retrofit",
+            "Lower electricity use and fewer lamp replacements",
+            "Fixtures, hours of use, electricity bills"
+          ],
+          [
+            "Heating, ventilation and controls",
+            "Lower energy use, better comfort",
+            "Gas and electricity bills, comfort complaints"
+          ],
+          [
+            "Windows, doors and insulation",
+            "Lower heating costs, fewer drafts at entrances",
+            "Heating bills, cold spots"
+          ],
+          [
+            "Washrooms and accessible entrances",
+            "Better customer experience, fewer complaints",
+            "Customer feedback, existing barriers"
+          ],
+          [
+            "Storefront and entrance",
+            "Stronger street presence and first impressions",
+            "Foot traffic before and after"
+          ],
+          [
+            "High-wear finishes",
+            "Fewer repairs and replacements",
+            "Recent repair invoices"
+          ]
+        ],
+        "note": "A way to rank options, not a promise of returns. Results depend on your business and space."
+      },
+      {
+        "t": "h2",
+        "x": "Does owning or leasing change the return?"
+      },
+      {
+        "t": "p",
+        "x": "Yes. If you own the building, improvements add to an asset you keep, and better finishes or systems can help with future tenants or a sale. If you lease, attached improvements usually stay with the landlord when you leave, so the payback has to fit inside your remaining lease term, or be offset by a landlord allowance."
+      },
+      {
+        "t": "p",
+        "x": "Tenants can improve the return by negotiating a tenant improvement allowance or rent-free months, and by putting more of the budget into trade fixtures, such as furniture and display systems, that move with the business. Our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) explains landlord allowances and loans."
+      },
+      {
+        "t": "h2",
+        "x": "How can energy upgrades improve the return?"
+      },
+      {
+        "t": "p",
+        "x": "By lowering a cost you pay every month and, in some cases, by qualifying for incentives that reduce the upfront price. Efficiency Manitoba lists business programs for lighting, building envelope, HVAC and controls, refrigeration, energy audits and deep retrofits. Check eligibility before you order anything, because some programs require approval first."
+      },
+      {
+        "t": "p",
+        "x": "The Business Lighting Program is a clear example: Efficiency Manitoba says not to purchase materials or start the project until your application is approved, and applications can come from the building owner or from a contractor or vendor on the owner's behalf. Build that approval step into the schedule so an early order does not cost you the incentive."
+      },
+      {
+        "t": "h2",
+        "x": "What lowers the return on a renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Mostly the things that raise cost or delay reopening: scope changes after construction starts, hidden conditions found during demolition, long closures, finishes chosen for looks in high-wear areas, and opening dates set before the occupancy permit is in hand. Each one adds cost without adding benefit, so plan them out early."
+      },
+      {
+        "t": "p",
+        "x": "Timing matters as much as cost. The City of Winnipeg's occupancy bulletin counts stocking shelves, training staff and conducting business as occupying a space, so none of that can start in a renovated area until the occupancy permit is issued where one is required. Our guide to [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) covers overruns in detail."
+      },
+      {
+        "t": "h2",
+        "x": "Questions to answer before you commit"
+      },
+      {
+        "t": "li",
+        "x": "What specific result should this renovation change, and how will we measure it?"
+      },
+      {
+        "t": "li",
+        "x": "How many years will we use the space, and what does the lease say about improvements?"
+      },
+      {
+        "t": "li",
+        "x": "Which parts pay back fastest if the budget has to shrink?"
+      },
+      {
+        "t": "li",
+        "x": "Can we stay open through phasing or after-hours work instead of closing?"
+      },
+      {
+        "t": "li",
+        "x": "Are there incentives we must apply for before ordering equipment?"
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** For a first number to test your ROI, try the [instant renovation estimate](/instant-quote). For a figure you can plan around, [book a free on-site visit](/book-online) and get a free written quote. Bridgeland Builders renovates [retail stores](/services/retail-renovations) and other [commercial spaces](/services/commercial-renovations) in Winnipeg and nearby communities."
       }
     ],
-    "faqsTitle": "Business Renovation FAQs",
+    "faqsTitle": "Renovation ROI questions",
     "faqs": [
       {
-        "q": "What does ROI mean for business renovations?",
-        "a": "ROI refers to Return on Investment - a measurement that helps businesses determine if the financial value of renovating a business space is worth the expense. You may want to ask yourself, 'Will the changes I make help my business make more profit than I spent on them?'"
+        "q": "What does ROI mean for a business renovation?",
+        "a": "Return on investment compares what a renovation gives back with what it costs. For a business, the return usually comes as extra gross margin from more or faster sales, savings on energy and maintenance, or a property that is easier to lease or sell. If the total benefit over the time you use the space exceeds the total cost, the return is positive."
       },
       {
-        "q": "Which types of renovations give the best return?",
-        "a": "Renovations that improve the aesthetics of a business and optimize operational efficiency tend to have the greatest payback. Examples would be making the entrance more inviting, retail store upgrades, customizing the layout of the offices, or enhancing the building's energy efficiency. These changes can attract more customers or make your workforce more productive."
+        "q": "Is there a typical ROI for commercial renovations?",
+        "a": "Not one you can rely on. Returns depend on your business, location, lease, the condition of the space and how the work is done, so averages from other markets or property types rarely transfer. A better approach is to estimate the benefit of each part of the project using your own sales, staffing and utility data."
       },
       {
-        "q": "How can a renovation increase my property's value?",
-        "a": "Improving the internal and external appearance of your building, upgrading its operational systems, and installing value-adding eco-friendly features can increase the value of your building as an asset, especially if you decide to dispose of it."
+        "q": "Do energy-efficiency upgrades qualify for incentives in Manitoba?",
+        "a": "Some do. Efficiency Manitoba offers business programs for lighting, building envelope, HVAC and controls, refrigeration and more. Program rules differ, and the Business Lighting Program says not to buy materials or start work until your application is approved, so check the current program page before you order equipment or sign for that part of the work."
       },
       {
-        "q": "Can renovations help save money?",
-        "a": "Yes! Putting in energy saving lights (like LEDs), better heating systems, and better cooling systems can save you money on your monthly bills. In addition, newer equipment often doesn't need fixing, which saves you on maintenance costs."
+        "q": "Should a tenant invest in renovating a leased space?",
+        "a": "It can make sense when the lease is long enough for the benefit to cover the cost, or when the landlord contributes through an allowance or rent-free months. Attached improvements usually stay with the building when you leave, so tenants on shorter leases often get more value from movable fixtures and furniture."
       },
       {
-        "q": "How do I know if a renovation is worth the cost?",
-        "a": "You need to figure out how much the renovations will cost versus the money your business will make after the renovations. Will you get more customers? Will you raise your prices? If the additional money coming in is more than the cost, go for it."
-      },
-      {
-        "q": "Does the location of my business affect renovation ROI?",
-        "a": "Yes! If your business is in a place with a lot of people living and working, or in an area with a lot of new businesses, your renovations are more likely to be worth it. More people means more potential customers, which creates more demand for your services. More demand makes the upgrades more valuable."
+        "q": "How do I reduce the cost of closing during a renovation?",
+        "a": "Phase the work so part of the space keeps operating, and schedule disruptive tasks for evenings and weekends where building and City noise rules allow. Bridgeland Builders offers after-hours and weekend scheduling for commercial work and sends weekly progress updates, so you can plan staffing and customer notices around each phase."
       }
     ],
-    "answer": "",
-    "sources": []
+    "answer": "No renovation comes with a guaranteed return. The upgrades most likely to pay back are tied to a measurable result: more customers or seats served, fewer staff hours lost to a poor layout, lower energy and maintenance bills, or a space that is easier to lease or sell. Estimate each one against how long you will use the space.",
+    "sources": [
+      {
+        "label": "Efficiency Manitoba: Business programs",
+        "url": "https://efficiencymb.ca/business/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Business Lighting Program",
+        "url": "https://efficiencymb.ca/business/business-lighting/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: 13 commercial leasing terms you need to know",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+        "url": "https://www.winnipeg.ca/media/6131",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+        "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
-    "title": "How to Finance a Commercial Renovation Without Breaking the Bank",
-    "metaTitle": "How to Finance a Commercial Renovation Without Breaking the Bank",
-    "metaDescription": "Learn how to finance a commercial renovation without breaking the bank. Explore loan options, strategies, and tips for a successful project.",
-    "excerpt": "Learn how to finance a commercial renovation without breaking the bank. Explore loan options, strategies, and tips for a successful project.",
-    "category": "Commercial Renovations",
+    "title": "Commercial Renovation Financing in Manitoba: Your Options",
+    "metaTitle": "Commercial Renovation Financing in Manitoba | Bridgeland",
+    "metaDescription": "Compare ways to pay for a commercial renovation in Manitoba: term loans, lines of credit, BDC, landlord allowances, equipment financing and phasing.",
+    "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
+    "category": "Commercial",
     "categories": [
-      "Commercial Renovations"
+      "Commercial",
+      "Money & Rebates"
     ],
     "date": "2026-08-11",
-    "updated": "2026-08-11",
+    "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
     "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.dbbc5f1b.webp",
@@ -397,127 +7225,236 @@ export const BLOG_POSTS = [
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/commercial-renovations"
+      "/services/commercial-renovations",
+      "/services/office-renovations"
     ],
-    "cluster": "",
+    "cluster": "commercial-costs",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
         "t": "p",
-        "x": "Do you want to upgrade your business space? Maybe your business just needs to refresh the look or renovate some areas to better serve the needs of the customers. Trying to gather the money to capture your ideas is like trying to complete a jigsaw puzzle. This article explains how to financially plan a Commercial Renovation to ease your stress management. I will explore various options available to you."
-      },
-      {
-        "t": "takeaways",
-        "title": "Key Takeaways",
-        "items": [
-          "To qualify for a Traditional Bank loan to finance your renovation, you will need to have an impressive credit history, a little bit of savings, and a strong enough business to qualify for a sizable loan.",
-          "SBA loans help you finance your renovation and they are backed by the government, making them easier to secure than traditional loans. Because they are government backed, your terms will be better.",
-          "\"Hard Money\" loans are available to you from private investors and are often secured by business collateral. These loans can be costly due to their high interest, along with short repayment periods.",
-          "A business line of credit is a renovation financing option that is similar to a credit card. Having a line of credit provides your business with the ability to add the renovation to your budget, while also giving you access to cash for unanticipated expenses.",
-          "A Commercial Mortgage is a loan specifically geared towards the purchase and renovation of commercial business property. These loans require strong credit and a down payment for the financing to be secured."
-        ]
-      },
-      {
-        "t": "p",
-        "x": "Planning on renovating your commercial space? No matter if you're looking to update a building or expand your business operations, the financing for commercial renovations in Winnipeg can be a bit overwhelming. However, it does not need to be that way. There are plenty of ways to obtain the needed financing without breaking the bank."
-      },
-      {
-        "t": "p",
-        "x": "Financing options are plenty. If you have solid credit and some money saved, you can apply for traditional bank loans. These usually offer higher amounts of money than other loans, but the application process can take a while. If you're looking to obtain a small business loan, applying for an SBA loan will be a good option for you. These loans are guaranteed by the government, so the application process can be easier. Also, most of the time, the interest rates are lower than bank loans. If you need to obtain the cash as fast as possible, you can take out hard money loans which are lent out by private companies. Be careful, as these loans do have higher interest rates and shorter terms."
-      },
-      {
-        "t": "h3",
-        "x": "Common types of financing are as follows:"
-      },
-      {
-        "t": "li",
-        "x": "Traditional Bank Loans: Established businesses with good credit can take advantage of these loans."
-      },
-      {
-        "t": "li",
-        "x": "SBA Loans: Backed by the government, so they're usually more accessible for small businesses."
-      },
-      {
-        "t": "li",
-        "x": "Hard Money Loans: Fastest funding, but usually the most expensive."
-      },
-      {
-        "t": "li",
-        "x": "Business Line of Credit: Flexible funding for ongoing/smaller projects."
-      },
-      {
-        "t": "li",
-        "x": "Commercial Mortgages: for larger projects that include purchasing and renovating a property."
-      },
-      {
-        "t": "p",
-        "x": "Your renovation will pay for itself in other ways, too. With the example of renovations that are more energy efficient, you could save a ton of money on utilities. Some of the financing could be used for eco-friendly construction, which is a renovation that will keep paying you back over time. It could also save you money in other ways, like a more efficient layout that will help people move faster, and make it a better experience for customers and encourage them to buy more. That's why it is smart to make renovations that are good for your business."
-      },
-      {
-        "t": "p",
-        "x": "When your planning, it is a good idea to get quotes from several local renovation companies Winnipeg. Price and service comparisons among Winnipeg renovation contractors can help you get the best deal. Don't just pick the first one you see. Ask about their previous jobs as references. A great builder in Winnipeg will be open about their budget and schedule."
-      },
-      {
-        "t": "p",
-        "x": "Get your goals straightened out before going to a lender. What do you want to accomplish with your renovations? Prepare an estimate on potential costs before your first meeting. Having goals helps a lender financially plan with you and makes it easier for them to provide the funds. More importantly, it keeps you on track."
-      },
-      {
-        "t": "p",
-        "x": "Ultimately you want to better your business, and with the obtaining the right financing, you can do that. There is a lot to gain from optimizing your space and upgrading your out of date facilities. It is essential for businesses that want to improve their properties to understand the financing options available to them in order to save the most on their commercial renovations. Working with reputable commercial renovation services coupled with financing at your disposal will provide you the ultimate services without over spending."
+        "x": "Paying for a commercial renovation is rarely a single loan. Most projects mix money from the business, a lender and sometimes the landlord, and the right mix depends on whether you own or lease, how long you will stay and how much of the cost is equipment rather than construction. This guide compares the main options in Manitoba. It is general information, not financial advice: rates and terms change, so have your lender and accountant review your plan."
       },
       {
         "t": "h2",
-        "x": "Final Thoughts"
+        "x": "What are the main ways to pay for a commercial renovation?"
       },
       {
         "t": "p",
-        "x": "Obtaining financing to make improvements to your investment property does not have to break the bank. We have discussed contacting your hometown banker, SBA loans, private lenders, and even some other creative and less conventional options. Your level of preparation with your plan and your numbers will determine how far you can go. But don't worry; if you need to alter your financing options, remember that the improvements can very possibly lead to further investment opportunities that can accelerate your revenue/profit potential. Feel free to consult with the many professionals that specialize in this sort of thing. They will have many ideas and options available to them that you may not know about."
+        "x": "The common options are a business term loan, a leasehold improvement loan, a business line of credit, a landlord's tenant improvement allowance or other inducements, equipment loans or leases, a term loan under the federal Canada Small Business Financing Program, and phasing the work so it can be paid from cash flow. Most projects combine two or three."
+      },
+      {
+        "t": "table",
+        "caption": "Commercial renovation financing options compared",
+        "head": [
+          "Option",
+          "How it works",
+          "Suits",
+          "Watch for"
+        ],
+        "rows": [
+          [
+            "Business term loan",
+            "A lump sum repaid over a set term from a bank, credit union or BDC; BDC's commercial real estate loan can be used to expand or renovate existing premises",
+            "Owners and established tenants with a defined project",
+            "Security, covenants, prepayment terms"
+          ],
+          [
+            "Leasehold improvement loan",
+            "BDC describes it as a short-term loan, usually amortized over five or six years, for renovating leased space",
+            "Tenants fitting up a new space",
+            "Lenders see little resale value in improvements and focus on cash flow"
+          ],
+          [
+            "Business line of credit",
+            "Borrow and repay as needed up to a limit",
+            "Smaller projects, soft costs, contingency",
+            "Costs can change; keep long-life work on term financing"
+          ],
+          [
+            "Landlord allowance or inducements",
+            "Cash toward renovations, often per square foot, rent-free months or landlord-built work",
+            "Tenants signing or renewing a lease",
+            "Conditions, payment timing, who owns the improvements"
+          ],
+          [
+            "Equipment loan or lease",
+            "Separate financing for kitchen, clinical or production equipment",
+            "Equipment-heavy fit-ups",
+            "End-of-term terms; equipment is often bought outside the construction contract"
+          ],
+          [
+            "Canada Small Business Financing Program",
+            "A term loan from your lender, with the federal government sharing the risk; can cover leasehold improvements",
+            "Small businesses with gross annual revenue of $10 million or less",
+            "The lender decides; ask which costs are eligible"
+          ],
+          [
+            "Phasing from cash flow",
+            "Split the work into stages and pay for each from operating cash",
+            "Businesses that cannot close or borrow much",
+            "Longer overall timeline, some repeated set-up costs"
+          ]
+        ],
+        "note": "Confirm current rates, terms and eligibility with your lender."
+      },
+      {
+        "t": "p",
+        "x": "Energy work can lower the amount you need to finance. Efficiency Manitoba lists business incentives for lighting, building envelope, HVAC and controls and other upgrades; check each program's rules before ordering, because some require approval first."
+      },
+      {
+        "t": "h2",
+        "x": "What is a tenant improvement allowance?"
+      },
+      {
+        "t": "p",
+        "x": "It is money a landlord contributes toward renovating your leased space, often calculated per square foot. Landlords may also offer other inducements, such as rent-free months or work they complete before you move in. An allowance is negotiated as part of the lease, so raise it before you sign, not after the quote arrives."
+      },
+      {
+        "t": "li",
+        "x": "How much is the allowance, and can it pay for design fees, permits and cabling as well as construction?"
+      },
+      {
+        "t": "li",
+        "x": "When is it paid: at completion, in instalments or as a rent credit?"
+      },
+      {
+        "t": "li",
+        "x": "What does the landlord need first, such as approved drawings, permits or invoices?"
+      },
+      {
+        "t": "li",
+        "x": "Which improvements stay with the building when you leave, and must anything be removed?"
+      },
+      {
+        "t": "p",
+        "x": "BDC also advises getting the landlord's consent to your plans before signing. Our guide to [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg) covers the lease side in more detail."
+      },
+      {
+        "t": "h2",
+        "x": "How does the Canada Small Business Financing Program work?"
+      },
+      {
+        "t": "p",
+        "x": "It helps small businesses get term loans from regular lenders by having the federal government share the risk with the lender. Businesses operating in Canada with gross annual revenues of $10 million or less can qualify, and loans can cover new or existing leasehold improvements. You apply through a bank, credit union or caisse populaire, which makes the decision."
+      },
+      {
+        "t": "h2",
+        "x": "What does a lender usually want to see?"
+      },
+      {
+        "t": "p",
+        "x": "A clear project and a clear plan to repay it. Expect to bring a written scope and quote from your contractor, drawings or permit status, a schedule, your lease or proof of ownership, recent financial statements and a cash flow forecast that shows the renovation's effect. The more specific the numbers, the easier the conversation."
+      },
+      {
+        "t": "p",
+        "x": "Ask how the money is paid out. Some lenders advance funds in stages as work progresses and may ask for invoices or a site check at each stage, which should line up with your contractor's payment schedule. Taxes are shown on your written quote; ask your accountant how the renovation should be treated in your books."
+      },
+      {
+        "t": "h2",
+        "x": "How much contingency should you finance?"
+      },
+      {
+        "t": "p",
+        "x": "Enough to cover what nobody can see yet. BDC advises setting aside a contingency fund and leaving buffer room in the timeline, because renovations often run over budget and past deadline. Older buildings, hidden conditions and a change of use call for more; a well-documented space with complete drawings needs less. Arrange it before work starts."
+      },
+      {
+        "t": "p",
+        "x": "Arranging the contingency up front, for example as unused room on a line of credit, is usually easier than asking for more money halfway through. See [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) for what tends to use it up."
+      },
+      {
+        "t": "h2",
+        "x": "Can phasing reduce the money you need up front?"
+      },
+      {
+        "t": "p",
+        "x": "Yes. Splitting a renovation into stages, such as the customer area first and the back of house later, spreads the cost and keeps part of the business earning. The trade-offs are a longer overall timeline and some repeated costs for setting up, protecting finished areas and scheduling inspections, so phase where it genuinely helps cash flow."
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders offers after-hours and weekend scheduling for commercial work, which can let a phased project run without full closures. Ask at the on-site visit which parts of your project can be separated cleanly."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** Lenders and landlords both want a defined scope and price. [Book a free on-site visit](/book-online) for a free written quote you can take to them, or start with the [instant renovation estimate](/instant-quote) for a ballpark. Learn about our [office renovations](/services/office-renovations) and other [commercial renovation services](/services/commercial-renovations), and weigh the payback with our guide to [commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)."
       }
     ],
-    "faqsTitle": "FAQs",
+    "faqsTitle": "Commercial renovation financing questions",
     "faqs": [
       {
-        "q": "Describe to me what a commercial renovation loan is.",
-        "a": "A commercial renovation loan is just what it sounds like. If you have a business, that loan is for you to make improvements to your commercial space. It is designed to help you make improvements that will make your business space more useful, like new paint, new, improved, or additional equipment, or a better layout. A commercial renovation loan can cover both the materials and the labor for the improvements that you make."
+        "q": "What should I bring to a lender for a renovation loan?",
+        "a": "A clear scope and price. Bridgeland Builders provides a free on-site visit and a free written quote with a clear scope, which is the kind of document banks, credit unions, BDC and landlords usually ask for when you apply for a loan or negotiate a tenant improvement allowance."
       },
       {
-        "q": "How can I get money to renovate my business?",
-        "a": "There are quite a few options! You can get a traditional bank loan, but they are difficult to get unless you have a high credit score. SBA loans are government-backed loans that are a bit easier to get if you're a small business. Hard money loans can be acquired through private lenders, but they are very expensive, so try to only use them if you need money very quickly. You can also get a business line of credit, which is like a credit card, and you can borrow however much you want, whenever you want."
+        "q": "Are there government grants for commercial renovations in Manitoba?",
+        "a": "Program availability changes, so check before you budget. For energy upgrades, Efficiency Manitoba offers business incentives for lighting, building envelope, HVAC and other work, and some programs require approval before you buy anything. For borrowing, the federal Canada Small Business Financing Program helps eligible small businesses get term loans through their own lender."
       },
       {
-        "q": "How long do these loans usually go for?",
-        "a": "Most loans are for a short period of time, around 36 months, and they need to get paid back quickly after covering the cost of the project. After the renovations are complete, you will usually have to refinance to a longer-term loan, like a mortgage, to secure the upgraded property."
+        "q": "What is an SBA loan, and can I get one in Canada?",
+        "a": "SBA loans are backed by the United States Small Business Administration and serve American businesses, so they are not available in Manitoba. The closest Canadian program is the Canada Small Business Financing Program, under which your bank, credit union or caisse populaire makes the loan and the federal government shares the risk with the lender."
       },
       {
-        "q": "Can I make my business more energy-efficient with renovation money?",
-        "a": "Of course! Renovation loans can be used to finance the installation of energy saving features that will reduce your business's monthly electricity expenses and save you money long term. There are also a lot of eco-friendly products that use less energy and will do the same."
+        "q": "Can I finance equipment separately from the renovation?",
+        "a": "Usually, yes. Many businesses finance kitchen, clinical or production equipment with an equipment loan or lease rather than the construction loan, so the equipment has its own repayment schedule. BDC, for example, offers equipment loans with repayments matched to your cash flow cycle. Keep the equipment list separate from the construction scope when you ask for quotes."
       },
       {
-        "q": "What are renovation loans and how are they different from other commercial mortgages?",
-        "a": "A renovation loan would fall under the category of a commercial mortgage when a loan is needed to buy an entire property, complete, and pay it off over time. A commercial mortgage usually entails purchasing a property and paying it off over a longer period of time. A renovation loan is for costs associated and limited to the fixing of an existing property. To clarify, loans that cover both purchasing and renovating a property do exist; however, the renovation portion is typically a short term loan."
-      },
-      {
-        "q": "What should I do before looking for renovation loans?",
-        "a": "Before talking to lenders, it is important to formulate a plan with a budget. Be specific. Write down how much money you'll need, how much it will cost, and how much you'll be paying each month. Having these things set in place helps everything go smoothly."
+        "q": "When should I talk to a lender?",
+        "a": "Before you sign a lease or a construction contract. A lender can tell you how much you can borrow and what they need, which shapes the scope you ask your contractor to price. Bring a written quote, your lease or ownership papers and recent financial statements, and ask how and when funds are advanced."
       }
     ],
-    "answer": "",
-    "sources": []
+    "answer": "Most Manitoba businesses combine several sources: cash, a term loan or line of credit from a bank, credit union or BDC, a tenant improvement allowance from the landlord if they lease, and equipment financing for big-ticket items. Small businesses can also ask lenders about the federal Canada Small Business Financing Program. Bridgeland Builders does not provide financing.",
+    "sources": [
+      {
+        "label": "BDC: Leasehold improvements, the 8 steps to follow",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: How to lease commercial real estate",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-lease-commercial-real-estate",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: 13 commercial leasing terms you need to know",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: Commercial Real Estate Loan",
+        "url": "https://www.bdc.ca/en/financing/commercial-real-estate-loan",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: Business loans and financing",
+        "url": "https://www.bdc.ca/en/financing",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Innovation, Science and Economic Development Canada: Canada Small Business Financing Program, helping small businesses get loans",
+        "url": "https://ised-isde.canada.ca/site/canada-small-business-financing-program/en/canada-small-business-financing-program/find-loan-your-small-business/helping-small-businesses-get-loans",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Business programs",
+        "url": "https://efficiencymb.ca/business/",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
-    "title": "How to Choose the Right Contractor for Your Renovation Project",
-    "metaTitle": "How to Choose the Right Contractor for Your Renovation Project",
-    "metaDescription": "The success of your renovation depends on finding a contractor you can trust—here’s how to evaluate, compare, and make the right choice.",
-    "excerpt": "The success of your renovation depends on finding a contractor you can trust—here’s how to evaluate, compare, and make the right choice.",
-    "category": "Commercial Renovations",
+    "title": "How to Choose a Renovation Contractor in Winnipeg",
+    "metaTitle": "How to Choose a Renovation Contractor in Winnipeg",
+    "metaDescription": "A 12-point Winnipeg checklist for hiring a renovation contractor: WCB clearance, insurance, registration, permits, deposits, contracts and red flags.",
+    "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
+    "category": "Hiring a Contractor",
     "categories": [
-      "Commercial Renovations"
+      "Hiring a Contractor"
     ],
     "date": "2026-08-05",
-    "updated": "2026-08-05",
-    "readMinutes": 6,
+    "updated": "2026-10-13",
+    "readMinutes": 10,
     "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
     "heroSrc": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp",
     "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.3dde30a7.webp 1320w",
@@ -527,123 +7464,349 @@ export const BLOG_POSTS = [
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/commercial-renovations"
+      "/services/whole-home-renovations",
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations",
+      "/services/basement-renovations"
     ],
-    "cluster": "",
+    "cluster": "hiring-a-contractor",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
-        "t": "h2",
-        "x": "How to Avoid Cost Overruns in Commercial Remodeling"
-      },
-      {
         "t": "p",
-        "x": "Remodeling your commercial space can become expensive quickly, especially with unexpected expenses like old plumbing or permit issues. Proper planning helps steer clear of these added costs. This guide outlines strategies to keep your commercial remodel on budget."
-      },
-      {
-        "t": "takeaways",
-        "title": "Key Takeaways",
-        "items": [
-          "Make sure the goals of your remodel are clear to everyone involved. Specify the objectives, the needs of the business, the preferred workflow, and the aesthetic to be achieved.",
-          "Construct a thorough budget, make sure to add about 5-10% of extra space in the budget to allow for unexpected expenses, this will be important for you.",
-          "Make sure to choose your contractor wisely. Look for experience, good communication, and solid references.",
-          "Please ensure that any building rules and requirements are followed to minimize regulatory consequences. Not taking rules into consideration can result in costly delays and fines.",
-          "Make sure not to rush the timeline. Plan to have extra time for delays that arise such as weather, etc., to avoid incurring more costs from a labor disruption or more costly business interruptions."
-        ]
-      },
-      {
-        "t": "h3",
-        "x": "Avoiding Common Pitfalls in Commercial Renovations"
-      },
-      {
-        "t": "p",
-        "x": "It is likely that there will be costs that arise as you begin a project. Starting a project, such as a commercial renovation, is likely an expensive endeavor. In Winnipeg, commercial renovations can be exciting to cost. Starting with a commercial renovation in Winnipeg can feel like a big undertaking. Excitement can be as simple as a fresh new look. New looks can lead to excitement. A little bit of planning can keep things from getting out of hand financially. Overspending is the likely outcome when things are not planned for or are not seen to begin with."
-      },
-      {
-        "t": "p",
-        "x": "Winnipeg is home to a variety of commercial renovation options, but not all options can be chosen. Choosing the right one is of utmost importance. To ensure quality service, choose the right service with the right qualifications to ensure commercial renovations are handled. Look for builders with a solid history of commercial renovations to avoid placing yourself in liability. Look for builders that are not residential. Home references are not accepted when determining quality builders. Provide your service provider with their business space requirements. Quality service builders will have significant experience in commercial renovations."
-      },
-      {
-        "t": "h3",
-        "x": "Here are some areas where costs can pile up, and how to get ahead of them:"
-      },
-      {
-        "t": "li",
-        "x": "Scope Creep: This happens when the project's goals change or get expanded once it is already underway. Adding that 'one thing' gets 'super expensive' and takes a lot of time. Stick to what was initially planned and approved as much as possible."
-      },
-      {
-        "t": "li",
-        "x": "Hidden Issues: Old buildings can hide surprises like outdated wiring, plumbing problems, or structural questions. A thorough pre-renovation inspection by seasoned professionals can help come to a lot of these issues to hold down expenses."
-      },
-      {
-        "t": "li",
-        "x": "Regulation Issues: Leaving the right permits unaddressed or local building codes may cause cuts, and further do work. Your contractor should be up to speed on these surefire issues."
-      },
-      {
-        "t": "li",
-        "x": "Material Choices: It seems that the cheapest material is going to be the best option, however, poof…they are going to fine. It will be a lot of a hassle and in the future, it will be anything but cheap, and then guess what, it will shattered."
-      },
-      {
-        "t": "p",
-        "x": "A contingency fund is your best friend. Aim for 10-15% of your total budget set 'just in case' funds. It is better to have a cushion to absorb surprises rather than having to undo work already completed."
-      },
-      {
-        "t": "p",
-        "x": "A contract is one of the most important aspects of a renovation project. Be sure a contract is detailed with the following information: scope of the project, materials to be used, timelines, and payment plans. A detailed contract protects both parties from misunderstandings and overcharging, and reputable renovation Winnipeg companies will have honest and open communication regarding the potential costs and the process."
+        "x": "Most renovation problems trace back to decisions made before any work started: who was hired, and what was written down. This checklist is built for homeowners in Winnipeg and nearby communities, but the same steps answer how to choose a renovation contractor anywhere in Canada. Each check takes a few minutes, and most use public tools from the Province, the City or the Workers Compensation Board."
       },
       {
         "t": "h2",
-        "x": "Wrapping Up Your Commercial Remodel"
+        "x": "What should you check before hiring a renovation contractor?"
       },
       {
         "t": "p",
-        "x": "We've discussed to some extent, the many ways a commercial remodel can go wrong, and there is no doubt that knowing what you want, and what contractor to go with, is an important part of the process. At the end of the day, it is all about planning and not trying to be too cheap. If you spend the time outlining your objectives, creating a realistic budget with some flexibility, and hiring the right people, you will set yourself up for success. It will require a little effort, so don't be afraid to ask questions and stay communicative. A well thought out strategy will prevent a lot of issues down the line and will save you money, so do it right the first time."
+        "x": "Check twelve things before you sign: WCB clearance, liability insurance, business registration, reviews, references, a written scope, who pulls permits, the deposit, how changes are handled, the warranty, licensed trades and the schedule. The table shows how to verify each one in Manitoba and where to look, so every contractor on your list is held to the same standard."
+      },
+      {
+        "t": "table",
+        "caption": "Winnipeg contractor checklist: 12 checks and how to verify them",
+        "head": [
+          "Check",
+          "How to verify it",
+          "Where to look"
+        ],
+        "rows": [
+          [
+            "WCB clearance",
+            "Search the business and print a clearance letter showing it is in good standing. Construction is a mandatory industry for WCB coverage in Manitoba.",
+            "[WCB Manitoba clearances](https://www.wcb.mb.ca/employers/clearances/)"
+          ],
+          [
+            "Liability insurance",
+            "Ask for a certificate of insurance that names you as the certificate holder, then call the insurer or broker listed to confirm the policy is current.",
+            "The contractor's insurer or broker"
+          ],
+          [
+            "Business registration",
+            "Search the business or operating name in the provincial registry and check that it matches the name on the quote and contract.",
+            "[Manitoba Companies Office](https://companiesoffice.gov.mb.ca/)"
+          ],
+          [
+            "Reviews",
+            "Read recent reviews on more than one site, and look at how the contractor replies to complaints, not only the star rating.",
+            "Google, HomeStars, Better Business Bureau"
+          ],
+          [
+            "References with photos",
+            "Ask for two or three recent clients with a similar project, and for photos taken during the work (framing, waterproofing, insulation), not only finished rooms.",
+            "The contractor"
+          ],
+          [
+            "Written quote and scope",
+            "Get a written quote listing the work, materials, allowances, exclusions, total cost, schedule, deposit and progress payments.",
+            "[Consumer Protection Office: hiring a contractor](https://www.gov.mb.ca/consumerinfo/initiatives/building-or-renovating/hiring-a-contractor.html)"
+          ],
+          [
+            "Who pulls permits",
+            "The contract should name who applies for the building and trade permits. Once a permit is issued, you can look it up by address.",
+            "[City of Winnipeg permit search](https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp) or your municipality"
+          ],
+          [
+            "Deposit size",
+            "The Consumer Protection Office calls a 10% down payment reasonable and advises never prepaying in full. Ask what any larger deposit pays for.",
+            "[Consumer Protection Office: home improvements](https://www.gov.mb.ca/cp/cpo/info/home_improvements.html)"
+          ],
+          [
+            "Change orders in writing",
+            "Every change should be written and signed, with its price and effect on the schedule, before the extra work starts.",
+            "Your contract"
+          ],
+          [
+            "Written warranty",
+            "Ask for the warranty in writing: what it covers, for how long, and how you report a problem.",
+            "Your contract"
+          ],
+          [
+            "Licensed trades",
+            "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors (a homeowner can do their own electrical or plumbing work in the single detached house they live in). Ask who those trades are and search the names.",
+            "[City of Winnipeg licensed contractors](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors)"
+          ],
+          [
+            "Realistic schedule",
+            "Get a written start date and duration, ask what could delay it, and compare it with other quotes for the same scope.",
+            "Your contract"
+          ]
+        ],
+        "note": "Sources checked October 13, 2026. Outside Winnipeg, ask your local municipality which permits and trade licences apply."
+      },
+      {
+        "t": "h2",
+        "x": "How do you check a contractor's WCB clearance?"
+      },
+      {
+        "t": "p",
+        "x": "Use WCB Manitoba's public Clearance Request System. Search by the contractor's business name or WCB account number, add the business to a list, request the clearance letter and print it. You don't need to register. If the business doesn't appear, call WCB Assessment Services and ask whether it is required to register."
+      },
+      {
+        "t": "p",
+        "x": "Our step-by-step guide to [checking a contractor's WCB clearance](/blog/how-to-check-a-contractors-wcb-clearance-manitoba) covers what the letter shows, what it doesn't, and what to do when a contractor is missing from the search."
+      },
+      {
+        "t": "h2",
+        "x": "What should a renovation contract include?"
+      },
+      {
+        "t": "p",
+        "x": "A renovation contract should list the business's details, the full scope and materials, allowances for unchosen finishes, the total cost with taxes, the schedule and completion date, the deposit and progress payments, who handles permits, how changes are approved, and the warranty. Manitoba's Consumer Protection Office recommends getting estimates from several contractors before you sign. Use this as the minimum:"
+      },
+      {
+        "t": "li",
+        "x": "The contractor's business name, address and contact information."
+      },
+      {
+        "t": "li",
+        "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on a [kitchen renovation](/services/kitchen-renovations), where cabinets and counters drive the price."
+      },
+      {
+        "t": "li",
+        "x": "The total estimated cost, with taxes shown."
+      },
+      {
+        "t": "li",
+        "x": "A work schedule and a completion date."
+      },
+      {
+        "t": "li",
+        "x": "The deposit and the progress-payment schedule, with each payment tied to a stage of work."
+      },
+      {
+        "t": "li",
+        "x": "Who obtains the permits and books the inspections."
+      },
+      {
+        "t": "li",
+        "x": "How changes are priced and approved, and the warranty terms."
+      },
+      {
+        "t": "p",
+        "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment. The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
+      },
+      {
+        "t": "h2",
+        "x": "Who should pull the permits?"
+      },
+      {
+        "t": "p",
+        "x": "Usually the contractor applies, but the contract should say so. The City of Winnipeg says homeowners are responsible for getting permits before a project starts, so ask for the permit number and check it. Electrical and plumbing permits in Winnipeg go to City-licensed contractors, or to homeowners doing their own work in a single detached home they live in."
+      },
+      {
+        "t": "p",
+        "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits. A contractor who suggests skipping a required permit, or asks you to apply for work they will do, is a reason to walk away."
+      },
+      {
+        "t": "h2",
+        "x": "How do you find the best renovation contractor in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "The right contractor for your project passes every verification check, has recent experience with your type of work, quotes in writing after seeing the space, and communicates clearly from the first call. Price only becomes a fair comparison once the quotes cover the same scope. Use these criteria to compare the contractors on your list:"
+      },
+      {
+        "t": "li",
+        "x": "**Relevant experience.** Ask how many projects like yours they've finished recently and what went wrong on one of them. A specific answer tells you more than a portfolio."
+      },
+      {
+        "t": "li",
+        "x": "**A site visit before the price.** A contractor who prices a basement or kitchen without seeing it is guessing about what's behind the walls."
+      },
+      {
+        "t": "li",
+        "x": "**Clear communication.** Notice how quickly calls and emails are returned while you're still deciding, and ask how often you'll get updates once work starts."
+      },
+      {
+        "t": "li",
+        "x": "**Detailed, comparable quotes.** Line items, allowances and exclusions make quotes comparable. A single lump sum doesn't."
+      },
+      {
+        "t": "li",
+        "x": "**Straight answers about surprises.** Ask what happens if they find rot, old wiring or moisture after demolition, and how that work is priced."
+      },
+      {
+        "t": "li",
+        "x": "**Local permit knowledge.** They should know whether your project needs a City of Winnipeg permit or one from your municipality, and how inspections are booked."
+      },
+      {
+        "t": "p",
+        "x": "Treat a quote far below the others with caution and ask what it leaves out. It's also worth understanding [what a general contractor does](/blog/what-does-a-general-contractor-do) on a multi-trade job, so you know who is responsible for the subtrades."
+      },
+      {
+        "t": "h2",
+        "x": "What are the warning signs of a bad contractor?"
+      },
+      {
+        "t": "p",
+        "x": "Walk away from a contractor who wants most of the price up front, won't put the scope or changes in writing, can't produce a WCB clearance or insurance certificate, suggests skipping permits, or pushes you to sign the same day. Each of these shifts risk from the contractor to you."
+      },
+      {
+        "t": "li",
+        "x": "A discount for paying cash with no paperwork, or for skipping a permit."
+      },
+      {
+        "t": "li",
+        "x": "Pressure to sign today to keep a price."
+      },
+      {
+        "t": "li",
+        "x": "A business name on the contract that doesn't match the provincial registry or the WCB clearance letter."
+      },
+      {
+        "t": "li",
+        "x": "Vague answers about who the electrician, plumber and other subtrades will be."
+      },
+      {
+        "t": "p",
+        "x": "If you sign with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Direct sellers must also be licensed by the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html), so ask to see the licence. Meeting contractors at a home show? See our [questions to ask at the Winnipeg Renovation Show](/blog/winnipeg-renovation-show-questions-to-ask)."
+      },
+      {
+        "t": "h2",
+        "x": "What is a realistic renovation schedule?"
+      },
+      {
+        "t": "p",
+        "x": "A realistic schedule names a start date, a duration in weeks and what could stretch it, like permits, back-ordered materials or surprises behind walls. Our typical timelines once work starts are two to three weeks for a bathroom, four to six for a kitchen, four to eight for a basement, and eight to sixteen for whole-home renovations and additions."
+      },
+      {
+        "t": "p",
+        "x": "A schedule much shorter than the others for the same scope deserves a question. If you're still at the planning stage, our [home renovation planning guide](/blog/home-renovation-planning-guide-canada) sets out the steps in order."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and the [Winnipeg renovation cost guide](/renovation-cost-winnipeg) explains what drives the price."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
     "faqs": [
       {
-        "q": "What mistakes should I avoid when starting a remodel?",
-        "a": "A mistake that happens a lot is when people begin a remodel without clear goals. Many people remodel just for cosmetic reasons without assessing how the changes will help the function of the space. Will it improve the way customers or employees move through the space? These are the types of questions that will help formulate goals for the remodel and create a practical framework for the changes that will be made."
+        "q": "How many renovation quotes should I get?",
+        "a": "Two or three detailed written quotes for the same scope is usually enough to see a fair range. Manitoba's Consumer Protection Office recommends getting estimates from several contractors before you sign. Collecting many more tends to blur the comparison, especially when each contractor prices a slightly different project, so give everyone the same written list of must-haves and finishes."
       },
       {
-        "q": "What should I consider when creating a budget?",
-        "a": "Underestimating costs is a big problem when it comes to budgeting for a remodel. Be sure to include all aspects of the remodel that include construction costs, designer fees, permit fees, and add a cushion to cover unknown costs, ideally around 10-20% of your estimated total. It will help master your expectations, and consulting with a knowledgeable contractor should help provide more realistic expectations of costs."
+        "q": "Is it a red flag if a contractor asks for a large deposit?",
+        "a": "Not always, but ask what it pays for. The Consumer Protection Office calls a 10% down payment reasonable and advises never prepaying in full. A larger deposit can make sense when custom items such as cabinets or windows are ordered early. If so, tie it to the order in writing and link later payments to completed stages of work."
       },
       {
-        "q": "Why does it matter which contractor you go with?",
-        "a": "Using a contractor who is inexperienced can lead to headaches. If a contractor has no knowledge of handling commercial jobs and is ultimately unreliable, the quality of the work will suffer, the timelines will be extended and the costs will go up. So, review their projects, ask how other clients view their work and be sure they know how to handle the specifics of your job."
+        "q": "Should the contractor or the homeowner get the building permit?",
+        "a": "Usually the contractor applies, but put it in the contract. The City of Winnipeg says homeowners are responsible for getting permits before starting a project, whoever fills in the application. Electrical and plumbing permits go to City-licensed contractors unless you do the work yourself in a single detached home you live in. Ask for the permit numbers and check them."
       },
       {
-        "q": "What laws do I need to worry about?",
-        "a": "You can't just go and destroy everything. Pulling permits will be necessary with your local municipality, and you have to stay within the building codes and zoning laws. If you choose to ignore these things, you will have fines, delays and possible legal issues. Hiring someone who is familiar with the laws and has all of the permits you need will be best."
+        "q": "What does a WCB clearance prove?",
+        "a": "A clearance letter from WCB Manitoba shows whether a business has met the Workers Compensation Board's requirements and is in good standing when you request it. It doesn't prove insurance, trade licences or quality of work, so treat it as one check among several, and ask for a fresh letter before you make the final payment."
       },
       {
-        "q": "How can I prevent delays and keep the remodel on track?",
-        "a": "If you try to remodel and do it quickly just to get it done, you will get bad results. Create a timeline with a lot of extra time for issues that may pop up, like broken supplies, new materials that need to be ordered, bad weather, etc. If you try to cut the work into smaller projects, this may help keep the remodel on track."
-      },
-      {
-        "q": "Should I care about the opinions of my employees and customers?",
-        "a": "Of course. The people who spend time in your space have important feedback. Talk to your employees to find out how they do their tasks and what changes would help them. Employees and customers can give feedback about the functionality and atmosphere of the space. They'll help you find out if you are making any design errors and help ensure that the remodel is a success."
+        "q": "Can I cancel a renovation contract after signing?",
+        "a": "It depends on the contract and how it was sold. If you signed with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel without giving a reason. Otherwise, the cancellation terms in your contract apply, so read them before signing and call the Consumer Protection Office if you're unsure."
       }
     ],
-    "answer": "",
-    "sources": []
+    "answer": "Verify before you compare prices: a current WCB Manitoba clearance, a liability insurance certificate, a registered business name, recent reviews and references, and a written contract that names who pulls permits, sets the deposit and payment schedule, and puts every change in writing. Then compare detailed written quotes for the same scope.",
+    "sources": [
+      {
+        "label": "WCB Manitoba: Clearances",
+        "url": "https://www.wcb.mb.ca/employers/clearances/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)",
+        "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Companies Office",
+        "url": "https://companiesoffice.gov.mb.ca/",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Consumer Protection Office: Hiring a contractor",
+        "url": "https://www.gov.mb.ca/consumerinfo/initiatives/building-or-renovating/hiring-a-contractor.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Consumer Protection Office: Home improvements",
+        "url": "https://www.gov.mb.ca/cp/cpo/info/home_improvements.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Consumer Protection Office: Direct sales",
+        "url": "https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "The Builders' Liens Act, C.C.S.M. c. B91 (s. 24, holdback)",
+        "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home improvement projects (permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home renovations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Electrical installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Plumbing installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: List of licensed contractors",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "the-biggest-cost-factors-in-commercial-renovation-projects",
     "title": "The Biggest Cost Factors in Commercial Renovation Projects",
-    "metaTitle": "The Biggest Cost Factors in Commercial Renovation Projects",
-    "metaDescription": "Discover the biggest cost factors in commercial renovation projects, from labor and materials to site conditions and regulations.",
-    "excerpt": "Discover the biggest cost factors in commercial renovation projects, from labor and materials to site conditions and regulations. Plan your budget effectively.",
-    "category": "Commercial Renovations",
+    "metaTitle": "Commercial Renovation Cost Factors | Bridgeland Builders",
+    "metaDescription": "What drives commercial renovation costs in Winnipeg: building systems, code upgrades, hidden conditions, after-hours work, and how to avoid overruns.",
+    "excerpt": "The parts of a commercial renovation that move the price most, why older buildings and changes of use cost more, and the steps that keep a project from running over budget.",
+    "category": "Commercial",
     "categories": [
-      "Commercial Renovations"
+      "Commercial",
+      "Costs & Budgets"
     ],
     "date": "2026-08-04",
-    "updated": "2026-08-04",
-    "readMinutes": 6,
+    "updated": "2026-10-13",
+    "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
     "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp",
     "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.afcff434.webp 1320w",
@@ -653,123 +7816,236 @@ export const BLOG_POSTS = [
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/commercial-renovations"
+      "/services/commercial-renovations",
+      "/services/restaurant-renovations"
     ],
-    "cluster": "",
+    "cluster": "commercial-costs",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
-        "t": "h2",
-        "x": "Identifying The Highest Cost Contributors To Commercial Renovations"
+        "t": "p",
+        "x": "Two commercial spaces of the same size can cost very different amounts to renovate. The difference is rarely the paint or flooring. It is what sits behind the walls and above the ceiling, what the building code asks for once the use changes, and how the work has to be scheduled around a business that wants to stay open. This guide explains the main cost factors and how to control each one."
       },
       {
         "t": "p",
-        "x": "Restructuring a commercial space can seem like a never-ending puzzle of moving parts as you try to balance your ideal updates with your realistic budget. It can be easy to lose focus on things expenses that you wouldn't think of. Understanding these costs is your first step to keeping a seamless balance of expenses to scope throughout your project. The following are the most prominent factors that contribute to the cost of your commercial renovation projects."
+        "x": "It does not quote prices: every space is different, and the reliable number is a written quote after someone has seen it."
       },
       {
-        "t": "takeaways",
-        "title": "Key Takeaways",
-        "items": [
-          "Cost is greatly affected by the complexity of the work. The more detailed the renovation, the more expensive it will be. Simple structures, like warehouses, are always a cheaper cost than medical offices.",
-          "Your location can affect your costs, especially if you are in a city. Urban locations are more expensive and have tighter restrictions on what kind of work can be accomplished. If you are in a more remote place, you may have to add cheaper engineering work, which will increase your overall costs.",
-          "Cost of labor is typically the highest cost per project, and can account for almost half your overall costs. Demand for this labor will increase costs if it is budgeted into the renovation as an upgrade.",
-          "Supply chain issues, inflation, and demand will always affect material costs, and you need to build longer timelines into your project to account for these budget changes.",
-          "Unanticipated costs, like delays in acquiring necessary permits, bad weather, environmental restrictions, specific system requirements, and fire sprinkler systems, can add often hidden costs to your renovation."
+        "t": "h2",
+        "x": "What drives the cost of a commercial renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Mostly the building systems and the rules attached to them. Mechanical, electrical, plumbing and fire protection changes, code requirements triggered by a change of use, conditions hidden in older buildings, the schedule you need, finish and equipment choices, and changes made after work starts usually explain the difference between two similar-looking projects."
+      },
+      {
+        "t": "table",
+        "caption": "Commercial renovation cost factors and how to control them",
+        "head": [
+          "Cost factor",
+          "Why it adds cost",
+          "How to keep it in check"
+        ],
+        "rows": [
+          [
+            "Change of use",
+            "Can bring sealed drawings, a development permit and a new occupancy permit",
+            "Confirm zoning and occupancy requirements before signing a lease"
+          ],
+          [
+            "Mechanical, electrical and plumbing",
+            "New ductwork, panels and fixtures need trade permits and inspections",
+            "Keep wet areas near existing drains; reuse systems in good condition"
+          ],
+          [
+            "Fire and life safety",
+            "Sprinkler, fire alarm, exit and fire separation work; sealed drawings when significant",
+            "Plan the layout around existing exits and sprinkler lines"
+          ],
+          [
+            "Hidden conditions",
+            "Asbestos, old wiring and structural surprises found during demolition",
+            "Get an asbestos inventory and open suspect areas before pricing"
+          ],
+          [
+            "Specialty requirements",
+            "Kitchen hoods and grease interceptors, X-ray shielding, patient care electrical",
+            "Involve inspectors and equipment suppliers at the design stage"
+          ],
+          [
+            "Schedule constraints",
+            "Evening and weekend work, phasing, noise limits near homes",
+            "Decide which areas must stay open and which can close"
+          ],
+          [
+            "Finishes and equipment",
+            "Custom or imported items and long lead times",
+            "Use standard commercial products in low-visibility areas; order early"
+          ],
+          [
+            "Scope changes",
+            "Rework, re-ordering and schedule extensions",
+            "Finish the design before pricing; agree a change process in writing"
+          ]
         ]
       },
       {
-        "t": "h3",
-        "x": "Identifying The Highest Cost Contributors To Commercial Renovations"
+        "t": "h2",
+        "x": "Why do older commercial buildings cost more to renovate?"
       },
       {
         "t": "p",
-        "x": "When undertaking any commercial renovation in Winnipeg, or anywhere else, it is easy to focus on the \"big picture.\" You know that you need to replace flooring, add some updated light fixtures, and paint the space. But what actually increases the costs? Often, it is elements that are not immediately visible or that are determined in the earlier stages of the renovation, which leads to costs through the process. A major cause of increased costs is the complexity of the job. From a simple warehouse update to a complex transformation of the space into an office, medical suite, or a high-technology laboratory, the complexity increases significantly. The more complex the design, the more extensive the planning and specialized materials required for the labor. It is not solely the square footage requesting the complexity; it is the number of systems that must be integrated. The greater the number of systems that require coordination, the more complex and costly the job will be."
-      },
-      {
-        "t": "h3",
-        "x": "Some of the key items that can have a negative effect on your budget are outlined below:"
-      },
-      {
-        "t": "li",
-        "x": "Scope Creep: Scope creep occurs when the objectives and/or requirements of the project change or get expanded during the project lifecycle. Most renovations involve multiple tasks and without a clear, detailed plan prior to the project starting, it is easy for additional \"scope\" to start surfacing. This additional work almost always goes unaccounted for and can lead to wasted material, excess labor, and can impact deadlines. Most renovation Winnipeg projects end up falling into this category."
-      },
-      {
-        "t": "li",
-        "x": "Material Selection and Availability: In most cases, the selection and price of materials can change, and depending on what you select and how the supply chain is operating, the availability can take some time. Being fixated on a certain finish or special design element can negatively impact your budget and schedule."
-      },
-      {
-        "t": "li",
-        "x": "Labor Costs: In today's labor market, skilled tradespeople have the upper hand when it comes to negotiating wages. If your renovations require a more specialized set of skills, you can almost always guarantee that the wages will increase. This is especially the case when the work has to be done on older buildings that require more intricate work and present unforeseen structural problems."
-      },
-      {
-        "t": "li",
-        "x": "Permits and Regulations: Each municipality has its own rules, including permit requirements. If your project includes building code changes, fire safety, or environmental standards, it can become time consuming and costly. Experienced renovation companies in Winnipeg can smooth this process out for you."
-      },
-      {
-        "t": "li",
-        "x": "Unexpected Site Conditions: Older buildings can be tricky. During demolition, an electrical system, plumbing, or structural issues can be found that can add time and money. This is why having a contingency fund is always a smart move for any builder in Winnipeg."
+        "x": "Because more is unknown until walls and ceilings open, and some of what is found must be dealt with before work can continue. Older buildings may contain asbestos, outdated wiring or past alterations that were never documented, and a change of use can bring added code requirements. Each discovery adds investigation, design and trade time."
       },
       {
         "t": "p",
-        "x": "It's not just about the visible changes. Storm water management systems, fire suppression, and energy efficiency standards can all add extra costs, but can be worth it in the long run."
-      },
-      {
-        "t": "p",
-        "x": "When you get quotes from commercial renovation services, understand the scope of work and any potential hidden costs. Engaging with Winnipeg renovation companies early on can help you get a clearer picture of the total investment."
+        "x": "Asbestos has its own rules. Where asbestos is suspected, Manitoba's workplace safety rules require the work area to be inspected and an asbestos inventory prepared by a person competent in identifying asbestos-containing material before renovation or demolition, and suspected material is treated as asbestos unless it is found to be asbestos-free. Budget for testing, and for abatement if needed, before demolition starts."
       },
       {
         "t": "h2",
-        "x": "Wrapping It Up"
+        "x": "How do permits and approvals affect the budget?"
       },
       {
         "t": "p",
-        "x": "When you start a commercial renovation, remember to think beyond just the new paint and floors. A whole bunch of different things, big and small, can add up. And things like local regulations, the weather, and even necessary permits don't immediately come to mind. A developed plan saves you time. Also plan for additional costs because they show up when you least expect it. Trying to think of every possible cost avoids frustrating situations when surprises inevitably show up. This saves time, headaches, and keeps the budget in check."
+        "x": "In three ways: fees, professional services and time. The City charges permit fees, complex work needs drawings sealed by an architect or engineer, and each review or inspection stage adds time when you may be paying rent without trading. Food premises, liquor licences and X-ray rooms each add further approvals and design requirements."
+      },
+      {
+        "t": "p",
+        "x": "The City's commercial permit form is a useful reality check: its declared construction value includes design fees, project management fees, every sub-trade, building equipment, finishes, millwork and fixed cabinetry. In restaurants, Manitoba's food premises guideline adds items such as an approved kitchen hood, grease interceptors and washable finishes. See our guides to [restaurant renovation permits](/blog/restaurant-renovation-permits-winnipeg) and [clinic renovation permits](/blog/clinic-renovation-permits-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "What causes commercial renovation cost overruns?"
+      },
+      {
+        "t": "p",
+        "x": "Overruns usually start before construction: a scope priced from incomplete drawings, allowances that are too low, or a building that was not investigated. During the work, changes of mind, hidden conditions, late approvals and long-lead items push costs up. Most can be reduced with complete information up front and a written process for changes."
+      },
+      {
+        "t": "oli",
+        "x": "**Finish the design before pricing.** A quote is only as complete as the drawings and scope behind it."
+      },
+      {
+        "t": "oli",
+        "x": "**Investigate the building.** Look above ceilings and behind walls where possible, and get the asbestos inventory before demolition."
+      },
+      {
+        "t": "oli",
+        "x": "**Read the inclusions and exclusions.** Ask what each allowance covers and what happens if actual costs differ."
+      },
+      {
+        "t": "oli",
+        "x": "**Carry a contingency.** BDC advises setting aside a contingency fund and buffer time, because renovations often run over budget and past deadline."
+      },
+      {
+        "t": "oli",
+        "x": "**Agree how changes work.** Price and schedule each change in writing before the work is done."
+      },
+      {
+        "t": "oli",
+        "x": "**Order long-lead items early.** Mechanical units, custom millwork and specialty fixtures can set the schedule."
+      },
+      {
+        "t": "oli",
+        "x": "**Stay in touch weekly.** Bridgeland Builders sends a progress update every week, so issues surface while they are still small."
+      },
+      {
+        "t": "h2",
+        "x": "How can you lower costs without cutting quality?"
+      },
+      {
+        "t": "p",
+        "x": "Spend where it matters and simplify everywhere else. Keep plumbing and mechanical runs where they are, reuse walls, doors and ceilings in good condition, choose standard commercial materials for back-of-house areas, and phase the work if closing is the bigger cost. Value engineering looks for cheaper ways to meet the same performance, not lower standards."
+      },
+      {
+        "t": "p",
+        "x": "Energy upgrades can lower operating costs, and some qualify for incentives: Efficiency Manitoba's Business Lighting Program says not to buy materials or start until your application is approved, so apply before ordering fixtures. After-hours work is a trade-off too. Within 150 metres of a home, the City limits loud construction to 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so late shifts suit quieter tasks."
+      },
+      {
+        "t": "h2",
+        "x": "How do you get a reliable number?"
+      },
+      {
+        "t": "p",
+        "x": "Start with a ballpark, then get a written quote based on the actual space. Bridgeland Builders' instant estimate gives a quick first figure, and every project starts with a free on-site visit and a free written quote that sets out the scope, inclusions and exclusions. Taxes are shown on your written quote."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** Try the [instant renovation estimate](/instant-quote), then [book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, retail stores and clinics across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
       }
     ],
-    "faqsTitle": "Frequently Asked Questions",
+    "faqsTitle": "Commercial renovation cost questions",
     "faqs": [
       {
-        "q": "What's the biggest reason renovation budgets go over budget?",
-        "a": "No plan, no budget. A big reason why projects go over budget is the lack of a plan. At the start of every commercial renovation, there needs to be a solid plan. A poorly written plan means contractors have to go back and make a bunch of adjustments. That takes time, materials, and money."
+        "q": "What is the biggest reason commercial renovations go over budget?",
+        "a": "Incomplete information at the start. When a project is priced from rough drawings, or before anyone has looked above the ceiling or checked for asbestos, the gaps show up later as change orders. Complete drawings, an investigated building, clear allowances and a contingency agreed up front prevent most of the surprises."
       },
       {
-        "q": "How do delays in material deliveries affect costs?",
-        "a": "When materials are delayed, work halts. This delays the project and means paying for idle workers, thus increasing labor costs."
+        "q": "What are soft costs in a renovation?",
+        "a": "Soft costs are the expenses that are not physical construction: design and engineering fees, permit fees, project management, financing costs, moving and temporary space. The City's commercial permit form counts design and project management fees in the declared construction value, which is a good reminder to include them in your budget from the start."
       },
       {
-        "q": "Why are local rules and permits a cost factor?",
-        "a": "Each region has different standards for building permits and inspections. Ignoring or not knowing these rules can lead to fines, delays, and additional costs to rectify their mistakes."
+        "q": "Does after-hours work cost more?",
+        "a": "It can, because evening and weekend work may carry higher labour and supervision costs, and City noise rules near homes limit when loud work can happen. Compare that with the sales you would lose by closing during business hours. Bridgeland Builders offers after-hours and weekend scheduling for commercial work, and we can price both options after the on-site visit."
       },
       {
-        "q": "How do site and construction costs relate?",
-        "a": "Where construction takes place is important. Urban locations can have more expensive land and more regulations. In contrast, rural areas can have increased costs associated with sourcing materials and availability of labor."
+        "q": "How much contingency should a commercial renovation carry?",
+        "a": "There is no single right figure. Older buildings, a change of use, incomplete drawings and occupied spaces call for a larger contingency; a newer space with complete drawings needs less. BDC advises setting aside a contingency fund and buffer time because renovations often run over budget. We can help you size it once we have seen the space."
       },
       {
-        "q": "In construction, what are soft costs?",
-        "a": "Construction soft costs are expenses that are not directly related to the construction of structures. Designer fees, permitting costs, land surveying, and even interest on loans are all considered soft costs."
-      },
-      {
-        "q": "Why are the wages of skilled labor increasing?",
-        "a": "The biggest factor driving up project costs in construction is the expense of labor. Wage growth is attributed to the increased demand for skilled labor, which is also associated with a gap in the market, and the more specialized the occupation, the less it can cost."
+        "q": "Who is responsible for asbestos checks before a renovation?",
+        "a": "Where asbestos is suspected, Manitoba's workplace safety rules say the property owner, contractor or employer must make sure the work area is inspected and an asbestos inventory prepared before work begins. Who pays is set by your lease and contract, so tenants should ask the landlord for any existing inventory before signing."
       }
     ],
-    "answer": "",
-    "sources": []
+    "answer": "The biggest cost drivers in a commercial renovation are usually behind the walls, not the finishes: mechanical, electrical, plumbing and fire protection changes; code requirements triggered by a change of use; hidden conditions such as asbestos; after-hours or phased work; and scope changes once construction starts. Complete drawings and a contingency keep them in check.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+        "url": "https://www.winnipeg.ca/media/6330",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+        "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Workplace Safety and Health: Asbestos containing material FAQ",
+        "url": "https://www.gov.mb.ca/labour/safety/wsh_faqs_asbestos.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Health: Guideline for the Design, Construction and Reconstruction of a Food Handling Establishment",
+        "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/protection/docs/construction.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: Leasehold improvements, the 8 steps to follow",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Business Lighting Program",
+        "url": "https://efficiencymb.ca/business/business-lighting/",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "how-to-prepare-your-business-for-a-major-renovation",
-    "title": "How to Prepare Your Business for a Major Renovation",
-    "metaTitle": "How to Prepare Your Business for a Major Renovation",
-    "metaDescription": "Learn how to prepare your business for a major renovation. Discover tips on planning, minimizing disruption, and ensuring a smooth transition…",
-    "excerpt": "Learn how to prepare your business for a major renovation. Discover tips on planning, minimizing disruption, and ensuring a smooth transition for a successful outcome.",
-    "category": "Commercial Renovations",
+    "title": "Commercial Renovation Planning in Winnipeg: A Business Guide",
+    "metaTitle": "Commercial Renovation Planning in Winnipeg | Bridgeland",
+    "metaDescription": "Plan a commercial renovation in Winnipeg without losing customers: timeline stages, phasing, after-hours work, staff and customer notices, and occupancy.",
+    "excerpt": "How to plan a major renovation around a business that needs to keep running: the stages from site visit to occupancy permit, keeping customers informed, and a checklist to start with.",
+    "category": "Commercial",
     "categories": [
-      "Commercial Renovations"
+      "Commercial",
+      "Permits & Planning"
     ],
     "date": "2026-07-29",
-    "updated": "2026-07-29",
-    "readMinutes": 5,
+    "updated": "2026-10-13",
+    "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
     "heroSrc": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp",
     "heroSrcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.09bdb970.webp 1320w",
@@ -779,119 +8055,268 @@ export const BLOG_POSTS = [
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/commercial-renovations"
+      "/services/commercial-renovations",
+      "/services/medical-dental-office-renovations",
+      "/services/retail-renovations"
     ],
-    "cluster": "",
+    "cluster": "commercial-planning",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
         "t": "p",
-        "x": "Preparing for a large renovation at your business involves more than selecting paint and furniture. Proper planning minimizes disruptions and stress during the process. This guide provides steps to manage operations effectively throughout the project."
-      },
-      {
-        "t": "takeaways",
-        "title": "Key Takeaways",
-        "items": [
-          "Create a scope of work for your renovations, including changes, timelines, and budget. This keeps everyone on the same page.",
-          "Prepare for the changes renovations will cause in your business. You will likely have to adapt your processes.",
-          "Manage customer and employee expectations by communicating the changes early. This will improve buy in and all but guarantee that renovations will create disruptions.",
-          "Understand that some contractors will work off of a lot of hours to accommodate you. You may need to arrange schedules to accommodate this.",
-          "Separate the renovation into multiple smaller stages. This way, you can avoid shutting down the entire business at once."
-        ]
-      },
-      {
-        "t": "p",
-        "x": "It's understandable that you, as a business owner, may feel anxiety when it comes to preparing for the disruptions a major renovation will cause. It is more than just picking out colors. It is about knowing how to manage business operations while the work is being carried out. Imagine preparation like planning for a vacation. You don't just show up at the airport without doing any prep work."
-      },
-      {
-        "t": "p",
-        "x": "To begin, you will need a constructive blueprint. This is based on questions such as: what is the target change? Why is it being done? What is the budget? Perhaps you want to maximize space, modernize the look, or optimize the functionality? This makes collating your thoughts a lot easier for contracting. Which brings me to the next point: securing the right contractor is pivotal. You are going to need to vet a few renovation companies in Winnipeg that have a background with commercial spaces. A knowledgeable contractor for your office renovation can turn a lot of the pains into manageable tasks."
-      },
-      {
-        "t": "h3",
-        "x": "Here are some adjustments that need to be made before the renovation begins:"
-      },
-      {
-        "t": "li",
-        "x": "Identify your objectives: What is the purpose of the renovations? Improving the flow? A sleek, updated look? More room to operate?"
-      },
-      {
-        "t": "li",
-        "x": "Establish a practical budget: Include not just the estimated building costs, but also construction delays, business relocation, and potential lost revenue."
-      },
-      {
-        "t": "li",
-        "x": "Set a construction schedule with your contractor: Find a timeline that will create the least amount of business disturbance."
-      },
-      {
-        "t": "li",
-        "x": "Prepare your staff: Let your team know what changes are coming and how that will impact their work. You might be surprised at how useful their feedback is."
-      },
-      {
-        "t": "li",
-        "x": "Prepare your clients: Tell your customers of any alterations to their access to your business, possible hours of closure, or any complete closure of your business."
-      },
-      {
-        "t": "p",
-        "x": "People tend to underestimate the impact of the renovations. It is easy to keep your focus on the new areas that are being built, but not concentrating on how your staff and clients will adjust to the construction will create a lot of frustration. Noise, dust piles, limited areas to move, and the chance that your business will need to move are all possible construction impacts."
-      },
-      {
-        "t": "p",
-        "x": "Think about how you will get the work done. Will it be possible to break the work up into phases? Will there be strategies to contain disruptive work after hours? Some office renovation services will work outside of your business hours to help you remain open. It may be more expensive, but it will help you avoid losing business. For extensive commercial renovations, Winnipeg often has opportunities to divide large projects into sections so that only part of your business is disrupted at a time. This allows you to continue serving your customers."
+        "x": "A major renovation tests a business twice: once in the construction, and again in keeping customers, staff and revenue intact while it happens. Businesses that come through well treat the renovation as a project with its own plan, not something that happens around them. This guide sets out the stages of a commercial renovation in Winnipeg, how to stay open through them, and what to settle before the first day of work."
       },
       {
         "t": "h2",
-        "x": "Final Thoughts"
+        "x": "What does a commercial renovation project timeline look like?"
       },
       {
         "t": "p",
-        "x": "Preparing your business for a major renovation involves a lot of careful planning. You need to consider the costs, the schedule, and the impact on your team and your customers. Out of the challenges and frustrations, a great new space will bring many benefits. A renovated space will improve the image of your business, the working environment for your employees, and will possibly attract new customers. Plan for good communication, prepare a backup plan, and hire an experienced contractor. With some effort, you will achieve a great end result!"
+        "x": "Most projects move through the same stages: site visit and scope, design and drawings, permits, ordering and investigation, construction with progress inspections, final inspections and the occupancy permit, then move-in and deficiency work. How long each stage takes depends on the scope and approvals, so ask for a schedule alongside your written quote."
+      },
+      {
+        "t": "table",
+        "caption": "Commercial renovation stages and your role",
+        "head": [
+          "Stage",
+          "What happens",
+          "Your role",
+          "What can hold it up"
+        ],
+        "rows": [
+          [
+            "1. Site visit and scope",
+            "Walk-through, goals, dates that cannot move",
+            "Share hours, peak times and your deadline",
+            "Unclear goals or lease terms"
+          ],
+          [
+            "2. Design and drawings",
+            "Layout, finishes, sealed drawings if complex",
+            "Approve layout and finishes",
+            "Late design changes"
+          ],
+          [
+            "3. Permits",
+            "Building and trade permits; development, health or liquor approvals where needed",
+            "Sign owner and landlord forms",
+            "Plan review comments"
+          ],
+          [
+            "4. Pre-construction",
+            "Ordering, asbestos inventory in older buildings, notices",
+            "Plan staff, customers and IT",
+            "Long-lead items"
+          ],
+          [
+            "5. Construction",
+            "Phased or after-hours work, progress inspections",
+            "Keep access routes and notices current",
+            "Hidden conditions, changes"
+          ],
+          [
+            "6. Occupancy",
+            "Final inspections, professional certifications, occupancy permit",
+            "Hold restocking and training until approved",
+            "Deficiencies found at inspection"
+          ],
+          [
+            "7. Reopening",
+            "Furniture, stock, equipment, deficiency list",
+            "Reopen and gather feedback",
+            "Late deliveries"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "How do you keep your business open during a renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Phase the work so part of the space keeps operating, move disruptive tasks to evenings and weekends, and separate work areas from customers with temporary walls and controlled access. If a full closure is unavoidable, make it as short as possible by finishing design, approvals and ordering before the closure starts."
+      },
+      {
+        "t": "p",
+        "x": "Two Winnipeg rules shape this. Within 150 metres of a home, the City allows loud construction work only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so loud work cannot run overnight near homes. And the City's occupancy bulletin says the general contractor is responsible for the safety of everyone entering the construction site before the occupancy permit is issued, so keep customers and staff out of active work areas."
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps, and sends a progress update every week so you can plan staffing around the next phase. Clinics have extra constraints around patients and accessibility; see our [medical and dental office renovations](/services/medical-dental-office-renovations)."
+      },
+      {
+        "t": "h2",
+        "x": "What should you tell staff and customers?"
+      },
+      {
+        "t": "p",
+        "x": "Tell them early and be specific: which areas close and when, how to get in, what hours change, and who to contact. Staff need the schedule, temporary work arrangements and safety rules. Customers need clear signs, website and social updates, and notice of any accessibility feature that will be out of use."
+      },
+      {
+        "t": "p",
+        "x": "That last point is a requirement, not a courtesy. Manitoba's Accessible Customer Service Standard applies to every organization with at least one employee and includes letting the public know when and why an accessibility feature is unavailable. The Manitoba Accessibility Office publishes a notice of service disruption template you can adapt."
+      },
+      {
+        "t": "li",
+        "x": "Update your hours on your website, social accounts and online listings before each phase."
+      },
+      {
+        "t": "li",
+        "x": "Post signs showing the open entrance, the accessible route and any temporary service point."
+      },
+      {
+        "t": "li",
+        "x": "Give staff a one-page schedule of what closes when, and who to call with site questions."
+      },
+      {
+        "t": "li",
+        "x": "Plan your reopening message for after the occupancy permit, not before."
+      },
+      {
+        "t": "h2",
+        "x": "How should you budget for disruption?"
+      },
+      {
+        "t": "p",
+        "x": "Add the costs of operating through a renovation to the construction budget: sales lost during closures, temporary space or storage, overtime, moving and IT work, extra cleaning, and rent paid while you cannot trade. Then add a contingency. BDC advises setting aside a contingency fund and buffer time, because renovations often run over budget and past deadline."
+      },
+      {
+        "t": "p",
+        "x": "Our guides to [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) and [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) go deeper on the construction budget and how to pay for it."
+      },
+      {
+        "t": "h2",
+        "x": "When can you move back in?"
+      },
+      {
+        "t": "p",
+        "x": "When the City has issued an interim or final building occupancy permit for the renovated area, where one is required. That needs progress inspections completed to the final stage, plus professional certifications if an architect or engineer was involved. Until then, the City counts stocking shelves, training staff, meeting clients and conducting business as occupying the space."
+      },
+      {
+        "t": "p",
+        "x": "Construction and the delivery and installation of fixed equipment and furniture are allowed before the permit, but stock, supplies and personal belongings are not, so keep stock off-site and schedule computer and printer installation, staff training and any soft opening for after it. Outside Winnipeg, check the equivalent rules with your municipality's permit office."
+      },
+      {
+        "t": "h2",
+        "x": "Checklist before the first day of work"
+      },
+      {
+        "t": "oli",
+        "x": "Confirm the lease allows the work, and get the landlord's consent and any building rules in writing."
+      },
+      {
+        "t": "oli",
+        "x": "Write down your goals, the dates that cannot move and the date you need the space back."
+      },
+      {
+        "t": "oli",
+        "x": "Book an on-site visit and get a written quote with the scope, exclusions and a proposed schedule."
+      },
+      {
+        "t": "oli",
+        "x": "List every approval: building and trade permits, a development permit if the use changes, and health, liquor or X-ray approvals where they apply."
+      },
+      {
+        "t": "oli",
+        "x": "In an older building, get the asbestos inventory before demolition is scheduled; where asbestos may be present, Manitoba requires one before work begins."
+      },
+      {
+        "t": "oli",
+        "x": "Agree the phasing plan and which work happens after hours."
+      },
+      {
+        "t": "oli",
+        "x": "Prepare staff and customer notices, including any accessibility disruption notice."
+      },
+      {
+        "t": "oli",
+        "x": "Set your reopening date after the expected occupancy permit, not before it."
+      },
+      {
+        "t": "p",
+        "x": "For sector-specific steps, see our guides to [clinic renovation permits](/blog/clinic-renovation-permits-winnipeg), [restaurant renovation permits](/blog/restaurant-renovation-permits-winnipeg) and [office fit-up planning](/blog/office-fit-up-lease-planning-winnipeg)."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. You can also start with the [instant renovation estimate](/instant-quote) or see our [commercial renovation services](/services/commercial-renovations)."
       }
     ],
-    "faqsTitle": "Questions We Get Most Often",
+    "faqsTitle": "Questions about renovating a business",
     "faqs": [
       {
-        "q": "How will I be able to keep my business open when the renovations are taking place?",
-        "a": "Doing renovations after hours is a good way to keep the business open. Letting customers and employees know the plan and your schedule is critical so that employees are able to work before and after renovations. You will need to schedule some time when the business will be closed to complete major renovations. You may be able to do renovations in phases so that some areas remain open as others are closed."
+        "q": "How do I keep my business open while renovating?",
+        "a": "Phase the work so part of the space stays open, schedule noisy or disruptive tasks for evenings and weekends within the City's noise hours, and separate work areas from customers. Tell customers early which entrance and services are available. Bridgeland Builders offers after-hours and weekend scheduling for commercial work and sends a progress update every week."
       },
       {
-        "q": "What do I do first before any work begins?",
-        "a": "You need to start by having a solid plan. Planning means understanding what you want to do, how much money you can allocate to the plan (create a budget), and how long you estimate the work will take. This document would be critical for conversations with contractors to ensure they remain focused."
+        "q": "What should I do first?",
+        "a": "Write down why you are renovating, what must stay open and when you need the space back, then book an on-site visit before committing to a design or lease change. That visit shows what the building allows and which approvals apply, and it leads to a written quote you can plan and finance around."
       },
       {
-        "q": "Why do I need to consider how renovations affect day-to-day business operations?",
-        "a": "Renovations can impact how your business operates. You may have to shuffle work locations, and people may have to occupy other positions for a while. Planning how the renovations may impact your employees and customers can help you mitigate and avoid negative operations impacts."
+        "q": "What commonly delays a commercial renovation?",
+        "a": "Late design changes, plan review comments that take time to answer, hidden conditions such as asbestos or old wiring, long-lead equipment, and inspections that are not requested in time. Many of these shrink when the design is finished and the building investigated before work starts, and when each inspection is requested as soon as its stage is ready."
       },
       {
-        "q": "Do I need to consider the future benefits of new renovations?",
-        "a": "Yes, literally almost every business decision involves a consideration for return on investment (ROI). Investments such as roof replacements may incur immediate high costs, but lower future expenses, such as energy bills, and even increase your property value. Smart renovations with a delayed but substantial positive impact should be prioritized."
+        "q": "Do I have to close if our accessible entrance is affected?",
+        "a": "Not necessarily, but you must tell people. Manitoba's Accessible Customer Service Standard requires organizations with at least one employee to let the public know when and why an accessibility feature is unavailable. Where you can, offer an alternative accessible route or way to get service, and post the notice at the entrance and online."
       },
       {
-        "q": "What are some common issues that can delay renovations?",
-        "a": "During renovations, things can go wrong. Unexpected issues, such as mold or old wiring, can arise. It is also possible for permitting to take longer than anticipated. Additionally, any changes in your plans, material delays, or scope changes can lead to delays."
-      },
-      {
-        "q": "How do I choose the right contractor for my business renovation?",
-        "a": "Choose a contractor with business renovation experience like yours. Ensure they communicate well, have knowledge of the local building codes, and can be problem-solvers. It is also beneficial to ask for samples of their previous work."
+        "q": "How do I choose the right contractor for a business renovation?",
+        "a": "Look for commercial experience similar to your project, a clear written quote, a realistic schedule and a plan for working around your hours. Ask how permits, inspections and progress updates are handled. Our guide on [how to choose a renovation contractor](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) has a full checklist of questions."
       }
     ],
-    "answer": "",
-    "sources": []
+    "answer": "Start from the date you need the space back and work backwards: written scope and quote, drawings, permits, construction in phases or after hours, inspections and the occupancy permit. Tell staff and customers early, keep accessible routes open or announce when they are not, and plan restocking, training and reopening for after the City allows occupancy.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+        "url": "https://www.winnipeg.ca/media/6131",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial inspections",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+        "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+        "url": "https://www.winnipeg.ca/media/6330",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
+        "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Workplace Safety and Health: Asbestos containing material FAQ",
+        "url": "https://www.gov.mb.ca/labour/safety/wsh_faqs_asbestos.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "BDC: Leasehold improvements, the 8 steps to follow",
+        "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners",
-    "title": "Which bathroom remodel upgrades offer the best return on investment for Canadian homeowners?",
-    "metaTitle": "Which bathroom remodel upgrades offer the best return on investment for Canadian homeowners?",
-    "metaDescription": "Bathroom remodels rank among the most popular home improvement projects in Canada. Yet, with a wide range of options and costs, homeowners often wonder…",
-    "excerpt": "Bathroom remodels rank among the most popular home improvement projects in Canada. Yet, with a wide range of options and costs, homeowners often wonder which upgrades deliver the best value when it comes to resale or simply enhancing daily comfort. Understanding which bathroom remodel upgrades offer the best return on investment can help Canadian homeowners make smart choices that balance style, function, and budget.",
-    "category": "Bathroom Renovations",
+    "title": "Bathroom Renovation Ideas That Add Value in Winnipeg Homes",
+    "metaTitle": "Bathroom Renovation Ideas That Add Value in Winnipeg",
+    "metaDescription": "Bathroom renovation ideas that add value in Winnipeg homes: waterproofing, ventilation, storage and accessibility upgrades, plus where you can save.",
+    "excerpt": "The bathroom upgrades that add value are mostly the ones that keep the room dry, easy to use and easy to clean. Here is where to spend, where to save, and which ideas make sense whether you plan to stay or sell.",
+    "category": "Kitchens & Baths",
     "categories": [
-      "Bathroom Renovations"
+      "Kitchens & Baths"
     ],
     "date": "2026-07-17",
-    "updated": "2026-07-17",
-    "readMinutes": 3,
+    "updated": "2026-10-13",
+    "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
     "heroSrc": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp",
     "heroSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1320.f562c9d4.webp 1320w",
@@ -903,242 +8328,238 @@ export const BLOG_POSTS = [
     "services": [
       "/services/bathroom-renovations"
     ],
-    "cluster": "",
+    "cluster": "bathrooms",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
-        "t": "h2",
-        "x": "Understanding bathroom remodel costs in Canada"
-      },
-      {
         "t": "p",
-        "x": "Bathroom remodel costs vary widely depending on the scope of work, materials, and location. On average, a mid-range bathroom renovation in Canada can cost between CAD 15,000 and CAD 30,000. High-end remodels can exceed CAD 50,000, while smaller updates might be completed for under CAD 10,000."
-      },
-      {
-        "t": "p",
-        "x": "Key factors influencing cost include:"
-      },
-      {
-        "t": "li",
-        "x": "Size of the bathroom"
-      },
-      {
-        "t": "li",
-        "x": "Quality of fixtures and finishes"
-      },
-      {
-        "t": "li",
-        "x": "Plumbing or electrical upgrades"
-      },
-      {
-        "t": "li",
-        "x": "Labour rates in your region"
-      },
-      {
-        "t": "p",
-        "x": "Knowing these factors helps homeowners prioritize upgrades that offer the most value for their investment."
+        "x": "Search for bathroom remodel return on investment in Canada and you will find percentages that look precise. They come from different markets, years and methods, and none of them can tell you what your bathroom will add to your house. A more useful question is which upgrades protect the house, make daily life easier and will still look reasonable in ten years. That is what this guide covers."
       },
       {
         "t": "h2",
-        "x": "Upgrades that boost home value and appeal"
+        "x": "Which bathroom upgrades add the most value?"
       },
       {
         "t": "p",
-        "x": "Certain bathroom upgrades consistently provide strong returns by improving both aesthetics and functionality. Here are some of the top remodel choices for Canadian homeowners:"
+        "x": "Function and durability come first: waterproofing behind the tile, ventilation, lighting, storage and fixtures that are easy to use. They protect the house and make the room work every day. Style matters too, but people notice a bathroom that is dry, bright and practical before they notice a fashionable tile."
       },
       {
-        "t": "h3",
-        "x": "1. Replace old fixtures with modern, water-efficient models"
-      },
-      {
-        "t": "p",
-        "x": "Upgrading faucets, showerheads, and toilets to modern, water-saving models can reduce utility bills and appeal to eco-conscious buyers. For example, installing a dual-flush toilet or low-flow showerhead costs a few hundred dollars but adds value through energy savings and updated style."
-      },
-      {
-        "t": "h3",
-        "x": "2. Update vanities and countertops"
-      },
-      {
-        "t": "p",
-        "x": "Replacing outdated vanities with sleek, contemporary designs and durable countertops like quartz or granite can transform the bathroom’s look. This upgrade typically costs between CAD 2,000 and CAD 5,000 but can significantly improve the room’s appeal."
-      },
-      {
-        "t": "h3",
-        "x": "3. Improve lighting and ventilation"
-      },
-      {
-        "t": "p",
-        "x": "Good lighting enhances the bathroom’s atmosphere and usability. Adding layered lighting such as recessed lights, vanity sconces, or LED mirrors creates a bright, inviting space. Proper ventilation prevents moisture damage and mold, protecting your investment."
-      },
-      {
-        "t": "h3",
-        "x": "4. Install new flooring"
-      },
-      {
-        "t": "p",
-        "x": "Water-resistant flooring options like ceramic tile, luxury vinyl plank, or engineered hardwood are popular choices. These materials offer durability and style, with costs ranging from CAD 5 to CAD 15 per square foot depending on the material."
-      },
-      {
-        "t": "h3",
-        "x": "5. Refresh paint and wall finishes"
-      },
-      {
-        "t": "p",
-        "x": "A fresh coat of paint in neutral, modern colours can brighten the space and appeal to a wide range of buyers. Consider moisture-resistant paint to protect walls from humidity."
+        "t": "table",
+        "caption": "Bathroom upgrades and the value they add",
+        "head": [
+          "Upgrade",
+          "Why it adds value",
+          "When it makes sense"
+        ],
+        "rows": [
+          [
+            "Waterproofing membrane and a properly sloped shower base",
+            "Prevents hidden water damage behind the tile",
+            "Any time a shower is rebuilt"
+          ],
+          [
+            "Exhaust fan vented outdoors",
+            "Controls moisture and mould",
+            "Every bathroom; Health Canada recommends one in each"
+          ],
+          [
+            "Layered lighting",
+            "Makes the room easier to use and feel larger",
+            "Whenever the ceiling or walls are opened"
+          ],
+          [
+            "Vanity with drawers",
+            "Storage that is easy to reach and keep organized",
+            "Most bathrooms, especially small ones"
+          ],
+          [
+            "Walk-in shower",
+            "Easier to step into and to clean than a tub with a shower",
+            "When another bathroom in the house keeps a tub"
+          ],
+          [
+            "Wall backing for grab bars",
+            "Lets grab bars go in later without removing tile",
+            "Whenever the walls are open"
+          ],
+          [
+            "Heated floor",
+            "Comfort through a long Winnipeg winter",
+            "When the floor is being replaced anyway"
+          ],
+          [
+            "Water-efficient fixtures",
+            "Lower water use",
+            "When replacing the toilet, taps and showerhead"
+          ]
+        ]
       },
       {
         "t": "h2",
-        "x": "Mid-range upgrades with strong ROI"
+        "x": "Why do waterproofing and ventilation matter most?"
       },
       {
         "t": "p",
-        "x": "Some upgrades require more investment but tend to pay off well when selling a home:"
-      },
-      {
-        "t": "li",
-        "x": "Walk-in showers with glass enclosures: These create a spacious feel and modern look, often costing CAD 5,000 to CAD 10,000."
-      },
-      {
-        "t": "li",
-        "x": "Heated floors: Popular in colder regions, radiant floor heating adds comfort and luxury, with installation costs around CAD 10,000."
-      },
-      {
-        "t": "li",
-        "x": "Double vanities: Ideal for larger bathrooms, double sinks improve functionality and attract families."
-      },
-      {
-        "t": "h2",
-        "x": "Budget-friendly upgrades that make a difference"
+        "x": "Because water damage is the costliest bathroom problem and the hardest to see. A shower needs a waterproof membrane and a properly sloped base under the tile, and the room needs an exhaust fan vented outdoors, not into the attic. Health Canada recommends running the fan during a shower or bath and for at least 30 minutes afterwards."
       },
       {
         "t": "p",
-        "x": "Not every upgrade needs a big budget. Simple changes can refresh the bathroom and increase appeal:"
-      },
-      {
-        "t": "li",
-        "x": "Replace old hardware like drawer pulls and towel bars"
-      },
-      {
-        "t": "li",
-        "x": "Install a new mirror or medicine cabinet"
-      },
-      {
-        "t": "li",
-        "x": "Add stylish accessories such as soap dispensers and shelving"
-      },
-      {
-        "t": "p",
-        "x": "These smaller updates cost under CAD 1,000 but can make the bathroom feel more modern and cared for."
+        "x": "Health Canada also recommends keeping indoor humidity between 30 and 50 per cent, and repairing cracked tile, grout and caulking around tubs and showers promptly. On our [bathroom renovations](/services/bathroom-renovations), the waterproofing goes on before any tile, and we show you any water damage we find under the old shower before it is repaired."
       },
       {
         "t": "img",
         "src": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.38384a07.webp",
         "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-480.cd309689.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.38384a07.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-1320.052c0c18.webp 1320w",
         "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-480.50870eef.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.cb2aefbb.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-1320.48524849.avif 1320w",
-        "alt": "Close-up view of a sleek bathroom faucet and sink with modern design",
+        "alt": "Close-up of a modern bathroom faucet and sink",
         "width": 880,
         "height": 503
       },
       {
         "t": "h2",
-        "x": "Regional considerations for Canadian homeowners"
+        "x": "Is a walk-in shower better than a tub?"
       },
       {
         "t": "p",
-        "x": "Bathroom remodel costs and preferences vary across Canada. For example:"
-      },
-      {
-        "t": "li",
-        "x": "In colder provinces like Alberta and Manitoba, heated floors and efficient ventilation are highly valued."
-      },
-      {
-        "t": "li",
-        "x": "In urban centres such as Toronto and Vancouver, modern design and high-end finishes attract buyers."
-      },
-      {
-        "t": "li",
-        "x": "In smaller towns, practical upgrades and durability may matter more than luxury features."
+        "x": "For a bathroom used every day by adults, a walk-in shower is often the better choice: it is easier to step into and simpler to clean. Families with young children usually still want a tub somewhere in the house. If you have two bathrooms, a tub in one and a walk-in shower in the other covers both needs."
       },
       {
         "t": "p",
-        "x": "Homeowners should research local market trends and consult with real estate professionals to tailor remodels for their area."
+        "x": "A curbless shower needs the floor sloped to the drain, which can mean changes to the floor framing, so it costs more than a shower with a low curb. CMHC also describes a lower-cost option for people with limited mobility: cutting an opening into the side of an existing tub so it can be used as a walk-in shower."
       },
       {
         "t": "h2",
-        "x": "Tips to maximize return on investment"
-      },
-      {
-        "t": "li",
-        "x": "Plan upgrades that match your home’s style and neighbourhood"
+        "x": "Which accessibility ideas are worth adding now?"
       },
       {
         "t": "p",
-        "x": "Avoid over-improving beyond what buyers expect in your area."
+        "x": "The ones that are cheap while the walls are open and expensive later. CMHC notes that plywood backing on bathroom walls allows grab bars and handrails to be installed later. Slip-resistant flooring, lever-style taps, a handheld shower on a long hose and a toilet at a comfortable height help people of every age."
       },
       {
         "t": "li",
-        "x": "Focus on quality and durability"
-      },
-      {
-        "t": "p",
-        "x": "Choose materials and fixtures that last and require minimal maintenance."
+        "x": "Plywood backing around the toilet, tub and shower, so grab bars can go anywhere they are needed."
       },
       {
         "t": "li",
-        "x": "Keep the design neutral and timeless"
-      },
-      {
-        "t": "p",
-        "x": "Bold colours or unusual layouts may limit appeal."
+        "x": "Slip-resistant floor tile, especially near the shower."
       },
       {
         "t": "li",
-        "x": "Hire licensed professionals"
-      },
-      {
-        "t": "p",
-        "x": "Proper installation ensures safety and avoids costly repairs."
+        "x": "A single-lever tap that is easy to use with wet or weak hands."
       },
       {
         "t": "li",
-        "x": "Document all upgrades"
+        "x": "Shower controls placed where they can be reached before stepping under the water."
       },
       {
-        "t": "p",
-        "x": "Keep receipts and warranties to show potential buyers."
-      },
-      {
-        "t": "img",
-        "src": "/images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-880.7055651d.webp",
-        "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-480.bdb71250.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-880.7055651d.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-1320.d4d0a055.webp 1320w",
-        "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-480.282002a6.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-880.fcce9ddb.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-1320.2786af9d.avif 1320w",
-        "alt": "High angle view of a renovated bathroom with tiled shower and modern fixtures",
-        "width": 880,
-        "height": 503
+        "t": "li",
+        "x": "A vanity with a counter beside the sink for setting things down."
       },
       {
         "t": "h2",
-        "x": "Final thoughts on bathroom remodel upgrades in Canada"
+        "x": "Where can you save without losing value?"
+      },
+      {
+        "t": "p",
+        "x": "Keep the toilet, shower drain and vanity where they are, choose mid-range tile and spend the savings on what sits behind it. Moving plumbing is one of the larger cost drivers in a bathroom, while a standard-size vanity, mirror and medicine cabinet can look as good as custom. Paint, hardware and accessories are easy to change later."
+      },
+      {
+        "t": "li",
+        "x": "Keep the existing layout unless it truly does not work."
+      },
+      {
+        "t": "li",
+        "x": "Put the tile budget into the floor and shower walls, and paint the rest."
+      },
+      {
+        "t": "li",
+        "x": "Choose standard sizes for the tub, vanity and shower glass."
+      },
+      {
+        "t": "li",
+        "x": "Leave towel bars, mirrors and hardware as easy later upgrades."
+      },
+      {
+        "t": "h2",
+        "x": "Do bathroom upgrades pay off when you sell?"
+      },
+      {
+        "t": "p",
+        "x": "They can help a house sell, but how much of the cost comes back depends on your house and market. If you plan to sell soon, favour neutral finishes, fix any water damage or ventilation problems, and avoid spending well beyond what similar homes nearby offer. A local realtor can tell you what buyers expect."
+      },
+      {
+        "t": "p",
+        "x": "If you plan to stay, choose for how you live. A bathroom that works well every day for the next fifteen years is good value even if it adds little to the sale price."
+      },
+      {
+        "t": "h2",
+        "x": "How should you plan the budget and schedule?"
+      },
+      {
+        "t": "p",
+        "x": "Start with a range, then a written quote. Our [bathroom renovation cost guide](/services/bathroom-renovations/cost) shows current Winnipeg price ranges by finish level, and the free written quote after an on-site visit prices your room. Most bathrooms we renovate take two to three weeks of on-site work once the materials are ready."
+      },
+      {
+        "t": "p",
+        "x": "The City of Winnipeg lists bathrooms among renovations that may need a building permit, and plumbing or electrical work can need trade permits; we coordinate the permits and inspections with the City. Planning an ensuite? See [how much an ensuite renovation should cost](/blog/ensuite-renovation-winnipeg)."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** [book a free on-site visit](/book-online) and we will look at your bathroom, check the floor, walls and plumbing, and send a free written quote. To see a range first, try the [instant estimate](/instant-quote)."
       }
     ],
-    "faqs": [],
-    "answer": "",
-    "sources": []
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Which bathroom renovation adds the most value?",
+        "a": "Usually the work that fixes or prevents problems: a properly waterproofed shower, ventilation that vents outdoors, better lighting and a practical vanity. These make the bathroom reliable and pleasant to use every day. Purely decorative upgrades add less, and moving plumbing adds cost without necessarily adding value to the finished room."
+      },
+      {
+        "q": "Should I remove the only bathtub in my house?",
+        "a": "Think carefully before you do. Households with young children often want a tub somewhere in the house, and some buyers look for one. If you have two bathrooms, a common approach is to keep a tub in one and put a walk-in shower in the other, which covers both needs."
+      },
+      {
+        "q": "Are heated bathroom floors worth it in Winnipeg?",
+        "a": "If the floor is being replaced anyway, electric floor heating is a modest addition that makes tile comfortable through a long winter. It needs electrical work and a thermostat, so plan it before the new floor goes down. Adding it later means taking up the tile, which costs far more than doing it now."
+      },
+      {
+        "q": "How long does a bathroom renovation take?",
+        "a": "Most bathrooms we renovate take two to three weeks of on-site work, from demolition to the final caulking. Moving plumbing, enlarging the room or ordering custom glass can add time. If it is your only bathroom, mention it at the on-site visit so the schedule gets the toilet back in service as early as possible."
+      }
+    ],
+    "answer": "The bathroom upgrades that add the most value protect the house and make the room easier to live with: proper waterproofing, an exhaust fan vented outdoors, good lighting, practical storage and durable, easy-to-clean finishes. Accessibility features such as wall backing for future grab bars add long-term value at low cost while the walls are open.",
+    "sources": [
+      {
+        "label": "Health Canada: Guide to addressing moisture and mould indoors",
+        "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/addressing-moisture-mould-your-home.html",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "CMHC: Renovating for Accessibility: Bathrooms",
+        "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/industry-innovation-and-leadership/industry-expertise/accessible-adaptable-housing/renovating-for-accessibility/bathrooms-en.pdf",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home renovations (building permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      }
+    ]
   },
   {
     "slug": "essential-design-strategies-for-small-kitchen-renovations",
-    "title": "Essential Design Strategies for Small Kitchen Renovations",
-    "metaTitle": "Essential Design Strategies for Small Kitchen Renovations",
-    "metaDescription": "Small kitchens present unique challenges that require thoughtful design to make the most of limited space.",
-    "excerpt": "Small kitchens present unique challenges that require thoughtful design to make the most of limited space. A well-planned renovation can transform a cramped, inefficient kitchen into a functional, comfortable, and stylish area that meets your daily needs. This article explores practical strategies to help you design a small kitchen that works well and looks great.",
-    "category": "Kitchen Renovations",
+    "title": "Small Kitchen Renovation Ideas for Winnipeg Homes",
+    "metaTitle": "Small Kitchen Renovation Ideas for Winnipeg Homes",
+    "metaDescription": "Small kitchen renovation ideas for Winnipeg homes: compare galley, L-shaped, U-shaped and peninsula layouts, then plan storage, lighting and budget.",
+    "excerpt": "A small kitchen can work as well as a large one when the layout is right. Compare the four layouts that suit most compact kitchens, then see where storage, lighting and appliance choices make the biggest difference.",
+    "category": "Kitchens & Baths",
     "categories": [
-      "Kitchen Renovations"
+      "Kitchens & Baths"
     ],
     "date": "2026-07-12",
-    "updated": "2026-07-12",
-    "readMinutes": 3,
+    "updated": "2026-10-13",
+    "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png",
     "heroSrc": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp",
     "heroSrcSet": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1320.41a68949.webp 1320w",
@@ -1150,443 +8571,230 @@ export const BLOG_POSTS = [
     "services": [
       "/services/kitchen-renovations"
     ],
-    "cluster": "",
+    "cluster": "kitchens",
     "memberOnly": false,
     "status": "published",
     "blocks": [
       {
-        "t": "h2",
-        "x": "Why Functional Kitchen Design Matters in Small Homes"
-      },
-      {
         "t": "p",
-        "x": "In small homes, the kitchen often serves multiple roles: cooking, dining, socializing, and storage. Without careful planning, it can quickly become cluttered and frustrating to use. Functional design helps you:"
-      },
-      {
-        "t": "li",
-        "x": "Maximize every inch of space"
-      },
-      {
-        "t": "li",
-        "x": "Improve workflow and reduce unnecessary movement"
-      },
-      {
-        "t": "li",
-        "x": "Create a pleasant environment that encourages cooking and gathering"
-      },
-      {
-        "t": "p",
-        "x": "Many homeowners struggle with limited counter space, awkward layouts, and insufficient storage. Understanding how to address these issues is key to a successful renovation."
+        "x": "Plenty of kitchens in older bungalows and two-storey houses were designed for one cook and far less stuff than people own today. A renovation can make a small kitchen work much better without making it any bigger, but only if the decisions happen in the right order: layout first, then storage, then appliances, lighting and finishes."
       },
       {
         "t": "h2",
-        "x": "Understanding Kitchen Workflow"
+        "x": "Which layout works best in a small kitchen?"
       },
       {
         "t": "p",
-        "x": "A smooth kitchen workflow reduces effort and makes cooking more enjoyable. Three important concepts guide this:"
+        "x": "The one that fits your room's shape and doorways. Galley kitchens suit narrow rooms, L-shaped layouts suit corners and open plans, U-shaped layouts give the most counter in a square room, and a peninsula adds seating and workspace where an island will not fit. Walkways and traffic matter more than style."
       },
       {
-        "t": "h3",
-        "x": "The Kitchen Work Triangle"
-      },
-      {
-        "t": "p",
-        "x": "The work triangle connects the three main areas: the sink, stove, and refrigerator. In small kitchens, keeping these points close but unobstructed saves time and energy. For example, placing the sink between the stove and fridge allows easy movement while preparing meals."
-      },
-      {
-        "t": "h3",
-        "x": "Traffic Flow"
-      },
-      {
-        "t": "p",
-        "x": "Avoid placing the kitchen in a way that forces people to walk through the cooking zone. Clear pathways prevent accidents and keep the space comfortable during busy times."
-      },
-      {
-        "t": "h3",
-        "x": "Ergonomics"
-      },
-      {
-        "t": "p",
-        "x": "Consider countertop height, cabinet reach, and appliance placement to reduce bending and stretching. For instance, pull-out drawers and wall-mounted shelves can keep frequently used items within easy reach."
-      },
-      {
-        "t": "h2",
-        "x": "Choosing the Right Layout"
-      },
-      {
-        "t": "p",
-        "x": "Selecting a layout that fits your space and lifestyle is crucial. Common small kitchen layouts include:"
-      },
-      {
-        "t": "h3",
-        "x": "Galley Kitchens"
-      },
-      {
-        "t": "p",
-        "x": "Two parallel counters with a walkway in between. This layout is efficient for cooking but can feel narrow. Use light colors and open shelving to avoid a cramped feeling."
-      },
-      {
-        "t": "h3",
-        "x": "L-Shaped Kitchens"
-      },
-      {
-        "t": "p",
-        "x": "Counters on two adjoining walls create an open corner. This layout offers flexibility and can accommodate a small dining area or island."
-      },
-      {
-        "t": "h3",
-        "x": "U-Shaped Kitchens"
-      },
-      {
-        "t": "p",
-        "x": "Counters on three walls provide ample workspace and storage. In small spaces, keep one side open to avoid feeling boxed in."
-      },
-      {
-        "t": "h3",
-        "x": "One-Wall Kitchens"
-      },
-      {
-        "t": "p",
-        "x": "All appliances and cabinets line a single wall. This layout works well in studio apartments or open-plan spaces but requires smart storage solutions to maximize efficiency."
-      },
-      {
-        "t": "h3",
-        "x": "Peninsula vs. Island Designs"
-      },
-      {
-        "t": "li",
-        "x": "Peninsula: Extends from a wall or cabinet run, creating extra counter space without needing a full island."
-      },
-      {
-        "t": "li",
-        "x": "Island: A freestanding unit that can add storage, seating, and prep space but requires enough room to move around."
-      },
-      {
-        "t": "p",
-        "x": "In small kitchens, a peninsula often fits better than an island."
+        "t": "table",
+        "caption": "Small kitchen layouts compared",
+        "head": [
+          "Layout",
+          "Suits",
+          "Strengths",
+          "Trade-offs"
+        ],
+        "rows": [
+          [
+            "Galley",
+            "Narrow rooms with a door at one or both ends",
+            "Short distances between sink, cooktop and fridge; lots of counter for the footprint",
+            "Tight for two cooks; through-traffic crosses the work area"
+          ],
+          [
+            "L-shaped",
+            "Corners and kitchens open to a dining area",
+            "Keeps traffic out of the work zone; leaves room for a table",
+            "The corner cabinet needs good hardware to be useful"
+          ],
+          [
+            "U-shaped",
+            "Square rooms with one entry",
+            "The most counter and storage in a small footprint",
+            "Can feel boxed in; two awkward corners"
+          ],
+          [
+            "Peninsula",
+            "Rooms too small for an island",
+            "Adds counter, storage and seating without a walkway on every side",
+            "Can block the route into the kitchen if it is placed badly"
+          ]
+        ],
+        "note": "An island needs walking space on all four sides, which is why a peninsula is usually the better fit in a small kitchen."
       },
       {
         "t": "img",
         "src": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp",
         "srcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.b89f7a97.webp 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.735220d1.webp 1320w",
         "avifSrcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.4b933c9f.avif 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.46acd47b.avif 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.8309e247.avif 1320w",
-        "alt": "High angle view of a small kitchen with L-shaped layout and peninsula counter",
+        "alt": "Small L-shaped kitchen with a peninsula counter",
         "width": 880,
         "height": 503
       },
       {
-        "t": "h2",
-        "x": "Maximizing Storage"
+        "t": "h3",
+        "x": "Galley kitchens"
       },
       {
         "t": "p",
-        "x": "Storage is a top concern in small kitchens. Use these strategies to keep clutter off counters and organized:"
+        "x": "Keep the sink and cooktop on the same side if you can, so you are not turning across the aisle with a hot pot. If the galley is also the route to the back door, think about closing one end so the kitchen stops being a hallway."
       },
       {
-        "t": "li",
-        "x": "Vertical Cabinetry: Extend cabinets to the ceiling to use all available wall space."
-      },
-      {
-        "t": "li",
-        "x": "Pull-Out Organizers: Install pull-out shelves and racks inside cabinets for easy access."
-      },
-      {
-        "t": "li",
-        "x": "Corner Storage Solutions: Use lazy Susans or corner drawers to make awkward corners useful."
-      },
-      {
-        "t": "li",
-        "x": "Drawer Systems: Deep drawers for pots and pans improve accessibility."
-      },
-      {
-        "t": "li",
-        "x": "Pantry Organization: Use clear containers, labels, and adjustable shelves to keep pantry items tidy."
-      },
-      {
-        "t": "h2",
-        "x": "Selecting Appliances"
+        "t": "h3",
+        "x": "L-shaped kitchens"
       },
       {
         "t": "p",
-        "x": "Choosing the right appliances can save space and improve function:"
+        "x": "Put the fridge at the end of a run, opening toward the work area, so people can grab a drink without walking through the cooking zone. Use a corner drawer or pull-out instead of a blind corner where things disappear."
       },
       {
-        "t": "li",
-        "x": "Space-Saving Appliances: Compact dishwashers, narrow refrigerators, and combination microwave-ovens fit better in small kitchens."
-      },
-      {
-        "t": "li",
-        "x": "Built-In Options: Built-in ovens or cooktops free up counter space."
-      },
-      {
-        "t": "li",
-        "x": "Energy-Efficient Models: These reduce utility bills and often come in smaller sizes suitable for limited spaces."
-      },
-      {
-        "t": "h2",
-        "x": "Lighting and Materials"
+        "t": "h3",
+        "x": "U-shaped kitchens"
       },
       {
         "t": "p",
-        "x": "Good lighting and durable materials enhance both usability and appearance:"
+        "x": "Keep upper cabinets on two walls instead of three, or turn one leg of the U into a peninsula with seating. Either change makes the room feel larger without losing much storage."
       },
       {
-        "t": "li",
-        "x": "Task Lighting: Under-cabinet lights illuminate work areas."
-      },
-      {
-        "t": "li",
-        "x": "Natural Lighting: Maximize window space or use glass cabinet doors to reflect light."
-      },
-      {
-        "t": "li",
-        "x": "Reflective Finishes: Glossy tiles and light-colored surfaces make the kitchen feel larger."
-      },
-      {
-        "t": "li",
-        "x": "Durable Countertops: Materials like quartz or solid surface resist stains and scratches, ideal for busy kitchens."
-      },
-      {
-        "t": "img",
-        "src": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.1145290b.webp",
-        "srcSet": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-480.ec8264fe.webp 480w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.1145290b.webp 880w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-1320.32111089.webp 1320w",
-        "avifSrcSet": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-480.90a7e04d.avif 480w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.91d92874.avif 880w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-1320.bfe49533.avif 1320w",
-        "alt": "Close-up view of a kitchen countertop with task lighting and reflective backsplash",
-        "width": 880,
-        "height": 503
-      },
-      {
-        "t": "h2",
-        "x": "Budget and Renovation Planning"
+        "t": "h3",
+        "x": "Peninsulas"
       },
       {
         "t": "p",
-        "x": "Renovations can quickly become expensive, so plan carefully:"
+        "x": "A peninsula with a counter overhang gives you seating without a table. Before you commit, check that the fridge, oven and dishwasher doors can open fully without hitting it."
+      },
+      {
+        "t": "h2",
+        "x": "How do you get more storage in a small kitchen?"
+      },
+      {
+        "t": "p",
+        "x": "Use height and depth. Take upper cabinets to the ceiling, replace base cabinet doors with deep drawers, and make corners and narrow gaps work with pull-outs. A tall pantry cabinet often holds more than the same width of upper and lower cabinets, and an organized pantry keeps counters clear for cooking."
       },
       {
         "t": "li",
-        "x": "Prioritize Upgrades: Focus on changes that improve function first, like storage and layout, before cosmetic updates."
+        "x": "**Full-height uppers:** cabinets to the ceiling use space that otherwise collects dust; keep everyday items on the lower shelves."
       },
       {
         "t": "li",
-        "x": "Avoid Common Mistakes: Don’t overcrowd the space with too many features; keep pathways clear."
+        "x": "**Drawers instead of doors:** deep drawers for pots and dishes mean no kneeling to reach the back of a cabinet."
       },
       {
         "t": "li",
-        "x": "Work with a Renovation Contractor: Experienced professionals can help you avoid costly errors and suggest practical solutions."
+        "x": "**Corner hardware:** a lazy Susan, swing-out shelves or corner drawers make the corner usable."
+      },
+      {
+        "t": "li",
+        "x": "**Narrow pull-outs:** a 6- to 9-inch gap beside the range can hold oils, spices or baking sheets."
+      },
+      {
+        "t": "li",
+        "x": "**Pantry organization:** adjustable shelves and clear containers make it easy to see what you have."
+      },
+      {
+        "t": "h2",
+        "x": "Which appliances suit a small kitchen?"
+      },
+      {
+        "t": "p",
+        "x": "Appliances sized to the room. A counter-depth fridge keeps the walkway clear, a 24-inch dishwasher or range frees cabinet space, and a combination microwave and range hood saves counter space. Decide on appliances before cabinets are ordered, because the cabinet openings are built around the exact model sizes."
+      },
+      {
+        "t": "p",
+        "x": "Ventilation matters more in a small kitchen, because moisture and cooking smells have less room to go. Health Canada recommends using a range hood exhaust fan whenever you cook and keeping it vented to the outside. If you are keeping your current appliances, or replacing them later, share the model numbers early so the openings fit."
+      },
+      {
+        "t": "h2",
+        "x": "How can lighting and finishes make a small kitchen feel bigger?"
+      },
+      {
+        "t": "p",
+        "x": "Light it in layers and keep surfaces light and simple. Under-cabinet lighting puts light on the counter where you work, ceiling fixtures light the room, and light-coloured cabinets, counters and backsplash reflect it. Fewer visual breaks, such as continuous counters and matching cabinet fronts, make the room read as larger."
+      },
+      {
+        "t": "li",
+        "x": "Under-cabinet lighting is the single most useful light in a small kitchen."
+      },
+      {
+        "t": "li",
+        "x": "Glass-front or open shelving on one wall can lighten a run of upper cabinets."
+      },
+      {
+        "t": "li",
+        "x": "Hard-wearing counters such as quartz handle heat, knives and daily cleaning."
+      },
+      {
+        "t": "li",
+        "x": "A backsplash that wipes clean saves time every day."
+      },
+      {
+        "t": "h2",
+        "x": "Should you open a small kitchen to the living room?"
+      },
+      {
+        "t": "p",
+        "x": "Often it is the change that does the most for a small kitchen, because it borrows light and space from the next room. If the wall is load-bearing, it needs a beam sized for the load, and the City of Winnipeg lists creating open-concept living spaces among renovations that may need a building permit."
+      },
+      {
+        "t": "p",
+        "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains how the permit process works."
+      },
+      {
+        "t": "h2",
+        "x": "Where should you spend in a small kitchen renovation?"
+      },
+      {
+        "t": "p",
+        "x": "On the things that change how the kitchen works: layout, storage, lighting and ventilation. Finishes can be upgraded later; moving a sink or a wall cannot. A small kitchen also uses less material, so a better counter or cabinet line costs less in total than it would in a large room."
+      },
+      {
+        "t": "p",
+        "x": "For current Winnipeg price ranges, see our [kitchen renovation cost guide](/services/kitchen-renovations/cost). Most full kitchens we renovate take four to six weeks once the cabinets are on site. If you are weighing a kitchen against a larger project, our guide to [choosing between a full renovation and partial upgrades](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) may help."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** see how we plan and build a [kitchen renovation](/services/kitchen-renovations), then [book a free on-site visit](/book-online). We look at your room, talk through the layout and send a free written quote. Want a number first? Try the [instant estimate](/instant-quote)."
       }
     ],
-    "faqs": [],
-    "answer": "",
-    "sources": []
-  },
-  {
-    "slug": "mastering-general-contracting-tips-for-your-next-project",
-    "title": "Mastering General Contracting: Tips for Your Next Project",
-    "metaTitle": "Mastering General Contracting: Tips for Your Next Project",
-    "metaDescription": "Unlock the secrets of successful general contracting with our expert tips! Elevate your next project and master the art of efficient management today.",
-    "excerpt": "Unlock the secrets of successful general contracting with our expert tips! Elevate your next project and master the art of efficient management today.",
-    "category": "General Contracting",
-    "categories": [
-      "General Contracting"
-    ],
-    "date": "2026-07-06",
-    "updated": "2026-07-06",
-    "readMinutes": 12,
-    "hero": "https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png",
-    "heroSrc": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.df3488b4.webp",
-    "heroSrcSet": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-480.eb593480.webp 480w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.df3488b4.webp 880w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1320.8a0b2955.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-480.3e757957.avif 480w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.436389dd.avif 880w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1320.d8fbd287.avif 1320w",
-    "ogImage": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1200x630.e9b9fa3d.jpg",
-    "heroAlt": "Eye-level view of a construction site with workers and building materials",
-    "author": "",
-    "reviewedBy": "",
-    "services": [
-      "/services/general-contracting"
-    ],
-    "cluster": "",
-    "memberOnly": false,
-    "status": "published",
-    "blocks": [
+    "faqsTitle": "Common questions",
+    "faqs": [
       {
-        "t": "h2",
-        "x": "Understand the Role of a General Contractor"
+        "q": "What is the most efficient layout for a small kitchen?",
+        "a": "In a narrow room, a galley is usually the most efficient, because everything is a step or two away. In a square room, a U-shape gives the most counter. If the kitchen opens to a dining area, an L-shape with a peninsula keeps traffic out of the work zone. The room's doors and windows often make the decision."
       },
       {
-        "t": "p",
-        "x": "The general contractor (GC) is the keystone of any construction project, orchestrating various elements to ensure seamless execution. This role involves overseeing the entire project from inception to completion, ensuring that everything runs smoothly and stays within the agreed timeline and budget. A GC is responsible for hiring and coordinating subcontractors, managing materials, and ensuring compliance with local regulations. They are essentially the project managers who bring the architect's vision to life while balancing the client's needs and expectations."
+        "q": "Can a small kitchen have an island?",
+        "a": "Only if there is a comfortable walkway on every side, with room to open the dishwasher and oven while someone walks past. In most small kitchens a peninsula fits better: it gives the same extra counter and seating, but because it attaches to a wall or cabinet run it needs walkway on fewer sides."
       },
       {
-        "t": "p",
-        "x": "Beyond mere supervision, a general contractor must possess a deep understanding of the construction process. This includes knowledge of building codes, construction methods, and various trades involved in the project. They must also be adept at problem-solving, as construction projects often encounter unexpected challenges that require quick and effective solutions. Furthermore, a GC must ensure that all work complies with safety standards to protect workers and the public."
+        "q": "How long does a small kitchen renovation take?",
+        "a": "Most full kitchens we renovate take four to six weeks once the cabinets are on site. A smaller kitchen does not always go much faster, because the steps are the same: demolition, rough-in, cabinets, counter templating and installation, then the backsplash. Ordering cabinets early keeps the schedule from stalling halfway through."
       },
       {
-        "t": "p",
-        "x": "Another critical aspect of a GC's role is communication. They serve as the primary point of contact between the client, architects, engineers, and subcontractors. Effective communication ensures that everyone involved in the project is on the same page, minimizing misunderstandings and delays. This requires not only excellent verbal and written communication skills but also the ability to listen and address concerns promptly. In essence, the GC is the glue that holds the project together, ensuring that each component aligns perfectly with the overall plan."
-      },
-      {
-        "t": "h2",
-        "x": "Key Skills Every General Contractor Should Have"
-      },
-      {
-        "t": "p",
-        "x": "A successful general contractor must possess a diverse skill set that spans technical knowledge, managerial acumen, and interpersonal abilities. One of the most crucial skills is project management. This involves planning, executing, and closing projects, ensuring that they are completed on time, within budget, and to the required quality standards. Effective project management requires a GC to be organized, detail-oriented, and adept at multitasking."
-      },
-      {
-        "t": "p",
-        "x": "Another essential skill is financial management. A GC must be able to create accurate budgets, forecast costs, and manage expenses throughout the project. This involves understanding financial documents, such as invoices and purchase orders, and being able to negotiate favorable terms with suppliers and subcontractors. Additionally, a GC must be proficient in cost estimation to provide clients with realistic budgets and timelines. Financial acumen ensures that the project remains financially viable and profitable for all parties involved."
-      },
-      {
-        "t": "p",
-        "x": "Interpersonal skills are equally important for a general contractor. Building strong relationships with clients, subcontractors, and other stakeholders is crucial for the success of the project. This involves effective communication, active listening, and conflict resolution. A GC must be able to motivate and manage teams, fostering a collaborative and productive work environment. Moreover, they must be able to address client concerns and provide regular updates to keep them informed and satisfied with the project's progress. Strong interpersonal skills help build trust and ensure a positive working relationship with all parties involved."
-      },
-      {
-        "t": "h2",
-        "x": "The Importance of Project Planning and Management"
-      },
-      {
-        "t": "p",
-        "x": "Project planning and management are the cornerstones of successful general contracting. Without a solid plan, even the most well-intentioned project can quickly go off track. The planning phase involves defining the project's scope, setting goals, and creating a detailed roadmap to achieve those objectives. This includes identifying the resources needed, such as labor, materials, and equipment, and establishing a timeline for each phase of the project. A well-thought-out plan serves as a blueprint, guiding the project from start to finish."
-      },
-      {
-        "t": "p",
-        "x": "Effective project management ensures that the plan is executed efficiently and adjustments are made as needed. This involves regular monitoring and evaluation of the project's progress to ensure that it stays on schedule and within budget. A GC must be able to anticipate potential issues and implement contingency plans to address them. This requires a proactive approach, with regular site visits and meetings to stay updated on the project's status. Effective project management also involves maintaining detailed records of all activities, expenses, and communications, which can be invaluable for resolving disputes and ensuring accountability."
-      },
-      {
-        "t": "p",
-        "x": "Risk management is another critical component of project planning and management. Construction projects are inherently risky, with potential issues ranging from weather delays to supply chain disruptions. A GC must identify potential risks and develop strategies to mitigate them. This involves conducting thorough risk assessments and implementing safety protocols to protect workers and the public. Additionally, a GC must ensure that all contracts and agreements are legally sound to protect the interests of all parties involved. Effective risk management helps minimize disruptions and ensures that the project is completed successfully."
-      },
-      {
-        "t": "img",
-        "src": "/images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-880.78e7ff8e.webp",
-        "srcSet": "/images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-480.84a31d17.webp 480w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-880.78e7ff8e.webp 880w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-1320.993ff622.webp 1320w",
-        "avifSrcSet": "/images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-480.8899cb3b.avif 480w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-880.27bdb4a2.avif 880w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-1320.89cbf8b5.avif 1320w",
-        "alt": "Close-up view of construction tools and blueprints on a workbench",
-        "width": 880,
-        "height": 503
-      },
-      {
-        "t": "h2",
-        "x": "Budgeting for Your Contracting Project"
-      },
-      {
-        "t": "p",
-        "x": "Creating and managing a budget is one of the most critical aspects of general contracting. A well-defined budget provides a financial roadmap for the project, ensuring that all expenses are accounted for and that the project remains financially viable. The budgeting process begins with a detailed cost estimation, which involves calculating the costs of materials, labor, equipment, and other expenses. This requires a thorough understanding of the project's scope and the ability to accurately forecast costs."
-      },
-      {
-        "t": "p",
-        "x": "Once the budget is established, it is essential to monitor expenses closely to ensure that the project stays within budget. This involves regular financial reporting and analysis to track spending and identify any potential cost overruns. A GC must be able to make adjustments as needed, such as reallocating resources or finding cost-saving alternatives. Effective budget management also involves negotiating favorable terms with suppliers and subcontractors to get the best prices for materials and services. This requires strong negotiation skills and a keen understanding of the market."
-      },
-      {
-        "t": "p",
-        "x": "Contingency planning is another crucial aspect of budgeting. Construction projects often encounter unexpected costs, such as delays, changes in scope, or unforeseen issues. A GC must include a contingency fund in the budget to cover these unexpected expenses. This ensures that the project can continue without financial disruptions and that all parties are protected from financial risks. Effective budgeting requires a combination of financial acumen, careful planning, and proactive management to ensure that the project is completed successfully and profitably."
-      },
-      {
-        "t": "h2",
-        "x": "Navigating Permits and Regulations"
-      },
-      {
-        "t": "p",
-        "x": "Navigating the complex world of permits and regulations is a critical aspect of general contracting. Every construction project must comply with local, state, and federal regulations to ensure safety, quality, and legality. This involves obtaining the necessary permits, adhering to building codes, and ensuring that all work is performed according to legal standards. Failure to comply with regulations can result in costly fines, delays, and even legal action, making it essential for a GC to have a thorough understanding of the regulatory landscape."
-      },
-      {
-        "t": "p",
-        "x": "The permitting process can be time-consuming and complex, requiring a GC to work closely with local authorities and regulatory agencies. This involves submitting detailed plans and documentation, scheduling inspections, and ensuring that all work is performed according to approved plans. A GC must be able to navigate this process efficiently to avoid delays and ensure that the project stays on track. This requires strong organizational skills and attention to detail, as well as the ability to communicate effectively with regulatory officials."
-      },
-      {
-        "t": "p",
-        "x": "In addition to obtaining permits, a GC must ensure that all work complies with building codes and safety standards. This involves regular inspections and quality control measures to ensure that all work meets the required standards. A GC must be knowledgeable about the specific regulations that apply to their project, including zoning laws, environmental regulations, and safety codes. This requires ongoing education and staying updated on changes in regulations to ensure compliance. Effective management of permits and regulations helps protect the project's integrity and ensures that it is completed legally and safely."
-      },
-      {
-        "t": "img",
-        "src": "/images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-880.d3d6f9ed.webp",
-        "srcSet": "/images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-480.b37dfbc6.webp 480w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-880.d3d6f9ed.webp 880w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-1320.80b8b244.webp 1320w",
-        "avifSrcSet": "/images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-480.d1366da0.avif 480w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-880.c14674c0.avif 880w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-1320.99448c66.avif 1320w",
-        "alt": "High angle view of a construction site with cranes and building framework",
-        "width": 880,
-        "height": 503
-      },
-      {
-        "t": "h2",
-        "x": "Building a Reliable Team of Subcontractors"
-      },
-      {
-        "t": "p",
-        "x": "Building a reliable team of subcontractors is essential for the success of any construction project. Subcontractors are specialists who perform specific tasks, such as electrical work, plumbing, and carpentry, and their expertise is crucial for the project's completion. A GC must carefully select and manage subcontractors to ensure that they deliver high-quality work on time and within budget. This involves conducting thorough vetting and background checks to verify their qualifications, experience, and reliability."
-      },
-      {
-        "t": "p",
-        "x": "Effective communication and collaboration are key to building a strong team of subcontractors. A GC must establish clear expectations and provide detailed instructions to ensure that all work aligns with the project's goals and standards. Regular meetings and updates help keep everyone on the same page and address any issues promptly. A GC must also foster a positive working relationship with subcontractors, providing support and resources to help them succeed. This involves fair and timely payments, as well as recognizing and rewarding good performance."
-      },
-      {
-        "t": "p",
-        "x": "Conflict resolution is another important aspect of managing subcontractors. Disputes and misunderstandings can arise during a project, and a GC must be able to address them effectively to maintain a positive working environment. This involves active listening, open communication, and finding mutually beneficial solutions. A GC must also have clear contracts and agreements in place to outline the terms and expectations for each subcontractor. This helps prevent disputes and ensures that all parties are protected. Building a reliable team of subcontractors requires a combination of careful selection, effective communication, and proactive management to ensure the project's success."
-      },
-      {
-        "t": "h2",
-        "x": "Effective Communication with Clients and Stakeholders"
-      },
-      {
-        "t": "p",
-        "x": "Effective communication with clients and stakeholders is crucial for the success of any construction project. A GC must be able to convey complex information clearly and concisely to ensure that everyone involved understands the project's goals, progress, and any potential issues. This involves regular updates and reports to keep clients and stakeholders informed and engaged. Transparent communication helps build trust and ensures that all parties are aligned with the project's objectives."
-      },
-      {
-        "t": "p",
-        "x": "Active listening is an essential component of effective communication. A GC must be able to listen to clients' and stakeholders' concerns, feedback, and suggestions and address them promptly. This involves being responsive and approachable, creating an open line of communication where all parties feel comfortable sharing their thoughts. Active listening helps build strong relationships and ensures that the project meets the clients' and stakeholders' expectations."
-      },
-      {
-        "t": "p",
-        "x": "Conflict resolution is another important aspect of communication. Disputes and misunderstandings can arise during a project, and a GC must be able to address them effectively to maintain a positive working environment. This involves being empathetic, finding common ground, and negotiating mutually beneficial solutions. A GC must also be able to communicate difficult information, such as delays or changes in scope, in a way that is respectful and constructive. Effective communication requires a combination of clarity, active listening, and conflict resolution skills to ensure the project's success."
-      },
-      {
-        "t": "h2",
-        "x": "Quality Control and Safety Measures"
-      },
-      {
-        "t": "p",
-        "x": "Quality control and safety measures are essential components of general contracting, ensuring that the project meets the required standards and that all work is performed safely. Quality control involves regular inspections and assessments to ensure that all work meets the project's specifications and standards. This requires a thorough understanding of construction methods and materials, as well as attention to detail. A GC must be able to identify and address any issues promptly to ensure that the project meets the required quality standards."
-      },
-      {
-        "t": "p",
-        "x": "Safety measures are equally important, protecting workers and the public from potential hazards. This involves implementing safety protocols and procedures, conducting regular safety training, and ensuring that all work complies with safety regulations. A GC must be proactive in identifying and mitigating potential risks, such as providing proper protective equipment and ensuring that all work areas are safe and secure. Effective safety management helps prevent accidents and injuries, ensuring a safe working environment for all."
-      },
-      {
-        "t": "p",
-        "x": "Documentation is a critical aspect of quality control and safety measures. A GC must maintain detailed records of all inspections, assessments, and safety protocols to ensure accountability and compliance. This involves keeping track of all activities, expenses, and communications related to quality control and safety measures. Detailed documentation helps protect the project's integrity and ensures that all work is performed according to the required standards. Effective quality control and safety measures require a combination of thorough inspections, proactive risk management, and detailed documentation to ensure the project's success."
-      },
-      {
-        "t": "h2",
-        "x": "Common Challenges in General Contracting and How to Overcome Them"
-      },
-      {
-        "t": "p",
-        "x": "General contracting is a complex and demanding field, with numerous challenges that can arise during a project. One of the most common challenges is managing unexpected delays and disruptions. This can include weather delays, supply chain issues, and unforeseen site conditions. A GC must be able to anticipate potential issues and implement contingency plans to address them. This involves being proactive, flexible, and resourceful, finding alternative solutions to keep the project on track."
-      },
-      {
-        "t": "p",
-        "x": "Another common challenge is managing client expectations. Clients may have unrealistic expectations or change their minds about the project's scope, leading to potential conflicts and delays. A GC must be able to manage client expectations effectively, providing clear and realistic information about the project's goals, timeline, and budget. This involves regular communication and updates, as well as being transparent about any potential issues or changes. Effective expectation management helps build trust and ensures that the project meets the client's needs and expectations."
-      },
-      {
-        "t": "p",
-        "x": "Conflict resolution is another challenge that GCs often face. Disputes can arise between clients, subcontractors, and other stakeholders, and a GC must be able to address them effectively to maintain a positive working environment. This involves active listening, open communication, and finding mutually beneficial solutions. A GC must also have clear contracts and agreements in place to outline the terms and expectations for all parties involved. Effective conflict resolution helps prevent disputes and ensures a smooth and successful project. Overcoming these challenges requires a combination of proactive management, effective communication, and conflict resolution skills."
-      },
-      {
-        "t": "h2",
-        "x": "Conclusion: Elevating Your General Contracting Skills"
-      },
-      {
-        "t": "p",
-        "x": "Mastering the art of general contracting requires a diverse skill set, meticulous planning, and proactive management. By understanding the role of a general contractor, developing key skills, and implementing effective project planning and management techniques, you can elevate your contracting skills and ensure the success of your projects. Budgeting, navigating permits and regulations, building a reliable team of subcontractors, and maintaining effective communication with clients and stakeholders are all critical components of successful general contracting."
-      },
-      {
-        "t": "p",
-        "x": "Quality control and safety measures are essential to protect the project's integrity and ensure a safe working environment. Overcoming common challenges, such as managing delays, client expectations, and conflicts, requires a proactive and resourceful approach. By continuously improving your skills and staying updated on industry best practices, you can master the art of general contracting and deliver successful projects that meet the highest standards of quality and safety. Embrace the challenges and opportunities of general contracting, and elevate your skills to become a leader in the field."
+        "q": "Do I need a permit for a kitchen renovation in Winnipeg?",
+        "a": "It depends on the scope. The City of Winnipeg lists kitchens and creating open-concept living spaces among renovations that may need a building permit, and plumbing or electrical work can need trade permits. Interior work such as painting, patching and installing cabinets does not need a building permit. We coordinate the permits a project needs."
       }
     ],
-    "faqs": [],
-    "answer": "",
-    "sources": []
+    "answer": "Good small kitchen renovation ideas start with the layout, not the finishes. Choose the layout your room can actually hold, whether galley, L-shaped, U-shaped or peninsula, then add storage that reaches the ceiling, lighting under the upper cabinets and appliances sized for the space. Spend first on what changes how the kitchen works.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Home renovations (building permits)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Health Canada: Guide to addressing moisture and mould indoors",
+        "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/addressing-moisture-mould-your-home.html",
+        "accessed": "2026-10-13"
+      }
+    ]
   }
 ];
 
@@ -1614,9 +8822,8 @@ export const BLOG_REDIRECTS = [
   },
   {
     "from": "/blog/tax-incentives-for-commercial-renovations-what-you-should-know",
-    "to": "/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank",
-    "status": "draft",
-    "temporary": true
+    "to": "/blog/manitoba-renovation-tax-credits-rebates",
+    "status": "redirect"
   },
   {
     "from": "/blog/the-pros-and-cons-of-financing-a-commercial-renovation-through-loans",
@@ -1666,6 +8873,11 @@ export const BLOG_REDIRECTS = [
   {
     "from": "/blog/kitchen-design-ideas-for-small-kitchens",
     "to": "/blog/essential-design-strategies-for-small-kitchen-renovations",
+    "status": "redirect"
+  },
+  {
+    "from": "/blog/mastering-general-contracting-tips-for-your-next-project",
+    "to": "/blog/what-does-a-general-contractor-do",
     "status": "redirect"
   },
   {

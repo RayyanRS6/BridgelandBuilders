@@ -1,9 +1,163 @@
-// Site-wide FAQ list. Lives in data so the page and the build-time SEO layer
-// read exactly the same answers.
-export const SITE_FAQS = [
-  { q: 'What types of renovation projects do you take on?', a: 'We handle whole-home, kitchen, bathroom, basement, and commercial renovations across Winnipeg and nearby communities, along with selected specialty construction work.' },
-  { q: 'Do you provide a written quote?', a: 'Yes. After we understand the space and scope, we provide a clear written quote so you know what is included before work begins.' },
-  { q: 'Do you handle permits and inspections?', a: 'Yes, when a project requires permits or inspections we include them in the plan and coordinate the required steps with the City of Winnipeg or your local municipality.' },
-  { q: 'Can I stay in my home during the renovation?', a: 'Often, yes. It depends on the size and location of the work. We explain what will be usable, how dust will be controlled, and when temporary disruptions are expected.' },
-  { q: 'How do I get started?', a: 'Use the quote form or call 431-866-5644. We will ask a few questions about your project and arrange the right next step, usually a free site visit.' },
+// Site-wide FAQs for /faqs, grouped by topic. Lives in data so the page, the
+// build-time SEO layer (head.js: FAQPage JSON-LD) and the llms files
+// (build-seo-files.mjs) read exactly the same answers.
+//
+// Rules (SEO plan §7, §12): answers are 40–70 words and open with the direct
+// answer; only facts the owner has confirmed, or rules checked on an official
+// page (listed in FAQ_SOURCES with the date checked). No insurance, WCB,
+// licence, warranty or payment-schedule questions until the owner supplies
+// proof. Service-specific questions stay on the service pages.
+//
+// `more` ({ label, to }) adds a link under an answer on the page only; the
+// FAQPage schema and the llms files use `q` and `a`.
+import { BUSINESS_HOURS, SERVICE_AREA_STATEMENT, SITE_PHONE } from './siteConfig.js';
+
+/** '16:30' -> '4:30 p.m.' */
+function clock(time) {
+  const [hours, minutes] = String(time).split(':').map(Number);
+  const suffix = hours < 12 ? 'a.m.' : 'p.m.';
+  return `${hours % 12 || 12}:${String(minutes).padStart(2, '0')} ${suffix}`;
+}
+
+/** "Monday to Friday, 8:30 a.m. to 4:30 p.m." from BUSINESS_HOURS (the schema's hours). */
+export const OFFICE_HOURS_TEXT = BUSINESS_HOURS.map(({ days, opens, closes }) => {
+  const span = days.length > 1 ? `${days[0]} to ${days[days.length - 1]}` : days[0];
+  return `${span}, ${clock(opens)} to ${clock(closes)}`;
+}).join('; ');
+
+/** Official pages the permit answers rely on, with the date they were checked. */
+export const FAQ_SOURCES = [
+  {
+    label: 'City of Winnipeg: Home renovations (building permits)',
+    url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations',
+    accessed: '2026-10-13',
+  },
+  {
+    label: 'City of Winnipeg: Basement/lower level development',
+    url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/basementlower-level-development',
+    accessed: '2026-10-13',
+  },
+  {
+    label: 'City of Winnipeg: Information Bulletin 2026-007-B, Building permit requirements for housing',
+    url: 'https://www.winnipeg.ca/media/6116',
+    accessed: '2026-10-13',
+  },
 ];
+
+/** The FAQ groups, in page order. `id` is the group's anchor on /faqs. */
+export const FAQ_GROUPS = [
+  {
+    id: 'costs-and-quotes',
+    title: 'Costs and quotes',
+    items: [
+      {
+        q: 'How much does a renovation cost in Winnipeg?',
+        a: 'It depends on the size of the space, the scope, the finishes you choose and what we find behind the walls. For a starting range, try our free instant quote or read our cost guides for kitchens, bathrooms and basements. Your actual price comes in the free written quote after we have seen the space.',
+        more: { label: 'See renovation cost ranges', to: '/renovation-cost-winnipeg' },
+      },
+      {
+        q: 'Are the on-site visit and the quote really free?',
+        a: 'Yes. The on-site visit and the written quote are both free, and there is no obligation to go ahead. We look at the space with you, talk through what you want, and then send a written quote with the scope, price and schedule, so you can decide in your own time.',
+      },
+      {
+        q: 'What is the difference between the instant quote and a written quote?',
+        a: 'The instant quote is an online price calculator: you answer a few questions and see a starting price range in minutes. The written quote comes after our free on-site visit, once we have measured the space and agreed the scope. It sets out the work, the price and the schedule, with taxes shown.',
+        more: { label: 'Get a free instant quote', to: '/instant-quote' },
+      },
+      {
+        q: 'What makes a renovation cost more?',
+        a: 'The biggest factors are size, moving plumbing, walls or windows, the finishes you choose, and the condition of what is already there, such as old wiring, moisture or uneven floors. Permits, drawings and access also play a part. We point out the cost drivers at the on-site visit, so there are fewer surprises later.',
+      },
+      {
+        q: 'What happens if the scope changes during the project?',
+        a: 'Changes happen, whether you decide to add something or a problem turns up behind a wall. Any change to the scope should be agreed, with its cost in writing, before that work is done, so ask how changes are handled when you review your written quote. In older homes, keep a contingency for surprises.',
+      },
+    ],
+  },
+  {
+    id: 'permits-and-rules',
+    title: 'Permits and rules',
+    items: [
+      {
+        q: 'Do I need a permit for my renovation in Winnipeg?',
+        a: 'Often, yes. Finishing a basement into living space or creating a new bedroom requires a building permit, and the City of Winnipeg says kitchens, bathrooms, open-concept changes and new or larger exterior openings may need one. Cosmetic work such as painting, flooring and millwork does not. Electrical or plumbing work can need its own permit. We confirm what your project needs at the on-site visit.',
+        more: { label: 'Read our guide to renovation permits in Winnipeg', to: '/blog/winnipeg-renovation-permits' },
+      },
+      {
+        q: 'Do you handle permits and inspections?',
+        a: 'Yes. When a project needs permits or inspections, we include them in the plan and coordinate them with the City of Winnipeg or your local municipality. The City notes that homeowners need the correct permits before certain renovations start, so we tell you what is needed and keep you informed as each inspection is booked and completed.',
+      },
+      {
+        q: 'Who issues building permits outside Winnipeg?',
+        a: 'Outside the city, building permits come from the local municipality or planning district, and their requirements can differ from Winnipeg’s. Our service-area page lists who issues building permits in each community we serve, and we coordinate with that office for you as part of the project, just as we do with the City of Winnipeg.',
+        more: { label: 'See who issues permits in each community', to: '/service-areas' },
+      },
+    ],
+  },
+  {
+    id: 'timelines',
+    title: 'Timelines and living through a renovation',
+    items: [
+      {
+        q: 'How long does a renovation take?',
+        a: 'Most bathrooms take two to three weeks, most kitchens four to six weeks once the cabinets are on site, and basements four to eight weeks. Whole-home renovations and home additions usually run eight to sixteen weeks. Permits, product lead times and what we find when walls are opened can move these dates, and your written quote includes a schedule.',
+        more: { label: 'See our process and typical timelines', to: '/our-process' },
+      },
+      {
+        q: 'Can I stay in my home during the renovation?',
+        a: 'Often, yes. It depends on the size and location of the work. If it is your only bathroom or kitchen, we plan the order of work to keep the disruption as short as we can. At the on-site visit we explain what will be usable, how dust will be controlled and when to expect interruptions.',
+      },
+      {
+        q: 'How will I know how my project is going?',
+        a: 'You get a progress update every week: what was done, what comes next, and any decisions we need from you. If something changes, such as a delivery date or a problem found behind a wall, we tell you and agree the next step with you before going ahead.',
+      },
+    ],
+  },
+  {
+    id: 'service-area-and-jobs',
+    title: 'Service area and the work we do',
+    items: [
+      {
+        q: 'What areas do you serve?',
+        a: `${SERVICE_AREA_STATEMENT} If you are a little further out, call us at ${SITE_PHONE} and we will tell you honestly whether we can take on your project.`,
+        more: { label: 'See our service area', to: '/service-areas' },
+      },
+      {
+        q: 'What types of projects do you take on?',
+        a: 'For homes, we renovate kitchens, bathrooms, basements and whole houses, and build home additions. For businesses, we renovate offices, retail stores, restaurants, cafés and bars, hotels, and medical, dental and physiotherapy clinics. We also install flooring, windows and doors, and handle exterior painting, masonry and stucco, and demolition.',
+        more: { label: 'Browse all renovation services', to: '/services' },
+      },
+      {
+        q: 'Can you work after hours on a commercial renovation?',
+        a: 'Yes. For commercial projects we can schedule work after hours or on weekends, so your business can keep serving customers or patients while the renovation goes ahead. We plan the work around your lease dates and opening hours from the start, and send weekly updates so you always know what is happening next.',
+        more: { label: 'See our commercial renovation services', to: '/services/commercial-renovations' },
+      },
+    ],
+  },
+  {
+    id: 'process',
+    title: 'How the process works',
+    items: [
+      {
+        q: 'How do I get started?',
+        a: `Use our free instant quote for a starting price range, call ${SITE_PHONE}, or book a free on-site visit online. We reply within one business day, arrange a time to see the space, and follow up with a written quote. Our office hours are ${OFFICE_HOURS_TEXT}${OFFICE_HOURS_TEXT.endsWith('.') ? '' : '.'}`,
+        more: { label: 'Book a free on-site visit', to: '/book-online' },
+      },
+      {
+        q: 'What happens at the free on-site visit?',
+        a: 'We look at the space with you, take measurements, and talk through what you want to change, your budget range and your timing. We also check the things that affect the price, such as where the plumbing runs and the condition of what is there now. Then we prepare your written quote.',
+      },
+      {
+        q: 'Does any work start before I approve the quote?',
+        a: 'No. Nothing starts until you have read and approved the written quote, which sets out the scope, price and schedule, with taxes shown. Once you approve it, we confirm the start date, help you with selections and coordinate any permits the project needs before work begins.',
+      },
+      {
+        q: 'What should I have ready before the visit?',
+        a: 'A few photos or screenshots of what you like, a list of must-haves and nice-to-haves, and a rough budget range all help. Mention any known problems, such as leaks, past water in the basement or drafty windows, and any dates you are working toward, like a move-in or a lease start.',
+      },
+    ],
+  },
+];
+
+/** Every FAQ in page order, flat ([{ q, a, more? }]): the FAQPage schema and llms files. */
+export const SITE_FAQS = FAQ_GROUPS.flatMap((group) => group.items);

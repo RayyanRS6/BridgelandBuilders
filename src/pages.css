@@ -1546,6 +1546,14 @@
     letter-spacing: -1px;
     overflow-wrap: break-word;
   }
+  /* Post titles are longer than page titles: the desktop article rule
+     (.blog-post-hero .page-hero-card h1) outranks the phone size above, so
+     it is rescaled here as well. */
+  .blog-post-hero .page-hero-card h1 {
+    font-size: clamp(1.6rem, 7.4vw, 2rem);
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+  }
   .page-hero-card > p {
     margin-bottom: 22px;
     font-size: 0.97rem;
@@ -2582,6 +2590,17 @@
   font-weight: 600;
 }
 
+/* Long URLs (the SMS opt-in link) wrap instead of widening the page at 320px. */
+.policy-body a,
+.wrap-anywhere {
+  overflow-wrap: anywhere;
+}
+
+/* Space between the topic groups on /faqs. */
+.faq-page-container .faq-group + .faq-group {
+  margin-top: 56px;
+}
+
 .policy-body .blog-takeaways {
   margin-top: 18px;
 }
@@ -2924,6 +2943,22 @@
 }
 
 .blog-post-cta .blog-post-cta-call a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Cost-guide link under the CTA banner copy (CtaBanner.jsx): the same
+   treatment as .blog-post-cta-call a, underlined so it reads as a link on the
+   dark card; the padding gives it a 44px-high tap target. */
+.cta-banner-left p.cta-banner-link {
+  margin-top: 2px;
+}
+
+.cta-banner-left .cta-banner-link a {
+  display: inline-block;
+  padding: 10px 2px;
+  color: var(--text-light);
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
 }

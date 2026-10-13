@@ -1,0 +1,226 @@
+{
+  "slug": "basement-flood-protection-winnipeg",
+  "status": "published",
+  "title": "Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits",
+  "metaTitle": "Basement Flooding in Winnipeg | Bridgeland Builders",
+  "metaDescription": "How backwater valves and sump pits protect Winnipeg basements, which homes must have them, the permits involved, and why the City subsidy no longer exists.",
+  "excerpt": "Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.",
+  "date": "2026-10-13",
+  "cats": [
+    "Basements & Suites"
+  ],
+  "services": [
+    "/services/basement-renovations"
+  ],
+  "cluster": "basement-water",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Most Winnipeg basement flooding comes from sewer backup or groundwater. A backwater valve stops sewage backing up through the floor drain; a sump pit collects weeping-tile water and pumps it outside. Homes built after 1979 were required to have a backwater valve, and homes built since 1990 a sump pit. The City’s old subsidy for both was cancelled.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "City of Winnipeg – Basement & overland flooding",
+      "url": "https://www.winnipeg.ca/services-programs/water-wastewater/flooding/basement-overland-flooding",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – How to prepare for potential basement flooding",
+      "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/how-prepare-potential-basement-flooding",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – 5 tips for keeping your basement dry during the spring melt",
+      "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/5-tips-keeping-your-basement-dry-during-spring-melt",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Information Bulletin 2025-001: Sump pit installations for housing",
+      "url": "https://www.winnipeg.ca/media/6154",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Basement/lower level development: construction information (updated October 2025)",
+      "url": "https://www.winnipeg.ca/media/6349",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Plumbing installations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Basement Flooding Protection Subsidy Program (cancelled)",
+      "url": "https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Does my Winnipeg home have a backwater valve?",
+      "a": "If it was built after 1979, it was required by law to have one, and homes built since 1990 were also required to have a sump pit. Older homes may have had either added later. If you can’t tell what your house has, or whether it works, the City suggests asking a licensed plumber to check."
+    },
+    {
+      "q": "Can I install a backwater valve myself?",
+      "a": "The City advises having a licensed plumber install a backwater valve or sump pit drainage system. A homeowner can take out a plumbing permit only for a single detached house that is their primary residence and only if they do the work themselves. Either way the work needs a plumbing permit and a City inspection. If the work includes a sump pit with new or replaced weeping tile, a building permit and an electrical permit are needed too."
+    },
+    {
+      "q": "How often should I test my sump pump?",
+      "a": "The City suggests testing it by pouring water into the pit at the start of spring and before you leave home for a long time, and cleaning the pump at least once a year. Check that the discharge hose points into your own yard, away from the foundation, and remember the pump won’t run without power."
+    },
+    {
+      "q": "Is the Winnipeg basement flooding subsidy still available?",
+      "a": "No. The City’s Basement Flooding Protection Subsidy Program didn’t receive funding for the 2017 program year and was cancelled by City Council, and applications received after December 30, 2016 weren’t processed. The City’s current flooding page lists no replacement, so plan the cost of a valve or sump pit into your budget."
+    },
+    {
+      "q": "Who do I call if my basement floods?",
+      "a": "Report flooding to 311 and call your home insurance company. The City notes that if you have a claim for injury or property damage, you can file it with the City. Once the water is out, find the cause, whether sewer backup, groundwater or surface water, before you replace any finishes."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "If you’re planning to finish a basement, the most expensive mistake is building over a water problem. In Winnipeg, water usually reaches a basement in one of three ways, and each has a different fix. This guide uses the City of Winnipeg’s flooding pages and permit bulletins, checked on October 13, 2026."
+    },
+    {
+      "t": "h2",
+      "x": "How does water get into a Winnipeg basement?"
+    },
+    {
+      "t": "p",
+      "x": "Three common ways. Sewer backup happens when heavy rain or snowmelt overloads the sewer and water comes up through the floor drain. Groundwater collects in the weeping tile around the foundation and needs somewhere to go. Surface water from snowmelt, downspouts and poor grading soaks in along the walls and through cracks."
+    },
+    {
+      "t": "table",
+      "caption": "Common sources of basement water and the usual protection",
+      "head": [
+        "Source",
+        "How it shows up",
+        "Usual protection"
+      ],
+      "rows": [
+        [
+          "Sewer backup",
+          "Water or sewage rising from the floor drain during heavy rain or melt",
+          "Backwater valve on the sewer line, installed by a licensed plumber"
+        ],
+        [
+          "Groundwater",
+          "Water collecting at the footing and weeping tile",
+          "Sump pit and pump that discharge outside"
+        ],
+        [
+          "Surface water",
+          "Damp walls, or leaks at cracks and window wells in spring",
+          "Ground sloped away from the house, clear eavestroughs, snow cleared from the foundation"
+        ],
+        [
+          "River or overland flooding",
+          "Water reaching the house over land",
+          "Follow provincial flood outlooks and local advisories; talk to your insurer about coverage"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "What does a backwater valve do?"
+    },
+    {
+      "t": "p",
+      "x": "A backwater valve sits on the sewer line in the basement and keeps sewage in an overloaded main sewer from backing up into the house. The City advises having a licensed plumber install one, and it needs a plumbing permit and inspection. If your home was built after 1979, it was required by law to have one."
+    },
+    {
+      "t": "p",
+      "x": "The valve matters again when you finish a basement. The City’s basement guide says an approved backwater valve must protect all new plumbing branches installed below grade, so a new basement bathroom or bar sink has to drain through one."
+    },
+    {
+      "t": "h2",
+      "x": "What does a sump pit do?"
+    },
+    {
+      "t": "p",
+      "x": "A sump pit is set into the basement floor and collects water from the weeping tiles around your foundation; the pump pushes it outside through a discharge pipe. Homes built in Winnipeg since 1990 are required to have one, and some older homes have had one added."
+    },
+    {
+      "t": "p",
+      "x": "The City says homes not protected by a backwater valve or sump pit drainage system are at greater risk of basement flooding. The two work together: if the weeping tile drains into the sewer line and there is no sump pit, that water has nowhere to go while the backwater valve is closed. Ask a licensed plumber how your house is connected before you decide what to add."
+    },
+    {
+      "t": "h2",
+      "x": "Which permits do you need to add a sump pit or backwater valve?"
+    },
+    {
+      "t": "p",
+      "x": "Under the City’s January 2025 bulletin, installing a sump pit that drains a new or existing weeping tile system needs a building permit for alterations. A plumbing permit covers the required backwater valve and any other plumbing, and an electrical permit covers the sump pump’s dedicated receptacle. Inspections are booked once permits are issued and the work is ready."
+    },
+    {
+      "t": "li",
+      "x": "A sump pit is required if you add or replace a perimeter weeping tile system, replace all the weeping tile leads, or alter or extend the system. Repairing only a section of weeping tile doesn’t require one."
+    },
+    {
+      "t": "li",
+      "x": "The pit has to meet current code; a smaller pit isn’t allowed just because the house is older."
+    },
+    {
+      "t": "li",
+      "x": "Book inspections at winnipeg.ca/housinginspection or by phone at 204-986-5300, weekdays 8:30 a.m. to 4 p.m."
+    },
+    {
+      "t": "p",
+      "x": "Outside Winnipeg, the same devices are common, but the permit office and its rules belong to your municipality. Our [renovation permits guide](/blog/winnipeg-renovation-permits) lists the offices for nearby communities."
+    },
+    {
+      "t": "h2",
+      "x": "Is there still a City subsidy for backwater valves?"
+    },
+    {
+      "t": "p",
+      "x": "No. The City and Province ran a Basement Flooding Protection Subsidy Program, but it didn’t receive funding for the 2017 program year and City Council cancelled it; applications received after December 30, 2016 weren’t processed. Some older articles still describe it as available. Budget for the work yourself, and call 311 if you want to confirm."
+    },
+    {
+      "t": "h2",
+      "x": "Where should the sump pump discharge?"
+    },
+    {
+      "t": "p",
+      "x": "Onto your own yard, away from the foundation. The City says draining sump water into a floor drain is illegal and raises the flooding risk for you and your neighbours, and the discharge can’t drain onto neighbouring properties, lanes, sidewalks, boulevards or streets. Keep the end of the hose well away from your property line."
+    },
+    {
+      "t": "h2",
+      "x": "What should you sort out before finishing a basement?"
+    },
+    {
+      "t": "li",
+      "x": "Confirm what you have. If you’re unsure whether the house has a backwater valve or sump pit, the City suggests a licensed plumber can check."
+    },
+    {
+      "t": "li",
+      "x": "Keep both reachable. You’ll need to test the pump, clean the pit and check the valve after the basement is finished, so plan access panels or an unfinished utility area."
+    },
+    {
+      "t": "li",
+      "x": "Plan the electrical. The City requires a dedicated receptacle for the sump pump."
+    },
+    {
+      "t": "li",
+      "x": "Fix the outside. Improve drainage so water flows away from the house without affecting neighbours, and watch for paths, patios, decks and driveways that have settled toward the walls."
+    },
+    {
+      "t": "li",
+      "x": "Protect what’s stored. The City notes backups are often only a few inches deep, so raise appliances on blocks and use shelves and plastic totes rather than cardboard boxes on the floor."
+    },
+    {
+      "t": "p",
+      "x": "If the walls themselves are leaking or cracked, that’s a job for a foundation specialist or structural engineer before any framing goes up. See [clay soil and basement cracks](/blog/clay-soil-basement-cracks-winnipeg) for what to look for."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "A dry basement is the starting point for any [basement renovation](/services/basement-renovations). Every project starts with a free on-site visit and a free written quote; ask us to look at drainage and moisture while we’re there. [Book your visit](/book-online), or see [what a basement renovation costs in Winnipeg](/services/basement-renovations/cost) first. If spring is coming, our [spring flood prep checklist](/blog/spring-flood-prep-winnipeg-basements) has the seasonal steps."
+    }
+  ]
+}

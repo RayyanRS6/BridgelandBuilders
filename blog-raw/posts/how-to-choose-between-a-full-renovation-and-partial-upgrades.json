@@ -1,125 +1,259 @@
 {
   "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
   "status": "published",
-  "title": "How to Choose Between a Full Renovation and Partial Upgrades",
-  "excerpt": "Deciding between a full renovation or partial upgrades? Learn how to choose the best option for your home's needs and budget.",
+  "title": "Full vs Partial Renovation: How to Choose for Your Winnipeg Home",
+  "metaTitle": "Full vs Partial Renovation in Winnipeg: How to Decide",
+  "metaDescription": "Full renovation or room-by-room upgrades? A decision table, what older Winnipeg homes hide behind the walls, and how to phase work without paying twice.",
+  "excerpt": "A full renovation fixes everything at once; partial upgrades spread the work and the cost over time. The right choice depends on the condition of your house, your plans and how much disruption you can live with. Here is a practical way to decide.",
   "date": "2026-09-01",
+  "updated": "2026-10-13",
   "cats": [
-    "Whole Home Renovations",
-    "General Contracting"
+    "Permits & Planning"
   ],
   "services": [
     "/services/whole-home-renovations",
     "/services/general-contracting"
   ],
-  "cluster": "",
+  "cluster": "renovation-planning",
   "author": "",
   "reviewedBy": "",
-  "answer": "",
+  "answer": "Choose a full renovation when the wiring, plumbing, insulation or layout need work in several rooms, or when you want the whole house finished to one standard at once. Choose partial upgrades when those systems are sound and only one or two rooms hold you back. Many homes suit a phased plan that does the system work first.",
   "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
   "heroAlt": "Comparing full home renovation versus partial upgrades visually.",
-  "sources": [],
-  "faqsTitle": "Common Questions",
+  "sources": [
+    {
+      "label": "Health Canada: Reduce your exposure to lead",
+      "url": "https://www.canada.ca/en/health-canada/services/home-garden-safety/reduce-your-exposure-lead.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Health Canada: Asbestos and your health",
+      "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
+      "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Home renovations (building permits)",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Common questions",
   "faqs": [
     {
-      "q": "When are full renovations different than partial renovations?",
-      "a": "Consider a full renovation as a full makeover of a house. Think of everything new. A partial upgrade is an upgrade. It is like giving a few rooms a new look. It is a facelift."
+      "q": "When does a partial renovation make more sense than a full one?",
+      "a": "When the house's wiring, plumbing, insulation and layout are in reasonable shape and only one or two rooms hold you back. A partial upgrade then gives most of the benefit with less cost and disruption. It also suits budgets that work year by year, as long as each stage fits a plan for the whole house."
     },
     {
-      "q": "When is it reasonable to have a partial upgrade over a full renovation?",
-      "a": "Consider a partial upgrade if the house’s core systems are secure (plumbing, electrical, etc.); or, if the full upgrade is resolving a couple of rooms (kitchen, bathrooms) and the goal is to merely bring new visuals, then it is also reasonable. A partial upgrade also is the right approach if the disruption during renovations is a concern or if the budget is restricted."
+      "q": "Is it cheaper to renovate everything at once?",
+      "a": "Per room, it often is, because set-up, demolition, permits and trade visits happen once instead of several times. It costs more up front, though, and means more disruption at one time. If the budget is the limit, a phased plan that does the system work first keeps many of the same savings."
     },
     {
-      "q": "Why choose a full renovation?",
-      "a": "With full renovations, it is possible to rearrange the set up of the house and transform to make it entirely different and from better systems then it is possible to rearrange to transform to different systems than the current outdated ones to better energy efficient ones, and the external visuals will also be new. A full upgrade will be a fix to almost all issues and also a transform to the whole living space and it will add a new level of value to the house."
+      "q": "Can we live in the house during a full renovation?",
+      "a": "Often, yes, if the work is staged in sections and a kitchen and bathroom stay usable. Sometimes it is faster to move out for a few weeks. Both options can be laid out at the on-site visit, so you can weigh the time saved against the disruption before you decide."
     },
     {
-      "q": "Can a partial uplift add value to my home?",
-      "a": "Definitely! Updating a kitchen with new cabinets and countertops, or modernizing a bathroom can make a home more attractive to buyers and increase market value! Investing in specific measurable areas is smart."
+      "q": "What if problems turn up once the walls are open?",
+      "a": "Older homes in particular can reveal water damage, old wiring or altered framing once walls come down. The work should stop, you should be shown what was found, and the fix should be priced before work continues. A contingency in your budget means a discovery changes the plan, not the whole project."
     },
     {
-      "q": "What if I find unexpected problems during a reno?",
-      "a": "This can happen, especially with older homes. You might run into issues with a partial uplift. With a full renovation, you have a higher likelihood of problems anywhere. Surprises happen and it's a good idea to have more money just in case, whatever renovation you go with."
-    },
-    {
-      "q": "How do I decide which is my best option?",
-      "a": "Think about your budget, the time you have for the project, your home’s structural and systems condition, and your overall goals. If your home works well and only looks outdated, a partial uplift may very well be your best option. If you have major issues to resolve or want a totally new feel, a full renovation is the better option."
+      "q": "How do I know if my house needs a full renovation?",
+      "a": "Look at the systems and the layout, not just the finishes. Signs include wiring that cannot handle modern loads, plumbing problems in several places, cold rooms from poor insulation, or a layout that no longer suits how you live. An on-site visit can separate what needs doing now from what can wait."
     }
   ],
   "blocks": [
     {
-      "t": "img",
-      "src": "https://static.wixstatic.com/media/48172a_fe434f71071c41898b44438bec64ec37~mv2.png",
-      "alt": "Comparing full home renovation versus partial upgrades visually.",
-      "w": 1366,
-      "h": 768,
-      "hidden": true
+      "t": "p",
+      "x": "Most renovation plans start with a list: the kitchen is tired, the bathroom leaks, the basement is unfinished, the windows are drafty. The big decision is whether to tackle the list all at once or one room at a time. Both can be the right answer. The difference is usually in the parts of the house you cannot see."
     },
     {
       "t": "h2",
-      "x": "How to Choose Between Complete Renovation and Partial Upgrades"
+      "x": "What is the difference between a full and a partial renovation?"
     },
     {
       "t": "p",
-      "x": "Considering giving your house a makeover? If you are wondering whether to do a complete renovation or a few cosmetic changes, the answer is quite important for your pocket, your mental health, and the look of your house. We will help you find the best solution regarding complete renovations or additional updates."
+      "x": "A full renovation brings most of the house to a common standard at once: the layout, systems such as wiring and plumbing, and the finishes. A partial renovation, or room-by-room upgrade, renovates one area at a time, such as the kitchen or a bathroom, while the rest of the house stays as it is."
     },
     {
-      "t": "takeaways",
-      "title": "Key Takeaways",
-      "items": [
-        "A complete renovation is basically rebuilding your house inside and out. It comes with many different changes and can fully remodel the look of your house. It’s the biggest investment you can make in your house.",
-        "Additional updates are small upgrades to specific areas like a room, the kitchen, or the bathroom. This takes a lot less time than a complete remodel and is more cost-effective.",
-        "Think about your future plans and how much money you have at hand. If you are going to sell your house anytime soon, small updates may give you a better profit.",
-        "A complete renovation is sometimes a better option if your house has a lot of core issues, antique wiring, plumbing problems, or a bad layout. Sometimes, mixing is best. You could do a complete renovation on a main area such as the kitchen, while doing just cosmetic updates in other areas."
+      "t": "p",
+      "x": "Between the two sits the phased renovation: one plan for the whole house, built in stages over months or years. It is often the most realistic option for a family that needs to live in the house and pay for the work as it goes."
+    },
+    {
+      "t": "h2",
+      "x": "How do you decide between them?"
+    },
+    {
+      "t": "p",
+      "x": "Start with the condition of the house, not the finishes. If the wiring, plumbing, insulation or layout need work across the house, a full renovation usually avoids opening the same walls twice. If those are sound and one room is the problem, a partial upgrade gives most of the benefit with less cost and disruption."
+    },
+    {
+      "t": "table",
+      "caption": "Full renovation or partial upgrades?",
+      "head": [
+        "Your situation",
+        "Leans toward",
+        "Why"
+      ],
+      "rows": [
+        [
+          "Wiring, plumbing or insulation need updating in several rooms",
+          "Full",
+          "Systems run through the whole house; doing them once avoids reopening finished rooms"
+        ],
+        [
+          "The layout does not work: walls, flow or room sizes",
+          "Full",
+          "Moving walls affects floors, ceilings and finishes in the rooms around them"
+        ],
+        [
+          "Systems are sound; one room is dated or worn out",
+          "Partial",
+          "Most of the benefit for less cost and disruption"
+        ],
+        [
+          "You plan to sell within a few years",
+          "Partial",
+          "Fix condition problems and first impressions; a full overhaul is a long-term choice"
+        ],
+        [
+          "You can move out for a few months",
+          "Full",
+          "Doing everything at once is usually faster overall than working around you"
+        ],
+        [
+          "You need to stay in the house and budget year by year",
+          "Phased",
+          "Stages that each leave the house usable"
+        ],
+        [
+          "You have just bought an older home",
+          "Full or phased",
+          "Find and fix hidden issues before new finishes go in"
+        ]
       ]
     },
     {
-      "t": "img",
-      "src": "https://static.wixstatic.com/media/48172a_25ec2aced2b647c7858ea8a5be039885~mv2.png",
-      "alt": "Renovated room versus old room comparison",
-      "w": 1366,
-      "h": 768,
-      "hidden": true
-    },
-    {
-      "t": "h3",
-      "x": "How to Choose the Difference Between a Complete Renovation and Partial Upgrades"
+      "t": "h2",
+      "x": "What do older Winnipeg homes hide behind the walls?"
     },
     {
       "t": "p",
-      "x": "Deciding to go all in on a complete renovation versus sticking with partial upgrades is a big decision; because yes, it is a big decision. Considerations go beyond just the looks. You also have to factor in your budget, timelines, and your home needs. A complete renovation means you have to take everything down to the studs, and start over. This means new layouts, updated systems, and a totally new look and feel. This is the best option if the bones of your home are weak, the layout isn’t working anymore, or you want to add a significant amount of value, energy efficiency, and property to the overall renovation. It is a big job, but it gives you a totally blank canvas to work with."
+      "x": "Older houses can hide lead paint, materials that may contain asbestos, outdated wiring, and framing changed by earlier renovations. Health Canada says a home built before 1960 probably contains lead-based paint, and that vermiculite insulation may contain asbestos. Finding these early can tip a partial job toward a fuller one, or at least change the order of work."
     },
     {
       "t": "p",
-      "x": "Conversely, partial upgrades are more specific. Maybe your kitchen is out of date, but still works. Maybe your bathroom is old, but everything else about the bathroom is great. These types of projects only focus on individual parts, updating the surfaces, finishing the details, and changing some of the components. Partial restorations are perfect when the basic systems of your house are great, you probably enjoy the layout, or the budget is more limited. These upgrades take less time, and cause less disruption to your daily routine. You can always complete other renovations and upgrades when it works out for you."
-    },
-    {
-      "t": "h3",
-      "x": "A good rule of thumb when thinking about upgrades is:"
-    },
-    {
-      "t": "p",
-      "x": "Full Renovation is Best When:"
-    },
-    {
-      "t": "p",
-      "x": "Partial Upgrades are Best When:"
-    },
-    {
-      "t": "p",
-      "x": "However, the truth is that most of the time, you need a combination of both options. A partial gut renovation encompasses completely remodeling the kitchen, and just a fresh coat of paint and new floors in the other rooms. This way you can address the most important things and stay within budget on the areas that are still good. It’s about balancing solving the actual problems, and getting the most value for your money."
-    },
-    {
-      "t": "p",
-      "x": "While considering these options, particularly for commercial renovations in Winnipeg, it makes sense to speak to seasoned renovation companies Winnipeg. They should be able to evaluate your property, go over your goals, and give realistic quotes for full and partial projects. Finding the right builder in Winnipeg is important for a positive outcome on any renovation Winnipeg project. Whether you want a full renovation or just a couple of additions, they can help you with Winnipeg renovation services."
+      "x": "That does not mean every older house needs to be gutted. It means testing and an honest look at the systems should come before design. Health Canada advises having a professional test for asbestos before renovating, and testing old paint before sanding or stripping it. Our guide to [renovating a character home in Winnipeg](/blog/renovating-a-character-home-in-winnipeg) covers what to check first."
     },
     {
       "t": "h2",
-      "x": "What’s the Verdict?"
+      "x": "Can you phase a renovation without paying twice?"
     },
     {
       "t": "p",
-      "x": "There can be a lot of anxiety when it comes to making the decision to do a complete renovation or just touch a few things up. There are a few things to consider. How much can you afford? What do you want your home to do for you? What kind of disruption do you want to deal with? Sometimes a few little renovations can do a lot. On other occasions, you might have to really gut your space to new. Whatever the answer is, reviewing your options with a renovation company can point you in the best direction for your home and your budget."
+      "x": "Yes, if the phases follow the house's systems rather than its rooms. Plan the whole house first, then do the work that runs behind walls, such as the electrical service, main plumbing lines and insulation, before the finishes it would disturb. Each phase should leave the house usable and avoid tearing out recent work later."
+    },
+    {
+      "t": "oli",
+      "x": "Make a whole-house plan, even if you build it in stages."
+    },
+    {
+      "t": "oli",
+      "x": "Do structural and system work first: foundation repairs, the electrical service, main plumbing lines and insulation."
+    },
+    {
+      "t": "oli",
+      "x": "Renovate rooms that share walls or plumbing together, such as a kitchen and a bathroom stacked above it."
+    },
+    {
+      "t": "oli",
+      "x": "Leave purely cosmetic work, such as paint, light fixtures and hardware, for later."
+    },
+    {
+      "t": "oli",
+      "x": "Get each phase permitted and inspected where required, so the next phase builds on approved work."
+    },
+    {
+      "t": "p",
+      "x": "On permits: the City of Winnipeg lists basement development, additions and many home renovations, including kitchens, bathrooms and open-concept changes, among projects that may need a building permit, while cosmetic work such as painting and flooring does not. We coordinate permits and inspections with the City or your local municipality."
+    },
+    {
+      "t": "h2",
+      "x": "How do cost and timeline compare?"
+    },
+    {
+      "t": "p",
+      "x": "A full renovation costs more at once but usually avoids repeating the set-up, demolition and trade visits that come with doing rooms separately. Partial upgrades spread the cost over time. On timing, most of our whole home renovations take 8 to 16 weeks, while a single kitchen or bathroom takes much less."
+    },
+    {
+      "t": "table",
+      "caption": "Typical on-site time for common projects (Bridgeland Builders)",
+      "head": [
+        "Project",
+        "Typical on-site time"
+      ],
+      "rows": [
+        [
+          "Bathroom",
+          "2 to 3 weeks"
+        ],
+        [
+          "Kitchen",
+          "4 to 6 weeks, once cabinets are on site"
+        ],
+        [
+          "Basement development",
+          "4 to 8 weeks"
+        ],
+        [
+          "Whole home renovation or addition",
+          "8 to 16 weeks"
+        ]
+      ],
+      "note": "Permits, product lead times and what is found when walls are opened can move these dates. Your written quote includes a schedule."
+    },
+    {
+      "t": "p",
+      "x": "For current price ranges, see our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). For a full-house project, our [whole home renovation](/services/whole-home-renovations) page explains how the work is planned and staged."
+    },
+    {
+      "t": "h2",
+      "x": "What should you ask at the on-site visit?"
+    },
+    {
+      "t": "p",
+      "x": "Ask questions that separate what needs doing now from what can wait. A good visit should leave you knowing which systems are near the end of their life, which rooms are linked by plumbing or structure, what needs a permit, and whether the work can be staged so you can stay in the house."
+    },
+    {
+      "t": "li",
+      "x": "Which systems in my house need work now, and which can wait?"
+    },
+    {
+      "t": "li",
+      "x": "If I renovate this room now, what would a later phase have to reopen?"
+    },
+    {
+      "t": "li",
+      "x": "Which parts of the plan need permits?"
+    },
+    {
+      "t": "li",
+      "x": "Can the work be staged so we can live here?"
+    },
+    {
+      "t": "li",
+      "x": "What should be tested before demolition?"
+    },
+    {
+      "t": "p",
+      "x": "Our checklist on [how to choose a renovation contractor](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) covers the questions to ask about the company itself, and [what a general contractor does](/blog/what-does-a-general-contractor-do) explains who coordinates a multi-trade project."
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, sort what needs doing now from what can wait, and send a free written quote for the scope you choose. For a first range, try the [instant estimate](/instant-quote)."
     }
   ]
 }

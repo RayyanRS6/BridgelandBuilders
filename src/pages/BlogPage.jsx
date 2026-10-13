@@ -37,10 +37,10 @@ export default function BlogPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Blogs & Articles"
-        title="RENOVATION ADVICE"
+        eyebrow="Renovation Guides"
+        title="WINNIPEG RENOVATION GUIDES"
         highlight="FROM OUR CREW"
-        description="Straight-talking guides on planning, budgeting, and getting renovation work done properly — written by the team behind Winnipeg renovations."
+        description="Practical guides for planning a renovation in Winnipeg: costs, permits, basements, kitchens, bathrooms, older homes, contractors and commercial projects."
         primaryLink={{ to: '/services', label: 'VIEW OUR SERVICES' }}
       />
 

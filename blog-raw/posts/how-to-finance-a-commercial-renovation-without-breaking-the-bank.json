@@ -1,136 +1,233 @@
 {
   "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
   "status": "published",
-  "title": "How to Finance a Commercial Renovation Without Breaking the Bank",
-  "excerpt": "Learn how to finance a commercial renovation without breaking the bank. Explore loan options, strategies, and tips for a successful project.",
+  "title": "Commercial Renovation Financing in Manitoba: Your Options",
+  "metaTitle": "Commercial Renovation Financing in Manitoba | Bridgeland",
+  "metaDescription": "Compare ways to pay for a commercial renovation in Manitoba: term loans, lines of credit, BDC, landlord allowances, equipment financing and phasing.",
+  "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
   "date": "2026-08-11",
+  "updated": "2026-10-13",
   "cats": [
-    "Commercial Renovations"
+    "Commercial",
+    "Money & Rebates"
   ],
   "services": [
-    "/services/commercial-renovations"
+    "/services/commercial-renovations",
+    "/services/office-renovations"
   ],
-  "cluster": "",
+  "cluster": "commercial-costs",
   "author": "",
   "reviewedBy": "",
-  "answer": "",
+  "answer": "Most Manitoba businesses combine several sources: cash, a term loan or line of credit from a bank, credit union or BDC, a tenant improvement allowance from the landlord if they lease, and equipment financing for big-ticket items. Small businesses can also ask lenders about the federal Canada Small Business Financing Program. Bridgeland Builders does not provide financing.",
   "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
   "heroAlt": "Financing commercial renovation with money and blueprints.",
-  "sources": [],
-  "faqsTitle": "FAQs",
+  "sources": [
+    {
+      "label": "BDC: Leasehold improvements, the 8 steps to follow",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: How to lease commercial real estate",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-lease-commercial-real-estate",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: 13 commercial leasing terms you need to know",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/13-terms-you-need-to-understand-before-signing-your-commercial-real-estate-lease",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: Commercial Real Estate Loan",
+      "url": "https://www.bdc.ca/en/financing/commercial-real-estate-loan",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: Business loans and financing",
+      "url": "https://www.bdc.ca/en/financing",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Innovation, Science and Economic Development Canada: Canada Small Business Financing Program, helping small businesses get loans",
+      "url": "https://ised-isde.canada.ca/site/canada-small-business-financing-program/en/canada-small-business-financing-program/find-loan-your-small-business/helping-small-businesses-get-loans",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Business programs",
+      "url": "https://efficiencymb.ca/business/",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Commercial renovation financing questions",
   "faqs": [
     {
-      "q": "Describe to me what a commercial renovation loan is.",
-      "a": "A commercial renovation loan is just what it sounds like. If you have a business, that loan is for you to make improvements to your commercial space. It is designed to help you make improvements that will make your business space more useful, like new paint, new, improved, or additional equipment, or a better layout. A commercial renovation loan can cover both the materials and the labor for the improvements that you make."
+      "q": "What should I bring to a lender for a renovation loan?",
+      "a": "A clear scope and price. Bridgeland Builders provides a free on-site visit and a free written quote with a clear scope, which is the kind of document banks, credit unions, BDC and landlords usually ask for when you apply for a loan or negotiate a tenant improvement allowance."
     },
     {
-      "q": "How can I get money to renovate my business?",
-      "a": "There are quite a few options! You can get a traditional bank loan, but they are difficult to get unless you have a high credit score. SBA loans are government-backed loans that are a bit easier to get if you're a small business. Hard money loans can be acquired through private lenders, but they are very expensive, so try to only use them if you need money very quickly. You can also get a business line of credit, which is like a credit card, and you can borrow however much you want, whenever you want."
+      "q": "Are there government grants for commercial renovations in Manitoba?",
+      "a": "Program availability changes, so check before you budget. For energy upgrades, Efficiency Manitoba offers business incentives for lighting, building envelope, HVAC and other work, and some programs require approval before you buy anything. For borrowing, the federal Canada Small Business Financing Program helps eligible small businesses get term loans through their own lender."
     },
     {
-      "q": "How long do these loans usually go for?",
-      "a": "Most loans are for a short period of time, around 36 months, and they need to get paid back quickly after covering the cost of the project. After the renovations are complete, you will usually have to refinance to a longer-term loan, like a mortgage, to secure the upgraded property."
+      "q": "What is an SBA loan, and can I get one in Canada?",
+      "a": "SBA loans are backed by the United States Small Business Administration and serve American businesses, so they are not available in Manitoba. The closest Canadian program is the Canada Small Business Financing Program, under which your bank, credit union or caisse populaire makes the loan and the federal government shares the risk with the lender."
     },
     {
-      "q": "Can I make my business more energy-efficient with renovation money?",
-      "a": "Of course! Renovation loans can be used to finance the installation of energy saving features that will reduce your business's monthly electricity expenses and save you money long term. There are also a lot of eco-friendly products that use less energy and will do the same."
+      "q": "Can I finance equipment separately from the renovation?",
+      "a": "Usually, yes. Many businesses finance kitchen, clinical or production equipment with an equipment loan or lease rather than the construction loan, so the equipment has its own repayment schedule. BDC, for example, offers equipment loans with repayments matched to your cash flow cycle. Keep the equipment list separate from the construction scope when you ask for quotes."
     },
     {
-      "q": "What are renovation loans and how are they different from other commercial mortgages?",
-      "a": "A renovation loan would fall under the category of a commercial mortgage when a loan is needed to buy an entire property, complete, and pay it off over time. A commercial mortgage usually entails purchasing a property and paying it off over a longer period of time. A renovation loan is for costs associated and limited to the fixing of an existing property. To clarify, loans that cover both purchasing and renovating a property do exist; however, the renovation portion is typically a short term loan."
-    },
-    {
-      "q": "What should I do before looking for renovation loans?",
-      "a": "Before talking to lenders, it is important to formulate a plan with a budget. Be specific. Write down how much money you'll need, how much it will cost, and how much you'll be paying each month. Having these things set in place helps everything go smoothly."
+      "q": "When should I talk to a lender?",
+      "a": "Before you sign a lease or a construction contract. A lender can tell you how much you can borrow and what they need, which shapes the scope you ask your contractor to price. Bring a written quote, your lease or ownership papers and recent financial statements, and ask how and when funds are advanced."
     }
   ],
   "blocks": [
     {
-      "t": "img",
-      "src": "https://static.wixstatic.com/media/48172a_19ee30390bf4493387b87a116f74cdd1~mv2.png",
-      "alt": "Financing commercial renovation with money and blueprints.",
-      "w": 1366,
-      "h": 768,
-      "hidden": true
-    },
-    {
       "t": "p",
-      "x": "Do you want to upgrade your business space? Maybe your business just needs to refresh the look or renovate some areas to better serve the needs of the customers. Trying to gather the money to capture your ideas is like trying to complete a jigsaw puzzle. This article explains how to financially plan a Commercial Renovation to ease your stress management. I will explore various options available to you."
-    },
-    {
-      "t": "takeaways",
-      "title": "Key Takeaways",
-      "items": [
-        "To qualify for a Traditional Bank loan to finance your renovation, you will need to have an impressive credit history, a little bit of savings, and a strong enough business to qualify for a sizable loan.",
-        "SBA loans help you finance your renovation and they are backed by the government, making them easier to secure than traditional loans. Because they are government backed, your terms will be better.",
-        "\"Hard Money\" loans are available to you from private investors and are often secured by business collateral. These loans can be costly due to their high interest, along with short repayment periods.",
-        "A business line of credit is a renovation financing option that is similar to a credit card. Having a line of credit provides your business with the ability to add the renovation to your budget, while also giving you access to cash for unanticipated expenses.",
-        "A Commercial Mortgage is a loan specifically geared towards the purchase and renovation of commercial business property. These loans require strong credit and a down payment for the financing to be secured."
-      ]
-    },
-    {
-      "t": "img",
-      "src": "https://static.wixstatic.com/media/48172a_3e55764f3a964916bb52a6101fd24b3c~mv2.png",
-      "alt": "Commercial renovation financing blueprint with coins and calculator.",
-      "w": 1366,
-      "h": 768,
-      "hidden": true
-    },
-    {
-      "t": "p",
-      "x": "Planning on renovating your commercial space? No matter if you're looking to update a building or expand your business operations, the financing for commercial renovations in Winnipeg can be a bit overwhelming. However, it does not need to be that way. There are plenty of ways to obtain the needed financing without breaking the bank."
-    },
-    {
-      "t": "p",
-      "x": "Financing options are plenty. If you have solid credit and some money saved, you can apply for traditional bank loans. These usually offer higher amounts of money than other loans, but the application process can take a while. If you're looking to obtain a small business loan, applying for an SBA loan will be a good option for you. These loans are guaranteed by the government, so the application process can be easier. Also, most of the time, the interest rates are lower than bank loans. If you need to obtain the cash as fast as possible, you can take out hard money loans which are lent out by private companies. Be careful, as these loans do have higher interest rates and shorter terms."
-    },
-    {
-      "t": "h3",
-      "x": "Common types of financing are as follows:"
-    },
-    {
-      "t": "li",
-      "x": "Traditional Bank Loans: Established businesses with good credit can take advantage of these loans."
-    },
-    {
-      "t": "li",
-      "x": "SBA Loans: Backed by the government, so they're usually more accessible for small businesses."
-    },
-    {
-      "t": "li",
-      "x": "Hard Money Loans: Fastest funding, but usually the most expensive."
-    },
-    {
-      "t": "li",
-      "x": "Business Line of Credit: Flexible funding for ongoing/smaller projects."
-    },
-    {
-      "t": "li",
-      "x": "Commercial Mortgages: for larger projects that include purchasing and renovating a property."
-    },
-    {
-      "t": "p",
-      "x": "Your renovation will pay for itself in other ways, too. With the example of renovations that are more energy efficient, you could save a ton of money on utilities. Some of the financing could be used for eco-friendly construction, which is a renovation that will keep paying you back over time. It could also save you money in other ways, like a more efficient layout that will help people move faster, and make it a better experience for customers and encourage them to buy more. That's why it is smart to make renovations that are good for your business."
-    },
-    {
-      "t": "p",
-      "x": "When your planning, it is a good idea to get quotes from several local renovation companies Winnipeg. Price and service comparisons among Winnipeg renovation contractors can help you get the best deal. Don't just pick the first one you see. Ask about their previous jobs as references. A great builder in Winnipeg will be open about their budget and schedule."
-    },
-    {
-      "t": "p",
-      "x": "Get your goals straightened out before going to a lender. What do you want to accomplish with your renovations? Prepare an estimate on potential costs before your first meeting. Having goals helps a lender financially plan with you and makes it easier for them to provide the funds. More importantly, it keeps you on track."
-    },
-    {
-      "t": "p",
-      "x": "Ultimately you want to better your business, and with the obtaining the right financing, you can do that. There is a lot to gain from optimizing your space and upgrading your out of date facilities. It is essential for businesses that want to improve their properties to understand the financing options available to them in order to save the most on their commercial renovations. Working with reputable commercial renovation services coupled with financing at your disposal will provide you the ultimate services without over spending."
+      "x": "Paying for a commercial renovation is rarely a single loan. Most projects mix money from the business, a lender and sometimes the landlord, and the right mix depends on whether you own or lease, how long you will stay and how much of the cost is equipment rather than construction. This guide compares the main options in Manitoba. It is general information, not financial advice: rates and terms change, so have your lender and accountant review your plan."
     },
     {
       "t": "h2",
-      "x": "Final Thoughts"
+      "x": "What are the main ways to pay for a commercial renovation?"
     },
     {
       "t": "p",
-      "x": "Obtaining financing to make improvements to your investment property does not have to break the bank. We have discussed contacting your hometown banker, SBA loans, private lenders, and even some other creative and less conventional options. Your level of preparation with your plan and your numbers will determine how far you can go. But don't worry; if you need to alter your financing options, remember that the improvements can very possibly lead to further investment opportunities that can accelerate your revenue/profit potential. Feel free to consult with the many professionals that specialize in this sort of thing. They will have many ideas and options available to them that you may not know about."
+      "x": "The common options are a business term loan, a leasehold improvement loan, a business line of credit, a landlord's tenant improvement allowance or other inducements, equipment loans or leases, a term loan under the federal Canada Small Business Financing Program, and phasing the work so it can be paid from cash flow. Most projects combine two or three."
+    },
+    {
+      "t": "table",
+      "caption": "Commercial renovation financing options compared",
+      "head": [
+        "Option",
+        "How it works",
+        "Suits",
+        "Watch for"
+      ],
+      "rows": [
+        [
+          "Business term loan",
+          "A lump sum repaid over a set term from a bank, credit union or BDC; BDC's commercial real estate loan can be used to expand or renovate existing premises",
+          "Owners and established tenants with a defined project",
+          "Security, covenants, prepayment terms"
+        ],
+        [
+          "Leasehold improvement loan",
+          "BDC describes it as a short-term loan, usually amortized over five or six years, for renovating leased space",
+          "Tenants fitting up a new space",
+          "Lenders see little resale value in improvements and focus on cash flow"
+        ],
+        [
+          "Business line of credit",
+          "Borrow and repay as needed up to a limit",
+          "Smaller projects, soft costs, contingency",
+          "Costs can change; keep long-life work on term financing"
+        ],
+        [
+          "Landlord allowance or inducements",
+          "Cash toward renovations, often per square foot, rent-free months or landlord-built work",
+          "Tenants signing or renewing a lease",
+          "Conditions, payment timing, who owns the improvements"
+        ],
+        [
+          "Equipment loan or lease",
+          "Separate financing for kitchen, clinical or production equipment",
+          "Equipment-heavy fit-ups",
+          "End-of-term terms; equipment is often bought outside the construction contract"
+        ],
+        [
+          "Canada Small Business Financing Program",
+          "A term loan from your lender, with the federal government sharing the risk; can cover leasehold improvements",
+          "Small businesses with gross annual revenue of $10 million or less",
+          "The lender decides; ask which costs are eligible"
+        ],
+        [
+          "Phasing from cash flow",
+          "Split the work into stages and pay for each from operating cash",
+          "Businesses that cannot close or borrow much",
+          "Longer overall timeline, some repeated set-up costs"
+        ]
+      ],
+      "note": "Confirm current rates, terms and eligibility with your lender."
+    },
+    {
+      "t": "p",
+      "x": "Energy work can lower the amount you need to finance. Efficiency Manitoba lists business incentives for lighting, building envelope, HVAC and controls and other upgrades; check each program's rules before ordering, because some require approval first."
+    },
+    {
+      "t": "h2",
+      "x": "What is a tenant improvement allowance?"
+    },
+    {
+      "t": "p",
+      "x": "It is money a landlord contributes toward renovating your leased space, often calculated per square foot. Landlords may also offer other inducements, such as rent-free months or work they complete before you move in. An allowance is negotiated as part of the lease, so raise it before you sign, not after the quote arrives."
+    },
+    {
+      "t": "li",
+      "x": "How much is the allowance, and can it pay for design fees, permits and cabling as well as construction?"
+    },
+    {
+      "t": "li",
+      "x": "When is it paid: at completion, in instalments or as a rent credit?"
+    },
+    {
+      "t": "li",
+      "x": "What does the landlord need first, such as approved drawings, permits or invoices?"
+    },
+    {
+      "t": "li",
+      "x": "Which improvements stay with the building when you leave, and must anything be removed?"
+    },
+    {
+      "t": "p",
+      "x": "BDC also advises getting the landlord's consent to your plans before signing. Our guide to [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg) covers the lease side in more detail."
+    },
+    {
+      "t": "h2",
+      "x": "How does the Canada Small Business Financing Program work?"
+    },
+    {
+      "t": "p",
+      "x": "It helps small businesses get term loans from regular lenders by having the federal government share the risk with the lender. Businesses operating in Canada with gross annual revenues of $10 million or less can qualify, and loans can cover new or existing leasehold improvements. You apply through a bank, credit union or caisse populaire, which makes the decision."
+    },
+    {
+      "t": "h2",
+      "x": "What does a lender usually want to see?"
+    },
+    {
+      "t": "p",
+      "x": "A clear project and a clear plan to repay it. Expect to bring a written scope and quote from your contractor, drawings or permit status, a schedule, your lease or proof of ownership, recent financial statements and a cash flow forecast that shows the renovation's effect. The more specific the numbers, the easier the conversation."
+    },
+    {
+      "t": "p",
+      "x": "Ask how the money is paid out. Some lenders advance funds in stages as work progresses and may ask for invoices or a site check at each stage, which should line up with your contractor's payment schedule. Taxes are shown on your written quote; ask your accountant how the renovation should be treated in your books."
+    },
+    {
+      "t": "h2",
+      "x": "How much contingency should you finance?"
+    },
+    {
+      "t": "p",
+      "x": "Enough to cover what nobody can see yet. BDC advises setting aside a contingency fund and leaving buffer room in the timeline, because renovations often run over budget and past deadline. Older buildings, hidden conditions and a change of use call for more; a well-documented space with complete drawings needs less. Arrange it before work starts."
+    },
+    {
+      "t": "p",
+      "x": "Arranging the contingency up front, for example as unused room on a line of credit, is usually easier than asking for more money halfway through. See [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) for what tends to use it up."
+    },
+    {
+      "t": "h2",
+      "x": "Can phasing reduce the money you need up front?"
+    },
+    {
+      "t": "p",
+      "x": "Yes. Splitting a renovation into stages, such as the customer area first and the back of house later, spreads the cost and keeps part of the business earning. The trade-offs are a longer overall timeline and some repeated costs for setting up, protecting finished areas and scheduling inspections, so phase where it genuinely helps cash flow."
+    },
+    {
+      "t": "p",
+      "x": "Bridgeland Builders offers after-hours and weekend scheduling for commercial work, which can let a phased project run without full closures. Ask at the on-site visit which parts of your project can be separated cleanly."
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** Lenders and landlords both want a defined scope and price. [Book a free on-site visit](/book-online) for a free written quote you can take to them, or start with the [instant renovation estimate](/instant-quote) for a ballpark. Learn about our [office renovations](/services/office-renovations) and other [commercial renovation services](/services/commercial-renovations), and weigh the payback with our guide to [commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)."
     }
   ]
 }

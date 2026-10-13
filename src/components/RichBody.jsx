@@ -18,7 +18,8 @@ import Picture from './Picture.jsx';
  * A block with `hidden: true` is skipped. Unknown types with text render as <p>.
  *
  * Inline markup in text: [label](/internal-path) → router <Link>,
- * [label](https://…) → external link (new tab), **bold** → <strong>.
+ * [label](https://…) → external link (new tab), **bold** → <strong>
+ * (links may sit inside bold, and bold inside link labels).
  *
  * Runs of flowing blocks are wrapped in a <div>, with the takeaways box
  * between them — the same structure the post page has always had, so the
@@ -61,7 +62,8 @@ export function renderInline(text, keyPrefix = 'i') {
     if (match[1] !== undefined) {
       nodes.push(renderLink(renderInline(match[1], `${key}-l`), match[2], key));
     } else {
-      nodes.push(<strong key={key}>{match[3]}</strong>);
+      // Bold text can wrap a link: **[label](/path):**
+      nodes.push(<strong key={key}>{renderInline(match[3], `${key}-b`)}</strong>);
     }
     last = match.index + match[0].length;
   }

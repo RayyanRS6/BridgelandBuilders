@@ -181,12 +181,22 @@ const qa = (faqs) => faqs.map((f) => `**Q: ${f.q}**\nA: ${f.a}`).join('\n\n');
 
 // PROJECTS = live service pages' content, each with its `path`.
 const navLabelFor = new Map(LIVE_SERVICE_PAGES.map(({ service }) => [service.path, service.navLabel]));
+// Live, indexable cost guides (hub first), for the full reference.
+const liveCostGuides = LIVE_COST_GUIDES.filter((guide) => routeOf.has(guide.path) && !routeOf.get(guide.path).noindex);
+const costGuideTitle = (guide) => (guide.seo && guide.seo.title ? guide.seo.title.split(' | ')[0] : guide.path);
+const fullCostLines = [
+  keyPage('Renovation costs in Winnipeg', COST_HUB_PATH),
+  costLines,
+].filter(Boolean).join('\n');
 const faqBlocks = [
   SITE_FAQS.length ? `### General questions\n${SITE_URL}/faqs\n\n${qa(SITE_FAQS)}` : null,
   ...PROJECTS.filter((p) => p.faqs && p.faqs.length).map((project) => {
     const heading = navLabelFor.get(project.path) || project.breadcrumb || project.slug;
     return `### ${heading}\n${SITE_URL}${project.path}\n\n${qa(project.faqs)}`;
   }),
+  ...liveCostGuides.filter((guide) => guide.faqs && guide.faqs.length).map(
+    (guide) => `### ${costGuideTitle(guide)}\n${SITE_URL}${guide.path}\n\n${qa(guide.faqs)}`
+  ),
 ].filter(Boolean);
 
 out('llms-full.txt', doc(
@@ -199,6 +209,7 @@ out('llms-full.txt', doc(
   BUSINESS.knowsAbout && BUSINESS.knowsAbout.length &&
     `## Expertise\n${BUSINESS.knowsAbout.map((k) => `- ${k}`).join('\n')}`,
   profileLines && `## Profiles\n${profileLines}`,
+  fullCostLines && `## Renovation cost guides\n${fullCostLines}`,
   faqBlocks.length && `## Frequently asked questions\n\n${faqBlocks.join('\n\n')}`,
   articleLines && `## Articles\n${articleLines}`,
 ));

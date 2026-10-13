@@ -1,0 +1,350 @@
+{
+  "slug": "home-renovation-planning-guide-canada",
+  "status": "published",
+  "title": "Home Renovation Planning in Canada: Guide and Checklist",
+  "metaTitle": "Home Renovation Planning in Canada: Guide and Checklist",
+  "metaDescription": "Plan a home renovation in Canada step by step: goals, budget, permits, timeline, asbestos and radon checks before demolition, and a full checklist.",
+  "excerpt": "A step-by-step plan for Canadian homeowners: set goals and a budget, understand permits and codes, build a realistic timeline, and run the safety checks that belong before demolition.",
+  "date": "2026-10-13",
+  "cats": [
+    "Permits & Planning",
+    "Costs & Budgets"
+  ],
+  "services": [
+    "/services/whole-home-renovations",
+    "/services/kitchen-renovations",
+    "/services/basement-renovations"
+  ],
+  "cluster": "renovation-planning",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Plan a renovation in this order: write down goals and must-haves, set a budget with a contingency, check which permits your municipality requires, get written quotes for the same scope, build a timeline around ordering and inspections, and test for asbestos and radon where relevant before demolition. Deciding early is what keeps the work on schedule.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "National Research Council Canada: Canada's construction system, the context for model codes",
+      "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/canadas-construction-system-context-model-codes",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "National Research Council Canada: Model code adoption across Canada",
+      "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/model-code-adoption-across-canada",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Home renovations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Electrical installations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Plumbing installations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Health Canada: Asbestos and your health",
+      "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Health Canada: Radon, what you need to know",
+      "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radon-what-you-need-to-know.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Canada Revenue Agency: Multigenerational home renovation tax credit (line 45355)",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Natural Resources Canada: Closed — Canada Greener Homes Grant",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg – Information Bulletin 2026-007-B: Building permit requirements for housing",
+      "url": "https://www.winnipeg.ca/media/6116",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "How much contingency should I add to a renovation budget?",
+      "a": "It depends on the age and condition of the home and how much you're opening up. A cosmetic update in a newer home needs less than a basement or whole-home renovation in an older house, where wiring, plumbing or moisture problems can appear after demolition. Ask your contractor which items carry the most uncertainty, and size the contingency around those."
+    },
+    {
+      "q": "What's the first step in planning a home renovation?",
+      "a": "Write down what isn't working and what you need the space to do, then separate must-haves from nice-to-haves. That short brief lets you set a realistic budget and gives every contractor the same project to quote, which makes the quotes comparable. Finish choices come later, once the layout and budget are settled."
+    },
+    {
+      "q": "Do I need a permit to renovate a kitchen or bathroom?",
+      "a": "Sometimes. Replacing cabinets, counters or flooring is usually cosmetic, but moving plumbing, adding circuits or changing walls typically needs permits. In Winnipeg, the City says kitchens and bathrooms may need a building permit, and plumbing and electrical permits are separate. Check with your municipality before you finalize the design."
+    },
+    {
+      "q": "When is the best time of year to renovate in Canada?",
+      "a": "Interior work such as kitchens, bathrooms and basements can go ahead year-round. Exterior work, additions and anything involving foundations or concrete is easier to schedule in warmer months. Whatever the project, start planning several months ahead so design, permits and ordering are finished before the date you'd like work to begin."
+    },
+    {
+      "q": "Should I test for radon before renovating?",
+      "a": "If the work involves a basement or the lowest lived-in floor, yes. Health Canada recommends a long-term test of about three months, ideally in fall or winter, and its guideline is 200 Bq/m³. Testing before you finish a basement means any fix can go in before new walls and flooring cover the slab."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Renovations that run over budget or past their finish date are usually under-planned rather than badly built. This guide sets out the planning steps in order for homeowners anywhere in Canada. Where local rules matter, we use Winnipeg as the example, because that's where we work; your own municipality's rules may differ."
+    },
+    {
+      "t": "h2",
+      "x": "Where do you start when planning a home renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Start with what isn't working and what you need the space to do, not with finishes. List the problems, the must-haves and the nice-to-haves, decide whether you're renovating one room or several, and note anything that's expensive to move, such as a structural wall or the main plumbing stack. That list becomes the brief every contractor quotes against."
+    },
+    {
+      "t": "p",
+      "x": "If you're weighing everything at once against working in phases, our guide to [full versus partial renovations](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) compares the two. Projects that touch several rooms are often planned as a [whole-home renovation](/services/whole-home-renovations) so trades, permits and finishes are coordinated once."
+    },
+    {
+      "t": "h2",
+      "x": "How do you set a home renovation budget in Canada?"
+    },
+    {
+      "t": "p",
+      "x": "Build the budget from the parts of the project rather than one guess: construction, finishes, permits, design or engineering if needed, living costs during the work, and a contingency for what's found behind the walls. Decide the number you're comfortable spending before you collect quotes, then compare each quote against it line by line."
+    },
+    {
+      "t": "table",
+      "caption": "What goes into a renovation budget",
+      "head": [
+        "Budget line",
+        "What it covers",
+        "Planning note"
+      ],
+      "rows": [
+        [
+          "Construction",
+          "Labour, materials, subtrades, site supervision and disposal",
+          "Comes from written quotes for the same scope"
+        ],
+        [
+          "Finishes and allowances",
+          "Cabinets, counters, tile, flooring, fixtures and lighting",
+          "Allowances in a quote should match the finishes you actually want"
+        ],
+        [
+          "Permits and inspections",
+          "Building and trade permit fees set by your municipality",
+          "Check the fee schedule on your municipality's website"
+        ],
+        [
+          "Design and engineering",
+          "Drawings, structural engineering and energy evaluations",
+          "Needed for structural changes, additions and some suites"
+        ],
+        [
+          "Living costs during the work",
+          "Eating out, temporary accommodation and storage",
+          "Larger for kitchen and whole-home projects"
+        ],
+        [
+          "Contingency",
+          "Hidden conditions such as rot, old wiring or moisture",
+          "Older homes warrant a larger cushion; agree in writing how it's used"
+        ],
+        [
+          "Taxes",
+          "Sales taxes on the contract",
+          "Ask for taxes to be shown on every quote so totals compare"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "x": "For Winnipeg price ranges, see our [renovation cost guide](/renovation-cost-winnipeg). If you'll borrow for part of it, read the [home renovation financing guide](/blog/home-renovation-financing-canada) before you lock in the budget."
+    },
+    {
+      "t": "h2",
+      "x": "Do you need a permit to renovate in Canada?"
+    },
+    {
+      "t": "p",
+      "x": "Often, yes. Provinces and territories adopt the building code, most of them based on the National Building Code, and enforcement is usually delegated to municipal building officials who issue permits and inspect the work. In Winnipeg, for example, creating a new bedroom requires a building permit, kitchens, bathrooms and new or larger exterior openings may need one, and painting and flooring don't."
+    },
+    {
+      "t": "p",
+      "x": "Trade work usually has its own permit. In Winnipeg, electrical and plumbing permits go to City-licensed contractors, or to homeowners doing their own work in a single detached home they live in. Check your municipality's website before you finalize the plan, make sure the contract says who applies, and if you're in Winnipeg, start with our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits)."
+    },
+    {
+      "t": "h2",
+      "x": "How long does a home renovation take?"
+    },
+    {
+      "t": "p",
+      "x": "Longer than the construction itself. Allow time for decisions, quotes, permits and ordering before work starts, then the construction period, then a short closeout for deficiencies and final inspections. Lead times for cabinets, windows and custom items often decide the start date, so make those choices early. The table shows each phase and what sets its pace."
+    },
+    {
+      "t": "table",
+      "caption": "Typical renovation phases",
+      "head": [
+        "Phase",
+        "What happens",
+        "What sets the pace"
+      ],
+      "rows": [
+        [
+          "Planning",
+          "Goals, budget, contractor visits and written quotes",
+          "How quickly decisions are made"
+        ],
+        [
+          "Design and permits",
+          "Drawings if needed, finish selections and permit applications",
+          "Project complexity and your municipality's review"
+        ],
+        [
+          "Ordering",
+          "Cabinets, windows, doors, fixtures and specialty items",
+          "Supplier lead times"
+        ],
+        [
+          "Construction",
+          "Demolition through finishing, with inspections at set stages",
+          "Scope, trade availability, inspection booking and what's found behind walls"
+        ],
+        [
+          "Closeout",
+          "Deficiency list, final inspection and warranty documents",
+          "Booking the final inspection"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "x": "For reference, our typical construction periods in Winnipeg, once materials and permits are ready, are two to three weeks for a bathroom, four to six weeks for a kitchen, four to eight weeks for a basement, and eight to sixteen weeks for whole-home renovations and additions."
+    },
+    {
+      "t": "h2",
+      "x": "What safety checks should happen before demolition?"
+    },
+    {
+      "t": "p",
+      "x": "Two checks matter most in older Canadian homes. Asbestos was widely used in homes before 1990, so have suspect materials tested by a professional before anything is disturbed. If you're finishing a basement, test for radon first: levels are generally highest in basements, and Health Canada's guideline is 200 Bq/m³."
+    },
+    {
+      "t": "li",
+      "x": "**Asbestos:** Health Canada lists older plaster, drywall and spackling, floor and ceiling tiles, roofing, pipe insulation and vermiculite insulation among possible sources. Don't disturb vermiculite yourself, and if asbestos is found, hire a qualified removal specialist."
+    },
+    {
+      "t": "li",
+      "x": "**Radon:** Health Canada recommends a long-term test of about three months, ideally in fall or winter. Our guide to [radon testing before finishing a basement](/blog/radon-testing-before-finishing-a-basement) explains the timing."
+    },
+    {
+      "t": "li",
+      "x": "**Moisture and structure:** look for water stains, white mineral deposits and cracks before finishing anything below grade, and have a structural engineer assess significant cracks."
+    },
+    {
+      "t": "h2",
+      "x": "Home renovation checklist"
+    },
+    {
+      "t": "p",
+      "x": "Use this checklist to keep decisions ahead of the work. It runs from first ideas to final payment. Tick each item before moving to the next stage, because most renovation delays trace back to a decision that wasn't made in time."
+    },
+    {
+      "t": "table",
+      "caption": "Home renovation checklist for Canadian homeowners",
+      "head": [
+        "Stage",
+        "Checklist item",
+        "Done when"
+      ],
+      "rows": [
+        [
+          "Goals",
+          "List the problems, must-haves and nice-to-haves",
+          "One page every contractor can quote from"
+        ],
+        [
+          "Budget",
+          "Set a total, including contingency and living costs",
+          "You know your ceiling before quotes arrive"
+        ],
+        [
+          "Financing",
+          "Confirm savings, a line of credit or lender approval",
+          "Funds cover the deposit and stage payments"
+        ],
+        [
+          "Contractors",
+          "Get two or three written quotes for the same scope",
+          "Quotes compare line by line"
+        ],
+        [
+          "Verification",
+          "Check the workers compensation clearance, insurance and business registration",
+          "Documents are on file"
+        ],
+        [
+          "Contract",
+          "Scope, allowances, schedule, payments, change process, warranty and who pulls permits",
+          "Signed by both parties"
+        ],
+        [
+          "Permits",
+          "Building and trade permits issued",
+          "Permit numbers are in your file"
+        ],
+        [
+          "Safety",
+          "Asbestos testing for older materials; radon test before finishing a basement",
+          "Results are in hand"
+        ],
+        [
+          "Ordering",
+          "Long-lead items ordered",
+          "Delivery dates fit the schedule"
+        ],
+        [
+          "Living plan",
+          "Decide whether to stay or move out; set up a temporary kitchen or bathroom",
+          "In place before demolition"
+        ],
+        [
+          "Construction",
+          "Regular updates; changes approved in writing",
+          "Inspections passed at each stage"
+        ],
+        [
+          "Closeout",
+          "Deficiency walk-through, final inspection, warranty and manuals",
+          "Final payment made"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "Are there grants or tax credits for renovating in Canada?"
+    },
+    {
+      "t": "p",
+      "x": "A few. Federal tax credits help with building a secondary unit so a senior or an adult eligible for the disability tax credit can live with a relative, and with accessibility work. Some provinces and utilities offer energy rebates, and the Canada Greener Homes Grant is closed. In Manitoba, see [our Manitoba grants and tax credits guide](/blog/manitoba-renovation-tax-credits-rebates)."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Planning a renovation in Winnipeg or a nearby community, such as a [kitchen renovation](/services/kitchen-renovations) or [basement development](/services/basement-renovations)? [Book a free on-site visit](/book-online). We'll walk through your list, flag likely permits and hidden-condition risks, and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote)."
+    }
+  ]
+}

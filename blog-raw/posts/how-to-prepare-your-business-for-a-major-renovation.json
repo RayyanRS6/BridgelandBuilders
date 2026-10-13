@@ -1,128 +1,265 @@
 {
   "slug": "how-to-prepare-your-business-for-a-major-renovation",
   "status": "published",
-  "title": "How to Prepare Your Business for a Major Renovation",
-  "excerpt": "Learn how to prepare your business for a major renovation. Discover tips on planning, minimizing disruption, and ensuring a smooth transition for a successful outcome.",
+  "title": "Commercial Renovation Planning in Winnipeg: A Business Guide",
+  "metaTitle": "Commercial Renovation Planning in Winnipeg | Bridgeland",
+  "metaDescription": "Plan a commercial renovation in Winnipeg without losing customers: timeline stages, phasing, after-hours work, staff and customer notices, and occupancy.",
+  "excerpt": "How to plan a major renovation around a business that needs to keep running: the stages from site visit to occupancy permit, keeping customers informed, and a checklist to start with.",
   "date": "2026-07-29",
+  "updated": "2026-10-13",
   "cats": [
-    "Commercial Renovations"
+    "Commercial",
+    "Permits & Planning"
   ],
   "services": [
-    "/services/commercial-renovations"
+    "/services/commercial-renovations",
+    "/services/medical-dental-office-renovations",
+    "/services/retail-renovations"
   ],
-  "cluster": "",
+  "cluster": "commercial-planning",
   "author": "",
   "reviewedBy": "",
-  "answer": "",
+  "answer": "Start from the date you need the space back and work backwards: written scope and quote, drawings, permits, construction in phases or after hours, inspections and the occupancy permit. Tell staff and customers early, keep accessible routes open or announce when they are not, and plan restocking, training and reopening for after the City allows occupancy.",
   "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
   "heroAlt": "Business renovation progress with tools and sunlight.",
-  "sources": [],
-  "faqsTitle": "Questions We Get Most Often",
+  "sources": [
+    {
+      "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+      "url": "https://www.winnipeg.ca/media/6131",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Commercial inspections",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+      "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+      "url": "https://www.winnipeg.ca/media/6330",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
+      "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Workplace Safety and Health: Asbestos containing material FAQ",
+      "url": "https://www.gov.mb.ca/labour/safety/wsh_faqs_asbestos.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "BDC: Leasehold improvements, the 8 steps to follow",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Questions about renovating a business",
   "faqs": [
     {
-      "q": "How will I be able to keep my business open when the renovations are taking place?",
-      "a": "Doing renovations after hours is a good way to keep the business open. Letting customers and employees know the plan and your schedule is critical so that employees are able to work before and after renovations. You will need to schedule some time when the business will be closed to complete major renovations. You may be able to do renovations in phases so that some areas remain open as others are closed."
+      "q": "How do I keep my business open while renovating?",
+      "a": "Phase the work so part of the space stays open, schedule noisy or disruptive tasks for evenings and weekends within the City's noise hours, and separate work areas from customers. Tell customers early which entrance and services are available. Bridgeland Builders offers after-hours and weekend scheduling for commercial work and sends a progress update every week."
     },
     {
-      "q": "What do I do first before any work begins?",
-      "a": "You need to start by having a solid plan. Planning means understanding what you want to do, how much money you can allocate to the plan (create a budget), and how long you estimate the work will take. This document would be critical for conversations with contractors to ensure they remain focused."
+      "q": "What should I do first?",
+      "a": "Write down why you are renovating, what must stay open and when you need the space back, then book an on-site visit before committing to a design or lease change. That visit shows what the building allows and which approvals apply, and it leads to a written quote you can plan and finance around."
     },
     {
-      "q": "Why do I need to consider how renovations affect day-to-day business operations?",
-      "a": "Renovations can impact how your business operates. You may have to shuffle work locations, and people may have to occupy other positions for a while. Planning how the renovations may impact your employees and customers can help you mitigate and avoid negative operations impacts."
+      "q": "What commonly delays a commercial renovation?",
+      "a": "Late design changes, plan review comments that take time to answer, hidden conditions such as asbestos or old wiring, long-lead equipment, and inspections that are not requested in time. Many of these shrink when the design is finished and the building investigated before work starts, and when each inspection is requested as soon as its stage is ready."
     },
     {
-      "q": "Do I need to consider the future benefits of new renovations?",
-      "a": "Yes, literally almost every business decision involves a consideration for return on investment (ROI). Investments such as roof replacements may incur immediate high costs, but lower future expenses, such as energy bills, and even increase your property value. Smart renovations with a delayed but substantial positive impact should be prioritized."
+      "q": "Do I have to close if our accessible entrance is affected?",
+      "a": "Not necessarily, but you must tell people. Manitoba's Accessible Customer Service Standard requires organizations with at least one employee to let the public know when and why an accessibility feature is unavailable. Where you can, offer an alternative accessible route or way to get service, and post the notice at the entrance and online."
     },
     {
-      "q": "What are some common issues that can delay renovations?",
-      "a": "During renovations, things can go wrong. Unexpected issues, such as mold or old wiring, can arise. It is also possible for permitting to take longer than anticipated. Additionally, any changes in your plans, material delays, or scope changes can lead to delays."
-    },
-    {
-      "q": "How do I choose the right contractor for my business renovation?",
-      "a": "Choose a contractor with business renovation experience like yours. Ensure they communicate well, have knowledge of the local building codes, and can be problem-solvers. It is also beneficial to ask for samples of their previous work."
+      "q": "How do I choose the right contractor for a business renovation?",
+      "a": "Look for commercial experience similar to your project, a clear written quote, a realistic schedule and a plan for working around your hours. Ask how permits, inspections and progress updates are handled. Our guide on [how to choose a renovation contractor](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) has a full checklist of questions."
     }
   ],
   "blocks": [
     {
-      "t": "img",
-      "src": "https://static.wixstatic.com/media/48172a_293589079ef34e179ec253a072c06a25~mv2.png",
-      "alt": "Business renovation progress with tools and sunlight.",
-      "w": 1366,
-      "h": 768,
-      "hidden": true
-    },
-    {
       "t": "p",
-      "x": "Preparing for a large renovation at your business involves more than selecting paint and furniture. Proper planning minimizes disruptions and stress during the process. This guide provides steps to manage operations effectively throughout the project."
-    },
-    {
-      "t": "takeaways",
-      "title": "Key Takeaways",
-      "items": [
-        "Create a scope of work for your renovations, including changes, timelines, and budget. This keeps everyone on the same page.",
-        "Prepare for the changes renovations will cause in your business. You will likely have to adapt your processes.",
-        "Manage customer and employee expectations by communicating the changes early. This will improve buy in and all but guarantee that renovations will create disruptions.",
-        "Understand that some contractors will work off of a lot of hours to accommodate you. You may need to arrange schedules to accommodate this.",
-        "Separate the renovation into multiple smaller stages. This way, you can avoid shutting down the entire business at once."
-      ]
-    },
-    {
-      "t": "img",
-      "src": "https://static.wixstatic.com/media/48172a_d81d6d00672c4eb28bb33f5527e02b4e~mv2.png",
-      "alt": "Business renovation preparation with construction barriers and active staff.",
-      "w": 1366,
-      "h": 768,
-      "hidden": true
-    },
-    {
-      "t": "p",
-      "x": "It's understandable that you, as a business owner, may feel anxiety when it comes to preparing for the disruptions a major renovation will cause. It is more than just picking out colors. It is about knowing how to manage business operations while the work is being carried out. Imagine preparation like planning for a vacation. You don't just show up at the airport without doing any prep work."
-    },
-    {
-      "t": "p",
-      "x": "To begin, you will need a constructive blueprint. This is based on questions such as: what is the target change? Why is it being done? What is the budget? Perhaps you want to maximize space, modernize the look, or optimize the functionality? This makes collating your thoughts a lot easier for contracting. Which brings me to the next point: securing the right contractor is pivotal. You are going to need to vet a few renovation companies in Winnipeg that have a background with commercial spaces. A knowledgeable contractor for your office renovation can turn a lot of the pains into manageable tasks."
-    },
-    {
-      "t": "h3",
-      "x": "Here are some adjustments that need to be made before the renovation begins:"
-    },
-    {
-      "t": "li",
-      "x": "Identify your objectives: What is the purpose of the renovations? Improving the flow? A sleek, updated look? More room to operate?"
-    },
-    {
-      "t": "li",
-      "x": "Establish a practical budget: Include not just the estimated building costs, but also construction delays, business relocation, and potential lost revenue."
-    },
-    {
-      "t": "li",
-      "x": "Set a construction schedule with your contractor: Find a timeline that will create the least amount of business disturbance."
-    },
-    {
-      "t": "li",
-      "x": "Prepare your staff: Let your team know what changes are coming and how that will impact their work. You might be surprised at how useful their feedback is."
-    },
-    {
-      "t": "li",
-      "x": "Prepare your clients: Tell your customers of any alterations to their access to your business, possible hours of closure, or any complete closure of your business."
-    },
-    {
-      "t": "p",
-      "x": "People tend to underestimate the impact of the renovations. It is easy to keep your focus on the new areas that are being built, but not concentrating on how your staff and clients will adjust to the construction will create a lot of frustration. Noise, dust piles, limited areas to move, and the chance that your business will need to move are all possible construction impacts."
-    },
-    {
-      "t": "p",
-      "x": "Think about how you will get the work done. Will it be possible to break the work up into phases? Will there be strategies to contain disruptive work after hours? Some office renovation services will work outside of your business hours to help you remain open. It may be more expensive, but it will help you avoid losing business. For extensive commercial renovations, Winnipeg often has opportunities to divide large projects into sections so that only part of your business is disrupted at a time. This allows you to continue serving your customers."
+      "x": "A major renovation tests a business twice: once in the construction, and again in keeping customers, staff and revenue intact while it happens. Businesses that come through well treat the renovation as a project with its own plan, not something that happens around them. This guide sets out the stages of a commercial renovation in Winnipeg, how to stay open through them, and what to settle before the first day of work."
     },
     {
       "t": "h2",
-      "x": "Final Thoughts"
+      "x": "What does a commercial renovation project timeline look like?"
     },
     {
       "t": "p",
-      "x": "Preparing your business for a major renovation involves a lot of careful planning. You need to consider the costs, the schedule, and the impact on your team and your customers. Out of the challenges and frustrations, a great new space will bring many benefits. A renovated space will improve the image of your business, the working environment for your employees, and will possibly attract new customers. Plan for good communication, prepare a backup plan, and hire an experienced contractor. With some effort, you will achieve a great end result!"
+      "x": "Most projects move through the same stages: site visit and scope, design and drawings, permits, ordering and investigation, construction with progress inspections, final inspections and the occupancy permit, then move-in and deficiency work. How long each stage takes depends on the scope and approvals, so ask for a schedule alongside your written quote."
+    },
+    {
+      "t": "table",
+      "caption": "Commercial renovation stages and your role",
+      "head": [
+        "Stage",
+        "What happens",
+        "Your role",
+        "What can hold it up"
+      ],
+      "rows": [
+        [
+          "1. Site visit and scope",
+          "Walk-through, goals, dates that cannot move",
+          "Share hours, peak times and your deadline",
+          "Unclear goals or lease terms"
+        ],
+        [
+          "2. Design and drawings",
+          "Layout, finishes, sealed drawings if complex",
+          "Approve layout and finishes",
+          "Late design changes"
+        ],
+        [
+          "3. Permits",
+          "Building and trade permits; development, health or liquor approvals where needed",
+          "Sign owner and landlord forms",
+          "Plan review comments"
+        ],
+        [
+          "4. Pre-construction",
+          "Ordering, asbestos inventory in older buildings, notices",
+          "Plan staff, customers and IT",
+          "Long-lead items"
+        ],
+        [
+          "5. Construction",
+          "Phased or after-hours work, progress inspections",
+          "Keep access routes and notices current",
+          "Hidden conditions, changes"
+        ],
+        [
+          "6. Occupancy",
+          "Final inspections, professional certifications, occupancy permit",
+          "Hold restocking and training until approved",
+          "Deficiencies found at inspection"
+        ],
+        [
+          "7. Reopening",
+          "Furniture, stock, equipment, deficiency list",
+          "Reopen and gather feedback",
+          "Late deliveries"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "How do you keep your business open during a renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Phase the work so part of the space keeps operating, move disruptive tasks to evenings and weekends, and separate work areas from customers with temporary walls and controlled access. If a full closure is unavoidable, make it as short as possible by finishing design, approvals and ordering before the closure starts."
+    },
+    {
+      "t": "p",
+      "x": "Two Winnipeg rules shape this. Within 150 metres of a home, the City allows loud construction work only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so loud work cannot run overnight near homes. And the City's occupancy bulletin says the general contractor is responsible for the safety of everyone entering the construction site before the occupancy permit is issued, so keep customers and staff out of active work areas."
+    },
+    {
+      "t": "p",
+      "x": "Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps, and sends a progress update every week so you can plan staffing around the next phase. Clinics have extra constraints around patients and accessibility; see our [medical and dental office renovations](/services/medical-dental-office-renovations)."
+    },
+    {
+      "t": "h2",
+      "x": "What should you tell staff and customers?"
+    },
+    {
+      "t": "p",
+      "x": "Tell them early and be specific: which areas close and when, how to get in, what hours change, and who to contact. Staff need the schedule, temporary work arrangements and safety rules. Customers need clear signs, website and social updates, and notice of any accessibility feature that will be out of use."
+    },
+    {
+      "t": "p",
+      "x": "That last point is a requirement, not a courtesy. Manitoba's Accessible Customer Service Standard applies to every organization with at least one employee and includes letting the public know when and why an accessibility feature is unavailable. The Manitoba Accessibility Office publishes a notice of service disruption template you can adapt."
+    },
+    {
+      "t": "li",
+      "x": "Update your hours on your website, social accounts and online listings before each phase."
+    },
+    {
+      "t": "li",
+      "x": "Post signs showing the open entrance, the accessible route and any temporary service point."
+    },
+    {
+      "t": "li",
+      "x": "Give staff a one-page schedule of what closes when, and who to call with site questions."
+    },
+    {
+      "t": "li",
+      "x": "Plan your reopening message for after the occupancy permit, not before."
+    },
+    {
+      "t": "h2",
+      "x": "How should you budget for disruption?"
+    },
+    {
+      "t": "p",
+      "x": "Add the costs of operating through a renovation to the construction budget: sales lost during closures, temporary space or storage, overtime, moving and IT work, extra cleaning, and rent paid while you cannot trade. Then add a contingency. BDC advises setting aside a contingency fund and buffer time, because renovations often run over budget and past deadline."
+    },
+    {
+      "t": "p",
+      "x": "Our guides to [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) and [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) go deeper on the construction budget and how to pay for it."
+    },
+    {
+      "t": "h2",
+      "x": "When can you move back in?"
+    },
+    {
+      "t": "p",
+      "x": "When the City has issued an interim or final building occupancy permit for the renovated area, where one is required. That needs progress inspections completed to the final stage, plus professional certifications if an architect or engineer was involved. Until then, the City counts stocking shelves, training staff, meeting clients and conducting business as occupying the space."
+    },
+    {
+      "t": "p",
+      "x": "Construction and the delivery and installation of fixed equipment and furniture are allowed before the permit, but stock, supplies and personal belongings are not, so keep stock off-site and schedule computer and printer installation, staff training and any soft opening for after it. Outside Winnipeg, check the equivalent rules with your municipality's permit office."
+    },
+    {
+      "t": "h2",
+      "x": "Checklist before the first day of work"
+    },
+    {
+      "t": "oli",
+      "x": "Confirm the lease allows the work, and get the landlord's consent and any building rules in writing."
+    },
+    {
+      "t": "oli",
+      "x": "Write down your goals, the dates that cannot move and the date you need the space back."
+    },
+    {
+      "t": "oli",
+      "x": "Book an on-site visit and get a written quote with the scope, exclusions and a proposed schedule."
+    },
+    {
+      "t": "oli",
+      "x": "List every approval: building and trade permits, a development permit if the use changes, and health, liquor or X-ray approvals where they apply."
+    },
+    {
+      "t": "oli",
+      "x": "In an older building, get the asbestos inventory before demolition is scheduled; where asbestos may be present, Manitoba requires one before work begins."
+    },
+    {
+      "t": "oli",
+      "x": "Agree the phasing plan and which work happens after hours."
+    },
+    {
+      "t": "oli",
+      "x": "Prepare staff and customer notices, including any accessibility disruption notice."
+    },
+    {
+      "t": "oli",
+      "x": "Set your reopening date after the expected occupancy permit, not before it."
+    },
+    {
+      "t": "p",
+      "x": "For sector-specific steps, see our guides to [clinic renovation permits](/blog/clinic-renovation-permits-winnipeg), [restaurant renovation permits](/blog/restaurant-renovation-permits-winnipeg) and [office fit-up planning](/blog/office-fit-up-lease-planning-winnipeg)."
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. You can also start with the [instant renovation estimate](/instant-quote) or see our [commercial renovation services](/services/commercial-renovations)."
     }
   ]
 }

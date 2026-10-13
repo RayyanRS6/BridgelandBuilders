@@ -9,7 +9,7 @@ const SERVICES = [
     title: 'Residential Services',
     to: '/services#residential',
     action: 'View residential services',
-    text: 'Need a new kitchen? Bathroom? Or maybe it’s time to finally redo the whole house? We’ve done it all. What matters most to us is making your place feel like home. We’re a Winnipeg Manitoba crew that people trust because we do the job right.',
+    text: 'Kitchens, bathrooms, basement development, whole-home renovations and home additions. We start with a free on-site visit and a written quote, and coordinate the permits and inspections, so you know the plan and the price before any work begins.',
   },
   {
     tag: 'Commercial',
@@ -18,7 +18,7 @@ const SERVICES = [
     title: 'Commercial Services',
     to: '/services#commercial',
     action: 'View commercial services',
-    text: 'Your workspace should work for you. We build offices, shops, and restaurants that look good, function well, and leave the right impression. Local businesses in Winnipeg come to Bridgeland Builders because they know we’ll deliver without the runaround.',
+    text: 'Offices, retail stores, restaurants, cafés and bars, hotels, and medical, dental and physiotherapy clinics. We plan around your lease dates and opening hours, can work after hours or on weekends, and send you a progress update every week.',
   },
   {
     tag: 'Specialty',
@@ -27,7 +27,7 @@ const SERVICES = [
     title: 'Other Services',
     to: '/services#additional',
     action: 'View additional services',
-    text: 'Doesn’t matter if it’s fixing something small or redoing the whole place — we put the same care into it either way.',
+    text: 'Flooring, windows and doors, exterior painting, masonry and stucco, and demolition, on their own or as part of a larger renovation of your home or business.',
   },
 ];
 
@@ -36,9 +36,9 @@ export default function Services() {
     <section className="services-section" id="services">
       <div className="container">
         <div className="section-header center reveal">
-          <span className="section-tag">Our Expertise</span>
-          <h2 className="section-title">Our Services</h2>
-          <p className="section-desc">We don’t overcomplicate things. We just focus on what matters to you and get it done right.</p>
+          <span className="section-tag">Our Services</span>
+          <h2 className="section-title">Renovation services in Winnipeg</h2>
+          <p className="section-desc">For homes and businesses in Winnipeg and nearby communities, from a single bathroom to a full commercial fit-up.</p>
         </div>
 
         <div className="services-grid">

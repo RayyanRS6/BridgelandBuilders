@@ -139,6 +139,10 @@ export default function BlogPostPage() {
   const Body = postBodyComponent(post.slug);
   const related = getRelatedPosts(post);
   const updated = post.updated && post.updated !== post.date ? post.updated : null;
+  // Only a real hero photo is shown here. A post without one has a title card
+  // (scripts/build-images.mjs) for its og:image and blog card, but on the post
+  // itself it would repeat the H1, so the article starts with the text.
+  const heroSrc = post.hero ? post.heroSrc || post.hero : null;
 
   // Secondary CTA: the post's main service page once it is live, else the
   // services hub (e.g. general contracting while its page is a draft).
@@ -194,18 +198,20 @@ export default function BlogPostPage() {
 
       <article className="blog-article-section">
         <div className="container blog-article-container">
-          <figure className="blog-hero-figure hero-rise">
-            <Picture
-              avifSrcSet={post.heroAvifSrcSet}
-              srcSet={post.heroSrcSet}
-              sizes={ARTICLE_IMAGE_SIZES}
-              src={post.heroSrc || post.hero}
-              alt={post.heroAlt}
-              width="880"
-              height="495"
-              fetchpriority="high"
-            />
-          </figure>
+          {heroSrc && (
+            <figure className="blog-hero-figure hero-rise">
+              <Picture
+                avifSrcSet={post.heroAvifSrcSet}
+                srcSet={post.heroSrcSet}
+                sizes={ARTICLE_IMAGE_SIZES}
+                src={heroSrc}
+                alt={post.heroAlt}
+                width="880"
+                height="495"
+                fetchpriority="high"
+              />
+            </figure>
+          )}
 
           <div className="blog-article-body">
             <Suspense fallback={<div className="blog-body-loading" aria-busy="true" />}>

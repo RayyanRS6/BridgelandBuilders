@@ -1,0 +1,365 @@
+{
+  "slug": "manitoba-renovation-tax-credits-rebates",
+  "status": "published",
+  "title": "Home Renovation Grants and Tax Credits in Manitoba",
+  "metaTitle": "Home Renovation Grants and Tax Credits in Manitoba",
+  "metaDescription": "Which renovation tax credits, rebates and loans Manitoba homeowners can still use, which programs have closed, and how to avoid losing a rebate.",
+  "excerpt": "A status check of the renovation tax credits, rebates and loans Manitoba homeowners can still use, the programs that have closed, and the steps that keep a claim valid.",
+  "date": "2026-10-13",
+  "cats": [
+    "Money & Rebates"
+  ],
+  "services": [
+    "/services/basement-renovations",
+    "/services/basement-suites",
+    "/services/bathroom-renovations"
+  ],
+  "cluster": "renovation-money",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates for insulation, windows and doors, Manitoba Hydro's on-bill Home Energy Efficiency Loan, and CMHC-insured refinancing to build a suite. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "Canada Revenue Agency: Multigenerational home renovation tax credit (line 45355)",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Canada Revenue Agency: How to claim the MHRTC",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc/how-claim-mhrtc.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Canada Revenue Agency: Home accessibility expenses (line 31285)",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31285-home-accessibility-expenses.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Canada Revenue Agency: Budget 2025, CRA information on select measures (home accessibility and medical expense credits)",
+      "url": "https://www.canada.ca/en/revenue-agency/programs/about-canada-revenue-agency-cra/federal-government-budgets/budget-2025-cra-information-select-measures.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Department of Finance Canada: Mortgage insurance rule changes to enable homeowners to add secondary suites",
+      "url": "https://www.canada.ca/en/department-finance/news/2024/10/mortgage-insurance-rule-changes-to-enable-homeowners-to-add-secondary-suites.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "CMHC: Refinance for building secondary suites (fact sheet)",
+      "url": "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-refinance.pdf",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Home Insulation Rebate",
+      "url": "https://efficiencymb.ca/my-home/home-insulation-rebate/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Window and door upgrades",
+      "url": "https://efficiencymb.ca/my-home/windows-and-doors/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: EnerGuide home evaluation rebate",
+      "url": "https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Home Energy Retrofits",
+      "url": "https://efficiencymb.ca/my-home/home-energy-retrofit-program/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Hydro: Home Energy Efficiency Loan",
+      "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Finance: Green Energy Equipment Tax Credit",
+      "url": "https://www.gov.mb.ca/finance/tao/green.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Natural Resources Canada: Closed — Canada Greener Homes Grant",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Natural Resources Canada: Canada Greener Homes Loan (closed)",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Basement Flooding Protection Subsidy Program (cancelled)",
+      "url": "https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Budget 2025, Annex 3: Canada Secondary Suite Loan program will not be implemented",
+      "url": "https://budget.canada.ca/2025/report-rapport/anx3-en.html",
+      "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Housing: Repair and renovation programs",
+      "url": "https://www.gov.mb.ca/housing/progs/repair.html",
+      "accessed": "2026-10-13"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Is there a home renovation grant in Manitoba?",
+      "a": "There's no general renovation grant for Manitoba homeowners. The help that exists is targeted: Efficiency Manitoba rebates for energy upgrades, federal tax credits for multigenerational suites and accessibility work, and Manitoba Hydro's on-bill loan. Manitoba Housing says its renovation and repair programs are no longer available. Check each program's own page, because offers and amounts change."
+    },
+    {
+      "q": "Can I still get the Canada Greener Homes Grant?",
+      "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Canada Greener Homes Loan is closed too because its funding is fully committed. For energy upgrades in Manitoba today, look at Efficiency Manitoba's rebates and Manitoba Hydro's Home Energy Efficiency Loan, both of which need approval before any work starts."
+    },
+    {
+      "q": "Does the City of Winnipeg still pay for backwater valves?",
+      "a": "No. The City's Basement Flooding Protection Subsidy Program didn't receive funding for 2017 and was cancelled by City Council. Backwater valves and sump pits still need a permit and inspection in Winnipeg, and the City recommends having both, so they're worth pricing into a basement renovation even without a subsidy."
+    },
+    {
+      "q": "Can I claim both the Multigenerational and Home Accessibility credits?",
+      "a": "Not for the same expense. CRA says you can't claim one expense under more than one of these credits. If a project includes both a new secondary unit and separate accessibility work, keep the costs clearly separated on invoices, and ask your accountant how to split the claim before you file."
+    },
+    {
+      "q": "Is the Canada Secondary Suite Loan Program available?",
+      "a": "No. It was announced in 2024, but Budget 2025 states that the program, which was not yet operational, will not be implemented. The federal option for financing a suite is CMHC-insured refinancing, which lets approved lenders refinance up to 90% of the home's value, including the value the new suite adds, subject to the program's conditions."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "callout",
+      "title": "General information, not tax advice",
+      "x": "Program details were checked on official government and utility websites on October 13, 2026. Rules and amounts change, and eligibility depends on your situation, so confirm with the program and with an accountant before you rely on a credit or rebate."
+    },
+    {
+      "t": "p",
+      "x": "Renovation help in Manitoba changed a lot between 2024 and 2026. Well-known federal programs closed, a promised federal suite loan was dropped, and the help that remains mostly comes through your tax return, Efficiency Manitoba, Manitoba Hydro or your mortgage lender. Here's where things stand, with a link to the official page for each program."
+    },
+    {
+      "t": "h2",
+      "x": "Which renovation programs are open in Manitoba?"
+    },
+    {
+      "t": "p",
+      "x": "As of October 13, 2026, the programs below are listed as available on their official pages. Each has its own eligibility rules, and the Efficiency Manitoba rebates and the Manitoba Hydro loan need approval before you buy materials or start work. Amounts are what each program publishes; what you receive depends on your project and tax situation."
+    },
+    {
+      "t": "table",
+      "caption": "Open or listed as available (checked October 13, 2026)",
+      "head": [
+        "Program",
+        "Who it helps",
+        "Amount",
+        "Status"
+      ],
+      "rows": [
+        [
+          "[Multigenerational Home Renovation Tax Credit (federal)](https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html)",
+          "Households creating a self-contained secondary unit so a senior, or an adult eligible for the disability tax credit, can live with a relative",
+          "Refundable credit on up to $50,000 of qualifying costs per renovation; CRA lists 14.5% (up to $7,250) for 2025",
+          "Open, claimed on your tax return (line 45355)"
+        ],
+        [
+          "[Home Accessibility Tax Credit (federal)](https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-31285-home-accessibility-expenses.html)",
+          "People 65 or older, or eligible for the disability tax credit, and certain family members",
+          "Non-refundable credit on up to $20,000 of eligible expenses per year",
+          "Open, claimed on your tax return (line 31285)"
+        ],
+        [
+          "[CMHC-insured refinance for secondary suites](https://www.canada.ca/en/department-finance/news/2024/10/mortgage-insurance-rule-changes-to-enable-homeowners-to-add-secondary-suites.html)",
+          "Owners adding a suite (up to four units in total), with the owner or a close relative living in one unit",
+          "Insured refinancing up to 90% of the as-improved value, which must be under $2 million; up to 30-year amortization",
+          "Available through approved lenders since January 2025"
+        ],
+        [
+          "[Efficiency Manitoba Home Insulation Rebate](https://efficiencymb.ca/my-home/home-insulation-rebate/)",
+          "Owners of detached, semi-detached and mobile or modular homes on a permanent foundation, with Manitoba Hydro service",
+          "$0.03 to $0.15 per square foot for each R-value added, depending on the area",
+          "Listed; approval needed before work"
+        ],
+        [
+          "[Efficiency Manitoba Windows and Doors Rebate](https://efficiencymb.ca/my-home/windows-and-doors/)",
+          "Homeowners and landlords",
+          "$100 per ENERGY STAR certified triple-pane window or door ($300 for income-qualified households)",
+          "Listed"
+        ],
+        [
+          "[Efficiency Manitoba EnerGuide evaluation rebate](https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/)",
+          "Owners planning at least one efficiency upgrade within 12 months",
+          "$400 toward a pre-retrofit EnerGuide evaluation",
+          "Listed"
+        ],
+        [
+          "[Efficiency Manitoba Home Energy Retrofits](https://efficiencymb.ca/my-home/home-energy-retrofit-program/)",
+          "Owner-occupied detached homes, duplexes and triplexes doing deep energy renovations",
+          "$75 per gigajoule of energy saved, and $150 per gigajoule beyond a typical new-home rating",
+          "Listed; apply and complete an EnerGuide evaluation before work"
+        ],
+        [
+          "[Manitoba Hydro Home Energy Efficiency Loan](https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/)",
+          "Homeowners making qualifying energy upgrades through a participating contractor or retailer",
+          "Up to $12,500 per residence; ground source heat pumps and solar PV can be financed up to $20,000, with all loans combined capped at $20,000. Repaid on your energy bill",
+          "Listed; approval needed before work or purchases"
+        ],
+        [
+          "[Manitoba Green Energy Equipment Tax Credit](https://www.gov.mb.ca/finance/tao/green.html)",
+          "Owners installing a geothermal heat pump system",
+          "15% of the system's capital cost other than the heat pump when the installer is certified by the Manitoba Geothermal Energy Alliance, plus 7.5% on heat pumps made in Manitoba",
+          "Listed by Manitoba Finance (no date shown); confirm current availability with Manitoba Finance"
+        ]
+      ],
+      "note": "Status as published on each official page on the checked date. Interest rates are not shown; ask Manitoba Hydro for current loan terms."
+    },
+    {
+      "t": "table",
+      "caption": "Closed or not available (checked October 13, 2026)",
+      "head": [
+        "Program",
+        "Who it helped",
+        "Amount",
+        "Status"
+      ],
+      "rows": [
+        [
+          "[Canada Greener Homes Grant](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant)",
+          "Homeowners doing energy retrofits",
+          "None",
+          "Closed"
+        ],
+        [
+          "[Canada Greener Homes Loan](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan)",
+          "Homeowners financing energy retrofits",
+          "None",
+          "Closed: funding fully committed, new applications can't be approved"
+        ],
+        [
+          "[City of Winnipeg Basement Flooding Protection Subsidy](https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm)",
+          "Homeowners installing backwater valves and sump pits",
+          "None",
+          "Cancelled: no funding from 2017, cancelled by City Council"
+        ],
+        [
+          "[Canada Secondary Suite Loan Program](https://budget.canada.ca/2025/report-rapport/anx3-en.html)",
+          "Homeowners building suites (announced, never launched)",
+          "None",
+          "Not available: Budget 2025 says it will not be implemented"
+        ],
+        [
+          "[Manitoba Housing renovation and repair programs](https://www.gov.mb.ca/housing/progs/repair.html)",
+          "Homeowners needing repair assistance",
+          "None",
+          "No longer available"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "How does the Multigenerational Home Renovation Tax Credit work?"
+    },
+    {
+      "t": "p",
+      "x": "It's a refundable federal credit for building a self-contained secondary unit, such as a basement suite, so a senior or an adult who is eligible for the disability tax credit can live with a relative. You can claim up to $50,000 of qualifying costs per completed renovation, in the tax year the renovation is finished."
+    },
+    {
+      "t": "p",
+      "x": "CRA's page for the 2025 tax year lists the credit at 14.5%, or up to $7,250 per claim. Federal credit rates moved with the 2025 and 2026 income tax changes, so check CRA's page for the year you file. The renovation period ends when the work is complete, for example when it passes final inspection, which is one more reason to have the permit in place."
+    },
+    {
+      "t": "p",
+      "x": "You can't claim the same expense under more than one credit, and expenses are reduced by any related assistance you receive. If you're planning a suite, read our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) before you design it, and see how we approach [basement development](/services/basement-renovations)."
+    },
+    {
+      "t": "h2",
+      "x": "What counts for the Home Accessibility Tax Credit?"
+    },
+    {
+      "t": "p",
+      "x": "Renovations that help a senior or a person eligible for the disability tax credit get into and move around their home, or that reduce the risk of harm, can qualify. CRA's examples include wheelchair ramps, walk-in bathtubs, wheel-in showers and grab bars. Up to $20,000 of eligible expenses can be claimed per year, and that cap applies per home when more than one person qualifies."
+    },
+    {
+      "t": "li",
+      "x": "**Usually eligible:** paid work by an electrician, plumber, carpenter or architect, plus building materials, fixtures, equipment rentals, building plans and permits."
+    },
+    {
+      "t": "li",
+      "x": "**Not eligible:** household appliances, routine repairs and maintenance, financing costs, items that won't become a permanent part of the home, and renovations made mainly to increase the home's value."
+    },
+    {
+      "t": "p",
+      "x": "CRA's page for this credit says an expense that also qualifies as a medical expense can be claimed under both credits, but Budget 2025 proposed ending that double claim from the 2026 tax year, so ask your accountant which rule applies to the year you file. If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
+    },
+    {
+      "t": "h2",
+      "x": "Which Efficiency Manitoba rebates fit a renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Insulation, windows and doors, and deep energy retrofits are the rebates most likely to line up with a renovation. The catch is timing: Efficiency Manitoba wants approval before you buy materials or start work, including removing drywall, stucco or old insulation. Plan the rebate into the schedule at the quote stage, not after demolition."
+    },
+    {
+      "t": "p",
+      "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application. Our guide to [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba) walks through the order of steps, and the [window and door replacement guide](/blog/window-and-door-replacement-winnipeg) covers triple-pane upgrades."
+    },
+    {
+      "t": "h2",
+      "x": "Which renovation programs are closed?"
+    },
+    {
+      "t": "p",
+      "x": "The Canada Greener Homes Grant and Canada Greener Homes Loan are closed, the City of Winnipeg's Basement Flooding Protection Subsidy hasn't been funded since 2017 and was cancelled, and the Canada Secondary Suite Loan Program will not be launched. If a website or salesperson presents any of these as available today, treat the rest of their information with caution."
+    },
+    {
+      "t": "p",
+      "x": "Backwater valves and sump pits are still worth considering in a basement project, just without the City subsidy; see our guide to [basement flood protection in Winnipeg](/blog/basement-flood-protection-winnipeg). For suites, CMHC-insured refinancing is the federal measure that did go ahead, and our [home renovation financing guide](/blog/home-renovation-financing-canada) explains how it works."
+    },
+    {
+      "t": "h2",
+      "x": "What about commercial renovations?"
+    },
+    {
+      "t": "p",
+      "x": "The programs above are aimed at homeowners. Businesses usually handle renovation costs through their own tax and financing planning, so ask your accountant how a fit-up is treated for your business before you commit. Our guide to [financing a commercial renovation](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) covers the main options."
+    },
+    {
+      "t": "h2",
+      "x": "How do you avoid losing a rebate or tax credit?"
+    },
+    {
+      "t": "p",
+      "x": "Most lost rebates come down to timing or paperwork, not eligibility. Get any required approval before buying materials or opening walls, use registered contractors where a program requires them, keep every invoice, and make sure permits and final inspections are done. A few minutes of checking at the quote stage protects the claim:"
+    },
+    {
+      "t": "li",
+      "x": "Apply and get approval before you buy materials or start work, for Efficiency Manitoba rebates and the Manitoba Hydro loan."
+    },
+    {
+      "t": "li",
+      "x": "Use a registered contractor or retailer where the program requires one."
+    },
+    {
+      "t": "li",
+      "x": "Keep every invoice and receipt, with the work and the address described."
+    },
+    {
+      "t": "li",
+      "x": "Make sure permits are in place and inspections are passed, since completion is often marked by the final inspection."
+    },
+    {
+      "t": "li",
+      "x": "Don't count the same expense twice across federal credits, and ask your accountant before filing if more than one family member is claiming."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Planning a suite, an accessible bathroom or an energy upgrade? Bring your rebate questions to a [free on-site visit](/book-online) so any pre-approval steps can be timed before work starts; you'll get a free written quote afterwards. For a first number, try our [instant renovation estimate](/instant-quote)."
+    }
+  ]
+}

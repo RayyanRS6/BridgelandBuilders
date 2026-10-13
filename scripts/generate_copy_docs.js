@@ -584,14 +584,15 @@ PROJECTS.forEach((proj, idx) => {
           value: `${s.num}${s.unit} — ${s.label}`,
         })),
       },
-      {
+      // intro, gallery and testimonial are optional on a service page (null = section not shown).
+      ...(proj.intro ? [{
         heading: `3. Why Choose Bridgeland for ${proj.breadcrumb}`,
         notes: 'Detailed pitch and philosophy.',
         items: [
           { type: 'label-value', label: 'Section Tag', value: proj.intro.tag },
           { type: 'label-value', label: 'Section Title (H2)', value: proj.intro.title },
           { type: 'label-value', label: 'Floating Badge', value: `${proj.intro.floatingTitle}: ${proj.intro.floatingText}` },
-          ...proj.intro.paragraphs.map((p, i) => ({
+          ...(proj.intro.paragraphs || []).map((p, i) => ({
             type: 'para',
             label: `Paragraph ${i + 1}`,
             text: p,
@@ -599,11 +600,11 @@ PROJECTS.forEach((proj, idx) => {
           {
             type: 'list',
             label: 'Service Checklist',
-            list: proj.intro.checklist,
+            list: proj.intro.checklist || [],
           },
           { type: 'label-value', label: 'CTA Button', value: 'CHECK AVAILABLE DATES' },
         ],
-      },
+      }] : []),
       {
         heading: '4. What Is Included in the Scope',
         notes: 'Detailed breakdown of standard deliverables.',
@@ -619,7 +620,7 @@ PROJECTS.forEach((proj, idx) => {
           })),
         ],
       },
-      {
+      ...(proj.gallery && Array.isArray(proj.gallery.items) ? [{
         heading: '5. Recent Work & Project Gallery',
         notes: 'Visual showcase examples and captions.',
         items: [
@@ -632,7 +633,7 @@ PROJECTS.forEach((proj, idx) => {
             list: proj.gallery.items.map((item) => `${item.title}: ${item.text}`),
           },
         ],
-      },
+      }] : []),
       {
         heading: '6. How the Process Works',
         notes: 'Step-by-step project progression.',
@@ -648,7 +649,7 @@ PROJECTS.forEach((proj, idx) => {
           })),
         ],
       },
-      {
+      ...(proj.testimonial && proj.testimonial.quote ? [{
         heading: '7. Verified Client Testimonial',
         notes: 'Direct client review for this project category.',
         items: [
@@ -657,7 +658,7 @@ PROJECTS.forEach((proj, idx) => {
           { type: 'label-value', label: 'Author', value: proj.testimonial.name },
           { type: 'label-value', label: 'Project / Role', value: proj.testimonial.role },
         ],
-      },
+      }] : []),
       {
         heading: '8. Lead Consultation & Price Guide Section',
         notes: 'Side-by-side booking benefits and interactive price guide.',

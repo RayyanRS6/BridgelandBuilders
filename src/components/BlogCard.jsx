@@ -45,6 +45,10 @@ const FEATURED_SIZES = '(max-width: 1024px) 100vw, 652px';
 
 export default function BlogCard({ post, featured = false }) {
   const prefetch = () => prefetchPostBody(post.slug);
+  // A post without a hero photo shows its title card (scripts/build-images.mjs).
+  // Until that exists there is no image at all: the media box keeps its 16:9
+  // space and background (pages.css), so the grid stays even.
+  const imageSrc = post.heroSrc || post.hero;
 
   return (
     <article
@@ -54,17 +58,19 @@ export default function BlogCard({ post, featured = false }) {
       onTouchStart={prefetch}
     >
       <Link className="blog-card-media" to={`/blog/${post.slug}`} tabIndex={-1} aria-hidden="true">
-        <Picture
-          avifSrcSet={post.heroAvifSrcSet}
-          srcSet={post.heroSrcSet}
-          sizes={featured ? FEATURED_SIZES : CARD_SIZES}
-          src={post.heroSrc || post.hero}
-          alt=""
-          width="800"
-          height="450"
-          loading="lazy"
-          decoding="async"
-        />
+        {imageSrc && (
+          <Picture
+            avifSrcSet={post.heroAvifSrcSet}
+            srcSet={post.heroSrcSet}
+            sizes={featured ? FEATURED_SIZES : CARD_SIZES}
+            src={imageSrc}
+            alt=""
+            width="800"
+            height="450"
+            loading="lazy"
+            decoding="async"
+          />
+        )}
       </Link>
       <div className="blog-card-body">
         <span className="section-tag">{post.category}</span>
