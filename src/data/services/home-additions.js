@@ -1,4 +1,4 @@
-// Home additions â€” content for /services/home-additions (rendered by src/pages/ProjectPage.jsx).
+// Home additions — content for /services/home-additions (rendered by src/pages/ProjectPage.jsx).
 // Registry entry (path, labels, status, estimator, form type): src/data/services.js.
 //
 // The intro and gallery images are stock inspiration photos, not Bridgeland
@@ -6,7 +6,7 @@
 // "Winnipeg", no "our", no finished-job outcomes) until real job photos with
 // client consent replace them.
 //
-// Facts: the 8â€“16 week timeline, free on-site visit and written quote, weekly
+// Facts: the 8–16 week timeline, free on-site visit and written quote, weekly
 // progress updates and permit coordination are owner-confirmed. Not confirmed,
 // so not claimed: in-house design, drawings or engineering, "one team",
 // second-storey additions. Every City of Winnipeg statement in `local` and the
@@ -28,7 +28,7 @@ export default {
   stats: [
     { num: '60', unit: '+', label: 'Years of combined experience' },
     { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '8', unit: 'â€“16', label: 'Weeks for many home additions' },
+    { num: '8', unit: '–16', label: 'Weeks for many home additions' },
     { num: '1', unit: 'day', label: 'Reply within one business day' },
   ],
 
@@ -48,7 +48,7 @@ export default {
   },
 
   includes: {
-    tag: 'Whatâ€™s Included',
+    tag: 'What’s Included',
     title: 'What does a home addition include?',
     desc: 'A home addition covers a site review, permits, foundation and structure, roof and exterior, extended heating, plumbing and electrical, then the interior connection and finishes that make old and new feel like one house. The order matters: the shell is closed in before the existing wall is opened, which keeps disruption inside the house to a minimum.',
     items: [
@@ -80,8 +80,8 @@ export default {
       'Two at minimum. The City of Winnipeg requires a development permit and a building permit for every house addition, plus electrical and plumbing permits where that work is involved. The development permit is issued under the Winnipeg Zoning By-law and should be confirmed before the building permit application. We coordinate both with the City or your local municipality.',
     items: [
       { title: 'Development permit', text: 'Every house addition needs one under the Winnipeg Zoning By-law. The City advises confirming it, and any other supporting approvals, before applying for the building permit, since zoning can affect the size and position of the addition.' },
-      { title: 'Building permit', text: 'Every house addition also needs a building permit under the Winnipeg Building By-law. The Cityâ€™s application form lists the documents it needs, and incomplete applications result in delays.' },
-      { title: 'Engineered foundations', text: 'Where a structural element goes beyond Part 9 of the Manitoba Building Code, such as concrete grade beams supported on piles, the City requires a sealed drawing from a professional engineer registered in Manitoba and a Professional Designerâ€™s Certificate for Housing.' },
+      { title: 'Building permit', text: 'Every house addition also needs a building permit under the Winnipeg Building By-law. The City’s application form lists the documents it needs, and incomplete applications result in delays.' },
+      { title: 'Engineered foundations', text: 'Where a structural element goes beyond Part 9 of the Manitoba Building Code, such as concrete grade beams supported on piles, the City requires a sealed drawing from a professional engineer registered in Manitoba and a Professional Designer’s Certificate for Housing.' },
       { title: 'Electrical and plumbing', text: 'If the addition includes electrical or plumbing work, the City requires separate trade permits for it, on top of the development and building permits.' },
       { title: 'Inspections', text: 'Rough-in inspections happen before framing, HVAC, electrical or plumbing work is covered. The final inspection confirms all work under every permit is complete and the addition is ready for occupancy.' },
       { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the local municipality or planning district issues the permits and applies its own zoning rules. We confirm them for your property before plans are finalized.' },
@@ -127,10 +127,10 @@ export default {
 
   faqs: [
     { q: 'How long does a home addition take?', a: 'Many straightforward additions take eight to sixteen weeks once permits and materials are ready. Size, soil and foundation conditions, structural changes, and custom finishes all affect the schedule. You get a timeline with your written quote, and a progress update every week once construction starts, so changes never come as a surprise.' },
-    { q: 'Who prepares the drawings for an addition?', a: 'Every addition needs drawings for the development and building permit applications, and the City requires an engineerâ€™s sealed drawing for structural work beyond Part 9 of the Manitoba Building Code. At the on-site visit we talk through who will prepare them for your project, and we build to the approved drawings.' },
-    { q: 'Can you make the addition match my existing house?', a: 'That is the goal from the start. We look at rooflines, windows, siding or masonry, floor heights, trim and interior finishes so the addition connects as naturally as possible. Where an exact match isnâ€™t available, weâ€™ll show you the closest options and where a deliberate contrast might look better.' },
+    { q: 'Who prepares the drawings for an addition?', a: 'Every addition needs drawings for the development and building permit applications, and the City requires an engineer’s sealed drawing for structural work beyond Part 9 of the Manitoba Building Code. At the on-site visit we talk through who will prepare them for your project, and we build to the approved drawings.' },
+    { q: 'Can you make the addition match my existing house?', a: 'That is the goal from the start. We look at rooflines, windows, siding or masonry, floor heights, trim and interior finishes so the addition connects as naturally as possible. Where an exact match isn’t available, we’ll show you the closest options and where a deliberate contrast might look better.' },
     { q: 'Can we stay in the house while the addition is built?', a: 'Usually, for most of the project. The existing house stays closed off while the foundation and shell go up. The wall between old and new is opened only once the addition is weather-tight, and we plan that step and the interior connection to keep the disruption as short as possible.' },
-    { q: 'Can the addition include a kitchen or bathroom?', a: 'Yes. Plumbing, electrical, ventilation, heating and structure are planned from the start so those rooms are properly tied into the homeâ€™s systems. Kitchens and bathrooms in an addition also need the trade permits that go with them, which we coordinate along with the development and building permits.' },
+    { q: 'Can the addition include a kitchen or bathroom?', a: 'Yes. Plumbing, electrical, ventilation, heating and structure are planned from the start so those rooms are properly tied into the home’s systems. Kitchens and bathrooms in an addition also need the trade permits that go with them, which we coordinate along with the development and building permits.' },
     { q: 'Should I build an addition or develop my basement?', a: 'If your basement is unfinished and has enough ceiling height, developing it usually adds living space with less structural work. An addition makes more sense when you need the room on the main floor, want more daylight, or the basement is already in use. We can look at both options at the on-site visit.' },
     { q: 'What happens at the free on-site visit?', a: 'We look at the yard, the existing foundation, roofline and exterior, and where the addition would join the house. We talk about the space you need and the zoning questions to check. You then receive a written quote with the scope, so you can see what is included before any permit applications go in.' },
   ],
