@@ -12,7 +12,7 @@ export default function CtaBanner() {
             <p>Contact Bridgeland Builders today. We’ll discuss your ideas, provide clear details, and get it done right.</p>
           </div>
           <div className="cta-banner-right">
-            <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red btn-pill-lg">
+            <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red btn-pill-lg" data-cta="cta-banner-instant-quote">
               <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
               <ArrowRightIcon size={16} />
             </Link>

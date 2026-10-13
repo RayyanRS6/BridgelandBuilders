@@ -21,24 +21,35 @@ const STEPS = [
   },
 ];
 
-export default function Process() {
+/**
+ * The four-card process section. With no props it renders the home page / Our
+ * Process version exactly as before; other pages (case studies) pass their own
+ * steps ([{ num, title, text }]) and heading text. Pass `desc={null}` to drop
+ * the description line.
+ */
+export default function Process({
+  steps = STEPS,
+  tag = 'How We Work',
+  title = 'Our Process',
+  desc = 'Reliable, step-by-step care from our Winnipeg team to your doorstep.',
+}) {
   return (
     <section className="process-section" id="process">
       <div className="container">
         <div className="section-header center reveal">
-          <span className="section-tag">How We Work</span>
-          <h2 className="section-title">Our Process</h2>
-          <p className="section-desc">Reliable, step-by-step care from our Winnipeg team to your doorstep.</p>
+          <span className="section-tag">{tag}</span>
+          <h2 className="section-title">{title}</h2>
+          {desc && <p className="section-desc">{desc}</p>}
         </div>
 
         <div className="process-grid">
-          {STEPS.map((step, index) => (
+          {steps.map((step, index) => (
             <div
               className="process-card reveal"
-              key={step.num}
+              key={step.num || step.title}
               style={index > 0 ? { transitionDelay: `${index * 0.1}s` } : undefined}
             >
-              <div className="process-step-num">{step.num}</div>
+              <div className="process-step-num">{step.num || String(index + 1).padStart(2, '0')}</div>
               <h3 className="process-card-title">{step.title}</h3>
               <p className="process-card-text">
                 {step.text}

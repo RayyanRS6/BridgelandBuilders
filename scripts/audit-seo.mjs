@@ -146,6 +146,11 @@ async function importGuarded(rel, wanted = [], optional = []) {
 
 const siteConfig = await importGuarded('src/data/siteConfig.js', ['SITE_URL']);
 const SITE_URL = String(siteConfig.SITE_URL || 'https://bridgelandbuilders.com').replace(/\/+$/, '');
+// head.js first: it imports every service content module (src/data/projects.js),
+// which fills seo.js SERVICE_SEO, and it owns the full route inventory
+// (SEO_ENTRIES: static pages, live services, cost guides, published areas,
+// case studies, videos and posts) that the prerender used.
+const headModel = await importGuarded('src/data/head.js', ['SEO_ENTRIES']);
 const seo = await importGuarded('src/data/seo.js', ['PAGE_SEO', 'SERVICE_SEO', 'NOINDEX_ROUTES']);
 const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS']);
 const blogModule = await importGuarded('src/data/blogPosts.js', ['BLOG_POSTS'], ['BLOG_REDIRECTS']);
@@ -167,6 +172,13 @@ const seoEntries = new Map(); // route -> { kind, entry }
 const NOINDEX = new Set();
 if (PAGE_SEO) for (const [path, entry] of Object.entries(PAGE_SEO)) seoEntries.set(cleanPath(path), { kind: 'page', entry });
 if (SERVICE_SEO) for (const [path, entry] of Object.entries(SERVICE_SEO)) seoEntries.set(cleanPath(path), { kind: 'service', entry });
+// Template routes (cost guides, community pages, case studies, videos) have no
+// PAGE_SEO/SERVICE_SEO entry: their head comes from their own data module.
+const HEAD_ENTRIES = headModel.SEO_ENTRIES && typeof headModel.SEO_ENTRIES === 'object' ? headModel.SEO_ENTRIES : {};
+for (const [path, entry] of Object.entries(HEAD_ENTRIES)) {
+  const route = cleanPath(path);
+  if (!seoEntries.has(route) && !route.startsWith('/blog/')) seoEntries.set(route, { kind: 'template', entry });
+}
 for (const post of BLOG_POSTS) {
   if (!post || !post.slug) continue;
   const route = `/blog/${post.slug}`;
@@ -674,6 +686,7 @@ if (sitemapXml == null) {
     if (u.lastmod && seoEntry) {
       let expected = null;
       if (seoEntry.kind === 'blog') expected = seoEntry.entry.updated || seoEntry.entry.date || null;
+      else if (seoEntry.kind === 'template') expected = seoEntry.entry.updated || null;
       else if (typeof seo.updatedFor === 'function') {
         try { expected = seo.updatedFor(path); } catch { expected = null; }
       } else expected = seoEntry.entry.updated || null;
@@ -792,6 +805,14 @@ if (vercelConfig) {
   };
   const nowMs = Date.now();
   for (const entry of managed) {
+    // A planned rule without fallback (`to: null`) is only written once its
+    // planned page is live (sync-redirects C8); until then the source is
+    // still a live page, so there is nothing to sync yet.
+    const pending = entry.raw && entry.raw.to == null && typeof entry.raw.planned === 'string' && !PRERENDER_SET.has(cleanPath(entry.raw.planned));
+    if (pending) {
+      report.info('redirects.pending', cleanPath(unescapeSource(entry.from)), `waits for ${entry.raw.planned} to go live`);
+      continue;
+    }
     if (!coveredByVercel(entry.from)) report.error('redirects.not-synced', cleanPath(unescapeSource(entry.from)), `in src/data/redirects.js but not in vercel.json (run scripts/sync-redirects.mjs)`);
     if (entry.temporary && entry.since) {
       const ageDays = (nowMs - Date.parse(entry.since)) / 86400000;

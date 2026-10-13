@@ -1,0 +1,45 @@
+# After every successful Vercel production deployment (SEO plan §3.6, §1):
+#   1. IndexNow: tell Bing and the other IndexNow engines which URLs changed
+#      (sitemap entries and redirect sources, HEAD vs the previous commit).
+#   2. Live redirect check: every legacy URL answers one 308/307 to the right
+#      page, and that page answers 200.
+# Vercel's GitHub integration reports deployments to GitHub, which triggers
+# deployment_status. No secrets are needed: the IndexNow key is the public
+# key file in public/, and both scripts use only Node built-ins.
+name: Post-deploy checks
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: post-deploy-${{ github.event.deployment.environment }}
+  cancel-in-progress: true
+
+jobs:
+  post-deploy:
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: IndexNow ping
+        run: node scripts/indexnow.mjs --head=HEAD --base=HEAD~1
+
+      - name: Live redirect check
+        if: ${{ always() }}
+        env:
+          DEPLOYMENT_URL: ${{ github.event.deployment_status.environment_url || github.event.deployment_status.target_url }}
+        run: npm run check:redirects -- "$DEPLOYMENT_URL" --mode=production

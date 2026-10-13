@@ -19,7 +19,7 @@ export default function ContactPage() {
       <section className="lead-section contact-page-form">
         <div className="container">
           <div className="lead-grid">
-            <div><BookingAside serviceName="project" /></div>
+            <div><BookingAside serviceName="project" showHours /></div>
             <div>
               <QuoteBookingForm id="contact-form" title="Request Your Free Quote" />
             </div>

@@ -9,56 +9,50 @@
  *
  * Headers and redirects live in vercel.json (redirects are generated from
  * src/data/redirects.js by `npm run redirects`).
+ *
+ * The route list comes from src/data/head.js SITE_ROUTES: PAGE_SEO (static
+ * pages), live service pages (src/data/services.js), live cost guides,
+ * published community pages, case studies and videos, and published blog
+ * posts. Draft pages are never prerendered or listed.
  */
 import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
-import { BLOG_POSTS } from '../src/data/blogPosts.js';
 import { SITE_FAQS } from '../src/data/faqs.js';
-import { PROJECTS } from '../src/data/projects.js';
+import { LIVE_COST_GUIDES, PUBLISHED_POSTS, SITE_ROUTES } from '../src/data/head.js';
+import { LIVE_SERVICE_PAGES, PROJECTS } from '../src/data/projects.js';
 import {
   SITE_URL,
   SITE_NAME,
   SITE_PHONE,
   BUSINESS,
-  SERVICE_CATALOG,
   SERVICE_AREA_NAMES,
   SERVICE_AREA_STATEMENT,
   SOCIAL_PROFILES,
   BBB_PROFILE_URL,
   GBP,
 } from '../src/data/siteConfig.js';
-import {
-  NOINDEX_ROUTES,
-  PAGE_SEO,
-  SERVICE_SEO,
-  SEO_DEFAULT_UPDATED,
-  buildOrganizationGraph,
-} from '../src/data/seo.js';
+import { COST_HUB_PATH, NOINDEX_ROUTES, buildOrganizationGraph } from '../src/data/seo.js';
 
 const PUBLIC = new URL('../public/', import.meta.url);
 const out = (name, body) => writeFileSync(new URL(name, PUBLIC), body);
 mkdirSync(PUBLIC, { recursive: true });
 
 /* ---------------------------------------------------------------- routes */
-const seoEntry = (path) => PAGE_SEO[path] || SERVICE_SEO[path];
-const isNoindex = (path) =>
-  NOINDEX_ROUTES.includes(path) || /noindex/.test((seoEntry(path) || {}).robots || '');
-
-// Every page with an SEO entry: home, the services hub, service pages, then
-// the rest in PAGE_SEO order. A route without an SEO entry is never
-// prerendered (prerender.mjs skips it), so it can't be listed either.
-const SEO_ROUTES = [...new Set(['/', '/services', ...Object.keys(SERVICE_SEO), ...Object.keys(PAGE_SEO)])]
-  .filter((path) => seoEntry(path));
-const STATIC_ROUTES = SEO_ROUTES.filter((path) => !isNoindex(path));
-const NOINDEX_PAGES = [...new Set([...NOINDEX_ROUTES, ...SEO_ROUTES.filter(isNoindex)])];
-
-// BLOG_POSTS should already hold published posts only; filter again so a
-// draft can never reach the sitemap.
-const POSTS = BLOG_POSTS.filter((post) => (post.status || 'published') === 'published');
-
-const urls = [
-  ...STATIC_ROUTES.map((path) => ({ path, lastmod: seoEntry(path).updated || SEO_DEFAULT_UPDATED })),
-  ...POSTS.map((post) => ({ path: `/blog/${post.slug}`, lastmod: post.updated || post.date })),
+// Indexable routes go in the sitemap; noindex routes (ad landing page, SMS
+// opt-in page) are still prerendered. lastmod is each page's own `updated`.
+const routeOf = new Map(SITE_ROUTES.map((route) => [route.path, route]));
+const INDEXABLE = SITE_ROUTES.filter((route) => !route.noindex);
+const NOINDEX_PAGES = [
+  ...new Set([...NOINDEX_ROUTES.filter((path) => routeOf.has(path)), ...SITE_ROUTES.filter((r) => r.noindex).map((r) => r.path)]),
 ];
+const PAGES = INDEXABLE.filter((route) => route.kind !== 'post');
+const POSTS = PUBLISHED_POSTS.filter((post) => routeOf.has(`/blog/${post.slug}`));
+
+const urls = INDEXABLE.map((route) => ({ path: route.path, lastmod: route.lastmod }));
+const missingLastmod = urls.filter((u) => !u.lastmod).map((u) => u.path);
+if (missingLastmod.length) {
+  console.error(`[seo] no updated date for: ${missingLastmod.join(', ')}`);
+  process.exit(1);
+}
 
 /* --------------------------------------------------------------- sitemap */
 // No changefreq/priority (ignored by Google) and no image entries until blog
@@ -101,16 +95,25 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `);
 
 /* ---------------------------------------------------- shared llms content */
-const serviceLines = SERVICE_CATALOG.filter((s) => SERVICE_SEO[s.path])
-  .map((s) => `- [${s.name}](${SITE_URL}${s.path}): ${SERVICE_SEO[s.path].description || ''}`)
-  .join('\n');
+// Live service pages only (registry order), with each page's own description.
+const serviceLines = LIVE_SERVICE_PAGES.map(
+  ({ service, content }) => `- [${service.navLabel}](${SITE_URL}${service.path}): ${content.seo.description || ''}`
+).join('\n');
 
-const keyPage = (label, path, description) =>
-  seoEntry(path) ? `- [${label}](${SITE_URL}${path}): ${description || seoEntry(path).description}` : null;
+// Indexable pages only; a page that is not live (e.g. the cost hub before its
+// data is signed off) is simply left out.
+const keyPage = (label, path, description) => {
+  const route = routeOf.get(path);
+  return route && !route.noindex
+    ? `- [${label}](${SITE_URL}${path}): ${description || route.head.description}`
+    : null;
+};
 
 const keyPages = [
   keyPage('Home', '/'),
   keyPage('All services', '/services'),
+  keyPage('Renovation costs in Winnipeg', COST_HUB_PATH),
+  keyPage('Service areas', '/service-areas'),
   keyPage('Our process', '/our-process'),
   keyPage('Projects', '/projects', 'Renovation project categories, each linking to its service page with details and booking.'),
   keyPage('FAQs', '/faqs'),
@@ -119,6 +122,11 @@ const keyPages = [
   keyPage('Book online', '/book-online'),
   keyPage('Blog', '/blog'),
 ].filter(Boolean).join('\n');
+
+// Live cost guides other than the hub (the hub is a key page).
+const costLines = LIVE_COST_GUIDES.filter((guide) => guide.path !== COST_HUB_PATH && routeOf.has(guide.path))
+  .map((guide) => `- [${(guide.seo && guide.seo.title ? guide.seo.title.split(' | ')[0] : guide.path)}](${SITE_URL}${guide.path}): ${(guide.seo && guide.seo.description) || ''}`)
+  .join('\n');
 
 const articleLines = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`).join('\n');
 
@@ -153,6 +161,7 @@ written, every project starts with a free on-site visit, and permits and inspect
 with the City of Winnipeg or the local municipality when a project requires them.`,
   `## Services\n${serviceLines}`,
   `## Key pages\n${keyPages}`,
+  costLines && `## Renovation cost guides\n${costLines}`,
   articleLines && `## Articles\n${articleLines}`,
   `## Contact
 - Phone: ${SITE_PHONE}
@@ -170,18 +179,13 @@ with the City of Winnipeg or the local municipality when a project requires them
 // page's FAQs, word for word as they appear on the site.
 const qa = (faqs) => faqs.map((f) => `**Q: ${f.q}**\nA: ${f.a}`).join('\n\n');
 
-const projectPath = (project) =>
-  project.path ||
-  (SERVICE_CATALOG.find((s) => s.projectSlug === project.slug) || {}).path ||
-  (SERVICE_SEO[`/services/${project.slug}s`] ? `/services/${project.slug}s` : null);
-
+// PROJECTS = live service pages' content, each with its `path`.
+const navLabelFor = new Map(LIVE_SERVICE_PAGES.map(({ service }) => [service.path, service.navLabel]));
 const faqBlocks = [
   SITE_FAQS.length ? `### General questions\n${SITE_URL}/faqs\n\n${qa(SITE_FAQS)}` : null,
   ...PROJECTS.filter((p) => p.faqs && p.faqs.length).map((project) => {
-    const path = projectPath(project);
-    const service = path && SERVICE_CATALOG.find((s) => s.path === path);
-    const heading = (service && service.name) || project.breadcrumb || project.slug;
-    return `### ${heading}${path ? `\n${SITE_URL}${path}` : ''}\n\n${qa(project.faqs)}`;
+    const heading = navLabelFor.get(project.path) || project.breadcrumb || project.slug;
+    return `### ${heading}\n${SITE_URL}${project.path}\n\n${qa(project.faqs)}`;
   }),
 ].filter(Boolean);
 
@@ -218,7 +222,7 @@ writeFileSync(indexUrl, html);
 const prerenderRoutes = [...new Set([...urls.map((u) => u.path), ...NOINDEX_PAGES])];
 writeFileSync(new URL('../prerender-routes.json', import.meta.url), JSON.stringify(prerenderRoutes, null, 2));
 
-console.log(`sitemap: ${urls.length} urls (${STATIC_ROUTES.length} pages, ${POSTS.length} posts)`);
+console.log(`sitemap: ${urls.length} urls (${PAGES.length} pages, ${POSTS.length} posts)`);
 console.log(`noindex (prerendered, not in sitemap): ${NOINDEX_PAGES.join(', ') || 'none'}`);
 console.log(`prerender-routes.json: ${prerenderRoutes.length} routes`);
 console.log('robots: one group for all crawlers (Disallow: /api/)');

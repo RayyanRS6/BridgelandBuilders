@@ -1,152 +1,99 @@
 /**
- * Blog post content parsing, shared by the post page (for rendering) and the
- * build-time SEO layer (for schema), so both always agree.
+ * Blog post schema, shared by the post page (runtime, BlogPostPage.jsx) and
+ * the build-time SEO layer (head.js), so the static HTML and the client
+ * render always emit the same JSON-LD.
+ *
+ * The prerender passes a full post from blogPosts.js (metadata + body); the
+ * page passes the index metadata plus the lazily loaded body module. Both
+ * carry the same fields, so the output is identical.
  */
 import { SITE_URL } from './siteConfig.js';
+import { PEOPLE, personPath } from './people.js';
+import { serviceByPath } from './services.js';
 import { buildBreadcrumbs, buildFaqPage, buildWebPage, graph, isoWinnipeg, organizationRef } from './seo.js';
 
 // ISO 8601 with the America/Winnipeg offset (-06:00 / -05:00); lives in seo.js
 // so the /blog Blog node formats dates identically.
 export { isoWinnipeg };
 
-const HEADINGS = ['h2', 'h3', 'h4'];
-const TAKEAWAY_RE = /^(key takeaways|the key points|key points)\b/i;
-// A section only counts as an FAQ when its heading says so explicitly
-// ("FAQs", "Frequently Asked Questions", "Questions and Answers", "Common
-// Questions", "Questions We Get Most Often"...). A heading that merely mentions
-// questions ("Ask the Right Questions") is ordinary body content.
-const FAQ_EXPLICIT_RE = /\bfaqs?\b|\bfrequently asked\b|\bquestions?\s+(?:and|&)\s+answers?\b/i;
-const FAQ_QUESTIONS_RE = /\bquestions\b/i;
-const FAQ_QUALIFIER_RE = /\b(most|common|commonly|often|frequently)\b/i;
-const QUESTION_START_RE = /^(what|how|why|can|do|does|is|are|should|which|describe|when|who|if)\b/i;
+/**
+ * Plain text of the inline markup RichBody renders ([label](url) → label,
+ * **bold** → bold), for schema and meta text.
+ */
+export function plainText(text) {
+  return String(text || '')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1');
+}
 
-export const isHeading = (block) => HEADINGS.includes(block.t);
-export const looksLikeQuestion = (text) => /\?\s*$/.test(text) || QUESTION_START_RE.test(text);
+const absolute = (url) => (url && !/^https?:\/\//.test(url) ? `${SITE_URL}${url.startsWith('/') ? '' : '/'}${url}` : url);
 
-const isFaqHeading = (text) =>
-  !looksLikeQuestion(text) &&
-  (FAQ_EXPLICIT_RE.test(text) || (FAQ_QUESTIONS_RE.test(text) && FAQ_QUALIFIER_RE.test(text)));
+/** Person node for a people.js id (its profile lives on /about-us), or null. */
+export function buildPersonNode(id) {
+  const person = id && Object.prototype.hasOwnProperty.call(PEOPLE, id) ? PEOPLE[id] : null;
+  if (!person) return null;
+  const url = `${SITE_URL}${personPath(id)}`;
+  return {
+    '@type': 'Person',
+    '@id': url,
+    name: person.name,
+    jobTitle: person.role || undefined,
+    url,
+    image: absolute(person.image) || undefined,
+    sameAs: person.sameAs && person.sameAs.length ? person.sameAs : undefined,
+    knowsAbout: person.knowsAbout && person.knowsAbout.length ? person.knowsAbout : undefined,
+    worksFor: organizationRef,
+  };
+}
 
-const blockText = (block) => (block.t === 'img' ? '' : (block.x || '').trim());
-
-const isFaqQuestion = (block) => {
-  const text = blockText(block);
-  return Boolean(text) && (block.t === 'question' || (block.t === 'p' && text.length <= 160 && looksLikeQuestion(text)));
-};
+/** Service pages a post is about — live pages only, so every @id resolves. */
+function aboutServices(paths) {
+  return (paths || [])
+    .filter((path) => {
+      const service = serviceByPath(path);
+      return service && service.status === 'live';
+    })
+    .map((path) => ({ '@id': `${SITE_URL}${path}#service` }));
+}
 
 /**
- * Splits an FAQ section's items at the end of the last answer. The last
- * answer is the first text block after the last question (plus any list that
- * directly continues it); whatever follows — usually the article's closing
- * paragraph — is returned separately so it is never folded into that answer.
+ * Everything the <head> needs for one blog post.
+ * @param {object} post  post metadata (blogIndex.js) or a full post (blogPosts.js)
+ * @param {object} [body] the post's body module ({ faqs, sources, reviewedBy, ... });
+ *                        defaults to `post` for a full post
  */
-function splitFaqTrail(items) {
-  let lastQuestion = -1;
-  items.forEach((block, index) => {
-    if (isFaqQuestion(block)) lastQuestion = index;
-  });
-  if (lastQuestion < 0) return [items, []];
-
-  let end = lastQuestion + 1;
-  while (end < items.length && !blockText(items[end])) end += 1;
-  if (end >= items.length) return [items, []];
-  end += 1;
-  while (end < items.length && items[end].t === 'li') end += 1;
-  return [items.slice(0, end), items.slice(end)];
-}
-
-/** Splits the flat block list into body, "key takeaways" and FAQ sections. */
-export function buildSections(blocks) {
-  const sections = [];
-  let current = { type: 'body', items: [] };
-  const flush = () => {
-    if (!current.items.length && !current.heading) return;
-    if (current.type !== 'faq') {
-      sections.push(current);
-      return;
-    }
-    const [faqItems, trailing] = splitFaqTrail(current.items);
-    sections.push({ ...current, items: faqItems });
-    if (trailing.some((block) => block.t === 'img' || blockText(block))) {
-      sections.push({ type: 'body', items: trailing });
-    }
-  };
-
-  for (const block of blocks) {
-    if (isHeading(block)) {
-      if (TAKEAWAY_RE.test(block.x)) {
-        flush();
-        current = { type: 'takeaways', heading: block.x, items: [] };
-        continue;
-      }
-      if (isFaqHeading(block.x)) {
-        flush();
-        current = { type: 'faq', heading: block.x, items: [] };
-        continue;
-      }
-      if (current.type === 'faq' && looksLikeQuestion(block.x)) {
-        current.items.push({ ...block, t: 'question' });
-        continue;
-      }
-      if (current.type !== 'body') {
-        flush();
-        current = { type: 'body', items: [block] };
-        continue;
-      }
-    }
-    current.items.push(block);
-  }
-
-  flush();
-  return sections;
-}
-
-/** Turns an alternating question/answer run of paragraphs into accordion items. */
-export function buildFaqItems(items) {
-  const lead = [];
-  const faqs = [];
-
-  for (const block of items) {
-    if (block.t === 'img') continue;
-    const text = blockText(block);
-    if (!text) continue;
-
-    if (isFaqQuestion(block)) {
-      faqs.push({ q: text, a: '' });
-    } else if (faqs.length) {
-      const last = faqs[faqs.length - 1];
-      last.a = last.a ? `${last.a} ${text}` : text;
-    } else {
-      lead.push(text);
-    }
-  }
-
-  return { lead, faqs: faqs.filter((item) => item.q && item.a) };
-}
-
-/** Everything the <head> needs for one blog post. */
-export function buildPostHead(post) {
+export function buildPostHead(post, body = post) {
   const path = `/blog/${post.slug}`;
   const url = `${SITE_URL}${path}`;
-  const faqSection = buildSections(post.blocks).find((section) => section.type === 'faq');
-  const { faqs } = faqSection ? buildFaqItems(faqSection.items) : { faqs: [] };
-
   const updated = post.updated || post.date;
   const published = isoWinnipeg(post.date);
   const modified = isoWinnipeg(updated);
-  const image = post.ogImage || post.hero;
+  // Absolute, so the BlogPosting image is a full URL (the self-hosted OG files
+  // are site-relative); og:image is made absolute the same way.
+  const image = absolute(post.ogImage || post.hero);
   const breadcrumbs = buildBreadcrumbs([['Blog', '/blog'], [post.title, path]], path);
 
+  const author = buildPersonNode(post.author);
+  const reviewerId = post.reviewedBy || (body && body.reviewedBy) || '';
+  const reviewer = reviewerId === post.author ? author : buildPersonNode(reviewerId);
+  const sources = (body && body.sources) || [];
+  // FAQPage only from the post's explicit faqs (blog-raw `faqs`).
+  const faqs = ((body && body.faqs) || []).map((item) => ({ q: plainText(item.q), a: plainText(item.a) }));
+  const about = aboutServices(post.services);
+
+  const webPage = buildWebPage({
+    path,
+    title: post.metaTitle,
+    description: post.metaDescription,
+    breadcrumb: { '@id': breadcrumbs['@id'] },
+    dateModified: modified,
+    about: false,
+    mainEntity: { '@id': `${url}#article` },
+  });
+  if (reviewer) webPage.reviewedBy = { '@id': reviewer['@id'] };
+
   const nodes = [
-    buildWebPage({
-      path,
-      title: post.metaTitle,
-      description: post.metaDescription,
-      breadcrumb: { '@id': breadcrumbs['@id'] },
-      dateModified: modified,
-      about: false,
-      mainEntity: { '@id': `${url}#article` },
-    }),
+    webPage,
     {
       '@type': 'BlogPosting',
       '@id': `${url}#article`,
@@ -156,16 +103,22 @@ export function buildPostHead(post) {
       datePublished: published,
       dateModified: modified,
       mainEntityOfPage: { '@id': `${url}#webpage` },
-      // The business wrote these posts. A reference only, so the
-      // GeneralContractor entity is not re-typed as a plain Organization.
-      author: organizationRef,
+      // A named person only when they are on the About page (people.js);
+      // otherwise the business, as a reference so the GeneralContractor
+      // entity is not re-typed as a plain Organization.
+      author: author ? { '@id': author['@id'] } : organizationRef,
       publisher: organizationRef,
       isPartOf: { '@id': `${SITE_URL}/#website` },
+      about: about.length ? about : undefined,
+      citation: sources.length
+        ? sources.map((source) => ({ '@type': 'CreativeWork', name: source.label, url: source.url }))
+        : undefined,
       articleSection: post.category,
       inLanguage: 'en-CA',
     },
     breadcrumbs,
-    // FAQPage only from the post's explicit FAQ section (see buildSections).
+    author,
+    reviewer && reviewer !== author ? reviewer : null,
     buildFaqPage(path, faqs),
   ];
 
@@ -174,6 +127,7 @@ export function buildPostHead(post) {
     description: post.metaDescription,
     path,
     image,
+    imageAlt: post.heroAlt || post.title,
     type: 'article',
     publishedTime: published,
     modifiedTime: modified,

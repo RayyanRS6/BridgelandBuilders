@@ -5,25 +5,32 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/build-blog-data.mjs && node scripts/build-seo-files.mjs && node scripts/sync-redirects.mjs --check && vite build && npm run build:ssr && node scripts/prerender.mjs && node scripts/audit-seo.mjs",
+    "build": "node scripts/build-blog-data.mjs && node scripts/build-seo-files.mjs && node scripts/sync-redirects.mjs --check && vite build && npm run build:ssr && node scripts/prerender.mjs && node scripts/audit-seo.mjs --strict --wix-error",
     "preview": "vite preview",
-    "seo": "node scripts/build-seo-files.mjs",
+    "seo": "node scripts/build-seo-files.mjs && node scripts/sync-redirects.mjs",
     "blog:data": "node scripts/build-blog-data.mjs",
     "prerender": "node scripts/prerender.mjs",
     "audit": "node scripts/audit-seo.mjs",
     "redirects": "node scripts/sync-redirects.mjs",
     "check:redirects": "node scripts/check-redirects.mjs",
-    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr"
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
+    "images": "node scripts/build-images.mjs",
+    "images:fetch": "node scripts/fetch-legacy-images.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
+    "@vercel/functions": "^3.9.11",
     "libphonenumber-js": "^1.13.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.18.3"
+    "react-router-dom": "^7.18.3",
+    "web-vitals": "^6.2.3"
   },
   "devDependencies": {
+    "@capsizecss/metrics": "^4.3.0",
     "@vitejs/plugin-react": "^4.3.4",
     "docx": "^9.7.1",
+    "sharp": "^0.35.5",
     "vite": "^5.4.11"
   }
 }

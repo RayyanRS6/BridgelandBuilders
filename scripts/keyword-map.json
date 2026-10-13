@@ -351,8 +351,7 @@
       "note": "data-gated on owner input O-3"
     },
     "/services/home-additions": {
-      "status": "planned",
-      "currentUrl": "/services/home-extensions",
+      "status": "live",
       "primary": [
         "home addition Winnipeg",
         "home additions Winnipeg"
@@ -369,7 +368,7 @@
         "home addition contractor"
       ],
       "ownerConfirms": ["second storey addition Winnipeg"],
-      "note": "rename with a 308 from /services/home-extensions (plan D6); project slug home-extension and the estimator param stay unchanged"
+      "note": "renamed from /services/home-extensions (308, plan D6); project slug home-extension and the estimator param unchanged"
     },
     "/services/home-additions/cost": {
       "status": "planned",
@@ -624,7 +623,7 @@
     { "keyword": "commercial renovation contractors near me", "fallback": "/services/commercial-renovations" },
     { "keyword": "office renovation near me", "fallback": "/services/office-renovations", "interimFallback": "/services/commercial-renovations" },
     { "keyword": "retail renovation contractor near me", "fallback": "/services/retail-renovations", "interimFallback": "/services/commercial-renovations" },
-    { "keyword": "home addition contractor near me", "fallback": "/services/home-additions", "interimFallback": "/services/home-extensions" }
+    { "keyword": "home addition contractor near me", "fallback": "/services/home-additions" }
   ],
   "notTargeted": [
     { "keyword": "best kitchen renovation Winnipeg", "reason": "Superlative; earned through reviews and the GBP, never claimed on-site." },

@@ -55,7 +55,7 @@ export default function WhyUs() {
               ))}
             </ul>
 
-            <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red">
+            <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red" data-cta="why-us-instant-quote">
               <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
               <ArrowRightIcon size={14} />
             </Link>

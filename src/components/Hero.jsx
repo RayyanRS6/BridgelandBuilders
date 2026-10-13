@@ -20,11 +20,11 @@ export default function Hero() {
             </p>
             <div className="hero-cta-group">
               {/* Main CTA in Red */}
-              <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red">
+              <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red" data-cta="home-hero-instant-quote">
                 <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={15} />
               </Link>
-              <Link to="/services" className="btn-pill-ghost">
+              <Link to="/services" className="btn-pill-ghost" data-cta="home-hero-services">
                 <span>Our Services</span>
               </Link>
             </div>
@@ -38,7 +38,6 @@ export default function Hero() {
                 width="1000"
                 height="667"
                 fetchpriority="high"
-                decoding="async"
               />
             </div>
             <div className="hero-floating-badge">

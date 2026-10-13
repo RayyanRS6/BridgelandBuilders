@@ -10,7 +10,7 @@ export default function TopBar() {
       </div>
       <div className="top-bar-contact">
         <span>Winnipeg, Manitoba</span>
-        <a href={SITE_PHONE_TEL}>
+        <a href={SITE_PHONE_TEL} data-cta="top-bar-call">
           <PhoneIcon size={14} />
           {SITE_PHONE}
         </a>

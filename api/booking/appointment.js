@@ -1,10 +1,21 @@
 // POST /api/booking/appointment
-// Step two of the /free-quote form: books the chosen time for the visitor.
+// Step two of the quote form: books the chosen time for the visitor.
 // The contact is looked up again from their details rather than trusting a
 // contact id sent by the browser, so nobody can book on someone else's record.
-import { isInServiceArea, validateLead } from '../../src/data/quoteForm.js';
+import { isInServiceArea } from '../../src/data/quoteForm.js';
+import { validateLead } from '../../src/data/leadValidation.js';
 import { bookAppointment, upsertLead } from '../_lib/ghl.js';
-import { cleanUtm, isSameOrigin, methodNotAllowed, readJson, sendError, sendJson } from '../_lib/http.js';
+import { afterResponse, sendMetaEvent } from '../_lib/meta.js';
+import {
+  cleanAttribution,
+  cleanEventId,
+  cleanUtm,
+  isSameOrigin,
+  methodNotAllowed,
+  readJson,
+  sendError,
+  sendJson,
+} from '../_lib/http.js';
 
 const MAX_DAYS_AHEAD = 90;
 
@@ -14,7 +25,7 @@ export default async function handler(req, res) {
 
   try {
     const body = await readJson(req);
-    if (body.company) return sendJson(res, 200, { ok: true, booking: { startTime: body.startTime } });
+    if (body.bb_hp) return sendJson(res, 200, { ok: true, booking: { startTime: body.startTime } });
 
     const { lead, errors } = validateLead(body);
     if (errors) return sendJson(res, 400, { error: 'invalid', fields: errors });
@@ -27,7 +38,8 @@ export default async function handler(req, res) {
       return sendJson(res, 400, { error: 'bad_time' });
     }
 
-    const { contactId } = await upsertLead(lead, { utmSource: cleanUtm(body.utmSource) });
+    const attribution = cleanAttribution(body.attribution);
+    const { contactId } = await upsertLead(lead, { utmSource: cleanUtm(body.utmSource), attribution });
     const booking = await bookAppointment(contactId, body.startTime, { lead });
     sendJson(res, 200, {
       ok: true,
@@ -39,6 +51,9 @@ export default async function handler(req, res) {
         address: booking.address,
       },
     });
+
+    const eventId = cleanEventId(body.eventId);
+    if (eventId) afterResponse(() => sendMetaEvent({ eventName: 'Schedule', eventId, lead, attribution, req }));
   } catch (error) {
     sendError(res, error);
   }

@@ -11,15 +11,23 @@
  * Fields:
  *   from       old path. A rule ending in "/:path*" is a wildcard (also matches
  *              the bare prefix) and is written after every explicit rule.
- *   to         destination path on this site.
- *   temporary  true = 307 to an interim page, because the real page is not
- *              live yet. Flip to permanent (308) — and point `to` at `planned`
- *              — in the release that launches that page.
+ *   to         destination path on this site. For a rule with `planned`, the
+ *              interim (fallback) destination; null = no fallback.
+ *   planned    the page this URL should end up on (SEO plan C8). The sync
+ *              script checks it on every build:
+ *                planned page live (a live service in src/data/services.js,
+ *                or any other live route) -> PERMANENT 308 to `planned`;
+ *                not live yet -> TEMPORARY 307 to `to`;
+ *                not live and `to` is null -> no rule (the URL keeps serving
+ *                whatever it serves today). A rule with no fallback is also
+ *                skipped while its own source is still a live page.
+ *              So launching a page (status: 'live') flips its redirects to
+ *              308 with no edit here.
+ *   temporary  (rules without `planned`) true = 307 instead of 308.
  *   evidence   W = in the Wayback Machine URL index, S = seen in Google results,
  *              A = assumed (confirm in Search Console before relying on it).
  *   note       why the rule exists.
- *   planned    (temporary rules) the page this URL should end up on.
- *   since      (temporary rules) date the interim rule was added; the audit
+ *   since      (planned rules) date the interim rule was added; the sync script
  *              warns when a 307 is older than 45 days.
  *
  * Sources: SEO plan §1 and §9 (legacy-URL inventory from the Wayback URL index
@@ -31,17 +39,20 @@ const S = 'S';
 const A = 'A';
 const INTERIM_SINCE = '2026-10-13';
 
+/** Applies the shared options: `planned` (+ since) or an explicit `temporary`. */
+function withOptions(rule, opts) {
+  if (opts.planned) {
+    rule.planned = opts.planned;
+    rule.since = opts.since || INTERIM_SINCE;
+  } else if (opts.temporary) {
+    rule.temporary = true;
+  }
+  return rule;
+}
+
 /** Rules that share one destination: [[from, evidence, note?], ...]. */
 function family(to, opts, rows) {
-  return rows.map(([from, evidence, note]) => {
-    const rule = { from, to, evidence, note: note || opts.note };
-    if (opts.temporary) {
-      rule.temporary = true;
-      if (opts.planned) rule.planned = opts.planned;
-      rule.since = INTERIM_SINCE;
-    }
-    return rule;
-  });
+  return rows.map(([from, evidence, note]) => withOptions({ from, to, evidence, note: note || opts.note }, opts));
 }
 
 /**
@@ -49,24 +60,21 @@ function family(to, opts, rows) {
  * Wix, which served them at /post/<slug>, so both URL forms are redirected.
  */
 function mergedPost(slug, to, note, opts = {}) {
-  return ['blog', 'post'].map((prefix) => {
-    const rule = {
-      from: `/${prefix}/${slug}`,
-      to,
-      // /blog/ URLs are on the current site (and in its sitemap); the /post/
-      // forms are assumed from Wix's URL scheme. Both: confirm clicks in GSC.
-      evidence: A,
-      note: prefix === 'blog'
-        ? `${note} (live on the current site until the merge)`
-        : `${note} (Wix-era /post/ URL)`,
-    };
-    if (opts.temporary) {
-      rule.temporary = true;
-      if (opts.planned) rule.planned = opts.planned;
-      rule.since = INTERIM_SINCE;
-    }
-    return rule;
-  });
+  return ['blog', 'post'].map((prefix) =>
+    withOptions(
+      {
+        from: `/${prefix}/${slug}`,
+        to,
+        // /blog/ URLs are on the current site (and in its sitemap); the /post/
+        // forms are assumed from Wix's URL scheme. Both: confirm clicks in GSC.
+        evidence: A,
+        note: prefix === 'blog'
+          ? `${note} (live on the current site until the merge)`
+          : `${note} (Wix-era /post/ URL)`,
+      },
+      opts
+    )
+  );
 }
 
 const BLOG = (slug) => `/blog/${slug}`;
@@ -134,10 +142,10 @@ export const REDIRECTS = [
     ['/projects/whole-home-renovation', A, 'Current site: was a client-side redirect only (AppShell)'],
   ]),
 
-  // /services/home-extensions is still the live additions page. When it is
-  // renamed to /services/home-additions, add that rule here: the sync script
-  // resolves the chain so these keep pointing straight at the final page.
-  ...family('/services/home-extensions', { note: 'Wix home extension page family' }, [
+  // Home extensions -> home additions (plan D6): the page moved from
+  // /services/home-extensions, which is now a permanent redirect too.
+  ...family('/services/home-additions', { note: 'Wix home extension page family' }, [
+    ['/services/home-extensions', A, 'Current site: the additions page before the D6 rename (was in the sitemap)'],
     ['/home-extension-free-estimate', W],
     ['/home-extension-free-estimate-winnipeg-manitoba', W],
     ['/projects/home-extension', A, 'Current site: was a client-side redirect only (AppShell)'],
@@ -169,9 +177,9 @@ export const REDIRECTS = [
     ['/booking-calendar/property-management', W, 'Wix booking calendar'],
   ]),
 
-  /* ---------------- commercial verticals: interim 307 to the commercial hub */
+  /* ------- commercial verticals: 307 to the commercial hub until the planned
+     page is live, then 308 to it (no edit needed here) */
   ...family(COMMERCIAL, {
-    temporary: true,
     planned: '/services/office-renovations',
     note: 'Wix office renovation page family (interim: commercial hub)',
   }, [
@@ -182,7 +190,6 @@ export const REDIRECTS = [
   ]),
 
   ...family(COMMERCIAL, {
-    temporary: true,
     planned: '/services/medical-dental-office-renovations',
     note: 'Wix medical & dental office page family (interim: commercial hub)',
   }, [
@@ -197,7 +204,6 @@ export const REDIRECTS = [
   ]),
 
   ...family(COMMERCIAL, {
-    temporary: true,
     planned: '/services/restaurant-renovations',
     note: 'Wix restaurant & hospitality page family (interim: commercial hub)',
   }, [
@@ -209,16 +215,15 @@ export const REDIRECTS = [
     ['/restaurant-and-hospitality-free-estimate-winnipeg-manitoba', W],
     ['/service-page/restaurants', W, 'Wix booking service page'],
     ['/booking-calendar/restaurants', W, 'Wix booking calendar'],
-    // Hotels: to the restaurant page's hotels section if the owner confirms
-    // hotel work, otherwise make these permanent to the commercial hub.
-    ['/hotels', S, 'Wix hotels page (hotel work unconfirmed: owner decides final target)'],
-    ['/hotels-winnipeg-manitoba', S, 'Wix hotels page (hotel work unconfirmed: owner decides final target)'],
-    ['/hotels-free-estimate', W, 'Wix hotels page (hotel work unconfirmed: owner decides final target)'],
-    ['/hotels-free-estimate-winnipeg-manitoba', W, 'Wix hotels page (hotel work unconfirmed: owner decides final target)'],
+    // Hotels: hotel work confirmed by the owner (2026-10-13); covered on the
+    // restaurant & hospitality page.
+    ['/hotels', S, 'Wix hotels page (hotels section of the restaurant & hospitality page)'],
+    ['/hotels-winnipeg-manitoba', S, 'Wix hotels page (hotels section of the restaurant & hospitality page)'],
+    ['/hotels-free-estimate', W, 'Wix hotels page (hotels section of the restaurant & hospitality page)'],
+    ['/hotels-free-estimate-winnipeg-manitoba', W, 'Wix hotels page (hotels section of the restaurant & hospitality page)'],
   ]),
 
   ...family(COMMERCIAL, {
-    temporary: true,
     planned: '/services/retail-renovations',
     note: 'Wix retail page family (interim: commercial hub)',
   }, [
@@ -232,7 +237,6 @@ export const REDIRECTS = [
   ]),
 
   ...family(COMMERCIAL, {
-    temporary: true,
     planned: '/services/general-contracting',
     note: 'Wix architects & designers page family (interim: commercial hub)',
   }, [
@@ -242,9 +246,9 @@ export const REDIRECTS = [
     ['/architect-and-designers-free-estimate-winnipeg-manitoba', W],
   ]),
 
-  /* ------------------ additional services: interim 307 to the /services hub */
+  /* ------- additional services: 307 to the /services hub until the planned
+     page is live, then 308 to it */
   ...family('/services', {
-    temporary: true,
     planned: '/services/windows-and-doors',
     note: 'Wix windows & doors page family (interim: services hub)',
   }, [
@@ -257,7 +261,6 @@ export const REDIRECTS = [
   ]),
 
   ...family('/services', {
-    temporary: true,
     planned: '/services/exterior-painting',
     note: 'Wix exterior painting page family (interim: services hub)',
   }, [
@@ -271,7 +274,6 @@ export const REDIRECTS = [
   ]),
 
   ...family('/services', {
-    temporary: true,
     planned: '/services/masonry-stucco',
     note: 'Wix masonry & stucco page family (interim: services hub)',
   }, [
@@ -284,7 +286,6 @@ export const REDIRECTS = [
   ]),
 
   ...family('/services', {
-    temporary: true,
     planned: '/services/flooring',
     note: 'Wix flooring page family (interim: services hub)',
   }, [
@@ -297,7 +298,6 @@ export const REDIRECTS = [
   ]),
 
   ...family('/services', {
-    temporary: true,
     planned: '/services/demolition',
     note: 'Wix demolition page family (interim: services hub)',
   }, [
@@ -333,11 +333,15 @@ export const REDIRECTS = [
   ...family('/faqs', { note: 'Wix FAQ page' }, [
     ['/faq-winnipeg-manitoba', S],
   ]),
-  // /location* should move to /service-areas once that page is live.
-  ...family('/contact-us', { note: 'Wix contact / location page' }, [
+  ...family('/contact-us', { note: 'Wix contact page' }, [
     ['/contact-us-winnipeg-manitoba', S],
+  ]),
+  ...family('/contact-us', { planned: '/service-areas', note: 'Wix location page (service-area hub once live)' }, [
     ['/location', W],
     ['/location-winnipeg-manitoba', S],
+  ]),
+  ...family('/service-areas', { note: 'Current site: the service-area page before /service-areas (plan §5)' }, [
+    ['/outside-winnipeg', A],
   ]),
   ...family('/instant-quote', { note: 'Wix quote request page' }, [
     ['/get-an-instant-quote', W],
@@ -405,11 +409,24 @@ export const REDIRECTS = [
   ...mergedPost('trending-kitchen-design-ideas-for-small-kitchens-you-ll-love',
     BLOG('essential-design-strategies-for-small-kitchen-renovations'), 'Blog #26 merged into #27'),
   // #7 contains outdated tax-program claims: unpublished (draft) until it is
-  // rewritten as the Manitoba tax credits & rebates guide.
+  // rewritten as the Manitoba tax credits & rebates guide. 307 to #11 until
+  // that guide is published, then 308 to it.
   ...mergedPost('tax-incentives-for-commercial-renovations-what-you-should-know',
     BLOG('how-to-finance-a-commercial-renovation-without-breaking-the-bank'),
     'Blog #7 unpublished pending rewrite (interim: #11)',
-    { temporary: true, planned: '/blog/manitoba-renovation-tax-credits-rebates' }),
+    { planned: '/blog/manitoba-renovation-tax-credits-rebates' }),
+  // #25 is still published. It is replaced by the general-contractor explainer
+  // (plan §9): this rule only takes effect once the new post is live AND the
+  // old one is no longer a live page (status 'redirect' in blog-raw). Its
+  // Wix-era /post/ URL (KEPT_POSTS below) then follows it in one hop.
+  {
+    from: BLOG('mastering-general-contracting-tips-for-your-next-project'),
+    to: null,
+    planned: BLOG('what-does-a-general-contractor-do'),
+    evidence: A,
+    note: 'Blog #25 replaced by the general contractor explainer (live on the current site until then)',
+    since: INTERIM_SINCE,
+  },
 
   // Kept posts: Wix-era /post/<slug> -> /blog/<slug>.
   ...KEPT_POSTS.map((slug) => ({

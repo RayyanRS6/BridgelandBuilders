@@ -18,67 +18,118 @@
   <meta property="og:title" content="Winnipeg Renovation Contractors | Bridgeland Builders" />
   <meta property="og:description" content="Winnipeg renovation and construction company with over 60 years of combined experience. Free quotes on home and commercial renovations." />
   <meta property="og:url" content="https://bridgelandbuilders.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:image" content="https://bridgelandbuilders.com/og/default-1200x630.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <!-- seo:head:end -->
 
   <!-- Sitewide, so kept outside the seo:head block that scripts/prerender.mjs
        replaces on every page. theme-color stays the signed-off brand red until
        the owner picks otherwise (SEO plan O-25). The tab icon is the bridge
-       logo (favicon.png / favicon.ico); public/favicon.svg is an older "B"
-       placeholder, so it is not linked. -->
+       logo (favicon.png / favicon.ico; icons/icon-192.png is the same mark at a
+       multiple of 48px, the size Google Search prefers for result favicons);
+       public/favicon.svg is an older "B" placeholder, so it is not linked.
+       The icons in public/icons/ are made by scripts/build-images.mjs. -->
   <meta name="theme-color" content="#C20917" />
   <meta name="format-detection" content="telephone=yes" />
   <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Fonts: DM Sans for Clean, Highly Readable & Minimal Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts: DM Sans, self-hosted (the @font-face rules are at the top of
+       src/index.css). Only the latin upright file is preloaded: it is the one
+       every page needs first. -->
+  <link rel="preload" href="/fonts/dm-sans-latin-normal.ca72d2bc.woff2" as="font" type="font/woff2" crossorigin />
+  <!-- Unsplash still serves the home and service page photos. Blog images are
+       self-hosted under /images/blog (no Wix hosts left). scripts/prerender.mjs
+       removes this comment and the preconnect from pages with no Unsplash photo. -->
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="dns-prefetch" href="https://static.wixstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,600&display=swap" rel="stylesheet">
 
-  <!-- Meta Pixel Code. This is the only place the pixel lives: every page on
-       the site is prerendered from this file (scripts/prerender.mjs), so it is
-       in the <head> of all of them. Meta's standard snippet, loaded async so it
-       never delays the page, and skipped on localhost so local development and
-       testing never send visits to the ad account. Also skipped when the browser
-       sends Do Not Track, as section 12 of the Privacy Policy promises. Later
-       page views inside the site are sent by src/components/MetaPixelPageViews.jsx;
-       the quote form sends Lead and Schedule (src/lib/bookingApi.js). Both check
-       that fbq exists, so skipping the snippet turns them off too. -->
-  <link rel="preconnect" href="https://connect.facebook.net">
+  <!-- Measurement loader: Meta Pixel and (when configured) Google Analytics 4.
+       This is the only place either tag is set up: every page is prerendered
+       from this file (scripts/prerender.mjs).
+       - Nothing is tracked on localhost (development and testing) or when the
+         browser sends Do Not Track, as section 12 of the Privacy Policy
+         promises. window.__bbMeasure records that decision for the site code
+         (src/lib/analytics.js).
+       - Google Consent Mode v2 defaults are set before any Google tag:
+         denied in Quebec, the EEA, the UK and Switzerland; granted elsewhere.
+       - The pixel's stub, init and first PageView run here, so nothing is
+         lost, but fbevents.js (and gtag.js) only download after the page has
+         loaded, in idle time (on the /free-quote ad page: right at load), so
+         neither delays the page. Events sent before then wait in the queue.
+       - GA_ID is written in at build time from src/data/analyticsConfig.js
+         (vite.config.js). null = Google Analytics off: gtag.js never loads.
+       Later page views are sent by src/components/MetaPixelPageViews.jsx; the
+       quote form sends Lead and Schedule (src/lib/bookingApi.js). -->
   <script>
-  if (
-    !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) &&
-    navigator.doNotTrack !== '1' && window.doNotTrack !== '1'
-  ) {
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1272824070968198');
-  fbq('track', 'PageView');
-  }
+  (function (w, d, n) {
+    var GA_ID = null /* ga4-id */;
+    var PRIORITY_PATHS = ["/free-quote"] /* pixel-priority-paths */;
+    var allowed = !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) &&
+      n.doNotTrack !== '1' && w.doNotTrack !== '1';
+    w.__bbMeasure = { allowed: allowed, ga: allowed && GA_ID ? GA_ID : null };
+
+    w.dataLayer = w.dataLayer || [];
+    w.gtag = w.gtag || function () { w.dataLayer.push(arguments); };
+    w.gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+      region: ['CA-QC', 'GB', 'CH', 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU',
+        'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO']
+    });
+    w.gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
+    });
+    w.gtag('set', 'ads_data_redaction', true);
+    if (!allowed) return;
+
+    // Meta Pixel (Meta's standard stub, without the immediate script tag).
+    if (!w.fbq) {
+      var q = w.fbq = function () { q.callMethod ? q.callMethod.apply(q, arguments) : q.queue.push(arguments); };
+      if (!w._fbq) w._fbq = q;
+      q.push = q; q.loaded = true; q.version = '2.0'; q.queue = [];
+    }
+    w.fbq('init', '1272824070968198');
+    w.fbq('track', 'PageView');
+
+    // Google Analytics 4: landing page view sent manually with this page's
+    // own URL and title (in-site page views: MetaPixelPageViews.jsx).
+    if (GA_ID) {
+      w.gtag('js', new Date());
+      w.gtag('config', GA_ID, { send_page_view: false, allow_google_signals: false });
+      w.gtag('event', 'page_view', { page_location: location.href, page_title: d.title });
+    }
+
+    var started = false;
+    function inject(src) {
+      var s = d.createElement('script');
+      s.async = true;
+      s.src = src;
+      d.head.appendChild(s);
+    }
+    function load() {
+      if (started) return;
+      started = true;
+      inject('https://connect.facebook.net/en_US/fbevents.js');
+      if (GA_ID) inject('https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID));
+    }
+    function afterLoad() {
+      if (PRIORITY_PATHS.indexOf(location.pathname.replace(/\/+$/, '') || '/') !== -1) return load();
+      if (w.requestIdleCallback) w.requestIdleCallback(load, { timeout: 3000 });
+      else w.setTimeout(load, 1);
+    }
+    if (d.readyState === 'complete') afterLoad();
+    else w.addEventListener('load', afterLoad);
+  })(window, document, navigator);
   </script>
-  <!-- End Meta Pixel Code -->
 
   <!-- seo:jsonld:start -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["GeneralContractor","HomeAndConstructionBusiness","LocalBusiness"],"@id":"https://bridgelandbuilders.com/#organization","name":"Bridgeland Builders","url":"https://bridgelandbuilders.com/","description":"Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home extensions and general contracting across Winnipeg and nearby communities.","disambiguatingDescription":"Renovation and construction contractor based in Winnipeg, Manitoba, Canada. Not affiliated with Bridgeland, Texas or the Bridgeland neighbourhood of Calgary.","slogan":"Bridging dreams into reality","telephone":"+1-431-866-5644","email":"info@bridgelandbuilders.com","logo":{"@type":"ImageObject","url":"https://bridgelandbuilders.com/logo-on-light.png","width":460,"height":426},"image":"https://bridgelandbuilders.com/logo-on-light.png","priceRange":"$$","currenciesAccepted":"CAD","address":{"@type":"PostalAddress","addressLocality":"Winnipeg","addressRegion":"MB","addressCountry":"CA"},"areaServed":[{"@type":"City","name":"Winnipeg","sameAs":"https://en.wikipedia.org/wiki/Winnipeg"},{"@type":"AdministrativeArea","name":"Headingley","sameAs":"https://en.wikipedia.org/wiki/Rural_Municipality_of_Headingley"},{"@type":"AdministrativeArea","name":"East St. Paul","sameAs":"https://en.wikipedia.org/wiki/Rural_Municipality_of_East_St._Paul"},{"@type":"AdministrativeArea","name":"West St. Paul","sameAs":"https://en.wikipedia.org/wiki/Rural_Municipality_of_West_St._Paul"},{"@type":"Place","name":"Oak Bluff","sameAs":"https://en.wikipedia.org/wiki/Oak_Bluff,_Manitoba"},{"@type":"City","name":"Selkirk","sameAs":"https://en.wikipedia.org/wiki/Selkirk,_Manitoba"},{"@type":"City","name":"Steinbach","sameAs":"https://en.wikipedia.org/wiki/Steinbach,_Manitoba"}],"hasMap":"https://maps.google.com/?cid=6390477049138999065","sameAs":["https://www.facebook.com/profile.php?id=61567968356924","https://www.instagram.com/bridgelandbuilder/","https://www.linkedin.com/company/bridgeland-builders/","https://www.youtube.com/channel/UCKN758eCYFdf-eH9_FFwjgw","https://www.tiktok.com/@bridgeland.builder","https://x.com/bridgeland58384","https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638","https://maps.google.com/?cid=6390477049138999065"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["https://schema.org/Monday","https://schema.org/Tuesday","https://schema.org/Wednesday","https://schema.org/Thursday","https://schema.org/Friday"],"opens":"08:30","closes":"16:30"}],"knowsAbout":["Whole home renovations","Kitchen renovations","Bathroom renovations","Basement renovations","Home extensions","Commercial renovations","General contracting","Windows and doors installation","Exterior painting","Masonry and stucco","Flooring installation","Demolition"],"contactPoint":{"@type":"ContactPoint","telephone":"+1-431-866-5644","email":"info@bridgelandbuilders.com","contactType":"customer service","availableLanguage":"English"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Renovation and construction services","itemListElement":[{"@type":"Service","@id":"https://bridgelandbuilders.com/services/whole-home-renovations#service","name":"Whole home renovation","url":"https://bridgelandbuilders.com/services/whole-home-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/kitchen-renovations#service","name":"Kitchen renovation","url":"https://bridgelandbuilders.com/services/kitchen-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/bathroom-renovations#service","name":"Bathroom renovation","url":"https://bridgelandbuilders.com/services/bathroom-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/basement-renovations#service","name":"Basement renovation","url":"https://bridgelandbuilders.com/services/basement-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/home-extensions#service","name":"Home extension","url":"https://bridgelandbuilders.com/services/home-extensions"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/commercial-renovations#service","name":"Commercial renovation","url":"https://bridgelandbuilders.com/services/commercial-renovations"}]}},{"@type":"WebSite","@id":"https://bridgelandbuilders.com/#website","url":"https://bridgelandbuilders.com/","name":"Bridgeland Builders","alternateName":["Bridgeland Builders Winnipeg"],"description":"Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home extensions and general contracting across Winnipeg and nearby communities.","publisher":{"@id":"https://bridgelandbuilders.com/#organization"},"inLanguage":"en-CA"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["GeneralContractor","HomeAndConstructionBusiness","LocalBusiness"],"@id":"https://bridgelandbuilders.com/#organization","name":"Bridgeland Builders","url":"https://bridgelandbuilders.com/","description":"Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home additions and general contracting across Winnipeg and nearby communities.","disambiguatingDescription":"Renovation and construction contractor based in Winnipeg, Manitoba, Canada. Not affiliated with Bridgeland, Texas or the Bridgeland neighbourhood of Calgary.","slogan":"Bridging dreams into reality","telephone":"+1-431-866-5644","email":"info@bridgelandbuilders.com","logo":{"@type":"ImageObject","url":"https://bridgelandbuilders.com/logo-on-light.png","width":460,"height":426},"image":"https://bridgelandbuilders.com/logo-on-light.png","priceRange":"$$","currenciesAccepted":"CAD","address":{"@type":"PostalAddress","addressLocality":"Winnipeg","addressRegion":"MB","addressCountry":"CA"},"areaServed":[{"@type":"City","name":"Winnipeg","sameAs":"https://en.wikipedia.org/wiki/Winnipeg"},{"@type":"AdministrativeArea","name":"Headingley","sameAs":"https://en.wikipedia.org/wiki/Rural_Municipality_of_Headingley"},{"@type":"AdministrativeArea","name":"East St. Paul","sameAs":"https://en.wikipedia.org/wiki/Rural_Municipality_of_East_St._Paul"},{"@type":"AdministrativeArea","name":"West St. Paul","sameAs":"https://en.wikipedia.org/wiki/Rural_Municipality_of_West_St._Paul"},{"@type":"Place","name":"Oak Bluff","sameAs":"https://en.wikipedia.org/wiki/Oak_Bluff,_Manitoba"},{"@type":"City","name":"Selkirk","sameAs":"https://en.wikipedia.org/wiki/Selkirk,_Manitoba"},{"@type":"City","name":"Steinbach","sameAs":"https://en.wikipedia.org/wiki/Steinbach,_Manitoba"}],"hasMap":"https://maps.google.com/?cid=6390477049138999065","sameAs":["https://www.facebook.com/profile.php?id=61567968356924","https://www.instagram.com/bridgelandbuilder/","https://www.linkedin.com/company/bridgeland-builders/","https://www.youtube.com/channel/UCKN758eCYFdf-eH9_FFwjgw","https://www.tiktok.com/@bridgeland.builder","https://x.com/bridgeland58384","https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638","https://maps.google.com/?cid=6390477049138999065"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["https://schema.org/Monday","https://schema.org/Tuesday","https://schema.org/Wednesday","https://schema.org/Thursday","https://schema.org/Friday"],"opens":"08:30","closes":"16:30"}],"knowsAbout":["Whole home renovations","Kitchen renovations","Bathroom renovations","Basement renovations","Home additions","Commercial renovations","Office renovations","Retail renovations","Restaurant and hospitality renovations","Medical and dental office renovations","General contracting","Windows and doors installation","Exterior painting","Masonry and stucco","Flooring installation","Demolition"],"contactPoint":{"@type":"ContactPoint","telephone":"+1-431-866-5644","email":"info@bridgelandbuilders.com","contactType":"customer service","availableLanguage":"English"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Renovation and construction services","itemListElement":[{"@type":"Service","@id":"https://bridgelandbuilders.com/services/basement-renovations#service","name":"Basement renovation","url":"https://bridgelandbuilders.com/services/basement-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/bathroom-renovations#service","name":"Bathroom renovation","url":"https://bridgelandbuilders.com/services/bathroom-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/home-additions#service","name":"Home addition","url":"https://bridgelandbuilders.com/services/home-additions"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/kitchen-renovations#service","name":"Kitchen renovation","url":"https://bridgelandbuilders.com/services/kitchen-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/whole-home-renovations#service","name":"Whole home renovation","url":"https://bridgelandbuilders.com/services/whole-home-renovations"},{"@type":"Service","@id":"https://bridgelandbuilders.com/services/commercial-renovations#service","name":"Commercial renovation","url":"https://bridgelandbuilders.com/services/commercial-renovations"}]}},{"@type":"WebSite","@id":"https://bridgelandbuilders.com/#website","url":"https://bridgelandbuilders.com/","name":"Bridgeland Builders","alternateName":["Bridgeland Builders Winnipeg"],"description":"Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home additions and general contracting across Winnipeg and nearby communities.","publisher":{"@id":"https://bridgelandbuilders.com/#organization"},"inLanguage":"en-CA"}]}</script>
   <!-- seo:jsonld:end -->
 </head>
 <body>
-  <!-- Meta Pixel fallback for visitors without JavaScript (an <img> isn't
-       valid inside <head>, so it lives here). -->
-  <noscript><img height="1" width="1" style="display:none" alt=""
-  src="https://www.facebook.com/tr?id=1272824070968198&ev=PageView&noscript=1"
-  /></noscript>
+  <!-- No <noscript> pixel: it would fire even when the browser sends Do Not
+       Track, which the Privacy Policy promises to honour. -->
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 

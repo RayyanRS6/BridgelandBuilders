@@ -1,4 +1,60 @@
 /* -------------------------------------------------------------
+   0. FONTS — DM Sans, self-hosted
+   The exact woff2 files Google Fonts serves for the stylesheet this site used
+   (DM Sans ital,opsz,wght 300–800 + italic 400/600; latin + latin-ext), with
+   Google's own descriptors and unicode ranges, so text renders the same as
+   before without the fonts.googleapis.com / fonts.gstatic.com round trips.
+   File names carry a content hash (served with an immutable cache header).
+   The latin roman file is preloaded in index.html.
+   ------------------------------------------------------------- */
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/dm-sans-latin-ext-italic.b72f7226.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/dm-sans-latin-italic.d5c53a50.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 600; font-display: swap; src: url(/fonts/dm-sans-latin-ext-italic.b72f7226.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: italic; font-weight: 600; font-display: swap; src: url(/fonts/dm-sans-latin-italic.d5c53a50.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url(/fonts/dm-sans-latin-ext-normal.5d18d31d.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url(/fonts/dm-sans-latin-normal.ca72d2bc.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/dm-sans-latin-ext-normal.5d18d31d.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/dm-sans-latin-normal.ca72d2bc.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/dm-sans-latin-ext-normal.5d18d31d.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/dm-sans-latin-normal.ca72d2bc.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/dm-sans-latin-ext-normal.5d18d31d.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/dm-sans-latin-normal.ca72d2bc.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/dm-sans-latin-ext-normal.5d18d31d.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/dm-sans-latin-normal.ca72d2bc.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* latin-ext */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 800; font-display: swap; src: url(/fonts/dm-sans-latin-ext-normal.5d18d31d.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 800; font-display: swap; src: url(/fonts/dm-sans-latin-normal.ca72d2bc.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* Metric-matched stand-in shown while DM Sans loads (font-display: swap), so
+   the swap moves almost nothing (CLS). Local Arial scaled to DM Sans: from the
+   fonts' own tables (DM Sans upm 1000, typo ascent 992 / descent 310 / gap 0,
+   avg x-width 466; Arial upm 2048, avg x-width 913; @capsizecss/metrics):
+   size-adjust = (466/1000)/(913/2048), overrides = DM Sans metric / size-adjust. */
+@font-face {
+  font-family: 'DM Sans Fallback';
+  src: local('Arial'), local('ArialMT');
+  size-adjust: 104.53%;
+  ascent-override: 94.9%;
+  descent-override: 29.66%;
+  line-gap-override: 0%;
+}
+
+/* -------------------------------------------------------------
    1. CSS VARIABLES & THEME (Cozy Base + Red & Sea Green Accents)
    ------------------------------------------------------------- */
 :root {
@@ -30,7 +86,7 @@
   --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Typography: Clean, Accessible DM Sans */
-  --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: 'DM Sans', 'DM Sans Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* -------------------------------------------------------------

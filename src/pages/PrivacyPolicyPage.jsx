@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PolicyContact from '../components/PolicyContact.jsx';
+import { ATTRIBUTION_TTL_DAYS, gaMeasurementId } from '../data/analyticsConfig.js';
 import {
   SITE_EMAIL,
   SITE_NAME,
@@ -13,16 +14,25 @@ import {
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // Update this whenever the policy changes.
-const LAST_UPDATED = 'October 2, 2026';
+const LAST_UPDATED = 'October 13, 2026';
+
+// Google Analytics is described only while it is switched on
+// (GA4_MEASUREMENT_ID in src/data/analyticsConfig.js), so this page never
+// mentions a tool the site isn't using.
+const GA_ON = Boolean(gaMeasurementId());
 
 // Written for Canada's Personal Information Protection and Electronic Documents
 // Act (PIPEDA), which covers private businesses in Manitoba. Every practice
 // described here matches what the site actually does: the contact form
 // (src/pages/GetInTouchPage.jsx), the quote form and calendar
-// (src/components/QuoteBookingForm.jsx -> GoHighLevel), the Meta Pixel
-// (index.html, skipped when the browser sends Do Not Track), the LeadConnector
-// chat widget, the Price Calculator price guide, and the fonts and images loaded
-// from Google, Unsplash and Wix. If any of those change, update this page.
+// (src/components/QuoteBookingForm.jsx -> GoHighLevel), the arrival details
+// saved with a quote request (src/lib/attribution.js), the Meta Pixel and,
+// when configured, Google Analytics (index.html; neither runs when the browser
+// sends Do Not Track; Meta custom events: META_CUSTOM_EVENTS in
+// analyticsConfig.js), Meta's Conversions API (api/_lib/meta.js, off until its
+// keys are set), the LeadConnector chat widget, the Price Calculator price
+// guide, and the images loaded from Unsplash and Wix (fonts are self-hosted).
+// If any of those change, update this page.
 //
 // The text-messaging clauses (section 1, and the SMS lines in sections 8 and 9)
 // are what our SMS (A2P 10DLC) registration is reviewed against. Keep their
@@ -58,7 +68,12 @@ export default function PrivacyPolicyPage() {
                 <li>We collect the details you give us so we can quote, schedule and carry out your project.</li>
                 <li>We never sell your personal information.</li>
                 <li>We only text you if you opt in, we never share your mobile number or consent for marketing, and you can reply STOP at any time.</li>
-                <li>We use the Meta Pixel to measure our Facebook and Instagram ads.</li>
+                <li>
+                  We use the Meta Pixel to measure our Facebook and Instagram ads
+                  {GA_ON ? ', and Google Analytics to understand how our website is used' : ''}. Neither runs if your
+                  browser sends Do Not Track.
+                </li>
+                <li>When you send us a request, we also record how you found our website, such as the ad or site that brought you.</li>
                 <li>You can ask to see, correct or delete your information at any time.</li>
               </ul>
             </aside>
@@ -110,7 +125,7 @@ export default function PrivacyPolicyPage() {
               <li>
                 <strong>Quote and booking form:</strong> your name, email address, phone number, project address,
                 city and postal code, whether the project is in Winnipeg or a nearby community, the type of renovation, and —
-                if you book a call — the time you choose.
+                if you book an on-site visit — the time you choose.
               </li>
               <li>
                 <strong>Price guide:</strong> your answers about the project and the contact details you enter to
@@ -126,12 +141,19 @@ export default function PrivacyPolicyPage() {
             <p>We also collect some information automatically:</p>
             <ul className="blog-list">
               <li>
-                <strong>Visits and actions on the site:</strong> the pages you view, and whether you submit the quote
-                form or book a call (see section 7, “Do we use cookies?”).
+                <strong>Visits and actions on the site:</strong> the pages you view, and actions such as submitting the
+                quote form, booking an on-site visit, tapping our phone number or email address, or using our price
+                guide (see section 7, “Do we use cookies?”).
               </li>
               <li>
-                <strong>Where you came from:</strong> if you arrive from one of our ads, the ad source in the link
-                (for example “facebook”) is saved with your inquiry so we know which ads work.
+                <strong>Where you came from:</strong> when you send a quote or booking request, we save with it the page
+                you arrived on, the web page that linked you to us (its address, without any search terms), and any
+                campaign tags or ad click identifiers in the link you followed (for example “utm_source=facebook”,
+                “gclid” or “fbclid”), along with the identifiers our advertising
+                {GA_ON ? ' and analytics' : ''} tools have stored in your browser, if any. To connect a request with an
+                earlier visit, your browser remembers how you first and most recently arrived, in its own local storage
+                (not a cookie), for up to {ATTRIBUTION_TTL_DAYS} days. This helps us understand which ads and pages
+                bring people to us.
               </li>
               <li>
                 <strong>Technical details:</strong> your IP address, browser and device type, recorded in standard
@@ -219,12 +241,40 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p>
               <strong>Meta Pixel.</strong> Our website uses the Meta Pixel, a tool from Meta Platforms (the company behind
-              Facebook and Instagram). When you visit, it tells Meta which pages you view and whether you submit our quote
-              form or book a call. Meta may connect this with your Facebook or Instagram account — including by using a
+              Facebook and Instagram). When you visit, it tells Meta which pages you view, whether you submit our quote
+              form or book an on-site visit, and actions such as tapping our phone number or email address. Meta may
+              connect this with your Facebook or Instagram account — including by using a
               scrambled (hashed) version of contact details such as your email address or phone number — so we can measure
               how our ads perform and show our ads to you and to people with similar interests. Meta handles this
               information under its own{' '}
               <a href="https://www.facebook.com/privacy/policy/" {...external}>Privacy Policy</a>.
+            </p>
+            <p>
+              <strong>Meta server events.</strong> When we switch on Meta’s Conversions API, our server will also send
+              Meta its own copy of each quote request and booking: your email address, phone number, name, city and
+              postal code in hashed (scrambled) form, along with your IP address, browser type and the Meta Pixel
+              identifiers in your browser, so Meta can match it to the ad that led to it and count it only once. This is
+              only sent when the Meta Pixel ran on your visit, so never when your browser sends Do Not Track.
+            </p>
+            {GA_ON && (
+              <p>
+                <strong>Google Analytics.</strong> We use Google Analytics, a service from Google, to understand how
+                visitors use our website: the pages viewed, how people arrived (for example from a search engine or an
+                ad), and actions such as starting a form, requesting a quote or tapping to call. It sets its own cookies
+                (such as “_ga”) to recognise a returning browser. We don’t use Google Signals, and Google
+                Analytics doesn’t log or store IP addresses. For visitors in Quebec, the European Economic Area, the
+                United Kingdom and Switzerland, Google Analytics runs without analytics or advertising cookies. Google
+                handles this information under its own{' '}
+                <a href="https://policies.google.com/privacy" {...external}>Privacy Policy</a>, and you can opt out with
+                the{' '}
+                <a href="https://tools.google.com/dlpage/gaoptout" {...external}>Google Analytics opt-out browser add-on</a>.
+              </p>
+            )}
+            <p>
+              <strong>How you found us.</strong> As described in section 2, your browser’s local storage keeps a short
+              note of how you first and most recently arrived at our website (for up to {ATTRIBUTION_TTL_DAYS} days), so
+              it can be sent with a quote request. It isn’t shared with anyone until you send us a request, and you can
+              clear it at any time by clearing your browser’s site data.
             </p>
             <p>
               <strong>Live chat.</strong> Our chat widget may use cookies or similar browser storage to keep your
@@ -270,15 +320,19 @@ export default function PrivacyPolicyPage() {
                 submissions, bookings and chat conversations, and sends our appointment confirmations, emails and text
                 messages.
               </li>
-              <li><strong>Meta Platforms:</strong> advertising measurement through the Meta Pixel, described in section 7.</li>
+              <li>
+                <strong>Meta Platforms:</strong> advertising measurement through the Meta Pixel (and, once switched on,
+                Meta’s Conversions API), described in section 7.
+              </li>
+              {GA_ON && <li><strong>Google:</strong> website analytics through Google Analytics, described in section 7.</li>}
               <li><strong>Vercel:</strong> hosts our website and runs the secure server code behind our quote form.</li>
               <li>
                 <strong>Price Calculator by AutomateX360:</strong> powers our online price guide and passes estimate
                 requests to our customer management system.
               </li>
               <li>
-                <strong>Google Fonts, Unsplash and Wix:</strong> deliver the fonts and some of the images on our site.
-                They receive your IP address when your browser loads them.
+                <strong>Unsplash:</strong> delivers some of the images on our site. It receives your IP address when
+                your browser loads them. Our fonts are served from our own website.
               </li>
             </ul>
             <p>
@@ -346,8 +400,11 @@ export default function PrivacyPolicyPage() {
             <p>
               We honor Do Not Track signals and do not track, plant advertising cookies, or use advertising when a Do
               Not Track (DNT) browser mechanism is in place: when your browser sends a DNT signal, our website does not
-              load the Meta Pixel. Features you choose to use, such as live chat, may still use the browser storage they
-              need to work.
+              load the Meta Pixel{GA_ON ? ' or Google Analytics' : ''}, does not keep a note in your browser of how you
+              arrived, and our server does not send Meta a copy of anything you submit. If you send us a request, only
+              the details of that visit go with it (the page you arrived on, the page that linked you to us, and any
+              campaign tags in the link). Features you choose to use, such as
+              live chat, may still use the browser storage they need to work.
             </p>
 
             <h2>13. Does our site allow third-party behavioral tracking?</h2>
@@ -355,6 +412,7 @@ export default function PrivacyPolicyPage() {
               It’s also important to note that we allow third-party behavioral tracking: the Meta Pixel described in
               section 7 lets Meta Platforms record visits to our site and use them to show you our ads on Facebook and
               Instagram, unless your browser sends a Do Not Track signal.
+              {GA_ON ? ' Google Analytics, also described in section 7, records how our website is used, under the same Do Not Track rule.' : ''}
             </p>
 
             <h2>14. COPPA (Children’s Online Privacy Protection Act)</h2>

@@ -35,9 +35,10 @@
     { "source": "/home-reno", "destination": "https://bridgelandbuilders.com/services/whole-home-renovations", "permanent": true },
     { "source": "/home-renovation-gallery", "destination": "https://bridgelandbuilders.com/services/whole-home-renovations", "permanent": true },
     { "source": "/projects/whole-home-renovation", "destination": "https://bridgelandbuilders.com/services/whole-home-renovations", "permanent": true },
-    { "source": "/home-extension-free-estimate", "destination": "https://bridgelandbuilders.com/services/home-extensions", "permanent": true },
-    { "source": "/home-extension-free-estimate-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services/home-extensions", "permanent": true },
-    { "source": "/projects/home-extension", "destination": "https://bridgelandbuilders.com/services/home-extensions", "permanent": true },
+    { "source": "/services/home-extensions", "destination": "https://bridgelandbuilders.com/services/home-additions", "permanent": true },
+    { "source": "/home-extension-free-estimate", "destination": "https://bridgelandbuilders.com/services/home-additions", "permanent": true },
+    { "source": "/home-extension-free-estimate-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services/home-additions", "permanent": true },
+    { "source": "/projects/home-extension", "destination": "https://bridgelandbuilders.com/services/home-additions", "permanent": true },
     { "source": "/commercial", "destination": "https://bridgelandbuilders.com/services/commercial-renovations", "permanent": true },
     { "source": "/commercial-renovation", "destination": "https://bridgelandbuilders.com/services/commercial-renovations", "permanent": true },
     { "source": "/commercial-renovation-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services/commercial-renovations", "permanent": true },
@@ -140,8 +141,9 @@
     { "source": "/about-6", "destination": "https://bridgelandbuilders.com/about-us", "permanent": true },
     { "source": "/faq-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/faqs", "permanent": true },
     { "source": "/contact-us-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/contact-us", "permanent": true },
-    { "source": "/location", "destination": "https://bridgelandbuilders.com/contact-us", "permanent": true },
-    { "source": "/location-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/contact-us", "permanent": true },
+    { "source": "/location", "destination": "https://bridgelandbuilders.com/service-areas", "permanent": true },
+    { "source": "/location-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/service-areas", "permanent": true },
+    { "source": "/outside-winnipeg", "destination": "https://bridgelandbuilders.com/service-areas", "permanent": true },
     { "source": "/get-an-instant-quote", "destination": "https://bridgelandbuilders.com/instant-quote", "permanent": true },
     { "source": "/get-an-instant-quote-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/instant-quote", "permanent": true },
     { "source": "/request-quote", "destination": "https://bridgelandbuilders.com/instant-quote", "permanent": true },
@@ -215,16 +217,25 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     },
     {
+      "source": "/fonts/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
+        { "key": "Content-Security-Policy-Report-Only", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://*.leadconnectorhq.com https://link.msgsndr.com https://*.msgsndr.com; style-src 'self' 'unsafe-inline' https://*.leadconnectorhq.com; font-src 'self' data: https://*.leadconnectorhq.com; img-src 'self' data: blob: https://images.unsplash.com https://i.ytimg.com https://www.facebook.com https://*.google-analytics.com https://*.googletagmanager.com https://*.leadconnectorhq.com https://*.msgsndr.com https://storage.googleapis.com; connect-src 'self' https://connect.facebook.net https://www.facebook.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.leadconnectorhq.com wss://*.leadconnectorhq.com https://*.msgsndr.com https://estimator.bridgelandbuilders.com; frame-src https://estimator.bridgelandbuilders.com https://www.youtube-nocookie.com https://*.leadconnectorhq.com https://link.msgsndr.com https://www.facebook.com; media-src 'self' https://*.leadconnectorhq.com; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://*.leadconnectorhq.com https://link.msgsndr.com; frame-ancestors 'self'; report-uri /api/csp-report" }
       ]
     },
     {
-      "source": "/(favicon\\.ico|favicon\\.png|favicon\\.svg|apple-touch-icon\\.png|logo-.*\\.png|site\\.webmanifest)",
+      "source": "/(favicon\\.ico|favicon\\.png|favicon\\.svg|apple-touch-icon\\.png|logo-.*\\.png|site\\.webmanifest|icons/.*|og/.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {

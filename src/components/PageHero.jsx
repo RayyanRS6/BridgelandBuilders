@@ -19,7 +19,7 @@ export default function PageHero({ eyebrow, title, highlight, description, prima
                 </Link>
               )}
               {showQuote && (
-                <Link className={primaryLink ? 'btn-pill-ghost' : 'btn-pill-red'} to={INSTANT_QUOTE_PATH}>
+                <Link className={primaryLink ? 'btn-pill-ghost' : 'btn-pill-red'} to={INSTANT_QUOTE_PATH} data-cta="page-hero-instant-quote">
                   {INSTANT_QUOTE_LABEL}
                 </Link>
               )}

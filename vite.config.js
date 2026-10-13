@@ -2,6 +2,29 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
+import { PIXEL_PRIORITY_PATHS, gaMeasurementId } from './src/data/analyticsConfig.js';
+
+/**
+ * Writes the measurement settings from src/data/analyticsConfig.js into the
+ * inline loader in index.html (dev and build), so the GA4 id lives in one
+ * place and the Privacy Policy, which reads the same file, always matches.
+ * Only a well-formed "G-…" id is written; anything else stays null (GA off).
+ */
+function measurementSettings() {
+  const replace = (html, marker, value) => {
+    const re = new RegExp(`(?:null|"[^"\\n]*"|\\[[^\\]\\n]*\\]) /\\* ${marker} \\*/`);
+    if (!re.test(html)) throw new Error(`index.html: measurement marker "${marker}" not found`);
+    return html.replace(re, () => `${JSON.stringify(value)} /* ${marker} */`);
+  };
+  return {
+    name: 'measurement-settings',
+    transformIndexHtml(html) {
+      let out = replace(html, 'ga4-id', gaMeasurementId());
+      out = replace(out, 'pixel-priority-paths', PIXEL_PRIORITY_PATHS.filter((p) => /^\/[a-z0-9/-]*$/.test(p)));
+      return out;
+    },
+  };
+}
 
 /**
  * Serves the functions in /api (deployed as Vercel functions) from the local
@@ -47,6 +70,12 @@ function localApiFunctions(env) {
   };
 }
 
-export default defineConfig(({ mode }) => ({
-  plugins: [react(), localApiFunctions(loadEnv(mode, process.cwd(), ''))],
+export default defineConfig(({ mode, isSsrBuild }) => ({
+  plugins: [react(), measurementSettings(), localApiFunctions(loadEnv(mode, process.cwd(), ''))],
+  build: {
+    // Client build only: scripts/prerender.mjs reads dist/.vite/manifest.json
+    // to add <link rel="modulepreload"> for each route's page chunk, then moves
+    // it out of dist/ so it is never served.
+    manifest: !isSsrBuild,
+  },
 }));

@@ -39,10 +39,10 @@ const GALLERY_ITEMS = [
   },
   {
     span: 'col-4',
-    to: '/services/home-extensions',
+    to: '/services/home-additions',
     img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80',
     alt: 'Open-plan living room with a wood feature wall and glass doors',
-    title: 'Home Extension',
+    title: 'Home Addition',
     text: 'More room, built to feel like it was always there',
     delay: '0.2s',
   },

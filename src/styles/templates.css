@@ -1,0 +1,148 @@
+/* =============================================================
+   TEMPLATE PAGES — cost guides, service areas, community pages,
+   case studies, video watch pages, editorial policy.
+   These pages are built from the existing theme blocks (page
+   hero, .blog-article-*, .blog-answer, .blog-sources, .blog-inline-
+   link, .includes-grid, .gallery-grid, .testimonial-card, .faq-*,
+   .service-area-*). This file only adds the few pieces those don't
+   cover, from the same tokens. Nothing here restyles an existing
+   class on its own.
+   ============================================================= */
+
+/* Methodology / sign-off note (.blog-member-note) with a heading. */
+.blog-member-note.tpl-note h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  letter-spacing: -0.2px;
+  color: var(--accent-seagreen);
+}
+
+.blog-member-note.tpl-note p + p {
+  margin-top: 8px;
+}
+
+/* Small grey line: sign-off, reviewed-by. */
+.tpl-meta,
+.blog-member-note.tpl-note .tpl-meta {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Service links in a centred dark overview box (44px tap targets). */
+.tpl-pill-row {
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.tpl-pill-row .blog-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* Card footnote (e.g. "Checked October 13, 2026" on a community card). */
+.include-card .tpl-card-foot {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* A linked card title (published community pages). */
+.include-card h3 a:hover {
+  color: var(--accent-seagreen);
+}
+
+/* -------------------------------------------------------------
+   YouTube facade: a thumbnail button that swaps in the
+   youtube-nocookie player on click. No third-party script runs
+   before the click.
+   ------------------------------------------------------------- */
+.yt-facade {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 12px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-dark);
+  box-shadow: var(--shadow-soft);
+}
+
+.yt-facade-button,
+.yt-facade iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.yt-facade-button {
+  display: block;
+  padding: 0;
+  cursor: pointer;
+}
+
+.yt-facade-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.yt-facade-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--accent-red);
+  color: #fff;
+  box-shadow: var(--shadow-lift);
+  transform: translate(-50%, -50%);
+  transition: var(--transition-smooth);
+}
+
+.yt-facade-play svg {
+  margin-left: 4px;
+}
+
+.yt-facade-button:hover .yt-facade-play,
+.yt-facade-button:focus-visible .yt-facade-play {
+  background: var(--accent-red-hover);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.yt-facade-button:focus-visible {
+  outline: 3px solid var(--accent-seagreen);
+  outline-offset: -3px;
+}
+
+.yt-facade-caption,
+.blog-article-body .yt-facade-caption {
+  margin-bottom: 28px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px) {
+  .yt-facade {
+    border-radius: var(--radius-md);
+  }
+  .yt-facade-play {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yt-facade-button img,
+  .yt-facade-play {
+    transition: none;
+  }
+}

@@ -41,7 +41,7 @@ export default function InstantQuotePage() {
               You can also call us at <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>.
             </p>
             <div className="hero-cta-group">
-              <Link to="/book-online" className="btn-pill-red">
+              <Link to="/book-online" className="btn-pill-red" data-cta="instant-quote-book-visit">
                 <span>BOOK A FREE ON-SITE VISIT</span>
                 <ArrowRightIcon size={15} />
               </Link>

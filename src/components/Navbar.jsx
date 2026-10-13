@@ -170,8 +170,10 @@ export default function Navbar() {
                             </li>
                           ))}
                         </ul>
-                        <Link className="view-all-services-link" to="/services" onClick={closeNavigation}>
-                          View all services <ArrowRightIcon size={13} />
+                        {/* A category with its own hub page (commercial) links
+                            there, as on the /services directory. */}
+                        <Link className="view-all-services-link" to={category.overviewTo || '/services'} onClick={closeNavigation}>
+                          {category.overviewTo ? 'Commercial overview' : 'View all services'} <ArrowRightIcon size={13} />
                         </Link>
                       </div>
                     ))}
@@ -186,7 +188,7 @@ export default function Navbar() {
           {/* Main Call To Action Button in Red #C20917 — goes to the instant
               quote estimator page. Narrow phones swap in the shorter label so
               the pill still fits beside the logo and menu. */}
-          <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red nav-quote-btn" onClick={closeNavigation}>
+          <Link to={INSTANT_QUOTE_PATH} className="btn-pill-red nav-quote-btn" onClick={closeNavigation} data-cta="nav-instant-quote">
             <span className="nav-quote-label-full">GET INSTANT QUOTE</span>
             <span className="nav-quote-label-short">GET QUOTE</span>
             <ArrowRightIcon size={14} />
