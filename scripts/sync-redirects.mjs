@@ -36,7 +36,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { SITE_URL } from '../src/data/siteConfig.js';
+import { CANONICAL_SITE_URL } from '../src/data/siteConfig.js';
 
 const ROOT = new URL('../', import.meta.url);
 const VERCEL_JSON = new URL('vercel.json', ROOT);
@@ -142,8 +142,13 @@ export function orderRules(rules) {
   return [...rules.filter((r) => !isPattern(r.from)), ...rules.filter((r) => isPattern(r.from))];
 }
 
-/** Absolute apex URL for a site path ("/services" -> "https://…/services"). */
-export const absoluteDestination = (to) => `${SITE_URL.replace(/\/+$/, '')}${to}`;
+/**
+ * Absolute apex URL for a site path ("/services" -> "https://…/services").
+ * Uses the canonical production origin, never the build's SITE_URL: vercel.json
+ * is committed, and a build that sets SITE_URL (Vercel previews can) must still
+ * pass --check.
+ */
+export const absoluteDestination = (to) => `${CANONICAL_SITE_URL.replace(/\/+$/, '')}${to}`;
 
 export const toVercelRules = (rules) =>
   orderRules(rules).map((r) => ({ source: r.from, destination: absoluteDestination(r.to), permanent: !r.temporary }));
@@ -383,7 +388,27 @@ async function main() {
   const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard; ${chained} chain(s) collapsed; planned: ${plannedFinal} live, ${plannedInterim} interim, ${plannedPending} pending)`;
 
   if (checkOnly) {
-    if (updated !== current) {
+    // Compare the redirect rules, not the file's text: Vercel's build rewrites
+    // vercel.json (minified, one line) before running the build command, so a
+    // text comparison would always fail there.
+    const committed = (JSON.parse(current).redirects || []).map((r) => ({
+      source: r.source,
+      destination: r.destination,
+      permanent: r.permanent,
+    }));
+    const key = (r) => `${r.source} -> ${r.destination} (${r.permanent ? 308 : 307})`;
+    const index = Math.max(committed.length, vercelRules.length);
+    let first = -1;
+    for (let i = 0; i < index; i += 1) {
+      if (!committed[i] || !vercelRules[i] || key(committed[i]) !== key(vercelRules[i])) {
+        first = i;
+        break;
+      }
+    }
+    if (first !== -1) {
+      console.error(`[redirects] first difference at redirect #${first + 1}:`);
+      console.error(`  committed: ${committed[first] ? key(committed[first]) : '(missing)'}`);
+      console.error(`  expected:  ${vercelRules[first] ? key(vercelRules[first]) : '(missing)'}`);
       console.error(`[redirects] vercel.json is out of date — run npm run redirects (or npm run seo) and commit vercel.json. Expected ${summary}.`);
       process.exit(1);
     }

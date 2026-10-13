@@ -1,11 +1,14 @@
 import { liveServices } from './services.js';
 
 // Single source of truth for everything URL- and identity-related.
-// When the domain changes, change SITE_URL here (or pass SITE_URL= to the build)
-// and every canonical, Open Graph tag, sitemap entry and JSON-LD id follows.
+// When the domain changes, change CANONICAL_SITE_URL here (or pass SITE_URL= to
+// the build) and every canonical, Open Graph tag, sitemap entry and JSON-LD id
+// follows. Redirects in vercel.json always use CANONICAL_SITE_URL, so a build
+// environment that sets SITE_URL (e.g. a preview) can't make them look stale.
+export const CANONICAL_SITE_URL = 'https://bridgelandbuilders.com';
 export const SITE_URL = (
   typeof process !== 'undefined' && process.env && process.env.SITE_URL
-) || 'https://bridgelandbuilders.com';
+) || CANONICAL_SITE_URL;
 
 export const SITE_NAME = 'Bridgeland Builders';
 // One phone number everywhere (HTML, schema, citations). Display, schema and
