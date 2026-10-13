@@ -1,74 +1,10 @@
 # Bridgeland Builders — https://bridgelandbuilders.com
-# Search engines: full access.
+# Search engines and AI assistants / answer engines are welcome to read and
+# cite this site. AI crawlers covered by the rule below include:
+#   GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-User, Claude-SearchBot, PerplexityBot
+#   Perplexity-User, Google-Extended, Applebot, Applebot-Extended, Amazonbot, meta-externalagent, FacebookBot
+#   Bytespider, CCBot, cohere-ai, DuckAssistBot, MistralAI-User, YouBot, Diffbot
 User-agent: *
-Allow: /
-Disallow: /404.html
-
-# AI assistants and answer engines: explicitly welcome to read and cite this site.
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-User
-Allow: /
-
-User-agent: Claude-SearchBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: meta-externalagent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: DuckAssistBot
-Allow: /
-
-User-agent: MistralAI-User
-Allow: /
-
-User-agent: YouBot
-Allow: /
-
-User-agent: Diffbot
-Allow: /
+Disallow: /api/
 
 Sitemap: https://bridgelandbuilders.com/sitemap.xml

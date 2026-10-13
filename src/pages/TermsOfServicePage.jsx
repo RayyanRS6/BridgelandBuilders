@@ -2,14 +2,13 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PolicyContact from '../components/PolicyContact.jsx';
 import {
-  SITE_ADDRESS_LINE,
+  MAILING_ADDRESS_LINE,
   SITE_NAME,
   SITE_URL,
   SMS_CONFIRMATION,
   SMS_OPT_IN_PATH,
 } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
 // Update this whenever the terms change.
 const EFFECTIVE_DATE = 'October 2, 2026';
@@ -22,7 +21,6 @@ const OPT_IN_URL = `${SITE_URL}${SMS_OPT_IN_PATH}`;
 
 export default function TermsOfServicePage() {
   usePageSeo('/terms-of-service');
-  useScrollReveal();
 
   return (
     <main>
@@ -45,7 +43,7 @@ export default function TermsOfServicePage() {
               <Link to="/privacy-policy">Privacy Policy</Link> govern {SITE_NAME}’s relationship with you in relation
               to this website. If you disagree with any part of these Terms and Conditions, please do not use our
               website. The terms “{SITE_NAME}”, “<a href={`${SITE_URL}/`}>{SITE_URL}/</a>”, “we”, “us”, or “our”
-              refer to the owner of the website, whose office is located at {SITE_ADDRESS_LINE}. The term “you” refers
+              refer to the owner of the website, whose mailing address is {MAILING_ADDRESS_LINE}. The term “you” refers
               to the user or viewer of our website. The use of this website is subject to the following terms of use.
             </p>
             <p>
@@ -74,7 +72,7 @@ export default function TermsOfServicePage() {
             <h2>2. About Our Services</h2>
             <p>
               {SITE_NAME} provides residential and commercial renovation and construction services in Winnipeg and
-              across Manitoba. We pride ourselves on our attention to detail and commitment to customer satisfaction.
+              nearby communities. We pride ourselves on our attention to detail and commitment to customer satisfaction.
             </p>
             <p>
               All information on this website is provided for general informational purposes only and does not

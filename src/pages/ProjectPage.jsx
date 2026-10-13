@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 import BookingAside from '../components/BookingAside.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
@@ -7,7 +6,7 @@ import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import Ticker from '../components/Ticker.jsx';
 import { ArrowRightIcon, CheckIcon } from '../components/icons.jsx';
 import { PROJECT_ESTIMATORS } from '../data/estimators.js';
-import { INSTANT_QUOTE_LABEL } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 
 const FORM_ID = 'service-quote-form';
 const ESTIMATOR_ID = 'service-price-guide';
@@ -26,18 +25,6 @@ export default function ProjectPage({ project }) {
   const estimatorSrc = PROJECT_ESTIMATORS[project.slug];
   const formType = FORM_TYPE_BY_PROJECT[project.slug];
 
-  useScrollReveal();
-
-  const scrollToForm = () => {
-    document.getElementById(FORM_ID)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-  // The instant quote button goes to this page's own estimator, already set to
-  // this service, rather than the general one on /instant-quote.
-  const scrollToEstimator = () => {
-    document.getElementById(ESTIMATOR_ID)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
   return (
     <>
       {/* BREADCRUMB */}
@@ -45,7 +32,7 @@ export default function ProjectPage({ project }) {
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link to="/">Home</Link>
           <span className="breadcrumb-sep">/</span>
-          <Link to="/projects">Our Portfolio</Link>
+          <Link to="/services">Services</Link>
           <span className="breadcrumb-sep">/</span>
           <span className="breadcrumb-current">{project.breadcrumb}</span>
         </nav>
@@ -54,7 +41,7 @@ export default function ProjectPage({ project }) {
       {/* HERO + QUOTE FORM AND CALENDAR */}
       <section className="hero-section" id="book">
         <div className="container">
-          <div className="hero-card hero-booking reveal">
+          <div className="hero-card hero-booking hero-rise">
             <div className="hero-content">
               <div className="badge-soft">
                 <CheckIcon size={13} />
@@ -75,12 +62,12 @@ export default function ProjectPage({ project }) {
                 ))}
               </ul>
               <div className="hero-cta-group">
-                <button className="btn-pill-red" onClick={scrollToForm}>
+                <a href={`#${FORM_ID}`} className="btn-pill-red btn-line-normal">
                   <span>BOOK AN APPOINTMENT</span>
                   <ArrowRightIcon size={15} />
-                </button>
-                <a href="tel:431-866-5644" className="btn-pill-ghost">
-                  <span>Call 431-866-5644</span>
+                </a>
+                <a href={SITE_PHONE_TEL} className="btn-pill-ghost">
+                  <span>Call {SITE_PHONE}</span>
                 </a>
               </div>
             </div>
@@ -147,10 +134,10 @@ export default function ProjectPage({ project }) {
                 ))}
               </ul>
 
-              <button className="btn-pill-red" onClick={scrollToForm}>
+              <a href={`#${FORM_ID}`} className="btn-pill-red btn-line-normal">
                 <span>CHECK AVAILABLE DATES</span>
                 <ArrowRightIcon size={14} />
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -239,8 +226,8 @@ export default function ProjectPage({ project }) {
           <div className="testimonial-card reveal">
             <div className="testimonial-left">
               <div className="stars-badge">★★★★★</div>
-              <h3 className="testimonial-headline">5-Star Rated!</h3>
-              <p className="testimonial-sub">What our clients say about working with Bridgeland Builders in Winnipeg.</p>
+              <h3 className="testimonial-headline">What Our Clients Say</h3>
+              <p className="testimonial-sub">In their own words: what it’s like working with Bridgeland Builders.</p>
             </div>
             <div className="testimonial-right">
               <p className="testimonial-quote">{project.testimonial.quote}</p>
@@ -260,10 +247,10 @@ export default function ProjectPage({ project }) {
       <section className="lead-section" id="book-form">
         <div className="container">
           <div className="lead-grid">
-            <div className="reveal">
+            <div>
               <BookingAside serviceName={project.breadcrumb} />
             </div>
-            <div className="reveal">
+            <div>
               <div className="lead-card price-guide-card" id={ESTIMATOR_ID}>
                 <div className="lead-card-head">
                   <h3>Get Your Free {project.breadcrumb} Price Guide</h3>
@@ -304,10 +291,12 @@ export default function ProjectPage({ project }) {
               <p>Grab a free quote instead — tell us roughly what you need and we’ll come back with numbers. No appointment required.</p>
             </div>
             <div className="cta-banner-right">
-              <button className="btn-pill-red btn-pill-lg" onClick={scrollToEstimator}>
+              {/* Goes to this page's own estimator, already set to this service,
+                  rather than the general one on /instant-quote. */}
+              <a href={`#${ESTIMATOR_ID}`} className="btn-pill-red btn-pill-lg btn-line-normal">
                 <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
                 <ArrowRightIcon size={16} />
-              </button>
+              </a>
             </div>
           </div>
         </div>

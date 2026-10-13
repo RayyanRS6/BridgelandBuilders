@@ -2,17 +2,15 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import PolicyContact from '../components/PolicyContact.jsx';
 import {
-  CONSULTATION_PATH,
   SITE_EMAIL,
   SITE_NAME,
   SITE_PHONE,
-  SITE_PHONE_E164,
+  SITE_PHONE_TEL,
   SITE_URL,
   SMS_CONFIRMATION,
   SMS_OPT_IN_PATH,
 } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
 // Update this whenever the policy changes.
 const LAST_UPDATED = 'October 2, 2026';
@@ -35,10 +33,9 @@ const OPT_IN_URL = `${SITE_URL}${SMS_OPT_IN_PATH}`;
 
 export default function PrivacyPolicyPage() {
   usePageSeo('/privacy-policy');
-  useScrollReveal();
 
   const email = <a href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a>;
-  const phone = <a href={`tel:${SITE_PHONE_E164}`}>{SITE_PHONE}</a>;
+  const phone = <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>;
 
   return (
     <main>
@@ -112,7 +109,7 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 <strong>Quote and booking form:</strong> your name, email address, phone number, project address,
-                city and postal code, whether the project is in Winnipeg or Manitoba, the type of renovation, and —
+                city and postal code, whether the project is in Winnipeg or a nearby community, the type of renovation, and —
                 if you book a call — the time you choose.
               </li>
               <li>
@@ -429,7 +426,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <PolicyContact />
             <p>
-              To talk about a project instead, <Link to={CONSULTATION_PATH}>book a free on-site consultation</Link>.
+              To talk about a project instead, <Link to="/book-online">book a free on-site consultation</Link>.
               You can also read our <Link to="/terms-of-service">Terms of Service</Link>.
             </p>
           </div>

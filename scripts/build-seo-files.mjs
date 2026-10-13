@@ -1,214 +1,203 @@
 /**
  * Generates every static SEO/AEO artefact from one source of truth:
- *   public/robots.txt   — crawler rules, including explicit AI-crawler access
- *   public/sitemap.xml  — all routes, with image entries for blog posts
- *   public/llms.txt     — concise site map for AI answer engines
- *   public/llms-full.txt— fuller context (services, FAQs, article index)
- *   public/_headers     — cache + security headers for Netlify
- *   public/_redirects   — SPA rules with a real 404 status
- *   index.html          — sitewide JSON-LD injected between markers
+ *   public/robots.txt    — one rule group for every crawler (AI crawlers welcome)
+ *   public/sitemap.xml   — every indexable route and published post, with lastmod
+ *   public/llms.txt      — concise site map for AI answer engines
+ *   public/llms-full.txt — fuller context (services, service area, FAQs, articles)
+ *   index.html           — sitewide JSON-LD injected between markers
  *   prerender-routes.json
+ *
+ * Headers and redirects live in vercel.json (redirects are generated from
+ * src/data/redirects.js by `npm run redirects`).
  */
 import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
 import { BLOG_POSTS } from '../src/data/blogPosts.js';
-import { SITE_URL, SITE_NAME, SITE_PHONE, BUSINESS, SERVICE_CATALOG } from '../src/data/siteConfig.js';
-import { NOINDEX_ROUTES, PAGE_SEO, SERVICE_SEO, buildOrganizationGraph } from '../src/data/seo.js';
+import { SITE_FAQS } from '../src/data/faqs.js';
+import { PROJECTS } from '../src/data/projects.js';
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_PHONE,
+  BUSINESS,
+  SERVICE_CATALOG,
+  SERVICE_AREA_NAMES,
+  SERVICE_AREA_STATEMENT,
+  SOCIAL_PROFILES,
+  BBB_PROFILE_URL,
+  GBP,
+} from '../src/data/siteConfig.js';
+import {
+  NOINDEX_ROUTES,
+  PAGE_SEO,
+  SERVICE_SEO,
+  SEO_DEFAULT_UPDATED,
+  buildOrganizationGraph,
+} from '../src/data/seo.js';
 
 const PUBLIC = new URL('../public/', import.meta.url);
 const out = (name, body) => writeFileSync(new URL(name, PUBLIC), body);
 mkdirSync(PUBLIC, { recursive: true });
 
-const today = new Date().toISOString().slice(0, 10);
-
 /* ---------------------------------------------------------------- routes */
-const STATIC_ROUTES = [
-  ['/', '1.0', 'weekly'],
-  ['/services', '0.9', 'monthly'],
-  ...Object.keys(SERVICE_SEO).map((path) => [path, '0.8', 'monthly']),
-  ['/projects', '0.7', 'monthly'],
-  ['/about-us', '0.6', 'yearly'],
-  ['/our-process', '0.6', 'yearly'],
-  ['/faqs', '0.7', 'yearly'],
-  ['/outside-winnipeg', '0.5', 'yearly'],
-  ['/contact-us', '0.8', 'yearly'],
-  ['/contact', '0.5', 'yearly'],
-  ['/instant-quote', '0.8', 'monthly'],
-  ['/book-online', '0.8', 'monthly'],
-  ['/blog', '0.9', 'weekly'],
-  ['/privacy-policy', '0.3', 'yearly'],
-  ['/terms-of-service', '0.3', 'yearly'],
-];
+const seoEntry = (path) => PAGE_SEO[path] || SERVICE_SEO[path];
+const isNoindex = (path) =>
+  NOINDEX_ROUTES.includes(path) || /noindex/.test((seoEntry(path) || {}).robots || '');
+
+// Every page with an SEO entry: home, the services hub, service pages, then
+// the rest in PAGE_SEO order. A route without an SEO entry is never
+// prerendered (prerender.mjs skips it), so it can't be listed either.
+const SEO_ROUTES = [...new Set(['/', '/services', ...Object.keys(SERVICE_SEO), ...Object.keys(PAGE_SEO)])]
+  .filter((path) => seoEntry(path));
+const STATIC_ROUTES = SEO_ROUTES.filter((path) => !isNoindex(path));
+const NOINDEX_PAGES = [...new Set([...NOINDEX_ROUTES, ...SEO_ROUTES.filter(isNoindex)])];
+
+// BLOG_POSTS should already hold published posts only; filter again so a
+// draft can never reach the sitemap.
+const POSTS = BLOG_POSTS.filter((post) => (post.status || 'published') === 'published');
 
 const urls = [
-  ...STATIC_ROUTES.map(([path, priority, freq]) => ({ path, priority, freq, lastmod: today })),
-  ...BLOG_POSTS.map((post) => ({
-    path: `/blog/${post.slug}`,
-    priority: '0.7',
-    freq: 'monthly',
-    lastmod: post.date,
-    image: post.hero,
-    imageAlt: post.heroAlt,
-    title: post.title,
-  })),
+  ...STATIC_ROUTES.map((path) => ({ path, lastmod: seoEntry(path).updated || SEO_DEFAULT_UPDATED })),
+  ...POSTS.map((post) => ({ path: `/blog/${post.slug}`, lastmod: post.updated || post.date })),
 ];
 
 /* --------------------------------------------------------------- sitemap */
+// No changefreq/priority (ignored by Google) and no image entries until blog
+// images are self-hosted.
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 out('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
     .map((u) => `  <url>
-    <loc>${SITE_URL}${u.path}</loc>
-    <lastmod>${u.lastmod}</lastmod>
-    <changefreq>${u.freq}</changefreq>
-    <priority>${u.priority}</priority>${u.image
-        ? `
-    <image:image>
-      <image:loc>${esc(u.image)}</image:loc>
-      <image:title>${esc(u.title)}</image:title>
-      <image:caption>${esc(u.imageAlt || u.title)}</image:caption>
-    </image:image>`
-        : ''
-      }
+    <loc>${esc(`${SITE_URL}${u.path}`)}</loc>
+    <lastmod>${esc(u.lastmod)}</lastmod>
   </url>`)
     .join('\n')}
 </urlset>
 `);
 
 /* ---------------------------------------------------------------- robots */
-// Search crawlers and AI answer engines are both allowed on purpose: being
-// quotable in ChatGPT/Claude/Perplexity answers is the point of the AEO work.
+// One group for every crawler. Search engines and AI search/answer engines
+// are all allowed on purpose: being quotable in ChatGPT/Claude/Perplexity
+// answers is part of the AEO work. The agents are listed for reference only;
+// a separate group per agent would replace the * rules for that agent.
 const AI_AGENTS = [
   'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-User', 'Claude-SearchBot',
-  'anthropic-ai', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot',
-  'Applebot-Extended', 'Amazonbot', 'meta-externalagent', 'FacebookBot', 'Bytespider',
-  'CCBot', 'cohere-ai', 'DuckAssistBot', 'MistralAI-User', 'YouBot', 'Diffbot',
+  'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot', 'Applebot-Extended',
+  'Amazonbot', 'meta-externalagent', 'FacebookBot', 'Bytespider', 'CCBot', 'cohere-ai',
+  'DuckAssistBot', 'MistralAI-User', 'YouBot', 'Diffbot',
 ];
+const agentComment = [];
+for (let i = 0; i < AI_AGENTS.length; i += 7) agentComment.push(`#   ${AI_AGENTS.slice(i, i + 7).join(', ')}`);
 
 out('robots.txt', `# ${SITE_NAME} — ${SITE_URL}
-# Search engines: full access.
+# Search engines and AI assistants / answer engines are welcome to read and
+# cite this site. AI crawlers covered by the rule below include:
+${agentComment.join('\n')}
 User-agent: *
-Allow: /
-Disallow: /404.html
-
-# AI assistants and answer engines: explicitly welcome to read and cite this site.
-${AI_AGENTS.map((agent) => `User-agent: ${agent}\nAllow: /`).join('\n\n')}
+Disallow: /api/
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `);
 
+/* ---------------------------------------------------- shared llms content */
+const serviceLines = SERVICE_CATALOG.filter((s) => SERVICE_SEO[s.path])
+  .map((s) => `- [${s.name}](${SITE_URL}${s.path}): ${SERVICE_SEO[s.path].description || ''}`)
+  .join('\n');
+
+const keyPage = (label, path, description) =>
+  seoEntry(path) ? `- [${label}](${SITE_URL}${path}): ${description || seoEntry(path).description}` : null;
+
+const keyPages = [
+  keyPage('Home', '/'),
+  keyPage('All services', '/services'),
+  keyPage('Our process', '/our-process'),
+  keyPage('Projects', '/projects', 'Renovation project categories, each linking to its service page with details and booking.'),
+  keyPage('FAQs', '/faqs'),
+  keyPage('Contact', '/contact-us'),
+  keyPage('Instant quote', '/instant-quote'),
+  keyPage('Book online', '/book-online'),
+  keyPage('Blog', '/blog'),
+].filter(Boolean).join('\n');
+
+const articleLines = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`).join('\n');
+
+const PROFILE_LABELS = {
+  facebook: 'Facebook',
+  instagram: 'Instagram',
+  linkedin: 'LinkedIn',
+  youtube: 'YouTube',
+  tiktok: 'TikTok',
+};
+const profileLines = [
+  GBP && GBP.mapsUrl ? ['Google Maps (Google Business Profile)', GBP.mapsUrl] : null,
+  ...Object.entries(SOCIAL_PROFILES || {}).map(([key, url]) => (url ? [PROFILE_LABELS[key] || key, url] : null)),
+  BBB_PROFILE_URL ? ['Better Business Bureau', BBB_PROFILE_URL] : null,
+]
+  .filter(Boolean)
+  .map(([label, url]) => `- ${label}: ${url}`)
+  .join('\n');
+
+// Sections are joined with one blank line; empty sections are dropped.
+const doc = (...sections) => `${sections.filter(Boolean).join('\n\n')}\n`;
+
 /* ------------------------------------------------------------- llms.txt */
-const serviceLines = SERVICE_CATALOG.map(
-  (s) => `- [${s.name}](${SITE_URL}${s.path}): ${(SERVICE_SEO[s.path] || {}).description || ''}`
-).join('\n');
-
-out('llms.txt', `# ${SITE_NAME}
-
-> ${BUSINESS.description} Phone: ${SITE_PHONE}. Service area: Winnipeg and surrounding Manitoba.
-
-${SITE_NAME} is a service-area renovation and construction contractor based in Winnipeg, Manitoba,
-with over 60 years of combined experience and 100+ completed projects. Quotes are free and written,
-and permits and inspections are coordinated with the City of Winnipeg when a project requires them.
-
-## Services
-${serviceLines}
-
-## Key pages
-- [Home](${SITE_URL}/): ${PAGE_SEO['/'].description}
-- [All services](${SITE_URL}/services): ${PAGE_SEO['/services'].description}
-- [Our process](${SITE_URL}/our-process): ${PAGE_SEO['/our-process'].description}
-- [Projects](${SITE_URL}/projects): ${PAGE_SEO['/projects'].description}
-- [FAQs](${SITE_URL}/faqs): ${PAGE_SEO['/faqs'].description}
-- [Contact](${SITE_URL}/contact-us): ${PAGE_SEO['/contact-us'].description}
-- [Instant quote](${SITE_URL}/instant-quote): ${PAGE_SEO['/instant-quote'].description}
-- [Book online](${SITE_URL}/book-online): ${PAGE_SEO['/book-online'].description}
-- [Blog](${SITE_URL}/blog): ${PAGE_SEO['/blog'].description}
-
-## Articles
-${BLOG_POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`).join('\n')}
-
-## Contact
+out('llms.txt', doc(
+  `# ${SITE_NAME}`,
+  `> ${BUSINESS.description} Phone: ${SITE_PHONE}. ${SERVICE_AREA_STATEMENT}`,
+  BUSINESS.disambiguatingDescription,
+  // Experience and project count confirmed by the owner 2026-10-13 (O-2).
+  `${SITE_NAME} is a service-area renovation and construction contractor based in Winnipeg, Manitoba,
+with over 60 years of combined experience and more than 100 completed projects. Quotes are free and
+written, every project starts with a free on-site visit, and permits and inspections are coordinated
+with the City of Winnipeg or the local municipality when a project requires them.`,
+  `## Services\n${serviceLines}`,
+  `## Key pages\n${keyPages}`,
+  articleLines && `## Articles\n${articleLines}`,
+  `## Contact
 - Phone: ${SITE_PHONE}
+- Email: ${BUSINESS.email}
 - Location: Winnipeg, Manitoba, Canada
-- Quote requests: ${SITE_URL}/contact-us
-- Instant quote (price estimator): ${SITE_URL}/instant-quote
-- Book an appointment: ${SITE_URL}/book-online
-`);
+- Service area: ${SERVICE_AREA_STATEMENT}
+- Quote requests (instant price estimator): ${SITE_URL}/instant-quote
+- Book a call or visit: ${SITE_URL}/book-online
+- Contact form: ${SITE_URL}/contact-us`,
+  profileLines && `## Profiles\n${profileLines}`,
+));
 
 /* --------------------------------------------------------- llms-full.txt */
-// Same map plus the full question-and-answer set, so an assistant can answer
-// directly from this one file.
-const faqBlocks = BLOG_POSTS.filter((p) => !p.memberOnly)
-  .map((post) => {
-    const qa = [];
-    let pending = null;
-    for (const block of post.blocks) {
-      const text = (block.x || '').trim();
-      if (!text) continue;
-      if (block.t === 'p' && text.length <= 160 && /\?$/.test(text)) pending = text;
-      else if (pending) { qa.push(`**Q: ${pending}**\nA: ${text}`); pending = null; }
-    }
-    return qa.length ? `### ${post.title}\n${SITE_URL}/blog/${post.slug}\n\n${qa.join('\n\n')}` : null;
-  })
-  .filter(Boolean);
+// The site's own question-and-answer set: the FAQ page plus every service
+// page's FAQs, word for word as they appear on the site.
+const qa = (faqs) => faqs.map((f) => `**Q: ${f.q}**\nA: ${f.a}`).join('\n\n');
 
-out('llms-full.txt', `# ${SITE_NAME} — full reference
+const projectPath = (project) =>
+  project.path ||
+  (SERVICE_CATALOG.find((s) => s.projectSlug === project.slug) || {}).path ||
+  (SERVICE_SEO[`/services/${project.slug}s`] ? `/services/${project.slug}s` : null);
 
-> ${BUSINESS.description}
+const faqBlocks = [
+  SITE_FAQS.length ? `### General questions\n${SITE_URL}/faqs\n\n${qa(SITE_FAQS)}` : null,
+  ...PROJECTS.filter((p) => p.faqs && p.faqs.length).map((project) => {
+    const path = projectPath(project);
+    const service = path && SERVICE_CATALOG.find((s) => s.path === path);
+    const heading = (service && service.name) || project.breadcrumb || project.slug;
+    return `### ${heading}${path ? `\n${SITE_URL}${path}` : ''}\n\n${qa(project.faqs)}`;
+  }),
+].filter(Boolean);
 
-Phone: ${SITE_PHONE} · Winnipeg, Manitoba, Canada · Free written quotes
-
-## Services offered
-${serviceLines}
-
-## Areas served
-${BUSINESS.areaServed.join(', ')}
-
-## Expertise
-${BUSINESS.knowsAbout.map((k) => `- ${k}`).join('\n')}
-
-## Questions and answers from our articles
-${faqBlocks.join('\n\n')}
-`);
-
-/* -------------------------------------------------------------- headers */
-out('_headers', `/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/favicon.svg
-  Cache-Control: public, max-age=604800
-
-/*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  X-Frame-Options: SAMEORIGIN
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
-
-/sitemap.xml
-  Cache-Control: public, max-age=3600
-  Content-Type: application/xml; charset=utf-8
-
-/robots.txt
-  Cache-Control: public, max-age=3600
-
-/llms.txt
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=3600
-
-/llms-full.txt
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=3600
-`);
-
-/* ------------------------------------------------------------ redirects */
-// Every real route is prerendered to its own HTML file, so anything reaching
-// the catch-all genuinely does not exist and should return a true 404 rather
-// than a soft 404 (a 200 that renders a "not found" page).
-out('_redirects', `/index.html   /   301!
-/*            /404.html   404
-`);
+out('llms-full.txt', doc(
+  `# ${SITE_NAME} — full reference`,
+  `> ${BUSINESS.description}`,
+  BUSINESS.disambiguatingDescription,
+  `Phone: ${SITE_PHONE} · Email: ${BUSINESS.email} · Winnipeg, Manitoba, Canada · Free written quotes`,
+  `## Services offered\n${serviceLines}`,
+  `## Service area\n${SERVICE_AREA_STATEMENT}\n\nCommunities: ${SERVICE_AREA_NAMES.join(', ')}`,
+  BUSINESS.knowsAbout && BUSINESS.knowsAbout.length &&
+    `## Expertise\n${BUSINESS.knowsAbout.map((k) => `- ${k}`).join('\n')}`,
+  profileLines && `## Profiles\n${profileLines}`,
+  faqBlocks.length && `## Frequently asked questions\n\n${faqBlocks.join('\n\n')}`,
+  articleLines && `## Articles\n${articleLines}`,
+));
 
 /* --------------------------------------------- sitewide JSON-LD in index */
 const indexUrl = new URL('../index.html', import.meta.url);
@@ -223,16 +212,15 @@ html = html.replace(
 writeFileSync(indexUrl, html);
 
 /* ------------------------------------------------------ prerender routes */
-// Everything in the sitemap, plus the noindex pages (ad landing pages). Those
-// stay out of the sitemap but still need real HTML: on Vercel a route with no
-// prerendered file is served as a 404.
-writeFileSync(
-  new URL('../prerender-routes.json', import.meta.url),
-  JSON.stringify([...urls.map((u) => u.path), ...NOINDEX_ROUTES], null, 2)
-);
+// Every sitemap URL plus the noindex pages (ad landing page, SMS opt-in page).
+// Those stay out of the sitemap but still need real HTML: on Vercel a route
+// with no prerendered file is served as a 404.
+const prerenderRoutes = [...new Set([...urls.map((u) => u.path), ...NOINDEX_PAGES])];
+writeFileSync(new URL('../prerender-routes.json', import.meta.url), JSON.stringify(prerenderRoutes, null, 2));
 
-console.log(`sitemap: ${urls.length} urls (${BLOG_POSTS.length} with images)`);
-console.log(`noindex (prerendered, not in sitemap): ${NOINDEX_ROUTES.join(', ') || 'none'}`);
-console.log(`robots: ${AI_AGENTS.length} AI agents allowed`);
-console.log(`llms.txt + llms-full.txt written (${faqBlocks.length} article Q&A blocks)`);
+console.log(`sitemap: ${urls.length} urls (${STATIC_ROUTES.length} pages, ${POSTS.length} posts)`);
+console.log(`noindex (prerendered, not in sitemap): ${NOINDEX_PAGES.join(', ') || 'none'}`);
+console.log(`prerender-routes.json: ${prerenderRoutes.length} routes`);
+console.log('robots: one group for all crawlers (Disallow: /api/)');
+console.log(`llms.txt + llms-full.txt written (${faqBlocks.length} FAQ blocks)`);
 console.log('sitewide JSON-LD injected into index.html');

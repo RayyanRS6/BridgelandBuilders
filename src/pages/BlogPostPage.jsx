@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { Fragment, useMemo } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import CtaBanner from '../components/CtaBanner.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
@@ -8,7 +8,24 @@ import { getPostBySlug, getRelatedPosts } from '../data/blogPosts.js';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { buildFaqItems, buildPostHead, buildSections } from '../data/postContent.js';
 import useSeo from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
+
+/** The article column is at most 880px wide and full width below that. */
+const ARTICLE_IMAGE_SIZES = '(max-width: 920px) 100vw, 880px';
+
+/**
+ * Splits a "Key Takeaways" section into its bullet points and any running
+ * text that follows the list (after the duplicate title heading that used to
+ * close the list is dropped). Images inside the list run are not shown, as
+ * before.
+ */
+function splitTakeaways(items) {
+  const end = items.findIndex((block) => block.t !== 'li' && block.t !== 'img');
+  const list = end === -1 ? items : items.slice(0, end);
+  return {
+    points: list.filter((block) => block.x).map((block) => block.x),
+    after: end === -1 ? [] : items.slice(end),
+  };
+}
 
 /** Renders body blocks, merging runs of list items into a single list. */
 function renderBody(items, keyPrefix) {
@@ -38,7 +55,16 @@ function renderBody(items, keyPrefix) {
     if (block.t === 'img') {
       nodes.push(
         <figure className="blog-figure" key={key}>
-          <img src={block.src} alt={block.alt || ''} width="880" height="495" loading="lazy" decoding="async" />
+          <img
+            srcSet={block.srcSet}
+            sizes={block.srcSet ? ARTICLE_IMAGE_SIZES : undefined}
+            src={block.src}
+            alt={block.alt || ''}
+            width={block.width || 880}
+            height={block.height || 495}
+            loading="lazy"
+            decoding="async"
+          />
         </figure>
       );
     } else if (block.t === 'h2') {
@@ -61,7 +87,6 @@ function renderBody(items, keyPrefix) {
 export default function BlogPostPage() {
   const { slug } = useParams();
   const post = getPostBySlug(slug);
-  useScrollReveal();
 
   const sections = useMemo(() => (post ? buildSections(post.blocks) : []), [post]);
   const faqSection = sections.find((section) => section.type === 'faq');
@@ -84,11 +109,13 @@ export default function BlogPostPage() {
     <main>
       <section className="page-hero blog-post-hero">
         <div className="container">
-          <div className="page-hero-card reveal">
+          <div className="page-hero-card hero-rise">
             <nav className="blog-breadcrumb" aria-label="Breadcrumb">
               <Link to="/">Home</Link>
               <span aria-hidden="true">/</span>
               <Link to="/blog">Blog</Link>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">{post.title}</span>
             </nav>
             <span className="section-tag">{post.category}</span>
             <h1>{post.title}</h1>
@@ -103,23 +130,34 @@ export default function BlogPostPage() {
 
       <article className="blog-article-section">
         <div className="container blog-article-container">
-          <figure className="blog-hero-figure reveal">
-            <img src={post.hero} alt={post.heroAlt} width="880" height="495" fetchpriority="high" decoding="async" />
+          <figure className="blog-hero-figure hero-rise">
+            <img
+              srcSet={post.heroSrcSet}
+              sizes={post.heroSrcSet ? ARTICLE_IMAGE_SIZES : undefined}
+              src={post.heroSrc || post.hero}
+              alt={post.heroAlt}
+              width="880"
+              height="495"
+              fetchpriority="high"
+            />
           </figure>
 
-          <div className="blog-article-body reveal">
+          <div className="blog-article-body">
             {sections.map((section, sectionIndex) => {
               if (section.type === 'takeaways') {
-                const points = section.items.filter((block) => block.x).map((block) => block.x);
+                const { points, after } = splitTakeaways(section.items);
                 return (
-                  <aside className="blog-takeaways" key={`takeaways-${sectionIndex}`}>
-                    <h2>{section.heading}</h2>
-                    <ul>
-                      {points.map((point, index) => (
-                        <li key={`${point.slice(0, 40)}-${index}`}>{point}</li>
-                      ))}
-                    </ul>
-                  </aside>
+                  <Fragment key={`takeaways-${sectionIndex}`}>
+                    <aside className="blog-takeaways">
+                      <h2>{section.heading}</h2>
+                      <ul>
+                        {points.map((point, index) => (
+                          <li key={`${point.slice(0, 40)}-${index}`}>{point}</li>
+                        ))}
+                      </ul>
+                    </aside>
+                    {after.length > 0 && <div>{renderBody(after, `t${sectionIndex}`)}</div>}
+                  </Fragment>
                 );
               }
 

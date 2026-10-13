@@ -35,8 +35,10 @@ export const QUOTE_QUESTIONS = [
     key: 'winnipeg',
     fieldId: '8yUbHmr0rJ50bP4jS61e',
     // The GoHighLevel field is "Are you from Winnipeg?"; the service area is
-    // Winnipeg and the rest of Manitoba, so the question is asked that way.
-    label: 'Is the project in Winnipeg or Manitoba?',
+    // Winnipeg and nearby communities (within about an hour), so the question
+    // is asked that way. Only the wording changed: the Yes/No values, the key
+    // and the fieldId stay exactly as GoHighLevel stores them.
+    label: 'Is the project in Winnipeg or a nearby community (within about an hour)?',
     options: ['Yes', 'No'],
     multiple: false,
   },
@@ -61,16 +63,19 @@ export const QUOTE_QUESTIONS = [
 // carries OUTSIDE_AREA_TAG, so GoHighLevel workflows can leave them out of the
 // normal follow-up.
 export const SERVICE_AREA = { key: 'winnipeg', inArea: 'Yes' };
-export const OUTSIDE_AREA_MESSAGE = 'Sorry — we’re not currently offering services outside Winnipeg and Manitoba.';
+export const OUTSIDE_AREA_MESSAGE = 'Sorry — we’re not currently offering services outside Winnipeg and nearby communities.';
 export const OUTSIDE_AREA_TAG = 'outside-service-area';
 
 export const isInServiceArea = (lead) => lead[SERVICE_AREA.key] === SERVICE_AREA.inArea;
 
-// The GoHighLevel calendar the second step books into — the same
-// "Free 15-Minute Discovery Call" calendar used on /book-online.
+// The GoHighLevel calendar the second step books into — the same calendar
+// used on /book-online. Each booking is a free on-site visit (confirmed by the
+// owner 2026-10-13). The calendar is still named "Free 15-Minute Discovery
+// Call" inside GoHighLevel; rename it there so confirmation messages match.
+// durationMinutes is the GoHighLevel slot length, not shown to visitors.
 export const BOOKING_CALENDAR = {
   id: 'RmkDQbRjI83ES3E4K5OA',
-  name: 'Free Discovery Call',
+  name: 'Free On-Site Visit',
   durationMinutes: 15,
   // Slots are fetched and shown in the business's own time zone, so a visitor
   // always sees the same times the crew does.

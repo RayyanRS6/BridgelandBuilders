@@ -1,0 +1,657 @@
+{
+  "_meta": {
+    "source": "SEO plan section 6 (Keyword to URL map). Build-only file: never import it into src/.",
+    "brief": "scripts/keyword-list.json (frozen owner brief, exact strings)",
+    "frozen": "2026-10-13",
+    "rule": "Every brief keyword appears exactly once (case-insensitive) across pages[*].primary, pages[*].secondary, pages[*].supporting, gbpOnly[].keyword and notTargeted[].keyword. Page keywords that are not in the brief are plan additions to validate in Keyword Planner before finalising headings.",
+    "roles": {
+      "primary": "title + H1",
+      "secondary": "H2s and body copy",
+      "supporting": "section or FAQ text; also holds the unmodified broad terms (M_broad_validate) the page covers through its Winnipeg primary",
+      "gbpOnly": "'near me' terms won by the Google Business Profile; fallback is the page the GBP and audits point to",
+      "notTargeted": "deliberately not targeted, with the reason"
+    },
+    "status": {
+      "live": "URL is a prerendered route today",
+      "planned": "URL does not exist yet; ships per plan sections 5 and 9"
+    },
+    "optionalFields": {
+      "ownerConfirms": "keywords marked * in plan section 6: use only once the owner confirms that work. A flag on keywords already assigned on the same page, not a second assignment",
+      "currentUrl": "where the content lives today, before the planned URL replaces it",
+      "interimFallback": "gbpOnly: page to use while the planned fallback page is not live",
+      "note": "copy instruction from the plan"
+    }
+  },
+  "pages": {
+    "/": {
+      "status": "live",
+      "primary": ["renovation contractor Winnipeg"],
+      "secondary": [
+        "renovation company Winnipeg",
+        "home renovation Winnipeg",
+        "home renovations Winnipeg",
+        "renovation contractors Winnipeg",
+        "renovation companies Winnipeg",
+        "home renovation contractor Winnipeg",
+        "home renovation company Winnipeg",
+        "home renovation companies Winnipeg",
+        "house renovation Winnipeg",
+        "house renovations Winnipeg",
+        "home remodeling Winnipeg",
+        "residential renovation contractor Winnipeg",
+        "residential renovation company Winnipeg"
+      ],
+      "supporting": [
+        "residential contractor Winnipeg",
+        "home remodeling contractor Winnipeg",
+        "home remodeling company Winnipeg",
+        "local renovation contractor Winnipeg",
+        "full service renovation company Winnipeg",
+        "home renovation",
+        "home remodeling",
+        "home renovation contractor",
+        "home renovation contractors",
+        "home remodeling company"
+      ],
+      "ownerConfirms": ["full service renovation company Winnipeg"]
+    },
+    "/services": {
+      "status": "live",
+      "primary": ["renovation services Winnipeg"],
+      "secondary": [
+        "home improvement contractor Winnipeg",
+        "home improvement company Winnipeg"
+      ],
+      "supporting": [],
+      "note": "primary is a plan addition (validate volume)"
+    },
+    "/services/general-contracting": {
+      "status": "planned",
+      "primary": ["general contractor Winnipeg"],
+      "secondary": [
+        "general contractors Winnipeg",
+        "building contractor Winnipeg"
+      ],
+      "supporting": ["turnkey renovation Winnipeg"],
+      "ownerConfirms": ["turnkey renovation Winnipeg"]
+    },
+    "/instant-quote": {
+      "status": "live",
+      "primary": ["renovation quote Winnipeg"],
+      "secondary": [
+        "renovation estimate Winnipeg",
+        "home renovation estimate Winnipeg",
+        "free renovation estimate Winnipeg",
+        "renovation contractor estimate Winnipeg",
+        "renovation cost calculator"
+      ],
+      "supporting": [],
+      "note": "on-page copy says \"price calculator\""
+    },
+    "/renovation-cost-winnipeg": {
+      "status": "planned",
+      "primary": ["home renovation cost Winnipeg"],
+      "secondary": [
+        "renovation cost Winnipeg",
+        "house renovation cost Winnipeg",
+        "cost to renovate a house in Winnipeg",
+        "renovation prices Winnipeg",
+        "renovation budget Winnipeg",
+        "renovation cost per square foot Winnipeg"
+      ],
+      "supporting": [
+        "renovation labour cost Winnipeg",
+        "renovation material costs Winnipeg",
+        "renovation contingency budget",
+        "affordable home renovation Winnipeg",
+        "renovation financing Winnipeg",
+        "home renovation cost"
+      ],
+      "note": "renovation financing Winnipeg is an explainer only, no financing offer; data-gated on owner input O-3"
+    },
+    "/services/kitchen-renovations": {
+      "status": "live",
+      "primary": [
+        "kitchen renovation Winnipeg",
+        "kitchen renovations Winnipeg"
+      ],
+      "secondary": [
+        "kitchen remodel Winnipeg",
+        "kitchen remodeling Winnipeg",
+        "kitchen renovation contractor Winnipeg",
+        "kitchen remodeling contractor Winnipeg",
+        "kitchen renovation company Winnipeg",
+        "kitchen renovation companies Winnipeg",
+        "kitchen contractors Winnipeg",
+        "kitchen renovation estimate Winnipeg",
+        "kitchen renovation quote Winnipeg"
+      ],
+      "supporting": [
+        "kitchen remodeler Winnipeg",
+        "kitchen remodeling company Winnipeg",
+        "custom kitchen renovation Winnipeg",
+        "full kitchen renovation Winnipeg",
+        "complete kitchen remodel Winnipeg",
+        "modern kitchen renovation Winnipeg",
+        "luxury kitchen renovation Winnipeg",
+        "small kitchen renovation Winnipeg",
+        "condo kitchen renovation Winnipeg",
+        "open concept kitchen renovation Winnipeg",
+        "kitchen cabinet installation Winnipeg",
+        "kitchen cabinet replacement Winnipeg",
+        "kitchen countertop replacement Winnipeg",
+        "kitchen backsplash installation Winnipeg",
+        "kitchen flooring renovation Winnipeg",
+        "kitchen island installation Winnipeg",
+        "kitchen renovation timeline Winnipeg",
+        "kitchen renovation",
+        "kitchen remodel",
+        "kitchen remodel contractor",
+        "luxury kitchen remodel"
+      ],
+      "ownerConfirms": [
+        "luxury kitchen renovation Winnipeg",
+        "condo kitchen renovation Winnipeg",
+        "luxury kitchen remodel"
+      ],
+      "note": "kitchen renovation timeline Winnipeg goes in an FAQ; no cost H2 or cost FAQ on the service page"
+    },
+    "/services/kitchen-renovations/cost": {
+      "status": "planned",
+      "primary": ["kitchen renovation cost Winnipeg"],
+      "secondary": [
+        "kitchen remodel cost Winnipeg",
+        "kitchen renovation prices Winnipeg",
+        "kitchen renovation budget Winnipeg",
+        "how much does a kitchen renovation cost in Winnipeg"
+      ],
+      "supporting": [
+        "affordable kitchen renovation Winnipeg",
+        "kitchen renovation cost Canada",
+        "kitchen renovation cost",
+        "kitchen renovation costs"
+      ],
+      "note": "data-gated on owner input O-3"
+    },
+    "/services/bathroom-renovations": {
+      "status": "live",
+      "primary": [
+        "bathroom renovation Winnipeg",
+        "bathroom renovations Winnipeg"
+      ],
+      "secondary": [
+        "bathroom remodel Winnipeg",
+        "bathroom remodeling Winnipeg",
+        "bathroom renovation contractor Winnipeg",
+        "bathroom remodeling contractor Winnipeg",
+        "bathroom renovation company Winnipeg",
+        "bathroom renovation companies Winnipeg",
+        "bathroom contractors Winnipeg",
+        "bathroom renovation estimate Winnipeg",
+        "bathroom renovation quote Winnipeg"
+      ],
+      "supporting": [
+        "bathroom remodeler Winnipeg",
+        "bathroom remodeling company Winnipeg",
+        "full bathroom renovation Winnipeg",
+        "complete bathroom remodel Winnipeg",
+        "master bathroom renovation Winnipeg",
+        "ensuite renovation Winnipeg",
+        "ensuite bathroom remodel Winnipeg",
+        "small bathroom renovation Winnipeg",
+        "powder room renovation Winnipeg",
+        "guest bathroom renovation Winnipeg",
+        "condo bathroom renovation Winnipeg",
+        "luxury bathroom renovation Winnipeg",
+        "accessible bathroom renovation Winnipeg",
+        "walk in shower installation Winnipeg",
+        "shower renovation Winnipeg",
+        "bathtub replacement Winnipeg",
+        "bathtub to shower conversion Winnipeg",
+        "bathroom vanity replacement Winnipeg",
+        "bathroom tile installation Winnipeg",
+        "bathroom renovation timeline Winnipeg",
+        "bathroom renovation",
+        "bathroom remodel",
+        "bathroom remodel contractors",
+        "small bathroom renovation",
+        "master bathroom remodel",
+        "shower renovation contractor",
+        "accessible home renovation"
+      ],
+      "ownerConfirms": [
+        "condo bathroom renovation Winnipeg",
+        "accessible bathroom renovation Winnipeg",
+        "bathtub to shower conversion Winnipeg",
+        "accessible home renovation"
+      ],
+      "note": "bathroom renovation timeline Winnipeg goes in an FAQ; no cost H2 or cost FAQ on the service page"
+    },
+    "/services/bathroom-renovations/cost": {
+      "status": "planned",
+      "primary": ["bathroom renovation cost Winnipeg"],
+      "secondary": [
+        "bathroom remodel cost Winnipeg",
+        "bathroom renovation prices Winnipeg",
+        "bathroom renovation budget Winnipeg",
+        "how much does a bathroom renovation cost in Winnipeg"
+      ],
+      "supporting": [
+        "affordable bathroom renovation Winnipeg",
+        "bathroom renovation cost Canada",
+        "bathroom renovation cost"
+      ],
+      "note": "data-gated on owner input O-3"
+    },
+    "/services/basement-renovations": {
+      "status": "live",
+      "primary": [
+        "basement development Winnipeg",
+        "basement renovation Winnipeg"
+      ],
+      "secondary": [
+        "basement renovations Winnipeg",
+        "basement finishing Winnipeg",
+        "basement finishing contractor Winnipeg",
+        "basement renovation contractor Winnipeg",
+        "basement renovation company Winnipeg",
+        "basement renovation companies Winnipeg",
+        "basement development contractor Winnipeg",
+        "basement remodeling Winnipeg",
+        "basement remodel Winnipeg",
+        "basement renovation estimate Winnipeg",
+        "basement renovation quote Winnipeg"
+      ],
+      "supporting": [
+        "finished basement contractor Winnipeg",
+        "unfinished basement finishing Winnipeg",
+        "complete basement renovation Winnipeg",
+        "basement bedroom renovation Winnipeg",
+        "basement bathroom renovation Winnipeg",
+        "basement home gym renovation Winnipeg",
+        "basement home office renovation Winnipeg",
+        "basement home theatre renovation Winnipeg",
+        "basement insulation Winnipeg",
+        "basement moisture remediation Winnipeg",
+        "basement waterproofing Winnipeg",
+        "basement egress window Winnipeg",
+        "basement renovation timeline Winnipeg",
+        "basement finishing ideas Winnipeg",
+        "basement renovation",
+        "basement remodeling",
+        "basement finishing contractor"
+      ],
+      "note": "moisture remediation is worded \"moisture control before finishing\"; waterproofing is a section (what we check + when to call a specialist), not a service; links to the basement permit guide with no permit H2 of its own"
+    },
+    "/services/basement-suites": {
+      "status": "planned",
+      "primary": ["basement suite renovation Winnipeg"],
+      "secondary": [
+        "basement apartment development Winnipeg",
+        "basement rental suite development Winnipeg",
+        "secondary suite Winnipeg"
+      ],
+      "supporting": [],
+      "note": "no secondary-suite rule numbers until re-verified on winnipeg.ca after the June 2025 zoning changes"
+    },
+    "/services/basement-renovations/cost": {
+      "status": "planned",
+      "primary": ["basement renovation cost Winnipeg"],
+      "secondary": [
+        "basement finishing cost Winnipeg",
+        "basement development cost Winnipeg",
+        "how much does it cost to finish a basement in Winnipeg"
+      ],
+      "supporting": [
+        "affordable basement renovation Winnipeg",
+        "basement renovation cost Canada"
+      ],
+      "note": "data-gated on owner input O-3"
+    },
+    "/services/whole-home-renovations": {
+      "status": "live",
+      "primary": ["whole home renovation Winnipeg"],
+      "secondary": [
+        "whole house renovation Winnipeg",
+        "full home renovation Winnipeg",
+        "complete home renovation Winnipeg",
+        "interior renovation Winnipeg",
+        "interior renovations Winnipeg"
+      ],
+      "supporting": [
+        "entire house remodeling Winnipeg",
+        "full house remodel Winnipeg",
+        "major home renovation Winnipeg",
+        "older home renovation Winnipeg",
+        "character home renovation Winnipeg",
+        "bungalow renovation Winnipeg",
+        "two storey house renovation Winnipeg",
+        "interior renovation contractor Winnipeg",
+        "open concept renovation Winnipeg",
+        "living room renovation Winnipeg",
+        "bedroom renovation Winnipeg",
+        "laundry room renovation Winnipeg",
+        "mudroom renovation Winnipeg",
+        "staircase renovation Winnipeg",
+        "whole home renovation",
+        "whole home remodel"
+      ],
+      "ownerConfirms": [
+        "older home renovation Winnipeg",
+        "character home renovation Winnipeg",
+        "bungalow renovation Winnipeg",
+        "staircase renovation Winnipeg"
+      ]
+    },
+    "/services/whole-home-renovations/cost": {
+      "status": "planned",
+      "primary": ["whole home renovation cost Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "data-gated on owner input O-3"
+    },
+    "/services/home-additions": {
+      "status": "planned",
+      "currentUrl": "/services/home-extensions",
+      "primary": [
+        "home addition Winnipeg",
+        "home additions Winnipeg"
+      ],
+      "secondary": [
+        "house addition contractor Winnipeg",
+        "home extension Winnipeg",
+        "home extension contractor Winnipeg",
+        "room addition Winnipeg"
+      ],
+      "supporting": [
+        "home expansion contractor Winnipeg",
+        "second storey addition Winnipeg",
+        "home addition contractor"
+      ],
+      "ownerConfirms": ["second storey addition Winnipeg"],
+      "note": "rename with a 308 from /services/home-extensions (plan D6); project slug home-extension and the estimator param stay unchanged"
+    },
+    "/services/home-additions/cost": {
+      "status": "planned",
+      "primary": ["home addition cost Winnipeg"],
+      "secondary": ["house extension cost Winnipeg"],
+      "supporting": [],
+      "note": "data-gated on owner input O-3"
+    },
+    "/services/commercial-renovations": {
+      "status": "live",
+      "primary": [
+        "commercial renovation Winnipeg",
+        "commercial renovations Winnipeg"
+      ],
+      "secondary": [
+        "commercial renovation contractor Winnipeg",
+        "commercial renovation company Winnipeg",
+        "commercial renovation companies Winnipeg",
+        "commercial general contractor Winnipeg",
+        "commercial remodeling Winnipeg",
+        "commercial fit out Winnipeg",
+        "commercial fit out contractor Winnipeg",
+        "commercial interior renovation Winnipeg",
+        "commercial interior construction Winnipeg",
+        "commercial space renovation Winnipeg",
+        "commercial tenant improvement Winnipeg",
+        "tenant improvement contractor Winnipeg",
+        "tenant improvements Winnipeg",
+        "commercial renovation estimate Winnipeg",
+        "commercial renovation quote Winnipeg"
+      ],
+      "supporting": [
+        "commercial construction Winnipeg",
+        "commercial property renovation Winnipeg",
+        "commercial leasehold improvement Winnipeg",
+        "commercial renovation project management Winnipeg",
+        "commercial washroom renovation Winnipeg"
+      ],
+      "note": "commercial construction Winnipeg is interior work only; commercial property renovation Winnipeg goes under a property-managers H2"
+    },
+    "/services/commercial-renovations/cost": {
+      "status": "planned",
+      "primary": ["commercial renovation cost Winnipeg"],
+      "secondary": [
+        "office renovation cost Winnipeg",
+        "restaurant renovation cost Winnipeg",
+        "retail renovation cost Winnipeg"
+      ],
+      "supporting": [],
+      "note": "secondaries map to the #office, #restaurant and #retail sections; data-gated on owner input O-3"
+    },
+    "/services/office-renovations": {
+      "status": "planned",
+      "primary": [
+        "office renovation Winnipeg",
+        "office renovations Winnipeg"
+      ],
+      "secondary": [
+        "office renovation contractor Winnipeg",
+        "office renovation company Winnipeg",
+        "office remodeling Winnipeg",
+        "office fit out Winnipeg",
+        "office fit out contractor Winnipeg",
+        "office interior renovation Winnipeg",
+        "commercial office renovation Winnipeg",
+        "professional office renovation Winnipeg"
+      ],
+      "supporting": [
+        "corporate office renovation Winnipeg",
+        "office redesign contractor Winnipeg",
+        "office partition installation Winnipeg",
+        "office expansion contractor Winnipeg"
+      ]
+    },
+    "/services/restaurant-renovations": {
+      "status": "planned",
+      "primary": [
+        "restaurant renovation Winnipeg",
+        "restaurant renovations Winnipeg"
+      ],
+      "secondary": [
+        "restaurant renovation contractor Winnipeg",
+        "restaurant construction contractor Winnipeg",
+        "restaurant fit out Winnipeg",
+        "restaurant remodeling Winnipeg",
+        "commercial kitchen renovation Winnipeg",
+        "hospitality renovation Winnipeg"
+      ],
+      "supporting": [
+        "cafe renovation Winnipeg",
+        "coffee shop renovation Winnipeg",
+        "bar renovation contractor Winnipeg",
+        "hotel renovation Winnipeg",
+        "hotel interior renovation Winnipeg",
+        "restaurant renovation timeline Winnipeg"
+      ],
+      "ownerConfirms": [
+        "hotel renovation Winnipeg",
+        "hotel interior renovation Winnipeg"
+      ],
+      "note": "hotels are a section until the owner confirms hotel work"
+    },
+    "/services/retail-renovations": {
+      "status": "planned",
+      "primary": [
+        "retail renovation Winnipeg",
+        "retail renovations Winnipeg"
+      ],
+      "secondary": [
+        "retail renovation contractor Winnipeg",
+        "retail store renovation Winnipeg",
+        "retail fit out Winnipeg"
+      ],
+      "supporting": [
+        "commercial showroom renovation Winnipeg",
+        "storefront renovation Winnipeg"
+      ]
+    },
+    "/services/medical-dental-office-renovations": {
+      "status": "planned",
+      "primary": [
+        "dental office renovation Winnipeg",
+        "medical office renovation Winnipeg"
+      ],
+      "secondary": [
+        "medical clinic renovation Winnipeg",
+        "clinic renovation contractor Winnipeg",
+        "dental clinic renovation Winnipeg",
+        "medical office fit out Winnipeg",
+        "dental office construction Winnipeg",
+        "healthcare renovation contractor Winnipeg"
+      ],
+      "supporting": ["physiotherapy clinic renovation Winnipeg"],
+      "note": "Canadian accessibility wording (Manitoba Building Code), never \"ADA\""
+    },
+    "/services/flooring": {
+      "status": "planned",
+      "primary": ["flooring installation Winnipeg"],
+      "secondary": ["commercial flooring renovation Winnipeg"],
+      "supporting": [],
+      "note": "primary is a plan addition (validate volume)"
+    },
+    "/blog/winnipeg-renovation-permits": {
+      "status": "planned",
+      "primary": ["renovation permit Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "primary is a plan addition (validate volume)"
+    },
+    "/blog/basement-development-permits-winnipeg": {
+      "status": "planned",
+      "primary": ["basement permit Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "the basement service page links here and does not duplicate a permit H2"
+    },
+    "/blog/basement-flood-protection-winnipeg": {
+      "status": "planned",
+      "primary": ["basement flooding Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "never cite the City flood subsidy (cancelled 2017) as live"
+    },
+    "/blog/how-to-choose-the-right-contractor-for-your-renovation-project": {
+      "status": "live",
+      "primary": ["how to choose a renovation contractor"],
+      "secondary": [
+        "how to choose a renovation contractor Canada",
+        "renovation contractor selection Canada"
+      ],
+      "supporting": ["best renovation contractor Winnipeg"],
+      "note": "post #12, rewritten in place (slug kept); best renovation contractor Winnipeg is a criteria H2 with no self-praise; primary is a plan addition"
+    },
+    "/blog/essential-design-strategies-for-small-kitchen-renovations": {
+      "status": "live",
+      "primary": ["kitchen renovation ideas Winnipeg"],
+      "secondary": [],
+      "supporting": [],
+      "note": "post #27 (keeper; #21-24 and #26 redirect here)"
+    },
+    "/blog/which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners": {
+      "status": "live",
+      "primary": ["bathroom renovation ideas Winnipeg"],
+      "secondary": ["bathroom remodel Canada"],
+      "supporting": [],
+      "note": "post #19 (keeper); remove unsourced CAD ranges in the rewrite"
+    },
+    "/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades": {
+      "status": "live",
+      "primary": ["full vs partial renovation"],
+      "secondary": [],
+      "supporting": [],
+      "note": "post #5 (keeper); primary is a plan addition"
+    },
+    "/blog/how-to-prepare-your-business-for-a-major-renovation": {
+      "status": "live",
+      "primary": ["commercial renovation planning Winnipeg"],
+      "secondary": ["commercial renovation project timeline Winnipeg"],
+      "supporting": [],
+      "note": "post #14 (keeper; #15 redirects here)"
+    },
+    "/blog/manitoba-renovation-tax-credits-rebates": {
+      "status": "planned",
+      "currentUrl": "/blog/tax-incentives-for-commercial-renovations-what-you-should-know",
+      "primary": [
+        "home renovation grants Manitoba",
+        "renovation tax credits Manitoba"
+      ],
+      "secondary": [],
+      "supporting": [],
+      "note": "post #7 rewrite: draft + 307 to #11 until published, then 308 to this slug; CPA-reviewed; closed programs shown as closed; primaries are plan additions (validate)"
+    },
+    "/blog/home-renovation-planning-guide-canada": {
+      "status": "planned",
+      "primary": ["home renovation planning Canada"],
+      "secondary": [
+        "home renovation guide Canada",
+        "home renovation checklist Canada"
+      ],
+      "supporting": ["home renovation budget Canada"],
+      "note": "Canada planning guide + checklist (calendar Jul 2027); slug proposed, not fixed in plan D6"
+    },
+    "/blog/home-renovation-cost-canada": {
+      "status": "planned",
+      "primary": ["how much does a home renovation cost in Canada"],
+      "secondary": ["renovation cost per square foot Canada"],
+      "supporting": [],
+      "note": "Canada cost guide (calendar Aug 2027), only with credible national sources; slug proposed, not fixed in plan D6"
+    },
+    "/blog/home-renovation-financing-canada": {
+      "status": "planned",
+      "primary": ["home renovation financing Canada"],
+      "secondary": [],
+      "supporting": [],
+      "note": "Canada financing guide (calendar Sep 2027): HELOC, refinance, CMHC suite refinance, what is closed; no financing offer; slug proposed, not fixed in plan D6"
+    }
+  },
+  "gbpOnly": [
+    { "keyword": "renovation contractors near me", "fallback": "/" },
+    { "keyword": "home renovation near me", "fallback": "/" },
+    { "keyword": "home remodeling near me", "fallback": "/" },
+    { "keyword": "renovation company near me", "fallback": "/" },
+    { "keyword": "remodeling contractors near me", "fallback": "/" },
+    { "keyword": "renovation contractor near me", "fallback": "/" },
+    { "keyword": "kitchen renovation near me", "fallback": "/services/kitchen-renovations" },
+    { "keyword": "kitchen remodel near me", "fallback": "/services/kitchen-renovations" },
+    { "keyword": "bathroom renovation near me", "fallback": "/services/bathroom-renovations" },
+    { "keyword": "bathroom remodel near me", "fallback": "/services/bathroom-renovations" },
+    { "keyword": "bathroom remodel contractors near me", "fallback": "/services/bathroom-renovations" },
+    { "keyword": "basement renovation near me", "fallback": "/services/basement-renovations" },
+    { "keyword": "commercial renovation near me", "fallback": "/services/commercial-renovations" },
+    { "keyword": "commercial renovation contractors near me", "fallback": "/services/commercial-renovations" },
+    { "keyword": "office renovation near me", "fallback": "/services/office-renovations", "interimFallback": "/services/commercial-renovations" },
+    { "keyword": "retail renovation contractor near me", "fallback": "/services/retail-renovations", "interimFallback": "/services/commercial-renovations" },
+    { "keyword": "home addition contractor near me", "fallback": "/services/home-additions", "interimFallback": "/services/home-extensions" }
+  ],
+  "notTargeted": [
+    { "keyword": "best kitchen renovation Winnipeg", "reason": "Superlative; earned through reviews and the GBP, never claimed on-site." },
+    { "keyword": "best bathroom renovation Winnipeg", "reason": "Superlative; earned through reviews and the GBP, never claimed on-site." },
+    { "keyword": "best basement renovation Winnipeg", "reason": "Superlative; earned through reviews and the GBP, never claimed on-site." },
+    { "keyword": "design build contractor Winnipeg", "reason": "Design-build is not a confirmed service (plan D3). If the owner confirms it, move to supporting on /services/general-contracting." },
+    { "keyword": "condo renovation contractor", "reason": "Condo work not confirmed by the owner; revisit once the owner confirms it." },
+    { "keyword": "home renovation Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "home renovations Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "home renovation contractor Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "home renovation companies Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "renovation contractor Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "renovation companies Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "general contractor Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "home remodeling Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "home improvement Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "kitchen renovation Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "kitchen remodel Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "bathroom renovation Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "basement renovation Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "basement finishing Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "whole home renovation Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "home addition contractor Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "commercial renovation Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "commercial renovation contractor Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "commercial fit out Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "office renovation contractor Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." },
+    { "keyword": "restaurant renovation contractor Canada", "reason": "Canada-wide transactional intent; a Winnipeg service-area business cannot serve it (plan D3: no Canada transactional pages)." }
+  ]
+}

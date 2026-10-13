@@ -8,7 +8,7 @@ import {
   SERVICE_AREA,
   validateLead,
 } from '../data/quoteForm.js';
-import { SITE_PHONE } from '../data/siteConfig.js';
+import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { bookSlot, saveLead, trackConversion, utmSource } from '../lib/bookingApi.js';
 import { PRESELECT_EVENT } from '../lib/quoteFormEvents.js';
 import { dateIn, formatLongDate, formatTime } from '../lib/zonedDate.js';
@@ -41,7 +41,7 @@ const cx = (...classes) => classes.filter(Boolean).join(' ');
 /**
  * The /free-quote lead form: project details first (saved to GoHighLevel right
  * away, so the lead is kept even if they stop there), then a calendar to book
- * the free discovery call, then a confirmation. Visitors outside the service
+ * the free on-site visit, then a confirmation. Visitors outside the service
  * area are saved like everyone else, then told so instead of reaching the
  * calendar. Styled from the site theme.
  */
@@ -172,7 +172,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
       <p>{alert.message}</p>
       {alert.offerPhone && (
         <p>
-          Please call us on <a href={`tel:${SITE_PHONE}`}>{SITE_PHONE}</a> and we’ll book you in directly.
+          Please call us on <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a> and we’ll book you in directly.
         </p>
       )}
     </div>
@@ -198,7 +198,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
         <form className="quote-form qf-form" method="post" noValidate onSubmit={submitDetails} ref={formRef}>
           <div className="booking-card-head">
             <h2 className="qf-title" ref={headingRef} tabIndex={-1}>{title}</h2>
-            <p>Takes about a minute. Next, you’ll pick a time for a free {BOOKING_CALENDAR.durationMinutes}-minute call.</p>
+            <p>Takes about a minute. Next, you’ll pick a time for your free on-site visit.</p>
           </div>
 
           <div className="form-group">
@@ -312,10 +312,10 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
       {step === 'schedule' && (
         <div className="qf-schedule">
           <div className="booking-card-head">
-            <h2 className="qf-title" ref={headingRef} tabIndex={-1}>Pick a Time for Your Free Call</h2>
+            <h2 className="qf-title" ref={headingRef} tabIndex={-1}>Pick a Time for Your Free On-Site Visit</h2>
             <p>
-              Thanks{firstName ? `, ${firstName}` : ''} — we have your details. Choose a time for a free
-              {' '}{BOOKING_CALENDAR.durationMinutes}-minute call. Times are in {BOOKING_CALENDAR.timeZoneLabel}.
+              Thanks{firstName ? `, ${firstName}` : ''} — we have your details. Choose a time for us to visit
+              and look at the space with you. Times are in {BOOKING_CALENDAR.timeZoneLabel}.
             </p>
           </div>
 
@@ -352,10 +352,10 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
             <small>{BOOKING_CALENDAR.timeZoneLabel}</small>
           </p>
           <p>
-            We’ll call you on <strong>{values.phone}</strong> for a quick chat about your project.
+            We’ll meet you at <strong>{values.address}</strong> to walk through the space and talk about your project.
           </p>
           <p className="qf-fineprint">
-            Need to change the time? Call us on <a href={`tel:${SITE_PHONE}`}>{SITE_PHONE}</a>.
+            Need to change the time? Call us on <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>.
           </p>
         </div>
       )}
@@ -374,7 +374,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
               setStep('details');
             }}
           >
-            <ChevronLeftIcon size={14} /> My project is in Winnipeg or Manitoba
+            <ChevronLeftIcon size={14} /> My project is in Winnipeg or a nearby community
           </button>
         </div>
       )}

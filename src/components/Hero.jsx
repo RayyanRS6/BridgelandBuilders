@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="hero-section" id="home">
       <div className="container">
-        <div className="hero-card reveal">
+        <div className="hero-card hero-rise">
           <div className="hero-content">
             <div className="badge-soft">
               <StarIcon size={13} />
@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="hero-arch-frame">
               <img
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
-                alt="Clean and cozy Winnipeg renovation project"
+                alt="Bright living room with a sofa, armchair and large windows"
                 width="1000"
                 height="667"
                 fetchpriority="high"
@@ -44,7 +44,10 @@ export default function Hero() {
             <div className="hero-floating-badge">
               <div className="avatar-group">★</div>
               <div className="badge-text">
-                <h4>100% Satisfied Clients</h4>
+                {/* No Google rating next to the main CTA until the profile has
+                    10+ reviews (SEO plan §19). Free written quotes are stated
+                    across the site (FAQs, booking aside, /free-quote). */}
+                <h4>Free Written Quotes</h4>
                 <p>Over 60 Years Combined Experience</p>
               </div>
             </div>

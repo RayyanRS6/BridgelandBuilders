@@ -8,14 +8,20 @@ import AppShell from './AppShell.jsx';
 
 export function render(url) {
   return new Promise((resolve, reject) => {
-    let html = '';
+    const chunks = [];
     const sink = new Writable({
-      write(chunk, _encoding, callback) {
-        html += chunk;
+      write(chunk, encoding, callback) {
+        chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk, encoding));
         callback();
       },
     });
-    sink.on('finish', () => resolve(html));
+    // Decode once so a multi-byte character can never be split across chunks.
+    // React 18's stream writer can also flush a full buffer whose last bytes
+    // were never filled (when a multi-byte character such as ’ doesn't fit),
+    // which leaves NUL characters in the text ("We\0\0’ll"). NUL never belongs
+    // in HTML, so strip it; otherwise the static text differs from the client
+    // render and from the page's own FAQ JSON-LD.
+    sink.on('finish', () => resolve(Buffer.concat(chunks).toString('utf8').replace(/\u0000/g, '')));
 
     const { pipe, abort } = renderToPipeableStream(
       <StaticRouter location={url}>

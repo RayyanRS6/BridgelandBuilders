@@ -5,6 +5,7 @@ import MetaPixelPageViews from './components/MetaPixelPageViews.jsx';
 import TopBar from './components/TopBar.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import { useGlobalScrollReveal } from './hooks/useScrollReveal.js';
 
 const HomePage = lazy(() => import('./pages/Home.jsx'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
@@ -40,6 +41,9 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
  * /free-quote, /book-online and the service pages.
  */
 export default function AppShell() {
+  // One scroll-reveal observer for every page (see src/hooks/useScrollReveal.js).
+  useGlobalScrollReveal();
+
   return (
     <>
       <ScrollToHash />

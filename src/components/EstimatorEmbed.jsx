@@ -35,7 +35,10 @@ export default function EstimatorEmbed({ src, title = 'Renovation Price Calculat
       title={title}
       loading="lazy"
       referrerPolicy="no-referrer"
-      sandbox="allow-forms allow-scripts allow-same-origin"
+      // allow-popups: the estimator's "Book On-Site Visit" button opens
+      // /book-online in a new tab (target="_blank"), which a sandbox without
+      // it silently blocks. Top navigation stays disallowed.
+      sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
       scrolling="no"
     />
   );

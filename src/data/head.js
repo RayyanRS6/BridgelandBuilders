@@ -1,28 +1,16 @@
 /**
  * Build-time head model: the single function the prerenderer uses to produce
  * <head> for any route. It calls exactly the same schema builders the runtime
- * hook does, so the static HTML and the client render cannot drift.
+ * hook does (pageGraph, buildBlogNode, buildPostHead), so the static HTML and
+ * the client render cannot drift.
  * Only the build imports this — it pulls in all site data, which should never
  * reach the browser bundle.
  */
-import { getPostBySlug } from './blogPosts.js';
+import { BLOG_POSTS, getPostBySlug } from './blogPosts.js';
 import { SITE_FAQS } from './faqs.js';
 import { buildPostHead } from './postContent.js';
 import { getProject } from './projects.js';
-import { BLOG_POSTS } from './blogPosts.js';
-import { SITE_URL } from './siteConfig.js';
-import {
-  DEFAULT_IMAGE,
-  ROUTE_PAGE_TYPES,
-  ROUTE_TRAILS,
-  SERVICE_SEO,
-  buildBreadcrumbs,
-  buildFaqPage,
-  buildService,
-  buildWebPage,
-  graph,
-  seoFor,
-} from './seo.js';
+import { DEFAULT_IMAGE, SERVICE_SEO, buildBlogNode, pageGraph, seoFor, updatedFor } from './seo.js';
 
 const SERVICE_PROJECTS = {
   '/services/whole-home-renovations': 'whole-home-renovation',
@@ -44,30 +32,15 @@ export function headFor(path) {
 
   let faqs = null;
   let image = meta.image;
+  const nodes = [];
 
   if (path === '/faqs') faqs = SITE_FAQS;
 
-  const blogNode =
-    path === '/blog'
-      ? {
-          '@type': 'Blog',
-          '@id': `${SITE_URL}/blog#blog`,
-          name: 'Bridgeland Builders Blog',
-          url: `${SITE_URL}/blog`,
-          description: meta.description,
-          inLanguage: 'en-CA',
-          blogPost: BLOG_POSTS.map((post) => ({
-            '@type': 'BlogPosting',
-            headline: post.title,
-            description: post.metaDescription,
-            datePublished: post.date,
-            image: post.hero,
-            url: `${SITE_URL}/blog/${post.slug}`,
-          })),
-        }
-      : null;
-
-  if (path === '/blog') image = image || (BLOG_POSTS[0] && BLOG_POSTS[0].hero);
+  if (path === '/blog') {
+    nodes.push(buildBlogNode({ posts: BLOG_POSTS, description: meta.description }));
+    // Same image BlogPage.jsx sets at runtime: the latest post's 1200x630 JPEG.
+    image = image || (BLOG_POSTS[0] && (BLOG_POSTS[0].ogImage || BLOG_POSTS[0].hero));
+  }
 
   const projectSlug = SERVICE_PROJECTS[path];
   if (projectSlug) {
@@ -82,20 +55,15 @@ export function headFor(path) {
     path,
     image: image || DEFAULT_IMAGE,
     robots: meta.robots,
-    jsonLd: graph(
-      buildWebPage({
-        path,
-        title: meta.title,
-        description: meta.description,
-        type: ROUTE_PAGE_TYPES[path],
-      }),
-      buildBreadcrumbs(ROUTE_TRAILS[path] || []),
-      SERVICE_SEO[path]
-        ? buildService({ path, serviceType: SERVICE_SEO[path].serviceType, description: meta.description })
-        : null,
-      buildFaqPage(path, faqs),
-      blogNode
-    ),
+    updated: updatedFor(path),
+    jsonLd: pageGraph({
+      path,
+      title: meta.title,
+      description: meta.description,
+      serviceType: SERVICE_SEO[path] ? SERVICE_SEO[path].serviceType : undefined,
+      faqs,
+      nodes,
+    }),
   };
 }
 

@@ -3,11 +3,9 @@ import Process from '../components/Process.jsx';
 import Testimonial from '../components/Testimonial.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
 export default function ProcessPage() {
   usePageSeo('/our-process');
-  useScrollReveal();
 
   return (
     <main>

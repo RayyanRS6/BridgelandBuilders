@@ -3,22 +3,73 @@
  * build-time SEO layer (for schema), so both always agree.
  */
 import { SITE_URL } from './siteConfig.js';
-import { graph, buildBreadcrumbs, organizationNamed } from './seo.js';
+import { buildBreadcrumbs, buildFaqPage, buildWebPage, graph, isoWinnipeg, organizationRef } from './seo.js';
+
+// ISO 8601 with the America/Winnipeg offset (-06:00 / -05:00); lives in seo.js
+// so the /blog Blog node formats dates identically.
+export { isoWinnipeg };
 
 const HEADINGS = ['h2', 'h3', 'h4'];
 const TAKEAWAY_RE = /^(key takeaways|the key points|key points)\b/i;
-const FAQ_RE = /(questions?|faqs?)\b/i;
+// A section only counts as an FAQ when its heading says so explicitly
+// ("FAQs", "Frequently Asked Questions", "Questions and Answers", "Common
+// Questions", "Questions We Get Most Often"...). A heading that merely mentions
+// questions ("Ask the Right Questions") is ordinary body content.
+const FAQ_EXPLICIT_RE = /\bfaqs?\b|\bfrequently asked\b|\bquestions?\s+(?:and|&)\s+answers?\b/i;
+const FAQ_QUESTIONS_RE = /\bquestions\b/i;
+const FAQ_QUALIFIER_RE = /\b(most|common|commonly|often|frequently)\b/i;
 const QUESTION_START_RE = /^(what|how|why|can|do|does|is|are|should|which|describe|when|who|if)\b/i;
 
 export const isHeading = (block) => HEADINGS.includes(block.t);
 export const looksLikeQuestion = (text) => /\?\s*$/.test(text) || QUESTION_START_RE.test(text);
+
+const isFaqHeading = (text) =>
+  !looksLikeQuestion(text) &&
+  (FAQ_EXPLICIT_RE.test(text) || (FAQ_QUESTIONS_RE.test(text) && FAQ_QUALIFIER_RE.test(text)));
+
+const blockText = (block) => (block.t === 'img' ? '' : (block.x || '').trim());
+
+const isFaqQuestion = (block) => {
+  const text = blockText(block);
+  return Boolean(text) && (block.t === 'question' || (block.t === 'p' && text.length <= 160 && looksLikeQuestion(text)));
+};
+
+/**
+ * Splits an FAQ section's items at the end of the last answer. The last
+ * answer is the first text block after the last question (plus any list that
+ * directly continues it); whatever follows — usually the article's closing
+ * paragraph — is returned separately so it is never folded into that answer.
+ */
+function splitFaqTrail(items) {
+  let lastQuestion = -1;
+  items.forEach((block, index) => {
+    if (isFaqQuestion(block)) lastQuestion = index;
+  });
+  if (lastQuestion < 0) return [items, []];
+
+  let end = lastQuestion + 1;
+  while (end < items.length && !blockText(items[end])) end += 1;
+  if (end >= items.length) return [items, []];
+  end += 1;
+  while (end < items.length && items[end].t === 'li') end += 1;
+  return [items.slice(0, end), items.slice(end)];
+}
 
 /** Splits the flat block list into body, "key takeaways" and FAQ sections. */
 export function buildSections(blocks) {
   const sections = [];
   let current = { type: 'body', items: [] };
   const flush = () => {
-    if (current.items.length || current.heading) sections.push(current);
+    if (!current.items.length && !current.heading) return;
+    if (current.type !== 'faq') {
+      sections.push(current);
+      return;
+    }
+    const [faqItems, trailing] = splitFaqTrail(current.items);
+    sections.push({ ...current, items: faqItems });
+    if (trailing.some((block) => block.t === 'img' || blockText(block))) {
+      sections.push({ type: 'body', items: trailing });
+    }
   };
 
   for (const block of blocks) {
@@ -28,7 +79,7 @@ export function buildSections(blocks) {
         current = { type: 'takeaways', heading: block.x, items: [] };
         continue;
       }
-      if (FAQ_RE.test(block.x) && !looksLikeQuestion(block.x)) {
+      if (isFaqHeading(block.x)) {
         flush();
         current = { type: 'faq', heading: block.x, items: [] };
         continue;
@@ -57,13 +108,10 @@ export function buildFaqItems(items) {
 
   for (const block of items) {
     if (block.t === 'img') continue;
-    const text = (block.x || '').trim();
+    const text = blockText(block);
     if (!text) continue;
 
-    const isQuestion =
-      block.t === 'question' || (block.t === 'p' && text.length <= 160 && looksLikeQuestion(text));
-
-    if (isQuestion) {
+    if (isFaqQuestion(block)) {
       faqs.push({ q: text, a: '' });
     } else if (faqs.length) {
       const last = faqs[faqs.length - 1];
@@ -83,48 +131,53 @@ export function buildPostHead(post) {
   const faqSection = buildSections(post.blocks).find((section) => section.type === 'faq');
   const { faqs } = faqSection ? buildFaqItems(faqSection.items) : { faqs: [] };
 
+  const updated = post.updated || post.date;
+  const published = isoWinnipeg(post.date);
+  const modified = isoWinnipeg(updated);
+  const image = post.ogImage || post.hero;
+  const breadcrumbs = buildBreadcrumbs([['Blog', '/blog'], [post.title, path]], path);
+
   const nodes = [
+    buildWebPage({
+      path,
+      title: post.metaTitle,
+      description: post.metaDescription,
+      breadcrumb: { '@id': breadcrumbs['@id'] },
+      dateModified: modified,
+      about: false,
+      mainEntity: { '@id': `${url}#article` },
+    }),
     {
       '@type': 'BlogPosting',
       '@id': `${url}#article`,
       headline: post.title,
       description: post.metaDescription,
-      image: post.hero,
-      datePublished: post.date,
-      dateModified: post.date,
-      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-      author: organizationNamed,
-      publisher: organizationNamed,
+      image,
+      datePublished: published,
+      dateModified: modified,
+      mainEntityOfPage: { '@id': `${url}#webpage` },
+      // The business wrote these posts. A reference only, so the
+      // GeneralContractor entity is not re-typed as a plain Organization.
+      author: organizationRef,
+      publisher: organizationRef,
       isPartOf: { '@id': `${SITE_URL}/#website` },
       articleSection: post.category,
       inLanguage: 'en-CA',
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', '.page-hero-card > p', '.blog-takeaways'],
-      },
     },
-    buildBreadcrumbs([['Blog', '/blog'], [post.title, path]]),
+    breadcrumbs,
+    // FAQPage only from the post's explicit FAQ section (see buildSections).
+    buildFaqPage(path, faqs),
   ];
-
-  if (faqs.length) {
-    nodes.push({
-      '@type': 'FAQPage',
-      '@id': `${url}#faq`,
-      mainEntity: faqs.map((item) => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: { '@type': 'Answer', text: item.a },
-      })),
-    });
-  }
 
   return {
     title: post.metaTitle,
     description: post.metaDescription,
     path,
-    image: post.hero,
+    image,
     type: 'article',
-    publishedTime: post.date,
+    publishedTime: published,
+    modifiedTime: modified,
+    updated,
     jsonLd: graph(...nodes),
   };
 }

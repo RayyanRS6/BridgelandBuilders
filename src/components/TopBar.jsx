@@ -1,3 +1,4 @@
+import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { PhoneIcon } from './icons.jsx';
 
 export default function TopBar() {
@@ -9,9 +10,9 @@ export default function TopBar() {
       </div>
       <div className="top-bar-contact">
         <span>Winnipeg, Manitoba</span>
-        <a href="tel:431-866-5644">
+        <a href={SITE_PHONE_TEL}>
           <PhoneIcon size={14} />
-          431-866-5644
+          {SITE_PHONE}
         </a>
       </div>
     </div>

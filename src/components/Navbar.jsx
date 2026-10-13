@@ -117,40 +117,45 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                {isServicesMenuOpen && (
-                  <div className="services-mega-menu" id="services-mega-menu">
-                    <div className="services-mega-menu-inner">
-                      <div className="service-category-list">
-                        <p className="services-menu-kicker">Browse by category</p>
-                        {SERVICE_CATEGORIES.map((category) => (
-                          <button
-                            type="button"
-                            aria-pressed={category.id === selectedCategory.id}
-                            aria-controls="service-category-panel"
-                            className={category.id === selectedCategory.id ? 'active' : undefined}
-                            key={category.id}
-                            onMouseEnter={() => setActiveServiceCategory(category.id)}
-                            onFocus={() => setActiveServiceCategory(category.id)}
-                            onClick={() => setActiveServiceCategory(category.id)}
-                          >
-                            <span>{category.label}</span>
-                            <ChevronRightIcon size={15} />
-                          </button>
-                        ))}
-                      </div>
+                {/* Always in the HTML (hidden while closed) so the service links are
+                    crawlable; every category's panel is rendered and only the
+                    selected one is shown. */}
+                <div className="services-mega-menu" id="services-mega-menu" hidden={!isServicesMenuOpen}>
+                  <div className="services-mega-menu-inner">
+                    <div className="service-category-list">
+                      <p className="services-menu-kicker">Browse by category</p>
+                      {SERVICE_CATEGORIES.map((category) => (
+                        <button
+                          type="button"
+                          aria-pressed={category.id === selectedCategory.id}
+                          aria-controls={`service-category-panel-${category.id}`}
+                          className={category.id === selectedCategory.id ? 'active' : undefined}
+                          key={category.id}
+                          onMouseEnter={() => setActiveServiceCategory(category.id)}
+                          onFocus={() => setActiveServiceCategory(category.id)}
+                          onClick={() => setActiveServiceCategory(category.id)}
+                        >
+                          <span>{category.label}</span>
+                          <ChevronRightIcon size={15} />
+                        </button>
+                      ))}
+                    </div>
 
+                    {SERVICE_CATEGORIES.map((category) => (
                       <div
                         className="service-category-panel"
-                        id="service-category-panel"
+                        id={`service-category-panel-${category.id}`}
                         role="region"
-                        aria-label={selectedCategory.label}
+                        aria-label={category.label}
+                        key={category.id}
+                        hidden={category.id !== selectedCategory.id}
                       >
                         <div className="service-category-heading">
                           <span>Related services</span>
-                          <h3>{selectedCategory.label}</h3>
+                          <h3>{category.label}</h3>
                         </div>
                         <ul>
-                          {selectedCategory.services.map((service) => (
+                          {category.services.map((service) => (
                             <li key={service.label}>
                               {service.to ? (
                                 <Link to={service.to} onClick={closeNavigation}>
@@ -169,9 +174,9 @@ export default function Navbar() {
                           View all services <ArrowRightIcon size={13} />
                         </Link>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                )}
+                </div>
               </li>
             );
           })}

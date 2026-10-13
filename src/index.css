@@ -353,6 +353,14 @@ button {
   padding: 26px 28px 22px;
 }
 
+/* The mega menu and every category panel are always in the HTML; `hidden`
+   hides the closed menu and the unselected panels (display: flex above would
+   otherwise override the attribute). */
+.services-mega-menu[hidden],
+.service-category-panel[hidden] {
+  display: none;
+}
+
 .service-category-heading {
   padding-bottom: 16px;
   border-bottom: 1px solid var(--border-subtle);
@@ -502,6 +510,12 @@ button {
 .btn-pill-seagreen:hover {
   background: var(--accent-seagreen-hover);
   transform: translateY(-2px);
+}
+
+/* An <a> that replaced a <button> keeps the button's line height (links
+   inherit the body's 1.65), so the pill stays exactly the same height. */
+.btn-line-normal {
+  line-height: normal;
 }
 
 /* Oversized variant used by the CTA banner cards. */
@@ -948,6 +962,18 @@ button {
   color: #fff;
   background: var(--accent-seagreen);
   box-shadow: 0 8px 20px rgba(33, 122, 138, 0.22);
+}
+
+/* The category tabs are anchor targets (/services#commercial): land them —
+   and the tab bar, which in-app jumps scroll to — below the sticky navbar. */
+.service-category-switcher[data-scroll-anchor],
+.service-category-switcher a[id] {
+  scroll-margin-top: 96px;
+}
+
+/* All three category panels are in the HTML; only the selected one shows. */
+.service-directory-panel[hidden] {
+  display: none;
 }
 
 .service-directory-panel {
@@ -1591,6 +1617,25 @@ button {
   border: 1px solid var(--border-dark-subtle);
 }
 
+/* Social badges that link to a profile: the badge keeps its look, without
+   the underline footer-bottom links get. */
+.footer-bottom .footer-social-links a {
+  display: flex;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.footer-social-links a:hover span,
+.footer-social-links a:focus-visible span {
+  color: #fff;
+}
+
+/* The footer email address wraps instead of widening a narrow phone. */
+.footer-contact-email {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 /* -------------------------------------------------------------
    16. INSTANT QUOTE MODAL
    ------------------------------------------------------------- */
@@ -1724,6 +1769,22 @@ button {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* First-screen cards (heroes) rise into place with pure CSS, the same motion
+   and timing as .reveal but with no opacity step and no JavaScript, so the
+   heading and buttons are visible from the very first paint. */
+@keyframes heroRise {
+  from {
+    transform: translateY(24px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.hero-rise {
+  animation: heroRise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* -------------------------------------------------------------
@@ -2541,5 +2602,8 @@ button {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .hero-rise {
+    animation: none;
   }
 }

@@ -31,8 +31,11 @@ const SITE_URL = (await import(pathToFileURL(join(ROOT, 'src/data/siteConfig.js'
 const escapeAttr = (value) =>
   String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+// data-seo marks the tag as managed by useSeo.js, so a client-side move to a
+// page that does not set it (e.g. a post's article:published_time on the way
+// to /services) removes it instead of leaving it stale.
 const meta = (attr, key, content) =>
-  content ? `  <meta ${attr}="${key}" content="${escapeAttr(content)}" />\n` : '';
+  content ? `  <meta ${attr}="${key}" content="${escapeAttr(content)}" data-seo="" />\n` : '';
 
 /** Builds the per-route <head> block that replaces the template's defaults. */
 function headHtml(head) {
@@ -53,6 +56,7 @@ function headHtml(head) {
   html += meta('property', 'og:image', image);
   html += meta('property', 'og:image:alt', image ? head.title : undefined);
   html += meta('property', 'article:published_time', head.publishedTime);
+  html += meta('property', 'article:modified_time', head.modifiedTime);
   html += meta('name', 'twitter:card', image ? 'summary_large_image' : 'summary');
   html += meta('name', 'twitter:title', head.title);
   html += meta('name', 'twitter:description', head.description);

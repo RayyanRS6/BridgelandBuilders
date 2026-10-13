@@ -3,11 +3,9 @@ import ServiceDirectory from '../components/ServiceDirectory.jsx';
 import Gallery from '../components/Gallery.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
 export default function ServicesPage() {
   usePageSeo('/services');
-  useScrollReveal();
 
   return (
     <main>

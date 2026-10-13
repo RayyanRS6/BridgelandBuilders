@@ -5,7 +5,7 @@ const GALLERY_ITEMS = [
     span: 'col-8',
     to: '/services/whole-home-renovations',
     img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
-    alt: 'Whole home renovation in Winnipeg',
+    alt: 'Modern two-storey house at dusk with lit windows',
     title: 'Whole Home Renovation',
     text: 'Custom open living room and kitchen design',
     delay: null,
@@ -14,7 +14,7 @@ const GALLERY_ITEMS = [
     span: 'col-4',
     to: '/services/bathroom-renovations',
     img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80',
-    alt: 'Bathroom renovation Winnipeg',
+    alt: 'White bathroom with a checkered floor, pedestal sink and plants',
     title: 'Bathroom Renovation',
     text: 'Modern fixtures & clean tiling',
     delay: '0.1s',
@@ -23,7 +23,7 @@ const GALLERY_ITEMS = [
     span: 'col-4',
     to: '/services/kitchen-renovations',
     img: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80',
-    alt: 'Kitchen renovation Winnipeg',
+    alt: 'White kitchen with an island, bar stools and pendant lights',
     title: 'Kitchen Renovation',
     text: 'Built for comfort, cooking, and durability',
     delay: null,
@@ -32,7 +32,7 @@ const GALLERY_ITEMS = [
     span: 'col-4',
     to: '/services/basement-renovations',
     img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80',
-    alt: 'Basement renovation Winnipeg',
+    alt: 'White room with a small sofa, dresser, floor lamp and plant',
     title: 'Basement Renovation',
     text: 'Finished family area and guest space',
     delay: '0.1s',
@@ -41,7 +41,7 @@ const GALLERY_ITEMS = [
     span: 'col-4',
     to: '/services/home-extensions',
     img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80',
-    alt: 'Home extension in Winnipeg',
+    alt: 'Open-plan living room with a wood feature wall and glass doors',
     title: 'Home Extension',
     text: 'More room, built to feel like it was always there',
     delay: '0.2s',
@@ -50,7 +50,7 @@ const GALLERY_ITEMS = [
     span: 'col-12',
     to: '/services/commercial-renovations',
     img: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80',
-    alt: 'Commercial renovation Winnipeg',
+    alt: 'Open office with a long meeting table and glass walls',
     title: 'Commercial Renovation',
     text: 'Office and retail spaces that work for you',
     delay: '0.2s',
@@ -62,9 +62,9 @@ export default function Gallery() {
     <section className="gallery-section" id="inspiration">
       <div className="container">
         <div className="section-header center reveal">
-          <span className="section-tag">Our Portfolio</span>
+          <span className="section-tag">Explore Services</span>
           <h2 className="section-title">Get Inspired: Transform Your Space with Bridgeland Builders</h2>
-          <p className="section-desc">Take a look at how we build and renovate spaces across Winnipeg, Manitoba.</p>
+          <p className="section-desc">Ideas for the spaces we build. Inspiration photos for now, until our own project photos are added.</p>
         </div>
 
         <div className="gallery-grid">

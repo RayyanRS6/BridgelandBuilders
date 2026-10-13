@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
 import { ArrowRightIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
-import { INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_E164 } from '../data/siteConfig.js';
+import { INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 /**
@@ -38,7 +38,7 @@ export default function InstantQuotePage() {
             <h2>Prefer to talk it through?</h2>
             <p>
               Book a free on-site visit and we’ll look at the space with you, or browse everything we build first.
-              You can also call us at <a href={`tel:${SITE_PHONE_E164}`}>{SITE_PHONE}</a>.
+              You can also call us at <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>.
             </p>
             <div className="hero-cta-group">
               <Link to="/book-online" className="btn-pill-red">

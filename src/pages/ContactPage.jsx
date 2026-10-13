@@ -2,11 +2,11 @@ import PageHero from '../components/PageHero.jsx';
 import BookingAside from '../components/BookingAside.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { usePageSeo } from '../hooks/useSeo.js';
-import useScrollReveal from '../hooks/useScrollReveal.js';
 
+// The form and its aside skip `.reveal` so they are visible from the first
+// paint, before the JS bundle has loaded.
 export default function ContactPage() {
   usePageSeo('/contact-us');
-  useScrollReveal();
 
   return (
     <main>
@@ -19,8 +19,8 @@ export default function ContactPage() {
       <section className="lead-section contact-page-form">
         <div className="container">
           <div className="lead-grid">
-            <div className="reveal"><BookingAside serviceName="project" /></div>
-            <div className="reveal">
+            <div><BookingAside serviceName="project" /></div>
+            <div>
               <QuoteBookingForm id="contact-form" title="Request Your Free Quote" />
             </div>
           </div>

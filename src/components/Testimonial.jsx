@@ -5,8 +5,8 @@ export default function Testimonial() {
         <div className="testimonial-card reveal">
           <div className="testimonial-left">
             <div className="stars-badge">★★★★★</div>
-            <h3 className="testimonial-headline">5-Star Rated!</h3>
-            <p className="testimonial-sub">What our clients say about working with Bridgeland Builders in Winnipeg.</p>
+            <h3 className="testimonial-headline">What Our Clients Say</h3>
+            <p className="testimonial-sub">In their own words: what it’s like working with Bridgeland Builders.</p>
           </div>
           <div className="testimonial-right">
             <p className="testimonial-quote">
@@ -16,7 +16,7 @@ export default function Testimonial() {
               <div className="author-initial">M</div>
               <div className="author-info">
                 <h5>Marvin V.</h5>
-                <p>Verified Homeowner ★★★★★</p>
+                <p>Homeowner ★★★★★</p>
               </div>
             </div>
           </div>
