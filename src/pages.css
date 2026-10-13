@@ -1193,6 +1193,20 @@
   aspect-ratio: auto;
 }
 
+/* A title card's words run close to its edges, so the featured box (taller
+   than 16:9 beside a long excerpt) shows it whole on the card's own dark
+   ground instead of trimming the sides; anchored to the bottom so the red
+   strip stays on the card's edge, and zoomed from there on hover. */
+.blog-card.is-featured .blog-card-media.is-title-card {
+  background: var(--bg-dark);
+}
+
+.blog-card.is-featured .blog-card-media.is-title-card img {
+  object-fit: contain;
+  object-position: center bottom;
+  transform-origin: center bottom;
+}
+
 .blog-card.is-featured .blog-card-body {
   justify-content: center;
   padding: 44px 44px 40px;

@@ -49,6 +49,7 @@ export default function BlogCard({ post, featured = false }) {
   // Until that exists there is no image at all: the media box keeps its 16:9
   // space and background (pages.css), so the grid stays even.
   const imageSrc = post.heroSrc || post.hero;
+  const isTitleCard = Boolean(!post.hero && post.heroSrc);
 
   return (
     <article
@@ -57,7 +58,12 @@ export default function BlogCard({ post, featured = false }) {
       onFocus={prefetch}
       onTouchStart={prefetch}
     >
-      <Link className="blog-card-media" to={`/blog/${post.slug}`} tabIndex={-1} aria-hidden="true">
+      <Link
+        className={`blog-card-media${isTitleCard ? ' is-title-card' : ''}`}
+        to={`/blog/${post.slug}`}
+        tabIndex={-1}
+        aria-hidden="true"
+      >
         {imageSrc && (
           <Picture
             avifSrcSet={post.heroAvifSrcSet}
