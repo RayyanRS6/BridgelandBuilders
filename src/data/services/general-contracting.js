@@ -13,6 +13,7 @@
 // its sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'general-contracting',
@@ -125,7 +126,7 @@ export default {
       { title: 'Professional Drawings', text: 'The City’s CADS form says commercial drawings must be sealed by an architect or engineer for any structural change, and for significant changes to fire safety systems, exits or public corridors in Part 3 buildings. We build to their sealed drawings.' },
       { title: 'Inspections', text: 'Once a permit is issued, the City carries out mandatory audit inspections to check the work follows codes, by-laws and the accepted plans, so inspections are booked before walls and ceilings close.' },
       { title: 'Holdback', text: 'Manitoba’s Builders’ Liens Act requires the person paying for the work to hold back 7.5% of each payment for at least 60 days after substantial performance, completion or abandonment.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, permits and inspections go through the local municipality or planning district instead.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, permits and inspections go through the local municipality or planning district instead.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Commercial projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects', accessed: '2026-10-13' },

@@ -14,12 +14,14 @@
  *          parity, NAP rules (incl. the phone-format allowlist), .reveal never
  *          gating the hero / forms / long bodies, an estimator iframe on every
  *          service page, no banned claims, no changefreq/priority, no leaked
- *          Suspense fallback, no keyword listed twice in the keyword map.
+ *          Suspense fallback, no keyword listed twice in the keyword map, no
+ *          community page (/service-areas/<slug>) short of the D9 gate.
  *   WARN   quality: title/description lengths, duplicates, image hygiene,
  *          internal-link coverage, lastmod uniformity, <main> text changed
  *          without an `updated` bump (content-hash guard), stale cost guides
  *          and source dates, keyword map, readability, JS budgets, service
- *          timelines that disagree with src/data/facts.js (fact drift).
+ *          timelines that disagree with src/data/facts.js (fact drift),
+ *          partial lists of the nearby communities (src/data/areas.js).
  *   INFO   accepted interim states (Wix-hosted images until the migration,
  *          307 interim redirects, planned pages not live yet).
  *
@@ -183,6 +185,8 @@ const seo = await importGuarded('src/data/seo.js', ['PAGE_SEO', 'SERVICE_SEO', '
 const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS']);
 const blogModule = await importGuarded('src/data/blogPosts.js', ['BLOG_POSTS'], ['BLOG_REDIRECTS']);
 const facts = await importGuarded('src/data/facts.js', ['TIMELINES']);
+const areasContent = await importGuarded('src/data/serviceAreasContent.js', ['SERVICE_AREAS_CONTENT']);
+const caseStudyData = await importGuarded('src/data/caseStudyData.js', ['caseStudiesForArea']);
 
 const prerenderJson = readJsonFile('prerender-routes.json', { required: true });
 const PRERENDER = Array.isArray(prerenderJson) ? prerenderJson.map(cleanPath) : [];
@@ -906,6 +910,88 @@ for (const [route, sources] of sourcedPages) {
 // Pages read their timelines from src/data/facts.js; blog posts keep their own
 // wording, so any page or post that gives a service a different range warns.
 if (facts.TIMELINES) for (const page of pages.values()) checkTimelineDrift(page, facts.TIMELINES, report);
+
+/* --------------------------- service area: lists and community pages */
+// Visible <main> text, leaving out the elements in `skip` (whole subtrees).
+function mainTextWithout(page, skip) {
+  const parts = [];
+  let cursor = page.main.start;
+  for (const el of [...skip].sort((a, b) => a.start - b.start)) {
+    if (el.end <= cursor || el.start >= page.main.end) continue;
+    parts.push(textBetween(page.doc, cursor, el.start, ' '));
+    cursor = el.end;
+  }
+  parts.push(textBetween(page.doc, cursor, page.main.end, ' '));
+  return parts.join(' ').replace(/\s+/g, ' ');
+}
+
+// src/data/areas.js holds the one list of communities. A page whose <main>
+// names three or more of the confirmed nearby communities, but not all of
+// them, most likely carries a hand-typed list that has drifted from it (a
+// community confirmed or dropped since): write the list from areas.js
+// (NEARBY_AREAS_TEXT…). Community pages name their own community, and the
+// /service-areas cards (#communities) one community each, so those are left out.
+const NEARBY_AREA_NAMES = Array.isArray(siteConfig.NEARBY_AREA_NAMES) ? siteConfig.NEARBY_AREA_NAMES : [];
+const PARTIAL_LIST_MIN = 3;
+const escapeRe = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const AREA_NAME_RES = NEARBY_AREA_NAMES.map((name) => [name, new RegExp(`(?<!\\p{L})${escapeRe(name)}(?!\\p{L})`, 'u')]);
+if (NEARBY_AREA_NAMES.length > PARTIAL_LIST_MIN) {
+  for (const page of pages.values()) {
+    if (page.route.startsWith('/service-areas/')) continue;
+    const skip = page.route === '/service-areas' ? page.doc.elements.filter((el) => el.attrs.id === 'communities') : [];
+    const text = mainTextWithout(page, skip);
+    const named = AREA_NAME_RES.filter(([, re]) => re.test(text)).map(([name]) => name);
+    if (named.length >= PARTIAL_LIST_MIN && named.length < NEARBY_AREA_NAMES.length) {
+      const missing = NEARBY_AREA_NAMES.filter((name) => !named.includes(name));
+      report.warn('areas.partial-list', page.route, `<main> names ${named.length} of the ${NEARBY_AREA_NAMES.length} nearby communities but not ${missing.join(', ')} — build the list from src/data/areas.js`);
+    }
+  }
+}
+
+// Community pages (plan D9). serviceAreasContent.js passesAreaGate() keeps
+// /service-areas/<slug> unrouted until its entry is published, three
+// published case studies are set there and the owner has signed it off; this
+// re-checks every prerendered one and adds what only the built page shows:
+// 600+ words of its own (text blocks in <main> that appear on no other page)
+// and its sources.
+const AREA_PAGE_MIN_CASE_STUDIES = Number(areasContent.AREA_PAGE_MIN_CASE_STUDIES) || 3;
+const AREA_PAGE_MIN_UNIQUE_WORDS = 600;
+const TEXT_BLOCK_TAGS = new Set(['p', 'li', 'h1', 'h2', 'h3', 'h4', 'blockquote', 'td', 'th', 'figcaption']);
+/** The outermost text blocks in <main>, as normalised strings. */
+function mainTextBlocks(page) {
+  const inMain = page.doc.elements.filter((el) => TEXT_BLOCK_TAGS.has(el.tag) && isInside(el, page.main));
+  return inMain
+    .filter((el) => !ancestors(page.doc, el).some((a) => TEXT_BLOCK_TAGS.has(a.tag)))
+    .map((el) => textOf(page.doc, el))
+    .filter(Boolean);
+}
+const areaPages = [...pages.values()].filter((page) => /^\/service-areas\/[^/]+$/.test(page.route));
+if (areaPages.length) {
+  const areaEntries = (areasContent.SERVICE_AREAS_CONTENT && areasContent.SERVICE_AREAS_CONTENT.areas) || {};
+  const blockOwners = new Map(); // block text -> Set(routes)
+  for (const page of pages.values()) {
+    for (const block of new Set(mainTextBlocks(page))) {
+      if (!blockOwners.has(block)) blockOwners.set(block, new Set());
+      blockOwners.get(block).add(page.route);
+    }
+  }
+  for (const page of areaPages) {
+    const slug = page.route.slice('/service-areas/'.length);
+    const entry = areaEntries[slug] || {};
+    const problems = [];
+    const studies = typeof caseStudyData.caseStudiesForArea === 'function' ? caseStudyData.caseStudiesForArea(slug).length : 0;
+    if (studies < AREA_PAGE_MIN_CASE_STUDIES) problems.push(`${studies} published case stud${studies === 1 ? 'y' : 'ies'} in this community (need ≥${AREA_PAGE_MIN_CASE_STUDIES})`);
+    const ownWords = mainTextBlocks(page)
+      .filter((block) => blockOwners.get(block).size === 1)
+      .reduce((sum, block) => sum + wordCount(block), 0);
+    if (ownWords < AREA_PAGE_MIN_UNIQUE_WORDS) problems.push(`${ownWords} words of its own in <main> (need ≥${AREA_PAGE_MIN_UNIQUE_WORDS})`);
+    const hasSourcesList = byTag(page.doc, 'ol').some((el) => classesOf(el).has('blog-sources') && isInside(el, page.main));
+    if (!Array.isArray(entry.sources) || !entry.sources.length || !hasSourcesList) problems.push('no sources for its local facts');
+    const signoff = entry.ownerSignoff;
+    if (!signoff || !signoff.name || !signoff.date) problems.push('no owner sign-off');
+    if (problems.length) report.error('areas.page-gate', page.route, `community page prerendered without the D9 gate: ${problems.join('; ')}`);
+  }
+}
 
 /* -------------------------------------------------------------- robots */
 if (robotsTxt == null) {

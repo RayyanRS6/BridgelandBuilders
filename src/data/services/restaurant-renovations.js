@@ -14,6 +14,7 @@
 // checked against the official page in its sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+import { NEARBY_AREAS_TEXT } from '../areas.js';
 
 export default {
   slug: 'restaurant-renovations',
@@ -87,7 +88,7 @@ export default {
     { q: 'Do you renovate hotels?', a: 'Yes. We renovate guest rooms and bathrooms, corridors, lobbies, breakfast rooms and meeting rooms. Work is phased by room, floor or wing so the rest of the hotel keeps operating, noisy tasks are kept to daytime hours, and you get a weekly update to share with management or ownership.' },
     { q: 'We serve alcohol. Does a renovation affect our liquor licence?', a: 'It can. The Liquor, Gaming and Cannabis Authority of Manitoba says it is the licensee’s responsibility to notify the LGCA if major renovations are made to licensed premises. Check with them before work starts, especially if the bar, seating or floor plan is changing, and build their timeline into your opening date.' },
     { q: 'Can you build to our designer’s drawings?', a: 'Yes. We build to supplied drawings and specifications for dining rooms, bars and kitchens, and walk the space against them before work starts. If a detail won’t work on site, such as a drain that can’t reach the planned sink location, we raise it with you and your designer before it becomes a costly change.' },
-    { q: 'Do you work outside Winnipeg?', a: 'Yes, within about an hour of the city, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach. The building permit then comes from the local municipality or planning district, and the health plan review still goes to your area public health inspector before construction starts.' },
+    { q: 'Do you work outside Winnipeg?', a: `Yes, within about an hour of the city, including ${NEARBY_AREAS_TEXT}. The building permit then comes from the local municipality or planning district, and the health plan review still goes to your area public health inspector before construction starts.` },
   ],
 
   // Title, meta description and Service schema for this page. `updated`

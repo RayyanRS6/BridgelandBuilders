@@ -10,6 +10,7 @@
 // sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'office-renovations',
@@ -119,7 +120,7 @@ export default {
       { title: 'Occupancy Permit', text: 'A new tenant establishing a use without a valid occupancy permit, or a tenant expanding into more space, generally needs an occupancy permit before moving in. Ask your landlord what permit the unit already has.' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with accessibility requirements aligned with CSA B651. Entrances, washrooms and door clearances are planned into the layout from the start.' },
       { title: 'After-Hours Noise', text: 'Loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays. Your building may set its own work-hour rules too, so check the lease.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Permits Online', url: 'https://www.winnipeg.ca/building-development/permits-applications/permits-online', accessed: '2026-10-13' },

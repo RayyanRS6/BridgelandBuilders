@@ -10,6 +10,7 @@
 // sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, OFFICE_DAYS_TEXT, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'retail-renovations',
@@ -119,7 +120,7 @@ export default {
       { title: 'Signs', text: 'The City says to get a permit before starting any construction or alteration to any part of a sign. New internally lit signs, or electrical changes to an existing sign, also need a separate electrical sign permit.' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with accessibility requirements aligned with CSA B651. Separately, Manitoba’s Accessible Customer Service Standard applies to every business with at least one employee.' },
       { title: 'Noise Near Homes', text: 'Loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so late-evening work near homes is limited to quieter tasks.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025', url: 'https://www.winnipeg.ca/media/6330', accessed: '2026-10-13' },

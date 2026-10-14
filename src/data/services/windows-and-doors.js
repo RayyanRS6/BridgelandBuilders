@@ -9,6 +9,7 @@
 // Owner sign-off (ownerSignoff) is still to be added.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+import { NEARBY_AREAS_TEXT } from '../areas.js';
 
 const ACCESSED = '2026-10-13';
 
@@ -70,7 +71,7 @@ export default {
       { title: 'Heritage Districts', text: 'Armstrong’s Point and Crescentwood-Enderton Park are Winnipeg’s two heritage conservation districts. Their plans decide when a heritage permit is needed.' },
       { title: 'Heritage Windows', text: 'For properties on the City’s List of Historical Resources, a heritage permit for window work asks for a window condition assessment, photos of each window, drawings of the original windows and shop drawings of the new ones.' },
       { title: 'Efficiency Manitoba Rebate', text: 'Efficiency Manitoba lists a $100 rebate per qualifying ENERGY STAR certified triple-pane window or door replacing one in a primary residence. New openings don’t qualify, and terms change.' },
-      { title: 'Outside the City', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach, the local municipality or planning district issues permits.' },
+      { title: 'Outside the City', text: `In ${NEARBY_AREAS_TEXT}, the local municipality or planning district issues permits.` },
     ],
     sources: [
       { label: 'City of Winnipeg: home improvement projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects', accessed: ACCESSED },

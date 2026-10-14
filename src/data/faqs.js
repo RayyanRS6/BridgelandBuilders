@@ -12,9 +12,9 @@
 // `more` ({ label, to }) adds a link under an answer on the page only; the
 // FAQPage schema and the llms files use `q` and `a`.
 import {
+  NEARBY_AREAS_TEXT,
   OFFICE_HOURS_TEXT,
   REPLY_TIME,
-  SERVICE_AREA_NAMES,
   SERVICE_AREA_STATEMENT,
   SITE_EMAIL,
   SITE_PHONE,
@@ -184,9 +184,6 @@ export const FAQ_GROUPS = [
 /** Every FAQ in page order, flat ([{ q, a, more? }]): the FAQPage schema and llms files. */
 export const SITE_FAQS = FAQ_GROUPS.flatMap((group) => group.items);
 
-const listJoin = (items) =>
-  items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('');
-
 /**
  * The three questions on /contact-us (plan §7): the free visit, how fast we
  * reply, and where we go. Worded for that page, so no question and answer
@@ -204,9 +201,7 @@ export const CONTACT_FAQS = [
   },
   {
     q: 'Do you come out to my area?',
-    a: `Yes, anywhere in Winnipeg and in nearby communities within about an hour of the city: ${listJoin(
-      SERVICE_AREA_NAMES.filter((name) => name !== 'Winnipeg')
-    )}. We come to your home or business for the free on-site visit. Further out? Call ${SITE_PHONE} and we will tell you honestly whether we can help.`,
+    a: `Yes, anywhere in Winnipeg and in nearby communities within about an hour of the city: ${NEARBY_AREAS_TEXT}. We come to your home or business for the free on-site visit. Further out? Call ${SITE_PHONE} and we will tell you honestly whether we can help.`,
     more: { label: 'See our service area', to: '/service-areas' },
   },
 ];

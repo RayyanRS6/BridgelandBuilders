@@ -15,6 +15,7 @@
 // "priced after a visit" section and carries no numbers.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   // Project slug kept from before the rename to "home additions" (plan D6): it
@@ -87,7 +88,7 @@ export default {
       { title: 'Engineered foundations', text: 'Where a structural element goes beyond Part 9 of the Manitoba Building Code, such as concrete grade beams supported on piles, the City requires a sealed drawing from a professional engineer registered in Manitoba and a Professional Designer’s Certificate for Housing.' },
       { title: 'Electrical and plumbing', text: 'If the addition includes electrical or plumbing work, the City requires separate trade permits for it, on top of the development and building permits.' },
       { title: 'Inspections', text: 'Rough-in inspections happen before framing, HVAC, electrical or plumbing work is covered. The final inspection confirms all work under every permit is complete and the addition is ready for occupancy.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the local municipality or planning district issues the permits and applies its own zoning rules. We confirm them for your property before plans are finalized.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the local municipality or planning district issues the permits and applies its own zoning rules. We confirm them for your property before plans are finalized.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Additions & attached garages', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/additions-attached-garages', accessed: '2026-10-13' },

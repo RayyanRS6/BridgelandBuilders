@@ -13,6 +13,7 @@
 // instant estimator's starting range (costTeaser, estimator data 2026-10-13).
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'kitchen-renovation',
@@ -84,7 +85,7 @@ export default {
       { title: 'Electrical and plumbing permits', text: 'Moving the sink, adding circuits for new appliances, or wiring an island is trade work. The City notes that renovations may need electrical and plumbing permits, depending on the scope, on top of a building permit.' },
       { title: 'Inspections before walls close', text: 'The City requires a rough-in inspection before framing, HVAC, electrical or plumbing work under a permit is covered, and a final inspection to close the permit. We schedule them as the work reaches each stage.' },
       { title: 'Older kitchens and asbestos', text: 'Health Canada says that before 1990, asbestos was mainly used for insulating buildings and homes, and lists older plaster, drywall and floor tiles among materials that may contain it. If your kitchen still has original materials, have them tested by a professional before demolition.' },
-      { title: 'Outside Winnipeg and in condos', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, permits come from your local municipality or planning district. In a condo, ask your condominium corporation which approvals and work hours apply before dates are set.' },
+      { title: 'Outside Winnipeg and in condos', text: `In ${NEARBY_AREAS_TEXT_OR}, permits come from your local municipality or planning district. In a condo, ask your condominium corporation which approvals and work hours apply before dates are set.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Home renovations', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations', accessed: '2026-10-13' },

@@ -12,6 +12,7 @@
 // checked against the official page in its sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'medical-dental-office-renovations',
@@ -121,7 +122,7 @@ export default {
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with accessibility requirements aligned with CSA B651. Entrances, washrooms, door widths and turning space are planned into the layout from the start.' },
       { title: 'Occupancy Permit', text: 'Substantial alterations, expansions and changes of use need an occupancy permit before the space is used. Moving into a new unit? Ask the landlord what occupancy permit it already has.' },
       { title: 'Cleanable Finishes', text: 'Your clinical policies and professional standards set the infection-control rules. As general guidance, smooth, non-porous surfaces and sealed joints make cleaning easier; your designer confirms the specification.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the building permit comes from the local municipality or planning district instead, and we coordinate with them the same way.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the building permit comes from the local municipality or planning district instead, and we coordinate with them the same way.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Commercial projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects', accessed: '2026-10-13' },

@@ -5,6 +5,7 @@ import {
   BUSINESS_HOURS,
   COST_HUB_PATH,
   GBP,
+  NEARBY_AREAS_TEXT_SHORT,
   SERVICE_AREAS,
   SERVICE_CATALOG,
   SITE_EMAIL,
@@ -131,12 +132,12 @@ export const PAGE_SEO = {
     updated: '2026-10-14',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
-  // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in siteConfig.js.
+  // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in areas.js.
   // The page passes the content module's seo (same values) to usePageSeo.
   '/service-areas': {
     title: 'Service Areas: Winnipeg & Nearby | Bridgeland Builders',
     description:
-      'Renovation contractor serving Winnipeg and communities within about an hour: Headingley, East and West St. Paul, Oak Bluff, Selkirk and Steinbach.',
+      `Renovation contractor serving Winnipeg and communities within about an hour: ${NEARBY_AREAS_TEXT_SHORT}.`,
     updated: '2026-10-14',
   },
   // How guides, cost pages and service pages are written, sourced and reviewed
