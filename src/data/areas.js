@@ -150,29 +150,13 @@ export const NEARBY_AREA_NAMES = SERVICE_AREA_NAMES.filter((name) => name !== 'W
 export const listJoin = (items, conj = 'and') =>
   items.length > 1 ? `${items.slice(0, -1).join(', ')} ${conj} ${items[items.length - 1]}` : items.join('');
 
-/**
- * Neighbouring names that differ only in their first word are named once:
- * ['East St. Paul', 'West St. Paul'] → ['East and West St. Paul'].
- */
-export const pairSharedNames = (names) =>
-  names.reduce((out, name) => {
-    const previous = out[out.length - 1];
-    const [first, ...rest] = name.split(' ');
-    const [previousFirst, ...previousRest] = previous ? previous.split(' ') : [];
-    if (previous && rest.length && !previous.includes(' and ') && previousRest.join(' ') === rest.join(' ')) {
-      out[out.length - 1] = `${previousFirst} and ${first} ${rest.join(' ')}`;
-    } else {
-      out.push(name);
-    }
-    return out;
-  }, []);
-
 // The nearby communities as running text, precomputed so the service content
 // modules (lazy chunks) only read a string: a function call in their data
 // would stop the bundler from leaving it out of chunks that never read it.
+// This module ships in the entry chunk (siteConfig.js imports it), so keep it small.
 /** 'Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach' */
 export const NEARBY_AREAS_TEXT = listJoin(NEARBY_AREA_NAMES);
 /** 'Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach' */
 export const NEARBY_AREAS_TEXT_OR = listJoin(NEARBY_AREA_NAMES, 'or');
-/** 'Headingley, East and West St. Paul, Oak Bluff, Selkirk and Steinbach' (short form, meta descriptions) */
-export const NEARBY_AREAS_TEXT_SHORT = listJoin(pairSharedNames(NEARBY_AREA_NAMES));
+/** 'Headingley, East and West St. Paul, Oak Bluff, Selkirk and Steinbach': the short form (meta descriptions). */
+export const NEARBY_AREAS_TEXT_SHORT = NEARBY_AREAS_TEXT.replace('East St. Paul, West St. Paul', 'East and West St. Paul');

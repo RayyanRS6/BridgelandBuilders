@@ -53,7 +53,6 @@ export {
   SERVICE_AREAS,
   SERVICE_AREA_NAMES,
   listJoin,
-  pairSharedNames,
 } from './areas.js';
 
 /** The one sentence used wherever the service area is described. */
