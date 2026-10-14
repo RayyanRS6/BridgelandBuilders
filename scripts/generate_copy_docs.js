@@ -25,7 +25,7 @@ import { parseSitemap, cleanPath } from './lib/audit/site.mjs';
 // dist/<route>/index.html. A page's <main> becomes the document: one section
 // per top-level block (split again at each further H2), with its headings,
 // paragraphs, lists, tables, cards, FAQs, buttons and form fields as the
-// blocks below. The announcement bar, navigation and footer (outside <main>)
+// blocks below. The navigation and footer (outside <main>)
 // come from the home page as "Global Elements". Nothing is hand-kept, so the
 // documents always match what the site shows; a warning lists any visible
 // text of a page that did not make it into its document.
@@ -480,7 +480,7 @@ function toItem(u) {
 }
 
 // The site-wide blocks outside <main>, by class.
-const CHROME_NAMES = { 'top-bar': 'Top Announcement Bar', 'header-wrapper': 'Main Navigation & Services Menu', 'site-footer': 'Global Footer' };
+const CHROME_NAMES = { 'header-wrapper': 'Main Navigation & Services Menu', 'site-footer': 'Global Footer' };
 
 /** "ticker-section" -> "Ticker"; the label of a block without a heading. */
 function blockName(el) {
@@ -649,7 +649,7 @@ function globalPage(file) {
   const page = {
     key: 'GLOBAL_ELEMENTS',
     title: 'Bridgeland Builders — Global Elements & Site-Wide Copy',
-    route: 'Across all pages (announcement bar, navigation, services menu, footer)',
+    route: 'Across all pages (navigation, services menu, footer)',
     description: 'Copy outside the page body that appears on every page, read from the built home page.',
     sections: pageSections(P, childEls(P, root).filter((el) => el !== main), (block, tagName) => `Appears on every page (${tagName}).`),
   };

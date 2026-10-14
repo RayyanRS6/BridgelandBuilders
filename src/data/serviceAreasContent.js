@@ -37,7 +37,7 @@ import { SERVICE_AREAS, SERVICE_AREA_NAMES, SITE_PHONE } from './siteConfig.js';
 const PERMIT_SOURCES_ACCESSED = '2026-10-13';
 
 const MANITOBA_PERMITS_URL = 'https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html';
-const RRPD_PERMITS_URL = 'https://redriverplanning.com/residential_permits';
+const RRPD_PERMITS_URL = 'https://www.redriverplanning.com/residential_permits';
 
 const AREAS = {
   winnipeg: {
@@ -100,7 +100,7 @@ const AREAS = {
   },
   steinbach: {
     permitAuthority: 'City of Steinbach',
-    permitUrl: 'https://steinbach.ca/departments-and-services/planning-and-zoning/permits-and-fees',
+    permitUrl: 'https://www.steinbach.ca/home-property-community/building-home-improvements/building-permits-resources/',
     permitLabel: 'City of Steinbach: permits and fees',
     accessed: PERMIT_SOURCES_ACCESSED,
     notes: 'The City of Steinbach issues building permits and takes applications through its online Cloudpermit system.',

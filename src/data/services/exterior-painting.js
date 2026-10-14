@@ -71,7 +71,7 @@ export default {
       { title: 'No Building Permit', text: 'The City of Winnipeg treats painting as a cosmetic change that doesn’t need a building permit.' },
     ],
     sources: [
-      { label: 'Benjamin Moore Canada: painting temperatures', url: 'https://benjaminmoore.com/en-ca/interior-exterior-paints-stains/how-to-advice/exteriors/temperature', accessed: ACCESSED },
+      { label: 'Benjamin Moore Canada: painting temperatures', url: 'https://www.benjaminmoore.com/en-ca/interior-exterior-paints-stains/how-to-advice/exteriors/temperature', accessed: ACCESSED },
       { label: 'Health Canada: lead-based paint', url: 'https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html', accessed: ACCESSED },
       { label: 'City of Winnipeg: heritage permits', url: 'https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits', accessed: ACCESSED },
       { label: 'City of Winnipeg: home renovations', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations', accessed: ACCESSED },

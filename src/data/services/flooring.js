@@ -75,7 +75,7 @@ export default {
       { label: 'Natural Resources Canada: Keeping the Heat In, basement insulation', url: 'https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/keeping-heat-section-6-basement-insulation-floors-walls-crawl-spaces', accessed: ACCESSED },
       { label: 'Health Canada: health risks of asbestos', url: 'https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html', accessed: ACCESSED },
       { label: 'Manitoba Workplace Safety and Health: asbestos FAQs', url: 'https://www.gov.mb.ca/labour/safety/faq/asbestos.html', accessed: ACCESSED },
-      { label: 'City of Winnipeg: commercial building inspections', url: 'https://www.winnipeg.ca/building-development/inspections/commercial/building', accessed: ACCESSED },
+      { label: 'City of Winnipeg: commercial building inspections', url: 'https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial/building', accessed: ACCESSED },
     ],
   },
 

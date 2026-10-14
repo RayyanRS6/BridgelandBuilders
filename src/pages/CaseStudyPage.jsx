@@ -243,7 +243,7 @@ function CaseStudyView({ study }) {
                     decoding="async"
                   />
                   <figcaption className="gallery-overlay">
-                    <h4>{STAGE_LABELS[photo.stage] || 'Photo'}</h4>
+                    <div className="gallery-overlay-title">{STAGE_LABELS[photo.stage] || 'Photo'}</div>
                     {photo.caption && <p>{photo.caption}</p>}
                   </figcaption>
                 </figure>
@@ -279,7 +279,7 @@ function CaseStudyView({ study }) {
                 <div className="testimonial-author">
                   <div className="author-initial">{(study.testimonial.name || '?').charAt(0)}</div>
                   <div className="author-info">
-                    <h5>{study.testimonial.name}</h5>
+                    <div className="author-name">{study.testimonial.name}</div>
                     {study.testimonial.role && <p>{study.testimonial.role}</p>}
                   </div>
                 </div>

@@ -182,7 +182,7 @@ export default {
     },
     {
       "t": "oli",
-      "x": "Submit it through [Permits Online](https://www.winnipeg.ca/permitsonline), or drop it off at the Zoning & Permits office, Unit 31-30 Fort Street, weekdays 8:30 a.m. to 4:30 p.m."
+      "x": "Submit it through [Permits Online](https://www.winnipeg.ca/building-development/permits-applications/permits-online), or drop it off at the Zoning & Permits office, Unit 31-30 Fort Street, weekdays 8:30 a.m. to 4:30 p.m."
     },
     {
       "t": "oli",
@@ -298,12 +298,12 @@ export default {
     },
     {
       "label": "City of Winnipeg – Detached garages & accessory structures",
-      "url": "https://www.winnipeg.ca/building-development/home-improvement-projects/detached-garages-accessory-structures",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/detached-garages-accessory-structures",
       "accessed": "2026-10-13"
     },
     {
       "label": "City of Winnipeg – Decks",
-      "url": "https://www.winnipeg.ca/building-development/home-improvement-projects/decks",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/decks",
       "accessed": "2026-10-13"
     },
     {
@@ -343,7 +343,7 @@ export default {
     },
     {
       "label": "City of Winnipeg – Permits Online",
-      "url": "https://www.winnipeg.ca/permitsonline",
+      "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
       "accessed": "2026-10-13"
     },
     {
