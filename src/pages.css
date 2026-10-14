@@ -2962,6 +2962,12 @@
   display: contents;
 }
 
+/* With the wrapper gone its <source> would be laid out as a (0-size) box, a
+   flex item in flex parents; source selection does not depend on CSS. */
+.media-picture source {
+  display: none;
+}
+
 /* Text that only screen readers and link names use, with no visual change:
    the service name inside a card's "Explore service" link. Placed after the
    visible text so the link's flex layout is untouched. */
