@@ -42,7 +42,7 @@ export default {
     floatingText: 'One schedule and one scope, instead of juggling five contractors yourself.',
     paragraphs: [
       'A whole home renovation is the one job where the details really have to agree with each other. The floor in the hallway has to meet the kitchen right. The trim in the living room has to match the bedrooms. When five different contractors handle five different rooms, that’s where things go sideways.',
-      'We take on the whole house so that doesn’t happen: one schedule, one set of materials, and trades coordinated so each one knows what the next needs. You get a progress update every week, so you always know what’s happening and what’s coming up.',
+      'We take on the whole house so that doesn’t happen: one schedule, one set of materials, and trades coordinated so each one knows what the next needs. The same goes for interior renovations with no structural change, such as new flooring, doors, trim and paint throughout. You get a progress update every week, so you always know what’s happening and what’s coming up.',
       'Whole home projects can run in stages so you can stay in the house where possible. If you’d rather we go all at once and get out faster, we can plan it that way too — it’s your call, and we’ll be straight with you about what each option costs you in time.',
     ],
     checklist: ['Open-Concept Layouts', 'Kitchens & Baths', 'Flooring Throughout', 'Paint & Trim'],
@@ -148,7 +148,7 @@ export default {
       `Whole home renovations in Winnipeg under one plan and one written scope: layout, kitchen, baths, flooring and paint. Most take ${TIMELINES.wholeHome.short}. Free visit.`,
     serviceType: 'Whole home renovation',
     primaryKeyword: 'whole home renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // No whole-home cost page (the estimator has no whole-home data), so the

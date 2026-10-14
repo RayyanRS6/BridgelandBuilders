@@ -1,10 +1,9 @@
 // Bathroom renovations — content for /services/bathroom-renovations (rendered by src/pages/ProjectPage.jsx).
 // Registry entry (path, labels, status, estimator, form type): src/data/services.js.
 //
-// The intro and gallery images are stock inspiration photos, not Bridgeland
-// jobs. Keep their alts and captions to what is visible in the photo (no
-// "Winnipeg", no "our", no finished-job outcomes) until real job photos with
-// client consent replace them.
+// The intro image is a stock inspiration photo, not a Bridgeland job. Keep
+// its alt to what is visible in the photo (no "Winnipeg", no "our", no
+// finished-job outcomes) until real job photos with client consent replace it.
 //
 // Facts: the 2–3 week timeline, free on-site visit and written quote, and
 // permit coordination are owner-confirmed. Every City of Winnipeg / Health
@@ -94,16 +93,10 @@ export default {
     ],
   },
 
-  gallery: {
-    tag: 'Design Ideas',
-    title: 'Bathroom Renovation Ideas',
-    desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
-    items: [
-      { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Light, Bright Palette', text: 'White walls, pale wood floors, and plenty of daylight' },
-      { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Living room with a grey sofa, wood coffee table, wood floors, and floor-to-ceiling windows', title: 'Warm Wood & Greenery', text: 'Wood tones, potted plants, and floor-to-ceiling windows' },
-      { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Modern two-storey house at dusk with dark wood cladding and large glass walls', title: 'Modern Home at Dusk', text: 'Dark wood cladding and glass walls lit from inside' },
-    ],
-  },
+  // No gallery: none of the stock photos it had showed a bathroom (two living
+  // rooms and a house exterior). A gallery returns with at least three
+  // bathroom photos, labelled as inspiration until they are our own jobs.
+  gallery: null,
 
   process: {
     tag: 'How It Works',

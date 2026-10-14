@@ -81,19 +81,19 @@ export const PAGE_SEO = {
     description:
       'Winnipeg renovation contractor for kitchens, bathrooms, basement development, additions and commercial spaces. Free on-site visit and free written quote.',
     image: DEFAULT_IMAGE,
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/services': {
     title: 'Renovation Services in Winnipeg | Bridgeland Builders',
     description:
       'Renovation services in Winnipeg for homes and businesses: kitchens, bathrooms, basements, whole homes, additions, commercial fit-ups, flooring and more.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/about-us': {
     title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
       `Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over ${EXPERIENCE_YEARS} years of combined experience and ${PROJECT_COUNT}+ projects.`,
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/our-process': {
     title: 'Our Renovation Process | Bridgeland Builders Winnipeg',
@@ -117,7 +117,7 @@ export const PAGE_SEO = {
     title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',
     description:
       'Get a free instant renovation quote in Winnipeg. Answer a few questions for a starting price range, then book a free on-site visit for a written quote.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/book-online': {
     title: 'Book a Free On-Site Renovation Visit | Bridgeland Builders',
@@ -146,7 +146,7 @@ export const PAGE_SEO = {
     title: 'Editorial Policy | Bridgeland Builders',
     description:
       'How Bridgeland Builders writes, sources, reviews and updates the renovation guides, cost information and service pages published on this website.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/blog': {
     title: 'Winnipeg Renovation Guides | Bridgeland Builders',

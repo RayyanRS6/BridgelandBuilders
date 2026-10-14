@@ -1,10 +1,9 @@
 // Commercial renovations — content for /services/commercial-renovations (rendered by src/pages/ProjectPage.jsx).
 // Registry entry (path, labels, status, estimator, form type): src/data/services.js.
 //
-// The intro and gallery images are stock inspiration photos, not Bridgeland
-// jobs. Keep their alts and captions to what is visible in the photo (no
-// "Winnipeg", no "our", no finished-job outcomes) until real job photos with
-// client consent replace them.
+// The intro image is a stock inspiration photo, not a Bridgeland job. Keep
+// its alt to what is visible in the photo (no "Winnipeg", no "our", no
+// finished-job outcomes) until real job photos with client consent replace it.
 //
 // Truth rules (plan Guardrails): no per-vertical job counts, no named past
 // projects or clients, no licence/insurance/WCB/warranty claims, no commercial
@@ -64,16 +63,11 @@ export default {
     ],
   },
 
-  gallery: {
-    tag: 'Design Ideas',
-    title: 'Commercial Renovation Ideas',
-    desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
-    items: [
-      { img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80', alt: 'Open office with glass-walled rooms, a dark kitchenette, and teal bench seating', title: 'Open Office Layout', text: 'Glass-walled rooms, a kitchenette, and open shelving' },
-      { img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80', alt: 'Room with light grey walls, a black loveseat, a white dresser, and a floor lamp', title: 'Clean, Neutral Room', text: 'Pale grey walls, light floors, and simple furniture' },
-      { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Living room with a grey sofa, wood coffee table, wood floors, and floor-to-ceiling windows', title: 'Lounge Seating Area', text: 'Sofa, leather ottomans, and floor-to-ceiling windows' },
-    ],
-  },
+  // No gallery: only one of its three stock photos showed a commercial space
+  // (an open office); the other two were residential rooms. A gallery returns
+  // with at least three commercial photos, labelled as inspiration until they
+  // are our own jobs.
+  gallery: null,
 
   process: {
     tag: 'How It Works',
@@ -120,7 +114,7 @@ export default {
     // the people who run commercial property.
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'commercial renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Optional sections (plan §7), rendered by ProjectPage only when filled in:

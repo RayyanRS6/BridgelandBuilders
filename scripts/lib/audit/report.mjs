@@ -66,6 +66,7 @@ export const CODE_TITLES = {
   'head.og-missing': 'Missing Open Graph tag',
   'head.duplicate-title': 'Duplicate title across indexable pages',
   'head.duplicate-description': 'Duplicate description across indexable pages',
+  'headings.duplicate-question': 'Same question heading (h1/h2) on two indexable pages',
   'jsonld.missing': 'No JSON-LD on page',
   'jsonld.parse-error': 'JSON-LD fails to parse',
   'jsonld.page-block-count': 'More than one data-seo="page" JSON-LD block',

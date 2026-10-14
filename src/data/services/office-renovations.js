@@ -76,10 +76,12 @@ export default {
   testimonial: null,
 
   faqsTitle: 'Office Renovation FAQs',
+  // The fit-up guide keeps "Do I need an architect for an office fit-up?";
+  // this page asks it about the visitor's own office renovation.
   faqs: [
     { q: 'How long does an office renovation take?', a: 'It depends on the scope and on the permit. A refresh of finishes in the same layout moves quickly, while a full fit-up with new walls, ceilings and services takes longer and waits on the City’s plan review. You get a schedule with your written quote, built backwards from your move-in date, and an update every week.' },
     { q: 'Can my staff keep working during the renovation?', a: 'Often, yes. We split the space into phases so part of the office stays usable, keep the work area closed off, and schedule the loudest work for evenings and weekends where the City’s noise rules allow. Some steps, like new flooring under desks, may need a weekend or a short move, and we’ll name those at the site visit.' },
-    { q: 'Do I need an architect for an office fit-up?', a: 'Not always. The City of Winnipeg’s guide says structural changes need a professional engineer, and significant changes to fire alarms, sprinklers, exits or public corridors need an architect and/or engineer. A simple layout change inside one unit may not. Bring your plans to the site visit and we’ll tell you what the City is likely to ask for.' },
+    { q: 'Will my office renovation need an architect?', a: 'Not always. The City of Winnipeg’s guide says structural changes need a professional engineer, and significant changes to fire alarms, sprinklers, exits or public corridors need an architect and/or engineer. A simple layout change inside one unit may not. Bring your plans to the site visit and we’ll tell you what the City is likely to ask for.' },
     { q: 'Who pays for an office fit-up, the landlord or the tenant?', a: 'Your lease decides. Some landlords offer a tenant improvement allowance or build part of the space before you move in; others hand over a bare unit. Read the improvement clause or work letter before you collect quotes, and bring it to the site visit so the scope matches what you’re responsible for.' },
     { q: 'Can you add meeting rooms or private offices?', a: 'Yes. New partitions, doors and ceilings for meeting rooms and private offices are a common part of an office renovation. Each new room also needs light, power, data, air flow and enough sound control for how it’s used, so we plan those with the walls rather than after them.' },
     { q: 'Do you handle the permit and inspections?', a: 'Yes. We coordinate the building permit and inspections with the City of Winnipeg or your local municipality, and flag anything that will need attention early, such as a demising wall, an exit change or an accessibility upgrade. If the City needs professional drawings, we build to the architect’s or engineer’s set.' },
@@ -96,13 +98,13 @@ export default {
     serviceType: 'Office renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'office renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTitle: 'Types of Office Renovations',
   typesDesc: 'From a light refresh to a full remodel of your current office or a fit-up of a new unit.',
   types: [
-    { title: 'Tenant Fit-Up', text: 'Turning a bare or previous-tenant unit into your office, usually against a fixed move-in date in your lease.' },
+    { title: 'Tenant Fit-Up', text: 'A tenant fit-up (often called a fit-out) turns a bare or previous-tenant unit into your office, usually against a fixed move-in date in your lease.' },
     { title: 'Office Refresh', text: 'New flooring, paint, lighting and finishes in the layout you already have, with much of the work possible after hours.' },
     { title: 'Layout Reconfiguration', text: 'Moving walls to trade private offices for open space, or the reverse, and adding meeting rooms or quiet rooms.' },
     { title: 'Office Expansion', text: 'Taking over the next suite and joining the two, including the demising wall, doors and services between them.' },

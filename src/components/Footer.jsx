@@ -83,6 +83,13 @@ function SocialIcon({ children }) {
 const serviceLinks = (category) =>
   liveServicesIn(category).map((service) => ({ label: service.navLabel.toUpperCase(), to: service.path }));
 
+// /projects shows inspiration photos until a case study of our own work is
+// published (src/data/caseStudyData.js), so the label names what is there.
+// vite.config.js sets __HAS_CASE_STUDIES__ from publishedCaseStudies() at build
+// time: the footer ships in the entry chunk, and importing the case-study
+// module here would add it to every page's JavaScript.
+const PROJECTS_LABEL = __HAS_CASE_STUDIES__ ? 'OUR PROJECTS' : 'DESIGN IDEAS';
+
 const FOOTER_COLUMNS = [
   {
     title: 'COMPANY',
@@ -90,7 +97,7 @@ const FOOTER_COLUMNS = [
       { label: 'ABOUT US', to: '/about-us' },
       { label: 'OUR SERVICES', to: '/services' },
       { label: 'OUR PROCESS', to: '/our-process' },
-      { label: 'OUR PROJECTS', to: '/projects' },
+      { label: PROJECTS_LABEL, to: '/projects' },
       { label: 'RENOVATION COSTS', to: '/renovation-cost-winnipeg' },
       { label: 'FAQs', to: '/faqs' },
       { label: 'BLOGS & ARTICLES', to: '/blog' },

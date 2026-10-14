@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { renderInline } from '../lib/inline.jsx';
 import { unsplashImage } from '../lib/unsplash.js';
 import { ArrowRightIcon } from './icons.jsx';
 
@@ -7,6 +8,9 @@ import { ArrowRightIcon } from './icons.jsx';
 const CARD_IMAGE = { sizes: '(max-width: 768px) calc(100vw - 48px), 400px', maxWidth: 1200 };
 
 // Stock photos: the alts describe what is in the picture, not our work.
+// Card text: each service it names links to its page ([label](/path), drawn
+// by renderInline). Link only pages whose status is 'live' in
+// src/data/services.js, on the words the card already uses.
 const SERVICES = [
   {
     tag: 'Residential',
@@ -15,7 +19,7 @@ const SERVICES = [
     title: 'Residential Services',
     to: '/services#residential',
     action: 'View residential services',
-    text: 'Kitchens, bathrooms, basement development, whole-home renovations and home additions. We start with a free on-site visit and a written quote, and coordinate the permits and inspections, so you know the plan and the price before any work begins.',
+    text: '[Kitchens](/services/kitchen-renovations), [bathrooms](/services/bathroom-renovations), [basement development](/services/basement-renovations), [whole-home renovations](/services/whole-home-renovations) and [home additions](/services/home-additions). We start with a free on-site visit and a written quote, and coordinate the permits and inspections, so you know the plan and the price before any work begins.',
   },
   {
     tag: 'Commercial',
@@ -24,7 +28,7 @@ const SERVICES = [
     title: 'Commercial Services',
     to: '/services#commercial',
     action: 'View commercial services',
-    text: 'Offices, retail stores, restaurants, cafés and bars, hotels, and medical, dental and physiotherapy clinics. We plan around your lease dates and opening hours, can work after hours or on weekends, and send you a progress update every week.',
+    text: '[Offices](/services/office-renovations), [retail stores](/services/retail-renovations), [restaurants, cafés and bars](/services/restaurant-renovations), [hotels](/services/restaurant-renovations#hotels), and [medical, dental and physiotherapy clinics](/services/medical-dental-office-renovations). We plan around your lease dates and opening hours, can work after hours or on weekends, and send you a progress update every week.',
   },
   {
     tag: 'Specialty',
@@ -33,7 +37,7 @@ const SERVICES = [
     title: 'Other Services',
     to: '/services#additional',
     action: 'View additional services',
-    text: 'Flooring, windows and doors, exterior painting, masonry and stucco, and demolition, on their own or as part of a larger renovation of your home or business.',
+    text: '[Flooring](/services/flooring), [windows and doors](/services/windows-and-doors), [exterior painting](/services/exterior-painting), [masonry and stucco](/services/masonry-stucco), and [demolition](/services/demolition), on their own or as part of a larger renovation of your home or business.',
   },
 ];
 
@@ -62,7 +66,7 @@ export default function Services() {
                 <div>
                   <h3 className="service-title">{service.title}</h3>
                   <p className="service-text">
-                    {service.text}
+                    {renderInline(service.text, service.tag)}
                   </p>
                 </div>
                 <Link to={service.to} className="service-action">

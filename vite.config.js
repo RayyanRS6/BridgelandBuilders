@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { PIXEL_PRIORITY_PATHS, gaMeasurementId } from './src/data/analyticsConfig.js';
+import { publishedCaseStudies } from './src/data/caseStudyData.js';
 
 /**
  * Writes the measurement settings from src/data/analyticsConfig.js into the
@@ -72,6 +73,15 @@ function localApiFunctions(env) {
 
 export default defineConfig(({ mode, isSsrBuild }) => ({
   plugins: [react(), measurementSettings(), localApiFunctions(loadEnv(mode, process.cwd(), ''))],
+  define: {
+    // Whether /projects has a published case study of our own work yet
+    // (src/data/caseStudyData.js). The footer and /services call the page
+    // "Our projects" only then, "Design ideas" before. A build-time constant,
+    // so the footer (entry chunk) never imports the case-study data. The client
+    // and SSR builds read the same value; restart the dev server after
+    // publishing a case study.
+    __HAS_CASE_STUDIES__: JSON.stringify(publishedCaseStudies().length > 0),
+  },
   build: {
     // Client build only: scripts/prerender.mjs reads dist/.vite/manifest.json
     // to add <link rel="modulepreload"> for each route's page chunk, then moves

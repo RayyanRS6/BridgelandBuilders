@@ -3,7 +3,7 @@ import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
 import RichBody from '../components/RichBody.jsx';
 import { ArrowRightIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
-import { COST_HUB_PATH, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { BBB_PROFILE_URL, COST_HUB_PATH, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // Crawlable guide BELOW the estimator (SEO plan §7): how it works, what moves
@@ -13,7 +13,7 @@ const GUIDE_BLOCKS = [
   { t: 'h2', x: 'How does the instant quote work?' },
   {
     t: 'p',
-    x: 'Choose your project type in the price calculator above, answer a few quick questions about the size, scope and finishes, and you will see a starting price range on screen. It takes a few minutes, it is free, and there is no obligation. It covers kitchen, bathroom and basement renovations. For other projects, including commercial work, book a free on-site visit and we will send you a free written quote.',
+    x: 'Choose your project type in the price calculator above, answer a few quick questions about the size, scope and finishes, and your free instant renovation estimate appears on screen as a starting price range. It takes a few minutes, and there is no obligation. It covers kitchen, bathroom and basement renovations. For other projects, including commercial work, book a free on-site visit and we will send you a free written quote.',
   },
   { t: 'h2', x: 'What moves the price of a renovation?' },
   {
@@ -94,6 +94,16 @@ export default function InstantQuotePage() {
               Book a free on-site visit and we’ll look at the space with you, or browse everything we build first.
               You can also call us at <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a> or{' '}
               <Link to="/contact-us">send us a message</Link>.
+              {/* Trust line (plan §19): the BBB profile link only, no rating. */}
+              {BBB_PROFILE_URL && (
+                <>
+                  {' '}You can also check us on the{' '}
+                  <a href={BBB_PROFILE_URL} target="_blank" rel="noopener" data-cta="instant-quote-bbb">
+                    Better Business Bureau
+                  </a>
+                  .
+                </>
+              )}
             </p>
             <div className="hero-cta-group">
               <Link to="/book-online" className="btn-pill-red" data-cta="instant-quote-book-visit">

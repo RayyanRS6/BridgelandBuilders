@@ -1192,6 +1192,37 @@ for (const [field, code] of [['title', 'head.duplicate-title'], ['description', 
   }
 }
 
+/* ------------------------------------------- duplicate question headings */
+// Two indexable pages asking the same question in a page or section heading
+// (<h1>/<h2> in <main>) compete for the same query, e.g. a service page
+// repeating an H2 of the guide it links to. The guide keeps the question; the
+// other page words its heading for its own intent ("Permits for your
+// addition: what we coordinate"). <h3>s are left out: they are cards (a guide
+// card repeats its post's title) and FAQ items. So is the shared CTA banner,
+// whose heading is the same on every page by design.
+const TEMPLATE_HEADING_CLASSES = ['cta-banner-section'];
+const questionHeadings = new Map(); // normalised question -> [{ route, tag, text }]
+for (const page of pages.values()) {
+  if (!page.indexable) continue;
+  for (const el of page.doc.elements) {
+    if ((el.tag !== 'h1' && el.tag !== 'h2') || !isInside(el, page.main)) continue;
+    const text = textOf(page.doc, el).replace(/\s+/g, ' ').trim();
+    if (!text.endsWith('?')) continue;
+    if (ancestors(page.doc, el).some((a) => TEMPLATE_HEADING_CLASSES.some((c) => classesOf(a).has(c)))) continue;
+    const key = text.toLowerCase().replace(/[‘’]/g, "'");
+    if (!questionHeadings.has(key)) questionHeadings.set(key, []);
+    questionHeadings.get(key).push({ route: page.route, tag: el.tag, text });
+  }
+}
+for (const found of questionHeadings.values()) {
+  if (new Set(found.map((h) => h.route)).size < 2) continue;
+  report.warn(
+    'headings.duplicate-question',
+    null,
+    `"${found[0].text}" on ${found.map((h) => `${h.route} (${h.tag})`).join(', ')} — keep the question on the guide and word the other heading for its page's intent`
+  );
+}
+
 /* --------------------------------------------------------- keyword map */
 const keywordMapJson = readJsonFile('scripts/keyword-map.json');
 if (keywordMapJson === undefined) {

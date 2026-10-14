@@ -79,9 +79,11 @@ export default {
 
   local: {
     tag: 'In Winnipeg',
-    title: 'What permits does a home addition need in Winnipeg?',
+    // Worded for this page's intent; the zoning guide (linked in the first
+    // item) keeps the question "What permits does a home addition need in Winnipeg?".
+    title: 'Permits for your addition: what we coordinate',
     intro:
-      'Two at minimum. The City of Winnipeg requires a development permit and a building permit for every house addition, plus electrical and plumbing permits where that work is involved. The development permit is issued under the Winnipeg Zoning By-law and should be confirmed before the building permit application. We coordinate both with the City or your local municipality.',
+      'The City of Winnipeg requires a development permit and a building permit for every house addition, plus electrical and plumbing permits where that work is involved. The development permit is issued under the Winnipeg Zoning By-law and should be confirmed before the building permit application. We coordinate both with the City or your local municipality.',
     items: [
       { title: 'Development permit', text: 'Every house addition needs one under the Winnipeg Zoning By-law. The City advises confirming it, and any other supporting approvals, before applying for the building permit, since [zoning can affect the size and position of the addition](/blog/home-additions-and-zoning-winnipeg).' },
       { title: 'Building permit', text: 'Every house addition also needs a building permit under the Winnipeg Building By-law. The City’s application form lists the documents it needs, and incomplete applications result in delays.' },
@@ -148,7 +150,7 @@ export default {
       'Home additions in Winnipeg that match the existing house, with permits, foundation, structure and finishes coordinated. Free on-site visit and quote.',
     serviceType: 'Home addition',
     primaryKeyword: 'home addition Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // No additions cost page (the estimator has no additions data), so the

@@ -15,7 +15,7 @@ import { ArrowRightIcon } from '../components/icons.jsx';
 // holds the slugs), so the home page never downloads the whole blog index.
 import { HOME_GUIDES as GUIDES } from '../data/homeGuides.js';
 import { REPLY_TIME } from '../data/facts.js';
-import { SERVICE_AREA_NAMES } from '../data/siteConfig.js';
+import { COST_HUB_PATH, SERVICE_AREA_NAMES } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // The home page's short version of /our-process (the full seven steps live there).
@@ -117,7 +117,8 @@ export default function Home() {
               <span className="section-tag">Guides</span>
               <h2 className="section-title">Winnipeg renovation guides</h2>
               <p className="section-desc">
-                Plain answers on permits, choosing a contractor and planning your project.{' '}
+                Plain answers on permits, choosing a contractor, planning your project and{' '}
+                <Link className="blog-inline-link" to={COST_HUB_PATH}>what renovations cost in Winnipeg</Link>.{' '}
                 <Link className="blog-inline-link" to="/blog">Browse all renovation guides</Link>
               </p>
             </div>

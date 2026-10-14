@@ -35,7 +35,9 @@ export default {
 
   intro: {
     tag: 'What a general contractor does',
-    title: 'What does a general contractor do?',
+    // Worded for this page's intent; the guide (linked in the first
+    // paragraph) keeps the question "What does a general contractor do?".
+    title: 'What we handle as your general contractor',
     image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80',
     imageAlt: 'Open office meeting area with a long wood table, pink chairs, and floor-to-ceiling windows',
     floatingTitle: 'Built to Your Drawings',
@@ -102,7 +104,7 @@ export default {
     // BusinessAudience the commercial verticals carry.
     audience: { '@type': 'Audience', audienceType: 'Homeowners, businesses, property managers, architects and designers' },
     primaryKeyword: 'general contractor Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTitle: 'Projects We Manage as General Contractor',
