@@ -103,6 +103,7 @@ export const CODE_TITLES = {
   'redirects.chain': 'Redirect chain / loop',
   'redirects.duplicate-source': 'Duplicate redirect source',
   'redirects.temporary': 'Temporary (307) redirect',
+  'redirects.external': 'Off-site short link (EXTERNAL_REDIRECTS)',
   'redirects.stale-temporary': '307 redirect older than 45 days',
   'redirects.not-synced': 'redirects.js entry missing from vercel.json',
   'redirects.unmanaged': 'vercel.json redirect not in redirects.js',

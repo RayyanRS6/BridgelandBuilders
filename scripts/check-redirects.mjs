@@ -11,6 +11,8 @@
  *
  * Wildcard rules are tested with one sample path. LEAVE_404 URLs must answer
  * 404 (in production, the firewalled paths below may answer 403 instead).
+ * EXTERNAL_REDIRECTS short links (to Google) must answer 307 with exactly
+ * their Location; the Google destination itself is never requested.
  * A first hop that only changes the host (www -> apex) is followed once.
  * In production mode against the apex, each HOST_REDIRECTS host (the public
  * vercel.app alias) is also checked: a page and a legacy URL requested there
@@ -21,9 +23,9 @@
  * VERCEL_AUTOMATION_BYPASS_SECRET.
  * Prints a table and exits 1 if anything fails.
  */
-import { REDIRECTS, HOST_REDIRECTS, LEAVE_404 } from '../src/data/redirects.js';
+import { REDIRECTS, HOST_REDIRECTS, EXTERNAL_REDIRECTS, LEAVE_404 } from '../src/data/redirects.js';
 import { CANONICAL_SITE_URL } from '../src/data/siteConfig.js';
-import { isPattern, resolveRedirects, samplePath } from './sync-redirects.mjs';
+import { EXTERNAL_HOSTS, isPattern, resolveRedirects, samplePath } from './sync-redirects.mjs';
 
 const args = process.argv.slice(2);
 const baseArg = args.find((a) => !a.startsWith('--'));
@@ -102,6 +104,37 @@ async function checkRule(rule) {
   return row;
 }
 
+/**
+ * An EXTERNAL_REDIRECTS short link: 307 with exactly its Location. Like
+ * request(), one first hop that only changes our own host (www -> apex) is
+ * followed; nothing on a Google host is ever requested.
+ */
+async function checkExternalRule(rule) {
+  const expected = new URL(rule.to);
+  const row = { from: rule.from, expect: `307 ${expected.href}`, got: '', ok: false };
+  try {
+    const url = new URL(rule.from, BASE);
+    let res = await get(url);
+    if (
+      [301, 302, 307, 308].includes(res.status) && res.location &&
+      !EXTERNAL_HOSTS.has(res.location.host) &&
+      res.location.host !== url.host && res.location.pathname === url.pathname
+    ) {
+      res = await get(res.location);
+    }
+    row.got = `${res.status} ${res.location ? res.location.href : ''}`.trim();
+    const problems = [];
+    if (res.status !== 307) problems.push('status');
+    if (!res.location || res.location.href !== expected.href) problems.push('location');
+    row.ok = !problems.length;
+    if (!row.ok) row.why = problems.join(', ');
+  } catch (error) {
+    row.got = `ERR ${error.message}`;
+    row.why = 'request failed';
+  }
+  return row;
+}
+
 async function check404(path) {
   const sample = samplePath(path);
   const allowed = MODE === 'production' && FIREWALLED_IN_PRODUCTION.has(path) ? [404, 403] : [404];
@@ -168,6 +201,7 @@ const hostChecks = MODE === 'production' && BASE.origin === APEX.origin
   : [];
 const rows = await runAll([
   ...ordered.map((rule) => () => checkRule(rule)),
+  ...EXTERNAL_REDIRECTS.map((rule) => () => checkExternalRule(rule)),
   ...LEAVE_404.map((path) => () => check404(path)),
   ...hostChecks,
 ]);
@@ -182,5 +216,5 @@ console.log(line('', 'source', 'expected', 'got'));
 for (const r of rows) console.log(line(r.ok ? 'ok' : 'FAIL', r.from, r.expect, r.got, r.why));
 
 const failed = rows.filter((r) => !r.ok);
-console.log(`\n${rows.length - failed.length}/${rows.length} passed (${ordered.length} redirects, ${LEAVE_404.length} expected 404s${hostChecks.length ? `, ${hostChecks.length} whole-host` : ''})`);
+console.log(`\n${rows.length - failed.length}/${rows.length} passed (${ordered.length} redirects, ${EXTERNAL_REDIRECTS.length} external, ${LEAVE_404.length} expected 404s${hostChecks.length ? `, ${hostChecks.length} whole-host` : ''})`);
 if (failed.length) process.exit(1);
