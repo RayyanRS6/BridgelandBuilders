@@ -11,6 +11,10 @@
 //
 // `more` ({ label, to }) adds a link under an answer on the page only; the
 // FAQPage schema and the llms files use `q` and `a`.
+//
+// Readability (plan §19): no paragraph over 60 words, the `more` link label
+// included. A blank line ("\n\n") in `a` splits it into paragraphs on the page
+// (FaqAccordion.jsx); the schema and llms files join them with a space.
 import {
   NEARBY_AREAS_TEXT,
   OFFICE_HOURS_TEXT,
@@ -78,7 +82,7 @@ export const FAQ_GROUPS = [
       {
         // General explainer only: no financing is offered or implied (plan guardrail).
         q: 'How do people pay for a renovation?',
-        a: 'Many homeowners talk to their own bank or credit union, and a home equity line of credit, which is secured by the home, is one option many consider. Businesses often look at bank loans or a landlord’s improvement allowance. Whichever route you take, get your written quote first, so you know how much you actually need to borrow.',
+        a: 'Many homeowners talk to their own bank or credit union, and a home equity line of credit, which is secured by the home, is one option many consider. Businesses often look at bank loans or a landlord’s improvement allowance.\n\nWhichever route you take, get your written quote first, so you know how much you actually need to borrow.',
         more: { label: 'Read our guide to renovation financing in Canada', to: '/blog/home-renovation-financing-canada' },
       },
     ],
@@ -89,7 +93,7 @@ export const FAQ_GROUPS = [
     items: [
       {
         q: 'Do I need a permit for my renovation in Winnipeg?',
-        a: 'Often, yes. Finishing a basement into living space or creating a new bedroom requires a building permit, and the City of Winnipeg says kitchens, bathrooms, open-concept changes and new or larger exterior openings may need one. Cosmetic work such as painting, flooring and millwork does not. Electrical or plumbing work can need its own permit. We confirm what your project needs at the on-site visit.',
+        a: 'Often, yes. Finishing a basement into living space or creating a new bedroom requires a building permit, and the City of Winnipeg says kitchens, bathrooms, open-concept changes and new or larger exterior openings may need one. Cosmetic work such as painting, flooring and millwork does not.\n\nElectrical or plumbing work can need its own permit. We confirm what your project needs at the on-site visit.',
         more: { label: 'Read our guide to renovation permits in Winnipeg', to: '/blog/winnipeg-renovation-permits' },
       },
       {
@@ -98,7 +102,7 @@ export const FAQ_GROUPS = [
       },
       {
         q: 'Who issues building permits outside Winnipeg?',
-        a: 'Outside the city, building permits come from the local municipality or planning district, and their requirements can differ from Winnipeg’s. Our service-area page lists who issues building permits in each community we serve, and we coordinate with that office for you as part of the project, just as we do with the City of Winnipeg.',
+        a: 'Outside the city, building permits come from the local municipality or planning district, and their requirements can differ from Winnipeg’s.\n\nOur service-area page lists who issues building permits in each community we serve, and we coordinate with that office for you as part of the project, just as we do with the City of Winnipeg.',
         more: { label: 'See who issues permits in each community', to: '/service-areas' },
       },
     ],
@@ -109,7 +113,7 @@ export const FAQ_GROUPS = [
     items: [
       {
         q: 'How long does a renovation take?',
-        a: `Most bathrooms take ${TIMELINES.bathroom.words}, most kitchens ${TIMELINES.kitchen.words} once the cabinets are on site, and basements ${TIMELINES.basement.words}. Whole-home renovations and home additions usually run ${TIMELINES.wholeHome.words}. Permits, product lead times and what we find when walls are opened can move these dates, and your written quote includes a schedule.`,
+        a: `Most bathrooms take ${TIMELINES.bathroom.words}, most kitchens ${TIMELINES.kitchen.words} once the cabinets are on site, and basements ${TIMELINES.basement.words}. Whole-home renovations and home additions usually run ${TIMELINES.wholeHome.words}.\n\nPermits, product lead times and what we find when walls are opened can move these dates, and your written quote includes a schedule.`,
         more: { label: 'See our process and typical timelines', to: '/our-process' },
       },
       {
@@ -147,7 +151,7 @@ export const FAQ_GROUPS = [
       },
       {
         q: 'Do you work with property managers, architects and designers?',
-        a: 'Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners, and we build to supplied drawings and specifications from architects, engineers and interior designers. We walk the site against the drawings before work starts and raise anything that won’t work on site early, before it becomes a change order.',
+        a: 'Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners, and we build to supplied drawings and specifications from architects, engineers and interior designers.\n\nWe walk the site against the drawings before work starts and raise anything that won’t work on site early, before it becomes a change order.',
         more: { label: 'See our general contracting service', to: '/services/general-contracting' },
       },
     ],

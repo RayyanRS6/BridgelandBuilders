@@ -62,8 +62,11 @@ export default {
 
   typesTag: 'Project Types',
   typesTitle: 'Which kind of kitchen remodel do you need?',
-  typesDesc:
-    'Most kitchen projects fall into one of six types, from a complete renovation with a new layout to a targeted update of cabinets, countertops or backsplash. The right one depends on whether your layout works today. If it does, keep it and put the budget into finishes, since [moving the sink or removing a wall adds to the cost](/services/kitchen-renovations/cost). If it doesn’t, start with the plan.',
+  // Two short paragraphs (readability: none over 60 words).
+  typesDesc: [
+    'Most kitchen projects fall into one of six types, from a complete renovation with a new layout to a targeted update of cabinets, countertops or backsplash.',
+    'The right one depends on whether your layout works today. If it does, keep it and put the budget into finishes, since [moving the sink or removing a wall adds to the cost](/services/kitchen-renovations/cost). If it doesn’t, start with the plan.',
+  ],
   types: [
     { title: 'Full kitchen renovation', text: 'A new layout, cabinets, countertops, backsplash, lighting and flooring, with plumbing and electrical moved to suit. This is the scope behind the four-to-six-week timeline.' },
     { title: 'Cabinet & countertop replacement', text: 'Keep the layout and replace the boxes, doors and tops. Countertops are templated after the cabinets are set so the fit is exact. Stock, semi-custom and fully custom cabinets are all options.' },
@@ -134,7 +137,7 @@ export default {
     { q: 'Can you remove the wall between the kitchen and living room?', a: 'Usually. A non-structural wall is straightforward. A load-bearing wall needs a beam sized for the load and a building permit, and the City requires an engineer’s sealed drawing when the structure goes beyond what Part 9 of the Manitoba Building Code covers. We’ll tell you at the on-site visit which kind of wall you have.' },
     { q: 'Should I choose stock, semi-custom or custom cabinets?', a: 'Stock cabinets are quicker and cost less, and they suit most standard layouts. Semi-custom adds more sizes, finishes and interior options. Fully custom makes sense when the room is an odd shape or you want storage built around specific things. We can price more than one option in the written quote so you can compare.' },
     { q: 'Can I keep my existing appliances?', a: 'Yes. Tell us early so the cabinet openings are built to fit them. If you plan to replace appliances later, send us the model numbers of the ones you have in mind and we’ll size the openings for those now, so nobody is cutting into new cabinets in two years.' },
-    { q: 'Who arranges the permits and inspections?', a: 'We do. When your kitchen needs a building permit or trade permits, we coordinate them with the City of Winnipeg or your local municipality and schedule each inspection as the work reaches that stage. The City says the homeowner and the permit applicant share responsibility for inspections, so we keep you informed at every step.', more: { label: 'How we handle permits and inspections', to: '/our-process' } },
+    { q: 'Who arranges the permits and inspections?', a: 'We do. When your kitchen needs a building permit or trade permits, we coordinate them with the City of Winnipeg or your local municipality and schedule each inspection as the work reaches that stage.\n\nThe City says the homeowner and the permit applicant share responsibility for inspections, so we keep you informed at every step.', more: { label: 'How we handle permits and inspections', to: '/our-process' } },
     { q: 'What happens at the free on-site visit?', a: 'We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists what’s included, so you can read it line by line, and compare it with another company’s quote, before deciding anything.' },
   ],
 

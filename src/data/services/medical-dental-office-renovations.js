@@ -98,7 +98,7 @@ export default {
     serviceType: 'Medical and dental office renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Dental, medical and physiotherapy clinics' },
     primaryKeyword: 'dental office renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTitle: 'Clinics We Renovate',

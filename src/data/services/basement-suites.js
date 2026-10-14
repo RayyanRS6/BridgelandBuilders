@@ -140,7 +140,7 @@ export default {
       'Basement suite renovations in Winnipeg: zoning and permits confirmed first, then entrance, egress, kitchen, bath and separation. Free on-site visit.',
     serviceType: 'Basement suite renovation',
     primaryKeyword: 'basement suite renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // No costTeaser: the estimator prices suites with the basement ranges and has

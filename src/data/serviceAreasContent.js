@@ -148,7 +148,9 @@ export const SERVICE_AREAS_CONTENT = {
     },
     {
       q: 'Who issues building permits in the communities around Winnipeg?',
-      a: `It depends on the community. For the ones we serve, permits are issued by ${authoritySentence()}. Where your project needs a permit, we look after the application and the inspections.`,
+      // Two paragraphs on the page (the blank line, FaqAccordion.jsx): the list
+      // of authorities grows as communities are confirmed.
+      a: `It depends on the community. For the ones we serve, permits are issued by ${authoritySentence()}.\n\nWhere your project needs a permit, we look after the application and the inspections.`,
     },
     {
       q: 'Do you work in all Winnipeg neighbourhoods?',

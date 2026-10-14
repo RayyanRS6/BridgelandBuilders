@@ -13,7 +13,11 @@ const GUIDE_BLOCKS = [
   { t: 'h2', x: 'How does the instant quote work?' },
   {
     t: 'p',
-    x: 'Choose your project type in the price calculator above, answer a few quick questions about the size, scope and finishes, and your free instant renovation estimate appears on screen as a starting price range. It takes a few minutes, and there is no obligation. It covers kitchen, bathroom and basement renovations. For other projects, including commercial work, book a free on-site visit and we will send you a free written quote.',
+    x: 'Choose your project type in the price calculator above, answer a few quick questions about the size, scope and finishes, and your free instant renovation estimate appears on screen as a starting price range. It takes a few minutes, and there is no obligation.',
+  },
+  {
+    t: 'p',
+    x: 'It covers kitchen, bathroom and basement renovations. For other projects, including commercial work, book a free on-site visit and we will send you a free written quote.',
   },
   { t: 'h2', x: 'What moves the price of a renovation?' },
   {

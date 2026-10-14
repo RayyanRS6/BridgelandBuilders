@@ -111,7 +111,7 @@ export const PAGE_SEO = {
     title: 'Winnipeg Renovation FAQs | Bridgeland Builders',
     description:
       'Answers to common Winnipeg renovation questions: costs and written quotes, permits, timelines, living through the work, where we work and how to start.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/instant-quote': {
     title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',
@@ -138,7 +138,7 @@ export const PAGE_SEO = {
     title: 'Service Areas: Winnipeg & Nearby | Bridgeland Builders',
     description:
       `Renovation contractor serving Winnipeg and communities within about an hour: ${NEARBY_AREAS_TEXT_SHORT}.`,
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   // How guides, cost pages and service pages are written, sourced and reviewed
   // (plan §11.3). Page content: src/data/editorialPolicy.js.
@@ -539,7 +539,10 @@ export function buildArticle({ path, headline, description, image, datePublished
   };
 }
 
-/** FAQPage schema from [{ q, a }] items. */
+/**
+ * FAQPage schema from [{ q, a }] items. A blank line in `a` (a paragraph
+ * break on the page, FaqAccordion.jsx) becomes a space: one plain-text answer.
+ */
 export function buildFaqPage(path, faqs) {
   if (!faqs || !faqs.length) return null;
   return {
@@ -548,7 +551,7 @@ export function buildFaqPage(path, faqs) {
     mainEntity: faqs.map((item) => ({
       '@type': 'Question',
       name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
+      acceptedAnswer: { '@type': 'Answer', text: typeof item.a === 'string' ? item.a.replace(/\s*\n\s*/g, ' ') : item.a },
     })),
   };
 }

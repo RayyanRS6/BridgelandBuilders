@@ -185,8 +185,10 @@ with the City of Winnipeg or the local municipality when a project requires them
 
 /* --------------------------------------------------------- llms-full.txt */
 // The site's own question-and-answer set: the FAQ page plus every service
-// page's FAQs, word for word as they appear on the site.
-const qa = (faqs) => faqs.map((f) => `**Q: ${stripInline(f.q)}**\nA: ${stripInline(f.a)}`).join('\n\n');
+// page's FAQs, word for word as they appear on the site. An answer's
+// paragraphs (a blank line in `a`) are joined into one line.
+const qa = (faqs) =>
+  faqs.map((f) => `**Q: ${stripInline(f.q)}**\nA: ${stripInline(f.a).replace(/\s*\n\s*/g, ' ')}`).join('\n\n');
 
 // PROJECTS = live service pages' content, each with its `path`.
 const navLabelFor = new Map(LIVE_SERVICE_PAGES.map(({ service }) => [service.path, service.navLabel]));

@@ -31,11 +31,25 @@ function MoreLink({ more }) {
 }
 
 /**
+ * A text answer's paragraphs: a blank line ("\n\n") in `a` starts a new one
+ * (readability: no paragraph over 60 words). The FAQPage schema and the llms
+ * files join them with a space (seo.js buildFaqPage, build-seo-files.mjs).
+ * Null for a one-paragraph answer or a React node (blog posts), which render
+ * exactly as before.
+ */
+function answerParagraphs(answer) {
+  if (typeof answer !== 'string' || !answer.includes('\n')) return null;
+  const parts = answer.split(/\n\s*\n/).map((part) => part.trim()).filter(Boolean);
+  return parts.length > 1 ? parts : null;
+}
+
+/**
  * Every answer is always in the HTML (closed ones carry `hidden`), so search
  * engines and the FAQPage structured data see the full text; the accordion
  * only toggles which one is shown.
  *
- * @param {Array}  items          [{ q, a, more? }] — `more` = { label, to } adds a link under the answer
+ * @param {Array}  items          [{ q, a, more? }] — `more` = { label, to } adds a link under the answer;
+ *                                a blank line in `a` splits it into paragraphs
  * @param {number} [headingLevel] 2–6: wraps each question in that heading (default: no heading)
  * @param {number} [defaultOpen]  index open on first render (default 0; -1 = all closed)
  */
@@ -49,6 +63,13 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
       {items.map((item, index) => {
         const isOpen = index === openIndex;
         const answerId = `${baseId}-answer-${index}`;
+        const parts = answerParagraphs(item.a);
+        const more = item.more && item.more.to && (
+          <>
+            <br />
+            <MoreLink more={item.more} />
+          </>
+        );
         const question = (
           <button
             type="button"
@@ -72,15 +93,22 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
             ) : (
               question
             )}
-            <p className="faq-answer" id={answerId} hidden={!isOpen}>
-              {item.a}
-              {item.more && item.more.to && (
-                <>
-                  <br />
-                  <MoreLink more={item.more} />
-                </>
-              )}
-            </p>
+            {parts ? (
+              // Same .faq-answer paragraphs; its bottom padding spaces them.
+              <div id={answerId} hidden={!isOpen}>
+                {parts.map((text, partIndex) => (
+                  <p className="faq-answer" key={text.slice(0, 40)}>
+                    {text}
+                    {partIndex === parts.length - 1 && more}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="faq-answer" id={answerId} hidden={!isOpen}>
+                {item.a}
+                {more}
+              </p>
+            )}
           </div>
         );
       })}

@@ -51,8 +51,9 @@ const delay = (index, seconds) => (index > 0 ? { transitionDelay: `${seconds}s` 
  *
  * Section order (plan §7): hero → ticker → stats → intro → includes → types →
  * local → gallery → process → cost teaser → testimonial → lead → FAQs →
- * related services → guides → CTA → sign-off. Every section after the hero
- * renders only when its content exists, using the page's existing classes.
+ * related services → guides → CTA → updated date and sign-off. Every section
+ * after the hero renders only when its content exists, using the page's
+ * existing classes.
  */
 export default function ProjectPage({ project, service, guidePosts = [] }) {
   const name = project.breadcrumb || (service && service.label) || '';
@@ -76,6 +77,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
     .map((path) => serviceByPath(path))
     .filter((item) => item && item.status === 'live' && (!service || item.path !== service.path));
   const signoff = project.ownerSignoff || null;
+  // The date that drives this page's dateModified (services.js serviceSeo → meta.updated).
+  const updated = (project.seo && project.seo.updated) || null;
   // "your kitchen renovation" / "your flooring project": reads right with every
   // page name (the price guide card and the CTA banner below).
   const projectName = name.toLowerCase();
@@ -252,7 +255,9 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">{project.typesTag || 'Project Types'}</span>
               <h2 className="section-title">{project.typesTitle || `Types of ${(service && service.label) || name}`}</h2>
-              {project.typesDesc && <p className="section-desc">{renderInline(project.typesDesc, 'types')}</p>}
+              {paragraphs(project.typesDesc).map((text, index) => (
+                <p className="section-desc" key={text.slice(0, 40)}>{renderInline(text, `types-${index}`)}</p>
+              ))}
             </div>
 
             <div className="includes-grid">
@@ -296,18 +301,16 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 </Link>
                 .
               </p>
-              {localSources.length > 0 && (
-                <p className="section-desc">
-                  Sources:{' '}
-                  {localSources.map((source, index) => (
-                    <Fragment key={source.url}>
-                      {index > 0 && '; '}
-                      <a href={source.url} rel="noopener" target="_blank">{source.label}</a>
-                      {source.accessed && ` (verified ${source.accessed})`}
-                    </Fragment>
-                  ))}
+              {/* One source per line rather than one long run-on paragraph
+                  (readability: no paragraph over 60 words). */}
+              {localSources.map((source, index) => (
+                <p className="section-desc" key={source.url}>
+                  {index === 0 && 'Sources: '}
+                  <a href={source.url} rel="noopener" target="_blank">{source.label}</a>
+                  {source.accessed && ` (verified ${source.accessed})`}
+                  {index < localSources.length - 1 && ';'}
                 </p>
-              )}
+              ))}
             </div>
 
             <div className="includes-grid">
@@ -561,19 +564,28 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
         </div>
       </section>
 
-      {/* OWNER SIGN-OFF */}
-      {signoff && signoff.name && (
+      {/* LAST UPDATED + OWNER SIGN-OFF. The date is the page's seo.updated,
+          the same date as its WebPage dateModified and sitemap lastmod, in the
+          cost guides' "Updated" format. */}
+      {(updated || (signoff && signoff.name)) && (
         <div className="container">
           <div className="section-header center">
-            <p className="section-desc">
-              Reviewed by {signoff.name}{signoff.role ? `, ${signoff.role}` : ''}
-              {signoff.date && (
-                <>
-                  {' '}on <time dateTime={signoff.date}>{formatPostDate(signoff.date)}</time>
-                </>
-              )}
-              .
-            </p>
+            {updated && (
+              <p className="policy-updated">
+                Updated <time dateTime={updated}>{formatPostDate(updated)}</time>
+              </p>
+            )}
+            {signoff && signoff.name && (
+              <p className="section-desc">
+                Reviewed by {signoff.name}{signoff.role ? `, ${signoff.role}` : ''}
+                {signoff.date && (
+                  <>
+                    {' '}on <time dateTime={signoff.date}>{formatPostDate(signoff.date)}</time>
+                  </>
+                )}
+                .
+              </p>
+            )}
           </div>
         </div>
       )}

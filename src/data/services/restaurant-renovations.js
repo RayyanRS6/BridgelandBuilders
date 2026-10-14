@@ -81,7 +81,7 @@ export default {
 
   faqsTitle: 'Restaurant & Hotel Renovation FAQs',
   faqs: [
-    { q: 'Can you renovate while we stay open?', a: 'Often, yes. We work after close, on your closed days and on weekends, and phase the job so part of the room keeps serving. In Winnipeg, loud work within 150 m of a home must stop at 9 p.m., so noisy tasks go into daytime closures. Kitchen work that touches plumbing or ventilation may need a short full closure, and we’ll say when.' },
+    { q: 'Can you renovate while we stay open?', a: 'Often, yes. We work after close, on your closed days and on weekends, and phase the job so part of the room keeps serving.\n\nIn Winnipeg, loud work within 150 m of a home must stop at 9 p.m., so noisy tasks go into daytime closures. Kitchen work that touches plumbing or ventilation may need a short full closure, and we’ll say when.' },
     { q: 'Do restaurant plans need health approval in Manitoba?', a: 'Yes. Manitoba’s guideline requires the owner to submit a registration form and a scaled plan showing equipment, plumbing fixtures and finishes to the local public health inspector for approval before construction, renovation or conversion begins. The health permit is issued only after an inspection once construction is complete, so the schedule allows for both steps.' },
     { q: 'Do you renovate commercial kitchens?', a: 'Yes. Commercial kitchen renovation covers walls, ceilings and floors in cleanable materials, hand, prep and dish sinks, floor drains, and the rough-ins for hoods and equipment. The hood and fire suppression design comes from your designer, engineer and hood supplier; we build to it and sequence the trades so inspections happen in the right order.' },
     { q: 'Does my restaurant need a grease interceptor?', a: 'Plan on one. Manitoba’s food premises guideline says properly sized grease traps or interceptors serving the utensil washing sinks must meet the Manitoba Plumbing Code and be easy to reach for cleaning; check the City’s sewer requirements too. Settle the size and location at the plan stage, since an interceptor is hard to move later.' },
@@ -101,7 +101,7 @@ export default {
     serviceType: 'Restaurant and hospitality renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Restaurants, cafés, bars and hotels' },
     primaryKeyword: 'restaurant renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTag: 'Hospitality Spaces',

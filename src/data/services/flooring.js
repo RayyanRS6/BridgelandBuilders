@@ -113,7 +113,7 @@ export default {
       'Flooring installation in Winnipeg for homes, basements and commercial spaces: removal, subfloor prep and clean trim. Free on-site visit and written quote.',
     serviceType: 'Flooring installation',
     primaryKeyword: 'flooring installation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.

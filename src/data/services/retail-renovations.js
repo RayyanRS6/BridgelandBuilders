@@ -79,7 +79,7 @@ export default {
   faqs: [
     { q: 'Can you renovate while the store stays open?', a: 'Often. We phase the sales floor, keep the work area closed off from customers, and schedule loud work outside your trading hours, within the City’s noise limits near homes. Some steps, like flooring at the entrance or a storefront change, may need a short closure; we’ll show those in the schedule so you can plan around them.' },
     { q: 'How long does a retail fit-out take?', a: 'It depends on the scope and the permit. A refresh of finishes in the same layout moves faster than a full fit-out with new walls, washrooms and services, which also waits on the City’s plan review. You get a schedule with your written quote, built backwards from your opening date, and an update every week.' },
-    { q: 'Do I need a permit for a new store sign?', a: 'Yes. The City of Winnipeg says to get a permit before starting any construction or alteration to any part of a sign, and new internally lit signs need a separate electrical sign permit. If a sign company is supplying your sign, confirm at the site visit who is applying for the permit so the storefront work and sign installation line up.' },
+    { q: 'Do I need a permit for a new store sign?', a: 'Yes. The City of Winnipeg says to get a permit before starting any construction or alteration to any part of a sign, and new internally lit signs need a separate electrical sign permit.\n\nIf a sign company is supplying your sign, confirm at the site visit who is applying for the permit so the storefront work and sign installation line up.' },
     { q: 'Can you work to our brand or head-office drawings?', a: 'Yes. We build to supplied drawings and specifications, whether they come from your designer, your landlord’s design criteria or a head-office fit-out package. We walk the unit against them before work starts and raise anything that won’t work on site before it becomes a change order or a delay.' },
     { q: 'Does a retail renovation need an occupancy permit?', a: 'Often. In Winnipeg, a new tenant establishing a use without a valid occupancy permit, or a tenant expanding into more space, generally needs one before opening. A new tenant moving into a space that already has a valid occupancy permit, with no alterations or change of use, generally does not. Ask your landlord what permit the unit has.' },
     { q: 'Do you renovate showrooms?', a: 'Yes. A commercial showroom renovation follows the same process as a store: a free site visit, a written quote and a schedule around your hours. Showrooms usually need more attention on lighting, power at display locations and flooring that can take heavy products, so bring your display plan to the site visit.' },
@@ -96,7 +96,7 @@ export default {
     serviceType: 'Retail renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Retailers and commercial property owners' },
     primaryKeyword: 'retail renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTitle: 'Types of Retail Renovations',
