@@ -675,8 +675,10 @@
   box-shadow: var(--shadow-lift);
 }
 
+/* The light sea green the other dark panels use for their tag (.page-hero-card,
+   .service-directory-heading): the base sea green is under 4:1 on this dark. */
 .lead-aside .section-tag {
-  color: var(--accent-seagreen);
+  color: #8ed2dc;
 }
 
 .lead-aside h2 {
@@ -1454,6 +1456,11 @@
   padding-top: 64px;
 }
 
+/* On the cream background the base sea green is 4.1:1; the darker one passes. */
+.blog-related-section .section-tag {
+  color: var(--accent-seagreen-hover);
+}
+
 .blog-related-heading {
   margin-bottom: 8px;
   font-size: clamp(1.7rem, 3vw, 2.4rem);
@@ -1871,7 +1878,8 @@
 
 .qf-steps li.is-current {
   background: var(--accent-seagreen-light);
-  color: var(--accent-seagreen);
+  /* The darker sea green: small text on the tint needs 4.5:1. */
+  color: var(--accent-seagreen-hover);
 }
 
 .qf-steps li.is-done {
@@ -2723,6 +2731,13 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+}
+
+/* Links inside the tinted boxes (takeaways, notes) use the darker sea green
+   so they keep 4.5:1 against the tint. Before :hover, so red still wins. */
+.blog-takeaways .blog-inline-link,
+.blog-member-note .blog-inline-link {
+  color: var(--accent-seagreen-hover);
 }
 
 .blog-inline-link:hover {

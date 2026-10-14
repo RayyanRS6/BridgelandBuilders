@@ -130,7 +130,7 @@ export default {
     sources: [
       { label: 'City of Winnipeg: Commercial projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025', url: 'https://www.winnipeg.ca/media/6330', accessed: '2026-10-13' },
-      { label: 'City of Winnipeg: Permits Online', url: 'https://www.winnipeg.ca/building-development/building-renovating/apply-permit/permits-online', accessed: '2026-10-13' },
+      { label: 'City of Winnipeg: Permits Online', url: 'https://www.winnipeg.ca/building-development/permits-applications/permits-online', accessed: '2026-10-13' },
       { label: 'Manitoba Laws: The Builders’ Liens Act, s. 24', url: 'https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php', accessed: '2026-10-13' },
     ],
   },

@@ -45,21 +45,21 @@ export default function GetInTouchPage() {
                   <li className="lead-aside-item">
                     <span className="lead-aside-icon"><PhoneIcon size={16} strokeWidth="2" /></span>
                     <div>
-                      <h4>Phone</h4>
+                      <h3>Phone</h3>
                       <p><a href={SITE_PHONE_TEL}>{SITE_PHONE}</a></p>
                     </div>
                   </li>
                   <li className="lead-aside-item">
                     <span className="lead-aside-icon"><MailIcon size={16} /></span>
                     <div>
-                      <h4>Email</h4>
+                      <h3>Email</h3>
                       <p><a href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a></p>
                     </div>
                   </li>
                   <li className="lead-aside-item">
                     <span className="lead-aside-icon"><PinIcon size={16} /></span>
                     <div>
-                      <h4>Mailing address</h4>
+                      <h3>Mailing address</h3>
                       <p>
                         {MAILING_ADDRESS.street}<br />
                         {MAILING_ADDRESS.city}, {MAILING_ADDRESS.region} {MAILING_ADDRESS.postalCode}, {MAILING_ADDRESS.country}
@@ -69,7 +69,7 @@ export default function GetInTouchPage() {
                   <li className="lead-aside-item">
                     <span className="lead-aside-icon"><ClockIcon size={16} /></span>
                     <div>
-                      <h4>Quick replies</h4>
+                      <h3>Quick replies</h3>
                       <p>We get back to every message within {REPLY_TIME}.</p>
                     </div>
                   </li>

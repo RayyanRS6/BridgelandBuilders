@@ -242,7 +242,7 @@ export default {
     },
     {
       "label": "City of Winnipeg – Permits Online",
-      "url": "https://www.winnipeg.ca/permitsonline",
+      "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
       "accessed": "2026-10-13"
     },
     {

@@ -300,7 +300,7 @@ export default {
     },
     {
       "label": "City of Winnipeg: Zoning bylaws",
-      "url": "https://www.winnipeg.ca/building-development/building-renovating/zoning",
+      "url": "https://www.winnipeg.ca/building-development/planning-development/plans-policies-bylaws/zoning-bylaws",
       "accessed": "2026-10-13"
     },
     {

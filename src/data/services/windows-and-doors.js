@@ -73,7 +73,7 @@ export default {
       { title: 'Outside the City', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach, the local municipality or planning district issues permits.' },
     ],
     sources: [
-      { label: 'City of Winnipeg: home improvement projects', url: 'https://www.winnipeg.ca/building-development/home-improvement-projects', accessed: ACCESSED },
+      { label: 'City of Winnipeg: home improvement projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects', accessed: ACCESSED },
       { label: 'City of Winnipeg: home renovations', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations', accessed: ACCESSED },
       { label: 'City of Winnipeg: heritage conservation districts', url: 'https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-conservation-districts', accessed: ACCESSED },
       { label: 'City of Winnipeg: heritage permits', url: 'https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits', accessed: ACCESSED },

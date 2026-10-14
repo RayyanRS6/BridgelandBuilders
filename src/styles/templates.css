@@ -14,7 +14,8 @@
   margin: 0 0 10px;
   font-size: 1.1rem;
   letter-spacing: -0.2px;
-  color: var(--accent-seagreen);
+  /* Darker sea green: 4.5:1 on the note's tint. */
+  color: var(--accent-seagreen-hover);
 }
 
 .blog-member-note.tpl-note p + p {

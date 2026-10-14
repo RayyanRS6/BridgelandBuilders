@@ -77,7 +77,7 @@ export default {
     sources: [
       { label: 'City of Winnipeg: demolition contractor information', url: 'https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information', accessed: ACCESSED },
       { label: 'City of Winnipeg: home renovations', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations', accessed: ACCESSED },
-      { label: 'City of Winnipeg: commercial building inspections', url: 'https://www.winnipeg.ca/building-development/inspections/commercial/building', accessed: ACCESSED },
+      { label: 'City of Winnipeg: commercial building inspections', url: 'https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial/building', accessed: ACCESSED },
       { label: 'Manitoba Workplace Safety and Health: asbestos FAQs', url: 'https://www.gov.mb.ca/labour/safety/faq/asbestos.html', accessed: ACCESSED },
       { label: 'Health Canada: health risks of asbestos', url: 'https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html', accessed: ACCESSED },
       { label: 'Health Canada: lead-based paint', url: 'https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html', accessed: ACCESSED },
