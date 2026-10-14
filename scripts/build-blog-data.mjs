@@ -69,10 +69,13 @@
  * site fail the build.
  *
  * Images: when src/data/media.generated.js exists (original URL →
- * { src, srcSet, avifSrcSet, width, height, hero?, og? }) the self-hosted
- * files are used (WebP <img> plus an AVIF <source>, src/components/Picture.jsx);
- * otherwise Wix's image transform serves resized AVIF/WebP variants of the
- * 1–5 MB originals. `"variant": false` on a block falls back to the original.
+ * { src, srcSet, avifSrcSet, width, height, hero?, og?, schemaImages? }) the
+ * self-hosted files are used (WebP <img> plus an AVIF <source>,
+ * src/components/Picture.jsx); otherwise Wix's image transform serves resized
+ * AVIF/WebP variants of the 1–5 MB originals. `"variant": false` on a block
+ * falls back to the original. A post's `schemaImages` (16:9, 4:3 and 1:1
+ * JPEGs, BlogPosting.image) go only into blogPosts.js and the post's own
+ * module, never into the card modules.
  */
 import { existsSync, readFileSync, readdirSync, unlinkSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -199,6 +202,18 @@ function fileName(text, fallback) {
 const canTransform = (src) => WIX_MEDIA.test(src || '');
 const mediaFor = (src) => (MEDIA && src && MEDIA[src]) || null;
 
+/**
+ * BlogPosting.image files (scripts/build-images.mjs: 16:9, 4:3 and 1:1 JPEGs)
+ * of a media entry, when it has all three; otherwise the post's schema keeps
+ * its single 1200x630 image.
+ */
+function schemaImagesOf(entry, slug) {
+  const images = Array.isArray(entry.schemaImages) ? entry.schemaImages.filter(Boolean) : [];
+  if (images.length === 3) return { schemaImages: images };
+  warn(`${slug}: no 16:9/4:3/1:1 article images yet — run node scripts/build-images.mjs --only=blog`);
+  return {};
+}
+
 /** Hero fields. The layout always shows the hero at 16:9 (object-fit: cover). */
 function heroImages(p) {
   if (!p.hero) {
@@ -213,6 +228,7 @@ function heroImages(p) {
       ...(card.srcSet ? { heroSrcSet: card.srcSet } : {}),
       ...(card.avifSrcSet ? { heroAvifSrcSet: card.avifSrcSet } : {}),
       ogImage: card.og,
+      ...schemaImagesOf(card, p.slug),
     };
   }
   const media = mediaFor(p.hero);
@@ -225,6 +241,7 @@ function heroImages(p) {
       ...(cut.srcSet ? { heroSrcSet: cut.srcSet } : {}),
       ...(cut.avifSrcSet ? { heroAvifSrcSet: cut.avifSrcSet } : {}),
       ogImage: media.og || media.ogImage || media.jpg || media.fallback || cut.src,
+      ...schemaImagesOf(media, p.slug),
     };
   }
   if (!canTransform(p.hero) || p.heroVariant === false) {

@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.f562c9d4.webp 1320w",
   "heroAvifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.38be59c3.avif 1320w",
   "ogImage": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x630.d2c7aef8.jpg",
+  "schemaImages": [
+    "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x675.9c0e9d23.jpg",
+    "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x900.4c2fb55d.jpg",
+    "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x1200.e23ad8ff.jpg"
+  ],
   "heroAlt": "Bright bathroom with a freestanding tub, a floating double vanity with vessel sinks, two mirrors and a floor-to-ceiling window",
   "author": "",
   "reviewedBy": "",

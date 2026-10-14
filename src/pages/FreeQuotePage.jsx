@@ -2,7 +2,7 @@ import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { preselectRenovationType } from '../lib/quoteFormEvents.js';
 import { ArrowRightIcon, CheckIcon, PhoneIcon, StarIcon } from '../components/icons.jsx';
 import { LANDING_SERVICES } from '../data/landingServices.js';
-import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { EXPERIENCE_YEARS, REPLY_TIME, SITE_PHONE, SITE_PHONE_TEL } from '../data/facts.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 import { unsplashImage } from '../lib/unsplash.js';
 
@@ -17,7 +17,7 @@ const FORM_ID = 'get-started';
 const HERO_POINTS = [
   'Free, no-obligation on-site visit',
   'Clear written quote — nothing hidden',
-  'Reply within one business day',
+  `Reply within ${REPLY_TIME}`,
 ];
 
 /**
@@ -49,7 +49,7 @@ export default function FreeQuotePage() {
               </h1>
               <p className="hero-subtitle">
                 Kitchens, bathrooms and basements across Winnipeg — planned properly, priced in writing,
-                and built by a local crew with over 60 years of combined experience.
+                and built by a local crew with over {EXPERIENCE_YEARS} years of combined experience.
               </p>
               <ul className="hero-points">
                 {HERO_POINTS.map((point) => (

@@ -30,6 +30,13 @@ else createRoot(container).render(app);
 // Calls, emails, data-cta clicks and form starts (src/lib/analytics.js).
 installAnalyticsListeners();
 
+// Smooth in-page scrolling starts once the page has loaded (html.loaded in
+// index.css): until then the browser may still be holding a #hash link's
+// target in view, which smooth scrolling would cancel (ScrollToHash.jsx).
+const smoothScrolling = () => window.setTimeout(() => document.documentElement.classList.add('loaded'), 0);
+if (document.readyState === 'complete') smoothScrolling();
+else window.addEventListener('load', smoothScrolling, { once: true });
+
 // Real-user Core Web Vitals, production only, after the page has loaded, and
 // only when Google Analytics is on for this visit (index.html decides; see
 // src/lib/analytics.js). With GA off the chunk is never even downloaded.

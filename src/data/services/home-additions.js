@@ -14,6 +14,8 @@
 // estimator has no additions price data: the cost teaser links the cost hub's
 // "priced after a visit" section and carries no numbers.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+
 export default {
   // Project slug kept from before the rename to "home additions" (plan D6): it
   // keys PROJECT_ESTIMATORS and the estimator's service=home-extension param.
@@ -23,14 +25,14 @@ export default {
   title: 'HOME ADDITIONS',
   titleHighlight: 'IN WINNIPEG',
   subtitle:
-    'We build home additions in Winnipeg and nearby communities that connect to the existing house inside and out: foundation, structure, roof, utilities and finishes. Many take eight to sixteen weeks once permits and materials are ready.',
+    `We build home additions in Winnipeg and nearby communities that connect to the existing house inside and out: foundation, structure, roof, utilities and finishes. Many take ${TIMELINES.addition.words} once permits and materials are ready.`,
   heroPoints: ['Free on-site visit', 'Permits & inspections coordinated', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '8', unit: '–16', label: 'Weeks for many home additions' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed across Winnipeg' },
+    { num: String(TIMELINES.addition.min), unit: `–${TIMELINES.addition.max}`, label: 'Weeks for many home additions' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -127,7 +129,7 @@ export default {
   },
 
   faqs: [
-    { q: 'How long does a home addition take?', a: 'Many straightforward additions take eight to sixteen weeks once permits and materials are ready. Size, soil and foundation conditions, structural changes, and custom finishes all affect the schedule. You get a timeline with your written quote, and a progress update every week once construction starts, so changes never come as a surprise.' },
+    { q: 'How long does a home addition take?', a: `Many straightforward additions take ${TIMELINES.addition.words} once permits and materials are ready. Size, soil and foundation conditions, structural changes, and custom finishes all affect the schedule. You get a timeline with your written quote, and a progress update every week once construction starts, so changes never come as a surprise.` },
     { q: 'Who prepares the drawings for an addition?', a: 'Every addition needs drawings for the development and building permit applications, and the City requires an engineer’s sealed drawing for structural work beyond Part 9 of the Manitoba Building Code. At the on-site visit we talk through who will prepare them for your project, and we build to the approved drawings.' },
     { q: 'Can you make the addition match my existing house?', a: 'That is the goal from the start. We look at rooflines, windows, siding or masonry, floor heights, trim and interior finishes so the addition connects as naturally as possible. Where an exact match isn’t available, we’ll show you the closest options and where a deliberate contrast might look better.' },
     { q: 'Can we stay in the house while the addition is built?', a: 'Usually, for most of the project. The existing house stays closed off while the foundation and shell go up. The wall between old and new is opened only once the addition is weather-tight, and we plan that step and the interior connection to keep the disruption as short as possible.' },

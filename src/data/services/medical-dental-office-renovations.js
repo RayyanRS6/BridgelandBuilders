@@ -11,6 +11,8 @@
 // cleanable finishes are general guidance only. Every rule in `local` was
 // checked against the official page in its sources list on 2026-10-13.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+
 export default {
   slug: 'medical-dental-office-renovations',
   breadcrumb: 'Medical & Dental Office Renovation',
@@ -22,10 +24,10 @@ export default {
   heroPoints: ['Free site visit & written quote', 'After-hours & weekend scheduling', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed' },
     { num: '1', unit: '×', label: 'Progress update every week' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {

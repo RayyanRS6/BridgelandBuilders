@@ -18,7 +18,8 @@
  *   WARN   quality: title/description lengths, duplicates, image hygiene,
  *          internal-link coverage, lastmod uniformity, <main> text changed
  *          without an `updated` bump (content-hash guard), stale cost guides
- *          and source dates, keyword map, readability, JS budgets.
+ *          and source dates, keyword map, readability, JS budgets, service
+ *          timelines that disagree with src/data/facts.js (fact drift).
  *   INFO   accepted interim states (Wix-hosted images until the migration,
  *          307 interim redirects, planned pages not live yet).
  *
@@ -67,6 +68,7 @@ import {
   vercelRedirects,
 } from './lib/audit/site.mjs';
 import { checkKeywords, readKeywordList, readKeywordMap } from './lib/audit/keywords.mjs';
+import { checkTimelineDrift } from './lib/audit/facts.mjs';
 import { Report, printReport, writeJson } from './lib/audit/report.mjs';
 
 const started = performance.now();
@@ -84,7 +86,8 @@ const UPDATE_HASHES = ARGS.has('--update-hashes');
 /* ------------------------------------------------------------ policy */
 const SITE_PHONE_TEL = 'tel:+14318665644';
 const PHONE_DIGITS = '4318665644';
-const PHONE_FORMATS = new Set(['431-866-5644', '+1-431-866-5644', '+1 431-866-5644']);
+// Display format 431-866-5644 (plan §14.1); +1-431-866-5644 is the schema form.
+const PHONE_FORMATS = new Set(['431-866-5644', '+1-431-866-5644']);
 const SCHEMA_TELEPHONE = '+1-431-866-5644';
 const MAILING_ADDRESS_RE = /845\s+Dakota/i;
 const MAILING_ADDRESS_ROUTES = new Set(['/privacy-policy', '/terms-of-service', '/contact']);
@@ -179,6 +182,7 @@ const headModel = await importGuarded('src/data/head.js', ['SEO_ENTRIES']);
 const seo = await importGuarded('src/data/seo.js', ['PAGE_SEO', 'SERVICE_SEO', 'NOINDEX_ROUTES']);
 const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS']);
 const blogModule = await importGuarded('src/data/blogPosts.js', ['BLOG_POSTS'], ['BLOG_REDIRECTS']);
+const facts = await importGuarded('src/data/facts.js', ['TIMELINES']);
 
 const prerenderJson = readJsonFile('prerender-routes.json', { required: true });
 const PRERENDER = Array.isArray(prerenderJson) ? prerenderJson.map(cleanPath) : [];
@@ -596,10 +600,16 @@ function auditClaims(page) {
   }
 }
 
-/** Normalised visible text of <main>, for the content-hash guard. */
+/**
+ * Normalised visible text of <main>, for the content-hash guard. Text nodes
+ * are joined with nothing: React splits a sentence into several nodes
+ * wherever it mixes text with a value ("within " + REPLY_TIME + "."), and a
+ * joining space would turn a pure refactor into a "change". Any real change
+ * to the words still changes the hash.
+ */
 const mainTextHash = (page) =>
   createHash('sha256')
-    .update(textBetween(page.doc, page.main.start, page.main.end, ' ').replace(/\s+/g, ' ').trim())
+    .update(textBetween(page.doc, page.main.start, page.main.end, '').replace(/\s+/g, ' ').trim())
     .digest('hex')
     .slice(0, 16);
 
@@ -891,6 +901,11 @@ for (const [route, sources] of sourcedPages) {
     .sort();
   if (stale.length) report.warn('content.stale-source', route, `${stale.length} source(s) last verified more than ${SOURCE_STALE_DAYS} days ago (oldest ${stale[0]}) — re-check them and update "accessed"`);
 }
+
+/* ------------------------------------------------- fact drift (§12) */
+// Pages read their timelines from src/data/facts.js; blog posts keep their own
+// wording, so any page or post that gives a service a different range warns.
+if (facts.TIMELINES) for (const page of pages.values()) checkTimelineDrift(page, facts.TIMELINES, report);
 
 /* -------------------------------------------------------------- robots */
 if (robotsTxt == null) {

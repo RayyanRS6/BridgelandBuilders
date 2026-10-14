@@ -7,16 +7,26 @@ import {
   GBP,
   SERVICE_AREAS,
   SERVICE_CATALOG,
+  SITE_EMAIL,
   SITE_NAME,
+  SITE_PHONE,
   SITE_URL,
   SOCIAL_PROFILES,
 } from './siteConfig.js';
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from './facts.js';
+import { ROUTE_TRAILS, pageName, serviceTrail, trailFor } from './trails.js';
 
 /**
  * The renovation cost hub (plan §8), defined in siteConfig.js. Re-exported for
  * existing imports; new code should import it from siteConfig.js.
  */
 export { COST_HUB_PATH };
+
+/**
+ * Breadcrumb trails, defined in trails.js (light enough for a page to render
+ * its breadcrumb without this module). Re-exported for existing imports.
+ */
+export { ROUTE_TRAILS, serviceTrail, trailFor };
 
 /**
  * Branded 1200x630 share image (public/og/, made by scripts/build-images.mjs),
@@ -81,7 +91,7 @@ export const PAGE_SEO = {
   '/about-us': {
     title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
-      'Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over 60 years of combined experience and 100+ projects.',
+      `Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over ${EXPERIENCE_YEARS} years of combined experience and ${PROJECT_COUNT}+ projects.`,
     updated: '2026-10-14',
   },
   '/our-process': {
@@ -117,7 +127,7 @@ export const PAGE_SEO = {
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
-      'Contact Bridgeland Builders about your Winnipeg renovation. Call 431-866-5644, email us or send your project details. We reply within one business day.',
+      `Contact Bridgeland Builders about your Winnipeg renovation. Call ${SITE_PHONE}, email us or send your project details. We reply within ${REPLY_TIME}.`,
     updated: '2026-10-14',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
@@ -150,7 +160,7 @@ export const PAGE_SEO = {
   '/contact': {
     title: 'Get in Touch | Bridgeland Builders Winnipeg',
     description:
-      'Send Bridgeland Builders a message about your renovation or project. Call 431-866-5644, email info@bridgelandbuilders.com, or use our contact form.',
+      `Send Bridgeland Builders a message about your renovation or project. Call ${SITE_PHONE}, email ${SITE_EMAIL}, or use our contact form.`,
     robots: 'noindex, follow',
     updated: '2026-10-13',
   },
@@ -173,7 +183,7 @@ export const PAGE_SEO = {
   '/free-quote': {
     title: 'Free Renovation Quote in Winnipeg | Bridgeland Builders',
     description:
-      'Get a free, no-obligation renovation quote in Winnipeg. Kitchens, bathrooms and basements with clear written pricing and a reply within one business day.',
+      `Get a free, no-obligation renovation quote in Winnipeg. Kitchens, bathrooms and basements with clear written pricing and a reply within ${REPLY_TIME}.`,
     image: DEFAULT_IMAGE,
     robots: 'noindex, follow',
     updated: '2026-10-14',
@@ -648,70 +658,6 @@ export function buildServiceList() {
   };
 }
 
-/**
- * A service page's breadcrumb trail from the registry: Services › (parent) ›
- * page, e.g. Services › Commercial Renovations › Office Renovations. The
- * visible breadcrumb on the page renders this same trail.
- */
-export function serviceTrail(service) {
-  if (!service) return [];
-  const trail = [['Services', '/services']];
-  const parent = service.parent ? serviceByPath(service.parent) : null;
-  if (parent) trail.push([crumbName(parent), parent.path]);
-  trail.push([crumbName(service), service.path]);
-  return trail;
-}
-
-/** A service page's breadcrumb name: its registry `crumb`, else its label. */
-const crumbName = (service) => service.crumb || service.label;
-
-/**
- * Breadcrumb trail per route, as [label, path] pairs (Home is implicit). The
- * labels match the visible breadcrumbs. Service pages come from the registry
- * (src/data/services.js); template routes (cost guides, areas, case studies,
- * videos) are resolved by trailFor().
- *
- * The one-level pages (/services, /about-us, /faqs, /blog, …) show no visible
- * breadcrumb (PageHero renders none), so they have no trail and no
- * BreadcrumbList: visible trail = schema trail (plan §3.5). The cost hub and
- * the watch pages are one level deep too, but they do show theirs.
- */
-export const ROUTE_TRAILS = {
-  '/': [],
-  ...Object.fromEntries(SERVICES.map((service) => [service.path, serviceTrail(service)])),
-};
-
-/** "Kitchen Renovation Cost Winnipeg | Bridgeland Builders" -> "Kitchen Renovation Cost Winnipeg". */
-const pageName = (title) => String(title || '').split(' | ')[0].trim();
-
-/**
- * The default breadcrumb trail for any route: ROUTE_TRAILS, else the template
- * routes' pattern (cost hub and /services/<svc>/cost, /service-areas/<slug>,
- * /projects/<slug>, /videos/<slug>). `title` (the page's SEO title) names the
- * last crumb where no registry label exists. A page that renders a different
- * visible breadcrumb passes that trail to usePageSeo (and head.js passes the
- * same one, through the page's *SeoOptions builder).
- */
-export function trailFor(path, title) {
-  if (ROUTE_TRAILS[path]) return ROUTE_TRAILS[path];
-  if (path === COST_HUB_PATH) return [['Renovation Costs', COST_HUB_PATH]];
-  let match = /^\/services\/([^/]+)\/cost$/.exec(path);
-  if (match) {
-    const service = serviceBySlug(match[1]);
-    return service ? [['Services', '/services'], [crumbName(service), service.path], ['Cost Guide', path]] : [];
-  }
-  match = /^\/service-areas\/([^/]+)$/.exec(path);
-  if (match) {
-    const area = SERVICE_AREAS.find((item) => item.slug === match[1]);
-    return [['Service Areas', '/service-areas'], [area ? area.name : pageName(title), path]];
-  }
-  match = /^\/projects\/([^/]+)$/.exec(path);
-  if (match) return [['Projects', '/projects'], [pageName(title), path]];
-  match = /^\/videos\/([^/]+)$/.exec(path);
-  if (match) return [[pageName(title), path]];
-  return [];
-}
-
 /** WebPage subtype per route. */
 export const ROUTE_PAGE_TYPES = {
   '/services': 'CollectionPage',
@@ -822,20 +768,18 @@ export function resolvePageSeo(path, options = {}) {
   };
 }
 
+// usePageSeo options for a service page; defined in services.js.
+export { serviceSeo } from './services.js';
+
 /**
- * usePageSeo options for a service page (ServiceRoute.jsx). head.js passes the
- * same object to resolvePageSeo, so prerendered and client JSON-LD match.
+ * Head of the 404 page: the prerendered dist/404.html (head.js → prerender)
+ * and NotFoundPage.jsx after an in-browser navigation use the same values.
  */
-export function serviceSeo(content) {
-  return {
-    meta: content.seo,
-    faqs: content.faqs,
-    // No page image: the intro photos are stock (Unsplash) images, which must
-    // not be shared as if they were Bridgeland's work (plan §11.2), and their
-    // size is unknown. The branded 1200×630 default is used until a page has
-    // a real project photo (content.seo.image / imageAlt).
-  };
-}
+export const NOT_FOUND_HEAD = {
+  title: 'Page Not Found | Bridgeland Builders',
+  description: 'That page does not exist. Browse our Winnipeg renovation services or get in touch for a free quote.',
+  robots: 'noindex, follow',
+};
 
 /**
  * The date (YYYY-MM-DD) a route's content last changed: its own `updated`,

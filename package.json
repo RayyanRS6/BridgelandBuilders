@@ -18,7 +18,8 @@
     "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
     "images": "node scripts/build-images.mjs",
     "images:fetch": "node scripts/fetch-legacy-images.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "gsc:cannibal": "node scripts/gsc-cannibalisation.mjs"
   },
   "dependencies": {
     "@vercel/functions": "^3.9.11",

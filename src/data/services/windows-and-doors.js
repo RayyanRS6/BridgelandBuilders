@@ -8,6 +8,8 @@
 // Efficiency Manitoba rebate before each content update (rebates change).
 // Owner sign-off (ownerSignoff) is still to be added.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+
 const ACCESSED = '2026-10-13';
 
 export default {
@@ -22,10 +24,10 @@ export default {
   heroPoints: ['Free on-site visit', 'Every opening measured', 'Permits coordinated when needed'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed' },
     { num: '$0', unit: '', label: 'On-site visit & written quote' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: null,

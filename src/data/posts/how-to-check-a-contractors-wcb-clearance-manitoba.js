@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.a1fe8363.webp 1320w",
   "heroAvifSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.b0d9c3f3.avif 1320w",
   "ogImage": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x630.8a999200.jpg",
+  "schemaImages": [
+    "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x675.249c5196.jpg",
+    "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x900.fab5d915.jpg",
+    "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x1200.4510a6b5.jpg"
+  ],
   "heroAlt": "Title card: How to Check a Contractor's WCB Clearance in Manitoba",
   "author": "",
   "reviewedBy": "",

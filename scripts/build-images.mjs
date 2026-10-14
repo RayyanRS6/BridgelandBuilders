@@ -14,6 +14,12 @@
  *     - body images keep their own aspect ratio;
  *     - post heroes are also cut to 16:9 (centre), as the layout shows them;
  *   <alt-slug>-1200x630.<hash8>.jpg       Open Graph image for each post hero
+ *   <alt-slug>-1200x675 / -1200x900 / -1200x1200.<hash8>.jpg
+ *                                         article images (16:9, 4:3, 1:1) for
+ *                                         BlogPosting.image: centred cover
+ *                                         crops of a photo; a hero with
+ *                                         lettering on it is shown whole over
+ *                                         a blurred fill instead
  * and src/data/media.generated.js mapping each original Wix URL to its files.
  * Names carry a content hash, so vercel.json serves /images/* as immutable.
  * Metadata (EXIF/GPS) is stripped. public/images/blog/ is regenerated whole.
@@ -26,7 +32,8 @@
  * a branded card instead (dark background, red accent bar, the post title in
  * white DM Sans Bold on at most four lines, "Bridgeland Builders · Winnipeg"
  * footer), drawn at 1320x743 and written like a hero (same widths, AVIF and
- * WebP) plus a separate 1200x630 OG layout, under the same short names
+ * WebP) plus a separate 1200x630 OG layout and the three article-image
+ * layouts (1200x675, 1200x900, 1200x1200), under the same short names
  * (title-card-<title-slug>-…). Its media.generated.js entry is keyed
  * 'card:<slug>'. Without media-src/manifest.json (or with --only=cards) the
  * legacy files and entries are kept (less those no published post shows any
@@ -61,8 +68,23 @@ const only = (process.argv.find((a) => a.startsWith('--only=')) || '').slice('--
 const WIDTHS = [480, 880, 1320];
 const MAIN_WIDTH = 880;
 const OG = { width: 1200, height: 630 };
+// BlogPosting.image: Google asks for several high-resolution images in 16:9,
+// 4:3 and 1:1 (each at least 50,000 pixels); 1200px wide also suits Discover.
+const ARTICLE_SIZES = [
+  { width: 1200, height: 675, layout: 'article16x9' },
+  { width: 1200, height: 900, layout: 'article4x3' },
+  { width: 1200, height: 1200, layout: 'article1x1' },
+];
 const BUDGET_KB = 300; // any image (plan §4)
 const LCP_BUDGET_KB = 120; // the hero shown first
+const ARTICLE_BUDGET_KB = 150; // each article image (fetched by crawlers only)
+// Heroes whose alt says they carry lettering ("Title graphic reading …",
+// "… with the title …"): a 4:3 or 1:1 cover crop would cut the words, so their
+// article images show the whole frame over a blurred fill of itself.
+const LETTERED_ALT = /\btitle (graphic|card)\b|\bwith the title\b/i;
+// Windows keeps whole paths under 260 characters; the longest blog image path
+// (printed after each run) must stay under this.
+const MAX_PATH = 240;
 const WIX_MEDIA = /^https:\/\/static\.wixstatic\.com\/media\/[^/?#]+$/;
 
 const BRAND = {
@@ -147,6 +169,30 @@ async function variantSet(input, { dir, urlDir, base, ratio, originalWidth, labe
 }
 
 /**
+ * A photo cut to width x height, centred like the hero and OG cuts (sharp's
+ * attention strategy went for the bright window in the bathroom hero and cut
+ * the tub off at 1:1).
+ */
+const coverCrop = (input, width, height) =>
+  sharp(input).rotate().resize({ width, height, fit: 'cover', position: 'centre' });
+
+/** The whole frame, fitted inside width x height, over a blurred, dimmed cover fill of itself. */
+async function wholeFrame(input, width, height) {
+  const fill = await sharp(input).rotate().resize({ width, height, fit: 'cover' }).blur(40).modulate({ brightness: 0.8 }).toBuffer();
+  const { data, info } = await sharp(input).rotate().resize({ width, height, fit: 'inside' }).toBuffer({ resolveWithObject: true });
+  return sharp(fill).composite([
+    { input: data, left: Math.round((width - info.width) / 2), top: Math.round((height - info.height) / 2) },
+  ]);
+}
+
+/** An article image (a sharp pipeline) as a JPEG, with a warning past ARTICLE_BUDGET_KB. */
+async function articleJpeg(image, label, quality = 80) {
+  const jpg = await image.flatten({ background: '#ffffff' }).jpeg({ quality, mozjpeg: true, progressive: true }).toBuffer();
+  if (kb(jpg) > ARTICLE_BUDGET_KB) warnings.push(`${label} is ${kb(jpg)} KB (> ${ARTICLE_BUDGET_KB} KB)`);
+  return jpg;
+}
+
+/**
  * Blog images: the legacy (Wix) originals when media-src/manifest.json is
  * there (public/images/blog/ is then rebuilt whole), else the current legacy
  * files and entries are kept; then the title cards; then media.generated.js.
@@ -167,6 +213,19 @@ async function buildBlog({ cardsOnly = false } = {}) {
   const cards = await buildTitleCards(media);
   writeFileSync(GENERATED, mediaModule(media));
   console.log(`[images] blog: ${summary}; ${cards} title card(s); src/data/media.generated.js written`);
+  const longest = longestPath(BLOG_OUT);
+  console.log(`[images] longest path: ${longest.length} characters (${longest})`);
+  if (longest.length >= MAX_PATH) warnings.push(`${longest} is ${longest.length} characters (>= ${MAX_PATH}); shorten MAX_NAME or MAX_FOLDER`);
+}
+
+/** The longest file path under `dir`. */
+function longestPath(dir) {
+  let longest = '';
+  for (const entry of existsSync(dir) ? readdirSync(dir, { withFileTypes: true }) : []) {
+    const path = entry.isDirectory() ? longestPath(join(dir, entry.name)) : join(dir, entry.name);
+    if (path.length > longest.length) longest = path;
+  }
+  return longest;
 }
 
 async function buildLegacyImages(manifestPath) {
@@ -226,6 +285,14 @@ async function buildLegacyImages(manifestPath) {
       if (kb(og) > BUDGET_KB) warnings.push(`${owner} OG image is ${kb(og)} KB (> ${BUDGET_KB} KB)`);
       entry.og = `${urlDir}/${writeOnce(dir, `${heroBase}-${OG.width}x${OG.height}`, 'jpg', og)}`;
       files += 1;
+
+      entry.schemaImages = [];
+      for (const { width: w, height: h } of ARTICLE_SIZES) {
+        const cut = LETTERED_ALT.test(heroUse.alt) ? await wholeFrame(input, w, h) : coverCrop(input, w, h);
+        const jpg = await articleJpeg(cut, `${owner} ${w}x${h} article image`);
+        entry.schemaImages.push(`${urlDir}/${writeOnce(dir, `${heroBase}-${w}x${h}`, 'jpg', jpg)}`);
+        files += 1;
+      }
     }
     media[image.url] = entry;
     process.stdout.write('.');
@@ -285,7 +352,7 @@ function removeImageFiles(entry) {
     String(set || '').split(', ').map((item) => item.split(' ')[0])
   );
   const folders = new Set();
-  for (const url of new Set([entry.src, entry.og, entry.hero?.src, ...sets])) {
+  for (const url of new Set([entry.src, entry.og, entry.hero?.src, ...sets, ...(entry.schemaImages || [])])) {
     if (!url || !url.startsWith('/images/blog/')) continue;
     const parts = url.slice(1).split('/');
     rmSync(join(PUBLIC, ...parts), { force: true });
@@ -307,11 +374,13 @@ function mediaModule(media) {
 //   width, height     size of \`src\` (for the <img> width/height attributes)
 //   hero              (post heroes) the same three fields cut to 16:9, centred
 //   og                (post heroes) 1200x630 JPEG for Open Graph
+//   schemaImages      (post heroes) ${ARTICLE_SIZES.map((s) => `${s.width}x${s.height}`).join(', ')} JPEGs (16:9, 4:3, 1:1)
+//                     for BlogPosting.image
 //   original          the Wix original's size
 //   crop: '16:9'      top-level fields are the hero cut (image used only as a hero)
 //
 // '${CARD_PREFIX}<post-slug>' -> the branded title card of a published post without a
-// hero: src/srcSet/avifSrcSet/width/height (16:9), crop, og, and alt.
+// hero: src/srcSet/avifSrcSet/width/height (16:9), crop, og, schemaImages, and alt.
 export const MEDIA = ${JSON.stringify(media, null, 2)};
 
 /** Self-hosted versions of an original image URL, or undefined. */
@@ -331,9 +400,11 @@ const TITLE_TRACKING = -0.02; // letter spacing, in em (the site's headings are 
 const MEASURE_SIZE = 100;
 
 /**
- * The two canvases. Titles keep a wide side margin on the 16:9 card because
- * the featured /blog card shows it with object-fit: cover in a box that can be
- * taller than 16:9, which trims the sides.
+ * The canvases. Titles keep a wide side margin on the 16:9 card because the
+ * featured /blog card shows it with object-fit: cover in a box that can be
+ * taller than 16:9, which trims the sides. The article layouts (ARTICLE_SIZES,
+ * BlogPosting.image) set the title larger as the canvas grows taller, still on
+ * at most four lines, so it stays legible as a small square thumbnail.
  */
 const CARD_LAYOUTS = {
   hero: {
@@ -359,6 +430,42 @@ const CARD_LAYOUTS = {
     footerSize: 28,
     footerGap: 40,
     sizes: [80, 74, 68, 62, 56, 52, 48, 44],
+  },
+  article16x9: {
+    width: 1200,
+    height: 675,
+    padX: 96,
+    padTop: 76,
+    padBottom: 52,
+    strip: 10,
+    bar: { width: 96, height: 8, gap: 32 },
+    footerSize: 28,
+    footerGap: 42,
+    sizes: [80, 74, 68, 62, 56, 52, 48, 44],
+  },
+  article4x3: {
+    width: 1200,
+    height: 900,
+    padX: 96,
+    padTop: 96,
+    padBottom: 64,
+    strip: 12,
+    bar: { width: 104, height: 9, gap: 36 },
+    footerSize: 30,
+    footerGap: 48,
+    sizes: [96, 90, 84, 78, 72, 66, 60, 56],
+  },
+  article1x1: {
+    width: 1200,
+    height: 1200,
+    padX: 96,
+    padTop: 120,
+    padBottom: 80,
+    strip: 14,
+    bar: { width: 112, height: 10, gap: 40 },
+    footerSize: 32,
+    footerGap: 56,
+    sizes: [112, 104, 96, 90, 84, 78, 72, 64],
   },
 };
 
@@ -401,10 +508,17 @@ async function buildTitleCards(media) {
       .toBuffer();
     if (kb(og) > BUDGET_KB) warnings.push(`${label} OG image is ${kb(og)} KB (> ${BUDGET_KB} KB)`);
 
+    const schemaImages = [];
+    for (const { width: w, height: h, layout } of ARTICLE_SIZES) {
+      const jpg = await articleJpeg(sharp(await titleCard(title, CARD_LAYOUTS[layout], fonts)), `${label} ${w}x${h} article image`, 86);
+      schemaImages.push(`${urlDir}/${writeOnce(dir, `${base}-${w}x${h}`, 'jpg', jpg)}`);
+    }
+
     media[`${CARD_PREFIX}${post.slug}`] = {
       ...set,
       crop: '16:9',
       og: `${urlDir}/${writeOnce(dir, `${base}-${OG.width}x${OG.height}`, 'jpg', og)}`,
+      schemaImages,
       alt,
     };
     process.stdout.write('.');
@@ -424,6 +538,7 @@ async function titleCard(title, layout, fonts) {
     sizes,
     maxWidth: W - padX * 2,
     maxHeight: areaBottom - padTop - bar.height - bar.gap,
+    canvas: `${W}x${H}`,
   });
   // The accent bar and the title are centred together above the footer.
   const groupHeight = bar.height + bar.gap + text.info.height;
@@ -521,7 +636,7 @@ function balancedLines(widths, space, count, max) {
  * render is checked against the box. A title too long for four lines at the
  * smallest size is cut at a word and ends with "…" (and a warning).
  */
-async function titleText(title, { fonts, sizes, maxWidth, maxHeight }) {
+async function titleText(title, { fonts, sizes, maxWidth, maxHeight, canvas }) {
   const words = title.split(' ');
   const measure = async (text) => (await titleImage(text, MEASURE_SIZE, fonts)).info.width;
   const wordWidths = [];
@@ -544,7 +659,7 @@ async function titleText(title, { fonts, sizes, maxWidth, maxHeight }) {
   const scale = size / MEASURE_SIZE;
   const greedy = greedyLines(wordWidths.map((w) => w * scale), spaceWidth * scale, limit);
   if (greedy.length <= TITLE_LINES) {
-    warnings.push(`title card for "${title}" does not fit its text box at ${size}px`);
+    warnings.push(`${canvas} title card for "${title}" does not fit its text box at ${size}px`);
     return titleImage(lineText(greedy), size, fonts);
   }
   const kept = greedy.slice(0, TITLE_LINES);
@@ -555,7 +670,7 @@ async function titleText(title, { fonts, sizes, maxWidth, maxHeight }) {
     image = await titleImage(`${lineText(kept.slice(0, -1))}\n${words.slice(lastStart, lastEnd).join(' ')}…`, size, fonts);
     lastEnd -= 1;
   } while (image.info.width > maxWidth && lastEnd > lastStart);
-  warnings.push(`title card for "${title}" was shortened to ${TITLE_LINES} lines`);
+  warnings.push(`${canvas} title card for "${title}" was shortened to ${TITLE_LINES} lines`);
   return image;
 }
 

@@ -7,6 +7,7 @@ import {
   QUOTE_QUESTIONS,
   SERVICE_AREA,
 } from '../data/quoteForm.js';
+import { REPLY_TIME } from '../data/facts.js';
 import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { newEventId, track } from '../lib/analytics.js';
 import { getAttribution } from '../lib/attribution.js';
@@ -474,7 +475,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
             <ChevronLeftIcon size={14} /> Edit my details
           </button>
           <p className="qf-fineprint">
-            Rather not book now? That’s fine — we have your details and will get back to you within one business day.
+            Rather not book now? That’s fine — we have your details and will get back to you within {REPLY_TIME}.
           </p>
         </div>
       )}

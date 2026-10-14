@@ -12,6 +12,8 @@
 // the sources listed in local.sources. The only price on the page is the
 // instant estimator's starting range (costTeaser, estimator data 2026-10-13).
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+
 export default {
   slug: 'kitchen-renovation',
   breadcrumb: 'Kitchen Renovation',
@@ -19,14 +21,14 @@ export default {
   title: 'KITCHEN RENOVATIONS',
   titleHighlight: 'IN WINNIPEG',
   subtitle:
-    'We plan and build kitchen renovations in Winnipeg and nearby communities: layout, cabinets, countertops, backsplash, lighting and appliance fit. Most full kitchens take four to six weeks once the cabinets arrive.',
-  heroPoints: ['Free on-site visit', 'Written quote before work starts', 'Most kitchens done in 4–6 weeks'],
+    `We plan and build kitchen renovations in Winnipeg and nearby communities: layout, cabinets, countertops, backsplash, lighting and appliance fit. Most full kitchens take ${TIMELINES.kitchen.words} once the cabinets arrive.`,
+  heroPoints: ['Free on-site visit', 'Written quote before work starts', `Most kitchens done in ${TIMELINES.kitchen.short}`],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '4', unit: '–6', label: 'Weeks for a typical kitchen' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed across Winnipeg' },
+    { num: String(TIMELINES.kitchen.min), unit: `–${TIMELINES.kitchen.max}`, label: 'Weeks for a typical kitchen' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -132,7 +134,7 @@ export default {
 
   // No cost questions here: those live on /services/kitchen-renovations/cost.
   faqs: [
-    { q: 'How long does a kitchen renovation take?', a: 'Most full kitchens take four to six weeks once the cabinets are on site. Countertops are templated after the cabinets are set, which adds about a week in the middle. Cabinets are ordered as soon as you approve the written quote, so the build isn’t left waiting on them.' },
+    { q: 'How long does a kitchen renovation take?', a: `Most full kitchens take ${TIMELINES.kitchen.words} once the cabinets are on site. Countertops are templated after the cabinets are set, which adds about a week in the middle. Cabinets are ordered as soon as you approve the written quote, so the build isn’t left waiting on them.` },
     { q: 'Will we have a working kitchen during the renovation?', a: 'You’ll be without the sink and stove for most of the build. We set up a temporary counter with your kettle, microwave and fridge so you have somewhere to make coffee and simple meals. If anyone in the house has particular needs, tell us at the on-site visit and we’ll plan around them.' },
     { q: 'Can you remove the wall between the kitchen and living room?', a: 'Usually. A non-structural wall is straightforward. A load-bearing wall needs a beam sized for the load and a building permit, and the City requires an engineer’s sealed drawing when the structure goes beyond what Part 9 of the Manitoba Building Code covers. We’ll tell you at the on-site visit which kind of wall you have.' },
     { q: 'Should I choose stock, semi-custom or custom cabinets?', a: 'Stock cabinets are quicker and cost less, and they suit most standard layouts. Semi-custom adds more sizes, finishes and interior options. Fully custom makes sense when the room is an odd shape or you want storage built around specific things. We can price more than one option in the written quote so you can compare.' },
@@ -147,7 +149,7 @@ export default {
   seo: {
     title: 'Kitchen Renovations Winnipeg | Bridgeland Builders',
     description:
-      'Kitchen renovations in Winnipeg: layout, cabinets, countertops and lighting, most done in 4–6 weeks. Start with a free on-site visit and written quote.',
+      `Kitchen renovations in Winnipeg: layout, cabinets, countertops and lighting, most done in ${TIMELINES.kitchen.short}. Start with a free on-site visit and written quote.`,
     serviceType: 'Kitchen renovation',
     primaryKeyword: 'kitchen renovation Winnipeg',
     updated: '2026-10-14',

@@ -8,9 +8,9 @@ import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import Ticker from '../components/Ticker.jsx';
 import { ArrowRightIcon, CheckIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS, PROJECT_ESTIMATORS } from '../data/estimators.js';
-import { COST_HUB_PATH, serviceTrail } from '../data/seo.js';
 import { serviceByPath } from '../data/services.js';
-import { INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { COST_HUB_PATH, INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { serviceTrail } from '../data/trails.js';
 import { unsplashImage } from '../lib/unsplash.js';
 
 const FORM_ID = 'service-quote-form';

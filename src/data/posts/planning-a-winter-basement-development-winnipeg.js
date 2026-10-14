@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.565cba54.webp 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.3669a5da.webp 1320w",
   "heroAvifSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.59e02b43.avif 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.b83b3c92.avif 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.c31bba81.avif 1320w",
   "ogImage": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x630.d192608b.jpg",
+  "schemaImages": [
+    "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x675.cafc194d.jpg",
+    "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x900.ebdb8ccb.jpg",
+    "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x1200.ce96e371.jpg"
+  ],
   "heroAlt": "Title card: Planning a Winter Basement Development in Winnipeg",
   "author": "",
   "reviewedBy": "",

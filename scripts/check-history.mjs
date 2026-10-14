@@ -69,6 +69,16 @@ function instrumentHistory() {
   }
 }
 
+/** A frame's host for the report; frames that haven't navigated yet have an empty URL. */
+function frameLabel(frame) {
+  const url = frame.url();
+  try {
+    return new URL(url).host || url;
+  } catch {
+    return url || '(no URL yet)';
+  }
+}
+
 async function scrollThrough(page) {
   await page.evaluate(async () => {
     const step = Math.max(200, Math.floor(window.innerHeight * 0.8));
@@ -91,7 +101,11 @@ async function checkPage(browser, path) {
   const page = await context.newPage();
   const result = { path, problems: [], notes: [] };
   try {
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    // One retry: a DNS or connection blip is not a history problem.
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 }).catch(async () => {
+      await page.waitForTimeout(2000);
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    });
     const startLength = await page.evaluate(() => history.length);
     await page.waitForLoadState('load', { timeout: 45000 }).catch(() => result.notes.push('load event did not fire within 45 s'));
     await scrollThrough(page);
@@ -107,7 +121,7 @@ async function checkPage(browser, path) {
         continue; // detached or navigated away
       }
       const top = frame === page.mainFrame();
-      const where = top ? 'page' : `iframe ${new URL(frame.url()).host || frame.url()}`;
+      const where = top ? 'page' : `iframe ${frameLabel(frame)}`;
       for (const call of calls) {
         const line = `${where}: ${call.method}(${call.to == null ? 'same URL' : call.to})${call.stack.length ? ` at ${call.stack[0]}` : ''}`;
         if (call.method === 'pushState' || (top && call.changesUrl)) result.problems.push(line);

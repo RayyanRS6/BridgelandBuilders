@@ -1,12 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
+import { EXPERIENCE_YEARS, PROJECT_COUNT } from '../data/facts.js';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { unsplashImage } from '../lib/unsplash.js';
 import { ArrowRightIcon, CheckIcon } from './icons.jsx';
 
 // Owner-confirmed facts only (no superlatives, SEO plan §11.1).
 const CHECKLIST = [
-  'Over 60 Years Combined Experience',
-  '100+ Completed Projects',
+  `Over ${EXPERIENCE_YEARS} Years Combined Experience`,
+  `${PROJECT_COUNT}+ Completed Projects`,
   'Free Written Quotes',
   'Weekly Progress Updates',
 ];
@@ -50,7 +51,7 @@ export default function WhyUs() {
             <h2 className="section-title">A clear plan, a written price and weekly updates</h2>
             <div className="why-paragraphs">
               <p>
-                Bridgeland Builders is a Winnipeg renovation and construction team with over 60 years of combined experience. Together we have completed more than 100 projects, from single-room updates in family homes to commercial fit-ups for local businesses.
+                {`Bridgeland Builders is a Winnipeg renovation and construction team with over ${EXPERIENCE_YEARS} years of combined experience. Together we have completed more than ${PROJECT_COUNT} projects, from single-room updates in family homes to commercial fit-ups for local businesses.`}
                 {!onAboutPage && (
                   <>
                     {' '}Read <Link className="blog-inline-link" to={ABOUT_PATH}>more about who we are</Link>.

@@ -10,6 +10,7 @@ import RouteErrorBoundary from './components/RouteErrorBoundary.jsx';
 // on the first page instead of replacing it (src/lib/lazyRetry.js).
 import { lazyWithRetry as lazy, leftInitialPage } from './lib/lazyRetry.js';
 import { useGlobalScrollReveal } from './hooks/useScrollReveal.js';
+import { preloadHeadWriter } from './hooks/useSeo.js';
 import { COST_HUB_PATH } from './data/siteConfig.js';
 import { liveServices } from './data/services.js';
 
@@ -63,6 +64,10 @@ export default function AppShell() {
   useEffect(() => {
     if (pathname !== firstPath.current) leftInitialPage();
   }, [pathname]);
+  // The page being navigated to will need its <head> written, and the code
+  // for that is not part of the first load (src/hooks/useSeo.js). Asked for
+  // while the navigation renders, it downloads alongside the page's own chunk.
+  if (pathname !== firstPath.current) preloadHeadWriter();
 
   return (
     <>

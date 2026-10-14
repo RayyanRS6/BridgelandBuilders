@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '../components/icons.jsx';
+import { NOT_FOUND_HEAD } from '../data/seo.js';
 import useSeo from '../hooks/useSeo.js';
 
 export default function NotFoundPage() {
-  useSeo({ title: 'Page Not Found | Bridgeland Builders', robots: 'noindex, follow' });
+  // Same head as the prerendered 404.html, so a 404 reached in the browser
+  // keeps its description too.
+  useSeo(NOT_FOUND_HEAD);
 
   return (
     <main className="not-found-page">

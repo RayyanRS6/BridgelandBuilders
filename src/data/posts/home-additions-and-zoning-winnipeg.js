@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.b7b5971a.webp 1320w",
   "heroAvifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.4c809500.avif 1320w",
   "ogImage": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x630.420c23b0.jpg",
+  "schemaImages": [
+    "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x675.2e6afd7e.jpg",
+    "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x900.b521a341.jpg",
+    "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x1200.95919056.jpg"
+  ],
   "heroAlt": "Title card: Home Addition Zoning in Winnipeg: Permits and Variances",
   "author": "",
   "reviewedBy": "",

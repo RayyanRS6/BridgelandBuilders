@@ -3,7 +3,7 @@ import Process from '../components/Process.jsx';
 import RichBody from '../components/RichBody.jsx';
 import Testimonial from '../components/Testimonial.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
-import { SITE_PHONE } from '../data/siteConfig.js';
+import { REPLY_TIME, SITE_PHONE, TIMELINES } from '../data/facts.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // The seven real steps of a Bridgeland renovation (owner-confirmed facts only:
@@ -14,7 +14,7 @@ const STEPS = [
   {
     num: '01',
     title: 'Instant Quote or a Call',
-    text: `Start with our free instant quote for a starting price range, or call ${SITE_PHONE} and tell us what you have in mind. We reply within one business day.`,
+    text: `Start with our free instant quote for a starting price range, or call ${SITE_PHONE} and tell us what you have in mind. We reply within ${REPLY_TIME}.`,
   },
   {
     num: '02',
@@ -48,24 +48,24 @@ const STEPS = [
   },
 ];
 
-// Typical timelines, as stated on the service pages. One value per fact: if a
-// figure changes, change it on the service page and here together.
+// Typical timelines: TIMELINES in src/data/facts.js, the one source the service
+// pages, FAQs and cost guides read them from.
 const TIMELINE_BLOCKS = [
   { t: 'h2', x: 'How long does a renovation take?' },
   {
     t: 'p',
-    x: 'Most bathrooms take two to three weeks and most kitchens four to six weeks once the cabinets are on site. Basements usually take four to eight weeks, and whole-home renovations and home additions eight to sixteen weeks. Your written quote includes a schedule for your own project, so you know the dates before you approve anything.',
+    x: `Most bathrooms take ${TIMELINES.bathroom.words} and most kitchens ${TIMELINES.kitchen.words} once the cabinets are on site. Basements usually take ${TIMELINES.basement.words}, and whole-home renovations and home additions ${TIMELINES.wholeHome.words}. Your written quote includes a schedule for your own project, so you know the dates before you approve anything.`,
   },
   {
     t: 'table',
     caption: 'Typical time on site, by project',
     head: ['Project', 'Typical time', 'What can change it'],
     rows: [
-      ['[Bathroom renovation](/services/bathroom-renovations)', '2–3 weeks', 'Layout changes, tile work, whether it is your only bathroom'],
-      ['[Kitchen renovation](/services/kitchen-renovations)', '4–6 weeks', 'Cabinet delivery; counters are templated after the cabinets are set'],
-      ['[Basement development](/services/basement-renovations)', '4–8 weeks', 'Size, new bedrooms or a bathroom, permits and inspections'],
-      ['[Whole-home renovation](/services/whole-home-renovations)', '8–16 weeks', 'Size of the house and how much of it is renovated'],
-      ['[Home addition](/services/home-additions)', '8–16 weeks', 'Permits, foundation conditions and structural changes'],
+      ['[Bathroom renovation](/services/bathroom-renovations)', TIMELINES.bathroom.short, 'Layout changes, tile work, whether it is your only bathroom'],
+      ['[Kitchen renovation](/services/kitchen-renovations)', TIMELINES.kitchen.short, 'Cabinet delivery; counters are templated after the cabinets are set'],
+      ['[Basement development](/services/basement-renovations)', TIMELINES.basement.short, 'Size, new bedrooms or a bathroom, permits and inspections'],
+      ['[Whole-home renovation](/services/whole-home-renovations)', TIMELINES.wholeHome.short, 'Size of the house and how much of it is renovated'],
+      ['[Home addition](/services/home-additions)', TIMELINES.addition.short, 'Permits, foundation conditions and structural changes'],
     ],
     note: 'Typical ranges once permits and materials are ready. The schedule in your written quote is the one that applies to your project.',
   },

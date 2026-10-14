@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
   "heroAvifSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w",
   "ogImage": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg",
+  "schemaImages": [
+    "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x675.c60aef98.jpg",
+    "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x900.3ddb0663.jpg",
+    "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x1200.f510177c.jpg"
+  ],
   "heroAlt": "Title card: Winnipeg Renovation Show: Questions to Ask Contractors",
   "author": "",
   "reviewedBy": "",

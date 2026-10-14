@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
   "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
   "ogImage": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg",
+  "schemaImages": [
+    "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x675.84b8afe3.jpg",
+    "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x900.545f9340.jpg",
+    "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x1200.705b1c83.jpg"
+  ],
   "heroAlt": "Title graphic reading “How to Choose Between a Full Renovation / Partial Upgrade: Navigating transformation for your commercial space” over a blue-tinted office",
   "author": "",
   "reviewedBy": "",

@@ -189,11 +189,8 @@ export function headFor(path) {
 }
 
 /** The 404 page is rendered but never indexed. */
-export const NOT_FOUND_HEAD = {
-  title: 'Page Not Found | Bridgeland Builders',
-  description: 'That page does not exist. Browse our Winnipeg renovation services or get in touch for a free quote.',
-  robots: 'noindex, follow',
-};
+// The 404 page's head, shared with NotFoundPage.jsx (defined in seo.js).
+export { NOT_FOUND_HEAD } from './seo.js';
 
 /* ------------------------------------------------------- route inventory */
 const pagePaths = [

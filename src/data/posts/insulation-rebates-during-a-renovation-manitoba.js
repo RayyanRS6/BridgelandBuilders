@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.707c702f.webp 1320w",
   "heroAvifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.70228dd9.avif 1320w",
   "ogImage": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x630.5496f199.jpg",
+  "schemaImages": [
+    "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x675.6cfa8e4d.jpg",
+    "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x900.be524891.jpg",
+    "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x1200.02ae2963.jpg"
+  ],
   "heroAlt": "Title card: Insulation Rebates in Manitoba: How to Use Them During a Renovation",
   "author": "",
   "reviewedBy": "",

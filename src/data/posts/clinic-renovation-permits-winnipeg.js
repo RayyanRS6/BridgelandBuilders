@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
   "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.75e30f7c.avif 1320w",
   "ogImage": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x630.bc757f21.jpg",
+  "schemaImages": [
+    "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x675.0efdf925.jpg",
+    "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x900.c34faac9.jpg",
+    "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x1200.dfa17cad.jpg"
+  ],
   "heroAlt": "Title card: Clinic Renovation Permits in Winnipeg: What to Plan For",
   "author": "",
   "reviewedBy": "",

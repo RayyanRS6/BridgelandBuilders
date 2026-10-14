@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.cbfdceb0.webp 1320w",
   "heroAvifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.05e224cb.avif 1320w",
   "ogImage": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x630.8405f91a.jpg",
+  "schemaImages": [
+    "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x675.5357c43b.jpg",
+    "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x900.2f8d39ea.jpg",
+    "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x1200.818626f7.jpg"
+  ],
   "heroAlt": "Title card: Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist",
   "author": "",
   "reviewedBy": "",

@@ -1,19 +1,12 @@
-import { BBB_PROFILE_URL, BUSINESS_HOURS, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { REPLY_TIME, officeHoursText } from '../data/facts.js';
+import { BBB_PROFILE_URL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { CalendarIcon, CheckIcon, ClockIcon, PhoneIcon, ShieldIcon } from './icons.jsx';
 
-/** '16:30' -> '4:30 p.m.' */
-function clock(time) {
-  const [hours, minutes] = String(time).split(':').map(Number);
-  const suffix = hours < 12 ? 'a.m.' : 'p.m.';
-  // Non-breaking space, so "a.m." never wraps away from its time.
-  return `${hours % 12 || 12}:${String(minutes).padStart(2, '0')} ${suffix}`;
-}
-
-/** "Monday to Friday, 8:30 a.m. to 4:30 p.m." from BUSINESS_HOURS (the schema's hours). */
-const HOURS_TEXT = BUSINESS_HOURS.map(({ days, opens, closes }) => {
-  const span = days.length > 1 ? `${days[0]} to ${days[days.length - 1]}` : days[0];
-  return `${span}, ${clock(opens)} to ${clock(closes)}`;
-}).join('; ');
+/**
+ * "Monday to Friday, 8:30 a.m. to 4:30 p.m." from BUSINESS_HOURS (the schema's
+ * hours), with a non-breaking space so "a.m." never wraps away from its time.
+ */
+const HOURS_TEXT = officeHoursText('\u00a0');
 
 /**
  * The left column beside the booking form. `showHours` adds the office hours
@@ -42,7 +35,7 @@ export default function BookingAside({ serviceName, title, showHours = false }) 
         <li className="lead-aside-item">
           <span className="lead-aside-icon"><ClockIcon size={16} /></span>
           <div>
-            <h3>Reply within one business day</h3>
+            <h3>Reply within {REPLY_TIME}</h3>
             <p>Our team gets back to you by phone, text, or email — your pick.</p>
           </div>
         </li>

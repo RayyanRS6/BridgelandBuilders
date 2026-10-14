@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.61116791.webp 1320w",
   "heroAvifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.fc70213a.avif 1320w",
   "ogImage": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x630.05e576ee.jpg",
+  "schemaImages": [
+    "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x675.eebfa65d.jpg",
+    "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x900.7d32b40d.jpg",
+    "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x1200.0f912868.jpg"
+  ],
   "heroAlt": "Title card: Secondary Suite Rules in Winnipeg: What the City Requires",
   "author": "",
   "reviewedBy": "",

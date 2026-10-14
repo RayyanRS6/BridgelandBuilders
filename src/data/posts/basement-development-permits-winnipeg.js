@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
   "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w",
   "ogImage": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x630.e8c47488.jpg",
+  "schemaImages": [
+    "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x675.8501e4b5.jpg",
+    "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x900.98d237b8.jpg",
+    "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x1200.af60d0a3.jpg"
+  ],
   "heroAlt": "Title card: Basement Development Permits in Winnipeg: How to Apply",
   "author": "",
   "reviewedBy": "",

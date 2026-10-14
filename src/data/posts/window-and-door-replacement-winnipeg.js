@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.361346b2.webp 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.5ed3c5b7.webp 1320w",
   "heroAvifSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.ae94dcd2.avif 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.35d0a738.avif 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.9bd3384b.avif 1320w",
   "ogImage": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x630.1dd372eb.jpg",
+  "schemaImages": [
+    "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x675.cc1b63de.jpg",
+    "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x900.4f7413a8.jpg",
+    "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x1200.3ef99a95.jpg"
+  ],
   "heroAlt": "Title card: Window and Door Replacement in Winnipeg: Permits, Glass and Rebates",
   "author": "",
   "reviewedBy": "",

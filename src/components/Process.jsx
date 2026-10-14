@@ -1,8 +1,10 @@
+import { EXPERIENCE_YEARS } from '../data/facts.js';
+
 const STEPS = [
   {
     num: '01',
     title: 'Experience You Can Trust',
-    text: 'We’ve been at this a long time — more than 60 years of combined experience. We’ve done all kinds of jobs — from patching up little things to tearing down walls and starting fresh. After this many years, not much surprises us. And if something unexpected comes up — because it usually does — we sort it out and keep the project moving.',
+    text: `We’ve been at this a long time — more than ${EXPERIENCE_YEARS} years of combined experience. We’ve done all kinds of jobs — from patching up little things to tearing down walls and starting fresh. After this many years, not much surprises us. And if something unexpected comes up — because it usually does — we sort it out and keep the project moving.`,
   },
   {
     num: '02',

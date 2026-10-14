@@ -76,6 +76,10 @@ export function buildPostHead(post, body = post) {
   // Absolute, so the BlogPosting image is a full URL (the self-hosted OG files
   // are site-relative); og:image is made absolute the same way.
   const image = absolute(post.ogImage || post.hero);
+  // BlogPosting.image: the 16:9, 4:3 and 1:1 article JPEGs Google asks for
+  // (scripts/build-images.mjs), else the single og:image. og:image and the
+  // WebPage primaryImageOfPage stay the 1200x630 one.
+  const articleImages = (post.schemaImages || []).map(absolute);
   const breadcrumbs = buildBreadcrumbs([['Blog', '/blog'], [post.title, path]], path);
 
   const author = buildPersonNode(post.author);
@@ -105,7 +109,7 @@ export function buildPostHead(post, body = post) {
       '@id': `${url}#article`,
       headline: post.title,
       description: post.metaDescription,
-      image,
+      image: articleImages.length ? articleImages : image,
       datePublished: published,
       dateModified: modified,
       mainEntityOfPage: { '@id': `${url}#webpage` },

@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
   "heroAvifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w",
   "ogImage": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x630.2525769f.jpg",
+  "schemaImages": [
+    "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x675.985d980f.jpg",
+    "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x900.c6bc74eb.jpg",
+    "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x1200.22268957.jpg"
+  ],
   "heroAlt": "Title card: How Much Does a Home Renovation Cost in Canada?",
   "author": "",
   "reviewedBy": "",

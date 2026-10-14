@@ -8,7 +8,7 @@ import { formatPostDate } from '../components/BlogCard.jsx';
 import { CaseStudyCard } from './CaseStudyPage.jsx';
 import { caseStudiesForArea } from '../data/caseStudies.js';
 import { publishedServiceArea, serviceAreaSeoOptions } from '../data/serviceAreasContent.js';
-import { trailFor } from '../data/seo.js';
+import { trailFor } from '../data/trails.js';
 import { liveServices } from '../data/services.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 import { lazyWithRetry } from '../lib/lazyRetry.js';

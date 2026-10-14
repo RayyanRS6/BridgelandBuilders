@@ -16,6 +16,7 @@
  * posts. Draft pages are never prerendered or listed.
  */
 import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
+import { EXPERIENCE_YEARS, PROJECT_COUNT } from '../src/data/facts.js';
 import { SITE_FAQS } from '../src/data/faqs.js';
 import { LIVE_COST_GUIDES, PUBLISHED_POSTS, SITE_ROUTES } from '../src/data/head.js';
 import { LIVE_SERVICE_PAGES, PROJECTS } from '../src/data/projects.js';
@@ -161,7 +162,7 @@ out('llms.txt', doc(
   BUSINESS.disambiguatingDescription,
   // Experience and project count confirmed by the owner 2026-10-13 (O-2).
   `${SITE_NAME} is a service-area renovation and construction contractor based in Winnipeg, Manitoba,
-with over 60 years of combined experience and more than 100 completed projects. Quotes are free and
+with over ${EXPERIENCE_YEARS} years of combined experience and more than ${PROJECT_COUNT} completed projects. Quotes are free and
 written, every project starts with a free on-site visit, and permits and inspections are coordinated
 with the City of Winnipeg or the local municipality when a project requires them.`,
   `## Services\n${serviceLines}`,

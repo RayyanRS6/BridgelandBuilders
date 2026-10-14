@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.270da013.webp 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.ff3bbe5d.webp 1320w",
   "heroAvifSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.f7c418f1.avif 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e88bc988.avif 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.e94c26ca.avif 1320w",
   "ogImage": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x630.d9be107c.jpg",
+  "schemaImages": [
+    "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x675.09c42c75.jpg",
+    "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x900.26cc4c88.jpg",
+    "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x1200.8422ac7f.jpg"
+  ],
   "heroAlt": "Title card: What Does a General Contractor Do?",
   "author": "",
   "reviewedBy": "",

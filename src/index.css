@@ -112,7 +112,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 16px;
   background-color: var(--bg-warm);
   color: var(--text-main);
@@ -122,6 +121,14 @@ html {
      without this the page renders at a different scale than it was designed. */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+/* Smooth in-page scrolling, from the load event on (src/main.jsx adds
+   .loaded): any earlier, it cancels the browser's own jump to the #target of
+   a link such as /services/kitchen-renovations#faqs. :where() keeps the
+   weight of a plain html rule, so the reduced-motion override still wins. */
+html:where(.loaded) {
+  scroll-behavior: smooth;
 }
 
 body {

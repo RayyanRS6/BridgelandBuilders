@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
   "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w",
   "ogImage": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x630.50417805.jpg",
+  "schemaImages": [
+    "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x675.0ac85043.jpg",
+    "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x900.447bb467.jpg",
+    "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x1200.ae42b1a0.jpg"
+  ],
   "heroAlt": "Title card reading “How to Finance Section: Commercial Renovation Without Breaking the Bank” over a wooden house frame, a notebook, a calculator and rolled plans",
   "author": "",
   "reviewedBy": "",

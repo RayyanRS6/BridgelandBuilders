@@ -12,6 +12,8 @@
 // the sources listed in local.sources. The only price on the page is the
 // instant estimator's starting range (costTeaser, estimator data 2026-10-13).
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+
 export default {
   slug: 'bathroom-renovation',
   breadcrumb: 'Bathroom Renovation',
@@ -19,14 +21,14 @@ export default {
   title: 'BATHROOM RENOVATIONS',
   titleHighlight: 'IN WINNIPEG',
   subtitle:
-    'We renovate bathrooms, ensuites and powder rooms in Winnipeg and nearby communities, with the waterproofing done properly under the tile. Most bathrooms take two to three weeks from demolition to final clean.',
-  heroPoints: ['Free on-site visit', 'Free written quote', 'Most baths done in 2–3 weeks'],
+    `We renovate bathrooms, ensuites and powder rooms in Winnipeg and nearby communities, with the waterproofing done properly under the tile. Most bathrooms take ${TIMELINES.bathroom.words} from demolition to final clean.`,
+  heroPoints: ['Free on-site visit', 'Free written quote', `Most baths done in ${TIMELINES.bathroom.short}`],
 
   stats: [
-    { num: '2', unit: '–3', label: 'Weeks for a typical bathroom' },
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: String(TIMELINES.bathroom.min), unit: `–${TIMELINES.bathroom.max}`, label: 'Weeks for a typical bathroom' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed across Winnipeg' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -39,7 +41,7 @@ export default {
     paragraphs: [
       'A bathroom is a small room that punishes shortcuts. Water gets into anything you skip. A failed bathroom often looks fine on the surface — the problem started behind the tile two years earlier.',
       'So we do the boring parts properly. Backer board instead of drywall in the wet areas, a proper waterproofing membrane, a shower base sloped the way it should be, and the plumbing checked before anything gets closed up. Then we tile.',
-      'Bathrooms are also the job people live around, so we keep it tight. We protect the hallway, we clean up daily, and we don’t leave the room torn open for a month. Most Winnipeg bathrooms we do are finished in two to three weeks from demo to the last bead of silicone.',
+      `Bathrooms are also the job people live around, so we keep it tight. We protect the hallway, we clean up daily, and we don’t leave the room torn open for a month. Most Winnipeg bathrooms we do are finished in ${TIMELINES.bathroom.words} from demo to the last bead of silicone.`,
     ],
     checklist: ['Tile & Stone Showers', 'Vanities & Counters', 'Proper Waterproofing', 'Fixtures & Lighting'],
   },
@@ -132,7 +134,7 @@ export default {
 
   // No cost questions here: those live on /services/bathroom-renovations/cost.
   faqs: [
-    { q: 'How long does a bathroom renovation take?', a: 'Two to three weeks for a typical full bathroom, from demolition to the final clean. If it’s your only bathroom, tell us at the on-site visit: we plan those jobs so the toilet is back in service as early as possible, and we let you know in advance which days the water will be off.' },
+    { q: 'How long does a bathroom renovation take?', a: `${TIMELINES.bathroom.wordsCapitalized} for a typical full bathroom, from demolition to the final clean. If it’s your only bathroom, tell us at the on-site visit: we plan those jobs so the toilet is back in service as early as possible, and we let you know in advance which days the water will be off.` },
     { q: 'Can you move the toilet or shower to a different spot?', a: 'Usually, yes. It depends on where the drains and floor joists run, and on a concrete slab it means breaking and re-pouring part of the floor. At the on-site visit we’ll tell you whether the move is a small change or a bigger one, and the written quote shows what it involves.' },
     { q: 'Do you supply the tile and fixtures, or do I?', a: 'Either works. Most people choose from options we bring; some prefer to shop for their own. If you supply materials, have them on site before the start date so the schedule holds, and check the sizes with us first so the vanity, toilet and shower fit the plan.' },
     { q: 'Can you install heated floors?', a: 'Yes. A bathroom renovation is the right time to add them, since the floor is already open. The heating mat goes under the tile on its own circuit with a thermostat, and the wiring may need its own electrical permit. On a cold Winnipeg morning, a warm floor makes a real difference.' },
@@ -147,7 +149,7 @@ export default {
   seo: {
     title: 'Bathroom Renovations Winnipeg | Bridgeland Builders',
     description:
-      'Bathroom renovations in Winnipeg with proper waterproofing under the tile. Most take 2–3 weeks. Start with a free on-site visit and a written quote.',
+      `Bathroom renovations in Winnipeg with proper waterproofing under the tile. Most take ${TIMELINES.bathroom.short}. Start with a free on-site visit and a written quote.`,
     serviceType: 'Bathroom renovation',
     primaryKeyword: 'bathroom renovation Winnipeg',
     updated: '2026-10-14',

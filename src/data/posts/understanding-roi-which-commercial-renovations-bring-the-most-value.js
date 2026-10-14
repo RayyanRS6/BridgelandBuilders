@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
   "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w",
   "ogImage": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x630.5db48b4e.jpg",
+  "schemaImages": [
+    "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x675.94047c71.jpg",
+    "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x900.eec7991e.jpg",
+    "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x1200.4a4e631e.jpg"
+  ],
   "heroAlt": "Title graphic reading “Understanding ROI: Which Commercial Renovations?” over a bright furnished office beside timber framing, floor plans and hand tools",
   "author": "",
   "reviewedBy": "",
