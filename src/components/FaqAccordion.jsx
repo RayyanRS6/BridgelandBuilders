@@ -86,7 +86,10 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
       if (index === openIndex) el.removeAttribute('hidden');
       else if (el.getAttribute('hidden') !== 'until-found') el.setAttribute('hidden', 'until-found');
     });
-  }, [openIndex, items.length]);
+    // `items`, not just its length: answers are keyed by their question, so a
+    // new list of the same length (one post to another) renders new elements
+    // that need hiding too.
+  }, [openIndex, items]);
 
   // The browser fires `beforematch` on a closed answer just before it reveals
   // it for a find-in-page or #:~:text= match.
@@ -98,7 +101,7 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
       return () => el.removeEventListener('beforematch', open);
     });
     return () => listeners.forEach((remove) => remove && remove());
-  }, [items.length]);
+  }, [items]);
 
   return (
     <div className="faq-list">
