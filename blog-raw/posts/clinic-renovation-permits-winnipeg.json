@@ -6,6 +6,8 @@
   "metaDescription": "Renovating a medical, dental or physio clinic in Winnipeg? The permits, sealed drawings, X-ray approvals, accessibility rules and occupancy steps to plan.",
   "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
   "date": "2026-10-13",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-01-15",
   "cats": [
     "Commercial",
     "Permits & Planning"
@@ -45,6 +47,11 @@
       "label": "City of Winnipeg: Commercial inspections",
       "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
@@ -132,6 +139,14 @@
     {
       "t": "p",
       "x": "Part 3 and Part 9 are parts of the Manitoba Building Code; if nobody knows which applies, the City asks you to confirm before applying. Simpler work, such as partitions that leave exits and fire separations alone, can be drawn by someone other than an architect if the drawings show the scope clearly."
+    },
+    {
+      "t": "p",
+      "x": "The Part also changes the City's review times. In September 2026, permits for commercial Part 9 buildings, three storeys or less with a building area under 600 m², took an average of 6.2 business days to review, against the City's own target of 15."
+    },
+    {
+      "t": "p",
+      "x": "In Part 3 buildings that month, minor alterations with no change of use, no professionals required and no impact on life safety averaged 5.3 business days against a target of 5, and a change of use in existing tenant space averaged 6.9 against 15. That's review time, not the total time until a permit is issued."
     },
     {
       "t": "table",

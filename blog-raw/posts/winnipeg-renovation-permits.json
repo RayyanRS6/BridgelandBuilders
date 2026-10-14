@@ -6,6 +6,8 @@
   "metaDescription": "Which Winnipeg renovations need a building permit, which don’t, how development permits fit in, and what inspections to expect, checked against City pages.",
   "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
   "date": "2026-10-13",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-01-15",
   "cats": [
     "Permits & Planning"
   ],
@@ -78,6 +80,11 @@
       "label": "City of Winnipeg – Building permit application processing times",
       "url": "https://www.winnipeg.ca/building-development/permits-applications/timelines-performance/building-permit-processing-times",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg – Permits Online",
@@ -303,7 +310,11 @@
     },
     {
       "t": "p",
-      "x": "There’s no single number. The City publishes building permit processing times, measured in average business days to confirm a complete application and to reach a decision. Incomplete applications are delayed, so complete, dimensioned drawings are the part of the timeline you control."
+      "x": "In September 2026, the City of Winnipeg took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against the City’s own target of 10 business days. Housing permits where one dwelling is stacked above another, such as a house over a basement suite, averaged 13 business days that month, against a target of 15."
+    },
+    {
+      "t": "p",
+      "x": "That’s review time, the time the City takes to reach a decision on an application, not the total time until a permit is issued. The City separately tracks how long it takes to confirm that an application is complete, and incomplete applications are delayed, so complete, dimensioned drawings are the part of the timeline you control."
     },
     {
       "t": "h2",
@@ -347,7 +358,7 @@
     },
     {
       "t": "p",
-      "x": "Permit questions are easier to answer with the space in front of you, whether you’re planning a [kitchen renovation](/services/kitchen-renovations), a [bathroom renovation](/services/bathroom-renovations) or an [addition](/services/home-additions). Every project starts with a free on-site visit and a free written quote, so [book your visit](/book-online), or get a starting range first with our [instant estimate](/instant-quote). For budgets, see the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      "x": "Permit questions are easier to answer with the space in front of you, whether you’re planning a [kitchen remodel](/services/kitchen-renovations), a [bathroom renovation](/services/bathroom-renovations) or an [addition](/services/home-additions). Every project starts with a free on-site visit and a free written quote, so [book your visit](/book-online), or get a starting range first with our [instant estimate](/instant-quote). For budgets, see [typical Winnipeg price ranges](/renovation-cost-winnipeg)."
     }
   ]
 }
