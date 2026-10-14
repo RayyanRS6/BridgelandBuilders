@@ -116,6 +116,7 @@ export const CODE_TITLES = {
   'keywords.primary-not-in-title': 'Primary keyword words missing from <title>',
   'keywords.primary-not-in-h1': 'Primary keyword words missing from <h1>',
   'keywords.page-not-live': 'Keyword map page not live yet',
+  'keywords.blocked-holds-keywords': 'Blocked keyword map page still lists keywords',
   'keywords.status-mismatch': 'Keyword map status disagrees with the prerendered routes',
   'keywords.fallback-unknown': 'GBP-only keyword falls back to an unknown page',
   'keywords.skipped': 'Keyword map checks skipped',

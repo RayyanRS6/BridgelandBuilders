@@ -21,7 +21,8 @@
  *          and source dates, keyword map, readability, JS budgets, service
  *          timelines that disagree with src/data/facts.js (fact drift).
  *   INFO   accepted interim states (Wix-hosted images until the migration,
- *          307 interim redirects, planned pages not live yet).
+ *          307 interim redirects, planned pages not live yet; keyword-map
+ *          pages with status "blocked" are never built and are skipped).
  *
  * Output: a grouped console report and dist-ssr/audit.json.
  * Exit code: 0, unless --strict is passed and there is at least one ERROR.

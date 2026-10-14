@@ -15,6 +15,7 @@
     "redirects": "node scripts/sync-redirects.mjs",
     "check:redirects": "node scripts/check-redirects.mjs",
     "check:history": "node scripts/check-history.mjs",
+    "check:prices": "node scripts/check-estimator-prices.mjs",
     "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
     "images": "node scripts/build-images.mjs",
     "images:fetch": "node scripts/fetch-legacy-images.mjs",

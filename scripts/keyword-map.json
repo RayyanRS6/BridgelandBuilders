@@ -13,12 +13,15 @@
     },
     "status": {
       "live": "URL is a prerendered route today",
-      "planned": "URL does not exist yet; ships per plan sections 5 and 9"
+      "planned": "URL does not exist yet; ships per plan sections 5 and 9",
+      "blocked": "URL can never truthfully exist as planned (`reason` says why); its keywords live on other pages (`keywordsMovedTo`), so the entry holds none and the audit skips it"
     },
     "optionalFields": {
       "ownerConfirms": "keywords marked * in plan section 6: use only once the owner confirms that work. A flag on keywords already assigned on the same page, not a second assignment",
       "currentUrl": "where the content lives today, before the planned URL replaces it",
       "interimFallback": "gbpOnly: page to use while the planned fallback page is not live",
+      "reason": "blocked pages: why the URL cannot exist",
+      "keywordsMovedTo": "blocked pages: where each of its former keywords is now assigned",
       "note": "copy instruction from the plan"
     }
   },
@@ -105,9 +108,12 @@
         "renovation contingency budget",
         "affordable home renovation Winnipeg",
         "renovation financing Winnipeg",
-        "home renovation cost"
+        "home renovation cost",
+        "whole home renovation cost Winnipeg",
+        "home addition cost Winnipeg",
+        "house extension cost Winnipeg"
       ],
-      "note": "renovation financing Winnipeg is an explainer only, no financing offer; prices are the estimator's own starting ranges (published 2026-10-13); owner sign-off pending"
+      "note": "renovation financing Winnipeg is an explainer only, no financing offer; prices are the estimator's own starting ranges (published 2026-10-13); owner sign-off pending. Whole-home / addition / house-extension cost terms moved here 2026-10-15 from the blocked /cost spokes: they sit in the #priced-after-a-visit H3s, drivers only, never a number"
     },
     "/services/kitchen-renovations": {
       "status": "live",
@@ -344,11 +350,12 @@
       ]
     },
     "/services/whole-home-renovations/cost": {
-      "status": "planned",
-      "primary": ["whole home renovation cost Winnipeg"],
+      "status": "blocked",
+      "primary": [],
       "secondary": [],
       "supporting": [],
-      "note": "data-gated on owner input O-3"
+      "reason": "No price source: the public estimator (the only price data) has no whole-home service and the owner will not supply price data, so a cost page could only invent numbers (2026-10-15).",
+      "keywordsMovedTo": { "whole home renovation cost Winnipeg": "/renovation-cost-winnipeg supporting (#priced-after-a-visit H3)" }
     },
     "/services/home-additions": {
       "status": "live",
@@ -371,11 +378,15 @@
       "note": "renamed from /services/home-extensions (308, plan D6); project slug home-extension and the estimator param unchanged"
     },
     "/services/home-additions/cost": {
-      "status": "planned",
-      "primary": ["home addition cost Winnipeg"],
-      "secondary": ["house extension cost Winnipeg"],
+      "status": "blocked",
+      "primary": [],
+      "secondary": [],
       "supporting": [],
-      "note": "data-gated on owner input O-3"
+      "reason": "No price source: the public estimator (the only price data) has no additions service and the owner will not supply price data, so a cost page could only invent numbers (2026-10-15).",
+      "keywordsMovedTo": {
+        "home addition cost Winnipeg": "/renovation-cost-winnipeg supporting (#priced-after-a-visit H3)",
+        "house extension cost Winnipeg": "/renovation-cost-winnipeg supporting (#priced-after-a-visit H3)"
+      }
     },
     "/services/commercial-renovations": {
       "status": "live",
@@ -410,15 +421,17 @@
       "note": "commercial construction Winnipeg is interior work only; commercial property renovation Winnipeg goes under a property-managers H2"
     },
     "/services/commercial-renovations/cost": {
-      "status": "planned",
-      "primary": ["commercial renovation cost Winnipeg"],
-      "secondary": [
-        "office renovation cost Winnipeg",
-        "restaurant renovation cost Winnipeg",
-        "retail renovation cost Winnipeg"
-      ],
+      "status": "blocked",
+      "primary": [],
+      "secondary": [],
       "supporting": [],
-      "note": "secondaries map to the #office, #restaurant and #retail sections; data-gated on owner input O-3"
+      "reason": "No price source: the public estimator (the only price data) has no commercial service and the owner will not supply price data, so a cost page could only invent numbers (2026-10-15).",
+      "keywordsMovedTo": {
+        "commercial renovation cost Winnipeg": "/blog/the-biggest-cost-factors-in-commercial-renovation-projects secondary",
+        "office renovation cost Winnipeg": "/blog/the-biggest-cost-factors-in-commercial-renovation-projects secondary",
+        "restaurant renovation cost Winnipeg": "/blog/the-biggest-cost-factors-in-commercial-renovation-projects secondary",
+        "retail renovation cost Winnipeg": "/blog/the-biggest-cost-factors-in-commercial-renovation-projects secondary"
+      }
     },
     "/services/office-renovations": {
       "status": "live",
@@ -682,7 +695,7 @@
       "primary": ["how much should an ensuite renovation cost"],
       "secondary": [],
       "supporting": [],
-      "note": "new post 2026-10-13 (no prices: links the bathroom cost guide); ensuite renovation Winnipeg stays supporting on the bathroom page; writer pick (validate volume)"
+      "note": "new post 2026-10-13; answer quotes the bathroom estimator ranges since 2026-10-15 (checked by npm run check:prices) and links the bathroom cost guide; ensuite renovation Winnipeg stays supporting on the bathroom page; writer pick (validate volume)"
     },
     "/blog/window-and-door-replacement-winnipeg": {
       "status": "live",
@@ -771,9 +784,14 @@
     "/blog/the-biggest-cost-factors-in-commercial-renovation-projects": {
       "status": "live",
       "primary": ["commercial renovation cost factors"],
-      "secondary": [],
+      "secondary": [
+        "commercial renovation cost Winnipeg",
+        "office renovation cost Winnipeg",
+        "restaurant renovation cost Winnipeg",
+        "retail renovation cost Winnipeg"
+      ],
       "supporting": [],
-      "note": "post #13, rewritten in place 2026-10-13 (#6 and #9 redirect here); writer pick (validate volume)"
+      "note": "post #13, rewritten in place 2026-10-13 (#6 and #9 redirect here); writer pick (validate volume). Secondaries moved here 2026-10-15 from the blocked /services/commercial-renovations/cost: cost drivers only, never a number (the estimator has no commercial data)"
     }
   },
   "gbpOnly": [
