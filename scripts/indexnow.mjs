@@ -10,7 +10,9 @@
  *
  * Changed URLs = sitemap entries that are new or whose <lastmod> changed,
  * sitemap entries that were removed (so engines see the 404/redirect), and
- * redirect sources in vercel.json that are new or now point somewhere else.
+ * redirect sources in vercel.json that are new or now point somewhere else
+ * (on-site destinations only: off-site short links such as /review are not
+ * sent).
  * Both files are read from git, so this needs a checkout with the two commits
  * (fetch-depth: 2 in .github/workflows/post-deploy.yml).
  *
@@ -55,12 +57,26 @@ function sitemapEntries(xml) {
   return entries;
 }
 
-/** Map of literal redirect source -> destination from vercel.json text. */
-function redirectEntries(json) {
+/**
+ * Map of literal redirect source -> destination from vercel.json text. Rules
+ * whose destination is off-site (the /review short links to Google) are
+ * skipped: those URLs never lead to a page of this site.
+ */
+function redirectEntries(json, siteHosts) {
   const map = new Map();
+  const [first] = siteHosts;
+  const onSite = (destination) => {
+    try {
+      return siteHosts.has(new URL(String(destination), `https://${first}`).host);
+    } catch {
+      return false;
+    }
+  };
   try {
     for (const rule of JSON.parse(json || '{}').redirects || []) {
-      if (typeof rule.source === 'string' && !/[:*()?+{}\\]/.test(rule.source)) map.set(rule.source, `${rule.destination}|${rule.permanent}`);
+      if (typeof rule.source === 'string' && !/[:*()?+{}\\]/.test(rule.source) && onSite(rule.destination)) {
+        map.set(rule.source, `${rule.destination}|${rule.permanent}`);
+      }
     }
   } catch {
     /* unreadable vercel.json: no redirect URLs */
@@ -77,13 +93,15 @@ function findKey() {
   return null;
 }
 
-async function siteUrl(fallbackFrom) {
-  try {
-    const { SITE_URL } = await import(pathToFileURL(join(ROOT, 'src', 'data', 'siteConfig.js')).href);
-    if (SITE_URL) return SITE_URL.replace(/\/+$/, '');
-  } catch {
-    /* fall back to the sitemap's own host */
-  }
+let siteConfig = {};
+try {
+  siteConfig = await import(pathToFileURL(join(ROOT, 'src', 'data', 'siteConfig.js')).href);
+} catch {
+  /* fall back to the sitemap's own host */
+}
+
+function siteUrl(fallbackFrom) {
+  if (siteConfig.SITE_URL) return siteConfig.SITE_URL.replace(/\/+$/, '');
   const first = fallbackFrom.keys().next().value;
   return first ? new URL(first).origin : null;
 }
@@ -91,12 +109,16 @@ async function siteUrl(fallbackFrom) {
 const headSitemap = sitemapEntries(gitShow(HEAD, 'public/sitemap.xml') ?? readFileSync(join(ROOT, 'public', 'sitemap.xml'), 'utf8'));
 const baseSitemapXml = ALL ? null : gitShow(BASE, 'public/sitemap.xml');
 const baseSitemap = sitemapEntries(baseSitemapXml);
-const SITE = await siteUrl(headSitemap);
+const SITE = siteUrl(headSitemap);
 if (!SITE) {
   console.error('[indexnow] no site URL (siteConfig.js or sitemap) — nothing sent');
   process.exit(1);
 }
 const host = new URL(SITE).host;
+// Redirect destinations on these hosts lead to a page of this site
+// (sync-redirects writes legacy destinations on the canonical apex).
+const SITE_HOSTS = new Set([host]);
+if (siteConfig.CANONICAL_SITE_URL) SITE_HOSTS.add(new URL(siteConfig.CANONICAL_SITE_URL).host);
 
 const urls = new Set();
 for (const [loc, lastmod] of headSitemap) {
@@ -104,8 +126,8 @@ for (const [loc, lastmod] of headSitemap) {
 }
 if (!ALL) {
   for (const loc of baseSitemap.keys()) if (!headSitemap.has(loc)) urls.add(loc);
-  const headRedirects = redirectEntries(gitShow(HEAD, 'vercel.json'));
-  const baseRedirects = redirectEntries(gitShow(BASE, 'vercel.json'));
+  const headRedirects = redirectEntries(gitShow(HEAD, 'vercel.json'), SITE_HOSTS);
+  const baseRedirects = redirectEntries(gitShow(BASE, 'vercel.json'), SITE_HOSTS);
   for (const [source, target] of headRedirects) {
     if (baseRedirects.get(source) !== target) urls.add(`${SITE}${source}`);
   }

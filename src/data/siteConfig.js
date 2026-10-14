@@ -198,12 +198,15 @@ export const BBB_PROFILE_URL =
   'https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638';
 
 // Google Business Profile, confirmed by the owner 2026-10-13 (same listing:
-// ludocid 6390477049138999065). reviewUrl stays null until the owner supplies
-// the "Ask for reviews" link from the profile.
+// ludocid 6390477049138999065). reviewUrl is Google's write-a-review form for
+// placeId; the Place ID embeds that same CID (its last 8 bytes, little-endian,
+// checked 2026-10-15). Not shown on the site: /review and /reviews redirect
+// here (EXTERNAL_REDIRECTS in src/data/redirects.js) for QR codes, texts and
+// email signatures.
 export const GBP = {
   mapsUrl: 'https://maps.google.com/?cid=6390477049138999065',
   placeId: 'ChIJx06HPnAAgmoRGW83mwSJr1g',
-  reviewUrl: null,
+  reviewUrl: 'https://search.google.com/local/writereview?placeid=ChIJx06HPnAAgmoRGW83mwSJr1g',
 };
 
 // Google review summary, read from the live profile (update monthly, plan §20).

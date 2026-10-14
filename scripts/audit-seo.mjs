@@ -180,7 +180,7 @@ const SITE_URL = String(siteConfig.SITE_URL || 'https://bridgelandbuilders.com')
 // case studies, videos and posts) that the prerender used.
 const headModel = await importGuarded('src/data/head.js', ['SEO_ENTRIES']);
 const seo = await importGuarded('src/data/seo.js', ['PAGE_SEO', 'SERVICE_SEO', 'NOINDEX_ROUTES']);
-const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS']);
+const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS'], ['EXTERNAL_REDIRECTS']);
 const blogModule = await importGuarded('src/data/blogPosts.js', ['BLOG_POSTS'], ['BLOG_REDIRECTS']);
 const facts = await importGuarded('src/data/facts.js', ['TIMELINES']);
 
@@ -932,6 +932,10 @@ if (robotsTxt == null) {
 /* ----------------------------------------------------------- redirects */
 if (vercelConfig) {
   if (!REDIRECTS.length) report.warn('redirects.missing-config', null, 'vercel.json has no redirects — legacy Wix URLs still 404 (plan §1)');
+  // Short links to Google (src/data/redirects.js EXTERNAL_REDIRECTS): off-site
+  // on purpose, so their destination is not a route of this site.
+  const external = normaliseRedirectList(redirectsModule.EXTERNAL_REDIRECTS);
+  const externalBySource = new Map(external.map((e) => [cleanPath(unescapeSource(e.from)), e]));
   const literalSeen = new Map();
   const patternSeen = new Map();
   for (const r of REDIRECTS) {
@@ -969,7 +973,9 @@ if (vercelConfig) {
       continue;
     }
     if (!target.internal) {
-      report.warn('redirects.destination', null, `${label} — destination is off-site`);
+      const declared = r.literal && !r.hasConditions ? externalBySource.get(r.literal) : null;
+      if (declared && declared.to === dest) report.info('redirects.external', r.literal, `${label} (${r.status}) — short link declared in EXTERNAL_REDIRECTS`);
+      else report.warn('redirects.destination', null, `${label} — destination is off-site`);
       continue;
     }
     if (/[?&]category=/.test(target.query)) report.warn('redirects.destination', target.path, `${label} — destination carries ?category=`);
@@ -1015,8 +1021,16 @@ if (vercelConfig) {
     const from = cleanPath(unescapeSource(entry.from));
     if (!redirectSourceMatches(from).length) report.error('redirects.blog-not-redirected', from, `retired post (BLOG_REDIRECTS -> ${entry.to || '?'}) has no vercel.json redirect`);
   }
+  // Short links: the vercel.json rule must carry the same absolute destination.
+  for (const [from, entry] of externalBySource) {
+    const rule = REDIRECTS.find((r) => !r.hasConditions && r.literal === from);
+    if (!rule) report.error('redirects.not-synced', from, `in src/data/redirects.js EXTERNAL_REDIRECTS but not in vercel.json (run scripts/sync-redirects.mjs)`);
+    else if (rule.destination !== entry.to || rule.status !== 307) {
+      report.error('redirects.not-synced', from, `vercel.json has ${rule.status} -> ${rule.destination}, EXTERNAL_REDIRECTS says 307 -> ${entry.to} (run scripts/sync-redirects.mjs)`);
+    }
+  }
   if (Array.isArray(redirectsModule.REDIRECTS) || (redirectsModule.REDIRECTS && typeof redirectsModule.REDIRECTS === 'object')) {
-    const known = new Set([...managed, ...blogRedirects].map((e) => (isPatternSource(e.from) ? unescapeSource(e.from) : cleanPath(unescapeSource(e.from)))));
+    const known = new Set([...managed, ...blogRedirects, ...external].map((e) => (isPatternSource(e.from) ? unescapeSource(e.from) : cleanPath(unescapeSource(e.from)))));
     for (const r of REDIRECTS) {
       if (r.hasConditions) continue;
       const key = r.literal || unescapeSource(r.source);

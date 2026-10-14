@@ -21,12 +21,18 @@
  *     whole rule temporary) and rejects loops;
  *   - errors: duplicate or malformed sources, a source that is a live route
  *     (static page, live service or published blog post), a wildcard that
- *     swallows a live route or a LEAVE_404 URL, an off-site destination;
+ *     swallows a live route or a LEAVE_404 URL, an off-site destination on a
+ *     legacy rule; for EXTERNAL_REDIRECTS (short links to Google), a
+ *     destination that is not an absolute https URL on EXTERNAL_HOSTS, or a
+ *     source that is live, in LEAVE_404, matched by a legacy rule or the
+ *     destination of one;
  *   - warnings: destinations that are not a known route or file, destinations
  *     that are noindex, sources still listed in a stale prerender-routes.json,
  *     interim (307) rules older than 45 days;
  *   - writes absolute apex destinations (CANONICAL_SITE_URL + path), explicit
- *     rules first, then wildcard rules, then the whole-host rules
+ *     rules first, then the EXTERNAL_REDIRECTS short links (verbatim, always
+ *     temporary 307, no chain resolution), then wildcard rules, then the
+ *     whole-host rules
  *     (HOST_REDIRECTS: every path on e.g. the public vercel.app alias -> the
  *     same path on the apex), and leaves every other part of vercel.json
  *     exactly as it was. Absolute destinations mean a legacy URL requested on
@@ -50,6 +56,9 @@ const PRERENDER_ROUTES = new URL('prerender-routes.json', ROOT);
 
 // Files served from public/ that a redirect may legitimately point at.
 const STATIC_FILES = ['/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'];
+// The only hosts an EXTERNAL_REDIRECTS short link may send visitors to
+// (Google Business Profile: review form, Maps listing, g.page short links).
+export const EXTERNAL_HOSTS = new Set(['search.google.com', 'maps.google.com', 'www.google.com', 'g.page']);
 const STALE_INTERIM_DAYS = 45;
 const EVIDENCE = new Set(['W', 'S', 'A']);
 
@@ -168,10 +177,28 @@ export const hostRulesToVercel = (hostRules = []) =>
     permanent: true,
   }));
 
-export const toVercelRules = (rules, hostRules = []) => [
-  ...orderRules(rules).map((r) => ({ source: r.from, destination: absoluteDestination(r.to), permanent: !r.temporary })),
-  ...hostRulesToVercel(hostRules),
-];
+/**
+ * Vercel rules for EXTERNAL_REDIRECTS: the absolute destination verbatim,
+ * always temporary (307) so a short link can be repointed later.
+ */
+export const externalRulesToVercel = (externalRules = []) =>
+  externalRules.map((r) => ({ source: r.from, destination: r.to, permanent: false }));
+
+/**
+ * Explicit legacy rules (file order), the external short links, wildcard
+ * legacy rules (file order), then the whole-host rules. Every literal source
+ * comes before every pattern, so a wildcard can never shadow one.
+ */
+export const toVercelRules = (rules, hostRules = [], externalRules = []) => {
+  const legacy = (r) => ({ source: r.from, destination: absoluteDestination(r.to), permanent: !r.temporary });
+  const ordered = orderRules(rules);
+  return [
+    ...ordered.filter((r) => !isPattern(r.from)).map(legacy),
+    ...externalRulesToVercel(externalRules),
+    ...ordered.filter((r) => isPattern(r.from)).map(legacy),
+    ...hostRulesToVercel(hostRules),
+  ];
+};
 
 /** One line per rule, for --check (host condition included). */
 export const ruleKey = (r) =>
@@ -407,6 +434,48 @@ export function validateHostRules(hostRules) {
 }
 
 /**
+ * EXTERNAL_REDIRECTS: a literal short path each, sent to an absolute https URL
+ * on EXTERNAL_HOSTS. The source must not be a live page, a LEAVE_404 URL or a
+ * legacy rule's source (wildcards included), and no legacy rule may point at
+ * it (a legacy URL must never chain off-site).
+ */
+export function validateExternalRules(externalRules, rules, resolved, known, leave404) {
+  const errors = [];
+  const seen = new Set();
+  externalRules.forEach((rule, i) => {
+    const from = rule && rule.from;
+    const where = `EXTERNAL_REDIRECTS #${i + 1} ${from}`;
+    if (typeof from !== 'string' || isPattern(from) || !LITERAL_RE.test(from) || from === '/') {
+      errors.push(`${where}: "from" must be a lowercase literal path without trailing slash, query or hash`);
+      return;
+    }
+    if (seen.has(from)) errors.push(`${where}: duplicate source`);
+    seen.add(from);
+
+    let url = null;
+    try {
+      url = new URL(rule.to);
+    } catch {
+      /* reported below */
+    }
+    if (!url || url.protocol !== 'https:' || /\s/.test(rule.to)) {
+      errors.push(`${where}: "to" must be an absolute https URL`);
+    } else if (!EXTERNAL_HOSTS.has(url.host)) {
+      errors.push(`${where}: destination host ${url.host} is not one of ${[...EXTERNAL_HOSTS].join(', ')}`);
+    }
+
+    if (known.live.has(from)) errors.push(`${where}: source is a live page`);
+    const legacy = rules.find((r) => typeof r.from === 'string' && sourceToRegExp(r.from).test(from));
+    if (legacy) errors.push(`${where}: source is also matched by legacy redirect ${legacy.from}`);
+    const into = resolved.find((r) => typeof r.to === 'string' && pathOnly(r.to) === from);
+    if (into) errors.push(`${where}: legacy redirect ${into.from} points at this short link (would chain off-site)`);
+    const kept = leave404.find((path) => sourceToRegExp(path).test(from));
+    if (kept) errors.push(`${where}: matches LEAVE_404 ${kept}`);
+  });
+  return errors;
+}
+
+/**
  * Vercel compiles every vercel.json `source` (redirects, rewrites, headers)
  * with path-to-regexp, which rejects a capturing group inside a custom (...)
  * group ("Capturing groups are not allowed") and fails the whole deployment.
@@ -445,12 +514,13 @@ async function main() {
   const checkOnly = args.has('--check');
   const allowLivePosts = args.has('--allow-live-posts');
 
-  const { REDIRECTS, HOST_REDIRECTS = [], LEAVE_404 = [] } = await import('../src/data/redirects.js');
+  const { REDIRECTS, HOST_REDIRECTS = [], EXTERNAL_REDIRECTS = [], LEAVE_404 = [] } = await import('../src/data/redirects.js');
   const known = DEFAULT_KNOWN;
   const effective = applyPlanned(REDIRECTS, known.isLive);
   const resolved = resolveRedirects(REDIRECTS, known.isLive);
   const { errors, warnings } = validate(REDIRECTS, effective, resolved, known, LEAVE_404, { allowLivePosts });
   errors.push(...validateHostRules(HOST_REDIRECTS));
+  errors.push(...validateExternalRules(EXTERNAL_REDIRECTS, REDIRECTS, resolved, known, LEAVE_404));
 
   for (const w of warnings) console.warn(`[redirects] warning: ${w}`);
   if (errors.length) {
@@ -459,7 +529,7 @@ async function main() {
     process.exit(1);
   }
 
-  const vercelRules = toVercelRules(resolved, HOST_REDIRECTS);
+  const vercelRules = toVercelRules(resolved, HOST_REDIRECTS, EXTERNAL_REDIRECTS);
   const current = readFileSync(VERCEL_JSON, 'utf8');
   const patternErrors = sourcePatternErrors({ ...JSON.parse(current), redirects: vercelRules });
   if (patternErrors.length) {
@@ -475,7 +545,7 @@ async function main() {
   const plannedFinal = effective.filter((r) => r.state === 'final').length;
   const plannedInterim = effective.filter((r) => r.state === 'interim').length;
   const plannedPending = REDIRECTS.filter((r) => r.planned).length - plannedFinal - plannedInterim;
-  const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard, ${hostWide} whole-host; ${chained} chain(s) collapsed; planned: ${plannedFinal} live, ${plannedInterim} interim, ${plannedPending} pending)`;
+  const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard, ${EXTERNAL_REDIRECTS.length} external, ${hostWide} whole-host; ${chained} chain(s) collapsed; planned: ${plannedFinal} live, ${plannedInterim} interim, ${plannedPending} pending)`;
 
   if (checkOnly) {
     // Compare the redirect rules, not the file's text: Vercel's build rewrites

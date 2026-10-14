@@ -210,6 +210,8 @@
     { "source": "/post/which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners", "destination": "https://bridgelandbuilders.com/blog/which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners", "permanent": true },
     { "source": "/post/mastering-general-contracting-tips-for-your-next-project", "destination": "https://bridgelandbuilders.com/blog/what-does-a-general-contractor-do", "permanent": true },
     { "source": "/post/essential-design-strategies-for-small-kitchen-renovations", "destination": "https://bridgelandbuilders.com/blog/essential-design-strategies-for-small-kitchen-renovations", "permanent": true },
+    { "source": "/review", "destination": "https://search.google.com/local/writereview?placeid=ChIJx06HPnAAgmoRGW83mwSJr1g", "permanent": false },
+    { "source": "/reviews", "destination": "https://maps.google.com/?cid=6390477049138999065", "permanent": false },
     { "source": "/service-page/:path*", "destination": "https://bridgelandbuilders.com/services", "permanent": true },
     { "source": "/booking-calendar/:path*", "destination": "https://bridgelandbuilders.com/book-online", "permanent": true },
     { "source": "/blog/categories/:path*", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
