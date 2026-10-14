@@ -310,7 +310,11 @@
     },
     {
       "t": "p",
-      "x": "In September 2026, the City of Winnipeg took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against the City’s own target of 10 business days. Housing permits where one dwelling is stacked above another, such as a house over a basement suite, averaged 13 business days that month, against a target of 15."
+      "x": "In September 2026, the City of Winnipeg took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against the City’s own target of 10 business days."
+    },
+    {
+      "t": "p",
+      "x": "Housing permits where one dwelling is stacked above another, such as a house over a basement suite, averaged 13 business days that month, against a target of 15."
     },
     {
       "t": "p",

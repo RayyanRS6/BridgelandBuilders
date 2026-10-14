@@ -2753,6 +2753,13 @@
   color: var(--accent-red);
 }
 
+/* On the dark intro panels links are white (.why-paragraphs, index.css); red
+   would be about 2.4:1 on that dark, so they hover to the light sea green the
+   dark panels already use for their tags. */
+.why-paragraphs .blog-inline-link:hover {
+  color: #8ed2dc;
+}
+
 /* Quick answer: the takeaways box with a paragraph instead of a list. */
 .blog-answer p {
   margin: 0;

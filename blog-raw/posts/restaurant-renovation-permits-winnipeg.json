@@ -159,7 +159,11 @@
     },
     {
       "t": "p",
-      "x": "For Part 3 buildings, the City's open data shows it took an average of 5.3 business days in September 2026 to review minor alterations with no change of use, no professionals required and no impact on life safety, against its own target of 5, and 6.9 business days for a change of use in existing tenant space with multiple professionals involved, against a target of 15; that's review time, not the total time until a permit is issued."
+      "x": "For Part 3 buildings, the City's open data shows it took an average of 5.3 business days in September 2026 to review minor alterations with no change of use, no professionals required and no impact on life safety, against its own target of 5."
+    },
+    {
+      "t": "p",
+      "x": "A change of use in existing tenant space with multiple professionals involved averaged 6.9 business days that month, against a target of 15. That's review time, not the total time until a permit is issued."
     },
     {
       "t": "h2",
