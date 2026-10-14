@@ -38,9 +38,9 @@ export default {
     floatingText: 'The schedule starts from your move-in date and works backwards.',
     paragraphs: [
       'An office renovation reworks a workspace around how your team works now: private offices, meeting rooms, open work areas, a staff kitchen, washrooms, lighting, power and data. In a leased unit it’s usually called a fit-up or tenant improvement, and work regulated by the building code needs a City of Winnipeg building permit.',
-      'The lease drives the schedule. Your move-in date, any free-rent period and, in many leases, the landlord’s approval of your plans all set how much time there is to build. Bring the lease to the site visit and we’ll plan from those dates.',
+      '[The lease drives the schedule](/blog/office-fit-up-lease-planning-winnipeg). Your move-in date, any free-rent period and, in many leases, the landlord’s approval of your plans all set how much time there is to build. Bring the lease to the site visit and we’ll plan from those dates.',
       'If your team stays in the space during the work, we split it into phases and schedule the loud work, such as demolition and cutting, for evenings and weekends where the City’s noise rules allow. You get a progress update every week, so you can tell everyone in the company what’s happening next.',
-      'Already have drawings from an architect or interior designer? We build to supplied drawings. If you don’t, start with the site visit: we’ll talk through the layout and tell you whether the City is likely to ask for professional drawings for your scope.',
+      'Already have drawings from an architect or interior designer? [We build to supplied drawings](/services/general-contracting). If you don’t, start with the site visit: we’ll talk through the layout and tell you whether the City is likely to ask for professional drawings for your scope.',
     ],
     checklist: ['Tenant Fit-Ups', 'Meeting Rooms & Offices', 'Partitions & Ceilings', 'Lighting, Power & Data'],
   },
@@ -50,12 +50,12 @@ export default {
     title: 'What an Office Renovation Covers',
     desc: 'The full fit-up. Only need part of it, like new finishes or two more meeting rooms? Say so and we’ll scope just that.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you and your lease, counting desks and rooms, and writing a scope you can check against your plans.' },
-      { num: '02', title: 'Demolition & Partitions', text: 'Taking out old walls and building new office partitions, doors and demising walls, with fire separations kept intact.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you and your lease, counting desks and rooms, and [writing a scope you can check against your plans](/our-process).' },
+      { num: '02', title: 'Demolition & Partitions', text: '[Taking out old walls](/services/demolition) and building new office partitions, doors and demising walls, with fire separations kept intact.' },
       { num: '03', title: 'Ceilings & Lighting', text: 'T-bar or drywall ceilings, with lighting and controls laid out for the new desks and meeting tables rather than the old floor plan.' },
       { num: '04', title: 'Power, Data & HVAC', text: 'Outlets and data runs where people actually sit, plus HVAC changes so new rooms aren’t too hot or too cold.' },
       { num: '05', title: 'Kitchens & Washrooms', text: 'Staff kitchens and washrooms rebuilt with durable finishes and accessible layouts that meet the Manitoba Building Code.' },
-      { num: '06', title: 'Finishes & Millwork', text: 'Flooring, paint, reception desks and built-in storage that carry your brand and stand up to daily office use.' },
+      { num: '06', title: 'Finishes & Millwork', text: '[Flooring](/services/flooring), paint, reception desks and built-in storage that carry your brand and stand up to daily office use.' },
     ],
   },
 

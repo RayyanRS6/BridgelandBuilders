@@ -47,25 +47,25 @@ export default {
   typesTag: 'Flooring Types',
   typesTitle: 'Which flooring works where?',
   typesDesc:
-    'Choose for the room’s conditions first and the look second. Kitchens, bathrooms and entries need water resistance, basements need products rated for concrete below grade, and busy commercial floors need a wear rating that matches the traffic. We recommend options for each room at the on-site visit, and you choose.',
+    'Choose for the room’s conditions first and the look second. Kitchens, bathrooms and entries need water resistance, basements need products rated for concrete below grade, and busy commercial floors need a wear rating that matches the traffic. We recommend options for each room at [the on-site visit](/our-process), and you choose.',
   types: [
     { title: 'Luxury Vinyl Plank & Tile', text: 'Water-resistant and comfortable underfoot, which makes it a practical choice for kitchens, basements and busy family areas.' },
     { title: 'Laminate', text: 'A hard-wearing, budget-friendly wood look for living areas and bedrooms. Keep it away from standing water.' },
     { title: 'Engineered & Solid Hardwood', text: 'Real wood for main floors. Engineered boards cope with seasonal humidity swings better than solid wood, and some products are rated for concrete.' },
     { title: 'Tile', text: 'Porcelain and ceramic tile for bathrooms, entries and kitchens, set on a flat, stiff base so the tile and grout don’t crack.' },
     { title: 'Basement Floors', text: 'Products rated for below-grade concrete, installed over a moisture-control layer where the slab calls for one.' },
-    { title: 'Commercial Flooring', text: 'Commercial flooring renovation for offices, clinics, shops and restaurants, phased or scheduled after hours so you can stay open.' },
+    { title: 'Commercial Flooring', text: 'Commercial flooring renovation for [offices, clinics, shops and restaurants](/services/commercial-renovations), phased or scheduled after hours so you can stay open.' },
   ],
 
   local: {
     tag: 'In Winnipeg',
     title: 'What should you check before new flooring goes down?',
     intro:
-      'Three things: the subfloor, moisture and what is in the old floor. In Winnipeg, flooring on its own doesn’t need a building permit, but basement slabs need a moisture check first and older tile or adhesive may need an asbestos test before it is torn out. Here is what the official guidance says.',
+      'Three things: the subfloor, moisture and what is in the old floor. In Winnipeg, [flooring on its own doesn’t need a building permit](/blog/winnipeg-renovation-permits), but basement slabs need a moisture check first and older tile or adhesive may need an asbestos test before it is torn out. Here is what the official guidance says.',
     items: [
-      { title: 'No Permit for Flooring Alone', text: 'The City of Winnipeg treats flooring as a cosmetic change with no building permit. A basement development or larger renovation around it may need one.' },
+      { title: 'No Permit for Flooring Alone', text: 'The City of Winnipeg treats flooring as a cosmetic change with no building permit. [A basement development](/services/basement-renovations) or larger renovation around it may need one.' },
       { title: 'Test the Basement Slab', text: 'Natural Resources Canada suggests taping plastic about 1 m square to the slab. Condensation under it means moisture is rising from the ground; on top, humid indoor air.' },
-      { title: 'Fix Water Before Finishing', text: 'NRCan says persistent leaks and spring flooding must be corrected first. A moisture barrier or sealer on the slab helps with comfort, moisture control and radon reduction.' },
+      { title: 'Fix Water Before Finishing', text: 'NRCan says [persistent leaks and spring flooding must be corrected first](/blog/spring-flood-prep-winnipeg-basements). A moisture barrier or sealer on the slab helps with comfort, moisture control and radon reduction.' },
       { title: 'Give New Concrete Time', text: 'In a new house, or one with a new basement, NRCan advises allowing about a year for the concrete to dry before renovating.' },
       { title: 'Older Tile and Adhesive', text: 'Health Canada lists older floor tiles among materials that may contain asbestos. Manitoba’s workplace safety rules treat suspect material as asbestos until testing shows otherwise.' },
       { title: 'Commercial Spaces', text: 'Flooring in a commercial alteration falls under that project’s permit and inspections, and can be scheduled after hours so you stay open.' },

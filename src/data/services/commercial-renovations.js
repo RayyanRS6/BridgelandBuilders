@@ -42,8 +42,8 @@ export default {
     floatingTitle: 'Planned Around Your Date',
     floatingText: 'The schedule starts from your opening date and works backwards.',
     paragraphs: [
-      'A commercial renovation rebuilds a working space, such as an office, store, restaurant, hotel or clinic, around a lease, an opening date and the hours you need to stay open. It usually covers demolition, new walls and ceilings, electrical and mechanical changes, washrooms, finishes, a City building permit and the inspections that follow.',
-      'A commercial remodel runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. So we build the plan backwards from your date and tell you honestly at the site visit whether it’s realistic.',
+      'A commercial renovation rebuilds a working space, such as an office, store, restaurant, hotel or clinic, around a lease, an opening date and the hours you need to stay open. It usually covers [demolition](/services/demolition), new walls and ceilings, electrical and mechanical changes, washrooms, finishes, a City building permit and the inspections that follow.',
+      'A commercial remodel runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. So we build the plan backwards from your date and tell you honestly at [the site visit](/our-process) whether it’s realistic.',
       'Where it helps, we schedule work in the evenings and on weekends so you can keep trading, and we phase the job so only part of the space is closed at a time. You get a progress update every week, so you’re never chasing us for news.',
       `We work across Winnipeg and nearby communities, including ${NEARBY_AREAS_TEXT}, and we coordinate permits and inspections with the City of Winnipeg or the local municipality.`,
     ],
@@ -55,11 +55,11 @@ export default {
     title: 'What a Commercial Renovation Covers',
     desc: 'Scoped around your lease, your opening date, and the hours you need to keep trading.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you, your lease dates and your opening plan, then putting the scope in a free written quote.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you, [your lease dates](/blog/office-fit-up-lease-planning-winnipeg) and your opening plan, then putting the scope in a free written quote.' },
       { num: '02', title: 'Demolition & Fit-Out', text: 'Stripping out the old layout and building the new one: partitions, ceilings, storefronts, and service areas.' },
       { num: '03', title: 'Electrical & Mechanical', text: 'Lighting, power, data runs and HVAC changes to suit the new floor plan, with the trade permits that work needs.' },
       { num: '04', title: 'Washrooms & Accessibility', text: 'Commercial washroom renovation, accessible entrances and clearances, built to the Manitoba Building Code and ready for inspection.' },
-      { num: '05', title: 'Finishes & Branding', text: 'Flooring, wall finishes, millwork, and the details that carry your brand through the space.' },
+      { num: '05', title: 'Finishes & Branding', text: '[Flooring](/services/flooring), wall finishes, millwork, and the details that carry your brand through the space.' },
       { num: '06', title: 'Phased & After-Hours Work', text: 'Evening and weekend scheduling so you can keep trading through as much of the project as possible.' },
     ],
   },
@@ -158,7 +158,7 @@ export default {
     items: [
       { title: 'Building Permit & CADS', text: 'Commercial alteration and change-of-use applications go in with the City’s Commercial Alteration Design Summary (CADS). The City says incomplete applications result in delays, so the details are checked before it’s filed.' },
       { title: 'Architects & Engineers', text: 'The City’s CADS form says drawings must be sealed by an architect or engineer for any change to a building’s structural systems, and for significant changes to fire alarms, sprinklers, exits or public corridors in larger (Part 3) buildings. We build to their sealed drawings.' },
-      { title: 'Change of Use', text: 'Turning a store into a restaurant is a change of use: it needs a building permit even with little construction, and a change of major occupancy may need an architect or engineer. Confirm the new use is allowed under zoning before you pay for plans.' },
+      { title: 'Change of Use', text: '[Turning a store into a restaurant](/blog/restaurant-renovation-permits-winnipeg) is a change of use: it needs a building permit even with little construction, and a change of major occupancy may need an architect or engineer. Confirm the new use is allowed under zoning before you pay for plans.' },
       { title: 'Occupancy Permit', text: 'Substantial alterations and changes of use need an occupancy permit before the space is used. A new tenant moving into a space with a valid occupancy permit and no alterations generally doesn’t need a new one.' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with updated accessibility requirements aligned with CSA B651. Accessible entrances, washrooms and clearances are planned at the layout stage, not added after.' },
       { title: 'Noise Rules for After-Hours Work', text: 'In Winnipeg, loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so the loudest tasks are scheduled inside those hours.' },

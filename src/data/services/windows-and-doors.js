@@ -42,7 +42,7 @@ export default {
       { num: '02', title: 'Careful Removal', text: 'Old units taken out without damaging more siding, stucco or drywall than needed, with nearby floors covered.' },
       { num: '03', title: 'Opening Repairs', text: 'Sills and framing checked for rot or water damage and repaired before the new unit goes in.' },
       { num: '04', title: 'Set, Insulate & Seal', text: 'Each unit set level and square, insulated around the frame and sealed to the wall against freeze and thaw.' },
-      { num: '05', title: 'Trim Inside & Out', text: 'Interior casing, extension jambs, exterior trim and caulking finished to suit the house.' },
+      { num: '05', title: 'Trim Inside & Out', text: 'Interior casing, extension jambs, [exterior trim](/services/exterior-painting) and caulking finished to suit the house.' },
       { num: '06', title: 'Hardware & Clean-up', text: 'Locks and handles adjusted so doors latch and windows lock, then old units and debris hauled away.' },
     ],
   },
@@ -50,13 +50,13 @@ export default {
   typesTag: 'Project Types',
   typesTitle: 'What kinds of window and door work do we do?',
   typesDesc:
-    'Most jobs are replacements in the existing opening, which keep the cost and the paperwork down. We also install entry and patio doors, enlarge openings with any permit arranged first, and fit windows and doors as part of basement, addition and commercial renovations.',
+    'Most jobs are replacements in the existing opening, which keep the cost and the paperwork down. We also install entry and patio doors, enlarge openings with any permit arranged first, and fit windows and doors as part of basement, addition and [commercial renovations](/services/commercial-renovations).',
   types: [
     { title: 'Replacement Windows', text: 'New windows fitted to the existing openings: the most common job, and the simplest when the frames are sound.' },
     { title: 'Entry Doors', text: 'Front, side and back doors replaced with the frame, threshold and weatherstripping, so they seal and lock properly.' },
     { title: 'Patio Doors', text: 'Sliding and hinged patio doors set level on a sound sill, so they open easily and seal.' },
     { title: 'New or Larger Openings', text: 'A new or wider opening with a header sized for the wall above, and any permit in place first.' },
-    { title: 'Basement Windows', text: 'Replacing or enlarging basement windows. A window serving a basement bedroom must also meet egress size rules.' },
+    { title: 'Basement Windows', text: 'Replacing or enlarging basement windows. A window serving a basement bedroom must also meet [egress size rules](/blog/basement-development-permits-winnipeg).' },
     { title: 'Commercial Doors', text: 'Interior doors, frames and hardware in offices, clinics, shops and restaurants, after hours or on weekends if needed.' },
   ],
 
@@ -64,11 +64,11 @@ export default {
     tag: 'In Winnipeg',
     title: 'Do you need a permit to replace windows in Winnipeg?',
     intro:
-      'Usually not, if the new window or door fits the same opening. The City of Winnipeg lists same-size replacement among projects that don’t need a building permit, although the work still has to meet the building code. New or larger openings can need a permit, and heritage properties have their own rules.',
+      'Usually not, if the new window or door fits the same opening. The City of Winnipeg lists [same-size replacement](/blog/window-and-door-replacement-winnipeg) among projects that don’t need a building permit, although the work still has to meet the building code. New or larger openings can need a permit, and heritage properties have their own rules.',
     items: [
       { title: 'Same-Size Replacement', text: 'The City says doors and windows replaced at the same size need no building permit. Building code and zoning requirements still apply.' },
       { title: 'New or Larger Openings', text: 'The City lists new or larger exterior openings among renovations that may need a building permit. We confirm it and coordinate inspections before the wall is opened.' },
-      { title: 'Heritage Districts', text: 'Armstrong’s Point and Crescentwood-Enderton Park are Winnipeg’s two heritage conservation districts. Their plans decide when a heritage permit is needed.' },
+      { title: 'Heritage Districts', text: 'Armstrong’s Point and Crescentwood-Enderton Park are [Winnipeg’s two heritage conservation districts](/blog/renovating-a-character-home-in-winnipeg). Their plans decide when a heritage permit is needed.' },
       { title: 'Heritage Windows', text: 'For properties on the City’s List of Historical Resources, a heritage permit for window work asks for a window condition assessment, photos of each window, drawings of the original windows and shop drawings of the new ones.' },
       { title: 'Efficiency Manitoba Rebate', text: 'Efficiency Manitoba lists a $100 rebate per qualifying ENERGY STAR certified triple-pane window or door replacing one in a primary residence. New openings don’t qualify, and terms change.' },
       { title: 'Outside the City', text: `In ${NEARBY_AREAS_TEXT}, the local municipality or planning district issues permits.` },

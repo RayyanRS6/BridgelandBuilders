@@ -42,7 +42,7 @@ export default {
     floatingText: 'Work planned for closed days, after close and weekends.',
     paragraphs: [
       'A restaurant renovation covers the front of house guests see, such as the dining room, bar and washrooms, and the back of house that makes service work: kitchen walls, floors and ceilings, sinks, and the plumbing and ventilation rough-ins. In Manitoba, the plans also go to a public health inspector for review before construction starts.',
-      'Every closed night is lost revenue, so the schedule is built around service. We can work after close, on the days you’re closed and on weekends. In Winnipeg, loud work within 150 m of a home has to stop at 9 p.m., so demolition and cutting are planned for daytime closures and quieter tasks run later.',
+      'Every closed night is lost revenue, so the schedule is built around service. We can work after close, on the days you’re closed and on weekends. In Winnipeg, loud work within 150 m of a home has to stop at 9 p.m., so [demolition](/services/demolition) and cutting are planned for daytime closures and quieter tasks run later.',
       'The kitchen is where most of the coordination happens. Hoods, fire suppression, the grease interceptor and your equipment each involve a different supplier, trade or approval, so we set the order early: rough-ins before finishes, finishes before equipment, and inspections before your opening date.',
       'Hotels work the same way on a larger scale. We phase guest-room floors, corridors, lobbies and meeting rooms so the rest of the property keeps welcoming guests, with a weekly update you can share with your general manager or ownership group.',
     ],
@@ -54,12 +54,12 @@ export default {
     title: 'What a Restaurant Renovation Covers',
     desc: 'Front of house and back, scoped around your menu, your equipment and your service hours.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space outside service, going through your menu, equipment and hours, and putting the scope in a free written quote.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space outside service, going through your menu, equipment and hours, and [putting the scope in a free written quote](/our-process).' },
       { num: '02', title: 'Dining Rooms & Bars', text: 'Layouts, banquettes, bar fronts, millwork, lighting and finishes that hold up to busy services and nightly cleaning.' },
       { num: '03', title: 'Back-of-House Build-Out', text: 'Kitchen walls, ceilings and floors in smooth, cleanable materials, with floors coved at the wall where the health inspector requires it.' },
       { num: '04', title: 'Plumbing & Ventilation Rough-Ins', text: 'Hand, prep and dish sinks, floor drains, the grease interceptor connection and hood rough-ins, coordinated with your equipment and hood suppliers.' },
       { num: '05', title: 'Washrooms & Accessibility', text: 'Guest and staff washrooms rebuilt to the Manitoba Building Code, with accessible entrances and clearances planned into the layout.' },
-      { num: '06', title: 'After-Close & Closed-Day Work', text: 'Work scheduled after close, on closed days and on weekends where it helps, so you lose as few services as possible.' },
+      { num: '06', title: 'After-Close & Closed-Day Work', text: 'Work scheduled after close, on closed days and on weekends where it helps, so [you lose as few services as possible](/blog/how-to-prepare-your-business-for-a-major-renovation).' },
     ],
   },
 
@@ -108,7 +108,7 @@ export default {
   typesTitle: 'Restaurants, Cafés, Bars & Hotels',
   typesDesc: 'Hotels get the same planning around guests that restaurants get around service.',
   types: [
-    { title: 'Full-Service Restaurants', text: 'Dining rooms, kitchens, bars and washrooms, from a refresh of finishes to a full remodel, or a fit-out for a new location.' },
+    { title: 'Full-Service Restaurants', text: 'Dining rooms, kitchens, bars and washrooms, from a refresh of finishes to a full remodel, or [a fit-out for a new location](/services/commercial-renovations).' },
     { title: 'Cafés & Coffee Shops', text: 'Counters, seating, display cases and compact prep areas planned for quick morning service in a small footprint.' },
     { title: 'Bars & Lounges', text: 'Bar fronts, back bars, seating and lighting. Licensed premises must tell the LGCA about major renovations, so build that into the plan.' },
     { title: 'Quick-Service & Takeout', text: 'Ordering counters, pickup areas and efficient kitchens for restaurants that do most of their business as takeout and delivery.' },
@@ -120,7 +120,7 @@ export default {
   local: {
     title: 'What approvals does a restaurant renovation need?',
     intro:
-      'Two sets. The City of Winnipeg handles the building permit and occupancy, and in Manitoba your public health inspector must review a scaled floor plan before construction or renovation starts. The health permit is issued only after an inspection once construction is complete, so both reviews belong in the schedule from day one.',
+      'Two sets. The City of Winnipeg handles the building permit and occupancy, and in Manitoba [your public health inspector must review a scaled floor plan](/blog/restaurant-renovation-permits-winnipeg) before construction or renovation starts. The health permit is issued only after an inspection once construction is complete, so both reviews belong in the schedule from day one.',
     items: [
       { title: 'Health Plan Review', text: 'Manitoba’s guideline says the owner must submit a registration form and a to-scale plan showing equipment, plumbing fixtures and finishes to the public health inspector for approval before construction, renovation or conversion begins.' },
       { title: 'Changes & Opening Inspection', text: 'If plans change before or during construction, the owner contacts the inspector first with a revised plan. The guideline asks for at least five working days’ notice for the opening inspection.' },

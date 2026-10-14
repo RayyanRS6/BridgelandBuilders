@@ -40,7 +40,7 @@ export default {
     floatingText: 'Work is phased so the clinic can keep seeing patients where possible.',
     paragraphs: [
       'A clinic renovation rebuilds the rooms patients and staff use every day: reception and waiting areas, exam rooms or dental operatories, sterilization and lab space, washrooms and staff areas. It also covers the plumbing, power, data and ventilation behind them, the City building permit, and the inspections needed before patients come back.',
-      'Clinics run on appointments, so the schedule matters as much as the finishes. We plan the work in phases so some rooms keep seeing patients, and we schedule the loudest tasks for evenings and weekends where the City’s noise rules allow. You get a progress update every week.',
+      'Clinics run on appointments, so the schedule matters as much as the finishes. We [plan the work in phases](/blog/how-to-prepare-your-business-for-a-major-renovation) so some rooms keep seeing patients, and we schedule the loudest tasks for evenings and weekends where the City’s noise rules allow. You get a progress update every week.',
       'Equipment shapes the build. Dental chairs, X-ray units, compressors, suction, sterilizers and exam tables each have their own service and space needs, so we ask for your equipment supplier’s installation requirements early and build the rough-ins to match.',
       'Clinical and infection-control rules come from your professional standards, your health authority and your own policies, not from your contractor. Our job is to build what those rules call for: cleanable, durable finishes and a layout that your team and designer have signed off.',
     ],
@@ -52,11 +52,11 @@ export default {
     title: 'What a Clinic Renovation Covers',
     desc: 'Scoped around your equipment, your appointment book, and the rooms that have to stay open.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the clinic with you, your equipment list and your appointment schedule, then writing the scope and phasing into a free written quote.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the clinic with you, your equipment list and your appointment schedule, then [writing the scope and phasing into a free written quote](/our-process).' },
       { num: '02', title: 'Operatories & Exam Rooms', text: 'Walls, doors, cabinetry and the plumbing, power and data rough-ins each chair or exam table needs, built to your supplier’s specifications.' },
       { num: '03', title: 'Sterilization & Lab Areas', text: 'Counters, sinks and storage laid out so instruments move one way, from dirty to clean, as your team and designer specify.' },
       { num: '04', title: 'Reception & Waiting', text: 'Front desks, waiting rooms and patient washrooms, with accessible entrances and clearances that meet the Manitoba Building Code.' },
-      { num: '05', title: 'Cleanable Finishes', text: 'Smooth, durable surfaces such as sheet flooring, solid-surface counters and washable wall finishes that stand up to frequent cleaning.' },
+      { num: '05', title: 'Cleanable Finishes', text: 'Smooth, durable surfaces such as [sheet flooring](/services/flooring), solid-surface counters and washable wall finishes that stand up to frequent cleaning.' },
       { num: '06', title: 'Phasing & After-Hours Work', text: 'Work split into stages and scheduled for evenings and weekends where it helps, so part of the clinic can keep booking patients.' },
     ],
   },
@@ -108,14 +108,14 @@ export default {
     { title: 'Medical Clinics', text: 'Exam rooms, procedure rooms, nursing stations and waiting areas for family practices and walk-in clinics.' },
     { title: 'Physiotherapy Clinics', text: 'Open treatment floors, private treatment rooms, exercise areas and change rooms, with flooring suited to equipment.' },
     { title: 'Other Health Practices', text: 'Chiropractic, massage, counselling and other practices that need private rooms and a calm waiting area.' },
-    { title: 'Moving Into a New Unit', text: 'A medical office fit-out in a leased unit, including the building permit and the occupancy permit needed before you open.' },
+    { title: 'Moving Into a New Unit', text: '[A medical office fit-out in a leased unit](/blog/office-fit-up-lease-planning-winnipeg), including the building permit and the occupancy permit needed before you open.' },
     { title: 'Upgrades in an Operating Clinic', text: 'Adding operatories or exam rooms, refreshing finishes or reworking reception while the rest of the clinic stays open.' },
   ],
 
   local: {
     title: 'What permits does a clinic renovation need?',
     intro:
-      'In Winnipeg, a clinic renovation needs a City building permit whenever the work is regulated by the building by-law or the Manitoba Building Code, and substantial alterations need an occupancy permit before patients return. X-ray rooms add a step: in Manitoba, a permanent X-ray location needs the minister’s prior approval, based on drawings that show the shielding.',
+      'In Winnipeg, [a clinic renovation needs a City building permit](/blog/clinic-renovation-permits-winnipeg) whenever the work is regulated by the building by-law or the Manitoba Building Code, and substantial alterations need an occupancy permit before patients return. X-ray rooms add a step: in Manitoba, a permanent X-ray location needs the minister’s prior approval, based on drawings that show the shielding.',
     items: [
       { title: 'Building Permit', text: 'Clinic alterations are filed with the City’s Commercial Alteration Design Summary. Changes to structure, exits or fire safety systems generally need an architect or engineer, so check that before plans are final.' },
       { title: 'X-Ray Shielding', text: 'Manitoba’s X-Ray Safety Regulation requires X-ray equipment to be registered, and prior approval, with scaled drawings showing the shielding, before a machine is installed in a permanent location or an approved X-ray area is substantially altered.' },

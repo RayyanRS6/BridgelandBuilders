@@ -51,11 +51,11 @@ export default {
   includes: {
     tag: 'What’s Included',
     title: 'What does a whole home renovation include?',
-    desc: 'A whole home renovation usually covers the layout, the kitchen, every bathroom, flooring throughout, paint, trim and doors, plus the electrical and plumbing the new plan needs. Your list may be shorter or longer. We write the scope room by room after the on-site visit, so you can see exactly what is in it before work begins.',
+    desc: 'A whole home renovation usually covers the layout, the kitchen, every bathroom, flooring throughout, paint, trim and doors, plus the electrical and plumbing the new plan needs. Your list may be shorter or longer. We write the scope room by room after [the on-site visit](/our-process), so you can see exactly what is in it before work begins.',
     items: [
       { num: '01', title: 'Layout & Walls', text: 'Opening up living areas, moving or removing non-structural walls, and framing new rooms where you need them.' },
-      { num: '02', title: 'Kitchen', text: 'Full kitchen build — cabinets, counters, backsplash, appliance fit, plus the plumbing and electrical behind it all.' },
-      { num: '03', title: 'Bathrooms', text: 'Every bath in the house brought up to the same standard, with proper waterproofing under the tile.' },
+      { num: '02', title: 'Kitchen', text: '[Full kitchen build](/services/kitchen-renovations) — cabinets, counters, backsplash, appliance fit, plus the plumbing and electrical behind it all.' },
+      { num: '03', title: 'Bathrooms', text: '[Every bath in the house](/services/bathroom-renovations) brought up to the same standard, with proper waterproofing under the tile.' },
       { num: '04', title: 'Flooring', text: 'One continuous flooring plan across the main level so rooms flow instead of stopping at every doorway.' },
       { num: '05', title: 'Paint, Trim & Doors', text: 'New baseboards, casings, interior doors, and a full repaint so the finish is consistent room to room.' },
       { num: '06', title: 'Electrical & Plumbing', text: 'Updated wiring, lighting, and plumbing runs where the old ones aren’t up to what the new layout needs.' },
@@ -70,7 +70,7 @@ export default {
     { title: 'Complete home renovation', text: 'Every room planned together and built in stages or all at once, so floors, trim and finishes match from the front door to the back bedroom.' },
     { title: 'Main-floor & open-concept', text: 'Opening the kitchen, dining and living rooms into one space. A load-bearing wall needs a beam and a building permit, and both are planned before demolition.' },
     { title: 'Interior renovation', text: 'Selected rooms brought to one standard: living room, bedrooms, laundry room or mudroom, with new flooring, lighting, doors and paint.' },
-    { title: 'Older home updates', text: 'With the walls open on an older house, it’s the right moment to replace outdated wiring and plumbing, add insulation, and have suspect materials tested for asbestos.' },
+    { title: 'Older home updates', text: 'With the walls open on [an older house](/blog/renovating-a-character-home-in-winnipeg), it’s the right moment to replace outdated wiring and plumbing, add insulation, and have suspect materials tested for asbestos.' },
     { title: 'Renovating before you move in', text: 'Just bought a house? Work goes faster through empty rooms, so renovating before move-in can shorten the job. We plan the scope around your possession date.' },
     { title: 'Staged renovation while you live there', text: 'Work done in sections, with a kitchen and a bathroom kept usable as long as possible, so you can stay in the house through most of the project.' },
   ],
@@ -79,7 +79,7 @@ export default {
     tag: 'In Winnipeg',
     title: 'Which permits does a whole home renovation need in Winnipeg?',
     intro:
-      'Usually several. Creating a new bedroom requires a building permit, and the City of Winnipeg says kitchens, bathrooms, open-concept layouts and new or larger exterior openings may need one. Electrical and plumbing work may need trade permits, and some structural changes need an engineer’s sealed drawing. We coordinate the full set with the City or your local municipality.',
+      'Usually several. [Creating a new bedroom requires a building permit](/blog/winnipeg-renovation-permits), and the City of Winnipeg says kitchens, bathrooms, open-concept layouts and new or larger exterior openings may need one. Electrical and plumbing work may need trade permits, and some structural changes need an engineer’s sealed drawing. We coordinate the full set with the City or your local municipality.',
     items: [
       { title: 'Building permit triggers', text: 'Since February 2026, the Winnipeg Building By-law requires a building permit to create a new bedroom or finish an undeveloped level. The City’s examples of renovations that may need one include kitchens, bathrooms, open-concept living spaces, and new or larger exterior door and window openings. Cosmetic changes do not.' },
       { title: 'Insulation and siding changes', text: 'Under amendments adopted in February 2026, the Winnipeg Building By-law requires a building permit to alter the building envelope: for example, adding rigid foam insulation to a wall assembly, or replacing stucco with vinyl siding.' },

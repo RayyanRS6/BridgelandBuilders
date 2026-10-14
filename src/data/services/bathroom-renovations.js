@@ -49,7 +49,7 @@ export default {
   includes: {
     tag: 'What’s Included',
     title: 'What does a bathroom renovation include?',
-    desc: 'A full bathroom renovation takes the room back to the studs where needed and rebuilds it: plumbing and electrical, backer board and a waterproofing membrane, tile, vanity and fixtures, then paint and a full clean. Planning a smaller update, such as a new vanity or tub only? Tell us at the on-site visit and we’ll scope just that.',
+    desc: 'A full bathroom renovation takes the room back to the studs where needed and rebuilds it: plumbing and electrical, backer board and a waterproofing membrane, tile, vanity and fixtures, then paint and a full clean. Planning a smaller update, such as a new vanity or tub only? Tell us at [the on-site visit](/our-process) and we’ll scope just that.',
     items: [
       { num: '01', title: 'Demo & Haul Away', text: 'The old bath comes out, down to the studs and subfloor where needed, and everything is hauled away.' },
       { num: '02', title: 'Plumbing & Electrical', text: 'New supply and drain runs, plus the wiring for lighting, fans, and heated floors if you want them.' },
@@ -66,24 +66,24 @@ export default {
     'Bathroom projects range from a powder room refresh to a main bath or ensuite rebuilt from the studs. The type sets the trades involved and the length of the job, so it’s worth naming early. If you’re not sure, describe how the room is used and what bothers you about it now. That usually points to the right scope.',
   types: [
     { title: 'Main bathroom renovation', text: 'The family bathroom rebuilt from the studs: a new layout if needed, a waterproofed tub or shower, tile, vanity, lighting and ventilation.' },
-    { title: 'Ensuite renovation', text: 'An ensuite off the main bedroom with a larger shower, a double vanity or heated floors, laid out around the space you have and the drains already in place.' },
+    { title: 'Ensuite renovation', text: 'An [ensuite off the main bedroom](/blog/ensuite-renovation-winnipeg) with a larger shower, a double vanity or heated floors, laid out around the space you have and the drains already in place.' },
     { title: 'Powder room & guest bathroom', text: 'A two-piece powder room or a guest bath with a shower. Compact rooms need careful fixture placement, good lighting and a fan that actually clears the air.' },
     { title: 'Walk-in shower installation', text: 'A tiled walk-in shower with a sloped base, a waterproofing membrane and glass. A low or curbless entry is possible where the floor structure allows it.' },
     { title: 'Tub replacement or tub-to-shower', text: 'We can replace a bathtub with a new one, or convert a tub alcove into a walk-in shower where the drain and the space allow. If it’s your home’s only tub, think about whether you’ll miss it.' },
-    { title: 'Easier-access updates', text: 'We can add wall blocking for grab bars, a low-threshold shower, a comfort-height toilet and lever taps as part of a renovation, so the room stays easy to use as needs change.' },
+    { title: 'Easier-access updates', text: 'We can add [wall blocking for grab bars](/blog/which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners), a low-threshold shower, a comfort-height toilet and lever taps as part of a renovation, so the room stays easy to use as needs change.' },
   ],
 
   local: {
     tag: 'In Winnipeg',
     title: 'Does a bathroom renovation need a permit in Winnipeg?',
     intro:
-      'It depends on the scope. The City of Winnipeg lists bathrooms among the home renovations that may need a building permit, and new plumbing or wiring may need separate trade permits. Cosmetic work such as painting, flooring and millwork does not. We coordinate the permits and inspections your bathroom needs with the City or your local municipality.',
+      'It depends on the scope. The City of Winnipeg lists bathrooms among the [home renovations that may need a building permit](/blog/winnipeg-renovation-permits), and new plumbing or wiring may need separate trade permits. Cosmetic work such as painting, flooring and millwork does not. We coordinate the permits and inspections your bathroom needs with the City or your local municipality.',
     items: [
       { title: 'When a building permit applies', text: 'The City names bathrooms among the renovations that may need a building permit; whether yours does depends on the work. Painting, flooring and millwork, the City’s examples of cosmetic changes, do not need one.' },
       { title: 'Like-for-like insulation', text: 'The City’s 2026 housing bulletin says replacing batt insulation and vapour barrier in a small area of a finished level during a kitchen or bath renovation, with the stud walls staying, is like-for-like and needs no building permit.' },
       { title: 'Plumbing and electrical permits', text: 'New supply and drain lines, a relocated toilet, heated floors and a new fan circuit are trade work, and the City notes that many projects need electrical and plumbing permits separate from the building permit.' },
       { title: 'Inspections before tile', text: 'The City requires a rough-in inspection before plumbing, electrical or framing work under a permit is covered. Once it passes, the backer board and waterproofing membrane go on, then the tile.' },
-      { title: 'Asbestos in older bathrooms', text: 'Health Canada notes that before 1990, asbestos was mainly used for insulating buildings and homes, and lists older plaster, drywall and floor tiles among materials that may contain it. If your bathroom has original finishes, have them tested by a professional before demolition.' },
+      { title: 'Asbestos in older bathrooms', text: 'Health Canada notes that before 1990, asbestos was mainly used for insulating buildings and homes, and lists older plaster, drywall and floor tiles among materials that may contain it. If your bathroom has original finishes, have them tested by a professional before [demolition](/services/demolition).' },
       { title: 'Condos and nearby communities', text: 'In a condo, ask your condominium corporation about approvals, water shut-offs and work hours before dates are set. Outside Winnipeg, permits come from your local municipality or planning district.' },
     ],
     sources: [
@@ -135,7 +135,7 @@ export default {
   // No cost questions here: those live on /services/bathroom-renovations/cost.
   faqs: [
     { q: 'How long does a bathroom renovation take?', a: `${TIMELINES.bathroom.wordsCapitalized} for a typical full bathroom, from demolition to the final clean. If it’s your only bathroom, tell us at the on-site visit: we plan those jobs so the toilet is back in service as early as possible, and we let you know in advance which days the water will be off.` },
-    { q: 'Can you move the toilet or shower to a different spot?', a: 'Usually, yes. It depends on where the drains and floor joists run, and on a concrete slab it means breaking and re-pouring part of the floor. At the on-site visit we’ll tell you whether the move is a small change or a bigger one, and the written quote shows what it involves.' },
+    { q: 'Can you move the toilet or shower to a different spot?', a: 'Usually, yes. It depends on where the drains and floor joists run, and on a concrete slab it means breaking and re-pouring part of the floor. At the on-site visit we’ll tell you whether the move is a small change or a bigger one, and the written quote shows what it involves.', more: { label: 'What changes the cost of a bathroom renovation', to: '/services/bathroom-renovations/cost#cost-drivers' } },
     { q: 'Do you supply the tile and fixtures, or do I?', a: 'Either works. Most people choose from options we bring; some prefer to shop for their own. If you supply materials, have them on site before the start date so the schedule holds, and check the sizes with us first so the vanity, toilet and shower fit the plan.' },
     { q: 'Can you install heated floors?', a: 'Yes. A bathroom renovation is the right time to add them, since the floor is already open. The heating mat goes under the tile on its own circuit with a thermostat, and the wiring may need its own electrical permit. On a cold Winnipeg morning, a warm floor makes a real difference.' },
     { q: 'What if you find water damage under the old shower?', a: 'It happens, especially under older tubs and showers. We photograph it, show you, and price the repair in writing before going further. Rotten subfloor is replaced, never tiled over, because new tile on a damaged floor won’t last. Catching it during demolition is far better than finding it after.' },
@@ -152,7 +152,7 @@ export default {
       `Bathroom renovations in Winnipeg with proper waterproofing under the tile. Most take ${TIMELINES.bathroom.short}. Start with a free on-site visit and a written quote.`,
     serviceType: 'Bathroom renovation',
     primaryKeyword: 'bathroom renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Live pages only are shown; drafts appear when they launch.

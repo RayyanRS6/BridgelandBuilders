@@ -37,10 +37,10 @@ export default {
     floatingTitle: 'Opening Day First',
     floatingText: 'The schedule starts from your opening date and works backwards.',
     paragraphs: [
-      'A retail renovation reshapes how customers move through a store: the entrance and storefront, the sales floor, fitting rooms, the cash area, the stockroom and staff spaces, plus the lighting, power and finishes that tie them together. In a new lease it’s usually called a fit-out, and work regulated by the building code needs a City of Winnipeg building permit.',
+      'A retail renovation reshapes [how customers move through a store](/blog/how-to-balance-functionality-and-aesthetics-in-a-commercial-space): the entrance and storefront, the sales floor, fitting rooms, the cash area, the stockroom and staff spaces, plus the lighting, power and finishes that tie them together. In a new lease it’s usually called a fit-out, and work regulated by the building code needs a City of Winnipeg building permit.',
       'In retail, the opening date is usually fixed before the build starts: a lease commencement, a season or a launch you’ve already advertised. We plan backwards from that date and tell you at the site visit whether it’s realistic, and what would need to change if it isn’t.',
       'If you’re renovating a store that’s already trading, we phase the sales floor and schedule the loud work outside your hours, within the City’s noise limits near homes. Weekly progress updates let you plan stock, staffing and promotions around what’s finished.',
-      'Brand standards and head-office fit-out packages are welcome. We build to supplied drawings and specifications from your designer, your landlord or your head office, and flag anything on site that conflicts with them before it turns into a change order.',
+      'Brand standards and head-office fit-out packages are welcome. [We build to supplied drawings and specifications](/services/general-contracting) from your designer, your landlord or your head office, and flag anything on site that conflicts with them before it turns into a change order.',
     ],
     checklist: ['Store Layouts', 'Storefronts & Entrances', 'Fitting Rooms & Cash Areas', 'Lighting & Displays'],
   },
@@ -50,12 +50,12 @@ export default {
     title: 'What a Retail Renovation Covers',
     desc: 'Scoped around your opening date, your brand, and the hours you need to keep trading.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the unit with you and your lease or brand drawings, then writing the scope and schedule into a free written quote.' },
-      { num: '02', title: 'Demolition & Layout', text: 'Clearing out the previous tenant’s fit-out and building the new floor plan: walls, bulkheads, stockroom and staff areas.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the unit with you and your lease or brand drawings, then [writing the scope and schedule into a free written quote](/our-process).' },
+      { num: '02', title: 'Demolition & Layout', text: '[Clearing out the previous tenant’s fit-out](/services/demolition) and building the new floor plan: walls, bulkheads, stockroom and staff areas.' },
       { num: '03', title: 'Storefronts & Entrances', text: 'Entrance doors, storefront framing and finishes, with an accessible entrance planned in. Signs need their own City permit.' },
       { num: '04', title: 'Lighting & Power', text: 'Track and display lighting, power for cash desks and displays, and data where your point-of-sale and security systems need it.' },
       { num: '05', title: 'Fitting Rooms, Cash & Washrooms', text: 'Fitting rooms, cash counters and customer or staff washrooms built to the Manitoba Building Code, including accessible clearances.' },
-      { num: '06', title: 'Finishes & Fixtures', text: 'Flooring, wall finishes, slatwall and millwork installed to take daily foot traffic and frequent re-merchandising.' },
+      { num: '06', title: 'Finishes & Fixtures', text: '[Flooring](/services/flooring), wall finishes, slatwall and millwork installed to take daily foot traffic and frequent re-merchandising.' },
     ],
   },
 
