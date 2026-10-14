@@ -13,6 +13,10 @@
 //
 // Do Not Track: nothing is stored and no cookie ids are read; only the
 // current visit's own tags are sent with a form the visitor submits.
+//
+// On the team's own devices (marked with ?bb_internal=1, see index.html) the
+// attribution also carries internal: true, so the server never sends those
+// leads to Meta. The lead itself is saved as usual.
 import { ATTRIBUTION_TTL_DAYS } from '../data/analyticsConfig.js';
 import { CANONICAL_SITE_URL } from '../data/siteConfig.js';
 
@@ -146,16 +150,20 @@ function gaClientId() {
   return match ? match[1] : undefined;
 }
 
+/** { internal: true } on a team device (index.html sets window.__bbInternal), else {}. */
+const internalFlag = () => (window.__bbInternal === true ? { internal: true } : {});
+
 /**
  * Attribution to send with a lead: { formPage, landing, first, last,
- * gaClientId?, fbp?, fbc? }. Never throws; returns undefined on the server.
+ * gaClientId?, fbp?, fbc?, internal? }. Never throws; returns undefined on
+ * the server.
  */
 export function getAttribution() {
   if (!isBrowser()) return undefined;
   try {
     if (!current) captureAttribution();
     const formPage = window.location.pathname.slice(0, 200);
-    if (doNotTrack()) return { formPage, landing, first: current, last: current };
+    if (doNotTrack()) return { formPage, landing, first: current, last: current, ...internalFlag() };
 
     const saved = read(window.localStorage, STORAGE_KEY) || {};
     const first = saved.first || current;
@@ -170,6 +178,7 @@ export function getAttribution() {
       gaClientId: gaClientId(),
       fbp: cookie('_fbp'),
       fbc: cookie('_fbc') || fbcFromClick,
+      ...internalFlag(),
     };
   } catch {
     return undefined;

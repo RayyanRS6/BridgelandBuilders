@@ -11,6 +11,12 @@ import './pages.css';
 // before these few rules arrive with a lazy chunk.
 import './styles/templates.css';
 
+// The bundle is running: tells the inline script at the top of index.html to
+// keep the `js` class (the .reveal start state in index.css). Without this
+// within 6 seconds it takes the class off, so a failed or stalled bundle never
+// leaves content hidden.
+document.documentElement.classList.add('app-ready');
+
 // How this visit arrived (campaign tags, referrer, landing page), recorded
 // before anything else can change the URL. Never throws.
 captureAttribution();

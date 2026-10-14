@@ -110,8 +110,9 @@ function cleanTouch(touch) {
 
 /**
  * Cleans the `attribution` object sent with a lead. Returns
- * { formPage?, landing?, first?, last?, gaClientId?, fbp?, fbc?, channel }
- * or undefined. Never throws.
+ * { formPage?, landing?, first?, last?, gaClientId?, fbp?, fbc?, internal?, channel }
+ * or undefined. `internal` (only ever true) marks a lead from one of the
+ * team's own devices (index.html, ?bb_internal=1). Never throws.
  */
 export function cleanAttribution(input) {
   try {
@@ -128,6 +129,7 @@ export function cleanAttribution(input) {
     if (typeof input.gaClientId === 'string' && /^\d{1,20}\.\d{1,20}$/.test(input.gaClientId)) out.gaClientId = input.gaClientId;
     if (typeof input.fbp === 'string' && /^fb\.\d\.\d{10,16}\.\d{1,30}$/.test(input.fbp)) out.fbp = input.fbp;
     if (typeof input.fbc === 'string' && /^fb\.\d\.\d{10,16}\.[A-Za-z0-9_\-.~]{4,255}$/.test(input.fbc)) out.fbc = input.fbc;
+    if (input.internal === true) out.internal = true;
     if (!Object.keys(out).length) return undefined;
     out.channel = channelFor(out.last || out.first);
     return out;

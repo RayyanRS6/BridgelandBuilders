@@ -1899,9 +1899,13 @@ button {
 /* -------------------------------------------------------------
    17. SMOOTH SCROLL REVEAL ANIMATIONS
    ------------------------------------------------------------- */
-/* The hidden start state only applies once the inline script in index.html
-   has put a `js` class on <html>, so without JavaScript (or if the bundle
-   fails to load) the content simply shows. :where() adds no specificity, so
+/* The hidden start state only applies while the inline script in index.html
+   keeps a `js` class on <html>. It adds the class only in browsers that run
+   module scripts (the app bundle is one) and starts a 6-second timer: unless
+   src/main.jsx has begun running by then and marked <html> `app-ready`, the
+   class comes off again. So without JavaScript, or if the bundle fails or
+   stalls (flaky mobile data, in-app browsers), the content simply shows,
+   just without the animation. :where() adds no specificity, so
    these rules weigh exactly what .reveal and .reveal.active did and every
    override (hover lifts, reduced motion) behaves as before. */
 :where(.js) .reveal {
