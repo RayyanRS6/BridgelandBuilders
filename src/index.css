@@ -1795,6 +1795,58 @@ button {
 }
 
 /* -------------------------------------------------------------
+   16b. HOME PAGE MUSIC BUTTON
+   Bottom-left, opposite the LeadConnector chat bubble, and below
+   the navbar (z-index 100) so the open menu covers it.
+   ------------------------------------------------------------- */
+.music-toggle {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border: 1px solid var(--border-dark-subtle);
+  border-radius: var(--radius-full);
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-lift);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.music-toggle:hover,
+.music-toggle:focus-visible {
+  background: var(--bg-dark-card);
+}
+
+.music-toggle svg {
+  flex: none;
+  color: var(--accent-red);
+}
+
+.music-toggle.is-playing svg {
+  color: var(--text-light);
+}
+
+@media (max-width: 640px) {
+  /* 44px tall, a comfortable thumb target. */
+  .music-toggle {
+    left: 14px;
+    bottom: 16px;
+    padding: 13px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* -------------------------------------------------------------
    17. SMOOTH SCROLL REVEAL ANIMATIONS
    ------------------------------------------------------------- */
 /* The hidden start state only applies once the inline script in index.html
