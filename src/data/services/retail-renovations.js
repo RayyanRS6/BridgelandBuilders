@@ -124,7 +124,7 @@ export default {
     sources: [
       { label: 'City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025', url: 'https://www.winnipeg.ca/media/6330', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Occupancy permits', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects/occupancy-permits', accessed: '2026-10-13' },
-      { label: 'City of Winnipeg: Commercial sign inspections', url: 'https://www.winnipeg.ca/building-development/inspections/commercial/sign', accessed: '2026-10-13' },
+      { label: 'City of Winnipeg: Commercial sign inspections', url: 'https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial/sign', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Construction in your neighbourhood', url: 'https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood', accessed: '2026-10-13' },
       { label: 'Province of Manitoba: Manitoba Building Code updates, accessibility', url: 'https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf', accessed: '2026-10-13' },
       { label: 'Manitoba Accessibility Office: Accessibility for business and non-profit', url: 'https://accessibilitymb.ca/business-and-non-profit/accessibility-for-business-and-non-profit.html', accessed: '2026-10-13' },

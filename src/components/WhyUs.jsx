@@ -41,7 +41,7 @@ export default function WhyUs() {
               />
             </div>
             <div className="why-floating-card">
-              <h4>No Surprises</h4>
+              <div className="why-floating-title">No Surprises</div>
               <p>A free written quote before we start, and a progress update every week.</p>
             </div>
           </div>

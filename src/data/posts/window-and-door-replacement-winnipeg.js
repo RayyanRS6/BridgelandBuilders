@@ -263,7 +263,7 @@ export default {
   "sources": [
     {
       "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
-      "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
       "accessed": "2026-10-13"
     },
     {

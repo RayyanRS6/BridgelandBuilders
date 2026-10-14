@@ -180,7 +180,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   <img {...unsplashImage(project.intro.image, INTRO_IMAGE)} alt={project.intro.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
                 </div>
                 <div className="why-floating-card">
-                  <h4>{project.intro.floatingTitle}</h4>
+                  <div className="why-floating-title">{project.intro.floatingTitle}</div>
                   <p>{project.intro.floatingText}</p>
                 </div>
               </div>
@@ -347,7 +347,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 >
                   <img {...unsplashImage(item.img, GALLERY_IMAGE)} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
                   <div className="gallery-overlay">
-                    <h4>{item.title}</h4>
+                    <div className="gallery-overlay-title">{item.title}</div>
                     <p>{item.text}</p>
                   </div>
                 </div>
@@ -414,7 +414,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 <div className="testimonial-author">
                   <div className="author-initial">{project.testimonial.initial}</div>
                   <div className="author-info">
-                    <h5>{project.testimonial.name}</h5>
+                    <div className="author-name">{project.testimonial.name}</div>
                     <p>{project.testimonial.role}</p>
                   </div>
                 </div>

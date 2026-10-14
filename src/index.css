@@ -772,7 +772,7 @@ button {
   font-weight: 700;
 }
 
-.hero-floating-badge .badge-text h4 {
+.hero-floating-badge .badge-text .badge-title {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-main);
@@ -1064,7 +1064,13 @@ button {
   color: inherit;
   font-size: 0.7rem;
   font-weight: 700;
-  opacity: 0.68;
+  /* Still a step quieter than the label, but readable: 0.9 keeps the count at
+     4.5:1 on the cream track (WCAG AA); the selected tab shows it in full. */
+  opacity: 0.9;
+}
+
+.service-category-switcher a.active small {
+  opacity: 1;
 }
 
 .service-category-switcher a:hover,
@@ -1180,7 +1186,8 @@ button {
   margin-bottom: 18px;
   border-radius: var(--radius-full);
   background: var(--accent-seagreen-light);
-  color: var(--accent-seagreen);
+  /* The darker sea green: small text on the tinted pill needs 4.5:1. */
+  color: var(--accent-seagreen-hover);
   font-size: 0.74rem;
   font-weight: 800;
 }
@@ -1328,7 +1335,7 @@ button {
   box-shadow: 0 16px 36px rgba(0,0,0,0.5);
 }
 
-.why-floating-card h4 {
+.why-floating-card .why-floating-title {
   font-size: 1.05rem;
   font-weight: 700;
   color: #fff;
@@ -1504,7 +1511,7 @@ button {
   font-size: 1.1rem;
 }
 
-.author-info h5 {
+.author-info .author-name {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-main);
@@ -1570,9 +1577,10 @@ button {
   opacity: 1;
 }
 
-/* h3 on the home gallery tiles, h4 where other pages reuse the overlay. */
+/* h3 on the home gallery tiles; a plain title where other pages reuse the
+   overlay (decorative photo labels, not part of the heading outline). */
 .gallery-overlay h3,
-.gallery-overlay h4 {
+.gallery-overlay .gallery-overlay-title {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 2px;
@@ -2281,7 +2289,7 @@ button {
     flex: none;
     font-size: 1rem;
   }
-  .hero-floating-badge .badge-text h4 {
+  .hero-floating-badge .badge-text .badge-title {
     font-size: 0.86rem;
   }
   .hero-floating-badge .badge-text p {
@@ -2495,7 +2503,7 @@ button {
     padding: 16px;
   }
   .gallery-overlay h3,
-  .gallery-overlay h4 {
+  .gallery-overlay .gallery-overlay-title {
     font-size: 1.05rem;
   }
 

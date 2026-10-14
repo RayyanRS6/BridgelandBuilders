@@ -63,8 +63,10 @@ export default function Hero() {
               <div className="badge-text">
                 {/* No Google rating next to the main CTA until the profile has
                     10+ reviews (SEO plan §19). Free written quotes are stated
-                    across the site (FAQs, booking aside, /free-quote). */}
-                <h4>Free Written Quotes</h4>
+                    across the site (FAQs, booking aside, /free-quote).
+                    A badge label, not a heading: it would sit out of order
+                    in the page's heading outline. */}
+                <div className="badge-title">Free Written Quotes</div>
                 <p>Over {EXPERIENCE_YEARS} Years Combined Experience</p>
               </div>
             </div>

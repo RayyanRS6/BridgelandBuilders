@@ -18,7 +18,7 @@ export default function Testimonial() {
             <div className="testimonial-author">
               <div className="author-initial">S</div>
               <div className="author-info">
-                <h5>Sandra K.</h5>
+                <div className="author-name">Sandra K.</div>
                 <p>Homeowner, Whole Home Renovation</p>
               </div>
             </div>

@@ -188,7 +188,7 @@ export default {
         },
         {
           t: 'p',
-          x: 'Two federal programs are closed: the [Canada Greener Homes Grant](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-grant) and the [Canada Greener Homes Loan](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan) no longer accept new applications. For what is open now, see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [home renovation financing in Canada](/blog/home-renovation-financing-canada).',
+          x: 'Two federal programs are closed: the [Canada Greener Homes Grant](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant) and the [Canada Greener Homes Loan](https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan) no longer accept new applications. For what is open now, see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [home renovation financing in Canada](/blog/home-renovation-financing-canada).',
         },
       ],
     },
@@ -245,7 +245,7 @@ export default {
     },
     {
       label: 'Natural Resources Canada — Canada Greener Homes Grant (program closed)',
-      url: 'https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-grant',
+      url: 'https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant',
       accessed: ACCESSED,
     },
     {

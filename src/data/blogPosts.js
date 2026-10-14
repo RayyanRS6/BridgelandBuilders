@@ -513,7 +513,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "oli",
-        "x": "Submit through [Permits Online](https://www.winnipeg.ca/permitsonline), by email to ppd-permit@winnipeg.ca, or as one paper package at the Zoning & Permits office, Unit 31-30 Fort Street."
+        "x": "Submit through [Permits Online](https://www.winnipeg.ca/building-development/permits-applications/permits-online), by email to ppd-permit@winnipeg.ca, or as one paper package at the Zoning & Permits office, Unit 31-30 Fort Street."
       },
       {
         "t": "oli",
@@ -625,7 +625,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg – Permits Online",
-        "url": "https://www.winnipeg.ca/permitsonline",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
         "accessed": "2026-10-13"
       },
       {
@@ -1424,7 +1424,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg: Zoning bylaws",
-        "url": "https://www.winnipeg.ca/building-development/building-renovating/zoning",
+        "url": "https://www.winnipeg.ca/building-development/planning-development/plans-policies-bylaws/zoning-bylaws",
         "accessed": "2026-10-13"
       },
       {
@@ -1979,7 +1979,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
         "accessed": "2026-10-13"
       },
       {
@@ -3541,7 +3541,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
         "accessed": "2026-10-13"
       },
       {
@@ -4470,7 +4470,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg – Permits Online",
-        "url": "https://www.winnipeg.ca/permitsonline",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
         "accessed": "2026-10-13"
       },
       {
@@ -4949,12 +4949,12 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg: Heritage incentive programs",
-        "url": "https://www.winnipeg.ca/building-development/city-planning-design/heritage-conservation/incentive-programs",
+        "url": "https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/incentive-programs",
         "accessed": "2026-10-13"
       },
       {
         "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
         "accessed": "2026-10-13"
       },
       {
@@ -6369,7 +6369,7 @@ export const BLOG_POSTS = [
     "sources": [
       {
         "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
         "accessed": "2026-10-13"
       },
       {
@@ -6594,7 +6594,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "oli",
-        "x": "Submit it through [Permits Online](https://www.winnipeg.ca/permitsonline), or drop it off at the Zoning & Permits office, Unit 31-30 Fort Street, weekdays 8:30 a.m. to 4:30 p.m."
+        "x": "Submit it through [Permits Online](https://www.winnipeg.ca/building-development/permits-applications/permits-online), or drop it off at the Zoning & Permits office, Unit 31-30 Fort Street, weekdays 8:30 a.m. to 4:30 p.m."
       },
       {
         "t": "oli",
@@ -6710,12 +6710,12 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg – Detached garages & accessory structures",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects/detached-garages-accessory-structures",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/detached-garages-accessory-structures",
         "accessed": "2026-10-13"
       },
       {
         "label": "City of Winnipeg – Decks",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects/decks",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/decks",
         "accessed": "2026-10-13"
       },
       {
@@ -6755,7 +6755,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg – Permits Online",
-        "url": "https://www.winnipeg.ca/permitsonline",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
         "accessed": "2026-10-13"
       },
       {
@@ -7579,7 +7579,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
         "accessed": "2026-10-13"
       },
       {
@@ -9509,7 +9509,7 @@ export const BLOG_POSTS = [
       },
       {
         "label": "City of Winnipeg: Home improvement projects (which projects need a permit)",
-        "url": "https://www.winnipeg.ca/building-development/home-improvement-projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects",
         "accessed": "2026-10-13"
       },
       {

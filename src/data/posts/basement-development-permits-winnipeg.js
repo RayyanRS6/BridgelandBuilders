@@ -189,7 +189,7 @@ export default {
     },
     {
       "t": "oli",
-      "x": "Submit through [Permits Online](https://www.winnipeg.ca/permitsonline), by email to ppd-permit@winnipeg.ca, or as one paper package at the Zoning & Permits office, Unit 31-30 Fort Street."
+      "x": "Submit through [Permits Online](https://www.winnipeg.ca/building-development/permits-applications/permits-online), by email to ppd-permit@winnipeg.ca, or as one paper package at the Zoning & Permits office, Unit 31-30 Fort Street."
     },
     {
       "t": "oli",
@@ -301,7 +301,7 @@ export default {
     },
     {
       "label": "City of Winnipeg – Permits Online",
-      "url": "https://www.winnipeg.ca/permitsonline",
+      "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
       "accessed": "2026-10-13"
     },
     {

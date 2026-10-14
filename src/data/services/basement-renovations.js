@@ -105,7 +105,7 @@ export default {
       { label: 'City of Winnipeg: Basement/lower level development, construction information (updated October 2025)', url: 'https://www.winnipeg.ca/media/6349', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: 5 tips for keeping your basement dry during the spring melt', url: 'https://www.winnipeg.ca/people-culture/our-city-our-stories/5-tips-keeping-your-basement-dry-during-spring-melt', accessed: '2026-10-13' },
       { label: 'Health Canada: Radon, what you need to know', url: 'https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radon-what-you-need-to-know.html', accessed: '2026-10-13' },
-      { label: 'Health Canada: How to use a long-term radon detector', url: 'https://www.canada.ca/en/health-canada/services/publications/health-risks-safety/radon-long-term-test-instructions.html', accessed: '2026-10-13' },
+      { label: 'Health Canada: How to use a long-term radon detector', url: 'https://www.canada.ca/en/health-canada/services/publications/health-risks-safety/using-electronic-radon-monitor-long-term-detector.html', accessed: '2026-10-13' },
       { label: 'Efficiency Manitoba: Home Insulation Rebate', url: 'https://efficiencymb.ca/my-home/home-insulation-rebate/', accessed: '2026-10-13' },
     ],
   },

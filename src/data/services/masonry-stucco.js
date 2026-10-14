@@ -72,7 +72,7 @@ export default {
       { title: 'Cold-Weather Curing', text: 'Mortar and stucco need protection from freezing while they cure, so exterior work is planned for warmer weather, or enclosed and heated when it can’t wait.' },
     ],
     sources: [
-      { label: 'City of Winnipeg: home improvement projects', url: 'https://www.winnipeg.ca/building-development/home-improvement-projects', accessed: ACCESSED },
+      { label: 'City of Winnipeg: home improvement projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects', accessed: ACCESSED },
       { label: 'City of Winnipeg: Information Bulletin 2026-007-B, Building permit requirements for housing', url: 'https://www.winnipeg.ca/media/6116', accessed: ACCESSED },
       { label: 'City of Winnipeg: heritage permits', url: 'https://www.winnipeg.ca/people-culture/winnipegs-history/heritage-conservation/heritage-permits', accessed: ACCESSED },
       { label: 'National Research Council Canada: repointing mortars for older masonry buildings (Construction Technology Update No. 67)', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=cf8bdb19-c68d-4a05-83b2-a7545a2a7422', accessed: ACCESSED },
