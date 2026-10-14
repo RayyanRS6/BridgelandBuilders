@@ -185,8 +185,9 @@ export default function Footer() {
                   rel="me noopener"
                   target="_blank"
                   aria-label={`Bridgeland Builders on ${network}`}
+                  title={network}
                 >
-                  <span title={network} aria-hidden="true"><SocialIcon>{icon}</SocialIcon></span>
+                  <span aria-hidden="true"><SocialIcon>{icon}</SocialIcon></span>
                 </a>
               ) : (
                 <span key={key} title={network}><SocialIcon>{icon}</SocialIcon></span>

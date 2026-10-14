@@ -57,6 +57,9 @@ export const CONSENT_REGIONS = [
   // European Union
   'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU',
   'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE',
+  // EU territories that IP geolocation reports under their own codes (Åland;
+  // French Guiana, Guadeloupe, Martinique, Réunion, Mayotte, Saint-Martin)
+  'AX', 'GF', 'GP', 'MQ', 'RE', 'YT', 'MF',
   // Rest of the European Economic Area
   'IS', 'LI', 'NO',
 ];

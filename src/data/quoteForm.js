@@ -81,8 +81,9 @@ export const LEAD_SOURCE = 'Free Quote Page';
 // Added only when the visitor ticks the form's optional "Email me occasional
 // renovation tips and offers" box: express consent to marketing emails under
 // Canada's Anti-Spam Legislation (CASL). Without it, marketing emails rely on
-// implied consent (6 months after an inquiry). A booked visit's notes also
-// record the date it was given (api/_lib/ghl.js). Never removed here: leaving
+// implied consent (6 months after an inquiry). The first time it is ticked,
+// a dated note on the contact records when it was given (and a booked
+// visit's notes repeat it; api/_lib/ghl.js). Never removed here: leaving
 // the box unticked on a later request is not a withdrawal of consent.
 export const MARKETING_CONSENT_TAG = 'marketing-consent-express';
 

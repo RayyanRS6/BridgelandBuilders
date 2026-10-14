@@ -275,6 +275,13 @@ button {
   display: contents;
 }
 
+/* With the wrapper gone, its <source> would become a (0-width) flex item and
+   add a gap before the logo. Source selection doesn't depend on CSS. */
+.brand-logo picture source,
+.footer-logo picture source {
+  display: none;
+}
+
 .nav-links {
   display: flex;
   align-items: center;

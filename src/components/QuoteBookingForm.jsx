@@ -409,7 +409,18 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
               onChange={(event) => setField('marketingConsent', event.target.checked)}
               style={CONSENT_BOX_STYLE}
             />
-            <span>Email me occasional renovation tips and offers. Unsubscribe any time.</span>
+            {/* CASL consent request: names the sender, says consent can be
+                withdrawn, and points to the mailing address (the Privacy
+                Policy's contact section; a new tab, so the form keeps its
+                answers). */}
+            <span>
+              Email me occasional renovation tips and offers from Bridgeland Builders. Unsubscribe any time. Our
+              contact details and mailing address are in our{' '}
+              <a href="/privacy-policy" target="_blank" rel="noopener">
+                Privacy Policy
+              </a>
+              .
+            </span>
           </label>
 
           {/* Honeypot — hidden from people, filled in by bots. */}

@@ -406,6 +406,38 @@ export function validateHostRules(hostRules) {
   return errors;
 }
 
+/**
+ * Vercel compiles every vercel.json `source` (redirects, rewrites, headers)
+ * with path-to-regexp, which rejects a capturing group inside a custom (...)
+ * group ("Capturing groups are not allowed") and fails the whole deployment.
+ * Nothing else in the build parses these patterns, so check them here: inside
+ * a group, every "(" must open a non-capturing "(?:".
+ */
+function sourcePatternErrors(config) {
+  const errors = [];
+  for (const kind of ['redirects', 'rewrites', 'headers']) {
+    (config[kind] || []).forEach((rule, index) => {
+      const source = rule.source || '';
+      let depth = 0;
+      for (let i = 0; i < source.length; i += 1) {
+        const ch = source[i];
+        if (ch === '\\') {
+          i += 1;
+        } else if (ch === '(') {
+          if (depth > 0 && source[i + 1] !== '?') {
+            errors.push(`vercel.json ${kind}[${index}] source "${source}": capturing group inside a group (character ${i + 1}); use (?:...)`);
+            break;
+          }
+          depth += 1;
+        } else if (ch === ')') {
+          depth = Math.max(0, depth - 1);
+        }
+      }
+    });
+  }
+  return errors;
+}
+
 /* ------------------------------------------------------------------ main */
 
 async function main() {
@@ -429,6 +461,11 @@ async function main() {
 
   const vercelRules = toVercelRules(resolved, HOST_REDIRECTS);
   const current = readFileSync(VERCEL_JSON, 'utf8');
+  const patternErrors = sourcePatternErrors({ ...JSON.parse(current), redirects: vercelRules });
+  if (patternErrors.length) {
+    for (const e of patternErrors) console.error(`[redirects] error: ${e}`);
+    process.exit(1);
+  }
   const updated = writeRedirectsInto(current, vercelRules);
 
   const permanent = vercelRules.filter((r) => r.permanent).length;

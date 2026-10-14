@@ -11,6 +11,7 @@
 // server sets it (see vite.config.js), and only when no token is configured.
 import {
   BOOKING_CALENDAR,
+  MARKETING_CONSENT_TAG,
   OUTSIDE_AREA_TAG,
   QUOTE_QUESTIONS,
   attributionCustomFields,
@@ -44,6 +45,10 @@ function config() {
 }
 
 export const isMock = () => process.env.BOOKING_MOCK === '1';
+
+/** CASL record of express consent: when it was given, and where. */
+const marketingConsentNote = () =>
+  `Marketing emails: express consent, ticked on the website quote form on ${todayIn(BOOKING_CALENDAR.timeZone)}`;
 
 async function ghl(path, { method = 'GET', version, body, token }) {
   const response = await fetch(`${API_BASE}${path}`, {
@@ -132,7 +137,8 @@ export async function getFreeSlots(start, end) {
  * cost a lead.
  *
  * A ticked marketing-consent box (lead.marketingConsent) adds
- * MARKETING_CONSENT_TAG with the other tags (see tagsForLead).
+ * MARKETING_CONSENT_TAG with the other tags (see tagsForLead) and, the first
+ * time, a dated note on the contact (best effort, after the save).
  */
 export async function upsertLead(lead, { utmSource, attribution } = {}) {
   const context = { formPage: attribution?.formPage, channel: attribution?.channel };
@@ -208,6 +214,23 @@ export async function upsertLead(lead, { utmSource, attribution } = {}) {
     });
   }
 
+  // CASL record of express consent: a dated note on the contact the first
+  // time the box is ticked (the tag alone carries no date). The lead is
+  // already saved, so a failed note is only logged, never surfaced.
+  const hadConsent = (data?.contact?.tags || []).includes(MARKETING_CONSENT_TAG);
+  if (lead.marketingConsent === true && !hadConsent) {
+    try {
+      await ghl(`/contacts/${contactId}/notes`, {
+        method: 'POST',
+        version: CONTACTS_VERSION,
+        token,
+        body: { body: marketingConsentNote() },
+      });
+    } catch {
+      // ghl() has already logged GoHighLevel's message (no visitor details).
+    }
+  }
+
   return { contactId, tags: tagged?.tags || [] };
 }
 
@@ -249,8 +272,7 @@ export async function bookAppointment(contactId, startTime, { lead } = {}) {
     `Email: ${lead?.email || ''}`,
     `Meeting Location: ${meetingAddress}`,
     renovationTypes ? `Renovation Types: ${renovationTypes}` : null,
-    // CASL record of express consent: when it was given, and where.
-    lead?.marketingConsent ? `Marketing emails: express consent, ticked on the website quote form on ${todayIn(BOOKING_CALENDAR.timeZone)}` : null,
+    lead?.marketingConsent ? marketingConsentNote() : null,
   ].filter(Boolean).join('\n');
 
   if (isMock()) return { id: `mock-appointment-${Date.now()}`, startTime, endTime, address: meetingAddress, title };

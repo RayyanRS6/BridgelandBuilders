@@ -3,7 +3,7 @@ import ProjectPage from '../ProjectPage.jsx';
 import { serviceSeo } from '../../data/seo.js';
 import { serviceByPath } from '../../data/services.js';
 import { usePageSeo } from '../../hooks/useSeo.js';
-import { keepServerHtml, lazyWithRetry, onInitialPage, retryLoad } from '../../lib/lazyRetry.js';
+import { keepServerHtml, lazyWithRetry, retryLoad } from '../../lib/lazyRetry.js';
 
 // Never rendered for a routed (live) service, so it is not modulepreloaded
 // with every service page.
@@ -63,13 +63,12 @@ function lazyServicePage(service) {
               return <ServicePage service={service} content={content} guidePosts={guidePosts} />;
             },
           };
-        }).catch((error) => {
-          // On the prerendered first page the server HTML stays in place
-          // (lib/lazyRetry.js); otherwise RouteErrorBoundary takes over and the
-          // next visit to this page tries again.
-          if (!onInitialPage()) PAGES.delete(service.slug);
-          return keepServerHtml(error);
         })
+          // On the prerendered first page the server HTML stays in place
+          // (lib/lazyRetry.js); otherwise the error reaches RouteErrorBoundary,
+          // which reloads once. The failed lazy stays in PAGES: a new one would
+          // suspend again and the error would never surface.
+          .catch(keepServerHtml)
       )
     );
   }

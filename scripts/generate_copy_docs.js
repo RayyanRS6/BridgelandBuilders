@@ -37,7 +37,7 @@ import { serviceTrail } from '../src/data/seo.js';
 import { LIVE_COST_GUIDES } from '../src/data/head.js';
 import { SERVICE_AREAS_CONTENT, confirmedServiceAreas } from '../src/data/serviceAreasContent.js';
 import { EDITORIAL_POLICY } from '../src/data/editorialPolicy.js';
-import { SITE_EMAIL } from '../src/data/siteConfig.js';
+import { SERVICE_AREA_NAMES, SITE_EMAIL } from '../src/data/siteConfig.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -212,7 +212,7 @@ const categoryLines = (id, withPage = false) =>
 const STAT_ITEMS = [
   { type: 'label-value', label: 'Stat 1', value: '60+ Years of combined experience' },
   { type: 'label-value', label: 'Stat 2', value: '100+ Projects completed across Winnipeg' },
-  { type: 'label-value', label: 'Stat 3', value: '5.0 Rating on Google' },
+  { type: 'label-value', label: 'Stat 3', value: `${SERVICE_AREA_NAMES.length} Communities we serve` },
   { type: 'label-value', label: 'Stat 4', value: '1 day — Reply within one business day' },
 ];
 

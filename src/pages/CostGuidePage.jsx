@@ -20,7 +20,7 @@ import { trailFor } from '../data/seo.js';
 import { serviceByPath, serviceBySlug } from '../data/services.js';
 import { INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
-import { keepServerHtml, lazyWithRetry, onInitialPage, retryLoad } from '../lib/lazyRetry.js';
+import { keepServerHtml, lazyWithRetry, retryLoad } from '../lib/lazyRetry.js';
 
 // Never rendered for a live guide, so it is not modulepreloaded with every
 // cost guide.
@@ -104,12 +104,11 @@ function viewFor(path) {
                   );
                 },
               }))
-              .catch((error) => {
-                // Prerendered first page: keep the server HTML; otherwise
-                // RouteErrorBoundary (lib/lazyRetry.js), retrying next visit.
-                if (!onInitialPage()) VIEWS.delete(path);
-                return keepServerHtml(error);
-              })
+              // Prerendered first page: keep the server HTML; otherwise the
+              // error reaches RouteErrorBoundary (lib/lazyRetry.js), which
+              // reloads once. The failed lazy stays in VIEWS: a new one would
+              // suspend again and the error would never surface.
+              .catch(keepServerHtml)
           )
         : null
     );
@@ -331,7 +330,7 @@ function CostGuideView({ guide }) {
                   <h3>{item.label}</h3>
                   <p>{item.summary}</p>
                   <Link className="service-directory-action" to={item.path}>
-                    {item.action}<span className="visually-hidden">: {item.label}</span> <ArrowRightIcon size={13} />
+                    {item.action}<span className="visually-hidden">: {item.label}</span><ArrowRightIcon size={13} />
                   </Link>
                 </article>
               ))}

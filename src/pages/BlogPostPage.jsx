@@ -11,7 +11,7 @@ import { serviceByPath } from '../data/services.js';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { buildPostHead } from '../data/postContent.js';
 import useSeo from '../hooks/useSeo.js';
-import { keepServerHtml, lazyWithRetry, onInitialPage, retryLoad } from '../lib/lazyRetry.js';
+import { keepServerHtml, lazyWithRetry, retryLoad } from '../lib/lazyRetry.js';
 
 // Only an unknown slug renders it, so it is not part of a post's first load.
 const NotFoundPage = lazyWithRetry(() => import('./NotFoundPage.jsx'));
@@ -62,13 +62,13 @@ function lazyPostPage(slug) {
               return <PostPage post={post} />;
             },
           }))
-          .catch((error) => {
-            // On the prerendered first page the server HTML stays in place
-            // (lib/lazyRetry.js); otherwise RouteErrorBoundary takes over and
-            // the next visit to this post tries again.
-            if (!onInitialPage()) PAGES.delete(slug);
-            return keepServerHtml(error);
-          })
+          // On the prerendered first page the server HTML stays in place
+          // (lib/lazyRetry.js); otherwise the error reaches RouteErrorBoundary,
+          // which reloads the (prerendered) post once. The failed lazy stays in
+          // PAGES on purpose: deleting it would make the next render create a
+          // new lazy that suspends again, so the error would never surface and
+          // the page would retry forever. A reload starts with an empty map.
+          .catch(keepServerHtml)
       )
     );
   }

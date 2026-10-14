@@ -143,11 +143,11 @@ export default function ServiceDirectory() {
                       // The hidden name makes the link "Explore service: Flooring"
                       // for screen readers and search, with no visual change.
                       <Link className="service-directory-action" to={service.to}>
-                        Explore service<span className="visually-hidden">: {service.label}</span> <ArrowRightIcon size={13} />
+                        Explore service<span className="visually-hidden">: {service.label}</span><ArrowRightIcon size={13} />
                       </Link>
                     ) : (
                       <Link className="service-directory-action" to={ASK_ABOUT_SERVICE_PATH}>
-                        Ask about this service<span className="visually-hidden">: {service.label}</span> <ArrowRightIcon size={13} />
+                        Ask about this service<span className="visually-hidden">: {service.label}</span><ArrowRightIcon size={13} />
                       </Link>
                     )}
                   </article>

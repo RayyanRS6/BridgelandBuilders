@@ -81,7 +81,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "The index measures what contractors charge to build new houses and apartment buildings, including materials, labour, equipment, overhead and profit, but not sales taxes, land or building design. It doesn’t cover renovations, so read it as a sign of where labour and material prices are heading rather than a price for your project."
+        "x": "The index measures what contractors charge to build new houses and apartment buildings, including materials, labour, equipment, overhead and profit, but not sales taxes, land or building design. Read it as a sign of where labour and material prices are heading rather than a price for your project."
+      },
+      {
+        "t": "p",
+        "x": "For renovations, Statistics Canada publishes a separate quarterly Residential Renovation Price Index (2023 = 100) for 15 cities, Winnipeg included. It tracks how the prices contractors charge for 37 set renovation projects change, before sales taxes and design costs. Like the building index, it shows the trend, not what your project will cost."
       },
       {
         "t": "table",
@@ -258,7 +262,7 @@ export const BLOG_POSTS = [
     "faqs": [
       {
         "q": "Are renovation costs still going up in Canada?",
-        "a": "Building costs are. Statistics Canada’s price index for new residential buildings rose 2.3% across its 15-city composite in the year to the second quarter of 2026, and 4.0% in Winnipeg. The index tracks new construction rather than renovations, but it shows which way contractors’ prices for labour and materials are moving."
+        "a": "Building costs are. Statistics Canada’s price index for new residential buildings rose 2.3% across its 15-city composite in the year to the second quarter of 2026, and 4.0% in Winnipeg. For renovation prices on their own, it publishes a quarterly Residential Renovation Price Index covering 15 cities, Winnipeg included."
       },
       {
         "q": "How much does it cost to renovate a whole house in Canada?",
@@ -273,7 +277,7 @@ export const BLOG_POSTS = [
         "a": "Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We look at the space and talk through what you want, then send a free written quote. For a ballpark first, the instant estimator gives a starting range for kitchens, bathrooms and basements. We reply to every request within one business day."
       }
     ],
-    "answer": "There’s no current official average for what a home renovation costs in Canada. Statistics Canada tracks building costs instead: its price index for new residential buildings rose 2.3% in the year to the second quarter of 2026. In Winnipeg, our instant estimator starts a bathroom renovation at $16,000, a basement development at $25,000 and a kitchen renovation at $40,000.",
+    "answer": "There’s no current official average for what a home renovation costs in Canada. Statistics Canada tracks how prices change instead, with price indexes for renovations and for new buildings; new residential building prices rose 2.3% in the year to the second quarter of 2026. In Winnipeg, our instant estimator starts bathrooms at $16,000, basements at $25,000 and kitchens at $40,000.",
     "sources": [
       {
         "label": "Statistics Canada: Building construction price indexes, second quarter 2026 (The Daily, July 24, 2026)",
@@ -283,6 +287,16 @@ export const BLOG_POSTS = [
       {
         "label": "Statistics Canada: Building construction price indexes, Table 1 (second quarter 2026)",
         "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260724/t001b-eng.htm",
+        "accessed": "2026-10-14"
+      },
+      {
+        "label": "Statistics Canada: Residential Renovation Price Index, second quarter 2026 (The Daily, August 7, 2026)",
+        "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260807/dq260807c-eng.htm",
+        "accessed": "2026-10-14"
+      },
+      {
+        "label": "Statistics Canada: Technical Guide for the Residential Renovation Price Index (October 25, 2024)",
+        "url": "https://www150.statcan.gc.ca/n1/pub/62f0014m/62f0014m2024006-eng.htm",
         "accessed": "2026-10-14"
       },
       {

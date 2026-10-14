@@ -495,7 +495,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   {/* The hidden name makes the link "Explore service: Kitchen
                       Renovations" for screen readers and search, with no visual change. */}
                   <Link className="service-directory-action" to={item.path}>
-                    Explore service<span className="visually-hidden">: {item.label}</span> <ArrowRightIcon size={13} />
+                    Explore service<span className="visually-hidden">: {item.label}</span><ArrowRightIcon size={13} />
                   </Link>
                 </article>
               ))}
