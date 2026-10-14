@@ -2,28 +2,39 @@ import { useMemo, useState } from 'react';
 import PageHero from '../components/PageHero.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import BlogCard from '../components/BlogCard.jsx';
-// Cards plus what the Blog node needs (meta description, 1200x630 image), in
+// The cards (compact image records, src/lib/cardImage.js) and categories, in
 // one generated module: post bodies are separate chunks (src/data/posts/),
 // so /blog never downloads article text. BLOG_CATEGORIES is the plan's
 // category set once posts carry it, else the categories posts carry today.
 import { BLOG_CATEGORIES, BLOG_LIST as BLOG_POSTS } from '../data/blogList.js';
-import { buildBlogNode, seoFor } from '../data/seo.js';
-import { usePageSeo } from '../hooks/useSeo.js';
+import { useLazyPageSeo } from '../hooks/useSeo.js';
 
 const ALL = 'All Posts';
-const LATEST = BLOG_POSTS[0];
+
+/**
+ * The head's options: the Blog node and the latest post's 1200x630 image,
+ * with the same builders and arguments as the prerendered head (head.js), so
+ * the JSON-LD the client writes is identical to the static HTML. Its data
+ * (every post's meta description and og image, blogListSeo.js) and the
+ * seo.js builders load only when the head has to be written, i.e. after a
+ * client-side navigation to /blog, never as part of the page's first load.
+ */
+function loadSeoOptions() {
+  return Promise.all([import('../data/blogListSeo.js'), import('../data/seo.js')]).then(
+    ([{ BLOG_NODE_POSTS: posts }, { buildBlogNode, seoFor }]) => {
+      const latest = posts[0];
+      return {
+        image: latest && (latest.ogImage || latest.hero),
+        nodes: [buildBlogNode({ posts, description: seoFor('/blog').description })],
+      };
+    }
+  );
+}
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState(ALL);
 
-  // Same builders and arguments as the prerendered head (head.js), so the
-  // JSON-LD the client writes is identical to the static HTML.
-  const { description } = seoFor('/blog');
-  const blogNodes = useMemo(() => [buildBlogNode({ posts: BLOG_POSTS, description })], [description]);
-  usePageSeo('/blog', {
-    image: LATEST && (LATEST.ogImage || LATEST.hero),
-    nodes: blogNodes,
-  });
+  useLazyPageSeo('/blog', loadSeoOptions);
 
   const posts = useMemo(
     () =>

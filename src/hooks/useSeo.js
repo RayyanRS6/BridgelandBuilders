@@ -161,3 +161,36 @@ export function usePageSeo(path, options = {}) {
   // the head is rebuilt only when their content changes.
   useHeadSync(path, [path, contentKey(options)], (module) => module.pageHead(path, options));
 }
+
+/**
+ * usePageSeo for a page whose options need data the page itself doesn't show
+ * (e.g. /blog's Blog node: every post's meta description and 1200x630 image).
+ * `loadOptions()` resolves to usePageSeo's options and is called only when
+ * the head has to be written, i.e. after a client-side navigation, so that
+ * data stays out of the page's first load. One write, once both the options
+ * and headWriter.js have loaded; a failed load is handled like a failed
+ * headWriter.js (reloadOnce).
+ */
+export function useLazyPageSeo(path, loadOptions) {
+  const firstRun = useRef(true);
+  useEffect(() => {
+    const first = firstRun.current;
+    firstRun.current = false;
+    if (first && hasServerHead(path)) return undefined;
+    let cancelled = false;
+    let cancelWrite;
+    retryLoad(loadOptions).then(
+      (options) => {
+        if (!cancelled) cancelWrite = withWriter((module) => module.writeHead(module.pageHead(path, options)));
+      },
+      (error) => {
+        if (!cancelled && !onInitialPage() && isChunkLoadError(error)) reloadOnce();
+      }
+    );
+    return () => {
+      cancelled = true;
+      if (cancelWrite) cancelWrite();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [path]);
+}
