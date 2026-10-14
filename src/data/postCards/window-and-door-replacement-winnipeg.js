@@ -10,7 +10,24 @@ export default {
   "category": "Permits & Planning",
   "date": "2026-10-13",
   "readMinutes": 8,
-  "heroSrc": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp",
-  "heroSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.361346b2.webp 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.5ed3c5b7.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.ae94dcd2.avif 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.35d0a738.avif 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.9bd3384b.avif 1320w"
+  "image": {
+    "base": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "361346b2",
+      "6d48e5d6",
+      "5ed3c5b7"
+    ],
+    "avif": [
+      "ae94dcd2",
+      "35d0a738",
+      "9bd3384b"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

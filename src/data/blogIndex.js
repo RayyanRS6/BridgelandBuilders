@@ -16,9 +16,26 @@ export const BLOG_CARDS = [
     "category": "Costs & Budgets",
     "date": "2026-10-14",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
-    "heroSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w",
+    "image": {
+      "base": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "9ad93e01",
+        "5517d108",
+        "6f8cec70"
+      ],
+      "avif": [
+        "02b9c202",
+        "1ff31c44",
+        "f7242463"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Costs & Budgets"
     ],
@@ -37,9 +54,26 @@ export const BLOG_CARDS = [
     "category": "Permits & Planning",
     "date": "2026-10-13",
     "readMinutes": 9,
-    "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
-    "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w",
+    "image": {
+      "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "86f7cdfe",
+        "d1925dff",
+        "eb1b2d54"
+      ],
+      "avif": [
+        "3e79a34c",
+        "4c88fdfd",
+        "d2a97ce0"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Permits & Planning",
       "Basements & Suites"
@@ -56,9 +90,26 @@ export const BLOG_CARDS = [
     "category": "Basements & Suites",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
-    "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.99427962.avif 1320w",
+    "image": {
+      "base": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "30133d83",
+        "9f921e14",
+        "89704a8b"
+      ],
+      "avif": [
+        "fa19d7ec",
+        "22bc170c",
+        "99427962"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Basements & Suites"
     ],
@@ -74,9 +125,26 @@ export const BLOG_CARDS = [
     "category": "Basements & Suites",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp",
-    "heroSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.cb6497ea.webp 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.e8b10ffb.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.035b039f.avif 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.4b566bcc.avif 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.20bbbec2.avif 1320w",
+    "image": {
+      "base": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "cb6497ea",
+        "69af52dd",
+        "e8b10ffb"
+      ],
+      "avif": [
+        "035b039f",
+        "4b566bcc",
+        "20bbbec2"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Basements & Suites",
       "Older Homes"
@@ -92,10 +160,27 @@ export const BLOG_CARDS = [
     "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
     "category": "Commercial",
     "date": "2026-10-13",
-    "readMinutes": 8,
-    "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
-    "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.75e30f7c.avif 1320w",
+    "readMinutes": 9,
+    "image": {
+      "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "3fb04080",
+        "6b2a1b51",
+        "0e8b8a5a"
+      ],
+      "avif": [
+        "18450584",
+        "e03ed2b1",
+        "75e30f7c"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Commercial",
       "Permits & Planning"
@@ -113,9 +198,26 @@ export const BLOG_CARDS = [
     "category": "Kitchens & Baths",
     "date": "2026-10-13",
     "readMinutes": 8,
-    "heroSrc": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp",
-    "heroSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.1282306c.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.e5e54e79.avif 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.6a5c883c.avif 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.6cd34f58.avif 1320w",
+    "image": {
+      "base": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "8f984788",
+        "fe4be3e4",
+        "1282306c"
+      ],
+      "avif": [
+        "e5e54e79",
+        "6a5c883c",
+        "6cd34f58"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Kitchens & Baths"
     ],
@@ -131,9 +233,26 @@ export const BLOG_CARDS = [
     "category": "Permits & Planning",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp",
-    "heroSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.acff5638.webp 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.5f986ef8.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.0b02a5a2.avif 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.17af2839.avif 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.bb4a7cd2.avif 1320w",
+    "image": {
+      "base": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "acff5638",
+        "f29111e2",
+        "5f986ef8"
+      ],
+      "avif": [
+        "0b02a5a2",
+        "17af2839",
+        "bb4a7cd2"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Permits & Planning"
     ],
@@ -150,9 +269,26 @@ export const BLOG_CARDS = [
     "category": "Permits & Planning",
     "date": "2026-10-13",
     "readMinutes": 8,
-    "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
-    "heroSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.b7b5971a.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.4c809500.avif 1320w",
+    "image": {
+      "base": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "33ab98c6",
+        "b9f76c7b",
+        "b7b5971a"
+      ],
+      "avif": [
+        "d6c3ff1f",
+        "7d7c2664",
+        "4c809500"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Permits & Planning"
     ],
@@ -168,9 +304,26 @@ export const BLOG_CARDS = [
     "category": "Money & Rebates",
     "date": "2026-10-13",
     "readMinutes": 8,
-    "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
-    "heroSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.1e034cbf.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.a983957b.avif 1320w",
+    "image": {
+      "base": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "807f2406",
+        "311eab5d",
+        "1e034cbf"
+      ],
+      "avif": [
+        "c61c929a",
+        "72c40423",
+        "a983957b"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Money & Rebates",
       "Costs & Budgets"
@@ -189,9 +342,26 @@ export const BLOG_CARDS = [
     "category": "Permits & Planning",
     "date": "2026-10-13",
     "readMinutes": 8,
-    "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-    "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w",
+    "image": {
+      "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "22bd57cd",
+        "26e707ed",
+        "e008916e"
+      ],
+      "avif": [
+        "7c9f9167",
+        "e0167740",
+        "c81697cc"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Permits & Planning",
       "Costs & Budgets"
@@ -210,9 +380,26 @@ export const BLOG_CARDS = [
     "category": "Hiring a Contractor",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp",
-    "heroSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.a1fe8363.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.b0d9c3f3.avif 1320w",
+    "image": {
+      "base": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "c37939a9",
+        "abd27f5e",
+        "a1fe8363"
+      ],
+      "avif": [
+        "85adbc4a",
+        "20db4422",
+        "b0d9c3f3"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Hiring a Contractor"
     ],
@@ -229,9 +416,26 @@ export const BLOG_CARDS = [
     "category": "Money & Rebates",
     "date": "2026-10-13",
     "readMinutes": 9,
-    "heroSrc": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp",
-    "heroSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.707c702f.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.70228dd9.avif 1320w",
+    "image": {
+      "base": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "5b8e56ec",
+        "b1620437",
+        "707c702f"
+      ],
+      "avif": [
+        "5478c4c1",
+        "80688f99",
+        "70228dd9"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Money & Rebates"
     ],
@@ -248,9 +452,26 @@ export const BLOG_CARDS = [
     "category": "Money & Rebates",
     "date": "2026-10-13",
     "readMinutes": 10,
-    "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
-    "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.6094b92a.avif 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.e8f9c620.avif 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.a075d7e8.avif 1320w",
+    "image": {
+      "base": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "61d350fa",
+        "c91918d2",
+        "4d58ff60"
+      ],
+      "avif": [
+        "6094b92a",
+        "e8f9c620",
+        "a075d7e8"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Money & Rebates"
     ],
@@ -267,10 +488,27 @@ export const BLOG_CARDS = [
     "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
     "category": "Commercial",
     "date": "2026-10-13",
-    "readMinutes": 7,
-    "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
-    "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.b33e68fe.avif 1320w",
+    "readMinutes": 8,
+    "image": {
+      "base": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "09eabf05",
+        "9079ee23",
+        "1977b93b"
+      ],
+      "avif": [
+        "d81177bd",
+        "432a5aed",
+        "b33e68fe"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Commercial",
       "Permits & Planning"
@@ -288,9 +526,26 @@ export const BLOG_CARDS = [
     "category": "Basements & Suites",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp",
-    "heroSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.565cba54.webp 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.3669a5da.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.59e02b43.avif 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.b83b3c92.avif 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.c31bba81.avif 1320w",
+    "image": {
+      "base": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "565cba54",
+        "2d7fc4b5",
+        "3669a5da"
+      ],
+      "avif": [
+        "59e02b43",
+        "b83b3c92",
+        "c31bba81"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Basements & Suites",
       "Permits & Planning"
@@ -307,9 +562,26 @@ export const BLOG_CARDS = [
     "category": "Basements & Suites",
     "date": "2026-10-13",
     "readMinutes": 6,
-    "heroSrc": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp",
-    "heroSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.76850913.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.2b128494.avif 1320w",
+    "image": {
+      "base": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "b9878e0f",
+        "4fd769ec",
+        "76850913"
+      ],
+      "avif": [
+        "74291d9e",
+        "a477a02e",
+        "2b128494"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Basements & Suites"
     ],
@@ -325,9 +597,26 @@ export const BLOG_CARDS = [
     "category": "Older Homes",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp",
-    "heroSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.2997bc1a.webp 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.e90ea283.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.b3c11039.avif 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.1baeecae.avif 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.dbf07dd3.avif 1320w",
+    "image": {
+      "base": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "2997bc1a",
+        "8c8b9b42",
+        "e90ea283"
+      ],
+      "avif": [
+        "b3c11039",
+        "1baeecae",
+        "dbf07dd3"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Older Homes"
     ],
@@ -344,9 +633,26 @@ export const BLOG_CARDS = [
     "category": "Commercial",
     "date": "2026-10-13",
     "readMinutes": 8,
-    "heroSrc": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
-    "heroSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.7231ee98.webp 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.9713d7f1.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.0a935fa4.avif 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.6b028ea6.avif 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.4c3faba8.avif 1320w",
+    "image": {
+      "base": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "7231ee98",
+        "9892209c",
+        "9713d7f1"
+      ],
+      "avif": [
+        "0a935fa4",
+        "6b028ea6",
+        "4c3faba8"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Commercial",
       "Permits & Planning"
@@ -364,9 +670,26 @@ export const BLOG_CARDS = [
     "category": "Basements & Suites",
     "date": "2026-10-13",
     "readMinutes": 9,
-    "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
-    "heroSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.61116791.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.fc70213a.avif 1320w",
+    "image": {
+      "base": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "83211b35",
+        "cc7d6942",
+        "61116791"
+      ],
+      "avif": [
+        "63392085",
+        "3a9abc2b",
+        "fc70213a"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Basements & Suites",
       "Permits & Planning"
@@ -384,9 +707,26 @@ export const BLOG_CARDS = [
     "category": "Basements & Suites",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
-    "heroSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.cbfdceb0.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.05e224cb.avif 1320w",
+    "image": {
+      "base": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "78d24270",
+        "75d2d894",
+        "cbfdceb0"
+      ],
+      "avif": [
+        "ca5409d1",
+        "dbe13731",
+        "05e224cb"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Basements & Suites"
     ],
@@ -402,9 +742,26 @@ export const BLOG_CARDS = [
     "category": "Hiring a Contractor",
     "date": "2026-10-13",
     "readMinutes": 8,
-    "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
-    "heroSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.270da013.webp 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.ff3bbe5d.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.f7c418f1.avif 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e88bc988.avif 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.e94c26ca.avif 1320w",
+    "image": {
+      "base": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "270da013",
+        "e059f48d",
+        "ff3bbe5d"
+      ],
+      "avif": [
+        "f7c418f1",
+        "e88bc988",
+        "e94c26ca"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Hiring a Contractor"
     ],
@@ -422,9 +779,26 @@ export const BLOG_CARDS = [
     "category": "Permits & Planning",
     "date": "2026-10-13",
     "readMinutes": 8,
-    "heroSrc": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp",
-    "heroSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.361346b2.webp 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.5ed3c5b7.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.ae94dcd2.avif 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.35d0a738.avif 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.9bd3384b.avif 1320w",
+    "image": {
+      "base": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "361346b2",
+        "6d48e5d6",
+        "5ed3c5b7"
+      ],
+      "avif": [
+        "ae94dcd2",
+        "35d0a738",
+        "9bd3384b"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Permits & Planning"
     ],
@@ -441,9 +815,26 @@ export const BLOG_CARDS = [
     "category": "Permits & Planning",
     "date": "2026-10-13",
     "readMinutes": 9,
-    "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-    "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w",
+    "image": {
+      "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "0f487983",
+        "55b461dd",
+        "5c78c717"
+      ],
+      "avif": [
+        "6bd25ab0",
+        "eac9efdc",
+        "53975749"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Permits & Planning"
     ],
@@ -464,9 +855,26 @@ export const BLOG_CARDS = [
     "category": "Hiring a Contractor",
     "date": "2026-10-13",
     "readMinutes": 7,
-    "heroSrc": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp",
-    "heroSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w",
+    "image": {
+      "base": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "101bf225",
+        "77698d54",
+        "77802d2d"
+      ],
+      "avif": [
+        "50b98f27",
+        "88d1a260",
+        "81693fe8"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
     "categories": [
       "Hiring a Contractor"
     ],
@@ -484,10 +892,25 @@ export const BLOG_CARDS = [
     "category": "Commercial",
     "date": "2026-09-03",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-    "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
-    "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w",
+    "image": {
+      "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "413203b1",
+        "4e31fe2d",
+        "34a27d10"
+      ],
+      "avif": [
+        "0f59d06c",
+        "12dcb183",
+        "43da1cb9"
+      ],
+      "main": 1
+    },
     "categories": [
       "Commercial"
     ],
@@ -505,10 +928,25 @@ export const BLOG_CARDS = [
     "category": "Permits & Planning",
     "date": "2026-09-01",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
-    "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
-    "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
+    "image": {
+      "base": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "73b0c74a",
+        "25c16ad6",
+        "a3d281b8"
+      ],
+      "avif": [
+        "66feb4f2",
+        "62be2807",
+        "1e9a351d"
+      ],
+      "main": 1
+    },
     "categories": [
       "Permits & Planning"
     ],
@@ -525,10 +963,25 @@ export const BLOG_CARDS = [
     "category": "Commercial",
     "date": "2026-08-12",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
-    "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
-    "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w",
+    "image": {
+      "base": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "90ed6161",
+        "52b03fa5",
+        "e95b1d18"
+      ],
+      "avif": [
+        "7be4d1c9",
+        "5a9d610c",
+        "537414ab"
+      ],
+      "main": 1
+    },
     "categories": [
       "Commercial",
       "Costs & Budgets"
@@ -548,10 +1001,25 @@ export const BLOG_CARDS = [
     "category": "Commercial",
     "date": "2026-08-11",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
-    "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
-    "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w",
+    "image": {
+      "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "76344da3",
+        "dbbc5f1b",
+        "b9481b87"
+      ],
+      "avif": [
+        "26670bc4",
+        "3191a00b",
+        "54f184c8"
+      ],
+      "main": 1
+    },
     "categories": [
       "Commercial",
       "Money & Rebates"
@@ -569,10 +1037,25 @@ export const BLOG_CARDS = [
     "category": "Hiring a Contractor",
     "date": "2026-08-05",
     "readMinutes": 10,
-    "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-    "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-    "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
+    "image": {
+      "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "c1d3b9fa",
+        "3b993117",
+        "3dde30a7"
+      ],
+      "avif": [
+        "c03d571e",
+        "8eb20a2f",
+        "504b262f"
+      ],
+      "main": 1
+    },
     "categories": [
       "Hiring a Contractor"
     ],
@@ -591,10 +1074,25 @@ export const BLOG_CARDS = [
     "category": "Commercial",
     "date": "2026-08-04",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
-    "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
-    "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.6642e0d8.avif 1320w",
+    "image": {
+      "base": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "f2db0b8c",
+        "eaf95e2d",
+        "afcff434"
+      ],
+      "avif": [
+        "b0fa83b7",
+        "e36c2cee",
+        "6642e0d8"
+      ],
+      "main": 1
+    },
     "categories": [
       "Commercial",
       "Costs & Budgets"
@@ -612,10 +1110,25 @@ export const BLOG_CARDS = [
     "category": "Commercial",
     "date": "2026-07-29",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
-    "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
-    "heroSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.09bdb970.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.51c2dc1d.avif 1320w",
+    "image": {
+      "base": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "241c3443",
+        "408891d3",
+        "09bdb970"
+      ],
+      "avif": [
+        "cd1bccab",
+        "ab626d7c",
+        "51c2dc1d"
+      ],
+      "main": 1
+    },
     "categories": [
       "Commercial",
       "Permits & Planning"
@@ -634,10 +1147,25 @@ export const BLOG_CARDS = [
     "category": "Kitchens & Baths",
     "date": "2026-07-17",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
-    "heroSrc": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp",
-    "heroSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.f562c9d4.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.38be59c3.avif 1320w",
+    "image": {
+      "base": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "234dec8b",
+        "d44977c5",
+        "f562c9d4"
+      ],
+      "avif": [
+        "f2ea16c2",
+        "d0b4cb6c",
+        "38be59c3"
+      ],
+      "main": 1
+    },
     "categories": [
       "Kitchens & Baths"
     ],
@@ -653,10 +1181,25 @@ export const BLOG_CARDS = [
     "category": "Kitchens & Baths",
     "date": "2026-07-12",
     "readMinutes": 7,
-    "hero": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png",
-    "heroSrc": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp",
-    "heroSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.41a68949.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.3392ce25.avif 1320w",
+    "image": {
+      "base": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "0aff58da",
+        "c18d81b6",
+        "41a68949"
+      ],
+      "avif": [
+        "009bde89",
+        "aa2dccf5",
+        "3392ce25"
+      ],
+      "main": 1
+    },
     "categories": [
       "Kitchens & Baths"
     ],

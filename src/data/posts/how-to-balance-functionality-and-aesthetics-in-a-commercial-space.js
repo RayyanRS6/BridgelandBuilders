@@ -289,10 +289,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-12",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
-      "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
-      "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w"
+      "image": {
+        "base": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "90ed6161",
+          "52b03fa5",
+          "e95b1d18"
+        ],
+        "avif": [
+          "7be4d1c9",
+          "5a9d610c",
+          "537414ab"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
@@ -301,10 +316,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-11",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
-      "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
-      "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "76344da3",
+          "dbbc5f1b",
+          "b9481b87"
+        ],
+        "avif": [
+          "26670bc4",
+          "3191a00b",
+          "54f184c8"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-prepare-your-business-for-a-major-renovation",
@@ -313,10 +343,25 @@ export default {
       "category": "Commercial",
       "date": "2026-07-29",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
-      "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
-      "heroSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.09bdb970.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.51c2dc1d.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "241c3443",
+          "408891d3",
+          "09bdb970"
+        ],
+        "avif": [
+          "cd1bccab",
+          "ab626d7c",
+          "51c2dc1d"
+        ],
+        "main": 1
+      }
     }
   ]
 };

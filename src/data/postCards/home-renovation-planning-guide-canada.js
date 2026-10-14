@@ -10,7 +10,24 @@ export default {
   "category": "Permits & Planning",
   "date": "2026-10-13",
   "readMinutes": 8,
-  "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-  "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w"
+  "image": {
+    "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "22bd57cd",
+      "26e707ed",
+      "e008916e"
+    ],
+    "avif": [
+      "7c9f9167",
+      "e0167740",
+      "c81697cc"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

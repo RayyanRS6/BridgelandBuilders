@@ -9,8 +9,25 @@ export default {
   "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
   "category": "Commercial",
   "date": "2026-10-13",
-  "readMinutes": 7,
-  "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
-  "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.b33e68fe.avif 1320w"
+  "readMinutes": 8,
+  "image": {
+    "base": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "09eabf05",
+      "9079ee23",
+      "1977b93b"
+    ],
+    "avif": [
+      "d81177bd",
+      "432a5aed",
+      "b33e68fe"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

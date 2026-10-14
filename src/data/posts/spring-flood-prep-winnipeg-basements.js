@@ -251,9 +251,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
-      "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.99427962.avif 1320w"
+      "image": {
+        "base": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "30133d83",
+          "9f921e14",
+          "89704a8b"
+        ],
+        "avif": [
+          "fa19d7ec",
+          "22bc170c",
+          "99427962"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "clay-soil-basement-cracks-winnipeg",
@@ -262,9 +279,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp",
-      "heroSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.cb6497ea.webp 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.e8b10ffb.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.035b039f.avif 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.4b566bcc.avif 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.20bbbec2.avif 1320w"
+      "image": {
+        "base": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "cb6497ea",
+          "69af52dd",
+          "e8b10ffb"
+        ],
+        "avif": [
+          "035b039f",
+          "4b566bcc",
+          "20bbbec2"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "basement-development-permits-winnipeg",
@@ -273,9 +307,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
-      "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w"
+      "image": {
+        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "86f7cdfe",
+          "d1925dff",
+          "eb1b2d54"
+        ],
+        "avif": [
+          "3e79a34c",
+          "4c88fdfd",
+          "d2a97ce0"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

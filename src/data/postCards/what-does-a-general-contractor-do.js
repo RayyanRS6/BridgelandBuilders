@@ -10,7 +10,24 @@ export default {
   "category": "Hiring a Contractor",
   "date": "2026-10-13",
   "readMinutes": 8,
-  "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
-  "heroSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.270da013.webp 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.ff3bbe5d.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.f7c418f1.avif 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e88bc988.avif 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.e94c26ca.avif 1320w"
+  "image": {
+    "base": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "270da013",
+      "e059f48d",
+      "ff3bbe5d"
+    ],
+    "avif": [
+      "f7c418f1",
+      "e88bc988",
+      "e94c26ca"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

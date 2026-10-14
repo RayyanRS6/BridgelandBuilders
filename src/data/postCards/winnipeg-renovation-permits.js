@@ -10,7 +10,24 @@ export default {
   "category": "Permits & Planning",
   "date": "2026-10-13",
   "readMinutes": 9,
-  "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-  "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+  "image": {
+    "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "0f487983",
+      "55b461dd",
+      "5c78c717"
+    ],
+    "avif": [
+      "6bd25ab0",
+      "eac9efdc",
+      "53975749"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

@@ -10,7 +10,24 @@ export default {
   "category": "Basements & Suites",
   "date": "2026-10-13",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp",
-  "heroSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.cb6497ea.webp 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.e8b10ffb.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.035b039f.avif 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.4b566bcc.avif 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.20bbbec2.avif 1320w"
+  "image": {
+    "base": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "cb6497ea",
+      "69af52dd",
+      "e8b10ffb"
+    ],
+    "avif": [
+      "035b039f",
+      "4b566bcc",
+      "20bbbec2"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

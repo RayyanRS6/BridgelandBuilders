@@ -265,10 +265,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-12",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
-      "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
-      "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w"
+      "image": {
+        "base": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "90ed6161",
+          "52b03fa5",
+          "e95b1d18"
+        ],
+        "avif": [
+          "7be4d1c9",
+          "5a9d610c",
+          "537414ab"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "restaurant-renovation-permits-winnipeg",
@@ -277,9 +292,26 @@ export default {
       "category": "Commercial",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
-      "heroSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.7231ee98.webp 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.9713d7f1.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.0a935fa4.avif 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.6b028ea6.avif 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.4c3faba8.avif 1320w"
+      "image": {
+        "base": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "7231ee98",
+          "9892209c",
+          "9713d7f1"
+        ],
+        "avif": [
+          "0a935fa4",
+          "6b028ea6",
+          "4c3faba8"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
@@ -288,10 +320,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-11",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
-      "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
-      "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "76344da3",
+          "dbbc5f1b",
+          "b9481b87"
+        ],
+        "avif": [
+          "26670bc4",
+          "3191a00b",
+          "54f184c8"
+        ],
+        "main": 1
+      }
     }
   ]
 };

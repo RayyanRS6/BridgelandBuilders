@@ -258,10 +258,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-12",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
-      "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
-      "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w"
+      "image": {
+        "base": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "90ed6161",
+          "52b03fa5",
+          "e95b1d18"
+        ],
+        "avif": [
+          "7be4d1c9",
+          "5a9d610c",
+          "537414ab"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
@@ -270,10 +285,25 @@ export default {
       "category": "Commercial",
       "date": "2026-09-03",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-      "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
-      "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "413203b1",
+          "4e31fe2d",
+          "34a27d10"
+        ],
+        "avif": [
+          "0f59d06c",
+          "12dcb183",
+          "43da1cb9"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "office-fit-up-lease-planning-winnipeg",
@@ -281,10 +311,27 @@ export default {
       "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
       "category": "Commercial",
       "date": "2026-10-13",
-      "readMinutes": 7,
-      "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
-      "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.b33e68fe.avif 1320w"
+      "readMinutes": 8,
+      "image": {
+        "base": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "09eabf05",
+          "9079ee23",
+          "1977b93b"
+        ],
+        "avif": [
+          "d81177bd",
+          "432a5aed",
+          "b33e68fe"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

@@ -15,7 +15,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
@@ -34,6 +34,7 @@ export default {
     "/services/basement-suites",
     "/services/basement-renovations"
   ],
+  "ctaService": "/services/basement-suites",
   "cluster": "winnipeg-permits",
   "memberOnly": false,
   "blocks": [
@@ -64,6 +65,10 @@ export default {
     {
       "t": "p",
       "x": "Both a development permit and a building permit, before construction starts, plus separate electrical and plumbing permits. The City offers concurrent review, where the building permit application goes in once the development application is confirmed complete, or sequential review, after development approval. Apply through Permits Online or at the Zoning & Permits office, Unit 31-30 Fort Street."
+    },
+    {
+      "t": "p",
+      "x": "In September 2026, the City took an average of 13 business days to review housing permit applications where one dwelling is stacked above another, as in a house with a basement suite, against its own target of 15 business days; that’s review time, not the total time until a permit is issued."
     },
     {
       "t": "p",
@@ -150,7 +155,7 @@ export default {
     },
     {
       "t": "h2",
-      "x": "What changed with Winnipeg’s 2025 zoning amendments?"
+      "x": "What did the 2025 zoning changes mean for suites?"
     },
     {
       "t": "p",
@@ -275,6 +280,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "Province of Manitoba – Adoption of the 2020 national model construction codes",
       "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
       "accessed": "2026-10-13"
@@ -303,9 +313,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "basement-development-permits-winnipeg",
@@ -314,9 +341,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
-      "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w"
+      "image": {
+        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "86f7cdfe",
+          "d1925dff",
+          "eb1b2d54"
+        ],
+        "avif": [
+          "3e79a34c",
+          "4c88fdfd",
+          "d2a97ce0"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "home-renovation-financing-canada",
@@ -325,9 +369,26 @@ export default {
       "category": "Money & Rebates",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
-      "heroSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.1e034cbf.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.a983957b.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "807f2406",
+          "311eab5d",
+          "1e034cbf"
+        ],
+        "avif": [
+          "c61c929a",
+          "72c40423",
+          "a983957b"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

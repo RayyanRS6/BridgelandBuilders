@@ -10,7 +10,24 @@ export default {
   "category": "Permits & Planning",
   "date": "2026-10-13",
   "readMinutes": 9,
-  "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
-  "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w"
+  "image": {
+    "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "86f7cdfe",
+      "d1925dff",
+      "eb1b2d54"
+    ],
+    "avif": [
+      "3e79a34c",
+      "4c88fdfd",
+      "d2a97ce0"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

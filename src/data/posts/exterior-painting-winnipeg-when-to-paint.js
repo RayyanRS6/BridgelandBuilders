@@ -14,7 +14,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": null,
   "heroSrc": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp",
@@ -172,7 +172,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Outside Winnipeg, check with your local municipality. If your project grows into new siding materials, new window openings or an addition, permits may come into play; our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need one."
+      "x": "Outside Winnipeg, check with your local municipality. If your project grows into new siding materials, new window openings or an addition, permits may come into play; our guide explains [which projects need a permit](/blog/winnipeg-renovation-permits)."
     },
     {
       "t": "h2",
@@ -281,9 +281,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-      "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "22bd57cd",
+          "26e707ed",
+          "e008916e"
+        ],
+        "avif": [
+          "7c9f9167",
+          "e0167740",
+          "c81697cc"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "window-and-door-replacement-winnipeg",
@@ -292,9 +309,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp",
-      "heroSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.361346b2.webp 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.5ed3c5b7.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-480.ae94dcd2.avif 480w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.35d0a738.avif 880w, /images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1320.9bd3384b.avif 1320w"
+      "image": {
+        "base": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "361346b2",
+          "6d48e5d6",
+          "5ed3c5b7"
+        ],
+        "avif": [
+          "ae94dcd2",
+          "35d0a738",
+          "9bd3384b"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-permits",
@@ -303,9 +337,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

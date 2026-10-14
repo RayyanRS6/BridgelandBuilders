@@ -14,7 +14,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-09-01",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
   "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
@@ -187,7 +187,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "For current price ranges, see our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). For a full-house project, our [whole home renovation](/services/whole-home-renovations) page explains how the work is planned and staged."
+      "x": "For [current Winnipeg price ranges](/renovation-cost-winnipeg), see our cost guide. For a full-house project, our [whole home renovation](/services/whole-home-renovations) page explains how the work is planned and staged."
     },
     {
       "t": "h2",
@@ -280,9 +280,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-      "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "22bd57cd",
+          "26e707ed",
+          "e008916e"
+        ],
+        "avif": [
+          "7c9f9167",
+          "e0167740",
+          "c81697cc"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "what-does-a-general-contractor-do",
@@ -291,9 +308,26 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
-      "heroSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.270da013.webp 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.ff3bbe5d.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.f7c418f1.avif 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e88bc988.avif 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.e94c26ca.avif 1320w"
+      "image": {
+        "base": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "270da013",
+          "e059f48d",
+          "ff3bbe5d"
+        ],
+        "avif": [
+          "f7c418f1",
+          "e88bc988",
+          "e94c26ca"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "exterior-painting-winnipeg-when-to-paint",
@@ -302,9 +336,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp",
-      "heroSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.acff5638.webp 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.5f986ef8.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.0b02a5a2.avif 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.17af2839.avif 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.bb4a7cd2.avif 1320w"
+      "image": {
+        "base": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "acff5638",
+          "f29111e2",
+          "5f986ef8"
+        ],
+        "avif": [
+          "0b02a5a2",
+          "17af2839",
+          "bb4a7cd2"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

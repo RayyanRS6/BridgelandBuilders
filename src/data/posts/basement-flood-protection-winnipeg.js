@@ -14,7 +14,7 @@ export default {
     "Basements & Suites"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": null,
   "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
@@ -128,7 +128,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Outside Winnipeg, the same devices are common, but the permit office and its rules belong to your municipality. Our [renovation permits guide](/blog/winnipeg-renovation-permits) lists the offices for nearby communities."
+      "x": "Outside Winnipeg, the same devices are common, but the permit office and its rules belong to your municipality. Our permits guide lists [the permit offices for nearby communities](/blog/winnipeg-renovation-permits)."
     },
     {
       "t": "h2",
@@ -256,9 +256,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp",
-      "heroSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.cb6497ea.webp 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.e8b10ffb.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.035b039f.avif 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.4b566bcc.avif 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.20bbbec2.avif 1320w"
+      "image": {
+        "base": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "cb6497ea",
+          "69af52dd",
+          "e8b10ffb"
+        ],
+        "avif": [
+          "035b039f",
+          "4b566bcc",
+          "20bbbec2"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "spring-flood-prep-winnipeg-basements",
@@ -267,9 +284,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
-      "heroSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.cbfdceb0.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.05e224cb.avif 1320w"
+      "image": {
+        "base": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "78d24270",
+          "75d2d894",
+          "cbfdceb0"
+        ],
+        "avif": [
+          "ca5409d1",
+          "dbe13731",
+          "05e224cb"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "basement-development-permits-winnipeg",
@@ -278,9 +312,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
-      "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w"
+      "image": {
+        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "86f7cdfe",
+          "d1925dff",
+          "eb1b2d54"
+        ],
+        "avif": [
+          "3e79a34c",
+          "4c88fdfd",
+          "d2a97ce0"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

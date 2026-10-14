@@ -6,7 +6,7 @@
 export default {
   "slug": "office-fit-up-lease-planning-winnipeg",
   "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
-  "metaTitle": "Office Fit-Up Planning in Winnipeg | Bridgeland Builders",
+  "metaTitle": "Office Fit-Up Lease Planning in Winnipeg | Bridgeland",
   "metaDescription": "Plan a Winnipeg office fit-up around your lease: landlord consent, tenant allowances, City permits, inspections and the occupancy permit before move-in.",
   "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
   "category": "Commercial",
@@ -15,8 +15,8 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-14",
-  "readMinutes": 7,
+  "updated": "2026-10-15",
+  "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
   "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
@@ -113,6 +113,14 @@ export default {
     {
       "t": "p",
       "x": "For simpler fit-ups, the architectural drawings do not have to come from an architect. The City asks for someone who can show the scope clearly and professionally: a key plan of where your unit sits, and a scaled floor plan with dimensions, labelled rooms and walls marked existing, new or demolished."
+    },
+    {
+      "t": "p",
+      "x": "In September 2026, the City took an average of 5.3 business days to review minor alterations in Part 3 buildings (no change of use, no professionals required and no impact on life safety), against its own target of 5, and 6.9 business days for a change of use in existing tenant space, against a target of 15."
+    },
+    {
+      "t": "p",
+      "x": "In a small commercial Part 9 building, three storeys or less with a building area under 600 m², the average that month was 6.2 business days against a target of 15. That's review time, not the total time until a permit is issued."
     },
     {
       "t": "h2",
@@ -276,6 +284,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
       "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
       "accessed": "2026-10-13"
@@ -294,10 +307,25 @@ export default {
       "category": "Commercial",
       "date": "2026-09-03",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-      "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
-      "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "413203b1",
+          "4e31fe2d",
+          "34a27d10"
+        ],
+        "avif": [
+          "0f59d06c",
+          "12dcb183",
+          "43da1cb9"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
@@ -306,10 +334,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-12",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
-      "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
-      "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w"
+      "image": {
+        "base": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "90ed6161",
+          "52b03fa5",
+          "e95b1d18"
+        ],
+        "avif": [
+          "7be4d1c9",
+          "5a9d610c",
+          "537414ab"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
@@ -318,10 +361,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-11",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
-      "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
-      "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "76344da3",
+          "dbbc5f1b",
+          "b9481b87"
+        ],
+        "avif": [
+          "26670bc4",
+          "3191a00b",
+          "54f184c8"
+        ],
+        "main": 1
+      }
     }
   ]
 };

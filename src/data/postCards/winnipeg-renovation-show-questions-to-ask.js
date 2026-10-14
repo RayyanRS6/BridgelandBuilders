@@ -10,7 +10,24 @@ export default {
   "category": "Hiring a Contractor",
   "date": "2026-10-13",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp",
-  "heroSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w"
+  "image": {
+    "base": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "101bf225",
+      "77698d54",
+      "77802d2d"
+    ],
+    "avif": [
+      "50b98f27",
+      "88d1a260",
+      "81693fe8"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

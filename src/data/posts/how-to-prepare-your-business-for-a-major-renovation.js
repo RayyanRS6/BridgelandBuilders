@@ -293,10 +293,27 @@ export default {
       "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
       "category": "Commercial",
       "date": "2026-10-13",
-      "readMinutes": 8,
-      "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
-      "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.75e30f7c.avif 1320w"
+      "readMinutes": 9,
+      "image": {
+        "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "3fb04080",
+          "6b2a1b51",
+          "0e8b8a5a"
+        ],
+        "avif": [
+          "18450584",
+          "e03ed2b1",
+          "75e30f7c"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
@@ -305,10 +322,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-12",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
-      "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
-      "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w"
+      "image": {
+        "base": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "90ed6161",
+          "52b03fa5",
+          "e95b1d18"
+        ],
+        "avif": [
+          "7be4d1c9",
+          "5a9d610c",
+          "537414ab"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
@@ -317,10 +349,25 @@ export default {
       "category": "Commercial",
       "date": "2026-09-03",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-      "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
-      "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "413203b1",
+          "4e31fe2d",
+          "34a27d10"
+        ],
+        "avif": [
+          "0f59d06c",
+          "12dcb183",
+          "43da1cb9"
+        ],
+        "main": 1
+      }
     }
   ]
 };

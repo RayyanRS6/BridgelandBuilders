@@ -14,7 +14,7 @@ export default {
     "Older Homes"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": null,
   "heroSrc": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp",
@@ -100,7 +100,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "A heritage permit is a separate approval. Work that needs a building, electrical or plumbing permit still needs one. We coordinate the permits and inspections a project needs with the City of Winnipeg, and heritage approval is one more step to schedule at the start. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+      "x": "A heritage permit is a separate approval. Work that needs a building, electrical or plumbing permit still needs one. We coordinate the permits and inspections a project needs with the City of Winnipeg, and heritage approval is one more step to schedule at the start. Our permit guide explains [which work needs which permit](/blog/winnipeg-renovation-permits)."
     },
     {
       "t": "h2",
@@ -179,7 +179,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Once permits and materials are ready, most [whole home renovations](/services/whole-home-renovations) we take on run 8 to 16 weeks, and many straightforward additions take a similar time. For current price ranges by project type, see our [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      "x": "Once permits and materials are ready, most [whole home renovations](/services/whole-home-renovations) we take on run 8 to 16 weeks, and many straightforward additions take a similar time. For current price ranges by project type, see [what renovations cost in Winnipeg](/renovation-cost-winnipeg)."
     },
     {
       "t": "p",
@@ -264,9 +264,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "exterior-painting-winnipeg-when-to-paint",
@@ -275,9 +292,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp",
-      "heroSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.acff5638.webp 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.5f986ef8.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.0b02a5a2.avif 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.17af2839.avif 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.bb4a7cd2.avif 1320w"
+      "image": {
+        "base": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "acff5638",
+          "f29111e2",
+          "5f986ef8"
+        ],
+        "avif": [
+          "0b02a5a2",
+          "17af2839",
+          "bb4a7cd2"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "home-additions-and-zoning-winnipeg",
@@ -286,9 +320,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
-      "heroSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.b7b5971a.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.4c809500.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "33ab98c6",
+          "b9f76c7b",
+          "b7b5971a"
+        ],
+        "avif": [
+          "d6c3ff1f",
+          "7d7c2664",
+          "4c809500"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

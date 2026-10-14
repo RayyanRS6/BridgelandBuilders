@@ -14,7 +14,7 @@ export default {
     "Hiring a Contractor"
   ],
   "date": "2026-08-05",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 10,
   "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
   "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
@@ -152,7 +152,7 @@ export default {
     },
     {
       "t": "li",
-      "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on a [kitchen renovation](/services/kitchen-renovations), where cabinets and counters drive the price."
+      "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on [kitchen remodels](/services/kitchen-renovations), where cabinets and counters drive the price."
     },
     {
       "t": "li",
@@ -192,7 +192,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+      "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our permit guide explains [which projects need which permits](/blog/winnipeg-renovation-permits)."
     },
     {
       "t": "p",
@@ -284,7 +284,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and the [Winnipeg renovation cost guide](/renovation-cost-winnipeg) explains what drives the price."
+      "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and our cost guide explains [what drives the price of a Winnipeg renovation](/renovation-cost-winnipeg)."
     }
   ],
   "faqsTitle": "Frequently Asked Questions",
@@ -381,9 +381,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-show-questions-to-ask",
@@ -392,9 +409,26 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "101bf225",
+          "77698d54",
+          "77802d2d"
+        ],
+        "avif": [
+          "50b98f27",
+          "88d1a260",
+          "81693fe8"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "home-renovation-cost-canada",
@@ -403,9 +437,26 @@ export default {
       "category": "Costs & Budgets",
       "date": "2026-10-14",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
-      "heroSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "9ad93e01",
+          "5517d108",
+          "6f8cec70"
+        ],
+        "avif": [
+          "02b9c202",
+          "1ff31c44",
+          "f7242463"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

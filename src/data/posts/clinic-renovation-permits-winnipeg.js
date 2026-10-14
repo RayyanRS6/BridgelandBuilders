@@ -15,8 +15,8 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
-  "readMinutes": 8,
+  "updated": "2026-10-15",
+  "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
   "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
@@ -72,6 +72,14 @@ export default {
     {
       "t": "p",
       "x": "Part 3 and Part 9 are parts of the Manitoba Building Code; if nobody knows which applies, the City asks you to confirm before applying. Simpler work, such as partitions that leave exits and fire separations alone, can be drawn by someone other than an architect if the drawings show the scope clearly."
+    },
+    {
+      "t": "p",
+      "x": "The Part also changes the City's review times. In September 2026, permits for commercial Part 9 buildings, three storeys or less with a building area under 600 m², took an average of 6.2 business days to review, against the City's own target of 15."
+    },
+    {
+      "t": "p",
+      "x": "In Part 3 buildings that month, minor alterations with no change of use, no professionals required and no impact on life safety averaged 5.3 business days against a target of 5, and a change of use in existing tenant space averaged 6.9 against 15. That's review time, not the total time until a permit is issued."
     },
     {
       "t": "table",
@@ -294,6 +302,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
       "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
       "accessed": "2026-10-13"
@@ -332,10 +345,25 @@ export default {
       "category": "Commercial",
       "date": "2026-07-29",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
-      "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
-      "heroSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.09bdb970.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.51c2dc1d.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "241c3443",
+          "408891d3",
+          "09bdb970"
+        ],
+        "avif": [
+          "cd1bccab",
+          "ab626d7c",
+          "51c2dc1d"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "restaurant-renovation-permits-winnipeg",
@@ -344,9 +372,26 @@ export default {
       "category": "Commercial",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
-      "heroSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.7231ee98.webp 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.9713d7f1.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.0a935fa4.avif 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.6b028ea6.avif 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.4c3faba8.avif 1320w"
+      "image": {
+        "base": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "7231ee98",
+          "9892209c",
+          "9713d7f1"
+        ],
+        "avif": [
+          "0a935fa4",
+          "6b028ea6",
+          "4c3faba8"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "office-fit-up-lease-planning-winnipeg",
@@ -354,10 +399,27 @@ export default {
       "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
       "category": "Commercial",
       "date": "2026-10-13",
-      "readMinutes": 7,
-      "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
-      "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.b33e68fe.avif 1320w"
+      "readMinutes": 8,
+      "image": {
+        "base": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "09eabf05",
+          "9079ee23",
+          "1977b93b"
+        ],
+        "avif": [
+          "d81177bd",
+          "432a5aed",
+          "b33e68fe"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

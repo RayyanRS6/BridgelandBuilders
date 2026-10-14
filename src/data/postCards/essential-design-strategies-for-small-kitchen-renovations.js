@@ -10,8 +10,23 @@ export default {
   "category": "Kitchens & Baths",
   "date": "2026-07-12",
   "readMinutes": 7,
-  "hero": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png",
-  "heroSrc": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp",
-  "heroSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.41a68949.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.3392ce25.avif 1320w"
+  "image": {
+    "base": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "0aff58da",
+      "c18d81b6",
+      "41a68949"
+    ],
+    "avif": [
+      "009bde89",
+      "aa2dccf5",
+      "3392ce25"
+    ],
+    "main": 1
+  }
 };

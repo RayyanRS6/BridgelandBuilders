@@ -10,7 +10,24 @@ export default {
   "category": "Basements & Suites",
   "date": "2026-10-13",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
-  "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.99427962.avif 1320w"
+  "image": {
+    "base": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "30133d83",
+      "9f921e14",
+      "89704a8b"
+    ],
+    "avif": [
+      "fa19d7ec",
+      "22bc170c",
+      "99427962"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

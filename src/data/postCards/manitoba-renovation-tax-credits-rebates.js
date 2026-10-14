@@ -10,7 +10,24 @@ export default {
   "category": "Money & Rebates",
   "date": "2026-10-13",
   "readMinutes": 10,
-  "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
-  "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.6094b92a.avif 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.e8f9c620.avif 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.a075d7e8.avif 1320w"
+  "image": {
+    "base": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "61d350fa",
+      "c91918d2",
+      "4d58ff60"
+    ],
+    "avif": [
+      "6094b92a",
+      "e8f9c620",
+      "a075d7e8"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

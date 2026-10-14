@@ -10,7 +10,24 @@ export default {
   "category": "Basements & Suites",
   "date": "2026-10-13",
   "readMinutes": 6,
-  "heroSrc": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp",
-  "heroSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.76850913.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.2b128494.avif 1320w"
+  "image": {
+    "base": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "b9878e0f",
+      "4fd769ec",
+      "76850913"
+    ],
+    "avif": [
+      "74291d9e",
+      "a477a02e",
+      "2b128494"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

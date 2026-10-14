@@ -14,7 +14,7 @@ export default {
     "Hiring a Contractor"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
@@ -34,6 +34,7 @@ export default {
     "/services/commercial-renovations",
     "/services/whole-home-renovations"
   ],
+  "ctaService": "/services/general-contracting",
   "cluster": "hiring-a-contractor",
   "memberOnly": false,
   "blocks": [
@@ -187,7 +188,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      "x": "At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or [our cost guide](/renovation-cost-winnipeg)."
     },
     {
       "t": "h2",
@@ -199,7 +200,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City of Winnipeg or the local municipality on every project. Our guide to [Winnipeg renovation permits](/blog/winnipeg-renovation-permits) covers which projects need one."
+      "x": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City of Winnipeg or the local municipality on every project. Our guide to [City permit rules](/blog/winnipeg-renovation-permits) covers which projects need one."
     },
     {
       "t": "h2",
@@ -321,9 +322,26 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp",
-      "heroSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.a1fe8363.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.b0d9c3f3.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "c37939a9",
+          "abd27f5e",
+          "a1fe8363"
+        ],
+        "avif": [
+          "85adbc4a",
+          "20db4422",
+          "b0d9c3f3"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
@@ -332,10 +350,25 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-09-01",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
-      "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
-      "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "73b0c74a",
+          "25c16ad6",
+          "a3d281b8"
+        ],
+        "avif": [
+          "66feb4f2",
+          "62be2807",
+          "1e9a351d"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
@@ -344,10 +377,25 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-08-05",
       "readMinutes": 10,
-      "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-      "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-      "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "c1d3b9fa",
+          "3b993117",
+          "3dde30a7"
+        ],
+        "avif": [
+          "c03d571e",
+          "8eb20a2f",
+          "504b262f"
+        ],
+        "main": 1
+      }
     }
   ]
 };

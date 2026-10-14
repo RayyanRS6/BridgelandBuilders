@@ -10,7 +10,24 @@ export default {
   "category": "Permits & Planning",
   "date": "2026-10-13",
   "readMinutes": 8,
-  "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
-  "heroSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.b7b5971a.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.4c809500.avif 1320w"
+  "image": {
+    "base": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "33ab98c6",
+      "b9f76c7b",
+      "b7b5971a"
+    ],
+    "avif": [
+      "d6c3ff1f",
+      "7d7c2664",
+      "4c809500"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

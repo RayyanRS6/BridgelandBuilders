@@ -9,8 +9,25 @@ export default {
   "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
   "category": "Commercial",
   "date": "2026-10-13",
-  "readMinutes": 8,
-  "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
-  "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.75e30f7c.avif 1320w"
+  "readMinutes": 9,
+  "image": {
+    "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "3fb04080",
+      "6b2a1b51",
+      "0e8b8a5a"
+    ],
+    "avif": [
+      "18450584",
+      "e03ed2b1",
+      "75e30f7c"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

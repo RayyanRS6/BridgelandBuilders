@@ -10,7 +10,24 @@ export default {
   "category": "Basements & Suites",
   "date": "2026-10-13",
   "readMinutes": 9,
-  "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
-  "heroSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.61116791.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.fc70213a.avif 1320w"
+  "image": {
+    "base": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "83211b35",
+      "cc7d6942",
+      "61116791"
+    ],
+    "avif": [
+      "63392085",
+      "3a9abc2b",
+      "fc70213a"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

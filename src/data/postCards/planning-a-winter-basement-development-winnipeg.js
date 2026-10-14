@@ -10,7 +10,24 @@ export default {
   "category": "Basements & Suites",
   "date": "2026-10-13",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp",
-  "heroSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.565cba54.webp 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.3669a5da.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.59e02b43.avif 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.b83b3c92.avif 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.c31bba81.avif 1320w"
+  "image": {
+    "base": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "565cba54",
+      "2d7fc4b5",
+      "3669a5da"
+    ],
+    "avif": [
+      "59e02b43",
+      "b83b3c92",
+      "c31bba81"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

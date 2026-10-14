@@ -238,9 +238,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp",
-      "heroSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.565cba54.webp 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.3669a5da.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.59e02b43.avif 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.b83b3c92.avif 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.c31bba81.avif 1320w"
+      "image": {
+        "base": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "565cba54",
+          "2d7fc4b5",
+          "3669a5da"
+        ],
+        "avif": [
+          "59e02b43",
+          "b83b3c92",
+          "c31bba81"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "basement-development-permits-winnipeg",
@@ -249,9 +266,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
-      "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w"
+      "image": {
+        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "86f7cdfe",
+          "d1925dff",
+          "eb1b2d54"
+        ],
+        "avif": [
+          "3e79a34c",
+          "4c88fdfd",
+          "d2a97ce0"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "basement-flood-protection-winnipeg",
@@ -260,9 +294,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
-      "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.99427962.avif 1320w"
+      "image": {
+        "base": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "30133d83",
+          "9f921e14",
+          "89704a8b"
+        ],
+        "avif": [
+          "fa19d7ec",
+          "22bc170c",
+          "99427962"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };
