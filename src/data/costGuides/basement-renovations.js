@@ -29,7 +29,7 @@ export default {
       'Basement development costs in Winnipeg: starting ranges from $25,000 to $150,000 by size in our estimator, plus what a bathroom and egress window add.',
     primaryKeyword: 'basement renovation cost Winnipeg',
     published: '2026-10-13',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   eyebrow: 'Basement Development Cost',
@@ -37,6 +37,7 @@ export default {
   intro:
     'Starting ranges from our own instant estimator for finishing or redoing a basement, what moves the price, and the City rules that affect it.',
 
+  answerHeading: 'How much does it cost to finish a basement in Winnipeg?',
   answer:
     'Our instant estimator starts a basement development in Winnipeg at $25,000–$80,000 for up to 500 sq ft. Medium basements of 501–1,000 sq ft start at $45,000–$100,000, and large ones of 1,001–1,500 sq ft at $75,000–$150,000. A bathroom, an egress window and your flooring move the number, and the written quote after a free on-site visit is final.',
 

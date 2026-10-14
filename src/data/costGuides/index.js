@@ -24,11 +24,14 @@
  *     eyebrow: 'Kitchen Renovation Cost',
  *     h1: { title: 'KITCHEN RENOVATION COST', highlight: 'IN WINNIPEG' },
  *     intro?: 'one-line hero description (defaults to seo.description)',
+ *     answerHeading?: 'How much does a kitchen renovation cost in Winnipeg?',
+ *                                                     // the answer box's H2: the question the answer
+ *                                                     // answers (default 'Quick answer')
  *     answer: '40–60 words, the number in sentence one (inline markdown allowed)',
  *     dataBasis: { source, period, note },            // methodology box (owner data only, plan §8)
  *     tables: [{ caption, head: [], rows: [[]], note }],   // rendered as RichBody table blocks
  *     driversTitle?, driversTag?, driversDesc?,
- *     drivers: [{ title, text }],
+ *     drivers: [{ title, text }],                     // cards (H3 + text); text takes inline markdown
  *     sections: [{ h2, id?, blocks: [RichBody blocks] }],  // ≤2 budget H2s + PAA H2s; id = the H2's anchor
  *     faqs: [{ q, a }],                               // FAQPage comes only from these
  *     sources: [{ label, url, accessed: 'YYYY-MM-DD' }],

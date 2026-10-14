@@ -8,13 +8,19 @@
 // The estimator has no data for whole-home, additions or commercial work:
 // those are "priced after the on-site visit", never given a number here.
 // Timelines are the figures already published on the service pages.
-// External facts (permits, financing, closed federal programs) are linked to
-// the official page in `sources`, checked on the date shown.
+// External facts (permits, permit fees, GST, financing, closed federal
+// programs) are linked to the official page in `sources`, checked on the date
+// shown. The GST card states only what the CRA pages say (the rate, and that
+// construction services are taxable): no Manitoba RST wording and nothing about
+// how Bridgeland itself quotes tax. The permit-fee card gives no dollar figure:
+// fees change every January in the City's schedule.
 // Refresh every January with the new estimator ranges (title year = period).
 
 import { OFFICE_HOURS_SHORT, REPLY_TIME, SITE_PHONE, TIMELINES } from '../facts.js';
 
 const ACCESSED = '2026-10-13';
+// Sources re-checked (or added) for the tax, permit-fee and larger-project copy.
+const CHECKED = '2026-10-15';
 
 export default {
   id: 'renovation-cost-winnipeg',
@@ -28,7 +34,7 @@ export default {
       'Winnipeg renovation costs from our instant estimator: bathrooms from $16,000, basements from $25,000, kitchens from $40,000, and what moves the price.',
     primaryKeyword: 'home renovation cost Winnipeg',
     published: '2026-10-13',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   eyebrow: 'Renovation Costs',
@@ -36,6 +42,7 @@ export default {
   intro:
     'Starting ranges from our own instant estimator for kitchens, bathrooms and basements, what moves them, and how to get a written quote for your project.',
 
+  answerHeading: 'How much does a renovation cost in Winnipeg?',
   answer:
     'Our [instant estimator](/instant-quote) starts a bathroom renovation in Winnipeg at $16,000, a basement development at $25,000 and a kitchen renovation at $40,000. The size of the space sets the range, and your fixtures, finishes and extras move it from there. Whole-home renovations, additions and commercial projects are priced after a free on-site visit.',
 
@@ -85,6 +92,16 @@ export default {
       title: 'Changes once work starts',
       text: 'Swapping a tile, a fixture or the layout after materials are ordered changes the cost. Settling your choices before you sign keeps surprises down; ask for any change to be priced in writing before it is made.',
     },
+    {
+      // CRA facts only (sources): the rate, and construction services are taxable.
+      title: 'Do you pay GST on a renovation in Manitoba?',
+      text: 'Generally, yes. GST is 5% in Manitoba, according to the [Canada Revenue Agency’s GST/HST rates](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html), and the CRA lists construction services, such as framing, plumbing, electrical and flooring work, as taxable. When you compare quotes, ask whether each price includes GST.',
+    },
+    {
+      // No dollar figure: the fees change every January (2026 schedule in sources).
+      title: 'How much is a building permit in Winnipeg?',
+      text: 'It depends on the work. The City of Winnipeg sets permit fees in its yearly [fees and charges schedule](https://www.winnipeg.ca/building-development/fees-charges). For a house, an addition is charged by its floor area and a renovation by each floor it affects, and some work by its declared value. Electrical and plumbing permits carry fees of their own.',
+    },
   ],
 
   sections: [
@@ -97,7 +114,11 @@ export default {
         },
         {
           t: 'p',
-          x: 'Where a budget like this lands depends on how much of the house is being opened up. A medium kitchen with semi-custom cabinets and quartz counters is a different job from a basement with a new bathroom and an egress window, even at a similar price. Our guide to [choosing between a full renovation and partial upgrades](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) can help you decide how far to take it.',
+          x: 'Where a budget like this lands depends on how much of the house is being opened up. A medium kitchen with semi-custom cabinets and quartz counters is a different job from a basement with a new bathroom and an egress window, even at a similar price.',
+        },
+        {
+          t: 'p',
+          x: 'Our guide to [choosing between a full renovation and partial upgrades](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) can help you decide how far to take it.',
         },
       ],
     },
@@ -140,7 +161,11 @@ export default {
         },
         {
           t: 'p',
-          x: 'If something unexpected turns up once work starts, ask for the fix to be priced in writing before that work goes ahead, so you decide with the number in front of you. Changes you choose part-way through also change the cost, as the federal [Office of Consumer Affairs renovation guide](https://ised-isde.canada.ca/site/office-consumer-affairs/en/buying-and-leasing-big-ticket-items/home-renovations) points out, so settling finishes before you sign helps keep the budget steady.',
+          x: 'If something unexpected turns up once work starts, ask for the fix to be priced in writing before that work goes ahead, so you decide with the number in front of you.',
+        },
+        {
+          t: 'p',
+          x: 'Changes you choose part-way through also change the cost, as the federal [Office of Consumer Affairs renovation guide](https://ised-isde.canada.ca/site/office-consumer-affairs/en/buying-and-leasing-big-ticket-items/home-renovations) points out, so settling finishes before you sign helps keep the budget steady.',
         },
         {
           t: 'p',
@@ -157,17 +182,71 @@ export default {
           t: 'p',
           x: 'Whole-home renovations, home additions and commercial projects aren’t in our instant estimator, because their scope varies too much to price from a few questions. They are priced after a free on-site visit, with a written quote that sets out what is included before any work begins.',
         },
+        // Three H3s, no dollar figures (the estimator has no data for these):
+        // drivers only, each from the service page's owner-confirmed copy or
+        // the City pages in `sources`; timelines from facts.js.
+        { t: 'h3', x: 'How is a whole-home renovation priced?' },
         {
-          t: 'li',
-          x: `**[Whole-home renovations](/services/whole-home-renovations):** most run ${TIMELINES.wholeHome.short}, depending on the size of the house and how much of it is being renovated.`,
+          t: 'p',
+          x: `From a written scope, set out room by room after the on-site visit. Most [whole-home renovations](/services/whole-home-renovations) run ${TIMELINES.wholeHome.short}, depending on the size of the house and how much of it is being renovated. What moves the cost of a whole-home renovation in Winnipeg:`,
         },
         {
           t: 'li',
-          x: `**[Home additions](/services/home-additions):** many straightforward additions take roughly ${TIMELINES.addition.short} once permits and materials are ready.`,
+          x: '**How much of the house is included:** the number of rooms, and whether the work runs in stages while you live there or all at once.',
         },
         {
           t: 'li',
-          x: '**[Commercial renovations](/services/commercial-renovations):** offices, retail stores, restaurants, cafés and bars, hotels, and medical, dental and physio clinics, with after-hours or weekend scheduling and weekly progress updates.',
+          x: '**Layout and structure:** moving non-structural walls is simpler; taking out a load-bearing wall needs a beam and the right permits.',
+        },
+        {
+          t: 'li',
+          x: '**Wiring and plumbing:** in an older house, outdated wiring and plumbing are often replaced while the walls are open.',
+        },
+        {
+          t: 'li',
+          x: '**Permits:** creating a new bedroom or finishing an undeveloped level needs a building permit, and electrical and plumbing work need their own permits.',
+        },
+        { t: 'h3', x: 'What drives the cost of a home addition in Winnipeg?' },
+        {
+          t: 'p',
+          x: `Many straightforward [home additions](/services/home-additions) take ${TIMELINES.addition.short} once permits and materials are ready. What a house extension costs comes down to:`,
+        },
+        {
+          t: 'li',
+          x: '**Size and use:** a kitchen or bathroom in the addition brings plumbing, venting and the trade permits that go with them.',
+        },
+        {
+          t: 'li',
+          x: '**Foundation and structure:** soil and foundation conditions, and any structural changes to the existing house.',
+        },
+        {
+          t: 'li',
+          x: '**Zoning and permits:** the City of Winnipeg requires a development permit under its Zoning By-law and a building permit for every house addition, plus trade permits for electrical or plumbing work.',
+        },
+        {
+          t: 'li',
+          x: '**Joining the existing house:** matching rooflines, floor heights, siding and trim, and extending heating, electrical and plumbing into the new space.',
+        },
+        { t: 'h3', x: 'What drives commercial renovation costs?' },
+        {
+          t: 'p',
+          x: '[Commercial renovations](/services/commercial-renovations) for offices, stores, restaurants, hotels and clinics are scoped around your lease, your opening date and the hours you need to keep trading. The main cost drivers:',
+        },
+        {
+          t: 'li',
+          x: '**The scope of the fit-up:** walls, ceilings, lighting, washrooms, finishes and services for the new layout.',
+        },
+        {
+          t: 'li',
+          x: '**Building systems:** electrical, data and HVAC changes for the new floor plan, with the trade permits that work needs.',
+        },
+        {
+          t: 'li',
+          x: '**Code items:** a change of use, a fire separation or an accessibility upgrade, which we flag at the site visit.',
+        },
+        {
+          t: 'li',
+          x: '**Working hours:** evening, weekend or phased work, so you can keep trading through as much of the project as possible.',
         },
         {
           t: 'p',
@@ -201,7 +280,7 @@ export default {
     },
     {
       q: 'Do I need a permit to renovate in Winnipeg?',
-      a: 'Often, yes. Finishing a basement or creating a new bedroom requires a building permit, and the City of Winnipeg says kitchens and bathrooms may need one. Electrical and plumbing work need their own permits. Cosmetic work, such as painting or new flooring, doesn’t. Permit fees are set in the City’s yearly fee schedule. We coordinate permits and inspections with the City or your local municipality.',
+      a: 'Often, yes. Finishing a basement or creating a new bedroom requires a building permit, and the City of Winnipeg says kitchens and bathrooms may need one. Electrical and plumbing work need their own permits. Cosmetic work, such as painting or new flooring, doesn’t. We coordinate permits and inspections with the City or your local municipality.',
     },
     {
       q: 'How is the instant estimate different from a written quote?',
@@ -221,7 +300,7 @@ export default {
     {
       label: 'City of Winnipeg — Information Bulletin 2026-007-B, Building permit requirements for housing',
       url: 'https://www.winnipeg.ca/media/6116',
-      accessed: ACCESSED,
+      accessed: CHECKED,
     },
     {
       label: 'City of Winnipeg — Home renovations (building permit requirements)',
@@ -229,9 +308,29 @@ export default {
       accessed: ACCESSED,
     },
     {
+      label: 'City of Winnipeg — Additions & attached garages (development and building permits)',
+      url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/additions-attached-garages',
+      accessed: CHECKED,
+    },
+    {
       label: 'City of Winnipeg — Planning, Development & Building Fees and Charges',
       url: 'https://www.winnipeg.ca/building-development/fees-charges',
-      accessed: ACCESSED,
+      accessed: CHECKED,
+    },
+    {
+      label: 'City of Winnipeg — 2026 Fees and Charges Schedule (building permits for housing)',
+      url: 'https://legacy.winnipeg.ca/finance/files/2026FeesandChargesSchedule.pdf',
+      accessed: CHECKED,
+    },
+    {
+      label: 'Canada Revenue Agency — GST/HST calculator (and rates)',
+      url: 'https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate/calculator.html',
+      accessed: CHECKED,
+    },
+    {
+      label: 'Canada Revenue Agency — GST/HST and home construction (taxable construction services)',
+      url: 'https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-home-construction.html',
+      accessed: CHECKED,
     },
     {
       label: 'Office of Consumer Affairs (Government of Canada) — Home renovations',
