@@ -20,11 +20,13 @@
  *   WARN   quality: title/description lengths, duplicates, image hygiene,
  *          internal-link coverage, lastmod uniformity, <main> text changed
  *          without an `updated` bump (content-hash guard), stale cost guides
- *          and source dates, keyword map, readability, JS budgets, service
- *          timelines that disagree with src/data/facts.js (fact drift),
- *          partial lists of the nearby communities (src/data/areas.js).
+ *          and source dates, keyword map, readability (paragraphs over 60
+ *          words), JS budgets, service timelines that disagree with
+ *          src/data/facts.js (fact drift), partial lists of the nearby
+ *          communities (src/data/areas.js).
  *   INFO   accepted interim states (Wix-hosted images until the migration,
- *          307 interim redirects, planned pages not live yet).
+ *          307 interim redirects, planned pages not live yet), and an
+ *          estimated reading grade above 9.
  *
  * Output: a grouped console report and dist-ssr/audit.json.
  * Exit code: 0, unless --strict is passed and there is at least one ERROR.
@@ -72,6 +74,7 @@ import {
 } from './lib/audit/site.mjs';
 import { checkKeywords, readKeywordList, readKeywordMap } from './lib/audit/keywords.mjs';
 import { checkTimelineDrift } from './lib/audit/facts.mjs';
+import { blockText, gradeLevel, wordsOf } from './lib/audit/readability.mjs';
 import { Report, printReport, writeJson } from './lib/audit/report.mjs';
 
 const started = performance.now();
@@ -100,7 +103,12 @@ const TITLE_WARN = 60;
 const TITLE_ERROR = 70;
 const DESC_MIN = 70;
 const DESC_MAX = 155;
-const LONG_PARAGRAPH_WORDS = 90;
+// Readability standard (plan §19): paragraphs of 60 words or fewer, reading
+// grade 8 or lower. Long paragraphs warn; a page's estimated grade above 9 is
+// an info note (the estimate is rough). Legal pages are left out of both.
+const LONG_PARAGRAPH_WORDS = 60;
+const READING_GRADE_NOTE = 9;
+const READING_GRADE_MIN_WORDS = 100;
 const MIN_INBOUND = 3;
 const STALE_307_DAYS = 45;
 const ESTIMATOR_HOST = 'estimator.bridgelandbuilders.com';
@@ -187,7 +195,7 @@ const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS
 const blogModule = await importGuarded('src/data/blogPosts.js', ['BLOG_POSTS'], ['BLOG_REDIRECTS']);
 const facts = await importGuarded('src/data/facts.js', ['TIMELINES']);
 const areasContent = await importGuarded('src/data/serviceAreasContent.js', ['SERVICE_AREAS_CONTENT']);
-const caseStudyData = await importGuarded('src/data/caseStudyData.js', ['caseStudiesForArea']);
+const caseStudyData = await importGuarded('src/data/caseStudyData.js', ['caseStudiesForArea', 'publishedCaseStudies']);
 
 const prerenderJson = readJsonFile('prerender-routes.json', { required: true });
 const PRERENDER = Array.isArray(prerenderJson) ? prerenderJson.map(cleanPath) : [];
@@ -470,12 +478,27 @@ function auditStructure(page) {
     report.error('html.reveal-gated', route, `${label} has .reveal${hides.size ? ` (hides ${[...hides].join(', ')})` : ''}`);
   }
 
-  // Readability: very long paragraphs in the main content.
+  // Readability (plan §19) of the main content, read as rendered
+  // (readability.mjs blockText). The legal pages are left out.
+  if (LEGAL_ROUTES.has(route)) return;
   const long = byTag(doc, 'p')
     .filter((p) => isInside(p, page.main))
-    .map((p) => wordCount(textOf(doc, p)))
+    .map((p) => wordsOf(blockText(doc, p)).length)
     .filter((n) => n > LONG_PARAGRAPH_WORDS);
   if (long.length) report.warn('html.long-paragraph', route, `${long.length} paragraph(s) over ${LONG_PARAGRAPH_WORDS} words (longest ${Math.max(...long)})`);
+
+  // Estimated reading grade of the page's prose: paragraphs and list items in
+  // <main>, outermost only, form text left out. Info only.
+  if (!page.indexable) return;
+  const PROSE = new Set(['p', 'li']);
+  const prose = doc.elements.filter(
+    (el) => PROSE.has(el.tag) && isInside(el, page.main) && !ancestors(doc, el).some((a) => PROSE.has(a.tag) || a.tag === 'form')
+  );
+  const { words, grade } = gradeLevel(prose.map((el) => blockText(doc, el)));
+  page.stats.readingGrade = grade == null ? null : Math.round(grade * 10) / 10;
+  if (words >= READING_GRADE_MIN_WORDS && grade > READING_GRADE_NOTE) {
+    report.info('readability.grade', route, `Flesch-Kincaid grade ${grade.toFixed(1)} (estimate over ${words} words of paragraphs and list items; standard: grade 8 or lower)`);
+  }
 }
 
 function auditNap(page) {
@@ -1169,9 +1192,15 @@ for (const page of pages.values()) {
     }
   }
 }
+// /projects shows design ideas, not Bridgeland's work, until the first case
+// study is published (caseStudyData.js). Pages should not link it in body copy
+// just to raise its count, so it is not checked before then.
+const PUBLISHED_CASE_STUDIES =
+  typeof caseStudyData.publishedCaseStudies === 'function' ? caseStudyData.publishedCaseStudies().length : 0;
 for (const page of pages.values()) {
   page.stats.inboundContextual = inbound.has(page.route) ? inbound.get(page.route).size : 0;
   if (!page.indexable || page.route === '/') continue;
+  if (page.route === '/projects' && PUBLISHED_CASE_STUDIES === 0) continue;
   const n = page.stats.inboundContextual;
   const severity = LEGAL_ROUTES.has(page.route) ? 'info' : 'warn';
   if (n === 0) report.add(severity, 'links.orphan', page.route, 'no contextual links from other pages\' main content');
@@ -1256,6 +1285,7 @@ const pageSummaries = [...pages.values()].map((p) => ({
   jsBrotliKb: p.stats.jsBrotliKb ?? null,
   jsServedKb: p.stats.jsServedKb ?? null,
   mainHash: p.mainHash ?? null,
+  readingGrade: p.stats.readingGrade ?? null,
 }));
 
 writeJson(OUT_FILE, {
