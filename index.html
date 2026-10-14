@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <!-- Marks the page as running JavaScript before anything paints, so the
        scroll-reveal starting state (:where(.js) .reveal in src/index.css) only hides
-       content when the script that reveals it can run. -->
-  <script>document.documentElement.classList.add('js');</script>
+       content when the script that reveals it can run: only in browsers that run
+       module scripts (the app bundle is one), and only for 6 seconds unless the
+       bundle has started by then (src/main.jsx marks <html> app-ready first
+       thing). If it fails or stalls (flaky mobile data, in-app browsers), the
+       class comes off again and everything shows. -->
+  <script>(function(d){if(!('noModule' in HTMLScriptElement.prototype))return;d.classList.add('js');setTimeout(function(){if(!d.classList.contains('app-ready'))d.classList.remove('js');},6000);})(document.documentElement);</script>
   <!-- Google Search Console ownership verification. Kept outside the seo:head
        block so scripts/prerender.mjs never replaces it on the home page. -->
   <meta name="google-site-verification" content="cicTV3hw0HTq-S0SZspJ4-nVY2CSbYp-hFC3EFIBbZI" />
