@@ -52,6 +52,26 @@
        removes this comment and the preconnect from pages with no Unsplash photo. -->
   <link rel="preconnect" href="https://images.unsplash.com">
 
+  <!-- The team's own phones and computers: opening any page once with
+       ?bb_internal=1 marks the browser (localStorage "bb:internal");
+       ?bb_internal=0 clears it. While marked, window.__bbInternal is true and
+       the loader below runs no Meta Pixel (no init, no PageView) and tags
+       Google Analytics traffic as internal; quote-form leads carry
+       internal: true (src/lib/attribution.js) so the server sends them to no
+       Conversions API either. The leads themselves are always saved. -->
+  <script>
+  (function (w) {
+    var m = /[?&]bb_internal=([01])(?:&|$)/.exec(w.location.search);
+    var on = Boolean(m && m[1] === '1');
+    try {
+      if (on) w.localStorage.setItem('bb:internal', '1');
+      else if (m) w.localStorage.removeItem('bb:internal');
+      else on = w.localStorage.getItem('bb:internal') === '1';
+    } catch (e) {}
+    if (on) w.__bbInternal = true;
+  })(window);
+  </script>
+
   <!-- Measurement loader: Meta Pixel and (when configured) Google Analytics 4.
        This is the only place either tag is set up: every page is prerendered
        from this file (scripts/prerender.mjs).
@@ -69,6 +89,9 @@
          Manitoba, and a lookup outage must not switch off ad measurement for
          all of them. The server checks the same headers again before sending
          Meta a Conversions API copy of a lead (api/_lib/meta.js).
+       - The team's own devices (window.__bbInternal, above): no Meta Pixel at
+         all, and Google Analytics sets traffic_type "internal" so a GA4
+         internal-traffic filter can leave those visits out.
        - The pixel's stub, init and first PageView run here, so nothing is
          lost, but fbevents.js (and gtag.js) only download after the page has
          loaded, in idle time (on the /free-quote ad page: right at load), so
@@ -87,7 +110,8 @@
     var GEO_WAIT_MS = 2500;
     var allowed = !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) &&
       n.doNotTrack !== '1' && w.doNotTrack !== '1';
-    w.__bbMeasure = { allowed: allowed, ga: allowed && GA_ID ? GA_ID : null, pixel: allowed };
+    var internal = w.__bbInternal === true;
+    w.__bbMeasure = { allowed: allowed, ga: allowed && GA_ID ? GA_ID : null, pixel: allowed && !internal };
 
     w.dataLayer = w.dataLayer || [];
     w.gtag = w.gtag || function () { w.dataLayer.push(arguments); };
@@ -102,21 +126,24 @@
     if (!allowed) return;
 
     // Meta Pixel (Meta's standard stub, without the immediate script tag).
-    if (!w.fbq) {
-      var q = w.fbq = function () { q.callMethod ? q.callMethod.apply(q, arguments) : q.queue.push(arguments); };
-      if (!w._fbq) w._fbq = q;
-      q.push = q; q.loaded = true; q.version = '2.0'; q.queue = [];
+    // Never on the team's own devices: no stub, init or PageView.
+    if (!internal) {
+      if (!w.fbq) {
+        var q = w.fbq = function () { q.callMethod ? q.callMethod.apply(q, arguments) : q.queue.push(arguments); };
+        if (!w._fbq) w._fbq = q;
+        q.push = q; q.loaded = true; q.version = '2.0'; q.queue = [];
+      }
+      // One PageView per real page: this landing one, then one per in-site
+      // page change from MetaPixelPageViews.jsx. The pixel's own history
+      // tracking is off (it also counted jumps to an in-page anchor such as
+      // #service-quote-form as page views), and repeat PageViews are let
+      // through (by default the pixel drops every PageView after the first
+      // one on a page load, which would drop the in-site ones).
+      w.fbq.disablePushState = true;
+      w.fbq.allowDuplicatePageViews = true;
+      w.fbq('init', '1272824070968198');
+      w.fbq('track', 'PageView');
     }
-    // One PageView per real page: this landing one, then one per in-site
-    // page change from MetaPixelPageViews.jsx. The pixel's own history
-    // tracking is off (it also counted jumps to an in-page anchor such as
-    // #service-quote-form as page views), and repeat PageViews are let
-    // through (by default the pixel drops every PageView after the first
-    // one on a page load, which would drop the in-site ones).
-    w.fbq.disablePushState = true;
-    w.fbq.allowDuplicatePageViews = true;
-    w.fbq('init', '1272824070968198');
-    w.fbq('track', 'PageView');
 
     // Region check for the pixel (see above). Asked now, so the answer is
     // normally in before the page finishes loading. In a consent region the
@@ -133,18 +160,23 @@
       }
       if (onPixelDecided) onPixelDecided();
     }
-    try {
-      w.fetch('/api/geo', { credentials: 'omit', cache: 'no-store', priority: 'low' })
-        .then(function (r) { return r.ok ? r.json() : {}; })
-        .then(function (geo) { decidePixel(!(geo && geo.consentRequired === true)); }, function () { decidePixel(true); });
-    } catch (e) {
-      decidePixel(true);
+    if (internal) {
+      decidePixel(false);
+    } else {
+      try {
+        w.fetch('/api/geo', { credentials: 'omit', cache: 'no-store', priority: 'low' })
+          .then(function (r) { return r.ok ? r.json() : {}; })
+          .then(function (geo) { decidePixel(!(geo && geo.consentRequired === true)); }, function () { decidePixel(true); });
+      } catch (e) {
+        decidePixel(true);
+      }
     }
 
     // Google Analytics 4: landing page view sent manually with this page's
     // own URL and title (in-site page views: MetaPixelPageViews.jsx).
     if (GA_ID) {
       w.gtag('js', new Date());
+      if (internal) w.gtag('set', { traffic_type: 'internal' });
       w.gtag('config', GA_ID, { send_page_view: false, allow_google_signals: false });
       w.gtag('event', 'page_view', { page_location: location.href, page_title: d.title });
     }
