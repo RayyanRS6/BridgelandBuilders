@@ -83,6 +83,26 @@ export function lazyWithRetry(load) {
   return lazy(() => retryLoad(load).catch(keepServerHtml));
 }
 
+const RELOAD_KEY = 'bb-chunk-reload';
+
+/**
+ * A full load of the current URL, once per page per session (false if this
+ * page already tried): a chunk the browser failed to fetch stays failed for
+ * the whole document (e.g. after a deploy replaced it), and every route is
+ * prerendered, so a reload brings the page back with fresh assets.
+ */
+export function reloadOnce() {
+  try {
+    const path = window.location.pathname;
+    if (window.sessionStorage.getItem(RELOAD_KEY) === path) return false;
+    window.sessionStorage.setItem(RELOAD_KEY, path);
+  } catch {
+    return false; // no storage: rather a stale page than risk a reload loop
+  }
+  window.location.reload();
+  return true;
+}
+
 /** Errors a browser raises when a dynamically imported chunk can't be fetched. */
 export function isChunkLoadError(error) {
   const text = `${error?.name || ''} ${error?.message || ''}`;

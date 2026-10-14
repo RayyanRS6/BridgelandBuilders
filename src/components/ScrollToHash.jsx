@@ -22,10 +22,27 @@ const anchorFor = (target) => target.closest('[data-scroll-anchor]') || target;
 const scrollToTarget = (target) => anchorFor(target).scrollIntoView();
 
 /**
+ * True when this document came from a reload or back/forward: the browser has
+ * already restored the visitor's own scroll position (possibly the top, e.g.
+ * pull-to-refresh), which must not be replaced by a jump to the #hash.
+ */
+function restoredNavigation() {
+  try {
+    const entry = performance.getEntriesByType?.('navigation')?.[0];
+    if (entry) return entry.type === 'reload' || entry.type === 'back_forward';
+    const legacy = performance.navigation?.type;
+    return legacy === 1 || legacy === 2;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * The first location's #hash, handed to landOnHash.js (loaded only for such a
- * visit). Returns the cleanup.
+ * visit, and not on a reload or back/forward). Returns the cleanup.
  */
 function landOnFirstLoad(hash) {
+  if (restoredNavigation()) return undefined;
   let stop = null;
   let cancelled = false;
   import('./landOnHash.js').then(

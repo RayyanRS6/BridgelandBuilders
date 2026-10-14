@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { SITE_URL } from '../data/siteConfig.js';
-import { onInitialPage, retryLoad } from '../lib/lazyRetry.js';
+import { isChunkLoadError, onInitialPage, reloadOnce, retryLoad } from '../lib/lazyRetry.js';
 
 /*
  * A prerendered page already has its complete <head>: scripts/prerender.mjs
@@ -42,7 +42,9 @@ export function preloadHeadWriter() {
 /**
  * Calls apply(writer) right away once headWriter.js is loaded, else when it
  * arrives, unless the returned cancel function ran first. If it can't be
- * downloaded the head simply stays as it was; nothing on the page reads it.
+ * downloaded (typically an open tab after a deploy replaced the chunk), the
+ * page is reloaded once (reloadOnce), so the visitor never keeps reading
+ * pages under the previous page's title and description.
  */
 function withWriter(apply) {
   if (writer) {
@@ -54,7 +56,9 @@ function withWriter(apply) {
     (module) => {
       if (!cancelled) apply(module);
     },
-    () => {}
+    (error) => {
+      if (!cancelled && !onInitialPage() && isChunkLoadError(error)) reloadOnce();
+    }
   );
   return () => {
     cancelled = true;

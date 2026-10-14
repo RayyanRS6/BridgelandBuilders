@@ -1,20 +1,5 @@
 import { Component } from 'react';
-import { isChunkLoadError } from '../lib/lazyRetry.js';
-
-const RELOAD_KEY = 'bb-chunk-reload';
-
-/** Reloads once per page per session; false if this page already tried. */
-function reloadOnce() {
-  try {
-    const path = window.location.pathname;
-    if (window.sessionStorage.getItem(RELOAD_KEY) === path) return false;
-    window.sessionStorage.setItem(RELOAD_KEY, path);
-  } catch {
-    return false; // no storage: show the reload link rather than risk a loop
-  }
-  window.location.reload();
-  return true;
-}
+import { isChunkLoadError, reloadOnce } from '../lib/lazyRetry.js';
 
 /**
  * Wraps the routes (AppShell.jsx) so a page whose code fails to download (for
