@@ -64,38 +64,5 @@ export const OFFICE_HOURS_SHORT = BUSINESS_HOURS.map(
 export const OFFICE_DAYS_TEXT = BUSINESS_HOURS.map(({ days }) => daySpan(days)).join(' and ');
 
 /* --------------------------------------------------------------- timelines */
-const NUMBER_WORDS = [
-  'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
-  'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty',
-];
-
-/**
- * A range of weeks in the forms the site writes it (stat cards use min and
- * max). Plain strings, read as properties: the cost guides that use them are
- * lazy chunks, and a function call in their data would stop the bundler from
- * leaving them out of the chunks that never read them.
- */
-const weeks = (min, max) => {
-  const words = `${NUMBER_WORDS[min]} to ${NUMBER_WORDS[max]} weeks`;
-  return {
-    min,
-    max,
-    /** '2–3 weeks' (en dash) */
-    short: `${min}–${max} weeks`,
-    /** 'two to three weeks' */
-    words,
-    /** 'Two to three weeks', for an answer that opens with it */
-    wordsCapitalized: `${words.charAt(0).toUpperCase()}${words.slice(1)}`,
-  };
-};
-
-// Typical time on site per service, owner-confirmed. The schedule in each
-// client's written quote is the one that applies. Kitchens are counted once
-// the cabinets are on site; additions once permits and materials are ready.
-export const TIMELINES = {
-  bathroom: weeks(2, 3),
-  kitchen: weeks(4, 6),
-  basement: weeks(4, 8),
-  wholeHome: weeks(8, 16),
-  addition: weeks(8, 16),
-};
+// Defined in timelines.js (no imports, so services.js can use it too).
+export { TIMELINES } from './timelines.js';
