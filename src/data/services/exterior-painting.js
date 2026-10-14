@@ -52,8 +52,8 @@ export default {
   types: [
     { title: 'Siding', text: 'Wood, fibre cement and other paintable siding washed, prepared and recoated in the colour you choose.' },
     { title: 'Trim, Soffits & Fascia', text: 'Trim, soffits and fascia repaired where needed and repainted, alone or with the rest of the building.' },
-    { title: 'Stucco & Masonry', text: 'Previously painted stucco and masonry recoated with a masonry paint. Never-painted brick and stone is usually better left as it is.' },
-    { title: 'Doors & Garage Doors', text: 'Entry doors, garage doors and their frames prepared and painted for a clean, durable finish.' },
+    { title: 'Stucco & Masonry', text: '[Previously painted stucco and masonry](/services/masonry-stucco) recoated with a masonry paint. Never-painted brick and stone is usually better left as it is.' },
+    { title: 'Doors & Garage Doors', text: '[Entry doors](/services/windows-and-doors), garage doors and their frames prepared and painted for a clean, durable finish.' },
     { title: 'Commercial Exteriors', text: 'Storefronts, trim and exterior walls on commercial buildings, with evenings or weekends available to keep work clear of customers.' },
   ],
 
@@ -61,14 +61,14 @@ export default {
     tag: 'In Winnipeg',
     title: 'What should you check before an exterior paint job?',
     intro:
-      'Three things: the weather, the age of the old paint, and where the building is. Paint needs dry days inside the temperature range on its label, a house built before 1960 probably has lead paint underneath, and Winnipeg’s heritage districts have their own review. Painting on its own needs no building permit.',
+      'Three things: the weather, the age of the old paint, and where the building is. [Paint needs dry days inside the temperature range on its label](/blog/exterior-painting-winnipeg-when-to-paint), a house built before 1960 probably has lead paint underneath, and Winnipeg’s heritage districts have their own review. Painting on its own needs no building permit.',
     items: [
       { title: 'Read the Label', text: 'Every exterior paint lists its own application temperature range. Cool weather slows drying, so a cold night after a warm afternoon matters too.' },
       { title: 'Dew and Rain', text: 'A wall that looks dry can carry morning dew. Paint makers advise painting only when the surface is several degrees above the dew point, and stopping when rain arrives.' },
       { title: 'Sun and Heat', text: 'A dark wall in full sun can run much hotter than the air, so paint each side while it is out of direct sun.' },
       { title: 'Lead Paint on Older Houses', text: 'Health Canada says a house built before 1960 probably has lead-based paint, and advises against sanders, heat guns and blowlamps on it.' },
-      { title: 'Heritage Districts', text: 'In Armstrong’s Point and Crescentwood-Enderton Park, exterior work is reviewed against the district plan, which decides when a heritage permit is needed.' },
-      { title: 'No Building Permit', text: 'The City of Winnipeg treats painting as a cosmetic change that doesn’t need a building permit.' },
+      { title: 'Heritage Districts', text: 'In [Armstrong’s Point and Crescentwood-Enderton Park](/blog/renovating-a-character-home-in-winnipeg), exterior work is reviewed against the district plan, which decides when a heritage permit is needed.' },
+      { title: 'No Building Permit', text: 'The City of Winnipeg treats painting as [a cosmetic change that doesn’t need a building permit](/blog/winnipeg-renovation-permits).' },
     ],
     sources: [
       { label: 'Benjamin Moore Canada: painting temperatures', url: 'https://www.benjaminmoore.com/en-ca/interior-exterior-paints-stains/how-to-advice/exteriors/temperature', accessed: ACCESSED },
@@ -114,7 +114,7 @@ export default {
     serviceType: 'Exterior painting',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'exterior painting Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.

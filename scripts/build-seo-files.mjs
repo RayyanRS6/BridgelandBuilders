@@ -33,6 +33,7 @@ import {
   GBP,
 } from '../src/data/siteConfig.js';
 import { COST_HUB_PATH, NOINDEX_ROUTES, buildOrganizationGraph } from '../src/data/seo.js';
+import { stripInline } from '../src/lib/inlineText.js';
 
 const PUBLIC = new URL('../public/', import.meta.url);
 const out = (name, body) => writeFileSync(new URL(name, PUBLIC), body);
@@ -99,9 +100,11 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `);
 
 /* ---------------------------------------------------- shared llms content */
+// Page copy may carry inline markup ([label](/path), **bold**): the llms files
+// take its plain text (stripInline), as the JSON-LD does.
 // Live service pages only (registry order), with each page's own description.
 const serviceLines = LIVE_SERVICE_PAGES.map(
-  ({ service, content }) => `- [${service.navLabel}](${SITE_URL}${service.path}): ${content.seo.description || ''}`
+  ({ service, content }) => `- [${service.navLabel}](${SITE_URL}${service.path}): ${stripInline(content.seo.description)}`
 ).join('\n');
 
 // Indexable pages only; a page that is not live (e.g. the cost hub before its
@@ -109,7 +112,7 @@ const serviceLines = LIVE_SERVICE_PAGES.map(
 const keyPage = (label, path, description) => {
   const route = routeOf.get(path);
   return route && !route.noindex
-    ? `- [${label}](${SITE_URL}${path}): ${description || route.head.description}`
+    ? `- [${label}](${SITE_URL}${path}): ${stripInline(description || route.head.description)}`
     : null;
 };
 
@@ -133,10 +136,10 @@ const keyPages = [
 
 // Live cost guides other than the hub (the hub is a key page).
 const costLines = LIVE_COST_GUIDES.filter((guide) => guide.path !== COST_HUB_PATH && routeOf.has(guide.path))
-  .map((guide) => `- [${(guide.seo && guide.seo.title ? guide.seo.title.split(' | ')[0] : guide.path)}](${SITE_URL}${guide.path}): ${(guide.seo && guide.seo.description) || ''}`)
+  .map((guide) => `- [${(guide.seo && guide.seo.title ? guide.seo.title.split(' | ')[0] : guide.path)}](${SITE_URL}${guide.path}): ${stripInline(guide.seo && guide.seo.description)}`)
   .join('\n');
 
-const articleLines = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`).join('\n');
+const articleLines = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${stripInline(p.excerpt)}`).join('\n');
 
 const PROFILE_LABELS = {
   facebook: 'Facebook',
@@ -187,8 +190,10 @@ with the City of Winnipeg or the local municipality when a project requires them
 
 /* --------------------------------------------------------- llms-full.txt */
 // The site's own question-and-answer set: the FAQ page plus every service
-// page's FAQs, word for word as they appear on the site.
-const qa = (faqs) => faqs.map((f) => `**Q: ${f.q}**\nA: ${f.a}`).join('\n\n');
+// page's FAQs, word for word as they appear on the site. An answer's
+// paragraphs (a blank line in `a`) are joined into one line.
+const qa = (faqs) =>
+  faqs.map((f) => `**Q: ${stripInline(f.q)}**\nA: ${stripInline(f.a).replace(/\s*\n\s*/g, ' ')}`).join('\n\n');
 
 // PROJECTS = live service pages' content, each with its `path`.
 const navLabelFor = new Map(LIVE_SERVICE_PAGES.map(({ service }) => [service.path, service.navLabel]));

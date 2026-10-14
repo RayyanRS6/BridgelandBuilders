@@ -447,7 +447,8 @@
         "office fit out contractor Winnipeg",
         "office interior renovation Winnipeg",
         "commercial office renovation Winnipeg",
-        "professional office renovation Winnipeg"
+        "professional office renovation Winnipeg",
+        "office fit-up Winnipeg"
       ],
       "supporting": [
         "corporate office renovation Winnipeg",
@@ -616,9 +617,9 @@
     "/services/windows-and-doors": {
       "status": "live",
       "primary": ["window and door installation Winnipeg"],
-      "secondary": [],
+      "secondary": ["window and door replacement Winnipeg"],
       "supporting": [],
-      "note": "service page (launched 2026-10-13); primary is a plan addition (validate volume)"
+      "note": "service page (launched 2026-10-13); primary is a plan addition (validate volume); window and door replacement Winnipeg moved here from the replacement guide 2026-10-15 (transactional intent), the guide keeps the permit question"
     },
     "/services/exterior-painting": {
       "status": "live",
@@ -699,10 +700,10 @@
     },
     "/blog/window-and-door-replacement-winnipeg": {
       "status": "live",
-      "primary": ["window and door replacement Winnipeg"],
+      "primary": ["window replacement permit Winnipeg"],
       "secondary": [],
       "supporting": [],
-      "note": "new post 2026-10-13; writer pick (validate volume)"
+      "note": "new post 2026-10-13; informational primary since 2026-10-15 (window and door replacement Winnipeg is secondary on /services/windows-and-doors); writer pick (validate volume)"
     },
     "/blog/home-additions-and-zoning-winnipeg": {
       "status": "live",
@@ -734,10 +735,10 @@
     },
     "/blog/office-fit-up-lease-planning-winnipeg": {
       "status": "live",
-      "primary": ["office fit-up Winnipeg"],
+      "primary": ["office fit-up lease planning"],
       "secondary": [],
       "supporting": [],
-      "note": "new post 2026-10-13; office fit out Winnipeg stays secondary on the office page; writer pick (validate volume)"
+      "note": "new post 2026-10-13; informational primary since 2026-10-15 (office fit-up Winnipeg and office fit out Winnipeg are secondary on the office page); writer pick (validate volume)"
     },
     "/blog/what-does-a-general-contractor-do": {
       "status": "live",

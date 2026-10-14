@@ -390,7 +390,9 @@ function estimatorPreconnect(appHtml) {
  * prop only as hidden=""), so the server HTML has none: a closed answer is the
  * one whose question button says aria-expanded="false" and points at it with
  * aria-controls. A plain hidden="" on an answer becomes until-found as well.
- * Returns { html, count }.
+ * The answer is a <p class="faq-answer">, or for a multi-paragraph answer the
+ * <div class="faq-answer-group"> around them (its inner paragraphs have no
+ * id, so they are never matched on their own). Returns { html, count }.
  */
 function hideClosedFaqAnswers(appHtml) {
   const closed = new Set();
@@ -400,7 +402,7 @@ function hideClosedFaqAnswers(appHtml) {
     if (id) closed.add(id);
   }
   let count = 0;
-  const html = appHtml.replace(/<p\b[^>]*\bclass="faq-answer"[^>]*>/g, (tag) => {
+  const html = appHtml.replace(/<(?:p|div)\b[^>]*\bclass="faq-answer(?:-group)?"[^>]*>/g, (tag) => {
     if (/\shidden=""/.test(tag)) {
       count += 1;
       return tag.replace(/\shidden=""/, ' hidden="until-found"');

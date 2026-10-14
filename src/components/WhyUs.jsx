@@ -52,7 +52,7 @@ export default function WhyUs() {
             <h2 className="section-title">A clear plan, a written price and weekly updates</h2>
             <div className="why-paragraphs">
               <p>
-                {`Bridgeland Builders is a Winnipeg renovation and construction team with over ${EXPERIENCE_YEARS} years of combined experience. Together we have completed more than ${PROJECT_COUNT} projects, from single-room updates in family homes to commercial fit-ups for local businesses.`}
+                {`Bridgeland Builders is a Winnipeg renovation company whose team has over ${EXPERIENCE_YEARS} years of combined experience in renovation and construction. Together we have completed more than ${PROJECT_COUNT} projects, from single-room updates in family homes to commercial fit-ups for local businesses.`}
                 {!onAboutPage && (
                   <>
                     {' '}Read <Link className="blog-inline-link" to={ABOUT_PATH}>more about who we are</Link>.

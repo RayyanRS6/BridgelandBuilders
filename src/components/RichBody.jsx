@@ -1,5 +1,8 @@
-import { Link } from 'react-router-dom';
 import Picture from './Picture.jsx';
+import { renderInline } from '../lib/inline.jsx';
+
+// Inline links and bold (src/lib/inline.jsx), re-exported for existing imports.
+export { renderInline };
 
 /**
  * Renders article content from data blocks (blog posts, cost guides, other
@@ -28,48 +31,6 @@ import Picture from './Picture.jsx';
 
 /** Widths rendered by .blog-article-container (max 880px, full width below). */
 const ARTICLE_IMAGE_SIZES = '(max-width: 920px) 100vw, 880px';
-
-const INLINE = /\[([^\]]+)\]\(([^)\s]+)\)|\*\*([^*]+)\*\*/g;
-
-/** Inline links get their own class so buttons and other links in the article keep their styles. */
-const LINK_CLASS = 'blog-inline-link';
-
-function renderLink(label, href, key) {
-  if (href.startsWith('/')) {
-    return <Link key={key} className={LINK_CLASS} to={href}>{label}</Link>;
-  }
-  if (/^https?:\/\//.test(href)) {
-    return <a key={key} className={LINK_CLASS} href={href} rel="noopener" target="_blank">{label}</a>;
-  }
-  // mailto: / tel: and anything else: a plain link in the same tab.
-  return <a key={key} className={LINK_CLASS} href={href}>{label}</a>;
-}
-
-/**
- * Text with inline links and bold as React nodes. Plain text (the common
- * case) is returned unchanged as a string.
- */
-export function renderInline(text, keyPrefix = 'i') {
-  const value = text == null ? '' : String(text);
-  if (!value.includes('**') && !value.includes('](')) return value;
-
-  const nodes = [];
-  let last = 0;
-  let index = 0;
-  for (const match of value.matchAll(INLINE)) {
-    if (match.index > last) nodes.push(value.slice(last, match.index));
-    const key = `${keyPrefix}-${index++}`;
-    if (match[1] !== undefined) {
-      nodes.push(renderLink(renderInline(match[1], `${key}-l`), match[2], key));
-    } else {
-      // Bold text can wrap a link: **[label](/path):**
-      nodes.push(<strong key={key}>{renderInline(match[3], `${key}-b`)}</strong>);
-    }
-    last = match.index + match[0].length;
-  }
-  if (last < value.length) nodes.push(value.slice(last));
-  return nodes;
-}
 
 function Figure({ block }) {
   return (

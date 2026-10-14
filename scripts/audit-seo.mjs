@@ -14,16 +14,21 @@
  *          parity, NAP rules (incl. the phone-format allowlist), .reveal never
  *          gating the hero / forms / long bodies, an estimator iframe on every
  *          service page, no banned claims, no changefreq/priority, no leaked
- *          Suspense fallback, no keyword listed twice in the keyword map.
+ *          Suspense fallback, no keyword listed twice in the keyword map, no
+ *          community page (/service-areas/<slug>) short of the D9 gate, no
+ *          raw inline markup in page text, meta, JSON-LD or the llms files.
  *   WARN   quality: title/description lengths, duplicates, image hygiene,
  *          internal-link coverage, lastmod uniformity, <main> text changed
  *          without an `updated` bump (content-hash guard), stale cost guides
  *          and source dates, posts past their review-by date, keyword map,
- *          readability, JS budgets, service
- *          timelines that disagree with src/data/facts.js (fact drift).
+ *          readability (paragraphs over 60 words), JS budgets, service
+ *          timelines that disagree with src/data/facts.js (fact drift),
+ *          partial lists of the nearby communities (src/data/areas.js),
+ *          stock photos still hotlinked from Unsplash.
  *   INFO   accepted interim states (Wix-hosted images until the migration,
  *          307 interim redirects, planned pages not live yet; keyword-map
- *          pages with status "blocked" are never built and are skipped).
+ *          pages with status "blocked" are never built and are skipped), and
+ *          an estimated reading grade above 9.
  *
  * Output: a grouped console report and dist-ssr/audit.json.
  * Exit code: 0, unless --strict is passed and there is at least one ERROR.
@@ -71,6 +76,7 @@ import {
 } from './lib/audit/site.mjs';
 import { checkKeywords, readKeywordList, readKeywordMap } from './lib/audit/keywords.mjs';
 import { checkTimelineDrift } from './lib/audit/facts.mjs';
+import { blockText, gradeLevel, wordsOf } from './lib/audit/readability.mjs';
 import { Report, printReport, writeJson } from './lib/audit/report.mjs';
 
 const started = performance.now();
@@ -99,7 +105,12 @@ const TITLE_WARN = 60;
 const TITLE_ERROR = 70;
 const DESC_MIN = 70;
 const DESC_MAX = 155;
-const LONG_PARAGRAPH_WORDS = 90;
+// Readability standard (plan §19): paragraphs of 60 words or fewer, reading
+// grade 8 or lower. Long paragraphs warn; a page's estimated grade above 9 is
+// an info note (the estimate is rough). Legal pages are left out of both.
+const LONG_PARAGRAPH_WORDS = 60;
+const READING_GRADE_NOTE = 9;
+const READING_GRADE_MIN_WORDS = 100;
 const MIN_INBOUND = 3;
 const STALE_307_DAYS = 45;
 const ESTIMATOR_HOST = 'estimator.bridgelandbuilders.com';
@@ -185,6 +196,8 @@ const seo = await importGuarded('src/data/seo.js', ['PAGE_SEO', 'SERVICE_SEO', '
 const redirectsModule = await importGuarded('src/data/redirects.js', ['REDIRECTS'], ['EXTERNAL_REDIRECTS']);
 const blogModule = await importGuarded('src/data/blogPosts.js', ['BLOG_POSTS'], ['BLOG_REDIRECTS']);
 const facts = await importGuarded('src/data/facts.js', ['TIMELINES']);
+const areasContent = await importGuarded('src/data/serviceAreasContent.js', ['SERVICE_AREAS_CONTENT']);
+const caseStudyData = await importGuarded('src/data/caseStudyData.js', ['caseStudiesForArea', 'publishedCaseStudies']);
 
 const prerenderJson = readJsonFile('prerender-routes.json', { required: true });
 const PRERENDER = Array.isArray(prerenderJson) ? prerenderJson.map(cleanPath) : [];
@@ -467,12 +480,27 @@ function auditStructure(page) {
     report.error('html.reveal-gated', route, `${label} has .reveal${hides.size ? ` (hides ${[...hides].join(', ')})` : ''}`);
   }
 
-  // Readability: very long paragraphs in the main content.
+  // Readability (plan §19) of the main content, read as rendered
+  // (readability.mjs blockText). The legal pages are left out.
+  if (LEGAL_ROUTES.has(route)) return;
   const long = byTag(doc, 'p')
     .filter((p) => isInside(p, page.main))
-    .map((p) => wordCount(textOf(doc, p)))
+    .map((p) => wordsOf(blockText(doc, p)).length)
     .filter((n) => n > LONG_PARAGRAPH_WORDS);
   if (long.length) report.warn('html.long-paragraph', route, `${long.length} paragraph(s) over ${LONG_PARAGRAPH_WORDS} words (longest ${Math.max(...long)})`);
+
+  // Estimated reading grade of the page's prose: paragraphs and list items in
+  // <main>, outermost only, form text left out. Info only.
+  if (!page.indexable) return;
+  const PROSE = new Set(['p', 'li']);
+  const prose = doc.elements.filter(
+    (el) => PROSE.has(el.tag) && isInside(el, page.main) && !ancestors(doc, el).some((a) => PROSE.has(a.tag) || a.tag === 'form')
+  );
+  const { words, grade } = gradeLevel(prose.map((el) => blockText(doc, el)));
+  page.stats.readingGrade = grade == null ? null : Math.round(grade * 10) / 10;
+  if (words >= READING_GRADE_MIN_WORDS && grade > READING_GRADE_NOTE) {
+    report.info('readability.grade', route, `Flesch-Kincaid grade ${grade.toFixed(1)} (estimate over ${words} words of paragraphs and list items; standard: grade 8 or lower)`);
+  }
 }
 
 function auditNap(page) {
@@ -609,6 +637,27 @@ function auditClaims(page) {
   }
 }
 
+// Inline markup ([label](/path), **bold**) is rendered on the page by
+// src/lib/inline.jsx and stripped everywhere else (src/lib/inlineText.js
+// stripInline). Seen raw, it leaked: page copy rendered without renderInline,
+// or a meta tag / JSON-LD string built without stripInline.
+const RAW_MARKUP_RE = /\[[^\]\n]+\]\((?:\/|https?:\/\/|mailto:|tel:)[^)\s]*\)|\*\*[^*\n]+\*\*/;
+function auditRawMarkup(page) {
+  const places = [
+    ['page text', textBetween(page.doc, page.body.start, page.body.end, '')],
+    ['<title>', page.title || ''],
+    ['meta description', page.description || ''],
+  ];
+  for (const block of page.blocks) {
+    if (block.data) walkStrings(block.data, (value) => places.push(['JSON-LD', value]));
+  }
+  const hit = places.find(([, text]) => RAW_MARKUP_RE.test(text));
+  if (hit) {
+    const m = RAW_MARKUP_RE.exec(hit[1]);
+    report.error('content.raw-markup', page.route, `inline markup shown raw in ${hit[0]}: "${shortUrl(m[0])}"`);
+  }
+}
+
 /**
  * Normalised visible text of <main>, for the content-hash guard. Text nodes
  * are joined with nothing: React splits a sentence into several nodes
@@ -688,6 +737,7 @@ for (const page of [...pages.values(), ...(notFound ? [notFound] : [])]) {
   auditNap(page);
   auditImages(page);
   auditClaims(page);
+  auditRawMarkup(page);
   if (page.is404) continue;
   collectLinks(page);
   auditPerformance(page);
@@ -926,6 +976,97 @@ for (const post of BLOG_POSTS) {
 // wording, so any page or post that gives a service a different range warns.
 if (facts.TIMELINES) for (const page of pages.values()) checkTimelineDrift(page, facts.TIMELINES, report);
 
+/* --------------------------- service area: lists and community pages */
+// Visible <main> text, leaving out the elements in `skip` (whole subtrees).
+function mainTextWithout(page, skip) {
+  const parts = [];
+  let cursor = page.main.start;
+  for (const el of [...skip].sort((a, b) => a.start - b.start)) {
+    if (el.end <= cursor || el.start >= page.main.end) continue;
+    parts.push(textBetween(page.doc, cursor, el.start, ' '));
+    cursor = el.end;
+  }
+  parts.push(textBetween(page.doc, cursor, page.main.end, ' '));
+  return parts.join(' ').replace(/\s+/g, ' ');
+}
+
+// src/data/areas.js holds the one list of communities. A page whose <main>
+// names three or more of the confirmed nearby communities, but not all of
+// them, most likely carries a hand-typed list that has drifted from it (a
+// community confirmed or dropped since): write the list from areas.js
+// (NEARBY_AREAS_TEXT…). Community pages name their own community, and the
+// /service-areas cards (#communities) one community each, so those are left out.
+const NEARBY_AREA_NAMES = Array.isArray(siteConfig.NEARBY_AREA_NAMES) ? siteConfig.NEARBY_AREA_NAMES : [];
+const PARTIAL_LIST_MIN = 3;
+const escapeRe = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const AREA_NAME_RES = NEARBY_AREA_NAMES.map((name) => [name, new RegExp(`(?<!\\p{L})${escapeRe(name)}(?!\\p{L})`, 'u')]);
+if (NEARBY_AREA_NAMES.length > PARTIAL_LIST_MIN) {
+  for (const page of pages.values()) {
+    if (page.route.startsWith('/service-areas/')) continue;
+    const skip = page.route === '/service-areas' ? page.doc.elements.filter((el) => el.attrs.id === 'communities') : [];
+    const text = mainTextWithout(page, skip);
+    const named = AREA_NAME_RES.filter(([, re]) => re.test(text)).map(([name]) => name);
+    if (named.length >= PARTIAL_LIST_MIN && named.length < NEARBY_AREA_NAMES.length) {
+      const missing = NEARBY_AREA_NAMES.filter((name) => !named.includes(name));
+      report.warn('areas.partial-list', page.route, `<main> names ${named.length} of the ${NEARBY_AREA_NAMES.length} nearby communities but not ${missing.join(', ')} — build the list from src/data/areas.js`);
+    }
+  }
+}
+
+// Community pages (plan D9). serviceAreasContent.js passesAreaGate() keeps
+// /service-areas/<slug> unrouted until its entry is published, three
+// published case studies are set there and the owner has signed it off; this
+// re-checks every prerendered one and adds what only the built page shows:
+// 600+ words of its own (text blocks in <main> that appear on no other page)
+// and its sources.
+const AREA_PAGE_MIN_CASE_STUDIES = Number(areasContent.AREA_PAGE_MIN_CASE_STUDIES) || 3;
+const AREA_PAGE_MIN_UNIQUE_WORDS = 600;
+const TEXT_BLOCK_TAGS = new Set(['p', 'li', 'h1', 'h2', 'h3', 'h4', 'blockquote', 'td', 'th', 'figcaption']);
+/** The outermost text blocks in <main>, as normalised strings. */
+function mainTextBlocks(page) {
+  const inMain = page.doc.elements.filter((el) => TEXT_BLOCK_TAGS.has(el.tag) && isInside(el, page.main));
+  return inMain
+    .filter((el) => !ancestors(page.doc, el).some((a) => TEXT_BLOCK_TAGS.has(a.tag)))
+    .map((el) => textOf(page.doc, el))
+    .filter(Boolean);
+}
+const areaPages = [...pages.values()].filter((page) => /^\/service-areas\/[^/]+$/.test(page.route));
+if (areaPages.length) {
+  const areaEntries = (areasContent.SERVICE_AREAS_CONTENT && areasContent.SERVICE_AREAS_CONTENT.areas) || {};
+  const blockOwners = new Map(); // block text -> Set(routes)
+  for (const page of pages.values()) {
+    for (const block of new Set(mainTextBlocks(page))) {
+      if (!blockOwners.has(block)) blockOwners.set(block, new Set());
+      blockOwners.get(block).add(page.route);
+    }
+  }
+  for (const page of areaPages) {
+    const slug = page.route.slice('/service-areas/'.length);
+    const entry = areaEntries[slug] || {};
+    const problems = [];
+    const studies = typeof caseStudyData.caseStudiesForArea === 'function' ? caseStudyData.caseStudiesForArea(slug).length : 0;
+    if (studies < AREA_PAGE_MIN_CASE_STUDIES) problems.push(`${studies} published case stud${studies === 1 ? 'y' : 'ies'} in this community (need ≥${AREA_PAGE_MIN_CASE_STUDIES})`);
+    const ownWords = mainTextBlocks(page)
+      .filter((block) => blockOwners.get(block).size === 1)
+      .reduce((sum, block) => sum + wordCount(block), 0);
+    if (ownWords < AREA_PAGE_MIN_UNIQUE_WORDS) problems.push(`${ownWords} words of its own in <main> (need ≥${AREA_PAGE_MIN_UNIQUE_WORDS})`);
+    const hasSourcesList = byTag(page.doc, 'ol').some((el) => classesOf(el).has('blog-sources') && isInside(el, page.main));
+    if (!Array.isArray(entry.sources) || !entry.sources.length || !hasSourcesList) problems.push('no sources for its local facts');
+    const signoff = entry.ownerSignoff;
+    if (!signoff || !signoff.name || !signoff.date) problems.push('no owner sign-off');
+    if (problems.length) report.error('areas.page-gate', page.route, `community page prerendered without the D9 gate: ${problems.join('; ')}`);
+  }
+}
+
+/* ---------------------------------------------------------- llms files */
+// The llms files use markdown links with absolute URLs on purpose; a link to a
+// relative path is page copy whose inline markup was not stripped.
+for (const name of ['llms.txt', 'llms-full.txt']) {
+  const text = readText(join(ROOT, 'public', name));
+  const m = text && /\[[^\]\n]+\]\(\/[^)\s]*\)/.exec(text);
+  if (m) report.error('content.raw-markup', null, `public/${name} carries page markup with a relative link: "${shortUrl(m[0])}"`);
+}
+
 /* -------------------------------------------------------------- robots */
 if (robotsTxt == null) {
   report.error('robots.missing', null, 'public/robots.txt not found');
@@ -1084,9 +1225,15 @@ for (const page of pages.values()) {
     }
   }
 }
+// /projects shows design ideas, not Bridgeland's work, until the first case
+// study is published (caseStudyData.js). Pages should not link it in body copy
+// just to raise its count, so it is not checked before then.
+const PUBLISHED_CASE_STUDIES =
+  typeof caseStudyData.publishedCaseStudies === 'function' ? caseStudyData.publishedCaseStudies().length : 0;
 for (const page of pages.values()) {
   page.stats.inboundContextual = inbound.has(page.route) ? inbound.get(page.route).size : 0;
   if (!page.indexable || page.route === '/') continue;
+  if (page.route === '/projects' && PUBLISHED_CASE_STUDIES === 0) continue;
   const n = page.stats.inboundContextual;
   const severity = LEGAL_ROUTES.has(page.route) ? 'info' : 'warn';
   if (n === 0) report.add(severity, 'links.orphan', page.route, 'no contextual links from other pages\' main content');
@@ -1105,6 +1252,37 @@ for (const [field, code] of [['title', 'head.duplicate-title'], ['description', 
   for (const [value, routes] of groups) {
     if (routes.length > 1) report.warn(code, null, `${routes.join(', ')} share "${shortUrl(value)}"`);
   }
+}
+
+/* ------------------------------------------- duplicate question headings */
+// Two indexable pages asking the same question in a page or section heading
+// (<h1>/<h2> in <main>) compete for the same query, e.g. a service page
+// repeating an H2 of the guide it links to. The guide keeps the question; the
+// other page words its heading for its own intent ("Permits for your
+// addition: what we coordinate"). <h3>s are left out: they are cards (a guide
+// card repeats its post's title) and FAQ items. So is the shared CTA banner,
+// whose heading is the same on every page by design.
+const TEMPLATE_HEADING_CLASSES = ['cta-banner-section'];
+const questionHeadings = new Map(); // normalised question -> [{ route, tag, text }]
+for (const page of pages.values()) {
+  if (!page.indexable) continue;
+  for (const el of page.doc.elements) {
+    if ((el.tag !== 'h1' && el.tag !== 'h2') || !isInside(el, page.main)) continue;
+    const text = textOf(page.doc, el).replace(/\s+/g, ' ').trim();
+    if (!text.endsWith('?')) continue;
+    if (ancestors(page.doc, el).some((a) => TEMPLATE_HEADING_CLASSES.some((c) => classesOf(a).has(c)))) continue;
+    const key = text.toLowerCase().replace(/[‘’]/g, "'");
+    if (!questionHeadings.has(key)) questionHeadings.set(key, []);
+    questionHeadings.get(key).push({ route: page.route, tag: el.tag, text });
+  }
+}
+for (const found of questionHeadings.values()) {
+  if (new Set(found.map((h) => h.route)).size < 2) continue;
+  report.warn(
+    'headings.duplicate-question',
+    null,
+    `"${found[0].text}" on ${found.map((h) => `${h.route} (${h.tag})`).join(', ')} — keep the question on the guide and word the other heading for its page's intent`
+  );
 }
 
 /* --------------------------------------------------------- keyword map */
@@ -1140,6 +1318,7 @@ const pageSummaries = [...pages.values()].map((p) => ({
   jsBrotliKb: p.stats.jsBrotliKb ?? null,
   jsServedKb: p.stats.jsServedKb ?? null,
   mainHash: p.mainHash ?? null,
+  readingGrade: p.stats.readingGrade ?? null,
 }));
 
 writeJson(OUT_FILE, {

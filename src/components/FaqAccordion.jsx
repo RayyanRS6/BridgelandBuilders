@@ -40,6 +40,19 @@ function MoreLink({ more }) {
 }
 
 /**
+ * A text answer's paragraphs: a blank line ("\n\n") in `a` starts a new one
+ * (readability: no paragraph over 60 words). The FAQPage schema and the llms
+ * files join them with a space (seo.js buildFaqPage, build-seo-files.mjs).
+ * Null for a one-paragraph answer or a React node (blog posts), which render
+ * exactly as before.
+ */
+function answerParagraphs(answer) {
+  if (typeof answer !== 'string' || !answer.includes('\n')) return null;
+  const parts = answer.split(/\n\s*\n/).map((part) => part.trim()).filter(Boolean);
+  return parts.length > 1 ? parts : null;
+}
+
+/**
  * Every answer is always in the HTML, so search engines and the FAQPage
  * structured data see the full text; the accordion only toggles which one is
  * shown.
@@ -52,9 +65,13 @@ function MoreLink({ more }) {
  * adds it to the closed answers in the static HTML (identified by their
  * question's aria-expanded="false"). Browsers without until-found support
  * treat it as plain `hidden`. pages.css takes the padding off a closed answer,
- * which Chrome keeps as an empty box.
+ * which Chrome keeps as an empty box. The element that is hidden is the
+ * answer's container: its <p class="faq-answer">, or for a multi-paragraph
+ * answer the <div class="faq-answer-group"> around its paragraphs (no
+ * padding of its own, so a closed group takes no space either).
  *
- * @param {Array}  items          [{ q, a, more? }] — `more` = { label, to } adds a link under the answer
+ * @param {Array}  items          [{ q, a, more? }] — `more` = { label, to } adds a link under the answer;
+ *                                a blank line in `a` splits it into paragraphs
  * @param {number} [headingLevel] 2–6: wraps each question in that heading (default: no heading)
  * @param {number} [defaultOpen]  index open on first render (default 0; -1 = all closed)
  */
@@ -65,6 +82,9 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
   const answers = useRef([]);
   const hydrating = useHydrating();
   const firstRun = useRef(true);
+  const answerRef = (index) => (el) => {
+    answers.current[index] = el;
+  };
 
   useBrowserLayoutEffect(() => {
     const elements = answers.current.slice(0, items.length);
@@ -108,6 +128,13 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
       {items.map((item, index) => {
         const isOpen = index === openIndex;
         const answerId = `${baseId}-answer-${index}`;
+        const parts = answerParagraphs(item.a);
+        const more = item.more && item.more.to && (
+          <>
+            <br />
+            <MoreLink more={item.more} />
+          </>
+        );
         const question = (
           <button
             type="button"
@@ -131,21 +158,22 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
             ) : (
               question
             )}
-            <p
-              className="faq-answer"
-              id={answerId}
-              ref={(el) => {
-                answers.current[index] = el;
-              }}
-            >
-              {item.a}
-              {item.more && item.more.to && (
-                <>
-                  <br />
-                  <MoreLink more={item.more} />
-                </>
-              )}
-            </p>
+            {parts ? (
+              // Same .faq-answer paragraphs; its bottom padding spaces them.
+              <div className="faq-answer-group" id={answerId} ref={answerRef(index)}>
+                {parts.map((text, partIndex) => (
+                  <p className="faq-answer" key={text.slice(0, 40)}>
+                    {text}
+                    {partIndex === parts.length - 1 && more}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="faq-answer" id={answerId} ref={answerRef(index)}>
+                {item.a}
+                {more}
+              </p>
+            )}
           </div>
         );
       })}

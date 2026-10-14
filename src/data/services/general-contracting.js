@@ -13,6 +13,7 @@
 // its sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'general-contracting',
@@ -34,16 +35,18 @@ export default {
 
   intro: {
     tag: 'What a general contractor does',
-    title: 'What does a general contractor do?',
+    // Worded for this page's intent; the guide (linked in the first
+    // paragraph) keeps the question "What does a general contractor do?".
+    title: 'What we handle as your general contractor',
     image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80',
     imageAlt: 'Open office meeting area with a long wood table, pink chairs, and floor-to-ceiling windows',
     floatingTitle: 'Built to Your Drawings',
     floatingText: 'We build to supplied plans and raise site conflicts early.',
     paragraphs: [
-      'A general contractor takes responsibility for building a project: pricing it, scheduling and supervising the trades, ordering materials, coordinating permits and inspections, keeping the site safe and tidy, and handing over a finished space. You deal with one contractor instead of separately managing a framer, electrician, plumber, drywaller, painter and flooring installer.',
+      'A general contractor [takes responsibility for building a project](/blog/what-does-a-general-contractor-do): pricing it, scheduling and supervising the trades, ordering materials, coordinating permits and inspections, keeping the site safe and tidy, and handing over a finished space. You deal with one contractor instead of separately managing a framer, electrician, plumber, drywaller, painter and flooring installer.',
       'We work as the general contractor on residential renovations, such as kitchens, bathrooms, basements, whole homes and additions, and on commercial projects for offices, stores, restaurants, hotels and clinics. The difference between a smooth job and a stressful one is usually sequencing: the right trade, in the right order, with inspections booked before walls close.',
       'Architects, interior designers and engineers can hand us their drawings and specifications, and we build to them. We walk the site against the drawings before work starts, ask questions early, and raise conflicts, such as a duct that clashes with a beam, before they turn into change orders.',
-      'When the City requires sealed drawings, they come from a registered architect or professional engineer. If you don’t have one yet, ask us at the site visit what your scope is likely to need before you spend money on plans.',
+      'When the City requires sealed drawings, they come from a registered architect or professional engineer. If you don’t have one yet, ask us at [the site visit](/our-process) what your scope is likely to need before you spend money on plans.',
     ],
     checklist: ['Trades & Scheduling', 'Permits & Inspections', 'Building to Drawings', 'Residential & Commercial'],
   },
@@ -101,14 +104,14 @@ export default {
     // BusinessAudience the commercial verticals carry.
     audience: { '@type': 'Audience', audienceType: 'Homeowners, businesses, property managers, architects and designers' },
     primaryKeyword: 'general contractor Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTitle: 'Projects We Manage as General Contractor',
   typesDesc: 'For homeowners, businesses, property owners and design professionals.',
   types: [
-    { title: 'Residential Renovations', text: 'Kitchens, bathrooms, basements, whole-home renovations and home additions, with the trades, permits and inspections run for you.' },
-    { title: 'Commercial Fit-Ups', text: 'Offices, stores, restaurants, hotels and clinics, including tenant improvements in leased units and work after hours.' },
+    { title: 'Residential Renovations', text: 'Kitchens, bathrooms, basements, [whole-home renovations](/services/whole-home-renovations) and home additions, with the trades, permits and inspections run for you.' },
+    { title: 'Commercial Fit-Ups', text: 'Offices, stores, restaurants, hotels and clinics, including [tenant improvements in leased units](/services/commercial-renovations) and work after hours.' },
     { title: 'Building to Supplied Drawings', text: 'Projects designed by an architect, engineer or interior designer, built to their drawings and specifications.' },
     { title: 'Property Owners & Managers', text: 'Unit turnovers, common areas and multi-unit upgrades for landlords, property managers and building owners.' },
     { title: 'Developers & Realtors', text: 'Work that gets a property ready to sell, lease or occupy, scoped and quoted in writing after a free site visit.' },
@@ -118,14 +121,14 @@ export default {
   local: {
     title: 'What does a general contractor handle with the City?',
     intro:
-      'Permits and inspections. In Winnipeg, a building permit is needed whenever work is regulated by the Winnipeg Building By-law or the Manitoba Building Code, and on commercial projects the electrical, mechanical, plumbing and demolition permits are applied for by City-licensed contractors. A general contractor lines those up and books inspections in the right order.',
+      'Permits and inspections. In Winnipeg, [a building permit is needed](/blog/winnipeg-renovation-permits) whenever work is regulated by the Winnipeg Building By-law or the Manitoba Building Code, and on commercial projects the electrical, mechanical, plumbing and demolition permits are applied for by City-licensed contractors. A general contractor lines those up and books inspections in the right order.',
     items: [
       { title: 'Building Permits', text: 'Work regulated by the building code needs a City permit. Commercial alterations are filed with the Commercial Alteration Design Summary, and the City says incomplete applications result in delays.' },
       { title: 'Trade Permits', text: 'On commercial projects, the City requires electrical, mechanical, plumbing and demolition permits to be applied for by a City-licensed contractor, so the right licensed trades are part of the plan from the start.' },
       { title: 'Professional Drawings', text: 'The City’s CADS form says commercial drawings must be sealed by an architect or engineer for any structural change, and for significant changes to fire safety systems, exits or public corridors in Part 3 buildings. We build to their sealed drawings.' },
       { title: 'Inspections', text: 'Once a permit is issued, the City carries out mandatory audit inspections to check the work follows codes, by-laws and the accepted plans, so inspections are booked before walls and ceilings close.' },
       { title: 'Holdback', text: 'Manitoba’s Builders’ Liens Act requires the person paying for the work to hold back 7.5% of each payment for at least 60 days after substantial performance, completion or abandonment.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, permits and inspections go through the local municipality or planning district instead.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, permits and inspections go through the local municipality or planning district instead.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Commercial projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects', accessed: '2026-10-13' },

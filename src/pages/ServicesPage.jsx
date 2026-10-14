@@ -6,6 +6,11 @@ import CtaBanner from '../components/CtaBanner.jsx';
 import { COST_HUB_PATH } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
+// /projects shows inspiration photos until a case study of our own work is
+// published (src/data/caseStudyData.js), so the button names what is there.
+// vite.config.js sets __HAS_CASE_STUDIES__ from publishedCaseStudies().
+const PROJECTS_LINK_LABEL = __HAS_CASE_STUDIES__ ? 'VIEW OUR PROJECTS' : 'VIEW DESIGN IDEAS';
+
 // "Not sure where to start?" — the three usual first steps.
 const START_LINKS = [
   { to: COST_HUB_PATH, label: 'Renovation cost ranges' },
@@ -23,8 +28,8 @@ export default function ServicesPage() {
         eyebrow="Renovation & Construction"
         title="WINNIPEG RENOVATION SERVICES"
         highlight="BUILT AROUND YOUR SPACE"
-        description="Home and commercial renovations in Winnipeg and nearby communities, from kitchens, bathrooms and basements to flooring, windows, masonry and demolition."
-        primaryLink={{ to: '/projects', label: 'VIEW OUR PROJECTS' }}
+        description="Home and commercial renovations in Winnipeg and nearby communities, from kitchens, bathrooms and basements to flooring, windows, masonry and demolition. Smaller home improvement jobs can be done on their own or as part of a larger renovation."
+        primaryLink={{ to: '/projects', label: PROJECTS_LINK_LABEL }}
       />
       <ServiceDirectory />
 

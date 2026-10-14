@@ -95,6 +95,7 @@ import { existsSync, readFileSync, readdirSync, unlinkSync, writeFileSync, mkdir
 import { join, relative } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { cardImage } from '../src/lib/cardImage.js';
+import { stripInline } from '../src/lib/inlineText.js';
 
 const VERIFY = process.argv.includes('--verify');
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
@@ -310,8 +311,8 @@ function bodyImage(block, fallbackName) {
 
 /* -------------------------------------------------------------- text */
 const INLINE_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
-/** Plain text of inline markup ([label](url) → label, **x** → x). */
-const plain = (text) => String(text || '').replace(INLINE_LINK, '$1').replace(/\*\*([^*]+)\*\*/g, '$1');
+/** Plain text of inline markup ([label](url) → label, **x** → x): the shared src/lib/inlineText.js helper. */
+const plain = stripInline;
 const countWords = (text) => {
   const value = plain(text).trim();
   return value ? value.split(/\s+/).length : 0;

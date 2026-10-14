@@ -7,6 +7,7 @@
  * page passes its lazily loaded post module (src/data/posts/<slug>.js), which
  * is the same post plus its related cards, so the output is identical.
  */
+import { stripInline } from '../lib/inlineText.js';
 import { SITE_URL } from './siteConfig.js';
 import { PEOPLE, personPath } from './people.js';
 import { serviceByPath } from './services.js';
@@ -18,12 +19,11 @@ export { isoWinnipeg };
 
 /**
  * Plain text of the inline markup RichBody renders ([label](url) → label,
- * **bold** → bold), for schema and meta text.
+ * **bold** → bold), for schema and meta text: the shared
+ * src/lib/inlineText.js stripInline, under the name existing imports use.
  */
 export function plainText(text) {
-  return String(text || '')
-    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '$1')
-    .replace(/\*\*([^*]+)\*\*/g, '$1');
+  return stripInline(text);
 }
 
 const absolute = (url) => (url && !/^https?:\/\//.test(url) ? `${SITE_URL}${url.startsWith('/') ? '' : '/'}${url}` : url);
