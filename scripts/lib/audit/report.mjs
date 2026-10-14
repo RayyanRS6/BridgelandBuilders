@@ -51,6 +51,7 @@ export const CODE_TITLES = {
   'facts.timeline-drift': 'Service timeline in page copy differs from facts.js TIMELINES',
   'areas.partial-list': 'Page names some nearby communities but not all (areas.js)',
   'areas.page-gate': 'Community page prerendered without the D9 gate',
+  'content.raw-markup': 'Inline markup ([label](/path), **bold**) shown raw',
   'robots.missing': 'robots.txt missing',
   'robots.blocks-route': 'robots.txt blocks an indexable route',
   'robots.sitemap-line': 'robots.txt Sitemap line',

@@ -15,7 +15,8 @@
  *          gating the hero / forms / long bodies, an estimator iframe on every
  *          service page, no banned claims, no changefreq/priority, no leaked
  *          Suspense fallback, no keyword listed twice in the keyword map, no
- *          community page (/service-areas/<slug>) short of the D9 gate.
+ *          community page (/service-areas/<slug>) short of the D9 gate, no
+ *          raw inline markup in page text, meta, JSON-LD or the llms files.
  *   WARN   quality: title/description lengths, duplicates, image hygiene,
  *          internal-link coverage, lastmod uniformity, <main> text changed
  *          without an `updated` bump (content-hash guard), stale cost guides
@@ -604,6 +605,27 @@ function auditClaims(page) {
   }
 }
 
+// Inline markup ([label](/path), **bold**) is rendered on the page by
+// src/lib/inline.jsx and stripped everywhere else (src/lib/inlineText.js
+// stripInline). Seen raw, it leaked: page copy rendered without renderInline,
+// or a meta tag / JSON-LD string built without stripInline.
+const RAW_MARKUP_RE = /\[[^\]\n]+\]\((?:\/|https?:\/\/|mailto:|tel:)[^)\s]*\)|\*\*[^*\n]+\*\*/;
+function auditRawMarkup(page) {
+  const places = [
+    ['page text', textBetween(page.doc, page.body.start, page.body.end, '')],
+    ['<title>', page.title || ''],
+    ['meta description', page.description || ''],
+  ];
+  for (const block of page.blocks) {
+    if (block.data) walkStrings(block.data, (value) => places.push(['JSON-LD', value]));
+  }
+  const hit = places.find(([, text]) => RAW_MARKUP_RE.test(text));
+  if (hit) {
+    const m = RAW_MARKUP_RE.exec(hit[1]);
+    report.error('content.raw-markup', page.route, `inline markup shown raw in ${hit[0]}: "${shortUrl(m[0])}"`);
+  }
+}
+
 /**
  * Normalised visible text of <main>, for the content-hash guard. Text nodes
  * are joined with nothing: React splits a sentence into several nodes
@@ -683,6 +705,7 @@ for (const page of [...pages.values(), ...(notFound ? [notFound] : [])]) {
   auditNap(page);
   auditImages(page);
   auditClaims(page);
+  auditRawMarkup(page);
   if (page.is404) continue;
   collectLinks(page);
   auditPerformance(page);
@@ -991,6 +1014,15 @@ if (areaPages.length) {
     if (!signoff || !signoff.name || !signoff.date) problems.push('no owner sign-off');
     if (problems.length) report.error('areas.page-gate', page.route, `community page prerendered without the D9 gate: ${problems.join('; ')}`);
   }
+}
+
+/* ---------------------------------------------------------- llms files */
+// The llms files use markdown links with absolute URLs on purpose; a link to a
+// relative path is page copy whose inline markup was not stripped.
+for (const name of ['llms.txt', 'llms-full.txt']) {
+  const text = readText(join(ROOT, 'public', name));
+  const m = text && /\[[^\]\n]+\]\(\/[^)\s]*\)/.exec(text);
+  if (m) report.error('content.raw-markup', null, `public/${name} carries page markup with a relative link: "${shortUrl(m[0])}"`);
 }
 
 /* -------------------------------------------------------------- robots */
