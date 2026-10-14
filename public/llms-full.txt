@@ -1,6 +1,6 @@
 # Bridgeland Builders — full reference
 
-> Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home additions and general contracting across Winnipeg and nearby communities.
+> Bridgeland Builders is a Winnipeg renovation contractor for kitchens, bathrooms, basements, whole-home renovations, home additions and commercial fit-ups in Winnipeg and nearby communities.
 
 Renovation and construction contractor based in Winnipeg, Manitoba, Canada. Not affiliated with Bridgeland, Texas or the Bridgeland neighbourhood of Calgary.
 
@@ -55,7 +55,7 @@ Communities: Winnipeg, Headingley, East St. Paul, West St. Paul, Oak Bluff, Selk
 - LinkedIn: https://www.linkedin.com/company/bridgeland-builders/
 - YouTube: https://www.youtube.com/channel/UCKN758eCYFdf-eH9_FFwjgw
 - TikTok: https://www.tiktok.com/@bridgeland.builder
-- x: https://x.com/bridgeland58384
+- X (Twitter): https://x.com/bridgeland58384
 - Better Business Bureau: https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638
 
 ## Renovation cost guides
@@ -78,11 +78,17 @@ A: Yes. The on-site visit and the written quote are both free, and there is no o
 **Q: What is the difference between the instant quote and a written quote?**
 A: The instant quote is an online price calculator: you answer a few questions and see a starting price range in minutes. The written quote comes after our free on-site visit, once we have measured the space and agreed the scope. It sets out the work, the price and the schedule, with taxes shown.
 
+**Q: What does the instant quote cover?**
+A: Kitchen, bathroom and basement renovations. You pick the size of the space and your options, and it shows the starting range our estimator uses. It can’t see your home, so wiring, plumbing, structure and site conditions aren’t in it. Whole-home, addition and commercial projects aren’t covered: they are priced after a free on-site visit.
+
 **Q: What makes a renovation cost more?**
 A: The biggest factors are size, moving plumbing, walls or windows, the finishes you choose, and the condition of what is already there, such as old wiring, moisture or uneven floors. Permits, drawings and access also play a part. We point out the cost drivers at the on-site visit, so there are fewer surprises later.
 
 **Q: What happens if the scope changes during the project?**
 A: Changes happen, whether you decide to add something or a problem turns up behind a wall. Any change to the scope should be agreed, with its cost in writing, before that work is done, so ask how changes are handled when you review your written quote. In older homes, keep a contingency for surprises.
+
+**Q: How do people pay for a renovation?**
+A: Many homeowners talk to their own bank or credit union, and a home equity line of credit, which is secured by the home, is one option many consider. Businesses often look at bank loans or a landlord’s improvement allowance. Whichever route you take, get your written quote first, so you know how much you actually need to borrow.
 
 **Q: Do I need a permit for my renovation in Winnipeg?**
 A: Often, yes. Finishing a basement into living space or creating a new bedroom requires a building permit, and the City of Winnipeg says kitchens, bathrooms, open-concept changes and new or larger exterior openings may need one. Cosmetic work such as painting, flooring and millwork does not. Electrical or plumbing work can need its own permit. We confirm what your project needs at the on-site visit.
@@ -111,8 +117,17 @@ A: For homes, we renovate kitchens, bathrooms, basements and whole houses, and b
 **Q: Can you work after hours on a commercial renovation?**
 A: Yes. For commercial projects we can schedule work after hours or on weekends, so your business can keep serving customers or patients while the renovation goes ahead. We plan the work around your lease dates and opening hours from the start, and send weekly updates so you always know what is happening next.
 
+**Q: Do you take on smaller jobs as well as full renovations?**
+A: Yes. Alongside full renovations, we quote smaller scopes such as new countertops or a backsplash, a new vanity or tub, flooring, windows and doors, or exterior painting. Tell us what you have in mind and we will scope just that part at the free on-site visit, with a written quote before anything starts.
+
+**Q: Do you work with property managers, architects and designers?**
+A: Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners, and we build to supplied drawings and specifications from architects, engineers and interior designers. We walk the site against the drawings before work starts and raise anything that won’t work on site early, before it becomes a change order.
+
 **Q: How do I get started?**
 A: Use our free instant quote for a starting price range, call 431-866-5644, or book a free on-site visit online. We reply within one business day, arrange a time to see the space, and follow up with a written quote. Our office hours are Monday to Friday, 8:30 a.m. to 4:30 p.m.
+
+**Q: What are your office hours?**
+A: Our office is open Monday to Friday, 8:30 a.m. to 4:30 p.m. and closed on weekends. Call 431-866-5644 during those hours, or email info@bridgelandbuilders.com or send your project details online at any time, and we will reply within one business day. Commercial renovation work itself can be scheduled after hours or on weekends.
 
 **Q: What happens at the free on-site visit?**
 A: We look at the space with you, take measurements, and talk through what you want to change, your budget range and your timing. We also check the things that affect the price, such as where the plumbing runs and the condition of what is there now. Then we prepare your written quote.
@@ -133,7 +148,7 @@ A: A typical basement takes four to eight weeks of work, depending on its size, 
 A: Yes, if you are finishing a previously undeveloped basement or creating a new bedroom: the Winnipeg Building By-law requires a building permit for both. Updating finishes in a basement that is already developed does not need one. Electrical and plumbing work often need separate permits. We coordinate them as part of the job.
 
 **Q: My basement smells damp. Can it still be finished?**
-A: Usually, but not until the cause is known. Sometimes it’s grading or a downspout outside; sometimes it’s a foundation crack or a failing sump pump. Outside drainage gets fixed first, and active leaks or cracks go to a waterproofing or foundation specialist before we frame. Finishing over a damp wall only hides the problem.
+A: Usually, but not until the cause is known. Sometimes it’s grading or a downspout outside; sometimes it’s a foundation crack or a failing sump pump. Outside drainage gets fixed first, and active leaks or cracks go to a waterproofing or foundation repair company before we frame. Finishing over a damp wall only hides the problem.
 
 **Q: What is an egress window, and do I need one?**
 A: It’s a window large enough to climb out of in an emergency. The City’s basement guide says a new basement bedroom needs one that opens from inside without tools, with at least 0.35 m² of clear opening and no dimension under 380 mm, unless the bedroom has a door straight outside. We cut the opening, install the window, and set the window well.
@@ -196,7 +211,7 @@ A: It happens, especially under older tubs and showers. We photograph it, show y
 A: We coordinate them. When your bathroom needs a building permit or plumbing and electrical permits, we arrange them with the City of Winnipeg or your local municipality and schedule inspections before the walls are closed. The City says the homeowner and the permit applicant share responsibility for inspections, so you’ll know what was booked and passed.
 
 **Q: What happens at the free on-site visit?**
-A: We measure the room, look at the plumbing, venting and floor, and talk about what you want to change. You then receive a free written quote listing labour, materials and what’s included. If you later swap a tile or a vanity, we re-price it before anything is ordered.
+A: We measure the room, look at the plumbing, venting and floor, and talk about what you want to change. You then receive a free written quote listing labour, materials and what’s included, so it is easy to compare with any other company’s quote. If you later swap a tile or a vanity, we re-price it before anything is ordered.
 
 ### Home additions
 https://bridgelandbuilders.com/services/home-additions
@@ -244,7 +259,7 @@ A: Yes. Tell us early so the cabinet openings are built to fit them. If you plan
 A: We do. When your kitchen needs a building permit or trade permits, we coordinate them with the City of Winnipeg or your local municipality and schedule each inspection as the work reaches that stage. The City says the homeowner and the permit applicant share responsibility for inspections, so we keep you informed at every step.
 
 **Q: What happens at the free on-site visit?**
-A: We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists what’s included, so you can read it line by line before deciding anything.
+A: We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists what’s included, so you can read it line by line, and compare it with another company’s quote, before deciding anything.
 
 ### Whole home renovations
 https://bridgelandbuilders.com/services/whole-home-renovations
@@ -595,6 +610,7 @@ A: The scope we agree at the visit. A full kitchen typically covers layout plann
 A: Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We measure the room, talk through how you cook and what isn’t working in the kitchen you have now, then send a free written quote. We reply to every request within one business day.
 
 ## Articles
+- [How Much Does a Home Renovation Cost in Canada?](https://bridgelandbuilders.com/blog/home-renovation-cost-canada): Why there’s no reliable national average for what a renovation costs, what Statistics Canada’s construction price data does show, why per-square-foot figures mislead, and how to get a real number for your project.
 - [Basement Development Permits in Winnipeg: How to Apply](https://bridgelandbuilders.com/blog/basement-development-permits-winnipeg): What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.
 - [Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits](https://bridgelandbuilders.com/blog/basement-flood-protection-winnipeg): Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.
 - [Clay Soil and Basement Cracks in Winnipeg: What’s Normal](https://bridgelandbuilders.com/blog/clay-soil-basement-cracks-winnipeg): Winnipeg’s clay swells and shrinks with moisture, and basements show it. How to read the cracks, when an engineer should look, and how to build finishes that allow for movement.

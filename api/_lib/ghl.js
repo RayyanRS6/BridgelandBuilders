@@ -11,6 +11,7 @@
 // server sets it (see vite.config.js), and only when no token is configured.
 import {
   BOOKING_CALENDAR,
+  MARKETING_CONSENT_TAG,
   OUTSIDE_AREA_TAG,
   QUOTE_QUESTIONS,
   attributionCustomFields,
@@ -18,16 +19,19 @@ import {
   sourceFor,
   tagsForLead,
 } from '../../src/data/quoteForm.js';
+import { todayIn } from '../../src/lib/zonedDate.js';
 
 const API_BASE = 'https://services.leadconnectorhq.com';
 const CONTACTS_VERSION = '2021-07-28';
 const CALENDARS_VERSION = '2021-04-15';
 
 export class BookingError extends Error {
-  constructor(code, status, message) {
+  constructor(code, status, message, upstreamStatus) {
     super(message || code);
     this.code = code;
     this.status = status;
+    // GoHighLevel's own HTTP status, when the error came from GoHighLevel.
+    this.upstreamStatus = upstreamStatus;
   }
 }
 
@@ -41,6 +45,10 @@ function config() {
 }
 
 export const isMock = () => process.env.BOOKING_MOCK === '1';
+
+/** CASL record of express consent: when it was given, and where. */
+const marketingConsentNote = () =>
+  `Marketing emails: express consent, ticked on the website quote form on ${todayIn(BOOKING_CALENDAR.timeZone)}`;
 
 async function ghl(path, { method = 'GET', version, body, token }) {
   const response = await fetch(`${API_BASE}${path}`, {
@@ -60,7 +68,7 @@ async function ghl(path, { method = 'GET', version, body, token }) {
     // Log enough to debug from the Vercel logs, but never the visitor's details.
     console.error(`[ghl] ${method} ${path.split('?')[0]} -> ${response.status}: ${message}${data.traceId ? ` (trace ${data.traceId})` : ''}`);
     const slotGone = /slot|available|booked/i.test(message);
-    throw new BookingError(slotGone ? 'slot_unavailable' : 'upstream_error', slotGone ? 409 : 502, message);
+    throw new BookingError(slotGone ? 'slot_unavailable' : 'upstream_error', slotGone ? 409 : 502, message, response.status);
   }
   return data;
 }
@@ -123,7 +131,14 @@ export async function getFreeSlots(start, end) {
  * `attribution` (cleaned by cleanAttribution) only adds custom fields whose
  * ids are set in ATTRIBUTION_FIELDS (empty by default), and only changes the
  * page tag / source when TAG_BY_FORM_PAGE is on (off by default). With the
- * defaults the contact is saved exactly as before.
+ * defaults the contact is saved exactly as before. If GoHighLevel refuses the
+ * save while attribution fields are attached (a wrong or deleted field id, for
+ * example), it is saved again at once without them: attribution can never
+ * cost a lead.
+ *
+ * A ticked marketing-consent box (lead.marketingConsent) adds
+ * MARKETING_CONSENT_TAG with the other tags (see tagsForLead) and, the first
+ * time, a dated note on the contact (best effort, after the save).
  */
 export async function upsertLead(lead, { utmSource, attribution } = {}) {
   const context = { formPage: attribution?.formPage, channel: attribution?.channel };
@@ -138,30 +153,43 @@ export async function upsertLead(lead, { utmSource, attribution } = {}) {
     extraFields = [];
   }
 
-  const data = await ghl('/contacts/upsert', {
-    method: 'POST',
-    version: CONTACTS_VERSION,
-    token,
-    body: {
-      locationId,
-      firstName,
-      lastName: rest.join(' ') || undefined,
-      name: lead.name,
-      email: lead.email,
-      phone: lead.phone,
-      address1: lead.address,
-      city: lead.city,
-      postalCode: lead.postalCode || undefined,
-      source: sourceFor({ utmSource, ...context }),
-      customFields: [
-        ...QUOTE_QUESTIONS.map((question) => ({
-          id: question.fieldId,
-          field_value: lead[question.key],
-        })),
-        ...extraFields,
-      ],
-    },
-  });
+  const questionFields = QUOTE_QUESTIONS.map((question) => ({
+    id: question.fieldId,
+    field_value: lead[question.key],
+  }));
+  const upsert = (customFields) =>
+    ghl('/contacts/upsert', {
+      method: 'POST',
+      version: CONTACTS_VERSION,
+      token,
+      body: {
+        locationId,
+        firstName,
+        lastName: rest.join(' ') || undefined,
+        name: lead.name,
+        email: lead.email,
+        phone: lead.phone,
+        address1: lead.address,
+        city: lead.city,
+        postalCode: lead.postalCode || undefined,
+        source: sourceFor({ utmSource, ...context }),
+        customFields,
+      },
+    });
+
+  let data;
+  try {
+    data = await upsert([...questionFields, ...extraFields]);
+  } catch (error) {
+    const refused = error instanceof BookingError && error.upstreamStatus >= 400 && error.upstreamStatus < 500;
+    if (!extraFields.length || !refused) throw error;
+    // ghl() has already logged GoHighLevel's message. No visitor details here.
+    console.error(
+      `[ghl] upsert refused (${error.upstreamStatus}) with ${extraFields.length} attribution field(s) attached; ` +
+        'saving again without them. Check the ids in ATTRIBUTION_FIELDS (src/data/quoteForm.js).'
+    );
+    data = await upsert(questionFields);
+  }
 
   const contactId = data?.contact?.id;
   if (!contactId) throw new BookingError('upstream_error', 502, 'Upsert returned no contact id.');
@@ -184,6 +212,23 @@ export async function upsertLead(lead, { utmSource, attribution } = {}) {
       token,
       body: { tags: [OUTSIDE_AREA_TAG] },
     });
+  }
+
+  // CASL record of express consent: a dated note on the contact the first
+  // time the box is ticked (the tag alone carries no date). The lead is
+  // already saved, so a failed note is only logged, never surfaced.
+  const hadConsent = (data?.contact?.tags || []).includes(MARKETING_CONSENT_TAG);
+  if (lead.marketingConsent === true && !hadConsent) {
+    try {
+      await ghl(`/contacts/${contactId}/notes`, {
+        method: 'POST',
+        version: CONTACTS_VERSION,
+        token,
+        body: { body: marketingConsentNote() },
+      });
+    } catch {
+      // ghl() has already logged GoHighLevel's message (no visitor details).
+    }
   }
 
   return { contactId, tags: tagged?.tags || [] };
@@ -218,7 +263,8 @@ export async function bookAppointment(contactId, startTime, { lead } = {}) {
   }
 
   const meetingAddress = [lead?.address, lead?.city, lead?.postalCode].filter(Boolean).join(', ') || lead?.address || '';
-  const title = lead?.name ? `Free Discovery Call - ${lead.name}` : BOOKING_CALENDAR.name;
+  // Every booking is a free on-site visit (BOOKING_CALENDAR.name).
+  const title = lead?.name ? `${BOOKING_CALENDAR.name} - ${lead.name}` : BOOKING_CALENDAR.name;
   const renovationTypes = Array.isArray(lead?.types) && lead.types.length ? lead.types.join(', ') : '';
   const notes = [
     `Contact: ${lead?.name || ''}`,
@@ -226,6 +272,7 @@ export async function bookAppointment(contactId, startTime, { lead } = {}) {
     `Email: ${lead?.email || ''}`,
     `Meeting Location: ${meetingAddress}`,
     renovationTypes ? `Renovation Types: ${renovationTypes}` : null,
+    lead?.marketingConsent ? marketingConsentNote() : null,
   ].filter(Boolean).join('\n');
 
   if (isMock()) return { id: `mock-appointment-${Date.now()}`, startTime, endTime, address: meetingAddress, title };

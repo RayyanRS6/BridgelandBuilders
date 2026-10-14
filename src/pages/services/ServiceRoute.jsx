@@ -1,10 +1,13 @@
 import { lazy } from 'react';
-import NotFoundPage from '../NotFoundPage.jsx';
 import ProjectPage from '../ProjectPage.jsx';
 import { serviceSeo } from '../../data/seo.js';
 import { serviceByPath } from '../../data/services.js';
 import { usePageSeo } from '../../hooks/useSeo.js';
-import { keepServerHtml, onInitialPage, retryLoad } from '../../lib/lazyRetry.js';
+import { keepServerHtml, lazyWithRetry, retryLoad } from '../../lib/lazyRetry.js';
+
+// Never rendered for a routed (live) service, so it is not modulepreloaded
+// with every service page.
+const NotFoundPage = lazyWithRetry(() => import('../NotFoundPage.jsx'));
 
 /**
  * Every service page (one route per live entry in src/data/services.js, see
@@ -18,15 +21,17 @@ import { keepServerHtml, onInitialPage, retryLoad } from '../../lib/lazyRetry.js
  */
 const CONTENT_MODULES = import.meta.glob('../../data/services/*.js');
 
-// Related guides (content.guides = blog slugs) come from the client blog index
-// (published posts' metadata, no bodies), loaded only for pages with guides.
+// Related guides (content.guides = blog slugs): one small generated card
+// module per published post (src/data/postCards/<slug>.js), so a page loads
+// just its own guides' cards (scripts/prerender.mjs modulepreloads them). A
+// slug with no card module is not a published post and is left out.
 // Never import blogPosts.js here: it is build-only and carries every body.
+const CARD_MODULES = import.meta.glob('../../data/postCards/*.js');
+
 async function loadGuidePosts(slugs) {
   if (!Array.isArray(slugs) || !slugs.length) return [];
-  const { BLOG_POSTS = [] } = await import('../../data/blogIndex.js');
-  return slugs
-    .map((slug) => BLOG_POSTS.find((post) => post && post.slug === slug))
-    .filter((post) => post && (post.status || 'published') === 'published');
+  const loads = slugs.map((slug) => CARD_MODULES[`../../data/postCards/${slug}.js`]).filter(Boolean);
+  return (await Promise.all(loads.map((load) => load()))).map((mod) => mod.default);
 }
 
 function ServicePage({ service, content, guidePosts }) {
@@ -58,13 +63,12 @@ function lazyServicePage(service) {
               return <ServicePage service={service} content={content} guidePosts={guidePosts} />;
             },
           };
-        }).catch((error) => {
-          // On the prerendered first page the server HTML stays in place
-          // (lib/lazyRetry.js); otherwise RouteErrorBoundary takes over and the
-          // next visit to this page tries again.
-          if (!onInitialPage()) PAGES.delete(service.slug);
-          return keepServerHtml(error);
         })
+          // On the prerendered first page the server HTML stays in place
+          // (lib/lazyRetry.js); otherwise the error reaches RouteErrorBoundary,
+          // which reloads once. The failed lazy stays in PAGES: a new one would
+          // suspend again and the error would never surface.
+          .catch(keepServerHtml)
       )
     );
   }

@@ -16,14 +16,35 @@ import {
   PageBreak,
 } from 'docx';
 
-import { PROJECTS } from '../src/data/projects.js';
+// Owner-review copy documents (SEO plan §20): one Markdown + Word file per
+// page in website_copy/, plus a master copy and a README index.
+//
+//   node scripts/generate_copy_docs.js            write website_copy/
+//   node scripts/generate_copy_docs.js --dry-run  list the pages, write nothing
+//
+// Service pages, cost guides, /service-areas and /editorial-policy are read
+// from the same data modules the site renders (src/data/services.js and the
+// service content modules, src/data/costGuides, serviceAreasContent.js,
+// editorialPolicy.js), so routes and copy cannot drift. The other static
+// pages are hand-kept snapshots below: check them against the live page
+// before sending, and keep them to confirmed facts (no ratings badges,
+// superlatives, "verified" labels or one-crew / fixed-price promises).
+// Merge any edits the owner made in website_copy/ before re-running: the
+// files are overwritten.
+import { LIVE_SERVICE_PAGES } from '../src/data/projects.js';
 import { SERVICE_CATEGORIES } from '../src/data/serviceCategories.js';
+import { serviceTrail } from '../src/data/seo.js';
+import { LIVE_COST_GUIDES } from '../src/data/head.js';
+import { SERVICE_AREAS_CONTENT, confirmedServiceAreas } from '../src/data/serviceAreasContent.js';
+import { EDITORIAL_POLICY } from '../src/data/editorialPolicy.js';
+import { SERVICE_AREA_NAMES, SITE_EMAIL } from '../src/data/siteConfig.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 const MD_DIR = path.join(ROOT_DIR, 'website_copy', 'markdown');
 const DOCX_DIR = path.join(ROOT_DIR, 'website_copy', 'word_docx');
+const DRY_RUN = process.argv.includes('--dry-run');
 
 // Palette
 const COLOR_PRIMARY = '191715'; // Dark charcoal
@@ -129,12 +150,121 @@ function docCallout(title, text) {
 }
 
 // -------------------------------------------------------------
+// DATA HELPERS (content read from src/data)
+// -------------------------------------------------------------
+
+/** Inline markdown as plain text: [label](url) -> label, **bold** -> bold. */
+function plain(text) {
+  return String(text || '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .trim();
+}
+
+/** RichBody blocks -> document items (consecutive list items become one list). */
+function blockItems(blocks = []) {
+  const items = [];
+  let list = null;
+  const flush = () => {
+    if (list) items.push(list);
+    list = null;
+  };
+  blocks.filter((b) => b && !b.hidden).forEach((b) => {
+    if (b.t === 'li' || b.t === 'oli') {
+      if (!list) list = { type: 'list', label: 'List', list: [] };
+      list.list.push(plain(b.x));
+      return;
+    }
+    flush();
+    if (/^h[2-4]$/.test(b.t)) items.push({ type: 'label-value', label: `Subheading (${b.t.toUpperCase()})`, value: plain(b.x) });
+    else if (b.t === 'table') items.push(tableItem(b));
+    else if (b.t === 'takeaways') items.push({ type: 'list', label: plain(b.title) || 'Key takeaways', list: (b.items || []).map(plain) });
+    else if (b.t === 'callout') items.push({ type: 'callout', title: plain(b.title) || 'Note', text: plain(b.x) });
+    else if (b.t === 'img') items.push({ type: 'label-value', label: 'Image alt text', value: plain(b.alt) });
+    else if (b.x) items.push({ type: 'para', label: 'Paragraph', text: plain(b.x) });
+  });
+  flush();
+  return items;
+}
+
+/** A table block as a list of "cell | cell" rows. */
+function tableItem(table) {
+  return {
+    type: 'list',
+    label: `Table: ${plain(table.caption) || 'untitled'}`,
+    list: [
+      ...(table.head && table.head.length ? [`(columns) ${table.head.map(plain).join(' | ')}`] : []),
+      ...(table.rows || []).map((row) => row.map(plain).join(' | ')),
+      ...(table.note ? [`(note) ${plain(table.note)}`] : []),
+    ],
+  };
+}
+
+const faqItems = (faqs = []) => faqs.map((faq, i) => ({ type: 'faq', q: `Q${i + 1}: ${plain(faq.q)}`, a: plain(faq.a) }));
+const sourceList = (sources = []) => sources.map((s) => `${plain(s.label)} — ${s.url}${s.accessed ? ` (verified ${s.accessed})` : ''}`);
+
+/** Mega-menu / service-directory lines from SERVICE_CATEGORIES (the data the Navbar renders). */
+const categoryOf = (id) => SERVICE_CATEGORIES.find((c) => c.id === id) || { label: id, description: '', services: [] };
+const categoryLines = (id, withPage = false) =>
+  categoryOf(id).services.map((s) => `${s.label}: ${s.description}${withPage ? ` (Page: ${s.to})` : ` (URL: ${s.to})`}`);
+
+// Owner-confirmed figures, as the Stats band shows them (src/components/Stats.jsx).
+const STAT_ITEMS = [
+  { type: 'label-value', label: 'Stat 1', value: '60+ Years of combined experience' },
+  { type: 'label-value', label: 'Stat 2', value: '100+ Projects completed across Winnipeg' },
+  { type: 'label-value', label: 'Stat 3', value: `${SERVICE_AREA_NAMES.length} Communities we serve` },
+  { type: 'label-value', label: 'Stat 4', value: '1 day — Reply within one business day' },
+];
+
+// The "Why Bridgeland Builders" block (src/components/WhyUs.jsx).
+const WHY_US_ITEMS = [
+  { type: 'label-value', label: 'Section Title (H2)', value: 'A clear plan, a written price and weekly updates' },
+  { type: 'label-value', label: 'Floating Badge', value: 'No Surprises: A free written quote before we start, and a progress update every week.' },
+  {
+    type: 'para',
+    label: 'Paragraph 1',
+    text: 'Bridgeland Builders is a Winnipeg renovation and construction team with over 60 years of combined experience. Together we have completed more than 100 projects, from single-room updates in family homes to commercial fit-ups for local businesses.',
+  },
+  {
+    type: 'para',
+    label: 'Paragraph 2',
+    text: 'Every project starts with a free on-site visit and a free written quote, and nothing starts until you approve it. When the work needs permits and inspections, we coordinate them with the City of Winnipeg or your local municipality.',
+  },
+  {
+    type: 'para',
+    label: 'Paragraph 3',
+    text: 'Once work begins, you get a progress update every week. Home or business, big or small, you know where your project stands at every stage.',
+  },
+  {
+    type: 'list',
+    label: 'Checklist Highlights',
+    list: ['Over 60 Years Combined Experience', '100+ Completed Projects', 'Free Written Quotes', 'Weekly Progress Updates'],
+  },
+];
+
+// The client quote block (src/components/Testimonial.jsx).
+const TESTIMONIAL_HEADLINE = 'What Our Clients Say';
+const TESTIMONIAL_SUB = 'In their own words: what it’s like working with Bridgeland Builders.';
+const TESTIMONIAL_AUTHOR = 'Marvin V. — Homeowner ★★★★★';
+
+// The booking aside beside every booking form (src/components/BookingAside.jsx).
+const BOOKING_ASIDE_LIST = [
+  'Free, no-obligation visit: We come out, measure up, and talk it through. You decide after that.',
+  'Reply within one business day: Our team gets back to you by phone, text, or email — your pick.',
+  'Clear written quote: One price, itemised, with nothing hiding in the small print.',
+  'Your details stay private: We use them to get back to you about your project, and we never sell them.',
+  'Rather just call? 431-866-5644 — Winnipeg, Manitoba',
+];
+
+// -------------------------------------------------------------
 // PAGE DEFINITIONS (STRUCTURED CONTENT)
+// Each page has a `key`; its file id ("NN_KEY") is numbered in order at the
+// end, so adding a page never produces clashing or unpadded ids.
 // -------------------------------------------------------------
 
 export const pagesData = [
   {
-    id: '00_GLOBAL_ELEMENTS',
+    key: 'GLOBAL_ELEMENTS',
     title: 'Bridgeland Builders — Global Elements & Site-Wide Copy',
     route: 'Across all pages (Header, Nav, Mega-Menu, Footer, Quote Modal)',
     description: 'Universal website copy that appears across every page of the website.',
@@ -167,42 +297,11 @@ export const pagesData = [
             ],
           },
           { type: 'label-value', label: 'Primary Header Button CTA', value: 'GET A QUOTE (Opens Instant Quote Modal)' },
-          {
+          ...SERVICE_CATEGORIES.map((category) => ({
             type: 'list',
-            label: 'Services Mega-Menu — Residential Services',
-            list: [
-              'Basement renovations Winnipeg: Turn an unfinished or outdated basement into warm, dry, useful living space.',
-              'Bathroom renovations Winnipeg: Well-planned bathrooms with reliable waterproofing, durable finishes, and practical storage.',
-              'Home extensions Winnipeg: Add the room your home is missing with an extension designed to feel like it has always belonged.',
-              'Kitchen renovations Winnipeg: Improve the layout, storage, lighting, and finishes in the hardest-working room in your home.',
-              'Whole home renovations Winnipeg: Coordinate every room under one clear plan, one crew, and one consistent finish.',
-            ],
-          },
-          {
-            type: 'list',
-            label: 'Services Mega-Menu — Commercial Services',
-            list: [
-              'Retail spaces Winnipeg: Customer-ready retail layouts, finishes, displays, and service areas.',
-              'Office renovations Winnipeg: Workspaces, meeting rooms, lighting, and layouts built around your team.',
-              'Restaurants & hospitality Winnipeg: Guest-facing spaces and back-of-house areas delivered around your operating schedule.',
-              'Medical & dental offices Winnipeg: Professional clinical environments planned for workflow, privacy, and accessibility.',
-              'Hotels Winnipeg: Guest rooms, common areas, and phased upgrades designed to limit disruption.',
-              'Property managers & building owners Winnipeg: Reliable turnovers, common-area improvements, and multi-unit renovation support.',
-              'Real estate developers & realtors Winnipeg: Practical improvements that prepare properties for sale, lease, or new occupancy.',
-              'Architects & designers Winnipeg: Construction support that turns supplied drawings and specifications into finished spaces.',
-            ],
-          },
-          {
-            type: 'list',
-            label: 'Services Mega-Menu — Additional Services',
-            list: [
-              'Windows and doors installation Winnipeg: Secure, weather-tight installations with clean interior and exterior finishing.',
-              'Exterior painting Winnipeg: Careful preparation and durable exterior coatings suited to Winnipeg conditions.',
-              'Stone, bricks, stucco & masonry Winnipeg: Repairs, upgrades, and new masonry finishes for homes and commercial properties.',
-              'Flooring Winnipeg: Removal, preparation, and installation for durable, level, finished floors.',
-              'Demolition Winnipeg: Controlled demolition, removal, and cleanup that leaves the space ready for its next stage.',
-            ],
-          },
+            label: `Services Mega-Menu — ${category.label}`,
+            list: categoryLines(category.id),
+          })),
         ],
       },
       {
@@ -261,7 +360,7 @@ export const pagesData = [
     ],
   },
   {
-    id: '01_HOME_PAGE',
+    key: 'HOME_PAGE',
     title: 'Bridgeland Builders — Home Page Copy',
     route: '/',
     description: 'The main landing page of Bridgeland Builders website.',
@@ -270,16 +369,16 @@ export const pagesData = [
         heading: '1. Hero Section',
         notes: 'First impression at the top of the homepage.',
         items: [
-          { type: 'label-value', label: 'Badge', value: 'Your Winnipeg Trusted Renovation and Construction Company' },
-          { type: 'label-value', label: 'Headline (H1)', value: 'BRIDGING DREAMS INTO REALITY' },
+          { type: 'label-value', label: 'Badge', value: 'Bridging Dreams Into Reality' },
+          { type: 'label-value', label: 'Headline (H1)', value: 'WINNIPEG RENOVATION CONTRACTOR' },
           {
             type: 'para',
             label: 'Subtitle / Lead Paragraph',
-            text: 'Bridgeland Builders can boast of excellence in the completion of every single project we undertake. Our expert team of professionals helps turn your ideas on paper to an actual structure. Our skillful work makes sure we leave every client satisfied and happy.',
+            text: 'Kitchens, bathrooms, basements, whole homes, additions and commercial spaces in Winnipeg and nearby communities. Every project starts with a free on-site visit and a free written quote.',
           },
           { type: 'label-value', label: 'Primary Button CTA', value: 'GET INSTANT QUOTE (Opens instant quote modal)' },
           { type: 'label-value', label: 'Secondary Button CTA', value: 'Our Services (Links to /services)' },
-          { type: 'label-value', label: 'Floating Trust Badge', value: '100% Satisfied Clients — Over 60 Years Combined Experience' },
+          { type: 'label-value', label: 'Floating Trust Badge', value: 'Free Written Quotes — Over 60 Years Combined Experience' },
         ],
       },
       {
@@ -302,12 +401,7 @@ export const pagesData = [
       {
         heading: '3. Stats Overview',
         notes: 'Key credibility numbers.',
-        items: [
-          { type: 'label-value', label: 'Stat 1', value: '60+ Years of combined experience' },
-          { type: 'label-value', label: 'Stat 2', value: '100+ Projects completed across Winnipeg' },
-          { type: 'label-value', label: 'Stat 3', value: '5★ 5-Star Rated client experience' },
-          { type: 'label-value', label: 'Stat 4', value: '100% Satisfaction & clear communication' },
-        ],
+        items: STAT_ITEMS,
       },
       {
         heading: '4. Our Services Section',
@@ -344,28 +438,7 @@ export const pagesData = [
         notes: 'Core value proposition and brand philosophy.',
         items: [
           { type: 'label-value', label: 'Section Eyebrow', value: 'Why Bridgeland Builders?' },
-          { type: 'label-value', label: 'Section Title (H2)', value: 'Because we put the same care into your project as we would our own' },
-          { type: 'label-value', label: 'Floating Badge', value: 'Honest Work: Good materials, clear communication, and no surprises.' },
-          {
-            type: 'para',
-            label: 'Body Paragraph 1',
-            text: 'Bridgeland Builders is the best renovation and construction company in Winnipeg Manitoba. We’re a local Winnipeg team that’s been building and renovating for a long time — over 60 years of combined experience between us. In that time, we’ve worked on more than 100 projects, from small home updates to big commercial jobs at one of the most reliable construction companies in Winnipeg Manitoba.',
-          },
-          {
-            type: 'para',
-            label: 'Body Paragraph 2',
-            text: 'What you’ll notice when working with us is pretty simple: we use good materials, we don’t cut corners, and we keep you in the loop the whole way through. No surprises, no runaround — just honest work and clear communication.',
-          },
-          {
-            type: 'para',
-            label: 'Body Paragraph 3',
-            text: 'For us, it’s never just about getting the job done and walking away. It’s about knowing you feel good every time you walk into your space. Home or business, big or small — we don’t pack up until it feels right for you.',
-          },
-          {
-            type: 'list',
-            label: 'Checklist Highlights',
-            list: ['Over 60 Years Experience', '100+ Finished Projects', 'No Cutting Corners', 'Clear Communication'],
-          },
+          ...WHY_US_ITEMS,
           { type: 'label-value', label: 'CTA Button', value: 'GET INSTANT QUOTE' },
         ],
       },
@@ -403,18 +476,18 @@ export const pagesData = [
         ],
       },
       {
-        heading: '7. 5-Star Testimonial Spotlight',
+        heading: '7. Testimonial Spotlight',
         notes: 'Featured customer story on the homepage.',
         items: [
-          { type: 'label-value', label: 'Rating Badge', value: '★★★★★ 5-Star Rated!' },
-          { type: 'label-value', label: 'Headline', value: 'What our clients say about working with Bridgeland Builders in Winnipeg.' },
+          { type: 'label-value', label: 'Stars', value: '★★★★★' },
+          { type: 'label-value', label: 'Headline', value: TESTIMONIAL_HEADLINE },
+          { type: 'label-value', label: 'Subheading', value: TESTIMONIAL_SUB },
           {
             type: 'para',
             label: 'Client Quote',
             text: '“Working with Bridgeland Builders was an incredible experience. Their team demonstrated unmatched expertise and professionalism throughout the entire renovation process. From the initial consultation to the final walkthrough, they kept us informed and ensured every detail reflected our vision. The quality of craftsmanship and materials exceeded our expectations, and their commitment to customer satisfaction truly sets them apart. We couldn’t be happier with our newly transformed space—thank you, Bridgeland Builders!”',
           },
-          { type: 'label-value', label: 'Author', value: 'Marvin V.' },
-          { type: 'label-value', label: 'Author Title', value: 'Verified Homeowner ★★★★★' },
+          { type: 'label-value', label: 'Author', value: TESTIMONIAL_AUTHOR },
         ],
       },
       {
@@ -450,7 +523,7 @@ export const pagesData = [
     ],
   },
   {
-    id: '02_SERVICES_OVERVIEW',
+    key: 'SERVICES_OVERVIEW',
     title: 'Bridgeland Builders — Services Overview Page Copy',
     route: '/services',
     description: 'The master directory of all residential, commercial, and additional construction services.',
@@ -460,74 +533,23 @@ export const pagesData = [
         notes: 'Header area introducing the full service catalogue.',
         items: [
           { type: 'label-value', label: 'Eyebrow', value: 'Renovation & Construction' },
-          { type: 'label-value', label: 'Headline (H1)', value: 'SERVICES BUILT AROUND YOUR SPACE' },
+          { type: 'label-value', label: 'Headline (H1)', value: 'WINNIPEG RENOVATION SERVICES BUILT AROUND YOUR SPACE' },
           { type: 'label-value', label: 'Description', value: 'Explore residential, commercial, and specialty renovation services delivered by our experienced Winnipeg team.' },
           { type: 'label-value', label: 'Primary CTA Link', value: 'VIEW OUR PROJECTS (/projects)' },
         ],
       },
-      {
-        heading: '2. Service Directory — Category 1: Residential Renovations',
-        notes: 'Core home renovation offerings.',
+      // One section per category, from SERVICE_CATEGORIES (the directory's own data).
+      ...SERVICE_CATEGORIES.map((category, i) => ({
+        heading: `${i + 2}. Service Directory — Category ${i + 1}: ${category.label}`,
+        notes: 'Service cards in this category, each linking to its own page.',
         items: [
-          { type: 'label-value', label: 'Category Label', value: 'Residential renovations (5 services)' },
-          { type: 'label-value', label: 'Category Description', value: 'Thoughtful renovations that make your home work better, feel better, and hold up to everyday life.' },
-          {
-            type: 'list',
-            label: 'Services Included',
-            list: [
-              'Basement renovations Winnipeg: Turn an unfinished or outdated basement into warm, dry, useful living space. (Page: /services/basement-renovations)',
-              'Bathroom renovations Winnipeg: Well-planned bathrooms with reliable waterproofing, durable finishes, and practical storage. (Page: /services/bathroom-renovations)',
-              'Home extensions Winnipeg: Add the room your home is missing with an extension designed to feel like it has always belonged. (Page: /services/home-additions)',
-              'Kitchen renovations Winnipeg: Improve the layout, storage, lighting, and finishes in the hardest-working room in your home. (Page: /services/kitchen-renovations)',
-              'Whole home renovations Winnipeg: Coordinate every room under one clear plan, one crew, and one consistent finish. (Page: /services/whole-home-renovations)',
-            ],
-          },
+          { type: 'label-value', label: 'Category Label', value: `${category.label} (${category.services.length} services)` },
+          { type: 'label-value', label: 'Category Description', value: category.description },
+          { type: 'list', label: 'Services Included', list: categoryLines(category.id, true) },
         ],
-      },
+      })),
       {
-        heading: '3. Service Directory — Category 2: Commercial Renovations',
-        notes: 'Commercial fit-outs and business construction.',
-        items: [
-          { type: 'label-value', label: 'Category Label', value: 'Commercial renovations (8 services)' },
-          { type: 'label-value', label: 'Category Description', value: 'Commercial spaces planned around your opening date, operating hours, customers, and staff.' },
-          { type: 'label-value', label: 'Category Overview Link', value: 'Commercial overview (/services/commercial-renovations)' },
-          {
-            type: 'list',
-            label: 'Services Included',
-            list: [
-              'Retail spaces Winnipeg: Customer-ready retail layouts, finishes, displays, and service areas.',
-              'Office renovations Winnipeg: Workspaces, meeting rooms, lighting, and layouts built around your team.',
-              'Restaurants & hospitality Winnipeg: Guest-facing spaces and back-of-house areas delivered around your operating schedule.',
-              'Medical & dental offices Winnipeg: Professional clinical environments planned for workflow, privacy, and accessibility.',
-              'Hotels Winnipeg: Guest rooms, common areas, and phased upgrades designed to limit disruption.',
-              'Property managers & building owners Winnipeg: Reliable turnovers, common-area improvements, and multi-unit renovation support.',
-              'Real estate developers & realtors Winnipeg: Practical improvements that prepare properties for sale, lease, or new occupancy.',
-              'Architects & designers Winnipeg: Construction support that turns supplied drawings and specifications into finished spaces.',
-            ],
-          },
-        ],
-      },
-      {
-        heading: '4. Service Directory — Category 3: Additional Services',
-        notes: 'Specialized exterior and finish trades.',
-        items: [
-          { type: 'label-value', label: 'Category Label', value: 'Additional services (5 services)' },
-          { type: 'label-value', label: 'Category Description', value: 'Focused exterior, finishing, and construction services delivered with the same attention to detail.' },
-          {
-            type: 'list',
-            label: 'Services Included',
-            list: [
-              'Windows and doors installation Winnipeg: Secure, weather-tight installations with clean interior and exterior finishing.',
-              'Exterior painting Winnipeg: Careful preparation and durable exterior coatings suited to Winnipeg conditions.',
-              'Stone, bricks, stucco & masonry Winnipeg: Repairs, upgrades, and new masonry finishes for homes and commercial properties.',
-              'Flooring Winnipeg: Removal, preparation, and installation for durable, level, finished floors.',
-              'Demolition Winnipeg: Controlled demolition, removal, and cleanup that leaves the space ready for its next stage.',
-            ],
-          },
-        ],
-      },
-      {
-        heading: '5. Estimator & Price Guide Section',
+        heading: `${SERVICE_CATEGORIES.length + 2}. Estimator & Price Guide Section`,
         notes: 'Interactive planning widget embedded for clients.',
         items: [
           { type: 'label-value', label: 'Eyebrow', value: 'Free Price Guide' },
@@ -536,7 +558,7 @@ export const pagesData = [
         ],
       },
       {
-        heading: '6. Inspiration Gallery & Bottom CTA',
+        heading: `${SERVICE_CATEGORIES.length + 3}. Inspiration Gallery & Bottom CTA`,
         notes: 'Portfolio grid and quick quote banner.',
         items: [
           { type: 'label-value', label: 'Gallery Heading', value: 'Get Inspired: Transform Your Space with Bridgeland Builders' },
@@ -548,19 +570,23 @@ export const pagesData = [
   },
 ];
 
-PROJECTS.forEach((proj, idx) => {
-  const pluralSlug = proj.slug.endsWith('s') ? proj.slug : `${proj.slug}s`;
+// Service pages: every live service in src/data/services.js (registry order),
+// with its route and its content module (src/data/services/<slug>.js).
+LIVE_SERVICE_PAGES.forEach(({ service, content: proj }) => {
+  const name = proj.breadcrumb || service.label;
+  const types = Array.isArray(proj.types) ? proj.types : [];
+  const local = proj.local && Array.isArray(proj.local.items) && proj.local.items.length ? proj.local : null;
   pagesData.push({
-    id: `0${idx + 3}_${pluralSlug.toUpperCase().replace(/-/g, '_')}`,
-    title: `Bridgeland Builders — ${proj.breadcrumb} Page Copy`,
-    route: `/services/${proj.slug === 'whole-home-renovation' ? 'whole-home-renovations' : proj.slug === 'bathroom-renovation' ? 'bathroom-renovations' : proj.slug === 'kitchen-renovation' ? 'kitchen-renovations' : proj.slug === 'basement-renovation' ? 'basement-renovations' : proj.slug === 'home-extension' ? 'home-additions' : 'commercial-renovations'}`,
-    description: `Dedicated landing page for ${proj.breadcrumb} with booking survey, detailed scope, process, testimonial, estimator, and FAQs.`,
+    key: service.slug.toUpperCase().replace(/-/g, '_'),
+    title: `Bridgeland Builders — ${service.label} Page Copy`,
+    route: service.path,
+    description: `Service page for ${service.label.toLowerCase()} (${service.category}) with booking form, scope, process, estimator and FAQs.`,
     sections: [
       {
         heading: '1. Breadcrumb & Hero Section',
         notes: 'Top landing area with booking survey calendar.',
         items: [
-          { type: 'label-value', label: 'Breadcrumb Path', value: `Home / Our Portfolio / ${proj.breadcrumb}` },
+          { type: 'label-value', label: 'Breadcrumb Path', value: `Home / ${serviceTrail(service).map(([label]) => label).join(' / ')}` },
           { type: 'label-value', label: 'Hero Badge', value: proj.badge },
           { type: 'label-value', label: 'Headline (H1)', value: `${proj.title} ${proj.titleHighlight}` },
           { type: 'para', label: 'Hero Subtitle', text: proj.subtitle },
@@ -586,7 +612,7 @@ PROJECTS.forEach((proj, idx) => {
       },
       // intro, gallery and testimonial are optional on a service page (null = section not shown).
       ...(proj.intro ? [{
-        heading: `3. Why Choose Bridgeland for ${proj.breadcrumb}`,
+        heading: `3. Why Choose Bridgeland for ${name}`,
         notes: 'Detailed pitch and philosophy.',
         items: [
           { type: 'label-value', label: 'Section Tag', value: proj.intro.tag },
@@ -620,6 +646,27 @@ PROJECTS.forEach((proj, idx) => {
           })),
         ],
       },
+      ...(types.length ? [{
+        heading: '4b. Project Types',
+        notes: 'The kinds of project this page covers.',
+        items: [
+          { type: 'label-value', label: 'Section Tag', value: proj.typesTag || '' },
+          { type: 'label-value', label: 'Section Title (H2)', value: proj.typesTitle || '' },
+          ...(proj.typesDesc ? [{ type: 'para', label: 'Section Description', text: proj.typesDesc }] : []),
+          { type: 'list', label: 'Project Types', list: types.map((t) => `${t.title}: ${t.text}`) },
+        ],
+      }] : []),
+      ...(local ? [{
+        heading: '4c. Local Rules & Conditions',
+        notes: 'Winnipeg-specific facts, each with its source.',
+        items: [
+          { type: 'label-value', label: 'Section Tag', value: local.tag || '' },
+          { type: 'label-value', label: 'Section Title (H2)', value: local.title || '' },
+          ...(local.intro ? [{ type: 'para', label: 'Section Intro', text: plain(local.intro) }] : []),
+          ...local.items.map((item) => ({ type: 'para', label: item.title, text: plain(item.text) })),
+          ...(Array.isArray(local.sources) && local.sources.length ? [{ type: 'list', label: 'Sources', list: sourceList(local.sources) }] : []),
+        ],
+      }] : []),
       ...(proj.gallery && Array.isArray(proj.gallery.items) ? [{
         heading: '5. Recent Work & Project Gallery',
         notes: 'Visual showcase examples and captions.',
@@ -649,11 +696,19 @@ PROJECTS.forEach((proj, idx) => {
           })),
         ],
       },
-      ...(proj.testimonial && proj.testimonial.quote ? [{
-        heading: '7. Verified Client Testimonial',
-        notes: 'Direct client review for this project category.',
+      ...(proj.costTeaser && proj.costTeaser.text ? [{
+        heading: '6b. Cost Teaser',
+        notes: 'Short price pointer that links to the cost guide.',
         items: [
-          { type: 'label-value', label: 'Rating', value: '★★★★★ 5-Star Rated!' },
+          { type: 'para', label: 'Teaser Text', text: plain(proj.costTeaser.text) },
+          { type: 'label-value', label: 'Link', value: `${proj.costTeaser.label || 'Cost guide'} (${proj.costTeaser.to})` },
+        ],
+      }] : []),
+      ...(proj.testimonial && proj.testimonial.quote ? [{
+        heading: '7. Client Testimonial',
+        notes: 'Client review for this project category.',
+        items: [
+          { type: 'label-value', label: 'Stars', value: '★★★★★' },
           { type: 'para', label: 'Client Quote', text: proj.testimonial.quote },
           { type: 'label-value', label: 'Author', value: proj.testimonial.name },
           { type: 'label-value', label: 'Project / Role', value: proj.testimonial.role },
@@ -663,8 +718,8 @@ PROJECTS.forEach((proj, idx) => {
         heading: '8. Lead Consultation & Price Guide Section',
         notes: 'Side-by-side booking benefits and interactive price guide.',
         items: [
-          { type: 'label-value', label: 'Aside Eyebrow', value: 'Book an appointment' },
-          { type: 'label-value', label: 'Aside Heading', value: `Let’s talk about your ${proj.breadcrumb.toLowerCase()}` },
+          { type: 'label-value', label: 'Aside Eyebrow', value: 'Book an on-site visit' },
+          { type: 'label-value', label: 'Aside Heading', value: `Let’s talk about your ${name.toLowerCase()}` },
           {
             type: 'para',
             label: 'Aside Lead Text',
@@ -673,15 +728,9 @@ PROJECTS.forEach((proj, idx) => {
           {
             type: 'list',
             label: 'Client Guarantees & Benefits',
-            list: [
-              'Free, no-obligation visit: We come out, measure up, and talk it through. You decide after that.',
-              'Reply within one business day: Emma gets back to you by phone, text, or email — your pick.',
-              'Clear written quote: One price, itemised, with nothing hiding in the small print.',
-              'Your details stay private: We use them to get back to you about this project. That’s it.',
-              'Rather just call? 431-866-5644 — Winnipeg, Manitoba',
-            ],
+            list: BOOKING_ASIDE_LIST,
           },
-          { type: 'label-value', label: 'Price Guide Card Heading', value: `Get Your Free ${proj.breadcrumb} Price Guide` },
+          { type: 'label-value', label: 'Price Guide Card Heading', value: `Get Your Free ${name} Price Guide` },
           {
             type: 'para',
             label: 'Price Guide Card Text',
@@ -691,16 +740,12 @@ PROJECTS.forEach((proj, idx) => {
       },
       {
         heading: '9. Frequently Asked Questions',
-        notes: `The questions homeowners ask most before booking a ${proj.breadcrumb.toLowerCase()}.`,
+        notes: `The questions homeowners ask most before booking a ${name.toLowerCase()}.`,
         items: [
           { type: 'label-value', label: 'Section Tag', value: 'Questions' },
           { type: 'label-value', label: 'Section Title (H2)', value: 'Frequently Asked Questions' },
-          { type: 'label-value', label: 'Section Description', value: `The things people ask us most before booking a ${proj.breadcrumb.toLowerCase()}.` },
-          ...proj.faqs.map((faq, i) => ({
-            type: 'faq',
-            q: `Q${i + 1}: ${faq.q}`,
-            a: faq.a,
-          })),
+          { type: 'label-value', label: 'Section Description', value: `The things people ask us most before booking a ${name.toLowerCase()}.` },
+          ...faqItems(proj.faqs),
         ],
       },
       {
@@ -719,7 +764,7 @@ PROJECTS.forEach((proj, idx) => {
 // Add the other main pages
 pagesData.push(
   {
-    id: '09_ABOUT_US',
+    key: 'ABOUT_US',
     title: 'Bridgeland Builders — About Us Page Copy',
     route: '/about-us',
     description: 'Company background, philosophy, team credibility, and core values.',
@@ -737,40 +782,14 @@ pagesData.push(
       {
         heading: '2. Stats Overview',
         notes: 'Credibility metrics.',
-        items: [
-          { type: 'label-value', label: 'Stat 1', value: '60+ Years of combined experience' },
-          { type: 'label-value', label: 'Stat 2', value: '100+ Projects completed across Winnipeg' },
-          { type: 'label-value', label: 'Stat 3', value: '5★ 5-Star Rated client experience' },
-          { type: 'label-value', label: 'Stat 4', value: '100% Satisfaction & clear communication' },
-        ],
+        items: STAT_ITEMS,
       },
       {
         heading: '3. Why Bridgeland Builders (Core Philosophy)',
         notes: 'The full story of Bridgeland Builders.',
         items: [
           { type: 'label-value', label: 'Section Tag', value: 'Why Bridgeland Builders?' },
-          { type: 'label-value', label: 'Section Title (H2)', value: 'Because we put the same care into your project as we would our own' },
-          { type: 'label-value', label: 'Floating Badge', value: 'Honest Work: Good materials, clear communication, and no surprises.' },
-          {
-            type: 'para',
-            label: 'Paragraph 1',
-            text: 'Bridgeland Builders is the best renovation and construction company in Winnipeg Manitoba. We’re a local Winnipeg team that’s been building and renovating for a long time — over 60 years of combined experience between us. In that time, we’ve worked on more than 100 projects, from small home updates to big commercial jobs at one of the most reliable construction companies in Winnipeg Manitoba.',
-          },
-          {
-            type: 'para',
-            label: 'Paragraph 2',
-            text: 'What you’ll notice when working with us is pretty simple: we use good materials, we don’t cut corners, and we keep you in the loop the whole way through. No surprises, no runaround — just honest work and clear communication.',
-          },
-          {
-            type: 'para',
-            label: 'Paragraph 3',
-            text: 'For us, it’s never just about getting the job done and walking away. It’s about knowing you feel good every time you walk into your space. Home or business, big or small — we don’t pack up until it feels right for you.',
-          },
-          {
-            type: 'list',
-            label: 'Core Standards Checklist',
-            list: ['Over 60 Years Experience', '100+ Finished Projects', 'No Cutting Corners', 'Clear Communication'],
-          },
+          ...WHY_US_ITEMS,
           { type: 'label-value', label: 'CTA Button', value: 'GET INSTANT QUOTE' },
         ],
       },
@@ -778,13 +797,14 @@ pagesData.push(
         heading: '4. Testimonial Spotlight & Bottom CTA',
         notes: 'Social proof and final action.',
         items: [
-          { type: 'label-value', label: 'Testimonial Headline', value: '5-Star Rated! What our clients say about working with Bridgeland Builders in Winnipeg.' },
+          { type: 'label-value', label: 'Testimonial Headline', value: TESTIMONIAL_HEADLINE },
+          { type: 'label-value', label: 'Testimonial Subheading', value: TESTIMONIAL_SUB },
           {
             type: 'para',
             label: 'Testimonial Quote',
             text: '“Working with Bridgeland Builders was an incredible experience. Their team demonstrated unmatched expertise and professionalism throughout the entire renovation process. From the initial consultation to the final walkthrough, they kept us informed and ensured every detail reflected our vision. The quality of craftsmanship and materials exceeded our expectations, and their commitment to customer satisfaction truly sets them apart. We couldn’t be happier with our newly transformed space—thank you, Bridgeland Builders!”',
           },
-          { type: 'label-value', label: 'Client', value: 'Marvin V. — Verified Homeowner ★★★★★' },
+          { type: 'label-value', label: 'Client', value: TESTIMONIAL_AUTHOR },
           { type: 'label-value', label: 'CTA Banner Headline', value: 'Get a free Quote Now!' },
           { type: 'label-value', label: 'CTA Banner Subtext', value: 'Contact Bridgeland Builders today. We’ll discuss your ideas, provide clear details, and get it done right.' },
           { type: 'label-value', label: 'CTA Button', value: 'GET INSTANT QUOTE' },
@@ -793,7 +813,7 @@ pagesData.push(
     ],
   },
   {
-    id: '10_OUR_PROCESS',
+    key: 'OUR_PROCESS',
     title: 'Bridgeland Builders — Our Process Page Copy',
     route: '/our-process',
     description: 'Detailed explanation of the 4-step renovation and construction process.',
@@ -845,9 +865,10 @@ pagesData.push(
         heading: '3. Testimonial & Bottom CTA',
         notes: 'Social proof and quick quote prompt.',
         items: [
-          { type: 'label-value', label: 'Testimonial Headline', value: '5-Star Rated! What our clients say about working with Bridgeland Builders in Winnipeg.' },
+          { type: 'label-value', label: 'Testimonial Headline', value: TESTIMONIAL_HEADLINE },
+          { type: 'label-value', label: 'Testimonial Subheading', value: TESTIMONIAL_SUB },
           { type: 'para', label: 'Testimonial Quote', text: '“Working with Bridgeland Builders was an incredible experience. Their team demonstrated unmatched expertise and professionalism throughout the entire renovation process. From the initial consultation to the final walkthrough, they kept us informed and ensured every detail reflected our vision. The quality of craftsmanship and materials exceeded our expectations, and their commitment to customer satisfaction truly sets them apart. We couldn’t be happier with our newly transformed space—thank you, Bridgeland Builders!”' },
-          { type: 'label-value', label: 'Author', value: 'Marvin V. — Verified Homeowner ★★★★★' },
+          { type: 'label-value', label: 'Author', value: TESTIMONIAL_AUTHOR },
           { type: 'label-value', label: 'Bottom Banner Heading', value: 'Get a free Quote Now!' },
           { type: 'label-value', label: 'Bottom Banner CTA', value: 'GET INSTANT QUOTE' },
         ],
@@ -855,7 +876,7 @@ pagesData.push(
     ],
   },
   {
-    id: '11_OUR_PROJECTS',
+    key: 'OUR_PROJECTS',
     title: 'Bridgeland Builders — Projects / Inspiration Page Copy',
     route: '/projects',
     description: 'Portfolio gallery showcase featuring all major renovation project types.',
@@ -945,7 +966,7 @@ pagesData.push(
     ],
   },
   {
-    id: '12_FAQS',
+    key: 'FAQS',
     title: 'Bridgeland Builders — Frequently Asked Questions Page Copy',
     route: '/faqs',
     description: 'Direct answers to the most common homeowner and commercial questions.',
@@ -1003,7 +1024,7 @@ pagesData.push(
     ],
   },
   {
-    id: '13_CONTACT_US',
+    key: 'CONTACT_US',
     title: 'Bridgeland Builders — Contact Us Page Copy',
     route: '/contact-us',
     description: 'Contact details, booking guarantees, and lead capture form copy.',
@@ -1021,7 +1042,7 @@ pagesData.push(
         heading: '2. Booking Consultation Aside (Why Reach Out)',
         notes: 'Sidebar details explaining how consultations work.',
         items: [
-          { type: 'label-value', label: 'Aside Eyebrow', value: 'Book an appointment' },
+          { type: 'label-value', label: 'Aside Eyebrow', value: 'Book an on-site visit' },
           { type: 'label-value', label: 'Aside Heading', value: 'Let’s talk about your project' },
           {
             type: 'para',
@@ -1031,13 +1052,7 @@ pagesData.push(
           {
             type: 'list',
             label: 'Guarantees and Assurances',
-            list: [
-              'Free, no-obligation visit: We come out, measure up, and talk it through. You decide after that.',
-              'Reply within one business day: Emma gets back to you by phone, text, or email — your pick.',
-              'Clear written quote: One price, itemised, with nothing hiding in the small print.',
-              'Your details stay private: We use them to get back to you about this project. That’s it.',
-              'Rather just call? 431-866-5644 — Winnipeg, Manitoba',
-            ],
+            list: BOOKING_ASIDE_LIST,
           },
         ],
       },
@@ -1062,47 +1077,9 @@ pagesData.push(
       },
     ],
   },
+  // /outside-winnipeg is gone (308 to /service-areas, generated below).
   {
-    id: '14_OUTSIDE_SERVICE_AREA',
-    title: 'Bridgeland Builders — Outside Service Area Page Copy',
-    route: '/outside-winnipeg',
-    description: 'Polite explanation for visitors outside the Winnipeg operating zone.',
-    sections: [
-      {
-        heading: '1. Service Area Notice Card',
-        notes: 'Core message explaining focus on Winnipeg.',
-        items: [
-          { type: 'label-value', label: 'Eyebrow', value: 'Our current service area' },
-          { type: 'label-value', label: 'Kicker', value: 'WE’RE SORRY' },
-          { type: 'label-value', label: 'Headline (H1)', value: 'WE’RE NOT IN YOUR AREA YET.' },
-          {
-            type: 'para',
-            label: 'Lead Paragraph',
-            text: 'Right now, Bridgeland Builders serves Winnipeg exclusively. Keeping our work close to home helps us protect the quality, communication, and hands-on care every project deserves.',
-          },
-          {
-            type: 'callout',
-            label: 'Future Growth Note',
-            title: 'We do plan to grow',
-            text: 'As our team expands, we hope to bring the Bridgeland experience to more Manitoba communities. Thank you for thinking of us, and please check back as we grow.',
-          },
-          { type: 'label-value', label: 'Primary Button CTA', value: 'Back to Home (Links to /)' },
-          { type: 'label-value', label: 'Secondary Button CTA', value: 'View Our Work (Links to /projects)' },
-        ],
-      },
-      {
-        heading: '2. Visual Location & Closing Acknowledgement',
-        notes: 'Interactive pin label and closing thanks.',
-        items: [
-          { type: 'label-value', label: 'Service Location Label', value: 'Currently serving Winnipeg, Manitoba' },
-          { type: 'label-value', label: 'Expansion Badge', value: 'More communities in the future' },
-          { type: 'para', label: 'Closing Message', text: 'From our Winnipeg team, thank you for your understanding.' },
-        ],
-      },
-    ],
-  },
-  {
-    id: '15_404_PAGE',
+    key: '404_PAGE',
     title: 'Bridgeland Builders — 404 Error Page Copy',
     route: '/404 (or any invalid path)',
     description: 'Creative construction-themed error page for missing or broken URLs.',
@@ -1128,6 +1105,131 @@ pagesData.push(
     ],
   }
 );
+
+// Cost guides (hub first), from src/data/costGuides via head.js: live guides only.
+LIVE_COST_GUIDES.forEach((guide) => {
+  const title = guide.seo && guide.seo.title ? guide.seo.title.split(' | ')[0] : guide.path;
+  pagesData.push({
+    key: `COST_${(guide.id || guide.path).toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_|_$/g, '')}`,
+    title: `Bridgeland Builders — ${title} (Cost Guide)`,
+    route: guide.path,
+    description: 'Cost guide: starting ranges from the instant estimator, what drives the price, and answers to common budget questions.',
+    sections: [
+      {
+        heading: '1. Hero & Short Answer',
+        notes: 'Top of the guide: the number in the first sentence.',
+        items: [
+          { type: 'label-value', label: 'Eyebrow', value: guide.eyebrow || '' },
+          { type: 'label-value', label: 'Headline (H1)', value: guide.h1 ? `${guide.h1.title} ${guide.h1.highlight || ''}`.trim() : title },
+          { type: 'para', label: 'Hero Description', text: plain(guide.intro || (guide.seo && guide.seo.description)) },
+          ...(guide.answer ? [{ type: 'para', label: 'Short Answer', text: plain(guide.answer) }] : []),
+        ],
+      },
+      ...(guide.dataBasis ? [{
+        heading: '2. Where the Numbers Come From',
+        notes: 'Methodology box (owner data only).',
+        items: [
+          { type: 'label-value', label: 'Source', value: plain(guide.dataBasis.source) },
+          { type: 'label-value', label: 'Period', value: plain(guide.dataBasis.period) },
+          ...(guide.dataBasis.note ? [{ type: 'para', label: 'Note', text: plain(guide.dataBasis.note) }] : []),
+        ],
+      }] : []),
+      ...((guide.tables || []).length ? [{
+        heading: '3. Price Tables',
+        notes: 'Starting ranges as published.',
+        items: guide.tables.map(tableItem),
+      }] : []),
+      ...((guide.drivers || []).length ? [{
+        heading: `4. ${guide.driversTitle || 'What Drives the Price'}`,
+        notes: plain(guide.driversDesc) || 'Cost drivers.',
+        items: guide.drivers.map((d, i) => ({ type: 'step', num: String(i + 1).padStart(2, '0'), title: plain(d.title), text: plain(d.text) })),
+      }] : []),
+      ...(guide.sections || []).map((section, i) => ({
+        heading: `${5 + i}. ${plain(section.h2)}`,
+        notes: 'Guide section.',
+        items: blockItems(section.blocks),
+      })),
+      ...((guide.faqs || []).length ? [{ heading: 'FAQs', notes: 'FAQPage comes only from these.', items: faqItems(guide.faqs) }] : []),
+      ...((guide.sources || []).length ? [{ heading: 'Sources', notes: 'Linked on the page with the date checked.', items: [{ type: 'list', label: 'Sources', list: sourceList(guide.sources) }] }] : []),
+    ],
+  });
+});
+
+// /service-areas, from src/data/serviceAreasContent.js (confirmed communities only).
+{
+  const areas = confirmedServiceAreas();
+  pagesData.push({
+    key: 'SERVICE_AREAS',
+    title: 'Bridgeland Builders — Service Areas Page Copy',
+    route: '/service-areas',
+    description: 'The communities Bridgeland Builders serves and who issues building permits in each.',
+    sections: [
+      {
+        heading: '1. Intro',
+        notes: 'Opening text under the page hero (the hero itself is in src/pages/ServiceAreasPage.jsx).',
+        items: [
+          { type: 'para', label: 'Intro', text: plain(SERVICE_AREAS_CONTENT.intro) },
+          ...(SERVICE_AREAS_CONTENT.introSource ? [{ type: 'list', label: 'Source', list: sourceList([SERVICE_AREAS_CONTENT.introSource]) }] : []),
+        ],
+      },
+      {
+        heading: '2. Who Issues Building Permits Where We Work',
+        notes: 'One card per confirmed community.',
+        items: areas.map((area) => ({
+          type: 'para',
+          label: `${area.name}${area.municipality && area.municipality !== area.name ? ` (${area.municipality})` : ''}`,
+          text: [
+            area.permitAuthority ? `Permits: ${area.permitAuthority}.` : '',
+            plain(area.notes),
+            area.permitUrl ? `Source: ${area.permitLabel || area.permitUrl} — ${area.permitUrl}${area.accessed ? ` (verified ${area.accessed})` : ''}` : '',
+          ].filter(Boolean).join(' '),
+        })),
+      },
+      ...((SERVICE_AREAS_CONTENT.faqs || []).length ? [{ heading: '3. Service Area Questions', notes: 'FAQ block.', items: faqItems(SERVICE_AREAS_CONTENT.faqs) }] : []),
+    ],
+  });
+}
+
+// /editorial-policy, from src/data/editorialPolicy.js.
+pagesData.push({
+  key: 'EDITORIAL_POLICY',
+  title: 'Bridgeland Builders — Editorial Policy Page Copy',
+  route: '/editorial-policy',
+  description: 'How the site’s guides are written, sourced, checked and corrected.',
+  sections: [
+    {
+      heading: '1. Page Hero & Summary',
+      notes: `Last updated ${EDITORIAL_POLICY.lastUpdated}.`,
+      items: [
+        { type: 'label-value', label: 'Eyebrow', value: EDITORIAL_POLICY.hero.eyebrow },
+        { type: 'label-value', label: 'Headline (H1)', value: `${EDITORIAL_POLICY.hero.title} ${EDITORIAL_POLICY.hero.highlight || ''}`.trim() },
+        { type: 'para', label: 'Description', text: plain(EDITORIAL_POLICY.hero.description) },
+        { type: 'list', label: EDITORIAL_POLICY.summaryTitle || 'Summary', list: (EDITORIAL_POLICY.summary || []).map(plain) },
+      ],
+    },
+    ...(EDITORIAL_POLICY.sections || []).map((section, i) => ({
+      heading: `${i + 2}. ${plain(section.h2)}`,
+      notes: 'Policy section.',
+      items: blockItems(section.blocks),
+    })),
+    ...(EDITORIAL_POLICY.corrections ? [{
+      heading: `${(EDITORIAL_POLICY.sections || []).length + 2}. ${plain(EDITORIAL_POLICY.corrections.h2) || 'Corrections'}`,
+      notes: 'How to report a mistake.',
+      items: [
+        {
+          type: 'para',
+          label: 'Text',
+          text: [EDITORIAL_POLICY.corrections.before, SITE_EMAIL, EDITORIAL_POLICY.corrections.after, EDITORIAL_POLICY.corrections.followUp].filter(Boolean).map(plain).join(' '),
+        },
+      ],
+    }] : []),
+  ],
+});
+
+// File ids: "NN_KEY", numbered in page order and zero-padded.
+pagesData.forEach((page, i) => {
+  page.id = `${String(i).padStart(2, '0')}_${page.key}`;
+});
 
 // -------------------------------------------------------------
 // MARKDOWN GENERATOR
@@ -1244,7 +1346,7 @@ function generateMasterMarkdown(pages) {
   let md = `# Bridgeland Builders — Complete Website Master Copy\n\n`;
   md += `> **Company:** Bridgeland Builders (Winnipeg, Manitoba)\n`;
   md += `> **Prepared for:** Graeme & Team\n`;
-  md += `> **Date:** September 2026\n`;
+  md += `> **Date:** ${new Date().toISOString().slice(0, 10)}\n`;
   md += `> **Purpose:** This document contains ALL text, headings, buttons, lists, testimonials, FAQs, and metadata across every page of the Bridgeland Builders website.\n\n`;
   md += `---\n\n`;
 
@@ -1268,7 +1370,7 @@ function generateMasterDocx(pages) {
 
   children.push(docTitle('Bridgeland Builders — Complete Website Master Copy'));
   children.push(docSubtitle('All Website Pages, Sections, FAQs, and Interactive Copy Compiled for Review and Editing'));
-  children.push(docCallout('Prepared for Graeme', 'This single document compiles the copy from all 16 website pages. You can edit this file directly or upload it to Google Drive to edit it in Google Docs.'));
+  children.push(docCallout('Prepared for Graeme', `This single document compiles the copy from all ${pages.length} website pages. You can edit this file directly or upload it to Google Drive to edit it in Google Docs.`));
   children.push(docPara(''));
 
   children.push(docH1('Table of Contents'));
@@ -1339,7 +1441,19 @@ function generateMasterDocx(pages) {
 // -------------------------------------------------------------
 
 async function run() {
+  if (DRY_RUN) {
+    // Builds every page's content (and the Markdown) without writing a file.
+    for (const page of pagesData) {
+      const sections = page.sections.length;
+      const chars = generateMarkdown(page).length;
+      console.log(`${page.id.padEnd(48)} ${page.route.padEnd(52)} ${sections} sections, ${chars} chars`);
+    }
+    console.log(`\n${pagesData.length} pages (dry run: nothing written to website_copy/)`);
+    return;
+  }
   console.log(`Starting generation for ${pagesData.length} pages...`);
+  fs.mkdirSync(MD_DIR, { recursive: true });
+  fs.mkdirSync(DOCX_DIR, { recursive: true });
 
   // 1. Generate individual Markdown files
   for (const page of pagesData) {
@@ -1401,22 +1515,9 @@ This folder contains all copy and content from the **Bridgeland Builders** websi
 ### Individual Page Files:
 | # | Page Name | Website Route | Markdown File | Word (.docx) File |
 |---|---|---|---|---|
-| 00 | Global Elements (Header, Mega-Menu, Footer, Quote Modal) | Site-Wide | \`00_GLOBAL_ELEMENTS.md\` | \`00_GLOBAL_ELEMENTS.docx\` |
-| 01 | Home Page | \`/\` | \`01_HOME_PAGE.md\` | \`01_HOME_PAGE.docx\` |
-| 02 | Services Overview & Directory | \`/services\` | \`02_SERVICES_OVERVIEW.md\` | \`02_SERVICES_OVERVIEW.docx\` |
-| 03 | Whole Home Renovations | \`/services/whole-home-renovations\` | \`03_WHOLE_HOME_RENOVATIONS.md\` | \`03_WHOLE_HOME_RENOVATIONS.docx\` |
-| 04 | Bathroom Renovations | \`/services/bathroom-renovations\` | \`04_BATHROOM_RENOVATIONS.md\` | \`04_BATHROOM_RENOVATIONS.docx\` |
-| 05 | Kitchen Renovations | \`/services/kitchen-renovations\` | \`05_KITCHEN_RENOVATIONS.md\` | \`05_KITCHEN_RENOVATIONS.docx\` |
-| 06 | Basement Renovations | \`/services/basement-renovations\` | \`06_BASEMENT_RENOVATIONS.md\` | \`06_BASEMENT_RENOVATIONS.docx\` |
-| 07 | Home Extensions | \`/services/home-additions\` | \`07_HOME_EXTENSIONS.md\` | \`07_HOME_EXTENSIONS.docx\` |
-| 08 | Commercial Renovations | \`/services/commercial-renovations\` | \`08_COMMERCIAL_RENOVATIONS.md\` | \`08_COMMERCIAL_RENOVATIONS.docx\` |
-| 09 | About Us | \`/about-us\` | \`09_ABOUT_US.md\` | \`09_ABOUT_US.docx\` |
-| 10 | Our Process | \`/our-process\` | \`10_OUR_PROCESS.md\` | \`10_OUR_PROCESS.docx\` |
-| 11 | Our Projects / Inspiration | \`/projects\` | \`11_OUR_PROJECTS.md\` | \`11_OUR_PROJECTS.docx\` |
-| 12 | Frequently Asked Questions | \`/faqs\` | \`12_FAQS.md\` | \`12_FAQS.docx\` |
-| 13 | Contact Us & Free Quote Form | \`/contact-us\` | \`13_CONTACT_US.md\` | \`13_CONTACT_US.docx\` |
-| 14 | Outside Service Area | \`/outside-winnipeg\` | \`14_OUTSIDE_SERVICE_AREA.md\` | \`14_OUTSIDE_SERVICE_AREA.docx\` |
-| 15 | 404 Not Found Blueprint Page | \`/404\` | \`15_404_PAGE.md\` | \`15_404_PAGE.docx\` |
+${pagesData
+  .map((p) => `| ${p.id.slice(0, 2)} | ${p.title.replace(/^Bridgeland Builders — /, '')} | \`${p.route}\` | \`${p.id}.md\` | \`${p.id}.docx\` |`)
+  .join('\n')}
 `;
   fs.writeFileSync(path.join(ROOT_DIR, 'website_copy', 'README.md'), readmeContent, 'utf-8');
   console.log('Saved README: website_copy/README.md');

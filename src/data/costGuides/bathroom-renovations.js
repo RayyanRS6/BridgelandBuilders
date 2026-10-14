@@ -24,7 +24,7 @@ export default {
       'Bathroom renovation costs in Winnipeg: starting ranges from $16,000 to $36,000 by size in our estimator, plus what a new shower, tub, tile and vanity add.',
     primaryKeyword: 'bathroom renovation cost Winnipeg',
     published: '2026-10-13',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   eyebrow: 'Bathroom Renovation Cost',
@@ -109,7 +109,7 @@ export default {
       blocks: [
         {
           t: 'p',
-          x: 'Not as a full renovation in our estimator: the smallest bathroom range, for rooms up to 50 sq ft, starts at $16,000–$20,000, before a new tub or shower. Smaller refreshes are welcome, though. Share your budget at the on-site visit so the written quote focuses on what matters most, such as the shower, the floor or the vanity.',
+          x: 'Not as a full renovation in our estimator: the smallest bathroom range, for rooms up to 50 sq ft, starts at $16,000–$20,000, before a new tub or shower. Smaller refreshes are welcome, though, and not every bathroom needs a full remodel. Share your budget at the on-site visit so the written quote focuses on what matters most, such as the shower, the floor or the vanity.',
         },
         {
           t: 'p',

@@ -61,7 +61,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "An ensuite is the bathroom attached to a bedroom, usually the main bedroom. Because it is private, people tend to want more from it than from a hall bathroom: a bigger shower, two sinks, better lighting, sometimes a soaker tub. Each of those choices moves the price, and a few of them move it a lot. This guide explains what drives the cost so you can decide where your money does the most."
+      "x": "An ensuite is the bathroom attached to a bedroom, usually the main bedroom. Because it is private, people tend to want more from it than from a hall bathroom: a bigger shower, two sinks, better lighting, sometimes a soaker tub."
+    },
+    {
+      "t": "p",
+      "x": "Each of those choices moves the price, and a few of them move it a lot. This guide explains what drives the cost so you can decide where your money does the most."
     },
     {
       "t": "h2",
@@ -198,7 +202,11 @@
     },
     {
       "t": "p",
-      "x": "Because it is not usually the only bathroom in the house, an ensuite is easier to live through than a main bathroom. Plan where you will sleep if dust and noise are next to the bedroom, and choose the vanity, fixtures and tile before demolition so nothing waits on a delivery. You get weekly progress updates while the work is under way."
+      "x": "Because it is not usually the only bathroom in the house, an ensuite is easier to live through than a main bathroom."
+    },
+    {
+      "t": "p",
+      "x": "Plan where you will sleep if dust and noise are next to the bedroom, and choose the vanity, fixtures and tile before demolition so nothing waits on a delivery. You get weekly progress updates while the work is under way."
     },
     {
       "t": "h2",

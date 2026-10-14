@@ -115,7 +115,11 @@
     },
     {
       "t": "p",
-      "x": "If the space was used for something else, check the zoning before you sign the lease: the City's zoning by-laws decide whether a use is permitted, conditional or not allowed. A development permit, where needed, can be reviewed before or alongside the building permit. Our [commercial renovation services](/services/commercial-renovations) page explains how we run a commercial project from site visit to handover."
+      "x": "If the space was used for something else, check the zoning before you sign the lease: the City's zoning by-laws decide whether a use is permitted, conditional or not allowed."
+    },
+    {
+      "t": "p",
+      "x": "A development permit, where needed, can be reviewed before or alongside the building permit. Our [commercial renovation services](/services/commercial-renovations) page explains how we run a commercial project from site visit to handover."
     },
     {
       "t": "h2",
@@ -182,7 +186,11 @@
     },
     {
       "t": "p",
-      "x": "Under Manitoba's X-Ray Safety Regulation, X-ray equipment must be registered, and installing a machine in a permanent location needs the minister's prior approval, with scaled drawings showing the shielding built into the room's boundaries. Substantial alterations to an approved X-ray area need approval too. Get the shielding design and approval started as soon as the layout is fixed, because shielding goes in before the walls are closed."
+      "x": "Under Manitoba's X-Ray Safety Regulation, X-ray equipment must be registered, and installing a machine in a permanent location needs the minister's prior approval, with scaled drawings showing the shielding built into the room's boundaries. Substantial alterations to an approved X-ray area need approval too."
+    },
+    {
+      "t": "p",
+      "x": "Get the shielding design and approval started as soon as the layout is fixed, because shielding goes in before the walls are closed."
     },
     {
       "t": "h3",
@@ -190,7 +198,11 @@
     },
     {
       "t": "p",
-      "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings. How much of your space must be upgraded is settled in plan review."
+      "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings."
+    },
+    {
+      "t": "p",
+      "x": "How much of your space must be upgraded is settled in plan review."
     },
     {
       "t": "p",
@@ -206,7 +218,11 @@
     },
     {
       "t": "p",
-      "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits. Construction and the delivery and installation of fixed equipment and furnishings, such as reception desks, dental chairs and X-ray machines, are allowed before it is issued; bringing in supplies or personal belongings, installing computers and printers, training staff and seeing patients are not. Progress inspections must reach the final stage, and professional certifications be submitted, before you can request occupancy."
+      "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits."
+    },
+    {
+      "t": "p",
+      "x": "Construction and the delivery and installation of fixed equipment and furnishings, such as reception desks, dental chairs and X-ray machines, are allowed before it is issued; bringing in supplies or personal belongings, installing computers and printers, training staff and seeing patients are not. Progress inspections must reach the final stage, and professional certifications be submitted, before you can request occupancy."
     },
     {
       "t": "p",
@@ -284,7 +300,11 @@
     },
     {
       "t": "p",
-      "x": "**Next step:** Bridgeland Builders renovates medical, dental and physiotherapy clinics in Winnipeg and nearby communities, and we coordinate permits and inspections with the City of Winnipeg or your local municipality. Every project starts with a free on-site visit and a free written quote. [Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
+      "x": "**Next step:** Bridgeland Builders renovates medical, dental and physiotherapy clinics in Winnipeg and nearby communities, and we coordinate permits and inspections with the City of Winnipeg or your local municipality. Every project starts with a free on-site visit and a free written quote."
+    },
+    {
+      "t": "p",
+      "x": "[Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
     }
   ]
 }

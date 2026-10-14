@@ -1,4 +1,14 @@
 import { Link } from 'react-router-dom';
+import { unsplashImage } from '../lib/unsplash.js';
+
+// Drawn widths per tile size, for srcset/sizes. Tiles are 300px tall with
+// object-fit: cover, so a one-third tile still shows about 450px of a 3:2
+// photo; at 768px and below every tile spans the full container.
+const TILE_IMAGES = {
+  'col-4': { sizes: '(max-width: 768px) calc(100vw - 48px), 460px', maxWidth: 1200 },
+  'col-8': { sizes: '(max-width: 768px) calc(100vw - 48px), (max-width: 1300px) 66vw, 830px', maxWidth: 1200 },
+  'col-12': { sizes: '(max-width: 1300px) calc(100vw - 48px), 1252px', maxWidth: 1600 },
+};
 
 const GALLERY_ITEMS = [
   {
@@ -76,9 +86,9 @@ export default function Gallery() {
               aria-label={`${item.title} — view details and book an appointment`}
               style={item.delay ? { transitionDelay: item.delay } : undefined}
             >
-              <img src={item.img} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
+              <img {...unsplashImage(item.img, TILE_IMAGES[item.span])} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
               <div className="gallery-overlay">
-                <h4>{item.title}</h4>
+                <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
             </Link>

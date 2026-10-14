@@ -95,7 +95,7 @@ export default {
     serviceType: 'Medical and dental office renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Dental, medical and physiotherapy clinics' },
     primaryKeyword: 'dental office renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   typesTitle: 'Clinics We Renovate',
@@ -131,10 +131,15 @@ export default {
     ],
   },
 
-  // Commercial cost page stays unpublished (no data, plan §8).
-  costTeaser: null,
+  // Commercial cost page stays unpublished (no data, plan §8): the teaser
+  // points to the cost hub's "priced after a visit" section. No numbers.
+  costTeaser: {
+    text: 'Clinic renovations are priced in a free written quote after a site visit, once we have seen the rooms, your equipment list and your appointment schedule. Our Winnipeg cost guide explains what moves the price of a renovation.',
+    to: '/renovation-cost-winnipeg#priced-after-a-visit',
+    label: 'Renovation costs in Winnipeg',
+  },
   // Live pages only are shown; drafts appear when they launch.
   related: ['/services/commercial-renovations', '/services/office-renovations', '/services/general-contracting', '/services/retail-renovations'],
   guides: ['clinic-renovation-permits-winnipeg', 'how-to-prepare-your-business-for-a-major-renovation', 'the-biggest-cost-factors-in-commercial-renovation-projects'],
-  signoff: null,
+  ownerSignoff: null,
 };

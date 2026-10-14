@@ -113,7 +113,8 @@ export default function useSeo({ title, description, path, image, imageAlt, json
  * One-line SEO for a standard page: the title/description for the route and
  * the same JSON-LD document the prerender emits. Both sides call
  * seo.js resolvePageSeo(path, options), so they cannot drift:
- * WebPage + BreadcrumbList, plus Service/FAQPage and any extra nodes supplied.
+ * WebPage (+ BreadcrumbList where the page shows a breadcrumb), plus
+ * Service/FAQPage and any extra nodes supplied.
  *
  * Pages whose title/description live in a data module get their options from
  * a builder exported next to that data, and head.js (src/data/head.js) calls
@@ -123,7 +124,8 @@ export default function useSeo({ title, description, path, image, imageAlt, json
  *   area pages    serviceAreasSeoOptions() / serviceAreaSeoOptions(area)
  *   case study    caseStudySeoOptions(study)      src/data/caseStudies.js
  *   video         videoSeoOptions(video)          src/data/videos.js
- * Cost guide routes also get an Article node automatically (resolvePageSeo).
+ * Cost guide routes also get an Article node automatically (resolvePageSeo),
+ * and /services the ItemList of live services.
  * A new template page must follow the same pattern and be added to head.js.
  *
  * @param {string} path        route path, e.g. '/about-us'

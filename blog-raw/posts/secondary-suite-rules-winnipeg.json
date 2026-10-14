@@ -6,6 +6,7 @@
   "metaDescription": "Winnipeg secondary suite rules as the City lists them: permits, size limits, separation, the 2025 zoning changes, and which suite funding programs exist.",
   "excerpt": "Permits, size limits, separation and the 2025 zoning changes for basement and garden suites in Winnipeg, plus the federal programs that do and don’t exist.",
   "date": "2026-10-13",
+  "updated": "2026-10-14",
   "cats": [
     "Basements & Suites",
     "Permits & Planning"
@@ -79,7 +80,7 @@
     },
     {
       "q": "How big can a basement suite be in Winnipeg?",
-      "a": "The City’s page caps an attached suite at 33% of the combined floor area of the house and suite, or 74 m² (800 sq. ft.), whichever is less, with a minimum of 32.5 m² (350 sq. ft.). If the house and suite total 2,000 sq. ft., the suite tops out at about 660 sq. ft. Confirm current limits with the City."
+      "a": "The City’s page caps an attached suite at 33% of the combined floor area of the house and suite, or 74 m² (800 sq. ft.), whichever is less, with a minimum of 32.5 m² (350 sq. ft.). If the house and suite total 2,000 sq. ft., the suite tops out at about 660 sq. ft. Confirm them with the City."
     },
     {
       "q": "Is the Canada Secondary Suite Loan Program available?",
@@ -93,7 +94,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "A basement suite can house a family member or bring in rent, but Winnipeg treats it differently from an ordinary finished basement. A suite is a separate dwelling unit, so it needs zoning approval, a smoke-separated layout and its own access to services. This guide follows the City of Winnipeg’s secondary suites page and bulletins as they read on October 13, 2026. The Zoning By-law was amended in 2024 and again in June 2025, so confirm the rules for your address with the City before you design."
+      "x": "A basement suite can house a family member or bring in rent, but Winnipeg treats it differently from an ordinary finished basement. A suite is a separate dwelling unit, so it needs zoning approval, a smoke-separated layout and its own access to services."
+    },
+    {
+      "t": "p",
+      "x": "This guide follows the City of Winnipeg’s secondary suites page and bulletins as they read on October 13, 2026. The Zoning By-law was amended in 2024 and again in June 2025, so confirm the rules for your address with the City before you design."
     },
     {
       "t": "h2",
@@ -267,7 +272,11 @@
     },
     {
       "t": "p",
-      "x": "Every suite starts as a basement, so the first questions are the same: is it dry, is the ceiling high enough, and can the windows work for bedrooms? Our [basement suite](/services/basement-suites) and [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote, with permits and inspections coordinated with the City. Get a starting range from the [instant estimate](/instant-quote), or [book your visit](/book-online)."
+      "x": "Every suite starts as a basement, so the first questions are the same: is it dry, is the ceiling high enough, and can the windows work for bedrooms?"
+    },
+    {
+      "t": "p",
+      "x": "Our [basement suite](/services/basement-suites) and [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote, with permits and inspections coordinated with the City. Get a starting range from the [instant estimate](/instant-quote), or [book your visit](/book-online)."
     }
   ]
 }

@@ -14,7 +14,11 @@ function estimatorName(src) {
   }
 }
 
-export default function EstimatorEmbed({ src, title = 'Renovation Price Calculator' }) {
+/**
+ * `loading`: "lazy" (default) where the estimator sits further down a page;
+ * "eager" where it is the page's main content (/instant-quote).
+ */
+export default function EstimatorEmbed({ src, title = 'Renovation Price Calculator', loading = 'lazy' }) {
   const frameRef = useRef(null);
 
   useEffect(() => {
@@ -79,7 +83,7 @@ export default function EstimatorEmbed({ src, title = 'Renovation Price Calculat
       width="100%"
       height="760"
       title={title}
-      loading="lazy"
+      loading={loading}
       referrerPolicy="no-referrer"
       // allow-popups: the estimator's "Book On-Site Visit" button opens
       // /book-online in a new tab (target="_blank"), which a sandbox without

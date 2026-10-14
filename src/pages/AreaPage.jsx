@@ -5,13 +5,16 @@ import RichBody from '../components/RichBody.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { formatPostDate } from '../components/BlogCard.jsx';
-import NotFoundPage from './NotFoundPage.jsx';
 import { CaseStudyCard } from './CaseStudyPage.jsx';
 import { caseStudiesForArea } from '../data/caseStudies.js';
 import { publishedServiceArea, serviceAreaSeoOptions } from '../data/serviceAreasContent.js';
 import { trailFor } from '../data/seo.js';
 import { liveServices } from '../data/services.js';
 import { usePageSeo } from '../hooks/useSeo.js';
+import { lazyWithRetry } from '../lib/lazyRetry.js';
+
+// Never rendered for a published area, so it is not modulepreloaded with it.
+const NotFoundPage = lazyWithRetry(() => import('./NotFoundPage.jsx'));
 
 function TrailBreadcrumb({ trail }) {
   return (

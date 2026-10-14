@@ -11,10 +11,20 @@ import {
   SMS_CONFIRMATION,
   SMS_OPT_IN_PATH,
 } from '../data/siteConfig.js';
+import { updatedFor } from '../data/seo.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
-// Update this whenever the policy changes.
-const LAST_UPDATED = 'October 13, 2026';
+// "Last updated" is the '/privacy-policy' `updated` date in src/data/seo.js,
+// the same date as the page's dateModified and sitemap lastmod, so there is
+// one date to bump whenever this policy's text changes, including when Google
+// Analytics is switched on (GA_ON below changes the text).
+// Shown as "October 14, 2026"; read at noon UTC so it is the same day on the
+// server and in every visitor's time zone.
+const LAST_UPDATED = (() => {
+  const date = new Date(`${updatedFor('/privacy-policy')}T12:00:00Z`);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat('en-CA', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(date);
+})();
 
 // Google Analytics is described only while it is switched on
 // (GA4_MEASUREMENT_ID in src/data/analyticsConfig.js), so this page never
@@ -28,10 +38,13 @@ const GA_ON = Boolean(gaMeasurementId());
 // (src/components/QuoteBookingForm.jsx -> GoHighLevel), the arrival details
 // saved with a quote request (src/lib/attribution.js), the Meta Pixel and,
 // when configured, Google Analytics (index.html; neither runs when the browser
-// sends Do Not Track; Meta custom events: META_CUSTOM_EVENTS in
-// analyticsConfig.js), Meta's Conversions API (api/_lib/meta.js, off until its
-// keys are set), the LeadConnector chat widget, the Price Calculator price
-// guide, and the images loaded from Unsplash and Wix (fonts are self-hosted).
+// sends Do Not Track, and the pixel never runs in CONSENT_REGIONS; Meta
+// custom events: META_CUSTOM_EVENTS in analyticsConfig.js), Meta's
+// Conversions API (api/_lib/meta.js, off until its keys are set), the
+// optional marketing-email box on the quote form (CASL, section 16), the
+// LeadConnector chat widget and contact form (their own browser storage,
+// whatever Do Not Track says: section 12), the Price Calculator price guide,
+// and the images loaded from Unsplash (fonts are self-hosted).
 // If any of those change, update this page.
 //
 // The text-messaging clauses (section 1, and the SMS lines in sections 8 and 9)
@@ -71,8 +84,10 @@ export default function PrivacyPolicyPage() {
                 <li>
                   We use the Meta Pixel to measure our Facebook and Instagram ads
                   {GA_ON ? ', and Google Analytics to understand how our website is used' : ''}. Neither runs if your
-                  browser sends Do Not Track.
+                  browser sends Do Not Track, and the Meta Pixel is switched off for visitors in Quebec, the European
+                  Economic Area, the United Kingdom and Switzerland.
                 </li>
+                <li>We only send marketing emails with your consent, and you can unsubscribe at any time.</li>
                 <li>When you send us a request, we also record how you found our website, such as the ad or site that brought you.</li>
                 <li>You can ask to see, correct or delete your information at any time.</li>
               </ul>
@@ -125,7 +140,8 @@ export default function PrivacyPolicyPage() {
               <li>
                 <strong>Quote and booking form:</strong> your name, email address, phone number, project address,
                 city and postal code, whether the project is in Winnipeg or a nearby community, the type of renovation, and —
-                if you book an on-site visit — the time you choose.
+                if you book an on-site visit — the time you choose. If you tick the optional box, we also record your
+                consent to receive our marketing emails.
               </li>
               <li>
                 <strong>Price guide:</strong> your answers about the project and the contact details you enter to
@@ -176,12 +192,12 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="blog-list">
               <li>To personalize your experience and to allow us to deliver the type of content and service offerings in which you are most interested.</li>
-              <li>To respond to your inquiries and customer service requests, prepare quotes, and schedule discovery calls and on-site visits.</li>
+              <li>To respond to your inquiries and customer service requests, prepare quotes, and schedule on-site visits.</li>
               <li>To send appointment confirmations and reminders, and to follow up about your project by phone, email or — if you have opted in — text message.</li>
               <li>To plan and carry out your renovation, process your transactions, and stand behind our work afterwards.</li>
               <li>To administer a promotion, survey or other site feature.</li>
               <li>To send periodic emails regarding your project or our other services.</li>
-              <li>To send promotional messages, such as special offers and discounts, by email or — if you have opted in to marketing texts — text message.</li>
+              <li>To send promotional messages, such as renovation tips and special offers, by email (with your consent, as described in section 16) or — if you have opted in to marketing texts — text message.</li>
               <li>To understand which ads and pages bring people to us, and to show our ads to people likely to be interested.</li>
               <li>To keep the website working, secure and free of spam.</li>
               <li>To meet our legal, accounting and tax obligations.</li>
@@ -216,8 +232,8 @@ export default function PrivacyPolicyPage() {
             <h2>6. How long do we keep your information?</h2>
             <p>
               We keep personal information only as long as we need it for the purposes above — for example, while we
-              respond to your inquiry, carry out and warranty your project, and keep the business records the law
-              requires. After that, we delete it or make it anonymous.
+              respond to your inquiry, carry out your project, and keep the business records the law requires. After
+              that, we delete it or make it anonymous.
             </p>
 
             <h2>7. Do we use ‘cookies’?</h2>
@@ -242,8 +258,8 @@ export default function PrivacyPolicyPage() {
             <p>
               <strong>Meta Pixel.</strong> Our website uses the Meta Pixel, a tool from Meta Platforms (the company behind
               Facebook and Instagram). When you visit, it tells Meta which pages you view, whether you submit our quote
-              form or book an on-site visit, and actions such as tapping our phone number or email address. Meta may
-              connect this with your Facebook or Instagram account — including by using a
+              or contact form or book an on-site visit, and actions such as tapping our phone number or email address.
+              Meta may connect this with your Facebook or Instagram account — including by using a
               scrambled (hashed) version of contact details such as your email address or phone number — so we can measure
               how our ads perform and show our ads to you and to people with similar interests. Meta handles this
               information under its own{' '}
@@ -254,7 +270,17 @@ export default function PrivacyPolicyPage() {
               Meta its own copy of each quote request and booking: your email address, phone number, name, city and
               postal code in hashed (scrambled) form, along with your IP address, browser type and the Meta Pixel
               identifiers in your browser, so Meta can match it to the ad that led to it and count it only once. This is
-              only sent when the Meta Pixel ran on your visit, so never when your browser sends Do Not Track.
+              only sent when the Meta Pixel ran on your visit, so never when your browser sends Do Not Track, and never
+              for a request sent from Quebec, the European Economic Area, the United Kingdom or Switzerland.
+            </p>
+            <p>
+              <strong>Where the Meta Pixel doesn’t run.</strong> Privacy laws in Quebec, the European Economic Area,
+              the United Kingdom and Switzerland call for your consent before this kind of advertising measurement, and
+              we don’t ask for it on this website. So when you browse from one of those places, the Meta Pixel doesn’t
+              load and our server doesn’t send Meta a copy of your requests. To tell where you are, our website host
+              (Vercel) looks up the country and province or region of your IP address as the page loads; we use only
+              that answer and don’t keep it. In the rare case the lookup can’t be completed, the Meta Pixel loads as it
+              does for everyone else.
             </p>
             {GA_ON && (
               <p>
@@ -277,8 +303,10 @@ export default function PrivacyPolicyPage() {
               clear it at any time by clearing your browser’s site data.
             </p>
             <p>
-              <strong>Live chat.</strong> Our chat widget may use cookies or similar browser storage to keep your
-              conversation going as you move around the site.
+              <strong>Live chat and contact form.</strong> Our chat widget and the contact form on our Get in Touch
+              page are provided by GoHighLevel. They use their own browser storage to keep your conversation going as
+              you move around the site, and send GoHighLevel details of your visit, such as the pages you view and the
+              site that referred you, so a chat or message can be matched to your visit (see section 12).
             </p>
             <p>
               <strong>Your choices.</strong> You can choose to have your computer warn you each time a cookie is being
@@ -354,7 +382,8 @@ export default function PrivacyPolicyPage() {
               <Link to={SMS_OPT_IN_PATH}>{OPT_IN_URL}</Link> and opt in again.
             </p>
             <p>
-              For email communications, contact us at {email} and we will promptly remove you from all correspondence.
+              For email communications, use the unsubscribe link in any marketing email from us, or contact us at{' '}
+              {email}, and we will remove you from all correspondence within 10 business days.
             </p>
 
             <h2>10. Your privacy rights</h2>
@@ -363,7 +392,7 @@ export default function PrivacyPolicyPage() {
               <li>tell you what personal information we hold about you, and how we use it;</li>
               <li>correct anything that is inaccurate or incomplete;</li>
               <li>stop contacting you — you can also reply STOP to any text message from us;</li>
-              <li>delete your information, unless we need to keep it for legal or warranty reasons.</li>
+              <li>delete your information, unless the law requires us to keep it.</li>
             </ul>
             <p>
               To make a request, email us at {email} or call us at {phone}. We’ll respond within 30 days. If you’re not
@@ -398,20 +427,27 @@ export default function PrivacyPolicyPage() {
 
             <h2>12. How does our site handle Do Not Track signals?</h2>
             <p>
-              We honor Do Not Track signals and do not track, plant advertising cookies, or use advertising when a Do
-              Not Track (DNT) browser mechanism is in place: when your browser sends a DNT signal, our website does not
-              load the Meta Pixel{GA_ON ? ' or Google Analytics' : ''}, does not keep a note in your browser of how you
-              arrived, and our server does not send Meta a copy of anything you submit. If you send us a request, only
-              the details of that visit go with it (the page you arrived on, the page that linked you to us, and any
-              campaign tags in the link). Features you choose to use, such as
-              live chat, may still use the browser storage they need to work.
+              Our own website code honours Do Not Track: when your browser sends a Do Not Track (DNT) signal, our
+              website does not load the Meta Pixel{GA_ON ? ' or Google Analytics' : ''}, does not keep a note in your
+              browser of how you arrived, and our server does not send Meta a copy of anything you submit. If you send
+              us a request, only the details of that visit go with it (the page you arrived on, the page that linked you
+              to us, and any campaign tags in the link).
+            </p>
+            <p>
+              Two tools from GoHighLevel, our customer management provider, don’t respond to DNT: the live chat widget,
+              which loads on every page, and the contact form on our Get in Touch page. Whether or not your browser
+              sends DNT, they keep their own records in your browser’s storage and send GoHighLevel details of your
+              visit, such as the pages you view and the site that referred you, as described in section 7. You can
+              clear that storage at any time by clearing your browser’s site data, and you can always call us at{' '}
+              {phone} or email us at {email} instead of using the chat or the contact form.
             </p>
 
             <h2>13. Does our site allow third-party behavioral tracking?</h2>
             <p>
               It’s also important to note that we allow third-party behavioral tracking: the Meta Pixel described in
               section 7 lets Meta Platforms record visits to our site and use them to show you our ads on Facebook and
-              Instagram, unless your browser sends a Do Not Track signal.
+              Instagram, unless your browser sends a Do Not Track signal or you browse from Quebec, the European
+              Economic Area, the United Kingdom or Switzerland.
               {GA_ON ? ' Google Analytics, also described in section 7, records how our website is used, under the same Do Not Track rule.' : ''}
             </p>
 
@@ -450,27 +486,45 @@ export default function PrivacyPolicyPage() {
               non-compliance by data processors.
             </p>
 
-            <h2>16. CAN-SPAM Act</h2>
+            <h2>16. Canada’s Anti-Spam Legislation (CASL)</h2>
             <p>
-              The CAN-SPAM Act is a law that sets the rules for commercial email, establishes requirements for
-              commercial messages, gives recipients the right to have emails stopped from being sent to them, and
-              spells out tough penalties for violations.
+              Canada’s Anti-Spam Legislation (CASL) sets the rules for commercial electronic messages, such as
+              marketing emails and texts. We collect your email address in order to:
             </p>
-            <p>We collect your email address in order to:</p>
             <ul className="blog-list">
               <li>Send information, and respond to inquiries and other requests or questions.</li>
               <li>Send appointment confirmations, quotes and updates about your project.</li>
               <li>Send you additional information related to our services.</li>
             </ul>
-            <p>To be in accordance with CAN-SPAM, we agree to the following:</p>
+            <p>
+              Messages you ask for, such as your quote, appointment confirmations and reminders, and updates about your
+              project, are part of handling your request. We send marketing messages, such as renovation tips and
+              offers, only with your consent:
+            </p>
             <ul className="blog-list">
-              <li>Not use false or misleading subjects or email addresses.</li>
-              <li>Include the physical address of our business in our marketing emails.</li>
-              <li>Honor opt-out and unsubscribe requests quickly.</li>
+              <li>
+                <strong>Express consent:</strong> you give it by ticking a box that asks for it, such as the optional
+                “Email me occasional renovation tips and offers” box on our quote form, or the text-message consent box
+                on our contact form. We keep a record of when you gave it, and it lasts until you withdraw it.
+              </li>
+              <li>
+                <strong>Implied consent:</strong> when you ask us about a project, for example by requesting a quote or
+                booking an on-site visit, we may email you about our services for up to 6 months after your inquiry. If
+                you hire us, that becomes up to 2 years after your purchase.
+              </li>
+            </ul>
+            <p>Every marketing message we send:</p>
+            <ul className="blog-list">
+              <li>identifies {SITE_NAME} as the sender, without false or misleading sender details or subject lines;</li>
+              <li>includes our mailing address and another way to reach us (see section 18);</li>
+              <li>
+                includes a free, easy way to unsubscribe: the unsubscribe link in an email, or replying STOP to a text.
+              </li>
             </ul>
             <p>
-              If at any time you would like to unsubscribe from receiving future emails or SMS texts, you can contact
-              us at {email} and we will promptly remove you from ALL correspondence.
+              We process every unsubscribe request within 10 business days. If at any time you would like to stop
+              receiving future emails or SMS texts, you can also contact us at {email} and we will remove you from ALL
+              correspondence.
             </p>
 
             <h2>17. Changes to this policy</h2>
@@ -484,7 +538,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <PolicyContact />
             <p>
-              To talk about a project instead, <Link to="/book-online">book a free on-site consultation</Link>.
+              To talk about a project instead, <Link to="/book-online">book a free on-site visit</Link>.
               You can also read our <Link to="/terms-of-service">Terms of Service</Link>.
             </p>
           </div>

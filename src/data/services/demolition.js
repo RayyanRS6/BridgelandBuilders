@@ -8,7 +8,7 @@
 // No intro, gallery or testimonial: there are no real job photos or reviews
 // for this service yet, and stock photos are never shown as our work.
 // Every rule in `local` and `faqs` was checked against the page listed in
-// local.sources on 2026-10-13. Owner sign-off (signoff) is still to be added.
+// local.sources on 2026-10-13. Owner sign-off (ownerSignoff) is still to be added.
 
 const ACCESSED = '2026-10-13';
 
@@ -118,7 +118,7 @@ export default {
     serviceType: 'Interior demolition',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'interior demolition Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.
@@ -128,5 +128,5 @@ export default {
   related: ['/services/kitchen-renovations', '/services/bathroom-renovations', '/services/basement-renovations', '/services/commercial-renovations'],
   // Unpublished slugs are skipped by ServiceRoute until the post goes live.
   guides: ['winnipeg-renovation-permits', 'how-to-prepare-your-business-for-a-major-renovation', 'renovating-a-character-home-in-winnipeg'],
-  signoff: null,
+  ownerSignoff: null,
 };

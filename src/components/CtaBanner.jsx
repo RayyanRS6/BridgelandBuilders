@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
-import { COST_HUB_PATH } from '../data/seo.js';
+import { COST_HUB_PATH, INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { ArrowRightIcon } from './icons.jsx';
 
 export default function CtaBanner() {

@@ -10,7 +10,7 @@ import RouteErrorBoundary from './components/RouteErrorBoundary.jsx';
 // on the first page instead of replacing it (src/lib/lazyRetry.js).
 import { lazyWithRetry as lazy, leftInitialPage } from './lib/lazyRetry.js';
 import { useGlobalScrollReveal } from './hooks/useScrollReveal.js';
-import { COST_HUB_PATH } from './data/seo.js';
+import { COST_HUB_PATH } from './data/siteConfig.js';
 import { liveServices } from './data/services.js';
 
 const HomePage = lazy(() => import('./pages/Home.jsx'));

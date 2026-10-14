@@ -71,7 +71,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Radon is a radioactive gas that comes from uranium in the ground. You can’t see, smell or taste it, and it tends to build up most in basements, the part of a house closest to the soil. Health Canada calls radon the leading cause of lung cancer in non-smokers. Manitoba Health, citing Health Canada’s 2012 cross-Canada survey, says about 19 per cent of Manitobans live in homes above the radon guideline."
+      "x": "Radon is a radioactive gas that comes from uranium in the ground. You can’t see, smell or taste it, and it tends to build up most in basements, the part of a house closest to the soil."
+    },
+    {
+      "t": "p",
+      "x": "Health Canada calls radon the leading cause of lung cancer in non-smokers. Manitoba Health, citing Health Canada’s 2012 cross-Canada survey, says about 19 per cent of Manitobans live in homes above the radon guideline."
     },
     {
       "t": "p",

@@ -6,14 +6,15 @@
   "metaDescription": "How Canadians pay for renovations: HELOCs, refinancing, home equity and personal loans, lines of credit, CMHC suite refinancing, and which programs closed.",
   "excerpt": "A plain-language comparison of the main ways Canadians finance a renovation, what each one means for risk and flexibility, and which federal programs have closed.",
   "date": "2026-10-13",
+  "updated": "2026-10-14",
   "cats": [
     "Money & Rebates",
     "Costs & Budgets"
   ],
   "services": [
-    "/services/basement-renovations",
+    "/services/whole-home-renovations",
     "/services/basement-suites",
-    "/services/whole-home-renovations"
+    "/services/basement-renovations"
   ],
   "cluster": "renovation-money",
   "author": "",
@@ -162,7 +163,11 @@
     },
     {
       "t": "p",
-      "x": "In Manitoba, the Builders' Liens Act requires the person paying to hold back 7.5% of each payment for at least 60 days after substantial performance is certified or the work is completed or abandoned, whichever comes first, so part of the money is released later rather than all at once. Our free written quote sets out the scope and the taxes, which is the document to take to your lender. Winnipeg price ranges are in our [renovation cost guide](/renovation-cost-winnipeg)."
+      "x": "In Manitoba, the Builders' Liens Act requires the person paying to hold back 7.5% of each payment for at least 60 days after substantial performance is certified or the work is completed or abandoned, whichever comes first, so part of the money is released later rather than all at once."
+    },
+    {
+      "t": "p",
+      "x": "Our free written quote sets out the scope and the taxes, which is the document to take to your lender. Winnipeg price ranges are in our [renovation cost guide](/renovation-cost-winnipeg), and our guide to [home renovation costs in Canada](/blog/home-renovation-cost-canada) explains what national figures can and can't tell you."
     },
     {
       "t": "h2",

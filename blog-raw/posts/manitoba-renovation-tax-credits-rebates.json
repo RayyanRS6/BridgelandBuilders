@@ -10,8 +10,8 @@
     "Money & Rebates"
   ],
   "services": [
-    "/services/basement-renovations",
     "/services/basement-suites",
+    "/services/basement-renovations",
     "/services/bathroom-renovations"
   ],
   "cluster": "renovation-money",
@@ -267,7 +267,11 @@
     },
     {
       "t": "p",
-      "x": "CRA's page for the 2025 tax year lists the credit at 14.5%, or up to $7,250 per claim. Federal credit rates moved with the 2025 and 2026 income tax changes, so check CRA's page for the year you file. The renovation period ends when the work is complete, for example when it passes final inspection, which is one more reason to have the permit in place."
+      "x": "CRA's page for the 2025 tax year lists the credit at 14.5%, or up to $7,250 per claim. Federal credit rates moved with the 2025 and 2026 income tax changes, so check CRA's page for the year you file."
+    },
+    {
+      "t": "p",
+      "x": "The renovation period ends when the work is complete, for example when it passes final inspection, which is one more reason to have the permit in place."
     },
     {
       "t": "p",
@@ -279,7 +283,11 @@
     },
     {
       "t": "p",
-      "x": "Renovations that help a senior or a person eligible for the disability tax credit get into and move around their home, or that reduce the risk of harm, can qualify. CRA's examples include wheelchair ramps, walk-in bathtubs, wheel-in showers and grab bars. Up to $20,000 of eligible expenses can be claimed per year, and that cap applies per home when more than one person qualifies."
+      "x": "Renovations that help a senior or a person eligible for the disability tax credit get into and move around their home, or that reduce the risk of harm, can qualify. CRA's examples include wheelchair ramps, walk-in bathtubs, wheel-in showers and grab bars."
+    },
+    {
+      "t": "p",
+      "x": "Up to $20,000 of eligible expenses can be claimed per year, and that cap applies per home when more than one person qualifies."
     },
     {
       "t": "li",
@@ -291,7 +299,11 @@
     },
     {
       "t": "p",
-      "x": "CRA's page for this credit says an expense that also qualifies as a medical expense can be claimed under both credits, but Budget 2025 proposed ending that double claim from the 2026 tax year, so ask your accountant which rule applies to the year you file. If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
+      "x": "CRA's page for this credit says an expense that also qualifies as a medical expense can be claimed under both credits, but Budget 2025 proposed ending that double claim from the 2026 tax year, so ask your accountant which rule applies to the year you file."
+    },
+    {
+      "t": "p",
+      "x": "If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
     },
     {
       "t": "h2",
@@ -303,7 +315,11 @@
     },
     {
       "t": "p",
-      "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application. Our guide to [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba) walks through the order of steps, and the [window and door replacement guide](/blog/window-and-door-replacement-winnipeg) covers triple-pane upgrades."
+      "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application."
+    },
+    {
+      "t": "p",
+      "x": "Our guide to [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba) walks through the order of steps, and the [window and door replacement guide](/blog/window-and-door-replacement-winnipeg) covers triple-pane upgrades."
     },
     {
       "t": "h2",

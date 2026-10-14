@@ -3,8 +3,7 @@ import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
 import RichBody from '../components/RichBody.jsx';
 import { ArrowRightIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
-import { COST_HUB_PATH } from '../data/seo.js';
-import { INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { COST_HUB_PATH, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // Crawlable guide BELOW the estimator (SEO plan §7): how it works, what moves
@@ -51,6 +50,10 @@ const GUIDE_BLOCKS = [
     t: 'p',
     x: 'Not sure which project type to pick? Choose the closest one and tell us the rest at the visit, or read [how a renovation with us runs, step by step](/our-process).',
   },
+  {
+    t: 'p',
+    x: 'Have other questions about costs, permits or timelines? Find answers on our [renovation FAQs page](/faqs).',
+  },
 ];
 
 /**
@@ -60,7 +63,9 @@ const GUIDE_BLOCKS = [
  * estimator stays first; the explanatory copy sits below it.
  *
  * No `.reveal` here: that class holds an element at opacity 0 until the bundle
- * hydrates, and the estimator should be on screen from the first paint.
+ * hydrates, and the estimator should be on screen from the first paint. For
+ * the same reason the iframe loads eagerly here (lazy everywhere else), and
+ * scripts/prerender.mjs adds a preconnect to the estimator's origin.
  */
 export default function InstantQuotePage() {
   usePageSeo(INSTANT_QUOTE_PATH);
@@ -79,7 +84,7 @@ export default function InstantQuotePage() {
           </div>
 
           <div className="estimator-shell">
-            <EstimatorEmbed src={ESTIMATOR_URLS.overall} title="Free instant quote - Price Calculator" />
+            <EstimatorEmbed src={ESTIMATOR_URLS.overall} title="Free instant quote - Price Calculator" loading="eager" />
           </div>
 
           {/* For visitors who are not after a price yet: book a visit or browse. */}
@@ -87,7 +92,8 @@ export default function InstantQuotePage() {
             <h2>Prefer to talk it through?</h2>
             <p>
               Book a free on-site visit and we’ll look at the space with you, or browse everything we build first.
-              You can also call us at <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>.
+              You can also call us at <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a> or{' '}
+              <Link to="/contact-us">send us a message</Link>.
             </p>
             <div className="hero-cta-group">
               <Link to="/book-online" className="btn-pill-red" data-cta="instant-quote-book-visit">

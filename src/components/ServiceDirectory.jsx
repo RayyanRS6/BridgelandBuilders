@@ -137,14 +137,17 @@ export default function ServiceDirectory() {
                   <article className="service-directory-card" key={service.label}>
                     <span className="service-directory-number">{String(index + 1).padStart(2, '0')}</span>
                     <h3>{service.label}</h3>
-                    <p>{service.description}</p>
+                    {/* The longer card text (serviceCategories.js); the navbar keeps the short one. */}
+                    <p>{service.cardDescription || service.description}</p>
                     {service.to ? (
+                      // The hidden name makes the link "Explore service: Flooring"
+                      // for screen readers and search, with no visual change.
                       <Link className="service-directory-action" to={service.to}>
-                        Explore service <ArrowRightIcon size={13} />
+                        Explore service<span className="visually-hidden">: {service.label}</span><ArrowRightIcon size={13} />
                       </Link>
                     ) : (
                       <Link className="service-directory-action" to={ASK_ABOUT_SERVICE_PATH}>
-                        Ask about this service <ArrowRightIcon size={13} />
+                        Ask about this service<span className="visually-hidden">: {service.label}</span><ArrowRightIcon size={13} />
                       </Link>
                     )}
                   </article>

@@ -26,7 +26,7 @@ export default {
       'Winnipeg renovation costs from our instant estimator: bathrooms from $16,000, basements from $25,000, kitchens from $40,000, and what moves the price.',
     primaryKeyword: 'home renovation cost Winnipeg',
     published: '2026-10-13',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   eyebrow: 'Renovation Costs',
@@ -110,6 +110,10 @@ export default {
           t: 'p',
           x: 'Compare the two smallest tiers: a bathroom up to 50 sq ft starts at $16,000–$20,000, and a basement up to 500 sq ft starts at $25,000–$80,000. Ten times the floor area doesn’t mean ten times the price.',
         },
+        {
+          t: 'p',
+          x: 'For national figures, our guide to [home renovation costs in Canada](/blog/home-renovation-cost-canada) explains what Statistics Canada does and doesn’t publish.',
+        },
       ],
     },
     {
@@ -144,6 +148,8 @@ export default {
     },
     {
       h2: 'What about whole-home, additions and commercial work?',
+      // Linked from the cost teasers on those service pages.
+      id: 'priced-after-a-visit',
       blocks: [
         {
           t: 'p',

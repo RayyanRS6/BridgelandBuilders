@@ -59,9 +59,10 @@ export default function BookingPage() {
       <section className="lead-section booking-page-section">
         <div className="container">
           <div className="lead-grid">
-            <div><BookingAside serviceName="project" /></div>
+            {/* A descriptive heading rather than the generic "Let’s talk about your project". */}
+            <div><BookingAside serviceName="project" title="What you can count on" /></div>
             <div>
-              <QuoteBookingForm id="booking-form" title="Book Your Free Consultation" />
+              <QuoteBookingForm id="booking-form" title="Book Your Free On-Site Visit" />
             </div>
           </div>
         </div>

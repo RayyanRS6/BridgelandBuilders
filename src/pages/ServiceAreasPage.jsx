@@ -62,7 +62,8 @@ export default function ServiceAreasPage() {
                   <strong>Outside these areas?</strong> Call us on{' '}
                   <a href={SITE_PHONE_TEL}><strong>{SITE_PHONE}</strong></a> and we’ll tell you honestly
                   whether we can help, or send your project details through our{' '}
-                  <Link to="/book-online"><strong>booking form</strong></Link>.
+                  {/* /contact-us here: the booking page already has its own button below. */}
+                  <Link to="/contact-us"><strong>contact form</strong></Link>.
                 </p>
               </div>
 

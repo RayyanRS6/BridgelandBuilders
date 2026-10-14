@@ -1,0 +1,294 @@
+{
+  "slug": "home-renovation-cost-canada",
+  "status": "published",
+  "title": "How Much Does a Home Renovation Cost in Canada?",
+  "metaTitle": "How Much Does a Home Renovation Cost in Canada?",
+  "metaDescription": "There’s no official average renovation cost in Canada. What Statistics Canada data does show, why per-square-foot prices mislead, and our Winnipeg ranges.",
+  "excerpt": "Why there’s no reliable national average for what a renovation costs, what Statistics Canada’s construction price data does show, why per-square-foot figures mislead, and how to get a real number for your project.",
+  "date": "2026-10-14",
+  "updated": "2026-10-14",
+  "cats": [
+    "Costs & Budgets"
+  ],
+  "services": [
+    "/services/whole-home-renovations",
+    "/services/kitchen-renovations",
+    "/services/bathroom-renovations",
+    "/services/basement-renovations"
+  ],
+  "cluster": "renovation-money",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "There’s no current official average for what a home renovation costs in Canada. Statistics Canada tracks how prices change instead, with price indexes for renovations and for new buildings; new residential building prices rose 2.3% in the year to the second quarter of 2026. In Winnipeg, our instant estimator starts bathrooms at $16,000, basements at $25,000 and kitchens at $40,000.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "Statistics Canada: Building construction price indexes, second quarter 2026 (The Daily, July 24, 2026)",
+      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260724/dq260724b-eng.htm",
+      "accessed": "2026-10-14"
+    },
+    {
+      "label": "Statistics Canada: Building construction price indexes, Table 1 (second quarter 2026)",
+      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260724/t001b-eng.htm",
+      "accessed": "2026-10-14"
+    },
+    {
+      "label": "Statistics Canada: Residential Renovation Price Index, second quarter 2026 (The Daily, August 7, 2026)",
+      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260807/dq260807c-eng.htm",
+      "accessed": "2026-10-14"
+    },
+    {
+      "label": "Statistics Canada: Technical Guide for the Residential Renovation Price Index (October 25, 2024)",
+      "url": "https://www150.statcan.gc.ca/n1/pub/62f0014m/62f0014m2024006-eng.htm",
+      "accessed": "2026-10-14"
+    },
+    {
+      "label": "Statistics Canada: Homeowner Repair and Renovation Survey (survey record, status inactive)",
+      "url": "https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3886",
+      "accessed": "2026-10-14"
+    },
+    {
+      "label": "Statistics Canada: Survey of Household Spending, 2023 (The Daily, May 21, 2025)",
+      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/250521/dq250521a-eng.htm",
+      "accessed": "2026-10-14"
+    },
+    {
+      "label": "Government of Canada Publications: CMHC Renovation and home purchase report (issues 2007–2012)",
+      "url": "https://publications.gc.ca/site/eng/331408/publication.html",
+      "accessed": "2026-10-14"
+    },
+    {
+      "label": "Office of Consumer Affairs (Government of Canada): Home renovations",
+      "url": "https://ised-isde.canada.ca/site/office-consumer-affairs/en/buying-and-leasing-big-ticket-items/home-renovations",
+      "accessed": "2026-10-14"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Are renovation costs still going up in Canada?",
+      "a": "Building costs are. Statistics Canada’s price index for new residential buildings rose 2.3% across its 15-city composite in the year to the second quarter of 2026, and 4.0% in Winnipeg. For renovation prices on their own, it publishes a quarterly Residential Renovation Price Index covering 15 cities, Winnipeg included."
+    },
+    {
+      "q": "How much does it cost to renovate a whole house in Canada?",
+      "a": "There’s no official figure, and whole-house projects vary too much for an average to mean much: one house needs new finishes, another needs new wiring, plumbing and walls moved. Our instant estimator doesn’t price whole-home work. In Winnipeg, we price it after a free on-site visit, and most whole-home renovations run eight to sixteen weeks."
+    },
+    {
+      "q": "Why do online renovation cost calculators give such different numbers?",
+      "a": "Each one is built on its own assumptions about size, finishes and local prices, and none of them can see your house. Our own estimator gives starting ranges for Winnipeg kitchens, bathrooms and basements before anyone has looked at the space. Treat any calculator as a starting point; a written quote after an on-site visit is the real number."
+    },
+    {
+      "q": "How do I get a price for my renovation in Winnipeg?",
+      "a": "Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We look at the space and talk through what you want, then send a free written quote. For a ballpark first, the instant estimator gives a starting range for kitchens, bathrooms and basements. We reply to every request within one business day."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Search for what a home renovation costs in Canada and you’ll find averages and per-square-foot figures that look precise. None of them comes from a current official national survey, because there isn’t one. This guide sets out what Statistics Canada and CMHC do publish, checked on October 14, 2026, and what renovations start at in Winnipeg, where we work."
+    },
+    {
+      "t": "h2",
+      "x": "Is there an official average renovation cost in Canada?"
+    },
+    {
+      "t": "p",
+      "x": "No. Neither Statistics Canada nor CMHC currently publishes an average cost per renovation project. Statistics Canada’s Homeowner Repair and Renovation Survey, which measured homeowners’ repair and renovation spending, is listed as inactive: its last stand-alone reference year was 2002, and it was integrated into the Survey of Household Spending from 2003."
+    },
+    {
+      "t": "p",
+      "x": "That household survey reports average annual spending per household, not the cost of a project. CMHC’s annual Renovation and Home Purchase Report has 2012 as its most recent issue in the Government of Canada publications archive."
+    },
+    {
+      "t": "p",
+      "x": "So treat any national renovation average with care. Ask who collected it, when, from how many homes, and whether it covers the same work you’re planning."
+    },
+    {
+      "t": "h2",
+      "x": "Are building costs still rising in Canada?"
+    },
+    {
+      "t": "p",
+      "x": "Yes, overall, though not in every city. Statistics Canada’s building construction price index for new residential buildings rose 0.5% in the second quarter of 2026 and 2.3% over the year across its 15-city composite. In Winnipeg, it rose 1.4% in the quarter and 4.0% over the year."
+    },
+    {
+      "t": "p",
+      "x": "The index measures what contractors charge to build new houses and apartment buildings, including materials, labour, equipment, overhead and profit, but not sales taxes, land or building design. Read it as a sign of where labour and material prices are heading rather than a price for your project."
+    },
+    {
+      "t": "p",
+      "x": "For renovations, Statistics Canada publishes a separate quarterly Residential Renovation Price Index (2023 = 100) for 15 cities, Winnipeg included. It tracks how the prices contractors charge for 37 set renovation projects change, before sales taxes and design costs. Like the building index, it shows the trend, not what your project will cost."
+    },
+    {
+      "t": "table",
+      "caption": "Residential building construction price index, second quarter 2026",
+      "head": [
+        "Area",
+        "Index (2023 = 100)",
+        "Change from Q1 2026",
+        "Change from Q2 2025"
+      ],
+      "rows": [
+        [
+          "15-city composite",
+          "110.3",
+          "0.5%",
+          "2.3%"
+        ],
+        [
+          "Winnipeg",
+          "112.9",
+          "1.4%",
+          "4.0%"
+        ],
+        [
+          "Regina",
+          "124.5",
+          "2.0%",
+          "7.6%"
+        ],
+        [
+          "Saskatoon",
+          "115.3",
+          "2.0%",
+          "5.7%"
+        ],
+        [
+          "Calgary",
+          "112.0",
+          "−0.1%",
+          "−0.5%"
+        ],
+        [
+          "Edmonton",
+          "110.9",
+          "1.3%",
+          "3.1%"
+        ],
+        [
+          "Toronto",
+          "105.7",
+          "−0.8%",
+          "0.1%"
+        ],
+        [
+          "Montréal",
+          "115.9",
+          "2.5%",
+          "8.4%"
+        ],
+        [
+          "Vancouver",
+          "109.0",
+          "−0.2%",
+          "0.5%"
+        ]
+      ],
+      "note": "Source: Statistics Canada, Building construction price indexes, second quarter 2026 (released July 24, 2026), Table 1, checked October 14, 2026. The index covers new residential buildings in 15 census metropolitan areas, is not seasonally adjusted, and earlier quarters may be revised."
+    },
+    {
+      "t": "p",
+      "x": "An index of 112.9 means contractors’ prices for new residential buildings in Winnipeg were about 12.9% higher in the second quarter of 2026 than their 2023 average. A quote from a year or two ago may no longer hold, so ask for a current written quote before you settle on a budget."
+    },
+    {
+      "t": "h2",
+      "x": "Is there a reliable renovation cost per square foot in Canada?"
+    },
+    {
+      "t": "p",
+      "x": "No. Cost isn’t spread evenly across a room, so a per-square-foot figure from one project rarely fits another. A small bathroom packs plumbing, tile and fixtures into very little floor, while a basement spreads framing and drywall over a large open area. That’s why we don’t price renovations by the square foot."
+    },
+    {
+      "t": "p",
+      "x": "Our own Winnipeg estimator shows the gap: a bathroom up to 50 sq ft starts at $16,000–$20,000, and a basement up to 500 sq ft starts at $25,000–$80,000. Ten times the floor area doesn’t mean ten times the price. A national average per square foot would blur things further, because construction prices move differently from city to city."
+    },
+    {
+      "t": "h2",
+      "x": "What does a renovation cost in Winnipeg?"
+    },
+    {
+      "t": "p",
+      "x": "Our instant estimator starts a bathroom renovation in Winnipeg at $16,000, a basement development at $25,000 and a kitchen renovation at $40,000. These are Bridgeland Builders’ own starting ranges for Winnipeg, not national averages. The size of the space sets the range, and your fixtures, finishes and extras move it from there."
+    },
+    {
+      "t": "table",
+      "caption": "Bridgeland Builders’ Winnipeg estimator starting ranges (October 2026)",
+      "head": [
+        "Service",
+        "Starting range by size"
+      ],
+      "rows": [
+        [
+          "[Bathroom renovation](/services/bathroom-renovations/cost)",
+          "$16,000–$36,000 (up to 50 sq ft through 150+ sq ft)"
+        ],
+        [
+          "[Basement development](/services/basement-renovations/cost)",
+          "$25,000–$150,000 (up to 500 sq ft through 1,500 sq ft)"
+        ],
+        [
+          "[Kitchen renovation](/services/kitchen-renovations/cost)",
+          "$40,000–$190,000 (up to 100 sq ft through over 200 sq ft)"
+        ]
+      ],
+      "note": "Each service links to its full Winnipeg cost guide. Options such as a new shower, cabinets, countertops, flooring or an egress window each have their own range in the estimator. Your written quote after the free on-site visit is the final price."
+    },
+    {
+      "t": "p",
+      "x": "Whole-home renovations, additions and commercial projects aren’t in the estimator, because their scope varies too much to price from a few questions. They’re priced after a free on-site visit. To see what moves each number, read our [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+    },
+    {
+      "t": "h2",
+      "x": "What makes one renovation cost more than another?"
+    },
+    {
+      "t": "p",
+      "x": "The same few things move the price on almost every job, wherever you live:"
+    },
+    {
+      "t": "li",
+      "x": "**Size and scope:** more floor area and more rooms mean more material and more labour hours."
+    },
+    {
+      "t": "li",
+      "x": "**Layout changes:** moving plumbing, gas lines or walls brings in more trades, and taking out a load-bearing wall needs a beam and the right permits."
+    },
+    {
+      "t": "li",
+      "x": "**Finish level:** stock or custom cabinets, laminate or quartz, a standard vanity or a custom one."
+    },
+    {
+      "t": "li",
+      "x": "**What’s behind the walls:** older homes can hide outdated wiring, tired plumbing or water damage that only shows up once the walls are opened."
+    },
+    {
+      "t": "li",
+      "x": "**Permits and code items:** permit fees, and requirements such as a bedroom egress window, are part of the cost."
+    },
+    {
+      "t": "li",
+      "x": "**Changes once work starts:** the federal Office of Consumer Affairs points out that changing your mind partway through a project changes the cost too."
+    },
+    {
+      "t": "h2",
+      "x": "How do you get an accurate renovation price?"
+    },
+    {
+      "t": "p",
+      "x": "Get written quotes for the same scope. The federal Office of Consumer Affairs suggests meeting at least three contractors and comparing quotes built on the same specifications, with all costs and taxes shown. A quote from someone who has seen your home is the only number that accounts for your walls, wiring and plumbing."
+    },
+    {
+      "t": "p",
+      "x": "Before you collect quotes, our [home renovation planning guide](/blog/home-renovation-planning-guide-canada) helps you build a budget with a contingency, and our [home renovation financing guide](/blog/home-renovation-financing-canada) compares the ways Canadians pay for the work. For credits and rebates, see our guide to [renovation grants and tax credits in Manitoba](/blog/manitoba-renovation-tax-credits-rebates)."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Renovating in Winnipeg or a nearby community? [Book a free on-site visit](/book-online): we’ll look at the space, talk through what you want and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote), or see how we plan a [kitchen renovation](/services/kitchen-renovations) or a [whole-home renovation](/services/whole-home-renovations)."
+    }
+  ]
+}

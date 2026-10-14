@@ -6,6 +6,7 @@
   "metaDescription": "How backwater valves and sump pits protect Winnipeg basements, which homes must have them, the permits involved, and why the City subsidy no longer exists.",
   "excerpt": "Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.",
   "date": "2026-10-13",
+  "updated": "2026-10-14",
   "cats": [
     "Basements & Suites"
   ],
@@ -63,7 +64,7 @@
     },
     {
       "q": "Can I install a backwater valve myself?",
-      "a": "The City advises having a licensed plumber install a backwater valve or sump pit drainage system. A homeowner can take out a plumbing permit only for a single detached house that is their primary residence and only if they do the work themselves. Either way the work needs a plumbing permit and a City inspection. If the work includes a sump pit with new or replaced weeping tile, a building permit and an electrical permit are needed too."
+      "a": "The City advises using a licensed plumber. A homeowner can take out the plumbing permit only for work they do themselves in the single detached house that is their primary residence. Either way, the work needs a plumbing permit and a City inspection, and a sump pit with new or replaced weeping tile also needs building and electrical permits."
     },
     {
       "q": "How often should I test my sump pump?",
@@ -144,7 +145,11 @@
     },
     {
       "t": "p",
-      "x": "The City says homes not protected by a backwater valve or sump pit drainage system are at greater risk of basement flooding. The two work together: if the weeping tile drains into the sewer line and there is no sump pit, that water has nowhere to go while the backwater valve is closed. Ask a licensed plumber how your house is connected before you decide what to add."
+      "x": "The City says homes not protected by a backwater valve or sump pit drainage system are at greater risk of basement flooding. The two work together: if the weeping tile drains into the sewer line and there is no sump pit, that water has nowhere to go while the backwater valve is closed."
+    },
+    {
+      "t": "p",
+      "x": "Ask a licensed plumber how your house is connected before you decide what to add."
     },
     {
       "t": "h2",
@@ -220,7 +225,11 @@
     },
     {
       "t": "p",
-      "x": "A dry basement is the starting point for any [basement renovation](/services/basement-renovations). Every project starts with a free on-site visit and a free written quote; ask us to look at drainage and moisture while we’re there. [Book your visit](/book-online), or see [what a basement renovation costs in Winnipeg](/services/basement-renovations/cost) first. If spring is coming, our [spring flood prep checklist](/blog/spring-flood-prep-winnipeg-basements) has the seasonal steps."
+      "x": "A dry basement is the starting point for any [basement renovation](/services/basement-renovations). Every project starts with a free on-site visit and a free written quote; ask us to look at drainage and moisture while we’re there."
+    },
+    {
+      "t": "p",
+      "x": "[Book your visit](/book-online), or see [what a basement renovation costs in Winnipeg](/services/basement-renovations/cost) first. If spring is coming, our [spring flood prep checklist](/blog/spring-flood-prep-winnipeg-basements) has the seasonal steps."
     }
   ]
 }

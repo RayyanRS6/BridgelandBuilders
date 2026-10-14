@@ -465,11 +465,7 @@
         "hotel interior renovation Winnipeg",
         "restaurant renovation timeline Winnipeg"
       ],
-      "ownerConfirms": [
-        "hotel renovation Winnipeg",
-        "hotel interior renovation Winnipeg"
-      ],
-      "note": "hotels are a section until the owner confirms hotel work"
+      "note": "hotels are a section of this page (hotel work confirmed by the owner 2026-10-13)"
     },
     "/services/retail-renovations": {
       "status": "live",
@@ -591,11 +587,11 @@
       "note": "Canada planning guide + checklist (published 2026-10-13)"
     },
     "/blog/home-renovation-cost-canada": {
-      "status": "planned",
+      "status": "live",
       "primary": ["how much does a home renovation cost in Canada"],
       "secondary": ["renovation cost per square foot Canada"],
       "supporting": [],
-      "note": "Canada cost guide (calendar Aug 2027), only with credible national sources; slug proposed, not fixed in plan D6"
+      "note": "Canada cost guide (published 2026-10-14): Statistics Canada building construction price index, no current official per-project average; only Bridgeland's own Winnipeg ranges as prices"
     },
     "/blog/home-renovation-financing-canada": {
       "status": "live",
@@ -795,8 +791,8 @@
     { "keyword": "basement renovation near me", "fallback": "/services/basement-renovations" },
     { "keyword": "commercial renovation near me", "fallback": "/services/commercial-renovations" },
     { "keyword": "commercial renovation contractors near me", "fallback": "/services/commercial-renovations" },
-    { "keyword": "office renovation near me", "fallback": "/services/office-renovations", "interimFallback": "/services/commercial-renovations" },
-    { "keyword": "retail renovation contractor near me", "fallback": "/services/retail-renovations", "interimFallback": "/services/commercial-renovations" },
+    { "keyword": "office renovation near me", "fallback": "/services/office-renovations" },
+    { "keyword": "retail renovation contractor near me", "fallback": "/services/retail-renovations" },
     { "keyword": "home addition contractor near me", "fallback": "/services/home-additions" }
   ],
   "notTargeted": [

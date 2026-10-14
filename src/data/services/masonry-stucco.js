@@ -6,7 +6,7 @@
 // Scope stays to repairs, refinishing and veneer accents (no structural or
 // foundation repair claims: those go to an engineer). Every rule and
 // guideline in `local` and `faqs` was checked against the page listed in
-// local.sources on 2026-10-13. Owner sign-off (signoff) is still to be added.
+// local.sources on 2026-10-13. Owner sign-off (ownerSignoff) is still to be added.
 
 const ACCESSED = '2026-10-13';
 
@@ -115,7 +115,7 @@ export default {
     serviceType: 'Masonry and stucco repair',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'masonry and stucco Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.
@@ -125,5 +125,5 @@ export default {
   related: ['/services/exterior-painting', '/services/windows-and-doors', '/services/whole-home-renovations', '/services/commercial-renovations'],
   // Unpublished slugs are skipped by ServiceRoute until the post goes live.
   guides: ['renovating-a-character-home-in-winnipeg', 'clay-soil-basement-cracks-winnipeg'],
-  signoff: null,
+  ownerSignoff: null,
 };

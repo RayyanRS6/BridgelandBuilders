@@ -9,19 +9,30 @@ import { track } from '../lib/analytics.js';
  *   click_email    any mailto: link          { link_location, link_text }
  *   cta_click      any element with data-cta { cta_id, link_location, link_url, link_text }
  *   form_start     first field focused in a <form> on this page { form_id, form_page }
+ *   chat_start     first tap on the chat widget (Emma) that leaves the chat
+ *                  open, once per page load       { link_location, form_page }
+ *
+ * chat_start only reads the widget's state (GoHighLevel's
+ * window.leadConnector.chatWidget.isActive()) after a tap on its
+ * <chat-widget> element: it never hooks into or waits on the chat itself.
+ * Check once in production that a real chat open sends it.
  *
  * link_location is the nearest data-location attribute, else a named area
  * (top_bar, hero, quote_form), else the landmark the link sits in (header,
- * nav, main, footer, aside). Lead, booking and estimator
+ * nav, main, footer, aside). Lead, booking, contact-form and estimator
  * events are sent by the components that know about them
- * (QuoteBookingForm, EstimatorEmbed).
+ * (QuoteBookingForm, LeadConnectorForm, EstimatorEmbed).
  *
  * installAnalyticsListeners() is called once from src/main.jsx; rendering
  * <AnalyticsListeners /> anywhere does the same and is harmless if both happen.
  */
 
 let installed = false;
+let chatStarted = false;
 const startedForms = new WeakSet();
+
+// The chat opens with an animation, so its state is read twice after a tap.
+const CHAT_CHECK_DELAYS_MS = [400, 1500];
 
 // Site chrome that isn't a landmark element.
 const NAMED_AREAS = [
@@ -55,9 +66,34 @@ function urlOf(href) {
   }
 }
 
+/** Sends chat_start if the chat widget reports itself open. Never throws. */
+function checkChatOpen() {
+  if (chatStarted) return;
+  try {
+    const widget = window.leadConnector && window.leadConnector.chatWidget;
+    if (!widget || typeof widget.isActive !== 'function') return;
+    // isActive() may answer directly or with a promise.
+    Promise.resolve(widget.isActive())
+      .then((active) => {
+        if (active !== true || chatStarted) return;
+        chatStarted = true;
+        track('chat_start', { link_location: 'chat_widget', form_page: window.location.pathname });
+      })
+      .catch(() => {});
+  } catch {
+    /* never affect the chat */
+  }
+}
+
 function onClick(event) {
   const target = event.target instanceof Element ? event.target : null;
   if (!target) return;
+
+  // Taps inside the widget's shadow DOM reach the document as taps on the
+  // <chat-widget> element itself.
+  if (!chatStarted && target.closest('chat-widget')) {
+    for (const delay of CHAT_CHECK_DELAYS_MS) window.setTimeout(checkChatOpen, delay);
+  }
 
   const link = target.closest('a[href]');
   const href = link ? link.getAttribute('href') || '' : '';

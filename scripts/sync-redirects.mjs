@@ -25,10 +25,16 @@
  *   - warnings: destinations that are not a known route or file, destinations
  *     that are noindex, sources still listed in a stale prerender-routes.json,
  *     interim (307) rules older than 45 days;
- *   - writes absolute apex destinations (SITE_URL + path, plan §1: a legacy
- *     URL served on another host still lands on the apex in one hop),
- *     explicit rules first and wildcard rules last, and leaves every other
- *     part of vercel.json exactly as it was.
+ *   - writes absolute apex destinations (CANONICAL_SITE_URL + path), explicit
+ *     rules first, then wildcard rules, then the whole-host rules
+ *     (HOST_REDIRECTS: every path on e.g. the public vercel.app alias -> the
+ *     same path on the apex), and leaves every other part of vercel.json
+ *     exactly as it was. Absolute destinations mean a legacy URL requested on
+ *     a host that serves this deployment directly (the vercel.app alias)
+ *     lands on its final apex page in one hop. They do not help www or
+ *     http://: Vercel's domain-level redirect (www -> apex, http -> https)
+ *     runs before vercel.json, so a legacy URL there takes one extra hop
+ *     (www -> apex legacy URL -> final page).
  *
  * The build runs this with --check, so a vercel.json that no longer matches
  * src/data/redirects.js (destination, 307/308 or a missing rule) fails it.
@@ -150,8 +156,26 @@ export function orderRules(rules) {
  */
 export const absoluteDestination = (to) => `${CANONICAL_SITE_URL.replace(/\/+$/, '')}${to}`;
 
-export const toVercelRules = (rules) =>
-  orderRules(rules).map((r) => ({ source: r.from, destination: absoluteDestination(r.to), permanent: !r.temporary }));
+/**
+ * Vercel rules for HOST_REDIRECTS: every path on the host -> the same path on
+ * the apex, permanent. They come after every legacy rule (see toVercelRules).
+ */
+export const hostRulesToVercel = (hostRules = []) =>
+  hostRules.map((r) => ({
+    source: '/:path*',
+    has: [{ type: 'host', value: r.host }],
+    destination: absoluteDestination('/:path*'),
+    permanent: true,
+  }));
+
+export const toVercelRules = (rules, hostRules = []) => [
+  ...orderRules(rules).map((r) => ({ source: r.from, destination: absoluteDestination(r.to), permanent: !r.temporary })),
+  ...hostRulesToVercel(hostRules),
+];
+
+/** One line per rule, for --check (host condition included). */
+export const ruleKey = (r) =>
+  `${r.source}${r.has ? ` [${r.has.map((h) => `${h.type}=${h.value}`).join(', ')}]` : ''} -> ${r.destination} (${r.permanent ? 308 : 307})`;
 
 /* ------------------------------------------------- vercel.json rewriting */
 
@@ -205,11 +229,18 @@ function topLevelValueSpan(text, key) {
   return null;
 }
 
+/** One-line JSON with a space after each ':' and ',' ({ "source": "/a", … }). */
+function inlineJson(value) {
+  if (Array.isArray(value)) return `[${value.map(inlineJson).join(', ')}]`;
+  if (value && typeof value === 'object') {
+    return `{ ${Object.entries(value).map(([k, v]) => `${JSON.stringify(k)}: ${inlineJson(v)}`).join(', ')} }`;
+  }
+  return JSON.stringify(value);
+}
+
 function renderRedirects(vercelRules, eol) {
   if (!vercelRules.length) return '[]';
-  const lines = vercelRules.map(
-    (r) => `    { "source": ${JSON.stringify(r.source)}, "destination": ${JSON.stringify(r.destination)}, "permanent": ${r.permanent} }`
-  );
+  const lines = vercelRules.map((r) => `    ${inlineJson(r)}`);
   return `[${eol}${lines.join(`,${eol}`)}${eol}  ]`;
 }
 
@@ -355,6 +386,58 @@ export function validate(rules, effective, resolved, known, leave404, { allowLiv
   return { errors, warnings };
 }
 
+/** HOST_REDIRECTS: a plain host name each, never the apex itself (a loop). */
+export function validateHostRules(hostRules) {
+  const errors = [];
+  const apex = new URL(CANONICAL_SITE_URL).host;
+  const seen = new Set();
+  hostRules.forEach((rule, i) => {
+    const host = rule && rule.host;
+    const where = `HOST_REDIRECTS #${i + 1} ${host}`;
+    if (typeof host !== 'string' || !/^[a-z0-9-]+(?:\.[a-z0-9-]+)+$/.test(host)) {
+      errors.push(`${where}: "host" must be a lowercase host name without scheme, port or path`);
+    } else if (host === apex) {
+      errors.push(`${where}: the apex itself would redirect to itself`);
+    } else if (seen.has(host)) {
+      errors.push(`${where}: duplicate host`);
+    }
+    seen.add(host);
+  });
+  return errors;
+}
+
+/**
+ * Vercel compiles every vercel.json `source` (redirects, rewrites, headers)
+ * with path-to-regexp, which rejects a capturing group inside a custom (...)
+ * group ("Capturing groups are not allowed") and fails the whole deployment.
+ * Nothing else in the build parses these patterns, so check them here: inside
+ * a group, every "(" must open a non-capturing "(?:".
+ */
+function sourcePatternErrors(config) {
+  const errors = [];
+  for (const kind of ['redirects', 'rewrites', 'headers']) {
+    (config[kind] || []).forEach((rule, index) => {
+      const source = rule.source || '';
+      let depth = 0;
+      for (let i = 0; i < source.length; i += 1) {
+        const ch = source[i];
+        if (ch === '\\') {
+          i += 1;
+        } else if (ch === '(') {
+          if (depth > 0 && source[i + 1] !== '?') {
+            errors.push(`vercel.json ${kind}[${index}] source "${source}": capturing group inside a group (character ${i + 1}); use (?:...)`);
+            break;
+          }
+          depth += 1;
+        } else if (ch === ')') {
+          depth = Math.max(0, depth - 1);
+        }
+      }
+    });
+  }
+  return errors;
+}
+
 /* ------------------------------------------------------------------ main */
 
 async function main() {
@@ -362,11 +445,12 @@ async function main() {
   const checkOnly = args.has('--check');
   const allowLivePosts = args.has('--allow-live-posts');
 
-  const { REDIRECTS, LEAVE_404 = [] } = await import('../src/data/redirects.js');
+  const { REDIRECTS, HOST_REDIRECTS = [], LEAVE_404 = [] } = await import('../src/data/redirects.js');
   const known = DEFAULT_KNOWN;
   const effective = applyPlanned(REDIRECTS, known.isLive);
   const resolved = resolveRedirects(REDIRECTS, known.isLive);
   const { errors, warnings } = validate(REDIRECTS, effective, resolved, known, LEAVE_404, { allowLivePosts });
+  errors.push(...validateHostRules(HOST_REDIRECTS));
 
   for (const w of warnings) console.warn(`[redirects] warning: ${w}`);
   if (errors.length) {
@@ -375,17 +459,23 @@ async function main() {
     process.exit(1);
   }
 
-  const vercelRules = toVercelRules(resolved);
+  const vercelRules = toVercelRules(resolved, HOST_REDIRECTS);
   const current = readFileSync(VERCEL_JSON, 'utf8');
+  const patternErrors = sourcePatternErrors({ ...JSON.parse(current), redirects: vercelRules });
+  if (patternErrors.length) {
+    for (const e of patternErrors) console.error(`[redirects] error: ${e}`);
+    process.exit(1);
+  }
   const updated = writeRedirectsInto(current, vercelRules);
 
   const permanent = vercelRules.filter((r) => r.permanent).length;
-  const wildcard = vercelRules.filter((r) => isPattern(r.source)).length;
+  const hostWide = vercelRules.filter((r) => r.has).length;
+  const wildcard = vercelRules.filter((r) => isPattern(r.source) && !r.has).length;
   const chained = resolved.filter((r) => r.chain.length).length;
   const plannedFinal = effective.filter((r) => r.state === 'final').length;
   const plannedInterim = effective.filter((r) => r.state === 'interim').length;
   const plannedPending = REDIRECTS.filter((r) => r.planned).length - plannedFinal - plannedInterim;
-  const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard; ${chained} chain(s) collapsed; planned: ${plannedFinal} live, ${plannedInterim} interim, ${plannedPending} pending)`;
+  const summary = `${vercelRules.length} redirects (${permanent} permanent 308, ${vercelRules.length - permanent} temporary 307, ${wildcard} wildcard, ${hostWide} whole-host; ${chained} chain(s) collapsed; planned: ${plannedFinal} live, ${plannedInterim} interim, ${plannedPending} pending)`;
 
   if (checkOnly) {
     // Compare the redirect rules, not the file's text: Vercel's build rewrites
@@ -393,10 +483,11 @@ async function main() {
     // text comparison would always fail there.
     const committed = (JSON.parse(current).redirects || []).map((r) => ({
       source: r.source,
+      ...(r.has ? { has: r.has } : {}),
       destination: r.destination,
       permanent: r.permanent,
     }));
-    const key = (r) => `${r.source} -> ${r.destination} (${r.permanent ? 308 : 307})`;
+    const key = ruleKey;
     const index = Math.max(committed.length, vercelRules.length);
     let first = -1;
     for (let i = 0; i < index; i += 1) {

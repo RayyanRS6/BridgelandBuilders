@@ -1,22 +1,25 @@
+// Sandra K.'s words, exactly as on /services/whole-home-renovations (real
+// client testimonial, confirmed by the owner 2026-10-13). One quote per name:
+// the kitchen page carries Marvin V.'s. No star glyphs: a rating needs a
+// source (plan §19).
 export default function Testimonial() {
   return (
     <section className="testimonial-section">
       <div className="container">
         <div className="testimonial-card reveal">
           <div className="testimonial-left">
-            <div className="stars-badge">★★★★★</div>
-            <h3 className="testimonial-headline">What Our Clients Say</h3>
+            <h2 className="testimonial-headline">What Our Clients Say</h2>
             <p className="testimonial-sub">In their own words: what it’s like working with Bridgeland Builders.</p>
           </div>
           <div className="testimonial-right">
             <p className="testimonial-quote">
-              “Working with Bridgeland Builders was an incredible experience. Their team demonstrated unmatched expertise and professionalism throughout the entire renovation process. From the initial consultation to the final walkthrough, they kept us informed and ensured every detail reflected our vision. The quality of craftsmanship and materials exceeded our expectations, and their commitment to customer satisfaction truly sets them apart. We couldn’t be happier with our newly transformed space—thank you, Bridgeland Builders!”
+              “We had our whole main floor redone and honestly expected it to be a nightmare. It wasn’t. The crew showed up when they said they would, the site was swept every single night, and when we changed our minds about the flooring halfway through they just sorted it out. The house finally feels like ours.”
             </p>
             <div className="testimonial-author">
-              <div className="author-initial">M</div>
+              <div className="author-initial">S</div>
               <div className="author-info">
-                <h5>Marvin V.</h5>
-                <p>Homeowner ★★★★★</p>
+                <h5>Sandra K.</h5>
+                <p>Homeowner, Whole Home Renovation</p>
               </div>
             </div>
           </div>

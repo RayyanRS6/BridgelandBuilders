@@ -1,6 +1,6 @@
 import EstimatorEmbed from './EstimatorEmbed.jsx';
 
-export default function EstimatorSection({ src, eyebrow = 'Free Price Guide', title, description }) {
+export default function EstimatorSection({ src, eyebrow = 'Free Price Guide', title, description, loading }) {
   return (
     <section className="estimator-section" id="price-guide">
       <div className="container">
@@ -10,7 +10,7 @@ export default function EstimatorSection({ src, eyebrow = 'Free Price Guide', ti
           <p className="section-desc">{description}</p>
         </div>
         <div className="estimator-shell">
-          <EstimatorEmbed src={src} title={`${title} - Price Calculator`} />
+          <EstimatorEmbed src={src} title={`${title} - Price Calculator`} loading={loading} />
         </div>
       </div>
     </section>

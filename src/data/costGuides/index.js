@@ -29,13 +29,14 @@
  *     tables: [{ caption, head: [], rows: [[]], note }],   // rendered as RichBody table blocks
  *     driversTitle?, driversTag?, driversDesc?,
  *     drivers: [{ title, text }],
- *     sections: [{ h2, blocks: [RichBody blocks] }],  // ≤2 budget H2s + PAA H2s
+ *     sections: [{ h2, id?, blocks: [RichBody blocks] }],  // ≤2 budget H2s + PAA H2s; id = the H2's anchor
  *     faqs: [{ q, a }],                               // FAQPage comes only from these
  *     sources: [{ label, url, accessed: 'YYYY-MM-DD' }],
  *     estimatorKey: 'kitchen',                        // key of ESTIMATOR_URLS (estimators.js)
  *     estimatorTitle?, estimatorDesc?,
- *     related: ['/services/kitchen-renovations', ...],
- *     ownerSignoff?: { name, role, date },            // `signoff` is accepted too
+ *     related: ['/services/kitchen-renovations', ...], // "Related Pages" cards: live service pages,
+ *                                                     // live cost guides, /instant-quote, /book-online
+ *     ownerSignoff?: { name, role, date },
  *   }
  * Prices come only from Bridgeland's own estimator ranges / contracts — never
  * competitor or third-party numbers. Title year = the data period.

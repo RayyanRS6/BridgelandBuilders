@@ -5,9 +5,11 @@
 // Safe everywhere: on the server, on localhost, under Do Not Track, before or
 // without either tag, it does nothing. The inline loader in index.html decides
 // whether tags may run and records it in window.__bbMeasure:
-//   { allowed: boolean, ga: 'G-…' | null }
+//   { allowed: boolean, ga: 'G-…' | null, pixel: boolean }
 // gtag() always exists (Consent Mode needs it before gtag.js loads), so "is GA
-// on" is read from __bbMeasure.ga, never from typeof gtag.
+// on" is read from __bbMeasure.ga, never from typeof gtag. `pixel` turns false
+// (and window.fbq is removed) once /api/geo says the visitor is in a region
+// where the Meta Pixel needs consent (Quebec, the EEA, the UK, Switzerland).
 //
 // Elements can carry data-cta="<id>" to be reported as cta_click (see
 // src/components/AnalyticsListeners.jsx).
@@ -29,9 +31,12 @@ export function gaEnabled() {
   return Boolean(measure().ga) && isBrowser() && typeof window.gtag === 'function';
 }
 
-/** True when the Meta Pixel snippet ran (it only runs when tracking is allowed). */
+/**
+ * True when the Meta Pixel snippet ran (it only runs when tracking is allowed)
+ * and wasn't switched off for a consent region.
+ */
 export function pixelEnabled() {
-  return isBrowser() && typeof window.fbq === 'function';
+  return isBrowser() && measure().pixel !== false && typeof window.fbq === 'function';
 }
 
 function debugOn() {
@@ -88,7 +93,8 @@ export function trackPageView({ location: href, title, referrer } = {}) {
 /**
  * A fresh id shared by a browser Pixel event and its server (Conversions API)
  * copy, so Meta counts the pair once. Only issued when the Pixel is running:
- * no id means the server sends nothing either (Do Not Track, localhost).
+ * no id means the server sends nothing either (Do Not Track, localhost,
+ * consent regions).
  */
 export function newEventId() {
   if (!pixelEnabled()) return undefined;

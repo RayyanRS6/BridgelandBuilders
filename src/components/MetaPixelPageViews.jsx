@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { gaEnabled, trackPageView } from '../lib/analytics.js';
+import { gaEnabled, pixelEnabled, trackPageView } from '../lib/analytics.js';
 
 // How long to wait for the new page to set its <title> before sending the
 // GA4 page_view anyway (a lazily loaded page sets it once its code arrives).
@@ -12,6 +12,10 @@ const TITLE_WAIT_MS = 1500;
  * a PageView for every page after that, and — when Google Analytics is on
  * (src/data/analyticsConfig.js) — a GA4 page_view once the new page's title is
  * in place, so reports show real page titles.
+ *
+ * It is the only source of those PageViews: index.html turns off the pixel's
+ * own history tracking (fbq.disablePushState) and lets these repeat PageViews
+ * through (fbq.allowDuplicatePageViews).
  *
  * It remembers the last page it reported, starting with the one the snippet
  * already counted, so the landing page is never counted twice, and hash-only
@@ -28,7 +32,13 @@ export default function MetaPixelPageViews() {
     const page = pathname + search;
     if (page === lastReported.current) return undefined;
     lastReported.current = page;
-    if (typeof window.fbq === 'function') window.fbq('track', 'PageView');
+    if (pixelEnabled()) {
+      try {
+        window.fbq('track', 'PageView');
+      } catch {
+        /* measurement must never break navigation */
+      }
+    }
 
     const referrer = lastUrl.current;
     const href = window.location.href;

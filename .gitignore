@@ -6,6 +6,8 @@ dist-ssr
 .env
 *.zip
 .claude/
+# Local Lighthouse CI runs (npx @lhci/cli autorun with lighthouserc.json)
+.lighthouseci/
 .env.local
 .env.example
 # Original images downloaded for scripts/build-images.mjs (re-fetch with

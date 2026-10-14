@@ -99,7 +99,7 @@ export default {
     // BusinessAudience the commercial verticals carry.
     audience: { '@type': 'Audience', audienceType: 'Homeowners, businesses, property managers, architects and designers' },
     primaryKeyword: 'general contractor Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   typesTitle: 'Projects We Manage as General Contractor',
@@ -138,5 +138,5 @@ export default {
   // Live pages only are shown; drafts appear when they launch.
   related: ['/services/commercial-renovations', '/services/whole-home-renovations', '/services/home-additions', '/services/office-renovations', '/services/restaurant-renovations'],
   guides: ['what-does-a-general-contractor-do', 'how-to-choose-the-right-contractor-for-your-renovation-project', 'winnipeg-renovation-permits'],
-  signoff: null,
+  ownerSignoff: null,
 };

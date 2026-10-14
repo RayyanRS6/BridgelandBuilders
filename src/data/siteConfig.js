@@ -206,6 +206,18 @@ export const GBP = {
   reviewUrl: null,
 };
 
+// Google review summary, read from the live profile (update monthly, plan §20).
+// Never output as aggregateRating/review schema: rating markup on our own
+// business is not allowed (plan §3.5). Any visible display of it waits until
+// count >= 10 (plan §19).
+export const REVIEW_STATS = {
+  rating: 5.0,
+  count: 4,
+  asOf: '2026-10-13',
+  source: 'Google',
+  url: GBP.mapsUrl,
+};
+
 // Opening hours as published on the Google Business Profile (Mon–Fri
 // 8:30 am–4:30 pm, closed weekends). Keep in step with the profile.
 export const BUSINESS_HOURS = [
@@ -230,18 +242,28 @@ export const INSTANT_QUOTE_LABEL = 'Get Free Instant Quote';
 // here; the service pages and /book-online carry the same form.
 export const CONSULTATION_PATH = '/free-quote';
 
+// The renovation cost hub (plan §8). Its page only renders once its guide is
+// live. Defined here rather than in seo.js so the app shell can link to it
+// without pulling the schema builders into the entry chunk; seo.js re-exports it.
+export const COST_HUB_PATH = '/renovation-cost-winnipeg';
+
+// The category line (plan §12): what the business is, in one phrase, the same
+// on listings and social bios as in the schema disambiguation below.
+export const CATEGORY_LINE = 'Renovation and construction contractor based in Winnipeg, Manitoba';
+
 // Verified facts only — taken from the live site. Nothing here is invented.
 export const BUSINESS = {
   name: SITE_NAME,
   legalName: 'Bridgeland Builders',
+  // Long form, for a page that genuinely needs a full paragraph. Schema and
+  // the llms files use shortDescription.
   description:
     'Bridgeland Builders is a Winnipeg renovation and construction company handling whole-home, kitchen, bathroom, basement and commercial renovations, home additions and general contracting across Winnipeg and nearby communities.',
   // The short (≤25-word) description reused across schema, llms files and
   // listings, so every source describes the business the same way.
   shortDescription:
     'Bridgeland Builders is a Winnipeg renovation contractor for kitchens, bathrooms, basements, whole-home renovations, home additions and commercial fit-ups in Winnipeg and nearby communities.',
-  disambiguatingDescription:
-    'Renovation and construction contractor based in Winnipeg, Manitoba, Canada. Not affiliated with Bridgeland, Texas or the Bridgeland neighbourhood of Calgary.',
+  disambiguatingDescription: `${CATEGORY_LINE}, Canada. Not affiliated with Bridgeland, Texas or the Bridgeland neighbourhood of Calgary.`,
   slogan: 'Bridging dreams into reality',
   telephone: SITE_PHONE_E164,
   email: SITE_EMAIL,

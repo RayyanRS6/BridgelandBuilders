@@ -148,7 +148,7 @@ export const SERVICE_AREAS_CONTENT = {
     },
     {
       q: 'Who issues building permits in the communities around Winnipeg?',
-      a: `It depends on where the property is. In Manitoba, building permits come from the municipality, a planning district or the province’s Inspection and Technical Services. For the communities we serve, permits are issued by ${authoritySentence()}. Where your project needs a permit, we look after the application and the inspections.`,
+      a: `It depends on the community. For the ones we serve, permits are issued by ${authoritySentence()}. Where your project needs a permit, we look after the application and the inspections.`,
     },
     {
       q: 'Do you work in all Winnipeg neighbourhoods?',

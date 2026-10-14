@@ -10,8 +10,9 @@
 // progress updates and permit coordination are owner-confirmed. Not confirmed,
 // so not claimed: in-house design, drawings or engineering, "one team",
 // second-storey additions. Every City of Winnipeg statement in `local` and the
-// FAQs was checked on 2026-10-13 against the sources in local.sources. No cost
-// teaser: the estimator has no additions price data.
+// FAQs was checked on 2026-10-13 against the sources in local.sources. The
+// estimator has no additions price data: the cost teaser links the cost hub's
+// "priced after a visit" section and carries no numbers.
 
 export default {
   // Project slug kept from before the rename to "home additions" (plan D6): it
@@ -144,13 +145,18 @@ export default {
       'Home additions in Winnipeg that match the existing house, with permits, foundation, structure and finishes coordinated. Free on-site visit and quote.',
     serviceType: 'Home addition',
     primaryKeyword: 'home addition Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
-  // No costTeaser: the estimator has no additions data (cost page unpublished).
-  costTeaser: null,
+  // No additions cost page (the estimator has no additions data), so the
+  // teaser points to the cost hub's "priced after a visit" section. No numbers.
+  costTeaser: {
+    text: 'Home additions are priced in a free written quote after an on-site visit, once we have seen the site and agreed the scope with you. Our Winnipeg cost guide explains what moves the price of a renovation and how larger projects are quoted.',
+    to: '/renovation-cost-winnipeg#priced-after-a-visit',
+    label: 'Renovation costs in Winnipeg',
+  },
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/whole-home-renovations', '/services/basement-renovations', '/services/kitchen-renovations', '/services/general-contracting'],
+  related: ['/services/whole-home-renovations', '/services/basement-renovations', '/services/kitchen-renovations', '/services/general-contracting', '/services/windows-and-doors', '/services/masonry-stucco'],
   guides: ['home-additions-and-zoning-winnipeg', 'what-does-a-general-contractor-do', 'how-to-choose-the-right-contractor-for-your-renovation-project'],
-  signoff: null,
+  ownerSignoff: null,
 };

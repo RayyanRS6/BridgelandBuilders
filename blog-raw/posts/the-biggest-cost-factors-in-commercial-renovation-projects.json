@@ -20,7 +20,7 @@
   "reviewedBy": "",
   "answer": "The biggest cost drivers in a commercial renovation are usually behind the walls, not the finishes: mechanical, electrical, plumbing and fire protection changes; code requirements triggered by a change of use; hidden conditions such as asbestos; after-hours or phased work; and scope changes once construction starts. Complete drawings and a contingency keep them in check.",
   "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
-  "heroAlt": "Commercial renovation site with construction materials and worker.",
+  "heroAlt": "Worker in a hard hat and safety vest in a gutted commercial space, with the title “The Biggest Cost Factors: Commercial Renovation Projects”",
   "sources": [
     {
       "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
@@ -79,7 +79,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Two commercial spaces of the same size can cost very different amounts to renovate. The difference is rarely the paint or flooring. It is what sits behind the walls and above the ceiling, what the building code asks for once the use changes, and how the work has to be scheduled around a business that wants to stay open. This guide explains the main cost factors and how to control each one."
+      "x": "Two commercial spaces of the same size can cost very different amounts to renovate. The difference is rarely the paint or flooring. It is what sits behind the walls and above the ceiling, what the building code asks for once the use changes, and how the work has to be scheduled around a business that wants to stay open."
+    },
+    {
+      "t": "p",
+      "x": "This guide explains the main cost factors and how to control each one."
     },
     {
       "t": "p",
@@ -154,7 +158,11 @@
     },
     {
       "t": "p",
-      "x": "Asbestos has its own rules. Where asbestos is suspected, Manitoba's workplace safety rules require the work area to be inspected and an asbestos inventory prepared by a person competent in identifying asbestos-containing material before renovation or demolition, and suspected material is treated as asbestos unless it is found to be asbestos-free. Budget for testing, and for abatement if needed, before demolition starts."
+      "x": "Asbestos has its own rules. Where asbestos is suspected, Manitoba's workplace safety rules require the work area to be inspected and an asbestos inventory prepared by a person competent in identifying asbestos-containing material before renovation or demolition, and suspected material is treated as asbestos unless it is found to be asbestos-free."
+    },
+    {
+      "t": "p",
+      "x": "Budget for testing, and for abatement if needed, before demolition starts."
     },
     {
       "t": "h2",
@@ -214,7 +222,11 @@
     },
     {
       "t": "p",
-      "x": "Energy upgrades can lower operating costs, and some qualify for incentives: Efficiency Manitoba's Business Lighting Program says not to buy materials or start until your application is approved, so apply before ordering fixtures. After-hours work is a trade-off too. Within 150 metres of a home, the City limits loud construction to 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so late shifts suit quieter tasks."
+      "x": "Energy upgrades can lower operating costs, and some qualify for incentives: Efficiency Manitoba's Business Lighting Program says not to buy materials or start until your application is approved, so apply before ordering fixtures."
+    },
+    {
+      "t": "p",
+      "x": "After-hours work is a trade-off too. Within 150 metres of a home, the City limits loud construction to 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so late shifts suit quieter tasks."
     },
     {
       "t": "h2",

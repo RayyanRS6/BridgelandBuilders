@@ -6,6 +6,7 @@
   "metaDescription": "What Winnipeg requires to finish a basement: when you need a permit, ceiling heights, bedroom windows, insulation, alarms, drawings and inspections.",
   "excerpt": "What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.",
   "date": "2026-10-13",
+  "updated": "2026-10-14",
   "cats": [
     "Permits & Planning",
     "Basements & Suites"
@@ -78,7 +79,7 @@
     },
     {
       "q": "What ceiling height do I need to finish a basement in Winnipeg?",
-      "a": "The City’s guide sets 2.1 m (6 ft. 11 in.) from finished floor to ceiling for bedrooms, bathrooms, halls and other finished rooms; bedrooms and bathrooms need it over only part of the floor, next to the entry. Under beams on the way to laundry and storage, 2 m (6 ft. 7 in.) is allowed. Measure under beams and ducts first."
+      "a": "The City’s guide sets 2.1 m (6 ft. 11 in.) from finished floor to ceiling for bedrooms, bathrooms, halls and other finished rooms; bedrooms and bathrooms need it over part of the floor, next to the entry. Under beams on the way to laundry and storage, 2 m (6 ft. 7 in.) is allowed. Measure under beams and ducts first."
     },
     {
       "q": "Can I do my own basement electrical and plumbing in Winnipeg?",
@@ -92,7 +93,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Basement development is the City of Winnipeg’s term for turning an unfinished lower level into rooms, bedrooms or living space. The City updated its basement construction guide and permit application form in October 2025, and most of the rules that shape a layout, such as ceiling heights, bedroom windows and door widths, are in them. Here’s what they say in plain terms, checked on October 13, 2026. If anything here differs from the City’s documents or by-laws, theirs govern."
+      "x": "Basement development is the City of Winnipeg’s term for turning an unfinished lower level into rooms, bedrooms or living space. The City updated its basement construction guide and permit application form in October 2025, and most of the rules that shape a layout, such as ceiling heights, bedroom windows and door widths, are in them."
+    },
+    {
+      "t": "p",
+      "x": "Here’s what they say in plain terms, checked on October 13, 2026. If anything here differs from the City’s documents or by-laws, theirs govern."
     },
     {
       "t": "h2",
@@ -104,7 +109,11 @@
     },
     {
       "t": "p",
-      "x": "A development permit is a separate zoning approval. The basement application form asks you to declare whether you need one and warns that the building permit will be refused if it turns out you did. One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite."
+      "x": "A development permit is a separate zoning approval. The basement application form asks you to declare whether you need one and warns that the building permit will be refused if it turns out you did."
+    },
+    {
+      "t": "p",
+      "x": "One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite."
     },
     {
       "t": "h2",

@@ -76,7 +76,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "An addition is often the answer when you like your street but have run out of room: a bigger kitchen, a family room, a main-floor bedroom or a proper mudroom. Before anyone draws it, though, the addition has to fit your lot's zoning, and before anyone builds it, the drawings have to pass a building permit review. Knowing how those two steps work saves design time and avoids surprises."
+      "x": "An addition is often the answer when you like your street but have run out of room: a bigger kitchen, a family room, a main-floor bedroom or a proper mudroom."
+    },
+    {
+      "t": "p",
+      "x": "Before anyone draws it, though, the addition has to fit your lot's zoning, and before anyone builds it, the drawings have to pass a building permit review. Knowing how those two steps work saves design time and avoids surprises."
     },
     {
       "t": "h2",
@@ -133,7 +137,11 @@
     },
     {
       "t": "p",
-      "x": "A building location certificate, prepared by a Manitoba land surveyor, shows exactly where the existing house sits on the lot. The City may ask for one with a variance application, and even when it is not required it is a reliable starting point for design. Riverside lots need extra care, because site plans for variance applications show floodway and flood fringe levels where they apply."
+      "x": "A building location certificate, prepared by a Manitoba land surveyor, shows exactly where the existing house sits on the lot. The City may ask for one with a variance application, and even when it is not required it is a reliable starting point for design."
+    },
+    {
+      "t": "p",
+      "x": "Riverside lots need extra care, because site plans for variance applications show floodway and flood fringe levels where they apply."
     },
     {
       "t": "h2",
@@ -169,7 +177,11 @@
     },
     {
       "t": "p",
-      "x": "For a typical single-family addition, such as a family room or a larger kitchen, the City's pages do not describe new addition rules: you still need the development permit and building permit above. The changes matter more if you are thinking of adding a unit rather than a room, and whether your lot qualifies depends on its zoning and other conditions. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) covers the suite side of that question."
+      "x": "For a typical single-family addition, such as a family room or a larger kitchen, the City's pages do not describe new addition rules: you still need the development permit and building permit above."
+    },
+    {
+      "t": "p",
+      "x": "The changes matter more if you are thinking of adding a unit rather than a room, and whether your lot qualifies depends on its zoning and other conditions. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) covers the suite side of that question."
     },
     {
       "t": "p",

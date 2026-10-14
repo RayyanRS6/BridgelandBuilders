@@ -1,8 +1,9 @@
 /**
  * Content for /editorial-policy (plan §11.3): how the site's guides and service
  * pages are written, sourced, checked and corrected. Every statement here is a
- * practice this site's publishing process enforces (drafts stay unpublished
- * until signed off, sources carry checked dates) — keep it that way. No claims
+ * practice this site's publishing process can show (sources carry checked
+ * dates, and an owner sign-off appears on a page only once it is recorded in
+ * that page's `ownerSignoff`) — keep it that way. No claims
  * about licences, insurance, WCB coverage or warranties belong on this page,
  * and nothing about how reviews are requested until the owner confirms the
  * practice (owner input: review-request wording, plan §16).
@@ -18,7 +19,7 @@
 const ACCESSED = '2026-10-13';
 
 export const EDITORIAL_POLICY = {
-  lastUpdated: '2026-10-13',
+  lastUpdated: '2026-10-14',
   hero: {
     eyebrow: 'Editorial Policy',
     title: 'HOW WE WRITE',
@@ -28,7 +29,7 @@ export const EDITORIAL_POLICY = {
   },
   summaryTitle: 'The short version',
   summary: [
-    'Our pages are written for Bridgeland Builders, and new pages stay unpublished until Bridgeland Builders has reviewed them.',
+    'Our pages are written for Bridgeland Builders from the company’s own information and from official sources.',
     'Facts about permits, programs and rules come from official sources, linked with the date we checked them.',
     'Any price ranges we publish are based on our own figures, never on other contractors’ prices.',
     'If AI tools help draft a page, a person checks every fact before it is published.',
@@ -40,7 +41,11 @@ export const EDITORIAL_POLICY = {
       blocks: [
         {
           t: 'p',
-          x: 'The guides, service pages and articles on this site are written for Bridgeland Builders and credited to the Bridgeland Builders team. New pages are kept as unpublished drafts until Bridgeland Builders has reviewed and approved them.',
+          x: 'The guides, service pages and articles on this site are written for Bridgeland Builders and credited to the [Bridgeland Builders team](/about-us). They are written from Bridgeland Builders’ own information, such as how we run a project, our timelines and our estimator’s price ranges, and from official sources for rules and programs.',
+        },
+        {
+          t: 'p',
+          x: 'When Bridgeland Builders or a reader points out something that is wrong or out of date, we correct the page. When Bridgeland Builders signs off a page, the page shows who reviewed it and the date.',
         },
         {
           t: 'p',

@@ -36,7 +36,7 @@ export default {
     paragraphs: [
       'An office renovation reworks a workspace around how your team works now: private offices, meeting rooms, open work areas, a staff kitchen, washrooms, lighting, power and data. In a leased unit it’s usually called a fit-up or tenant improvement, and work regulated by the building code needs a City of Winnipeg building permit.',
       'The lease drives the schedule. Your move-in date, any free-rent period and, in many leases, the landlord’s approval of your plans all set how much time there is to build. Bring the lease to the site visit and we’ll plan from those dates.',
-      'If your team stays in the space during the work, we split it into phases and schedule the loud work, such as demolition and cutting, for evenings and weekends where the City’s noise rules allow. You get a progress update every week, so you can tell your staff what’s happening next.',
+      'If your team stays in the space during the work, we split it into phases and schedule the loud work, such as demolition and cutting, for evenings and weekends where the City’s noise rules allow. You get a progress update every week, so you can tell everyone in the company what’s happening next.',
       'Already have drawings from an architect or interior designer? We build to supplied drawings. If you don’t, start with the site visit: we’ll talk through the layout and tell you whether the City is likely to ask for professional drawings for your scope.',
     ],
     checklist: ['Tenant Fit-Ups', 'Meeting Rooms & Offices', 'Partitions & Ceilings', 'Lighting, Power & Data'],
@@ -93,11 +93,11 @@ export default {
     serviceType: 'Office renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'office renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   typesTitle: 'Types of Office Renovations',
-  typesDesc: 'From a light refresh to a full fit-up of a new unit.',
+  typesDesc: 'From a light refresh to a full remodel of your current office or a fit-up of a new unit.',
   types: [
     { title: 'Tenant Fit-Up', text: 'Turning a bare or previous-tenant unit into your office, usually against a fixed move-in date in your lease.' },
     { title: 'Office Refresh', text: 'New flooring, paint, lighting and finishes in the layout you already have, with much of the work possible after hours.' },
@@ -129,10 +129,15 @@ export default {
     ],
   },
 
-  // Commercial cost page stays unpublished (no data, plan §8).
-  costTeaser: null,
+  // Commercial cost page stays unpublished (no data, plan §8): the teaser
+  // points to the cost hub's "priced after a visit" section. No numbers.
+  costTeaser: {
+    text: 'Office renovations are priced in a free written quote after a site visit, once we have walked the space with you and seen your lease dates. Our Winnipeg cost guide explains what moves the price of a renovation.',
+    to: '/renovation-cost-winnipeg#priced-after-a-visit',
+    label: 'Renovation costs in Winnipeg',
+  },
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/commercial-renovations', '/services/general-contracting', '/services/retail-renovations', '/services/medical-dental-office-renovations'],
+  related: ['/services/commercial-renovations', '/services/general-contracting', '/services/retail-renovations', '/services/medical-dental-office-renovations', '/services/demolition'],
   guides: ['office-fit-up-lease-planning-winnipeg', 'how-to-balance-functionality-and-aesthetics-in-a-commercial-space', 'how-to-prepare-your-business-for-a-major-renovation'],
-  signoff: null,
+  ownerSignoff: null,
 };

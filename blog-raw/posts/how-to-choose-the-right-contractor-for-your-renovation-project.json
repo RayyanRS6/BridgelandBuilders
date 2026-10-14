@@ -21,7 +21,7 @@
   "reviewedBy": "",
   "answer": "Verify before you compare prices: a current WCB Manitoba clearance, a liability insurance certificate, a registered business name, recent reviews and references, and a written contract that names who pulls permits, sets the deposit and payment schedule, and puts every change in writing. Then compare detailed written quotes for the same scope.",
   "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-  "heroAlt": "Commercial remodel project with worker and blueprints.",
+  "heroAlt": "Title graphic reading “How to Avoid Unexpected Expenses? Master cost control and budgeting strategies” beside a model house and a calculator on a desk",
   "sources": [
     { "label": "WCB Manitoba: Clearances", "url": "https://www.wcb.mb.ca/employers/clearances/", "accessed": "2026-10-13" },
     { "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)", "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/", "accessed": "2026-10-13" },
@@ -62,7 +62,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Most renovation problems trace back to decisions made before any work started: who was hired, and what was written down. This checklist is built for homeowners in Winnipeg and nearby communities, but the same steps answer how to choose a renovation contractor anywhere in Canada. Each check takes a few minutes, and most use public tools from the Province, the City or the Workers Compensation Board."
+      "x": "Most renovation problems trace back to decisions made before any work started: who was hired, and what was written down."
+    },
+    {
+      "t": "p",
+      "x": "This checklist is built for homeowners in Winnipeg and nearby communities, but the same steps answer how to choose a renovation contractor anywhere in Canada. Each check takes a few minutes, and most use public tools from the Province, the City or the Workers Compensation Board."
     },
     {
       "t": "h2",
@@ -121,7 +125,11 @@
     { "t": "li", "x": "How changes are priced and approved, and the warranty terms." },
     {
       "t": "p",
-      "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment. The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
+      "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment."
+    },
+    {
+      "t": "p",
+      "x": "The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
     },
     {
       "t": "h2",
@@ -133,7 +141,11 @@
     },
     {
       "t": "p",
-      "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits. A contractor who suggests skipping a required permit, or asks you to apply for work they will do, is a reason to walk away."
+      "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+    },
+    {
+      "t": "p",
+      "x": "A contractor who suggests skipping a required permit, or asks you to apply for work they will do, is a reason to walk away."
     },
     {
       "t": "h2",
@@ -167,7 +179,11 @@
     { "t": "li", "x": "Vague answers about who the electrician, plumber and other subtrades will be." },
     {
       "t": "p",
-      "x": "If you sign with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Direct sellers must also be licensed by the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html), so ask to see the licence. Meeting contractors at a home show? See our [questions to ask at the Winnipeg Renovation Show](/blog/winnipeg-renovation-show-questions-to-ask)."
+      "x": "If you sign with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Direct sellers must also be licensed by the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html), so ask to see the licence."
+    },
+    {
+      "t": "p",
+      "x": "Meeting contractors at a home show? See our [questions to ask at the Winnipeg Renovation Show](/blog/winnipeg-renovation-show-questions-to-ask)."
     },
     {
       "t": "h2",

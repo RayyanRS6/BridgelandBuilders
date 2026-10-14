@@ -53,7 +53,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Of all the checks you can run on a contractor, a WCB clearance is one of the quickest. It's a letter from the Workers Compensation Board of Manitoba showing whether a business is in good standing, and anyone can request one online. This guide shows the steps, what the letter does and doesn't prove, and what to do when a contractor doesn't show up in the search."
+      "x": "Of all the checks you can run on a contractor, a WCB clearance is one of the quickest. It's a letter from the Workers Compensation Board of Manitoba showing whether a business is in good standing, and anyone can request one online."
+    },
+    {
+      "t": "p",
+      "x": "This guide shows the steps, what the letter does and doesn't prove, and what to do when a contractor doesn't show up in the search."
     },
     {
       "t": "h2",
@@ -115,7 +119,11 @@
     },
     {
       "t": "p",
-      "x": "For businesses, WCB is direct about the risk: if you hire a contractor who isn't in good standing, you may be responsible for including the labour portion of their earnings in your own assessable payroll, and could be liable for their assessment costs. If you're renovating an office, shop or restaurant, that applies to you. See our [commercial renovation services](/services/commercial-renovations) for how we plan fit-ups. Homeowners with questions about their own situation should ask WCB directly and check what their home insurance covers."
+      "x": "For businesses, WCB is direct about the risk: if you hire a contractor who isn't in good standing, you may be responsible for including the labour portion of their earnings in your own assessable payroll, and could be liable for their assessment costs. If you're renovating an office, shop or restaurant, that applies to you."
+    },
+    {
+      "t": "p",
+      "x": "See our [commercial renovation services](/services/commercial-renovations) for how we plan fit-ups. Homeowners with questions about their own situation should ask WCB directly and check what their home insurance covers."
     },
     {
       "t": "h2",

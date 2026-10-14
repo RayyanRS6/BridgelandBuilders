@@ -6,20 +6,77 @@ import EstimatorSection from '../components/EstimatorSection.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { formatPostDate } from '../components/BlogCard.jsx';
-import NotFoundPage from './NotFoundPage.jsx';
+import { ArrowRightIcon } from '../components/icons.jsx';
 import {
   COST_GUIDE_LOADERS,
+  COST_GUIDE_ROUTES,
+  COST_HUB_PATH,
   costGuideSeoOptions,
   isLiveCostGuide,
   normaliseCostPath,
 } from '../data/costGuides/index.js';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
 import { trailFor } from '../data/seo.js';
-import { serviceBySlug } from '../data/services.js';
+import { serviceByPath, serviceBySlug } from '../data/services.js';
+import { INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
-import { keepServerHtml, onInitialPage, retryLoad } from '../lib/lazyRetry.js';
+import { keepServerHtml, lazyWithRetry, retryLoad } from '../lib/lazyRetry.js';
 
-const pad = (index) => String(index + 1).padStart(2, '0');
+// Never rendered for a live guide, so it is not modulepreloaded with every
+// cost guide.
+const NotFoundPage = lazyWithRetry(() => import('./NotFoundPage.jsx'));
+
+const pad =(index) => String(index + 1).padStart(2, '0');
+
+/** Card text for the pages a guide's `related` list can name besides services and cost guides. */
+const RELATED_PAGES = {
+  [COST_HUB_PATH]: {
+    label: 'Renovation Costs in Winnipeg',
+    summary: 'Starting ranges for kitchens, bathrooms and basements, what moves the price, and how larger projects are quoted.',
+    action: 'See the cost guide',
+  },
+  [INSTANT_QUOTE_PATH]: {
+    label: 'Free Instant Quote',
+    summary: 'Answer a few quick questions for a starting price range on a kitchen, bathroom or basement renovation.',
+    action: 'Get a starting range',
+  },
+  '/book-online': {
+    label: 'Free On-Site Visit',
+    summary: 'We look at the space with you, then send a free written quote with the scope, price and schedule.',
+    action: 'Book a visit',
+  },
+};
+
+/**
+ * A guide's `related` paths as cards ({ path, label, summary, action }), in
+ * the guide's order: live service pages from the registry, cost guides from
+ * their route (name live guides only: a draft's status is not known here
+ * without loading it), and the pages in RELATED_PAGES. Anything else, and the
+ * guide itself, is left out.
+ */
+function relatedLinks(guide) {
+  return (guide.related || [])
+    .map((path) => {
+      if (path === guide.path) return null;
+      if (RELATED_PAGES[path]) return { path, ...RELATED_PAGES[path] };
+      const spoke = /^\/services\/([^/]+)\/cost$/.exec(path);
+      if (spoke) {
+        const service = serviceBySlug(spoke[1]);
+        if (!service || service.status !== 'live' || !COST_GUIDE_ROUTES.includes(path)) return null;
+        return {
+          path,
+          label: `${service.crumb} Cost`,
+          summary: `Starting ranges from our instant estimator for a ${service.crumb.toLowerCase()} in Winnipeg, and what moves the price.`,
+          action: 'See the cost guide',
+        };
+      }
+      const service = serviceByPath(path);
+      return service && service.status === 'live'
+        ? { path, label: service.label, summary: service.summary, action: 'Explore service' }
+        : null;
+    })
+    .filter(Boolean);
+}
 
 /**
  * One lazy view per guide route, created once and reused (a new lazy() on
@@ -47,12 +104,11 @@ function viewFor(path) {
                   );
                 },
               }))
-              .catch((error) => {
-                // Prerendered first page: keep the server HTML; otherwise
-                // RouteErrorBoundary (lib/lazyRetry.js), retrying next visit.
-                if (!onInitialPage()) VIEWS.delete(path);
-                return keepServerHtml(error);
-              })
+              // Prerendered first page: keep the server HTML; otherwise the
+              // error reaches RouteErrorBoundary (lib/lazyRetry.js), which
+              // reloads once. The failed lazy stays in VIEWS: a new one would
+              // suspend again and the error would never surface.
+              .catch(keepServerHtml)
           )
         : null
     );
@@ -67,7 +123,8 @@ function viewFor(path) {
  *
  * Layout: breadcrumb → PageHero → quick answer → price tables → what moves the
  * price → budget/question sections → the matching estimator → FAQs → sources
- * → CTA → how the numbers were built (methodology + sign-off).
+ * → related pages (guide.related) → CTA → how the numbers were built
+ * (methodology + sign-off).
  */
 export default function CostGuidePage() {
   const { pathname } = useLocation();
@@ -140,7 +197,8 @@ function CostGuideView({ guide }) {
   const drivers = guide.drivers || [];
   const sections = guide.sections || [];
   const basis = guide.dataBasis || null;
-  const signoff = guide.ownerSignoff || guide.signoff || null;
+  const signoff = guide.ownerSignoff || null;
+  const related = relatedLinks(guide);
 
   return (
     <main>
@@ -209,7 +267,9 @@ function CostGuideView({ guide }) {
             <div className="blog-article-body">
               {sections.map((section) => (
                 <Fragment key={section.h2}>
-                  <h2>{section.h2}</h2>
+                  {/* `id` lets other pages link a section (the service pages'
+                      cost teasers point at the hub's "priced after a visit" part). */}
+                  <h2 id={section.id}>{section.h2}</h2>
                   <RichBody blocks={section.blocks || []} />
                 </Fragment>
               ))}
@@ -248,6 +308,35 @@ function CostGuideView({ guide }) {
             </div>
           </div>
         </article>
+      )}
+
+      {/* RELATED PAGES (guide.related): the same cards and classes as a
+          service page's related services. */}
+      {related.length > 0 && (
+        <section className="process-section" id="related">
+          <div className="container">
+            <div className="section-header center reveal">
+              <span className="section-tag">Keep Exploring</span>
+              <h2 className="section-title">Related Pages</h2>
+            </div>
+            <div className="service-directory-grid">
+              {related.map((item, index) => (
+                <article
+                  className="service-directory-card reveal"
+                  key={item.path}
+                  style={index > 0 ? { transitionDelay: `${(index % 3) * 0.1}s` } : undefined}
+                >
+                  <span className="service-directory-number">{pad(index)}</span>
+                  <h3>{item.label}</h3>
+                  <p>{item.summary}</p>
+                  <Link className="service-directory-action" to={item.path}>
+                    {item.action}<span className="visually-hidden">: {item.label}</span><ArrowRightIcon size={13} />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
       <CtaBanner />
