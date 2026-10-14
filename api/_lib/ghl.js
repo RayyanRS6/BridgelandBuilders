@@ -19,7 +19,8 @@ import {
   sourceFor,
   tagsForLead,
 } from '../../src/data/quoteForm.js';
-import { todayIn } from '../../src/lib/zonedDate.js';
+import { channelFor } from '../../src/lib/channel.js';
+import { dateIn, todayIn } from '../../src/lib/zonedDate.js';
 
 const API_BASE = 'https://services.leadconnectorhq.com';
 const CONTACTS_VERSION = '2021-07-28';
@@ -232,6 +233,77 @@ export async function upsertLead(lead, { utmSource, attribution } = {}) {
   }
 
   return { contactId, tags: tagged?.tags || [] };
+}
+
+/* ---------------------------------------------------- attribution note */
+
+const CLICK_ID_NAMES = ['gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'];
+const hostOf = (referrer) => (typeof referrer === 'string' ? referrer.split('/')[0] : '');
+
+/**
+ * One touch in a line: "google / cpc · spring-kitchens · 2026-10-01" when it
+ * had campaign tags, otherwise its channel and referring site, e.g.
+ * "organic-search (google.com) · 2026-10-01". The date is Winnipeg's.
+ */
+function touchSummary(touch) {
+  const host = hostOf(touch.referrer);
+  const origin = touch.source || touch.medium
+    ? `${touch.source || '(not set)'} / ${touch.medium || '(not set)'}`
+    : `${channelFor(touch)}${host ? ` (${host})` : ''}`;
+  const date = touch.at ? dateIn(touch.at, BOOKING_CALENDAR.timeZone) : '';
+  return [origin, touch.campaign, date].filter(Boolean).join(' · ');
+}
+
+/**
+ * The note's text, built only from the cleaned attribution (cleanAttribution
+ * in api/_lib/http.js): no contact details, and ad click ids by name only,
+ * never their values. Lines with nothing to say are left out.
+ */
+function attributionNoteBody(attribution) {
+  const { first, last } = attribution;
+  const landing = attribution.landing || last?.landing;
+  const referrer = hostOf(last?.referrer) || hostOf(first?.referrer);
+  const clickIds = CLICK_ID_NAMES.filter((key) => last?.[key] || first?.[key]);
+  return [
+    'Website attribution (automatic)',
+    attribution.channel && `Channel: ${attribution.channel}`,
+    attribution.formPage && `Form page: ${attribution.formPage}`,
+    landing && `Landing page: ${landing}`,
+    first && `First touch: ${touchSummary(first)}`,
+    last && `Last touch: ${touchSummary(last)}`,
+    referrer && `Referrer: ${referrer}`,
+    clickIds.length > 0 && `Click IDs present: ${clickIds.join(', ')}`,
+    attribution.internal === true && 'Internal: yes (sent from a team device marked with bb_internal=1)',
+  ]
+    .filter(Boolean)
+    .join('\n');
+}
+
+/**
+ * A plain-text note on the contact saying how the visitor found the site
+ * (channel, form and landing pages, first and last touch, referring site,
+ * which ad click ids came with it), so leads from search, Google Business
+ * Profile or AI assistants show up in GoHighLevel without custom fields.
+ *
+ * Best effort, like the consent note above: a failure is only logged (never
+ * the visitor's details) and never thrown. Callers run it after the response
+ * has been sent (afterResponse in api/_lib/meta.js), so it can't slow or cost
+ * a lead. Does nothing in mock mode or without a contact id or attribution.
+ */
+export async function addAttributionNote(contactId, attribution) {
+  if (isMock() || !contactId || !attribution) return;
+  try {
+    const { token } = config();
+    await ghl(`/contacts/${contactId}/notes`, {
+      method: 'POST',
+      version: CONTACTS_VERSION,
+      token,
+      body: { body: attributionNoteBody(attribution) },
+    });
+  } catch (error) {
+    // ghl() has already logged GoHighLevel's own refusals (no visitor details).
+    if (!(error instanceof BookingError)) console.error(`[ghl] attribution note failed: ${error?.name || 'error'}`);
+  }
 }
 
 /* --------------------------------------------------------- appointment */
