@@ -171,28 +171,8 @@ button {
 }
 
 /* -------------------------------------------------------------
-   3. TOP ANNOUNCEMENT BAR
+   3. PULSE DOT (status markers)
    ------------------------------------------------------------- */
-.top-bar {
-  background: var(--bg-dark);
-  color: var(--text-light);
-  padding: 11px 24px;
-  padding-left: max(24px, env(safe-area-inset-left));
-  padding-right: max(24px, env(safe-area-inset-right));
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--border-dark-subtle);
-}
-
-.top-bar-greeting {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .pulse-dot {
   width: 9px;
   height: 9px;
@@ -208,34 +188,16 @@ button {
   100% { box-shadow: 0 0 0 0 rgba(33, 122, 138, 0); }
 }
 
-.top-bar-contact {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.top-bar-contact a {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-}
-
-.top-bar-contact a:hover {
-  background: var(--accent-red);
-  color: #fff;
-}
-
 /* -------------------------------------------------------------
    4. CLEAN FLOATING NAVBAR
    ------------------------------------------------------------- */
+/* The navbar is the first thing on the page (the top announcement bar was
+   removed 2026-10-14): the margin keeps it the same 14px from the top as
+   when it is stuck while scrolling. */
 .header-wrapper {
   position: sticky;
   top: 14px;
+  margin-top: 14px;
   z-index: 100;
   padding: 0 20px;
   padding-left: max(20px, env(safe-area-inset-left));
@@ -542,6 +504,65 @@ button {
 /* The compact quote label only appears on narrow phones (see breakpoints). */
 .nav-quote-label-short {
   display: none;
+}
+
+/* Call button (it replaced the phone pill of the old top announcement bar).
+   A secondary, outlined pill beside the red quote button: the number where
+   the bar has room, a round phone icon where it doesn't (breakpoints). */
+.nav-call-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  background: #fff;
+  color: var(--text-main);
+  font-size: 0.92rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.nav-call-btn svg {
+  flex: none;
+  color: var(--accent-seagreen);
+}
+
+.nav-call-btn:hover {
+  border-color: var(--accent-seagreen);
+  color: var(--accent-seagreen);
+}
+
+/* The number (~160px) fits beside the full menu once the navbar reaches its
+   1240px maximum (from 1280px, with the menu links 24px apart), and on
+   tablets once the menu links fold into the menu button. Elsewhere the
+   button is a 44px phone icon (its accessible name is the aria-label). */
+@media (min-width: 1280px) {
+  .nav-links {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1279.98px), (max-width: 820px) {
+  .nav-call-btn {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+  .nav-call-number {
+    display: none;
+  }
+}
+
+/* Narrow laptops: a little less space between the menu links keeps the
+   links, the call icon and the quote button on one line. */
+@media (min-width: 1101px) and (max-width: 1199.98px) {
+  .nav-links {
+    gap: 16px;
+  }
 }
 
 /* Red Primary Buttons */
@@ -2030,11 +2051,6 @@ button {
 }
 
 @media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    gap: 6px;
-    text-align: center;
-  }
   .service-category-list {
     grid-template-columns: 1fr;
   }
@@ -2112,43 +2128,20 @@ button {
     scroll-margin-top: 86px;
   }
 
-  /* ---- Top announcement bar ---- */
-  .top-bar {
-    gap: 5px;
-    padding: 8px 16px;
-    padding-left: max(16px, env(safe-area-inset-left));
-    padding-right: max(16px, env(safe-area-inset-right));
-    font-size: 0.78rem;
-    line-height: 1.35;
-  }
-  .top-bar-greeting {
-    gap: 7px;
-  }
   .pulse-dot {
     width: 7px;
     height: 7px;
     flex: none;
   }
-  .top-bar-contact {
-    gap: 12px;
-  }
-  .top-bar-contact a {
-    position: relative;
-    min-height: 30px;
-    padding: 4px 12px;
-  }
+
   /* Tap targets: the invisible ::before boxes below grow the touch area of
-     the phone pill, the quote pill and the menu button to at least 44px
+     the call button, the quote pill and the menu button to at least 44px
      tall without changing their size on screen. */
-  .top-bar-contact a::before {
-    content: '';
-    position: absolute;
-    inset: -7px 0;
-  }
 
   /* ---- Floating navbar ---- */
   .header-wrapper {
     top: 10px;
+    margin-top: 10px;
     padding: 0 12px;
     padding-left: max(12px, env(safe-area-inset-left));
     padding-right: max(12px, env(safe-area-inset-right));
@@ -2163,9 +2156,12 @@ button {
     font-size: 1rem;
     line-height: 1.15;
   }
+  /* With the call button beside the quote pill, the full name no longer fits
+     on one line on most phones; it stacks as "Bridgeland / Builders" instead
+     of being cut off. Two lines still fit inside the logo-mark height. */
   .brand-logo > span {
     min-width: 0;
-    white-space: nowrap;
+    white-space: normal;
   }
   .brand-logo .logo-mark {
     width: 32px;
@@ -2209,6 +2205,16 @@ button {
     content: '';
     position: absolute;
     inset: -2px;
+  }
+  .nav-call-btn {
+    width: 40px;
+    height: 40px;
+    border-width: 1px;
+  }
+  .nav-call-btn::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
   }
 
   /* ---- Hero ---- */
@@ -2574,9 +2580,6 @@ button {
    iPhone SE/12 mini/13 mini and the 360px Android baseline.
    ------------------------------------------------------------- */
 @media (max-width: 420px) {
-  .top-bar {
-    font-size: 0.74rem;
-  }
   .navbar {
     padding: 6px 7px 6px 10px;
   }
@@ -2600,6 +2603,13 @@ button {
     height: 36px;
   }
   .mobile-menu-btn::before {
+    inset: -4px;
+  }
+  .nav-call-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .nav-call-btn::before {
     inset: -4px;
   }
 

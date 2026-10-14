@@ -18,7 +18,7 @@ import { track } from '../lib/analytics.js';
  * Check once in production that a real chat open sends it.
  *
  * link_location is the nearest data-location attribute, else a named area
- * (top_bar, hero, quote_form), else the landmark the link sits in (header,
+ * (hero, quote_form), else the landmark the link sits in (header,
  * nav, main, footer, aside). Lead, booking, contact-form and estimator
  * events are sent by the components that know about them
  * (QuoteBookingForm, LeadConnectorForm, EstimatorEmbed).
@@ -36,7 +36,6 @@ const CHAT_CHECK_DELAYS_MS = [400, 1500];
 
 // Site chrome that isn't a landmark element.
 const NAMED_AREAS = [
-  ['.top-bar', 'top_bar'],
   ['.hero-section, .page-hero', 'hero'],
   ['.booking-card, .qf', 'quote_form'],
 ];

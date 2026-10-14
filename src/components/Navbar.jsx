@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '../data/serviceCategories.js';
-import { INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
-import { ArrowRightIcon, ChevronDownIcon, ChevronRightIcon, MenuIcon } from './icons.jsx';
+import { INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { ArrowRightIcon, ChevronDownIcon, ChevronRightIcon, MenuIcon, PhoneIcon } from './icons.jsx';
 
 const NAV_LINKS = [
   { to: '/', label: 'Home', end: true },
@@ -218,6 +218,13 @@ export default function Navbar() {
         </ul>
 
         <div className="nav-actions">
+          {/* Call button: the phone number on wide screens, a round phone icon
+              where space is short (index.css). It lives in the sticky navbar,
+              so tap-to-call stays on screen while visitors scroll. */}
+          <a href={SITE_PHONE_TEL} className="nav-call-btn" data-cta="nav-call" aria-label={`Call ${SITE_PHONE}`}>
+            <PhoneIcon size={16} />
+            <span className="nav-call-number">{SITE_PHONE}</span>
+          </a>
           {/* Main Call To Action Button in Red #C20917 — goes to the instant
               quote estimator page. Narrow phones swap in the shorter label so
               the pill still fits beside the logo and menu. */}

@@ -2,7 +2,6 @@ import { Suspense, useEffect, useRef } from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import ScrollToHash from './components/ScrollToHash.jsx';
 import MetaPixelPageViews from './components/MetaPixelPageViews.jsx';
-import TopBar from './components/TopBar.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import RouteErrorBoundary from './components/RouteErrorBoundary.jsx';
@@ -74,10 +73,8 @@ export default function AppShell() {
       <ScrollToHash />
       <MetaPixelPageViews />
 
-      {/* 1. TOP ANNOUNCEMENT BAR */}
-      <TopBar />
-
-      {/* 2. CLEAN FLOATING NAVBAR */}
+      {/* CLEAN FLOATING NAVBAR (it carries the call button that used to sit
+          in the top announcement bar, removed 2026-10-14). */}
       <Navbar />
 
       <RouteErrorBoundary resetKey={pathname}>
