@@ -5,14 +5,26 @@
  *      share of the query's impressions and clicks;
  *   2. keyword-map primaries (scripts/keyword-map.json) whose best page in
  *      Search Console is not the page the map assigns them to;
- *   3. keyword-map primaries with no impressions at all.
+ *   3. keyword-map primaries with no impressions at all;
+ *   4. striking distance: per landing page, the queries it ranks for at an
+ *      average position of 8 to 30 with at least --min-impr impressions, next
+ *      to that page's keyword-map primaries and secondaries, flagging queries
+ *      the map does not list;
+ *   5. area kill rule (plan D9): community pages (/service-areas/<slug>) with
+ *      fewer than 10 impressions a month.
  *
  *   node scripts/gsc-cannibalisation.mjs <export.csv|export.json> [options]
  *   npm run gsc:cannibal -- <export.csv> --out=gsc-report.md
+ *   npm run gsc:cannibal -- scripts/fixtures/gsc-query-page-sample.csv
+ *                           (a small made-up export that fills every section)
  *
  *   --out=<file>            write the report there (default: stdout)
  *   --min-impressions=<n>   skip queries with fewer impressions in total across
  *                           all URLs, in section 1 (default 10)
+ *   --min-impr=<n>          section 4: a query needs at least this many
+ *                           impressions on the page (default 30)
+ *   --months=<n>            section 5: the export's date range in months, to
+ *                           turn impressions into impressions a month (default 1)
  *   --map=<file>            keyword map (default scripts/keyword-map.json)
  *
  * The export comes from the owner's Search Console property (owner task O-16)
@@ -45,7 +57,7 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { relative, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { readKeywordMap, wordSet } from './lib/audit/keywords.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
@@ -57,14 +69,25 @@ function option(name, fallback) {
   if (i === -1) return fallback;
   return args[i].includes('=') ? args[i].slice(name.length + 3) : args[i + 1];
 }
-const optionValues = new Set(['--out', '--min-impressions', '--map'].map((name) => args.indexOf(name) + 1).filter(Boolean));
+const optionValues = new Set(
+  ['--out', '--min-impressions', '--min-impr', '--months', '--map'].map((name) => args.indexOf(name) + 1).filter(Boolean)
+);
 const INPUT = args.find((a, i) => !a.startsWith('--') && !optionValues.has(i));
 const OUT = option('out');
 const MIN_IMPRESSIONS = Number(option('min-impressions', '10'));
+const MIN_IMPR = Number(option('min-impr', '30'));
+const MONTHS = Number(option('months', '1'));
 const MAP_FILE = resolve(process.cwd(), option('map', resolve(ROOT, 'scripts/keyword-map.json')));
 
-if (!INPUT || args.includes('--help') || !Number.isFinite(MIN_IMPRESSIONS)) {
-  console.error('usage: node scripts/gsc-cannibalisation.mjs <export.csv|export.json> [--out=report.md] [--min-impressions=10] [--map=scripts/keyword-map.json]');
+// Section 4: "striking distance" = an average position from 8 to 30 (bottom of
+// page one to page three). Section 5: plan D9's kill rule for community pages.
+const STRIKING_FROM = 8;
+const STRIKING_TO = 30;
+const AREA_PREFIX = '/service-areas/';
+const AREA_MIN_MONTHLY = 10;
+
+if (!INPUT || args.includes('--help') || !Number.isFinite(MIN_IMPRESSIONS) || !Number.isFinite(MIN_IMPR) || !(MONTHS > 0)) {
+  console.error('usage: node scripts/gsc-cannibalisation.mjs <export.csv|export.json> [--out=report.md] [--min-impressions=10] [--min-impr=30] [--months=1] [--map=scripts/keyword-map.json]');
   process.exit(2);
 }
 
@@ -297,6 +320,7 @@ for (const page of map.pages) {
   }
 }
 const ownerOf = (query) => owners.get(query) || ownersBySignature.get(signature(query)) || null;
+const mapPageByPath = new Map(map.pages.map((page) => [pathOf(page.path), page]));
 
 // Queries by word-set signature, for matching primaries to their variants.
 const queriesBySignature = new Map();
@@ -354,6 +378,46 @@ const mismatches = withData
   .filter((p) => p.best && p.best.path !== p.path);
 const noImpressions = primaries.filter((p) => !p.queries.length);
 
+// Section 4: (query, landing page) pairs in striking distance, grouped by page.
+const strikingByPage = new Map();
+for (const [query, pages] of byQuery) {
+  for (const t of pages.values()) {
+    const p = position(t);
+    if (!Number.isFinite(p) || p < STRIKING_FROM || p > STRIKING_TO || t.impressions < MIN_IMPR) continue;
+    if (!strikingByPage.has(t.path)) strikingByPage.set(t.path, { path: t.path, impressions: 0, rows: [] });
+    const group = strikingByPage.get(t.path);
+    group.impressions += t.impressions;
+    group.rows.push({ query, ...t });
+  }
+}
+const striking = [...strikingByPage.values()].sort((a, b) => b.impressions - a.impressions || a.path.localeCompare(b.path));
+for (const group of striking) group.rows.sort((a, b) => b.impressions - a.impressions || position(a) - position(b));
+const strikingQueries = striking.reduce((n, group) => n + group.rows.length, 0);
+
+// Section 5: every community page that is published or shows up in the export.
+let publishedAreas = null; // null = src/data/serviceAreasContent.js could not be read
+try {
+  const areas = await import(pathToFileURL(resolve(ROOT, 'src/data/serviceAreasContent.js')).href);
+  publishedAreas = new Set(areas.publishedServiceAreas().map((area) => pathOf(area.path)));
+} catch {
+  // report the export's area URLs only
+}
+const isAreaPage = (path) => path.toLowerCase().startsWith(AREA_PREFIX) && path.length > AREA_PREFIX.length;
+const areaTotals = new Map([...(publishedAreas || [])].map((path) => [path, { path, clicks: 0, impressions: 0 }]));
+for (const pages of byQuery.values()) {
+  for (const t of pages.values()) {
+    if (!isAreaPage(t.path)) continue;
+    if (!areaTotals.has(t.path)) areaTotals.set(t.path, { path: t.path, clicks: 0, impressions: 0 });
+    const total = areaTotals.get(t.path);
+    total.clicks += t.clicks;
+    total.impressions += t.impressions;
+  }
+}
+const areaRows = [...areaTotals.values()]
+  .map((t) => ({ ...t, monthly: t.impressions / MONTHS }))
+  .sort((a, b) => a.monthly - b.monthly || a.path.localeCompare(b.path));
+const areaKill = areaRows.filter((t) => t.monthly < AREA_MIN_MONTHLY);
+
 const out = [];
 out.push('# Search Console cannibalisation report', '');
 out.push(`- Export: \`${INPUT}\` (${fmt(rawRows.length)} rows, ${fmt(rowsUsed)} with impressions${bad ? `, ${fmt(bad)} unreadable` : ''})`);
@@ -399,10 +463,56 @@ else {
   out.push('');
 }
 
+const quoted = (list) => list.map((keyword) => `"${keyword}"`).join(', ');
+out.push(`## 4. Striking distance: average position ${STRIKING_FROM}–${STRIKING_TO} (${strikingQueries} ${strikingQueries === 1 ? 'query' : 'queries'} on ${striking.length} page${striking.length === 1 ? '' : 's'})`, '');
+out.push(`Queries a page ranks for at an average position from ${STRIKING_FROM} to ${STRIKING_TO} with at least ${fmt(MIN_IMPR)} impressions on that page (\`--min-impr\`), grouped by landing page, most impressions first. These are the closest to page one: where a query fits what the page is about, use it in the page's headings, copy, FAQs or internal link text, once and naturally. **Not in map** = the keyword map does not list the query; add it to scripts/keyword-map.json (one page per keyword) before targeting it.`, '');
+if (!striking.length) out.push('None.', '');
+for (const group of striking) {
+  const page = mapPageByPath.get(group.path);
+  const note = pageNote(group.path);
+  out.push(`### \`${cellText(group.path)}\`: ${fmt(group.impressions)} impressions, ${group.rows.length} ${group.rows.length === 1 ? 'query' : 'queries'}${note ? ` (${note})` : ''}`, '');
+  if (page) {
+    const parts = [
+      page.primary.length ? `primary ${quoted(page.primary)}` : 'no primary',
+      page.secondary.length ? `secondary ${quoted(page.secondary)}` : 'no secondaries',
+    ];
+    out.push(`Keyword map${page.status && page.status !== 'live' ? ` (${page.status})` : ''}: ${parts.join('; ')}.`, '');
+  } else {
+    out.push('Not a page in the keyword map.', '');
+  }
+  out.push('| Query | Impressions | Clicks | Avg. position | Keyword map |', '|---|---:|---:|---:|---|');
+  for (const row of group.rows) {
+    const owner = ownerOf(row.query);
+    const where = !owner
+      ? '**Not in map**'
+      : `${owner.bucket} of ${owner.path === group.path ? 'this page' : `\`${owner.path}\``}${norm(owner.keyword) === row.query ? '' : ` (as "${cellText(owner.keyword)}")`}`;
+    out.push(`| ${cellText(row.query)} | ${fmt(row.impressions)} | ${fmt(row.clicks)} | ${pos(row)} | ${where} |`);
+  }
+  out.push('');
+}
+
+out.push(`## 5. Area kill rule: community pages under ${AREA_MIN_MONTHLY} impressions a month (${areaKill.length} of ${areaRows.length})`, '');
+out.push(`Plan D9: a community page (\`${AREA_PREFIX}<community>\`) that still has fewer than ${AREA_MIN_MONTHLY} impressions a month six months after it went live is retired with a 301 redirect to \`/service-areas\`. Impressions a month = the page's impressions in this export ÷ \`--months\` (the export's date range in months; ${MONTHS} for this run). A query × page export leaves out anonymised queries, so confirm a page's total in Search Console's Pages report before redirecting it.`, '');
+if (publishedAreas === null) out.push('_src/data/serviceAreasContent.js could not be read: only area URLs found in the export are listed._', '');
+if (!areaRows.length) {
+  out.push('None. No community page is published and none appears in the export.', '');
+} else {
+  out.push('| URL | Impressions | Impressions / month | Clicks | Kill rule | Note |', '|---|---:|---:|---:|---|---|');
+  for (const t of areaRows) {
+    const notes = [
+      publishedAreas && !publishedAreas.has(t.path) ? 'not a published page' : '',
+      pageNote(t.path),
+    ].filter(Boolean).join('; ');
+    const monthly = t.monthly.toFixed(1).replace(/\.0$/, '');
+    out.push(`| \`${cellText(t.path)}\` | ${fmt(t.impressions)} | ${monthly} | ${fmt(t.clicks)} | ${t.monthly < AREA_MIN_MONTHLY ? `**under ${AREA_MIN_MONTHLY}/month**` : 'ok'} | ${notes} |`);
+  }
+  out.push('');
+}
+
 const report = `${out.join('\n').trimEnd()}\n`;
 if (OUT) {
   writeFileSync(resolve(process.cwd(), OUT), report, 'utf8');
-  console.error(`Wrote ${OUT}: ${cannibalised.length} cannibalised queries, ${mismatches.length} primary mismatches, ${noImpressions.length} primaries without impressions.`);
+  console.error(`Wrote ${OUT}: ${cannibalised.length} cannibalised queries, ${mismatches.length} primary mismatches, ${noImpressions.length} primaries without impressions, ${strikingQueries} striking-distance queries, ${areaKill.length} area pages under the kill threshold.`);
 } else {
   process.stdout.write(report);
 }

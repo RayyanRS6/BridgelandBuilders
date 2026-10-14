@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "source": "SEO plan section 17 (competitor backlink gap list), which names these competitors without their domains. Each domain is the one the competitor ranked with in the Google.ca SERP research behind the plan (Winnipeg renovation terms, October 2026).",
+    "use": "Read only by scripts/competitor-sitemaps.mjs (quarterly content-gap check, plan section 18). Never imported into src/.",
+    "fields": "id = the name the plan uses; domain = the site's host without www."
+  },
+  "competitors": [
+    { "id": "nycerenos", "domain": "nycerenos.com" },
+    { "id": "grindstone", "domain": "grindstonerenovations.com" },
+    { "id": "hammerdown", "domain": "hammerdown.ca" },
+    { "id": "winnipegrenovations", "domain": "winnipegrenovations.ca" },
+    { "id": "basement-pros", "domain": "basement-pros.ca" },
+    { "id": "kmabuilding", "domain": "kmabuilding.com" },
+    { "id": "creativecontractors", "domain": "creativecontractors.ca" },
+    { "id": "acrltd", "domain": "acrltd.ca" },
+    { "id": "lolacon", "domain": "lolacon.com" },
+    { "id": "irisconstruction", "domain": "irisconstruction.ca" },
+    { "id": "richterco", "domain": "richterco.ca" }
+  ]
+}

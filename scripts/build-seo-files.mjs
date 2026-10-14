@@ -3,7 +3,8 @@
  *   public/robots.txt    — one rule group for every crawler (AI crawlers welcome)
  *   public/sitemap.xml   — every indexable route and published post, with lastmod
  *   public/llms.txt      — concise site map for AI answer engines
- *   public/llms-full.txt — fuller context (services, service area, FAQs, articles)
+ *   public/llms-full.txt — fuller context (services, service area, FAQs, posts'
+ *                          quick answers, articles)
  *   index.html           — sitewide JSON-LD injected between markers
  *   prerender-routes.json
  *
@@ -16,7 +17,7 @@
  * posts. Draft pages are never prerendered or listed.
  */
 import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
-import { EXPERIENCE_YEARS, PROJECT_COUNT } from '../src/data/facts.js';
+import { EXPERIENCE_YEARS, OFFICE_HOURS_TEXT, PROJECT_COUNT, REPLY_TIME } from '../src/data/facts.js';
 import { SITE_FAQS } from '../src/data/faqs.js';
 import { LIVE_COST_GUIDES, PUBLISHED_POSTS, SITE_ROUTES } from '../src/data/head.js';
 import { LIVE_SERVICE_PAGES, PROJECTS } from '../src/data/projects.js';
@@ -114,16 +115,20 @@ const keyPage = (label, path, description) => {
 
 const keyPages = [
   keyPage('Home', '/'),
+  keyPage('About us', '/about-us'),
   keyPage('All services', '/services'),
   keyPage('Renovation costs in Winnipeg', COST_HUB_PATH),
   keyPage('Service areas', '/service-areas'),
   keyPage('Our process', '/our-process'),
-  keyPage('Projects', '/projects', 'Renovation project categories, each linking to its service page with details and booking.'),
+  // The /projects photos are design ideas, not Bridgeland jobs: say so, so no
+  // answer engine presents them as the company's own work.
+  keyPage('Projects', '/projects', 'Design-idea (inspiration) photos for each type of renovation; not photos of Bridgeland jobs.'),
   keyPage('FAQs', '/faqs'),
   keyPage('Contact', '/contact-us'),
   keyPage('Instant quote', '/instant-quote'),
   keyPage('Book online', '/book-online'),
   keyPage('Blog', '/blog'),
+  keyPage('Editorial policy', '/editorial-policy'),
 ].filter(Boolean).join('\n');
 
 // Live cost guides other than the hub (the hub is a key page).
@@ -205,11 +210,28 @@ const faqBlocks = [
   ),
 ].filter(Boolean);
 
+// Inline markup in post text (src/components/RichBody.jsx renderInline) as
+// plain text: [label](/path) -> "label (https://site/path)", external links
+// keep their own URL, **bold** loses its asterisks.
+const plainText = (text) =>
+  String(text || '')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (all, label, href) => `${label} (${href.startsWith('/') ? `${SITE_URL}${href}` : href})`)
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .trim();
+
+// Each published post's hand-written "Quick answer" (blog-raw `answer`, shown
+// above the article body), word for word. Posts without one are left out.
+const answeredPosts = POSTS.filter((post) => String(post.answer || '').trim());
+const quickAnswers = answeredPosts
+  .map((post) => `### ${post.title}\n${SITE_URL}/blog/${post.slug}\n${plainText(post.answer)}`)
+  .join('\n\n');
+
 out('llms-full.txt', doc(
   `# ${SITE_NAME} — full reference`,
   `> ${BUSINESS.shortDescription || BUSINESS.description}`,
   BUSINESS.disambiguatingDescription,
-  `Phone: ${SITE_PHONE} · Email: ${BUSINESS.email} · Winnipeg, Manitoba, Canada · Free written quotes`,
+  // Office hours, reply time, experience and project count: src/data/facts.js.
+  `Phone: ${SITE_PHONE} · Email: ${BUSINESS.email} · Winnipeg, Manitoba, Canada · Free written quotes · Office hours: ${OFFICE_HOURS_TEXT} · Replies within ${REPLY_TIME} · Over ${EXPERIENCE_YEARS} years combined experience · More than ${PROJECT_COUNT} projects completed`,
   `## Services offered\n${serviceLines}`,
   `## Service area\n${SERVICE_AREA_STATEMENT}\n\nCommunities: ${SERVICE_AREA_NAMES.join(', ')}`,
   BUSINESS.knowsAbout && BUSINESS.knowsAbout.length &&
@@ -217,6 +239,7 @@ out('llms-full.txt', doc(
   profileLines && `## Profiles\n${profileLines}`,
   fullCostLines && `## Renovation cost guides\n${fullCostLines}`,
   faqBlocks.length && `## Frequently asked questions\n\n${faqBlocks.join('\n\n')}`,
+  quickAnswers && `## Quick answers\n\n${quickAnswers}`,
   articleLines && `## Articles\n${articleLines}`,
 ));
 
@@ -243,5 +266,5 @@ console.log(`sitemap: ${urls.length} urls (${PAGES.length} pages, ${POSTS.length
 console.log(`noindex (prerendered, not in sitemap): ${NOINDEX_PAGES.join(', ') || 'none'}`);
 console.log(`prerender-routes.json: ${prerenderRoutes.length} routes`);
 console.log('robots: one group for all crawlers (Disallow: /api/)');
-console.log(`llms.txt + llms-full.txt written (${faqBlocks.length} FAQ blocks)`);
+console.log(`llms.txt + llms-full.txt written (${faqBlocks.length} FAQ blocks, ${answeredPosts.length} quick answers)`);
 console.log('sitewide JSON-LD injected into index.html');

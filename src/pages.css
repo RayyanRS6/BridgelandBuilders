@@ -845,6 +845,15 @@
   max-width: 92%;
 }
 
+/* A closed answer is hidden="until-found" (FaqAccordion.jsx), which Chrome
+   draws as an empty box rather than display: none: take its padding and any
+   inherited paragraph margin off, so it takes no space, exactly as before. */
+.faq-answer[hidden='until-found'] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 /* -------------------------------------------------------------
    P7. RESPONSIVE
    ------------------------------------------------------------- */
