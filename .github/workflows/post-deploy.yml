@@ -24,9 +24,12 @@ on:
 permissions:
   contents: read
 
+# A new run waits for the running one instead of cancelling it (a cancelled
+# run loses the IndexNow ping for its deploy's changed URLs). GitHub keeps at
+# most one waiting run per group, so a third deploy still replaces a waiting one.
 concurrency:
   group: post-deploy-${{ github.event.deployment.environment }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   SITE_URL: https://bridgelandbuilders.com
