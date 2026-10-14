@@ -1,0 +1,38 @@
+# Weekly estimator price-drift check (scripts/check-estimator-prices.mjs).
+# The cost guides, the kitchen/bathroom/basement cost teasers, the ensuite and
+# Canada cost posts and public/llms*.txt quote the public instant estimator's
+# ranges (https://estimator.bridgelandbuilders.com/api/services). When the
+# owner changes a price in the estimator, this run fails and lists every
+# page line (file:line) that no longer matches, so the copy can be updated.
+#
+# Deliberately not part of `npm run build` or the Vercel build: an estimator
+# outage or a price change must never block a deploy. No secrets: the API is
+# public and the script uses only Node built-ins (no npm install needed).
+name: Estimator price check
+
+on:
+  schedule:
+    # Mondays 14:23 UTC (morning in Winnipeg), off the top of the hour.
+    - cron: '23 14 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-prices
+  cancel-in-progress: true
+
+jobs:
+  check-prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Compare published prices with the estimator API
+        run: npm run check:prices
