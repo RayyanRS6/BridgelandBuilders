@@ -1,11 +1,14 @@
+import { TIMELINES } from './timelines.js';
+
 /**
  * Service page registry (SEO plan D7, §5): one small, client-safe list of
  * every service page the site has or plans. The navbar, footer, /services
  * directory, router, breadcrumbs, sitemap and redirects all read it, so a page
  * appears everywhere at once when its status flips to 'live'.
  *
- * Keep this file tiny and free of imports: it ships to the browser and is
- * imported by siteConfig.js and seo.js (never the reverse). Page content lives
+ * Keep this file tiny and free of imports (timelines.js, itself import-free,
+ * is the one exception): it ships to the browser and is imported by
+ * siteConfig.js and seo.js (never the reverse). Page content lives
  * in src/data/services/<slug>.js (one module per page, loaded lazily by
  * src/pages/services/ServiceRoute.jsx; build tooling reads them through
  * src/data/projects.js).
@@ -49,7 +52,7 @@ export const SERVICES = [
     navLabel: 'Basement renovations',
     summary: 'Turn an unfinished or outdated basement into warm, dry, useful living space.',
     cardDescription:
-      'Turn an unfinished or outdated basement into warm, dry living space. We check for moisture before framing, insulate the walls for Winnipeg winters and coordinate the permits. A typical basement takes four to eight weeks.',
+      `Turn an unfinished or outdated basement into warm, dry living space. We check for moisture before framing, insulate the walls for Winnipeg winters and coordinate the permits. A typical basement takes ${TIMELINES.basement.words}.`,
     category: 'residential',
     parent: null,
     status: 'live',
@@ -83,7 +86,7 @@ export const SERVICES = [
     navLabel: 'Bathroom renovations',
     summary: 'Well-planned bathrooms with reliable waterproofing, durable finishes, and practical storage.',
     cardDescription:
-      'Bathrooms, ensuites and powder rooms rebuilt with backer board, a waterproofing membrane and a properly sloped shower base under the tile. Most bathrooms take two to three weeks from demolition to the final clean.',
+      `Bathrooms, ensuites and powder rooms rebuilt with backer board, a waterproofing membrane and a properly sloped shower base under the tile. Most bathrooms take ${TIMELINES.bathroom.words} from demolition to the final clean.`,
     category: 'residential',
     parent: null,
     status: 'live',
@@ -120,7 +123,7 @@ export const SERVICES = [
     navLabel: 'Kitchen renovations',
     summary: 'Improve the layout, storage, lighting, and finishes in the hardest-working room in your home.',
     cardDescription:
-      'Layout, cabinets, countertops, backsplash, lighting and appliance fit, planned around how you cook before the finishes are chosen. Most full kitchens take four to six weeks once the cabinets arrive.',
+      `Layout, cabinets, countertops, backsplash, lighting and appliance fit, planned around how you cook before the finishes are chosen. Most full kitchens take ${TIMELINES.kitchen.words} once the cabinets arrive.`,
     category: 'residential',
     parent: null,
     status: 'live',
@@ -137,7 +140,7 @@ export const SERVICES = [
     navLabel: 'Whole home renovations',
     summary: 'Coordinate every room under one clear plan and one consistent finish.',
     cardDescription:
-      'Layout, kitchen, bathrooms, flooring, paint, wiring and plumbing under one schedule and one written scope, so the finishes match from room to room. Most whole home renovations take eight to sixteen weeks.',
+      `Layout, kitchen, bathrooms, flooring, paint, wiring and plumbing under one schedule and one written scope, so the finishes match from room to room. Most whole home renovations take ${TIMELINES.wholeHome.words}.`,
     category: 'residential',
     parent: null,
     status: 'live',
