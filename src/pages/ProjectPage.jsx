@@ -11,6 +11,7 @@ import { ESTIMATOR_URLS, PROJECT_ESTIMATORS } from '../data/estimators.js';
 import { serviceByPath } from '../data/services.js';
 import { COST_HUB_PATH, INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { serviceTrail } from '../data/trails.js';
+import { renderInline } from '../lib/inline.jsx';
 import { unsplashImage } from '../lib/unsplash.js';
 
 const FORM_ID = 'service-quote-form';
@@ -189,8 +190,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 <span className="section-tag">{project.intro.tag}</span>
                 <h2 className="section-title">{project.intro.title}</h2>
                 <div className="why-paragraphs">
-                  {(project.intro.paragraphs || []).map((paragraph) => (
-                    <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                  {(project.intro.paragraphs || []).map((paragraph, index) => (
+                    <p key={paragraph.slice(0, 40)}>{renderInline(paragraph, `intro-${index}`)}</p>
                   ))}
                 </div>
 
@@ -222,7 +223,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">{project.includes.tag}</span>
               <h2 className="section-title">{project.includes.title}</h2>
-              <p className="section-desc">{project.includes.desc}</p>
+              <p className="section-desc">{renderInline(project.includes.desc, 'includes')}</p>
             </div>
 
             <div className="includes-grid">
@@ -235,7 +236,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   <div className="include-num">{item.num}</div>
                   <h3>{item.title}</h3>
                   {paragraphs(item.text).map((text) => (
-                    <p key={text.slice(0, 40)}>{text}</p>
+                    <p key={text.slice(0, 40)}>{renderInline(text, `include-${item.num}`)}</p>
                   ))}
                 </div>
               ))}
@@ -251,7 +252,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">{project.typesTag || 'Project Types'}</span>
               <h2 className="section-title">{project.typesTitle || `Types of ${(service && service.label) || name}`}</h2>
-              {project.typesDesc && <p className="section-desc">{project.typesDesc}</p>}
+              {project.typesDesc && <p className="section-desc">{renderInline(project.typesDesc, 'types')}</p>}
             </div>
 
             <div className="includes-grid">
@@ -268,7 +269,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                     {/* Same linked-title pattern as the /service-areas cards. */}
                     <h3>{to ? <Link to={to}>{item.title}</Link> : item.title}</h3>
                     {paragraphs(item.text).map((text) => (
-                      <p key={text.slice(0, 40)}>{text}</p>
+                      <p key={text.slice(0, 40)}>{renderInline(text, `type-${index}`)}</p>
                     ))}
                   </div>
                 );
@@ -285,7 +286,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">{local.tag || 'In Winnipeg'}</span>
               <h2 className="section-title">{local.title}</h2>
-              {local.intro && <p className="section-desc">{local.intro}</p>}
+              {local.intro && <p className="section-desc">{renderInline(local.intro, 'local')}</p>}
               {/* The page's one link to the service-area hub, which lists who
                   issues permits in each community. */}
               <p className="section-desc">
@@ -319,7 +320,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   <div className="include-num">{item.num || pad(index + 1)}</div>
                   <h3>{item.title}</h3>
                   {paragraphs(item.text).map((text) => (
-                    <p key={text.slice(0, 40)}>{text}</p>
+                    <p key={text.slice(0, 40)}>{renderInline(text, `local-${index}`)}</p>
                   ))}
                 </div>
               ))}
@@ -472,7 +473,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
               </Link>
             </div>
             <div className="reveal">
-              <FaqAccordion items={project.faqs} />
+              <FaqAccordion items={project.faqs} headingLevel={3} />
             </div>
           </div>
         </section>
