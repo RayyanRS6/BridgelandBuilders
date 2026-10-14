@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
   "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w",
   "ogImage": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x630.95c71e72.jpg",
+  "schemaImages": [
+    "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x675.498c6388.jpg",
+    "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x900.1d9e11de.jpg",
+    "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x1200.029283e0.jpg"
+  ],
   "heroAlt": "Title card: Home Renovation Planning in Canada: Guide and Checklist",
   "author": "",
   "reviewedBy": "",

@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.acff5638.webp 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.5f986ef8.webp 1320w",
   "heroAvifSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.0b02a5a2.avif 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.17af2839.avif 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.bb4a7cd2.avif 1320w",
   "ogImage": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x630.8d9272ff.jpg",
+  "schemaImages": [
+    "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x675.b0e50d9c.jpg",
+    "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x900.367ca396.jpg",
+    "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x1200.d8061ed7.jpg"
+  ],
   "heroAlt": "Title card: When to Paint Your House Exterior in Winnipeg",
   "author": "",
   "reviewedBy": "",

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { liveServicesIn } from '../data/services.js';
-import { BUSINESS, SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL, SOCIAL_PROFILES } from '../data/siteConfig.js';
+import { BUSINESS, EXPERIENCE_YEARS, SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from '../data/facts.js';
+import { SOCIAL_PROFILES } from '../data/siteConfig.js';
 import { MailIcon, PhoneIcon, PinIcon } from './icons.jsx';
 
 // The round social badges at the bottom of the footer. Each one links to the
@@ -138,7 +139,7 @@ export default function Footer() {
             </Link>
             {/* The same short description as the schema and llms files. */}
             <p>
-              {BUSINESS.shortDescription} Over 60 years of combined experience turning ideas into reality.
+              {`${BUSINESS.shortDescription} Over ${EXPERIENCE_YEARS} years of combined experience turning ideas into reality.`}
             </p>
             <div className="footer-contact-item">
               <PhoneIcon size={16} strokeWidth="2" />

@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
   "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w",
   "ogImage": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x630.69ac1710.jpg",
+  "schemaImages": [
+    "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x675.10c5b323.jpg",
+    "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x900.789125b6.jpg",
+    "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x1200.f6e7d277.jpg"
+  ],
   "heroAlt": "Title card: Renovation Permits in Winnipeg: What Needs One and How to Apply",
   "author": "",
   "reviewedBy": "",

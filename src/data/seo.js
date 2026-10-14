@@ -7,16 +7,25 @@ import {
   GBP,
   SERVICE_AREAS,
   SERVICE_CATALOG,
+  SITE_EMAIL,
   SITE_NAME,
+  SITE_PHONE,
   SITE_URL,
   SOCIAL_PROFILES,
 } from './siteConfig.js';
+import { ROUTE_TRAILS, pageName, serviceTrail, trailFor } from './trails.js';
 
 /**
  * The renovation cost hub (plan §8), defined in siteConfig.js. Re-exported for
  * existing imports; new code should import it from siteConfig.js.
  */
 export { COST_HUB_PATH };
+
+/**
+ * Breadcrumb trails, defined in trails.js (light enough for a page to render
+ * its breadcrumb without this module). Re-exported for existing imports.
+ */
+export { ROUTE_TRAILS, serviceTrail, trailFor };
 
 /**
  * Branded 1200x630 share image (public/og/, made by scripts/build-images.mjs),
@@ -117,7 +126,7 @@ export const PAGE_SEO = {
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
-      'Contact Bridgeland Builders about your Winnipeg renovation. Call 431-866-5644, email us or send your project details. We reply within one business day.',
+      `Contact Bridgeland Builders about your Winnipeg renovation. Call ${SITE_PHONE}, email us or send your project details. We reply within one business day.`,
     updated: '2026-10-14',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
@@ -150,7 +159,7 @@ export const PAGE_SEO = {
   '/contact': {
     title: 'Get in Touch | Bridgeland Builders Winnipeg',
     description:
-      'Send Bridgeland Builders a message about your renovation or project. Call 431-866-5644, email info@bridgelandbuilders.com, or use our contact form.',
+      `Send Bridgeland Builders a message about your renovation or project. Call ${SITE_PHONE}, email ${SITE_EMAIL}, or use our contact form.`,
     robots: 'noindex, follow',
     updated: '2026-10-13',
   },
@@ -646,70 +655,6 @@ export function buildServiceList() {
       item: { '@id': serviceId(service.path) },
     })),
   };
-}
-
-/**
- * A service page's breadcrumb trail from the registry: Services › (parent) ›
- * page, e.g. Services › Commercial Renovations › Office Renovations. The
- * visible breadcrumb on the page renders this same trail.
- */
-export function serviceTrail(service) {
-  if (!service) return [];
-  const trail = [['Services', '/services']];
-  const parent = service.parent ? serviceByPath(service.parent) : null;
-  if (parent) trail.push([crumbName(parent), parent.path]);
-  trail.push([crumbName(service), service.path]);
-  return trail;
-}
-
-/** A service page's breadcrumb name: its registry `crumb`, else its label. */
-const crumbName = (service) => service.crumb || service.label;
-
-/**
- * Breadcrumb trail per route, as [label, path] pairs (Home is implicit). The
- * labels match the visible breadcrumbs. Service pages come from the registry
- * (src/data/services.js); template routes (cost guides, areas, case studies,
- * videos) are resolved by trailFor().
- *
- * The one-level pages (/services, /about-us, /faqs, /blog, …) show no visible
- * breadcrumb (PageHero renders none), so they have no trail and no
- * BreadcrumbList: visible trail = schema trail (plan §3.5). The cost hub and
- * the watch pages are one level deep too, but they do show theirs.
- */
-export const ROUTE_TRAILS = {
-  '/': [],
-  ...Object.fromEntries(SERVICES.map((service) => [service.path, serviceTrail(service)])),
-};
-
-/** "Kitchen Renovation Cost Winnipeg | Bridgeland Builders" -> "Kitchen Renovation Cost Winnipeg". */
-const pageName = (title) => String(title || '').split(' | ')[0].trim();
-
-/**
- * The default breadcrumb trail for any route: ROUTE_TRAILS, else the template
- * routes' pattern (cost hub and /services/<svc>/cost, /service-areas/<slug>,
- * /projects/<slug>, /videos/<slug>). `title` (the page's SEO title) names the
- * last crumb where no registry label exists. A page that renders a different
- * visible breadcrumb passes that trail to usePageSeo (and head.js passes the
- * same one, through the page's *SeoOptions builder).
- */
-export function trailFor(path, title) {
-  if (ROUTE_TRAILS[path]) return ROUTE_TRAILS[path];
-  if (path === COST_HUB_PATH) return [['Renovation Costs', COST_HUB_PATH]];
-  let match = /^\/services\/([^/]+)\/cost$/.exec(path);
-  if (match) {
-    const service = serviceBySlug(match[1]);
-    return service ? [['Services', '/services'], [crumbName(service), service.path], ['Cost Guide', path]] : [];
-  }
-  match = /^\/service-areas\/([^/]+)$/.exec(path);
-  if (match) {
-    const area = SERVICE_AREAS.find((item) => item.slug === match[1]);
-    return [['Service Areas', '/service-areas'], [area ? area.name : pageName(title), path]];
-  }
-  match = /^\/projects\/([^/]+)$/.exec(path);
-  if (match) return [['Projects', '/projects'], [pageName(title), path]];
-  match = /^\/videos\/([^/]+)$/.exec(path);
-  if (match) return [[pageName(title), path]];
-  return [];
 }
 
 /** WebPage subtype per route. */

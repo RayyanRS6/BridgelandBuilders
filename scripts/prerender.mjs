@@ -66,14 +66,16 @@ if (!SEO_HEAD_BLOCK.test(pageTemplate)) {
 const escapeAttr = (value) =>
   String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-// data-seo marks the tag as managed by useSeo.js, so a client-side move to a
-// page that does not set it (e.g. a post's article:published_time on the way
-// to /services) removes it instead of leaving it stale.
+// data-seo marks the tag as managed by useSeo.js (src/hooks/headWriter.js), so
+// a client-side move to a page that does not set it (e.g. a post's
+// article:published_time on the way to /services) removes it instead of
+// leaving it stale.
 const meta = (attr, key, content) =>
   content ? `  <meta ${attr}="${key}" content="${escapeAttr(content)}" data-seo="" />\n` : '';
 
-// og:image width/height/type: the same helper useSeo.js uses on the client,
-// so a page's prerendered tags and its in-browser tags always agree.
+// og:image width/height/type: the same helper the browser uses after a
+// client-side navigation (src/hooks/headWriter.js), so a page's prerendered
+// tags and its in-browser tags always agree.
 const { imageMeta } = await import(pathToFileURL(join(ROOT, 'src/data/seo.js')).href);
 const imageInfo = (head, image) =>
   imageMeta(image, { width: head.imageWidth, height: head.imageHeight, type: head.imageType });

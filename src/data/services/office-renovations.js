@@ -9,6 +9,8 @@
 // or prices. Every rule in `local` was checked against the official page in its
 // sources list on 2026-10-13.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+
 export default {
   slug: 'office-renovations',
   breadcrumb: 'Office Renovation',
@@ -20,10 +22,10 @@ export default {
   heroPoints: ['Free site visit & written quote', 'After-hours & weekend scheduling', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed' },
     { num: '1', unit: '×', label: 'Progress update every week' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -80,7 +82,7 @@ export default {
     { q: 'Who pays for an office fit-up, the landlord or the tenant?', a: 'Your lease decides. Some landlords offer a tenant improvement allowance or build part of the space before you move in; others hand over a bare unit. Read the improvement clause or work letter before you collect quotes, and bring it to the site visit so the scope matches what you’re responsible for.' },
     { q: 'Can you add meeting rooms or private offices?', a: 'Yes. New partitions, doors and ceilings for meeting rooms and private offices are a common part of an office renovation. Each new room also needs light, power, data, air flow and enough sound control for how it’s used, so we plan those with the walls rather than after them.' },
     { q: 'Do you handle the permit and inspections?', a: 'Yes. We coordinate the building permit and inspections with the City of Winnipeg or your local municipality, and flag anything that will need attention early, such as a demising wall, an exit change or an accessibility upgrade. If the City needs professional drawings, we build to the architect’s or engineer’s set.' },
-    { q: 'What happens after I contact you?', a: 'We reply within one business day and book a free on-site visit. We walk the space with you, go through the lease dates and what your team needs, and then send a written quote with a schedule. Once the work starts, you get a progress update every week until handover.' },
+    { q: 'What happens after I contact you?', a: `We reply within ${REPLY_TIME} and book a free on-site visit. We walk the space with you, go through the lease dates and what your team needs, and then send a written quote with a schedule. Once the work starts, you get a progress update every week until handover.` },
   ],
 
   // Title, meta description and Service schema for this page. `updated`

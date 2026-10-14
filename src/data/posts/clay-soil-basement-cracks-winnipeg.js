@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.cb6497ea.webp 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.e8b10ffb.webp 1320w",
   "heroAvifSrcSet": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-480.035b039f.avif 480w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.4b566bcc.avif 880w, /images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1320.20bbbec2.avif 1320w",
   "ogImage": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x630.1ca49e3e.jpg",
+  "schemaImages": [
+    "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x675.86add68f.jpg",
+    "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x900.148f6742.jpg",
+    "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x1200.e16ec532.jpg"
+  ],
   "heroAlt": "Title card: Clay Soil and Basement Cracks in Winnipeg: What’s Normal",
   "author": "",
   "reviewedBy": "",

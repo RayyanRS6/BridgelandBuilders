@@ -10,6 +10,8 @@
 // facts link to the City of Winnipeg pages in `sources`. Refresh every January
 // (title year = period).
 
+import { OFFICE_HOURS_SHORT, REPLY_TIME, SITE_PHONE, TIMELINES } from '../facts.js';
+
 const ACCESSED = '2026-10-13';
 
 export default {
@@ -173,7 +175,7 @@ export default {
   faqs: [
     {
       q: 'How long does a bathroom renovation take?',
-      a: 'Two to three weeks for a typical full bathroom, from demolition to the final bead of silicone. If it is your only bathroom, tell us at the on-site visit: we plan those tighter and get the toilet back in service as early as we can. While the work is on, we protect the hallway, keep the room sealed off and clean up every day.',
+      a: `${TIMELINES.bathroom.wordsCapitalized} for a typical full bathroom, from demolition to the final bead of silicone. If it is your only bathroom, tell us at the on-site visit: we plan those tighter and get the toilet back in service as early as we can. While the work is on, we protect the hallway, keep the room sealed off and clean up every day.`,
     },
     {
       q: 'Do I need a permit to renovate a bathroom in Winnipeg?',
@@ -189,7 +191,7 @@ export default {
     },
     {
       q: 'How do I get an exact price for my bathroom?',
-      a: 'Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We measure the room, look at the plumbing you already have, talk through what you want to change, then send a free written quote. We reply to every request within one business day.',
+      a: `Book a free on-site visit, or call ${SITE_PHONE}, ${OFFICE_HOURS_SHORT}. We measure the room, look at the plumbing you already have, talk through what you want to change, then send a free written quote. We reply to every request within ${REPLY_TIME}.`,
     },
   ],
 

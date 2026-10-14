@@ -14,6 +14,8 @@
 // Every rule in `local` was checked against the official page in its sources
 // list on 2026-10-13. Re-check them before changing the wording.
 
+import { EXPERIENCE_YEARS, OFFICE_HOURS_TEXT, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
+
 export default {
   slug: 'commercial-renovation',
   breadcrumb: 'Commercial Renovation',
@@ -25,10 +27,10 @@ export default {
   heroPoints: ['Free site visit & written quote', 'After-hours & weekend scheduling', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed' },
     { num: '1', unit: '×', label: 'Progress update every week' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -102,7 +104,7 @@ export default {
     { q: 'Can you take on work for property managers?', a: 'Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners. Each job starts with a free site visit and a written quote, and the weekly progress update gives you something to pass on to owners and tenants.' },
     { q: 'How firm is the schedule?', a: 'The schedule comes with your written quote, and we build to it. If something outside our control moves, like a permit review, a supplier delay or an inspection date, you hear about it in that week’s update along with what we’re doing about it, rather than at the end of the job.' },
     { q: 'Which areas do you serve for commercial work?', a: 'We work in Winnipeg and nearby communities within about an hour of the city, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach. Outside Winnipeg, permits and inspections go through the local municipality or planning district, and we coordinate with them the same way.' },
-    { q: 'How quickly will you get back to us?', a: 'Within one business day. Our office hours are Monday to Friday, 8:30 a.m. to 4:30 p.m., and you can reach us at 431-866-5644 or info@bridgelandbuilders.com. From there we book a free on-site visit, walk the space with you, and follow up with a written quote.' },
+    { q: 'How quickly will you get back to us?', a: `Within ${REPLY_TIME}. Our office hours are ${OFFICE_HOURS_TEXT}, and you can reach us at ${SITE_PHONE} or ${SITE_EMAIL}. From there we book a free on-site visit, walk the space with you, and follow up with a written quote.` },
   ],
 
   // Title, meta description and Service schema for this page. `updated`

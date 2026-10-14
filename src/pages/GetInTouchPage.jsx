@@ -2,13 +2,8 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import LeadConnectorForm from '../components/LeadConnectorForm.jsx';
 import { ClockIcon, MailIcon, PhoneIcon, PinIcon } from '../components/icons.jsx';
-import {
-  MAILING_ADDRESS,
-  SITE_EMAIL,
-  SITE_NAME,
-  SITE_PHONE,
-  SITE_PHONE_TEL,
-} from '../data/siteConfig.js';
+import { REPLY_TIME, SITE_EMAIL, SITE_NAME, SITE_PHONE, SITE_PHONE_TEL } from '../data/facts.js';
+import { MAILING_ADDRESS } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // The GoHighLevel form on this page, which carries the SMS consent checkbox the
@@ -31,7 +26,7 @@ export default function GetInTouchPage() {
         eyebrow="Get in Touch"
         title="SEND US"
         highlight="A MESSAGE"
-        description="Questions about a renovation, a quote, or a project we’re already working on? Send us a message and our team will get back to you within one business day."
+        description={`Questions about a renovation, a quote, or a project we’re already working on? Send us a message and our team will get back to you within ${REPLY_TIME}.`}
         showQuote={false}
       />
 
@@ -51,7 +46,7 @@ export default function GetInTouchPage() {
                     <span className="lead-aside-icon"><PhoneIcon size={16} strokeWidth="2" /></span>
                     <div>
                       <h4>Phone</h4>
-                      <p><a href={SITE_PHONE_TEL}>+1 {SITE_PHONE}</a></p>
+                      <p><a href={SITE_PHONE_TEL}>{SITE_PHONE}</a></p>
                     </div>
                   </li>
                   <li className="lead-aside-item">
@@ -75,7 +70,7 @@ export default function GetInTouchPage() {
                     <span className="lead-aside-icon"><ClockIcon size={16} /></span>
                     <div>
                       <h4>Quick replies</h4>
-                      <p>We get back to every message within one business day.</p>
+                      <p>We get back to every message within {REPLY_TIME}.</p>
                     </div>
                   </li>
                 </ul>
@@ -104,8 +99,7 @@ export default function GetInTouchPage() {
                   <div className="contact-direct-fallback">
                     <p>
                       Email us at <a href={`mailto:${SITE_EMAIL}`}>{SITE_EMAIL}</a> or call{' '}
-                      <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>, and we’ll get back to you within one
-                      business day.
+                      <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>, and we’ll get back to you within {REPLY_TIME}.
                     </p>
                     <div className="hero-cta-group">
                       <a className="btn-pill-red" href={`mailto:${SITE_EMAIL}`}>EMAIL US</a>

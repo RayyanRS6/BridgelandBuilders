@@ -18,6 +18,8 @@
 // suites available since 2025-01-15; Canada Secondary Suite Loan Program will
 // not be implemented (Budget 2025, Annex 3); MHRTC described without rates.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+
 export default {
   slug: 'basement-suites',
   breadcrumb: 'Basement Suite',
@@ -29,10 +31,10 @@ export default {
   heroPoints: ['Free on-site visit', 'Zoning & permits checked first', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '4', unit: '–8', label: 'Weeks for a typical basement development' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed across Winnipeg' },
+    { num: String(TIMELINES.basement.min), unit: `–${TIMELINES.basement.max}`, label: 'Weeks for a typical basement development' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -122,7 +124,7 @@ export default {
   faqs: [
     { q: 'Can any basement become a legal suite?', a: 'Not always. The lot must allow a secondary suite under the Zoning By-law, only one suite is allowed per single-family property, and the space must meet Manitoba Building Code items such as ceiling height, exits and egress windows. Where zoning isn’t met, conditional use approval or a variance may be needed. We start checking these at the on-site visit.' },
     { q: 'What makes a suite different from a finished basement with a kitchen?', a: 'A suite is a separate home. The City treats an attached secondary suite as an independent dwelling unit with its own entrance, and it needs a development permit as well as a building permit. The building code then adds fire protection, a smoke-tight barrier, sound control, alarms and exits that an ordinary finished basement doesn’t need.' },
-    { q: 'How long does a basement suite take to build?', a: 'Our typical basement development takes four to eight weeks of construction. A suite adds a kitchen, fire and sound separation, and more inspections, and both the development and building permits have to be in place before building starts. We give you a schedule for your suite with the written quote, and update it every week once work begins.' },
+    { q: 'How long does a basement suite take to build?', a: `Our typical basement development takes ${TIMELINES.basement.words} of construction. A suite adds a kitchen, fire and sound separation, and more inspections, and both the development and building permits have to be in place before building starts. We give you a schedule for your suite with the written quote, and update it every week once work begins.` },
     { q: 'Is there government help to build a secondary suite?', a: 'Since January 15, 2025, federal mortgage insurance rules have let eligible homeowners refinance to build a secondary suite, with financing of up to 90 per cent of the home’s value including the value the suite adds. The Canada Secondary Suite Loan Program announced in 2024 will not be implemented, according to Budget 2025. Ask your lender what you qualify for.' },
     { q: 'Is there a tax credit for a family suite?', a: 'Possibly. Canada’s Multigenerational Home Renovation Tax Credit covers certain expenses to create a self-contained secondary unit that lets a senior, or an adult eligible for the disability tax credit, live with a qualifying relative. Eligibility and amounts depend on your situation, so confirm with the Canada Revenue Agency or your accountant before counting on it.' },
     { q: 'Should the basement be checked for moisture and radon first?', a: 'Yes. A suite is someone’s home, so the basement must be dry before framing, and active leaks or foundation cracks go to a waterproofing or foundation specialist first. Health Canada recommends a long-term radon test of at least three months, ideally in fall or winter, and a certified mitigation professional if levels exceed 200 Bq/m³.' },

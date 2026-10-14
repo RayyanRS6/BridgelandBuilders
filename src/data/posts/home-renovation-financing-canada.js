@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.1e034cbf.webp 1320w",
   "heroAvifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.a983957b.avif 1320w",
   "ogImage": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x630.fdd817b3.jpg",
+  "schemaImages": [
+    "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x675.b06b8c86.jpg",
+    "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x900.8f8b808c.jpg",
+    "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x1200.93722be1.jpg"
+  ],
   "heroAlt": "Title card: Home Renovation Financing in Canada: Your Options",
   "author": "",
   "reviewedBy": "",

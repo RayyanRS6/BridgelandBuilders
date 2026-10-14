@@ -9,6 +9,8 @@
 // or prices. Every rule in `local` was checked against the official page in its
 // sources list on 2026-10-13.
 
+import { EXPERIENCE_YEARS, OFFICE_DAYS_TEXT, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+
 export default {
   slug: 'retail-renovations',
   breadcrumb: 'Retail Renovation',
@@ -20,10 +22,10 @@ export default {
   heroPoints: ['Free site visit & written quote', 'After-hours & weekend scheduling', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed' },
     { num: '1', unit: '×', label: 'Progress update every week' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -80,7 +82,7 @@ export default {
     { q: 'Can you work to our brand or head-office drawings?', a: 'Yes. We build to supplied drawings and specifications, whether they come from your designer, your landlord’s design criteria or a head-office fit-out package. We walk the unit against them before work starts and raise anything that won’t work on site before it becomes a change order or a delay.' },
     { q: 'Does a retail renovation need an occupancy permit?', a: 'Often. In Winnipeg, a new tenant establishing a use without a valid occupancy permit, or a tenant expanding into more space, generally needs one before opening. A new tenant moving into a space that already has a valid occupancy permit, with no alterations or change of use, generally does not. Ask your landlord what permit the unit has.' },
     { q: 'Do you renovate showrooms?', a: 'Yes. A commercial showroom renovation follows the same process as a store: a free site visit, a written quote and a schedule around your hours. Showrooms usually need more attention on lighting, power at display locations and flooring that can take heavy products, so bring your display plan to the site visit.' },
-    { q: 'What happens after I get in touch?', a: 'We reply within one business day, Monday to Friday, and book a free on-site visit. We walk the unit with you, go through your dates and drawings, and then send a written quote with a schedule. Once work starts, you get a progress update every week until the store is handed over.' },
+    { q: 'What happens after I get in touch?', a: `We reply within ${REPLY_TIME}, ${OFFICE_DAYS_TEXT}, and book a free on-site visit. We walk the unit with you, go through your dates and drawings, and then send a written quote with a schedule. Once work starts, you get a progress update every week until the store is handed over.` },
   ],
 
   // Title, meta description and Service schema for this page. `updated`

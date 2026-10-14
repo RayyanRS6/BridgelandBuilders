@@ -9,6 +9,8 @@
 // (src/data/services/kitchen-renovations.js). Permit facts link to the City of
 // Winnipeg pages in `sources`. Refresh every January (title year = period).
 
+import { OFFICE_HOURS_SHORT, REPLY_TIME, SITE_PHONE, TIMELINES } from '../facts.js';
+
 const ACCESSED = '2026-10-13';
 
 export default {
@@ -174,7 +176,7 @@ export default {
   faqs: [
     {
       q: 'How long does a kitchen renovation take?',
-      a: 'Four to six weeks for most full kitchens once the cabinets are on site. Cabinets and counters are ordered after you approve the written quote, and the countertop template happens after the cabinets are set, which adds about a week in the middle. We set up a temporary spot for your kettle and microwave while the work is on.',
+      a: `${TIMELINES.kitchen.wordsCapitalized} for most full kitchens once the cabinets are on site. Cabinets and counters are ordered after you approve the written quote, and the countertop template happens after the cabinets are set, which adds about a week in the middle. We set up a temporary spot for your kettle and microwave while the work is on.`,
     },
     {
       q: 'Do I need a permit for a kitchen renovation in Winnipeg?',
@@ -190,7 +192,7 @@ export default {
     },
     {
       q: 'How do I get an exact price for my kitchen?',
-      a: 'Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We measure the room, talk through how you cook and what isn’t working in the kitchen you have now, then send a free written quote. We reply to every request within one business day.',
+      a: `Book a free on-site visit, or call ${SITE_PHONE}, ${OFFICE_HOURS_SHORT}. We measure the room, talk through how you cook and what isn’t working in the kitchen you have now, then send a free written quote. We reply to every request within ${REPLY_TIME}.`,
     },
   ],
 

@@ -8,11 +8,13 @@
 //   width, height     size of `src` (for the <img> width/height attributes)
 //   hero              (post heroes) the same three fields cut to 16:9, centred
 //   og                (post heroes) 1200x630 JPEG for Open Graph
+//   schemaImages      (post heroes) 1200x675, 1200x900, 1200x1200 JPEGs (16:9, 4:3, 1:1)
+//                     for BlogPosting.image
 //   original          the Wix original's size
 //   crop: '16:9'      top-level fields are the hero cut (image used only as a hero)
 //
 // 'card:<post-slug>' -> the branded title card of a published post without a
-// hero: src/srcSet/avifSrcSet/width/height (16:9), crop, og, and alt.
+// hero: src/srcSet/avifSrcSet/width/height (16:9), crop, og, schemaImages, and alt.
 export const MEDIA = {
   "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png": {
     "original": {
@@ -33,7 +35,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x630.0638e1e0.jpg"
+    "og": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x630.0638e1e0.jpg",
+    "schemaImages": [
+      "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x675.340680fc.jpg",
+      "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x900.4d12c2b0.jpg",
+      "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x1200.70be1e1d.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_54a6ed46264549a88ee3607a0516baaf~mv2.png": {
     "original": {
@@ -66,7 +73,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x630.18501d53.jpg"
+    "og": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x630.18501d53.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x675.2959d5af.jpg",
+      "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x900.31110629.jpg",
+      "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x1200.7620f4ce.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png": {
     "original": {
@@ -87,7 +99,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg"
+    "og": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x675.84b8afe3.jpg",
+      "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x900.545f9340.jpg",
+      "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x1200.705b1c83.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png": {
     "original": {
@@ -108,7 +125,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg"
+    "og": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x675.fcf35ad6.jpg",
+      "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x900.5532b02d.jpg",
+      "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x1200.e55b5a9b.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png": {
     "original": {
@@ -129,7 +151,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x630.50417805.jpg"
+    "og": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x630.50417805.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x675.0ac85043.jpg",
+      "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x900.447bb467.jpg",
+      "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x1200.ae42b1a0.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png": {
     "original": {
@@ -150,7 +177,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x630.0c5e2327.jpg"
+    "og": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x630.0c5e2327.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x675.92bf1dac.jpg",
+      "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x900.b994bac5.jpg",
+      "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x1200.9ad77cfa.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png": {
     "original": {
@@ -171,7 +203,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x630.c1dc6544.jpg"
+    "og": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x630.c1dc6544.jpg",
+    "schemaImages": [
+      "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x675.6fdab464.jpg",
+      "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x900.1917a06a.jpg",
+      "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x1200.04b91f03.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png": {
     "original": {
@@ -192,7 +229,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x630.5db48b4e.jpg"
+    "og": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x630.5db48b4e.jpg",
+    "schemaImages": [
+      "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x675.94047c71.jpg",
+      "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x900.eec7991e.jpg",
+      "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x1200.4a4e631e.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png": {
     "original": {
@@ -213,7 +255,12 @@ export const MEDIA = {
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x630.d2c7aef8.jpg"
+    "og": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x630.d2c7aef8.jpg",
+    "schemaImages": [
+      "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x675.9c0e9d23.jpg",
+      "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x900.4c2fb55d.jpg",
+      "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x1200.e23ad8ff.jpg"
+    ]
   },
   "https://static.wixstatic.com/media/48172a_09c6f7f59d2647b7b90a8b67d5c0035e~mv2.png": {
     "original": {
@@ -235,6 +282,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x630.e8c47488.jpg",
+    "schemaImages": [
+      "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x675.8501e4b5.jpg",
+      "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x900.98d237b8.jpg",
+      "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x1200.af60d0a3.jpg"
+    ],
     "alt": "Title card: Basement Development Permits in Winnipeg: How to Apply"
   },
   "card:basement-flood-protection-winnipeg": {
@@ -245,6 +297,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x630.bca545a6.jpg",
+    "schemaImages": [
+      "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x675.f4df22c1.jpg",
+      "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x900.d99297bf.jpg",
+      "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x1200.b9459ece.jpg"
+    ],
     "alt": "Title card: Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits"
   },
   "card:clay-soil-basement-cracks-winnipeg": {
@@ -255,6 +312,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x630.1ca49e3e.jpg",
+    "schemaImages": [
+      "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x675.86add68f.jpg",
+      "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x900.148f6742.jpg",
+      "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x1200.e16ec532.jpg"
+    ],
     "alt": "Title card: Clay Soil and Basement Cracks in Winnipeg: What’s Normal"
   },
   "card:clinic-renovation-permits-winnipeg": {
@@ -265,6 +327,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x630.bc757f21.jpg",
+    "schemaImages": [
+      "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x675.0efdf925.jpg",
+      "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x900.c34faac9.jpg",
+      "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x1200.dfa17cad.jpg"
+    ],
     "alt": "Title card: Clinic Renovation Permits in Winnipeg: What to Plan For"
   },
   "card:ensuite-renovation-winnipeg": {
@@ -275,6 +342,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x630.ccbdff08.jpg",
+    "schemaImages": [
+      "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x675.b381c58e.jpg",
+      "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x900.eb94c507.jpg",
+      "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x1200.f128fcf8.jpg"
+    ],
     "alt": "Title card: How Much Should an Ensuite Renovation Cost in Winnipeg?"
   },
   "card:exterior-painting-winnipeg-when-to-paint": {
@@ -285,6 +357,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x630.8d9272ff.jpg",
+    "schemaImages": [
+      "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x675.b0e50d9c.jpg",
+      "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x900.367ca396.jpg",
+      "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x1200.d8061ed7.jpg"
+    ],
     "alt": "Title card: When to Paint Your House Exterior in Winnipeg"
   },
   "card:home-additions-and-zoning-winnipeg": {
@@ -295,6 +372,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x630.420c23b0.jpg",
+    "schemaImages": [
+      "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x675.2e6afd7e.jpg",
+      "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x900.b521a341.jpg",
+      "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x1200.95919056.jpg"
+    ],
     "alt": "Title card: Home Addition Zoning in Winnipeg: Permits and Variances"
   },
   "card:home-renovation-cost-canada": {
@@ -305,6 +387,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x630.2525769f.jpg",
+    "schemaImages": [
+      "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x675.985d980f.jpg",
+      "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x900.c6bc74eb.jpg",
+      "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x1200.22268957.jpg"
+    ],
     "alt": "Title card: How Much Does a Home Renovation Cost in Canada?"
   },
   "card:home-renovation-financing-canada": {
@@ -315,6 +402,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x630.fdd817b3.jpg",
+    "schemaImages": [
+      "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x675.b06b8c86.jpg",
+      "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x900.8f8b808c.jpg",
+      "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x1200.93722be1.jpg"
+    ],
     "alt": "Title card: Home Renovation Financing in Canada: Your Options"
   },
   "card:home-renovation-planning-guide-canada": {
@@ -325,6 +417,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x630.95c71e72.jpg",
+    "schemaImages": [
+      "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x675.498c6388.jpg",
+      "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x900.1d9e11de.jpg",
+      "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x1200.029283e0.jpg"
+    ],
     "alt": "Title card: Home Renovation Planning in Canada: Guide and Checklist"
   },
   "card:how-to-check-a-contractors-wcb-clearance-manitoba": {
@@ -335,6 +432,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x630.8a999200.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x675.249c5196.jpg",
+      "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x900.fab5d915.jpg",
+      "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x1200.4510a6b5.jpg"
+    ],
     "alt": "Title card: How to Check a Contractor's WCB Clearance in Manitoba"
   },
   "card:insulation-rebates-during-a-renovation-manitoba": {
@@ -345,6 +447,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x630.5496f199.jpg",
+    "schemaImages": [
+      "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x675.6cfa8e4d.jpg",
+      "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x900.be524891.jpg",
+      "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x1200.02ae2963.jpg"
+    ],
     "alt": "Title card: Insulation Rebates in Manitoba: How to Use Them During a Renovation"
   },
   "card:manitoba-renovation-tax-credits-rebates": {
@@ -355,6 +462,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x630.a6d534f4.jpg",
+    "schemaImages": [
+      "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x675.6cf54da8.jpg",
+      "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x900.fc5fcfd4.jpg",
+      "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x1200.aec070d2.jpg"
+    ],
     "alt": "Title card: Home Renovation Grants and Tax Credits in Manitoba"
   },
   "card:office-fit-up-lease-planning-winnipeg": {
@@ -365,6 +477,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x630.96b0b61e.jpg",
+    "schemaImages": [
+      "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x675.27e96df1.jpg",
+      "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x900.64886083.jpg",
+      "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x1200.6b71374a.jpg"
+    ],
     "alt": "Title card: Office Fit-Up in Winnipeg: Planning Around Your Lease"
   },
   "card:planning-a-winter-basement-development-winnipeg": {
@@ -375,6 +492,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x630.d192608b.jpg",
+    "schemaImages": [
+      "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x675.cafc194d.jpg",
+      "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x900.ebdb8ccb.jpg",
+      "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x1200.ce96e371.jpg"
+    ],
     "alt": "Title card: Planning a Winter Basement Development in Winnipeg"
   },
   "card:radon-testing-before-finishing-a-basement": {
@@ -385,6 +507,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x630.2a82280e.jpg",
+    "schemaImages": [
+      "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x675.fe5ee9a2.jpg",
+      "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x900.67c6b6d2.jpg",
+      "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x1200.b24a502c.jpg"
+    ],
     "alt": "Title card: Radon Testing Before Finishing a Basement in Manitoba"
   },
   "card:renovating-a-character-home-in-winnipeg": {
@@ -395,6 +522,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x630.608d8208.jpg",
+    "schemaImages": [
+      "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x675.a134d447.jpg",
+      "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x900.ab90f096.jpg",
+      "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x1200.52ae029a.jpg"
+    ],
     "alt": "Title card: Heritage District Renovations: Updating a Character Home in Winnipeg"
   },
   "card:restaurant-renovation-permits-winnipeg": {
@@ -405,6 +537,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x630.00900e3d.jpg",
+    "schemaImages": [
+      "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x675.a53dad16.jpg",
+      "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x900.68459c4a.jpg",
+      "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x1200.0fdb8f45.jpg"
+    ],
     "alt": "Title card: Restaurant Renovation Permits in Winnipeg: What You Need"
   },
   "card:secondary-suite-rules-winnipeg": {
@@ -415,6 +552,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x630.05e576ee.jpg",
+    "schemaImages": [
+      "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x675.eebfa65d.jpg",
+      "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x900.7d32b40d.jpg",
+      "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x1200.0f912868.jpg"
+    ],
     "alt": "Title card: Secondary Suite Rules in Winnipeg: What the City Requires"
   },
   "card:spring-flood-prep-winnipeg-basements": {
@@ -425,6 +567,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x630.8405f91a.jpg",
+    "schemaImages": [
+      "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x675.5357c43b.jpg",
+      "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x900.2f8d39ea.jpg",
+      "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x1200.818626f7.jpg"
+    ],
     "alt": "Title card: Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist"
   },
   "card:what-does-a-general-contractor-do": {
@@ -435,6 +582,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x630.d9be107c.jpg",
+    "schemaImages": [
+      "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x675.09c42c75.jpg",
+      "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x900.26cc4c88.jpg",
+      "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x1200.8422ac7f.jpg"
+    ],
     "alt": "Title card: What Does a General Contractor Do?"
   },
   "card:window-and-door-replacement-winnipeg": {
@@ -445,6 +597,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x630.1dd372eb.jpg",
+    "schemaImages": [
+      "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x675.cc1b63de.jpg",
+      "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x900.4f7413a8.jpg",
+      "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x1200.3ef99a95.jpg"
+    ],
     "alt": "Title card: Window and Door Replacement in Winnipeg: Permits, Glass and Rebates"
   },
   "card:winnipeg-renovation-permits": {
@@ -455,6 +612,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x630.69ac1710.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x675.10c5b323.jpg",
+      "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x900.789125b6.jpg",
+      "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x1200.f6e7d277.jpg"
+    ],
     "alt": "Title card: Renovation Permits in Winnipeg: What Needs One and How to Apply"
   },
   "card:winnipeg-renovation-show-questions-to-ask": {
@@ -465,6 +627,11 @@ export const MEDIA = {
     "height": 495,
     "crop": "16:9",
     "og": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x675.c60aef98.jpg",
+      "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x900.3ddb0663.jpg",
+      "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x1200.f510177c.jpg"
+    ],
     "alt": "Title card: Winnipeg Renovation Show: Questions to Ask Contractors"
   }
 };

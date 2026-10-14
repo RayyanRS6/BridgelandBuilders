@@ -11,20 +11,18 @@
 //
 // `more` ({ label, to }) adds a link under an answer on the page only; the
 // FAQPage schema and the llms files use `q` and `a`.
-import { BUSINESS_HOURS, SERVICE_AREA_NAMES, SERVICE_AREA_STATEMENT, SITE_EMAIL, SITE_PHONE } from './siteConfig.js';
+import {
+  OFFICE_HOURS_TEXT,
+  REPLY_TIME,
+  SERVICE_AREA_NAMES,
+  SERVICE_AREA_STATEMENT,
+  SITE_EMAIL,
+  SITE_PHONE,
+  TIMELINES,
+} from './facts.js';
 
-/** '16:30' -> '4:30 p.m.' */
-function clock(time) {
-  const [hours, minutes] = String(time).split(':').map(Number);
-  const suffix = hours < 12 ? 'a.m.' : 'p.m.';
-  return `${hours % 12 || 12}:${String(minutes).padStart(2, '0')} ${suffix}`;
-}
-
-/** "Monday to Friday, 8:30 a.m. to 4:30 p.m." from BUSINESS_HOURS (the schema's hours). */
-export const OFFICE_HOURS_TEXT = BUSINESS_HOURS.map(({ days, opens, closes }) => {
-  const span = days.length > 1 ? `${days[0]} to ${days[days.length - 1]}` : days[0];
-  return `${span}, ${clock(opens)} to ${clock(closes)}`;
-}).join('; ');
+/** "Monday to Friday, 8:30 a.m. to 4:30 p.m.", defined in facts.js; re-exported for existing imports. */
+export { OFFICE_HOURS_TEXT };
 
 /** Official pages the permit answers rely on, with the date they were checked. */
 export const FAQ_SOURCES = [
@@ -111,7 +109,7 @@ export const FAQ_GROUPS = [
     items: [
       {
         q: 'How long does a renovation take?',
-        a: 'Most bathrooms take two to three weeks, most kitchens four to six weeks once the cabinets are on site, and basements four to eight weeks. Whole-home renovations and home additions usually run eight to sixteen weeks. Permits, product lead times and what we find when walls are opened can move these dates, and your written quote includes a schedule.',
+        a: `Most bathrooms take ${TIMELINES.bathroom.words}, most kitchens ${TIMELINES.kitchen.words} once the cabinets are on site, and basements ${TIMELINES.basement.words}. Whole-home renovations and home additions usually run ${TIMELINES.wholeHome.words}. Permits, product lead times and what we find when walls are opened can move these dates, and your written quote includes a schedule.`,
         more: { label: 'See our process and typical timelines', to: '/our-process' },
       },
       {
@@ -160,12 +158,12 @@ export const FAQ_GROUPS = [
     items: [
       {
         q: 'How do I get started?',
-        a: `Use our free instant quote for a starting price range, call ${SITE_PHONE}, or book a free on-site visit online. We reply within one business day, arrange a time to see the space, and follow up with a written quote. Our office hours are ${OFFICE_HOURS_TEXT}${OFFICE_HOURS_TEXT.endsWith('.') ? '' : '.'}`,
+        a: `Use our free instant quote for a starting price range, call ${SITE_PHONE}, or book a free on-site visit online. We reply within ${REPLY_TIME}, arrange a time to see the space, and follow up with a written quote. Our office hours are ${OFFICE_HOURS_TEXT}${OFFICE_HOURS_TEXT.endsWith('.') ? '' : '.'}`,
         more: { label: 'Book a free on-site visit', to: '/book-online' },
       },
       {
         q: 'What are your office hours?',
-        a: `Our office is open ${OFFICE_HOURS_TEXT} and closed on weekends. Call ${SITE_PHONE} during those hours, or email ${SITE_EMAIL} or send your project details online at any time, and we will reply within one business day. Commercial renovation work itself can be scheduled after hours or on weekends.`,
+        a: `Our office is open ${OFFICE_HOURS_TEXT} and closed on weekends. Call ${SITE_PHONE} during those hours, or email ${SITE_EMAIL} or send your project details online at any time, and we will reply within ${REPLY_TIME}. Commercial renovation work itself can be scheduled after hours or on weekends.`,
       },
       {
         q: 'What happens at the free on-site visit?',
@@ -202,7 +200,7 @@ export const CONTACT_FAQS = [
   },
   {
     q: 'How soon will I hear back after I get in touch?',
-    a: `Within one business day. We reply by phone, text or email, whichever you prefer, ask a few questions about the project and set up a time to see the space. Our office is open ${OFFICE_HOURS_TEXT}, and you can send your details through the form on this page at any time.`,
+    a: `Within ${REPLY_TIME}. We reply by phone, text or email, whichever you prefer, ask a few questions about the project and set up a time to see the space. Our office is open ${OFFICE_HOURS_TEXT}, and you can send your details through the form on this page at any time.`,
   },
   {
     q: 'Do you come out to my area?',

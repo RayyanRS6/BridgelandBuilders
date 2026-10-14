@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.1282306c.webp 1320w",
   "heroAvifSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.e5e54e79.avif 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.6a5c883c.avif 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.6cd34f58.avif 1320w",
   "ogImage": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x630.ccbdff08.jpg",
+  "schemaImages": [
+    "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x675.b381c58e.jpg",
+    "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x900.eb94c507.jpg",
+    "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x1200.f128fcf8.jpg"
+  ],
   "heroAlt": "Title card: How Much Should an Ensuite Renovation Cost in Winnipeg?",
   "author": "",
   "reviewedBy": "",

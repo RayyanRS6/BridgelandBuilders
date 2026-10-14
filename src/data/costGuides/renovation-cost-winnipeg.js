@@ -12,6 +12,8 @@
 // the official page in `sources`, checked on the date shown.
 // Refresh every January with the new estimator ranges (title year = period).
 
+import { OFFICE_HOURS_SHORT, REPLY_TIME, SITE_PHONE, TIMELINES } from '../facts.js';
+
 const ACCESSED = '2026-10-13';
 
 export default {
@@ -48,9 +50,9 @@ export default {
       caption: 'Starting ranges in our instant estimator, by service',
       head: ['Service', 'Starting range by size', 'Typical timeline'],
       rows: [
-        ['[Bathroom renovation](/services/bathroom-renovations/cost)', '$16,000–$36,000 (up to 50 sq ft through 150+ sq ft)', '2–3 weeks'],
-        ['[Basement development](/services/basement-renovations/cost)', '$25,000–$150,000 (up to 500 sq ft through 1,500 sq ft)', '4–8 weeks'],
-        ['[Kitchen renovation](/services/kitchen-renovations/cost)', '$40,000–$190,000 (up to 100 sq ft through over 200 sq ft)', '4–6 weeks once cabinets are on site'],
+        ['[Bathroom renovation](/services/bathroom-renovations/cost)', '$16,000–$36,000 (up to 50 sq ft through 150+ sq ft)', TIMELINES.bathroom.short],
+        ['[Basement development](/services/basement-renovations/cost)', '$25,000–$150,000 (up to 500 sq ft through 1,500 sq ft)', TIMELINES.basement.short],
+        ['[Kitchen renovation](/services/kitchen-renovations/cost)', '$40,000–$190,000 (up to 100 sq ft through over 200 sq ft)', `${TIMELINES.kitchen.short} once cabinets are on site`],
       ],
       note: 'Each service links to its full cost guide. Ranges cover the size of the space. Options such as a new shower, cabinets, countertops, flooring or an egress window each have their own range in the estimator. Your written quote after the free on-site visit is the final price.',
     },
@@ -157,11 +159,11 @@ export default {
         },
         {
           t: 'li',
-          x: '**[Whole-home renovations](/services/whole-home-renovations):** most run 8–16 weeks, depending on the size of the house and how much of it is being renovated.',
+          x: `**[Whole-home renovations](/services/whole-home-renovations):** most run ${TIMELINES.wholeHome.short}, depending on the size of the house and how much of it is being renovated.`,
         },
         {
           t: 'li',
-          x: '**[Home additions](/services/home-additions):** many straightforward additions take roughly 8–16 weeks once permits and materials are ready.',
+          x: `**[Home additions](/services/home-additions):** many straightforward additions take roughly ${TIMELINES.addition.short} once permits and materials are ready.`,
         },
         {
           t: 'li',
@@ -195,7 +197,7 @@ export default {
   faqs: [
     {
       q: 'How long does a renovation take in Winnipeg?',
-      a: 'It depends on the room. On our jobs, a typical bathroom takes two to three weeks, a kitchen four to six weeks once the cabinets are on site, and a basement four to eight weeks. Whole-home renovations usually run eight to sixteen weeks, and many straightforward additions take about the same once permits and materials are ready.',
+      a: `It depends on the room. On our jobs, a typical bathroom takes ${TIMELINES.bathroom.words}, a kitchen ${TIMELINES.kitchen.words} once the cabinets are on site, and a basement ${TIMELINES.basement.words}. Whole-home renovations usually run ${TIMELINES.wholeHome.words}, and many straightforward additions take about the same once permits and materials are ready.`,
     },
     {
       q: 'Do I need a permit to renovate in Winnipeg?',
@@ -211,7 +213,7 @@ export default {
     },
     {
       q: 'How do I get an exact price for my renovation?',
-      a: 'Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We look at the space, talk through what you want, and follow up with a free written quote. If you want a ballpark first, the instant estimator gives you a starting range. We reply to every request within one business day.',
+      a: `Book a free on-site visit, or call ${SITE_PHONE}, ${OFFICE_HOURS_SHORT}. We look at the space, talk through what you want, and follow up with a free written quote. If you want a ballpark first, the instant estimator gives you a starting range. We reply to every request within ${REPLY_TIME}.`,
     },
   ],
 

@@ -16,6 +16,8 @@
 // local section is framed as "what to check" with permits as one item. The
 // only price on the page is the instant estimator's starting range.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+
 export default {
   slug: 'basement-renovation',
   breadcrumb: 'Basement Renovation',
@@ -23,14 +25,14 @@ export default {
   title: 'BASEMENT DEVELOPMENT & RENOVATIONS',
   titleHighlight: 'IN WINNIPEG',
   subtitle:
-    'We develop unfinished basements and renovate finished ones in Winnipeg and nearby communities: moisture checked first, walls insulated for winter, permits coordinated. A typical basement takes four to eight weeks.',
+    `We develop unfinished basements and renovate finished ones in Winnipeg and nearby communities: moisture checked first, walls insulated for winter, permits coordinated. A typical basement takes ${TIMELINES.basement.words}.`,
   heroPoints: ['Free on-site visit', 'Moisture checked before framing', 'Permits & inspections coordinated'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '4', unit: '–8', label: 'Weeks for a typical basement' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed across Winnipeg' },
+    { num: String(TIMELINES.basement.min), unit: `–${TIMELINES.basement.max}`, label: 'Weeks for a typical basement' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -148,7 +150,7 @@ export default {
 
   // No cost questions here: those live on /services/basement-renovations/cost.
   faqs: [
-    { q: 'How long does basement development take?', a: 'A typical basement takes four to eight weeks of work, depending on its size, the number of rooms, and whether a bathroom is added. Permit review and inspections are part of the schedule, so we build them into the timeline we give you with the written quote instead of leaving them as a surprise.' },
+    { q: 'How long does basement development take?', a: `A typical basement takes ${TIMELINES.basement.words} of work, depending on its size, the number of rooms, and whether a bathroom is added. Permit review and inspections are part of the schedule, so we build them into the timeline we give you with the written quote instead of leaving them as a surprise.` },
     { q: 'Do I need a permit to finish my basement in Winnipeg?', a: 'Yes, if you are finishing a previously undeveloped basement or creating a new bedroom: the Winnipeg Building By-law requires a building permit for both. Updating finishes in a basement that is already developed does not need one. Electrical and plumbing work often need separate permits. We coordinate them as part of the job.' },
     { q: 'My basement smells damp. Can it still be finished?', a: 'Usually, but not until the cause is known. Sometimes it’s grading or a downspout outside; sometimes it’s a foundation crack or a failing sump pump. Outside drainage gets fixed first, and active leaks or cracks go to a waterproofing or foundation repair company before we frame. Finishing over a damp wall only hides the problem.' },
     { q: 'What is an egress window, and do I need one?', a: 'It’s a window large enough to climb out of in an emergency. The City’s basement guide says a new basement bedroom needs one that opens from inside without tools, with at least 0.35 m² of clear opening and no dimension under 380 mm, unless the bedroom has a door straight outside. We cut the opening, install the window, and set the window well.' },

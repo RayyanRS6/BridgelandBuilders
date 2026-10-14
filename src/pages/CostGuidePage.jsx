@@ -16,7 +16,8 @@ import {
   normaliseCostPath,
 } from '../data/costGuides/index.js';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
-import { trailFor } from '../data/seo.js';
+// trails.js, not seo.js: the head builders stay out of the page's first load.
+import { trailFor } from '../data/trails.js';
 import { serviceByPath, serviceBySlug } from '../data/services.js';
 import { INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
@@ -133,8 +134,8 @@ export default function CostGuidePage() {
 }
 
 /**
- * The service pages' breadcrumb, from seo.js trailFor() — the same trail the
- * BreadcrumbList uses (visible trail = schema trail).
+ * The service pages' breadcrumb, from trails.js trailFor() — the same trail
+ * the BreadcrumbList uses (visible trail = schema trail).
  */
 function TrailBreadcrumb({ trail }) {
   return (

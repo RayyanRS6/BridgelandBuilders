@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.09bdb970.webp 1320w",
   "heroAvifSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.51c2dc1d.avif 1320w",
   "ogImage": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x630.0c5e2327.jpg",
+  "schemaImages": [
+    "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x675.92bf1dac.jpg",
+    "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x900.b994bac5.jpg",
+    "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x1200.9ad77cfa.jpg"
+  ],
   "heroAlt": "Title graphic reading “How to Prepare Your Business for a Major Renovation: Plan. Protect. Prosper.” with a man using a tablet and construction cranes behind him",
   "author": "",
   "reviewedBy": "",

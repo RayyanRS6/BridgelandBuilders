@@ -1,3 +1,5 @@
+import { TIMELINES } from './facts.js';
+
 // Services featured on the /free-quote ad landing page, in display order.
 // To feature another service, add one entry here — the page lays the cards out
 // three to a row and wraps automatically.
@@ -12,7 +14,7 @@ export const LANDING_SERVICES = [
     id: 'kitchen',
     formType: 'Kitchen',
     title: 'Kitchen Renovations',
-    tag: 'Typically 4–6 weeks',
+    tag: `Typically ${TIMELINES.kitchen.short}`,
     img: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80',
     alt: 'White kitchen with an island, black bar stools, and crystal pendant lights',
     text: 'We plan the layout around how you actually use the room, then build it with materials that survive daily cooking.',
@@ -23,7 +25,7 @@ export const LANDING_SERVICES = [
     id: 'bathroom',
     formType: 'Bathroom',
     title: 'Bathroom Renovations',
-    tag: 'Typically 2–3 weeks',
+    tag: `Typically ${TIMELINES.bathroom.short}`,
     img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80',
     alt: 'White bathroom with a pedestal sink and black-and-white checkered floor tile',
     text: 'Modern fixtures, clean tiling, and waterproofing done properly underneath where you’ll never see it.',
@@ -34,7 +36,7 @@ export const LANDING_SERVICES = [
     id: 'basement',
     formType: 'Basement',
     title: 'Basement Renovations',
-    tag: 'Typically 4–8 weeks',
+    tag: `Typically ${TIMELINES.basement.short}`,
     img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
     alt: 'Room with light grey walls, a black loveseat, a white dresser, and a floor lamp',
     text: 'A family room, guest space or income suite — built dry, insulated properly, and warm enough to use in a Winnipeg January.',

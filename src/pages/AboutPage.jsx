@@ -6,6 +6,7 @@ import RichBody from '../components/RichBody.jsx';
 import Testimonial from '../components/Testimonial.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { PEOPLE } from '../data/people.js';
+import { EXPERIENCE_YEARS, PROJECT_COUNT } from '../data/facts.js';
 import { BBB_PROFILE_URL, SERVICE_AREA_STATEMENT } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
@@ -21,7 +22,7 @@ const ABOUT_BLOCKS = [
   { t: 'h2', x: 'Who is Bridgeland Builders?' },
   {
     t: 'p',
-    x: 'Bridgeland Builders is a renovation and construction contractor based in Winnipeg, Manitoba. We renovate homes and commercial spaces in Winnipeg and nearby communities within about an hour. Our team brings over 60 years of combined experience and more than 100 completed projects, and every project starts with a free on-site visit and a free written quote.',
+    x: `Bridgeland Builders is a renovation and construction contractor based in Winnipeg, Manitoba. We renovate homes and commercial spaces in Winnipeg and nearby communities within about an hour. Our team brings over ${EXPERIENCE_YEARS} years of combined experience and more than ${PROJECT_COUNT} completed projects, and every project starts with a free on-site visit and a free written quote.`,
   },
   { t: 'h2', x: 'What do we work on?' },
   {
@@ -88,8 +89,8 @@ export default function AboutPage() {
         highlight="HONEST WORK."
         description={
           TEAM.length > 0
-            ? 'Meet the Winnipeg renovation team that brings more than 60 years of combined experience to every home and business project.'
-            : 'A Winnipeg renovation contractor bringing more than 60 years of combined experience to every home and business project.'
+            ? `Meet the Winnipeg renovation team that brings more than ${EXPERIENCE_YEARS} years of combined experience to every home and business project.`
+            : `A Winnipeg renovation contractor bringing more than ${EXPERIENCE_YEARS} years of combined experience to every home and business project.`
         }
         primaryLink={{ to: '/our-process', label: 'SEE HOW WE WORK' }}
       />

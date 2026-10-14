@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
   "heroAvifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.6642e0d8.avif 1320w",
   "ogImage": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x630.c1dc6544.jpg",
+  "schemaImages": [
+    "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x675.6fdab464.jpg",
+    "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x900.1917a06a.jpg",
+    "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x1200.04b91f03.jpg"
+  ],
   "heroAlt": "Worker in a hard hat and safety vest in a gutted commercial space, with the title “The Biggest Cost Factors: Commercial Renovation Projects”",
   "author": "",
   "reviewedBy": "",

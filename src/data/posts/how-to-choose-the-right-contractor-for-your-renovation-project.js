@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
   "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
   "ogImage": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg",
+  "schemaImages": [
+    "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x675.fcf35ad6.jpg",
+    "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x900.5532b02d.jpg",
+    "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x1200.e55b5a9b.jpg"
+  ],
   "heroAlt": "Title graphic reading “How to Avoid Unexpected Expenses? Master cost control and budgeting strategies” beside a model house and a calculator on a desk",
   "author": "",
   "reviewedBy": "",

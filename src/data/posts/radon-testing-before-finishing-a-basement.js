@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.76850913.webp 1320w",
   "heroAvifSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.2b128494.avif 1320w",
   "ogImage": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x630.2a82280e.jpg",
+  "schemaImages": [
+    "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x675.fe5ee9a2.jpg",
+    "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x900.67c6b6d2.jpg",
+    "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x1200.b24a502c.jpg"
+  ],
   "heroAlt": "Title card: Radon Testing Before Finishing a Basement in Manitoba",
   "author": "",
   "reviewedBy": "",

@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
   "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w",
   "ogImage": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x630.18501d53.jpg",
+  "schemaImages": [
+    "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x675.2959d5af.jpg",
+    "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x900.31110629.jpg",
+    "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x1200.7620f4ce.jpg"
+  ],
   "heroAlt": "Open commercial lounge with grey and yellow sofas, colourful wall art, exposed ductwork and tall windows",
   "author": "",
   "reviewedBy": "",

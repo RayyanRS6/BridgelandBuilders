@@ -13,6 +13,8 @@
 // (they live in the suite guide once re-verified after the 2025 zoning
 // changes). Refresh every January (title year = period).
 
+import { OFFICE_HOURS_SHORT, REPLY_TIME, SITE_PHONE, TIMELINES } from '../facts.js';
+
 const ACCESSED = '2026-10-13';
 
 export default {
@@ -173,7 +175,7 @@ export default {
   faqs: [
     {
       q: 'How long does a basement development take?',
-      a: 'Four to eight weeks for a typical basement. The order matters: any water problems first, then framing, insulation, electrical and plumbing, inspections before the walls are covered, then drywall and finishes. A bathroom, or a bedroom that needs an egress window, adds steps, and we plan them into the schedule from the start.',
+      a: `${TIMELINES.basement.wordsCapitalized} for a typical basement. The order matters: any water problems first, then framing, insulation, electrical and plumbing, inspections before the walls are covered, then drywall and finishes. A bathroom, or a bedroom that needs an egress window, adds steps, and we plan them into the schedule from the start.`,
     },
     {
       q: 'Do I need a permit to finish a basement in Winnipeg?',
@@ -189,7 +191,7 @@ export default {
     },
     {
       q: 'How do I get an exact price for my basement?',
-      a: 'Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We look at the space, ask how you want to use it, check what the windows and ceiling height allow, then send a free written quote. We reply to every request within one business day.',
+      a: `Book a free on-site visit, or call ${SITE_PHONE}, ${OFFICE_HOURS_SHORT}. We look at the space, ask how you want to use it, check what the windows and ceiling height allow, then send a free written quote. We reply to every request within ${REPLY_TIME}.`,
     },
   ],
 

@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.2997bc1a.webp 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.e90ea283.webp 1320w",
   "heroAvifSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.b3c11039.avif 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.1baeecae.avif 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.dbf07dd3.avif 1320w",
   "ogImage": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x630.608d8208.jpg",
+  "schemaImages": [
+    "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x675.a134d447.jpg",
+    "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x900.ab90f096.jpg",
+    "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x1200.52ae029a.jpg"
+  ],
   "heroAlt": "Title card: Heritage District Renovations: Updating a Character Home in Winnipeg",
   "author": "",
   "reviewedBy": "",

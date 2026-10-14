@@ -1,8 +1,8 @@
-import { SERVICE_AREA_NAMES } from '../data/siteConfig.js';
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, SERVICE_AREA_NAMES } from '../data/facts.js';
 
 const STATS = [
-  { num: '60', unit: '+', label: 'Years of combined experience' },
-  { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
+  { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+  { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed across Winnipeg' },
   // Winnipeg plus the confirmed nearby communities (SERVICE_AREAS in
   // siteConfig.js). This slot held "5.0 Rating on Google", which plan §19 keeps
   // off the site until the Google Business Profile has 10+ reviews. Once it
@@ -10,7 +10,7 @@ const STATS = [
   // profile (REVIEW_STATS / GBP.mapsUrl in siteConfig.js), e.g. "5.0 on Google ·
   // N reviews".
   { num: String(SERVICE_AREA_NAMES.length), unit: '', label: 'Communities we serve' },
-  { num: '1', unit: 'day', label: 'Reply within one business day' },
+  { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
 ];
 
 export default function Stats() {

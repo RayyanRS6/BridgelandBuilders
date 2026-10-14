@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
   "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.99427962.avif 1320w",
   "ogImage": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x630.bca545a6.jpg",
+  "schemaImages": [
+    "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x675.f4df22c1.jpg",
+    "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x900.d99297bf.jpg",
+    "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x1200.b9459ece.jpg"
+  ],
   "heroAlt": "Title card: Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits",
   "author": "",
   "reviewedBy": "",

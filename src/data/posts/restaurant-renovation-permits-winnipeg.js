@@ -22,6 +22,11 @@ export default {
   "heroSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.7231ee98.webp 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.9713d7f1.webp 1320w",
   "heroAvifSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.0a935fa4.avif 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.6b028ea6.avif 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.4c3faba8.avif 1320w",
   "ogImage": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x630.00900e3d.jpg",
+  "schemaImages": [
+    "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x675.a53dad16.jpg",
+    "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x900.68459c4a.jpg",
+    "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x1200.0fdb8f45.jpg"
+  ],
   "heroAlt": "Title card: Restaurant Renovation Permits in Winnipeg: What You Need",
   "author": "",
   "reviewedBy": "",

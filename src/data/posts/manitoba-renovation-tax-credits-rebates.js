@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
   "heroAvifSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.6094b92a.avif 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.e8f9c620.avif 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.a075d7e8.avif 1320w",
   "ogImage": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x630.a6d534f4.jpg",
+  "schemaImages": [
+    "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x675.6cf54da8.jpg",
+    "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x900.fc5fcfd4.jpg",
+    "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x1200.aec070d2.jpg"
+  ],
   "heroAlt": "Title card: Home Renovation Grants and Tax Credits in Manitoba",
   "author": "",
   "reviewedBy": "",

@@ -12,6 +12,8 @@
 // Every rule in `local` and the FAQs was checked against the official page in
 // its sources list on 2026-10-13.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
+
 export default {
   slug: 'general-contracting',
   // Also names the page in "Let’s talk about your …" and the price guide.
@@ -24,10 +26,10 @@ export default {
   heroPoints: ['Free site visit & written quote', 'After-hours & weekend scheduling', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed' },
     { num: '1', unit: '×', label: 'Progress update every week' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -84,7 +86,7 @@ export default {
     { q: 'Do you handle permits and inspections?', a: 'Yes. We coordinate building permits and inspections with the City of Winnipeg or your local municipality and book inspections before work is closed up. On commercial projects in Winnipeg, electrical, mechanical, plumbing and demolition permits are applied for by City-licensed contractors, so those trades are lined up as part of the plan.' },
     { q: 'What is the holdback on a construction contract in Manitoba?', a: 'Under Manitoba’s Builders’ Liens Act, the person paying for the work must hold back 7.5% of each payment and keep it for at least 60 days after substantial performance is certified, the work is completed or it is abandoned. Ask your lawyer how it applies to your contract, and raise it with us when we go through your quote.' },
     { q: 'Do you take on residential and commercial projects?', a: 'Both. On the residential side we manage kitchens, bathrooms, basements, whole-home renovations and additions; on the commercial side, offices, stores, restaurants, hotels and clinics. Commercial work can be scheduled after hours and on weekends, and every project, of either kind, starts with a free on-site visit and a written quote.' },
-    { q: 'How do you keep clients updated?', a: 'With a progress update every week: what was done, what’s next, and anything that has changed, such as a delivery date or an inspection result. If something moves that affects your schedule, you hear about it that week, not at the end. You can also reach us at 431-866-5644 or info@bridgelandbuilders.com.' },
+    { q: 'How do you keep clients updated?', a: `With a progress update every week: what was done, what’s next, and anything that has changed, such as a delivery date or an inspection result. If something moves that affects your schedule, you hear about it that week, not at the end. You can also reach us at ${SITE_PHONE} or ${SITE_EMAIL}.` },
   ],
 
   // Title, meta description and Service schema for this page. `updated`

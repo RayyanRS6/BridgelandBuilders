@@ -14,6 +14,8 @@
 // whole-home price data, so there is no cost page: the cost teaser links the
 // hub's "priced after a visit" section and carries no numbers.
 
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, SITE_PHONE, TIMELINES } from '../facts.js';
+
 export default {
   slug: 'whole-home-renovation',
   breadcrumb: 'Whole Home Renovation',
@@ -21,14 +23,14 @@ export default {
   title: 'WHOLE HOME RENOVATIONS',
   titleHighlight: 'IN WINNIPEG',
   subtitle:
-    'We plan and build whole home renovations in Winnipeg and nearby communities: layout, kitchen, bathrooms, flooring, paint, wiring and plumbing, under one schedule and one written scope. Most take eight to sixteen weeks.',
+    `We plan and build whole home renovations in Winnipeg and nearby communities: layout, kitchen, bathrooms, flooring, paint, wiring and plumbing, under one schedule and one written scope. Most take ${TIMELINES.wholeHome.words}.`,
   heroPoints: ['Free on-site visit', 'Room-by-room written scope', 'Weekly progress updates'],
 
   stats: [
-    { num: '60', unit: '+', label: 'Years of combined experience' },
-    { num: '100', unit: '+', label: 'Projects completed across Winnipeg' },
-    { num: '8', unit: '–16', label: 'Weeks for most whole home renovations' },
-    { num: '1', unit: 'day', label: 'Reply within one business day' },
+    { num: String(EXPERIENCE_YEARS), unit: '+', label: 'Years of combined experience' },
+    { num: String(PROJECT_COUNT), unit: '+', label: 'Projects completed across Winnipeg' },
+    { num: String(TIMELINES.wholeHome.min), unit: `–${TIMELINES.wholeHome.max}`, label: 'Weeks for most whole home renovations' },
+    { num: '1', unit: 'day', label: `Reply within ${REPLY_TIME}` },
   ],
 
   intro: {
@@ -128,13 +130,13 @@ export default {
   },
 
   faqs: [
-    { q: 'How long does a whole home renovation take?', a: 'Most run eight to sixteen weeks, depending on the size of the house and how much of it is being renovated. You get a schedule with your written quote, and if something shifts we tell you the same week in your progress update, not at the end of the job.' },
+    { q: 'How long does a whole home renovation take?', a: `Most run ${TIMELINES.wholeHome.words}, depending on the size of the house and how much of it is being renovated. You get a schedule with your written quote, and if something shifts we tell you the same week in your progress update, not at the end of the job.` },
     { q: 'Can we stay in the house while you work?', a: 'Often, yes, if we stage the work in sections and keep a kitchen and a bathroom usable for you. Sometimes it’s faster and simpler to move out for a few weeks. We lay out both options at the on-site visit, with what each means for the schedule, and let you decide.' },
     { q: 'Who handles the permits and inspections?', a: 'We coordinate them. Where the work needs building, electrical or plumbing permits from the City of Winnipeg or your local municipality, we arrange the applications and schedule the inspections at each stage. If structural changes need an engineer’s sealed drawing, we build that step into the schedule before demolition starts.' },
     { q: 'Do I pick the materials, or do you?', a: 'You do; we help narrow it down. We bring options that fit your budget and hold up over time, and you choose from there. If you’d rather hand most of the decisions to us, that works too. Either way, every selection is written into the scope before anything is ordered.' },
     { q: 'What happens if you find something unexpected behind a wall?', a: 'It happens in older homes: outdated wiring, water damage, sometimes a wall carrying more load than it should. Ask at the on-site visit how anything found behind the walls would be handled and priced, and keep a contingency for it. Suspect materials such as old vermiculite insulation are left undisturbed until a professional has tested them.' },
     { q: 'Should we renovate all at once or in stages?', a: 'All at once is usually faster and keeps the disruption to one period, but you may need to move out for part of it. In stages, you live in the house while sections are finished one by one, which takes longer overall. We set out both options and their timelines at the on-site visit.' },
-    { q: 'How will we know what’s happening each week?', a: 'You get a progress update every week: what was finished, what’s next, any decisions we need from you, and anything that has changed. If something affects the schedule, you hear about it that week. Questions between updates are welcome by phone at 431-866-5644 or email during business hours.' },
+    { q: 'How will we know what’s happening each week?', a: `You get a progress update every week: what was finished, what’s next, any decisions we need from you, and anything that has changed. If something affects the schedule, you hear about it that week. Questions between updates are welcome by phone at ${SITE_PHONE} or email during business hours.` },
   ],
 
   // Title, meta description and Service schema for this page. `updated`
@@ -143,7 +145,7 @@ export default {
   seo: {
     title: 'Whole Home Renovations Winnipeg | Bridgeland Builders',
     description:
-      'Whole home renovations in Winnipeg under one plan and one written scope: layout, kitchen, baths, flooring and paint. Most take 8–16 weeks. Free visit.',
+      `Whole home renovations in Winnipeg under one plan and one written scope: layout, kitchen, baths, flooring and paint. Most take ${TIMELINES.wholeHome.short}. Free visit.`,
     serviceType: 'Whole home renovation',
     primaryKeyword: 'whole home renovation Winnipeg',
     updated: '2026-10-14',

@@ -21,6 +21,11 @@ export default {
   "heroSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.41a68949.webp 1320w",
   "heroAvifSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.3392ce25.avif 1320w",
   "ogImage": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x630.0638e1e0.jpg",
+  "schemaImages": [
+    "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x675.340680fc.jpg",
+    "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x900.4d12c2b0.jpg",
+    "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x1200.70be1e1d.jpg"
+  ],
   "heroAlt": "Kitchen wall with light wood upper cabinets, an open shelf of dishes, under-cabinet lighting, a black sink and grey lower cabinets",
   "author": "",
   "reviewedBy": "",
