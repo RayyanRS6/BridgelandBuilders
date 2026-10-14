@@ -138,7 +138,7 @@ export default {
     { q: 'Should I choose stock, semi-custom or custom cabinets?', a: 'Stock cabinets are quicker and cost less, and they suit most standard layouts. Semi-custom adds more sizes, finishes and interior options. Fully custom makes sense when the room is an odd shape or you want storage built around specific things. We can price more than one option in the written quote so you can compare.' },
     { q: 'Can I keep my existing appliances?', a: 'Yes. Tell us early so the cabinet openings are built to fit them. If you plan to replace appliances later, send us the model numbers of the ones you have in mind and we’ll size the openings for those now, so nobody is cutting into new cabinets in two years.' },
     { q: 'Who arranges the permits and inspections?', a: 'We do. When your kitchen needs a building permit or trade permits, we coordinate them with the City of Winnipeg or your local municipality and schedule each inspection as the work reaches that stage. The City says the homeowner and the permit applicant share responsibility for inspections, so we keep you informed at every step.' },
-    { q: 'What happens at the free on-site visit?', a: 'We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists what’s included, so you can read it line by line before deciding anything.' },
+    { q: 'What happens at the free on-site visit?', a: 'We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists what’s included, so you can read it line by line, and compare it with another company’s quote, before deciding anything.' },
   ],
 
   // Title, meta description and Service schema for this page. `updated`
@@ -150,11 +150,11 @@ export default {
       'Kitchen renovations in Winnipeg: layout, cabinets, countertops and lighting, most done in 4–6 weeks. Start with a free on-site visit and written quote.',
     serviceType: 'Kitchen renovation',
     primaryKeyword: 'kitchen renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/bathroom-renovations', '/services/whole-home-renovations', '/services/basement-renovations'],
+  related: ['/services/bathroom-renovations', '/services/whole-home-renovations', '/services/basement-renovations', '/services/flooring'],
   guides: ['essential-design-strategies-for-small-kitchen-renovations', 'winnipeg-renovation-permits', 'how-to-choose-the-right-contractor-for-your-renovation-project'],
-  signoff: null,
+  ownerSignoff: null,
 };

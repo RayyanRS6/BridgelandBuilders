@@ -5,8 +5,14 @@ import Process from '../components/Process.jsx';
 import RichBody from '../components/RichBody.jsx';
 import Testimonial from '../components/Testimonial.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
-import { SERVICE_AREA_STATEMENT } from '../data/siteConfig.js';
+import { PEOPLE } from '../data/people.js';
+import { BBB_PROFILE_URL, SERVICE_AREA_STATEMENT } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
+
+// The team, from src/data/people.js (empty until the owner supplies real
+// people). Each card's id is the person's key, so post bylines and the Person
+// schema @id (/about-us#<id>) land on it.
+const TEAM = Object.entries(PEOPLE);
 
 // "Who is Bridgeland Builders?" — answer first, owner-confirmed facts only. No
 // team names, credentials, licences, insurance or warranty until the owner
@@ -35,7 +41,15 @@ const ABOUT_BLOCKS = [
   { t: 'h2', x: 'How do we write our guides?' },
   {
     t: 'p',
-    x: 'Our renovation guides and cost pages are written for Bridgeland Builders and reviewed before they are published. Facts about permits, programs and rules come from official sources, linked with the date we checked them. Read [how we write, source and correct our guides](/editorial-policy).',
+    x: 'Our renovation guides and cost pages are written from Bridgeland Builders’ own information, such as our process, timelines and estimator price ranges. Facts about permits, programs and rules come from official sources, linked with the date we checked them. Read [how we write, source and correct our guides](/editorial-policy).',
+  },
+  // Plan §19: a link only, no rating. Licence, insurance, WCB and warranty
+  // lines wait for documents from the owner.
+  { t: 'h2', x: 'Credentials you can check', hidden: !BBB_PROFILE_URL },
+  {
+    t: 'p',
+    x: `Bridgeland Builders has a business profile with the Better Business Bureau. [Check us on the Better Business Bureau](${BBB_PROFILE_URL}) to see it for yourself.`,
+    hidden: !BBB_PROFILE_URL,
   },
 ];
 
@@ -72,7 +86,11 @@ export default function AboutPage() {
         eyebrow="About Bridgeland Builders"
         title="LOCAL EXPERIENCE."
         highlight="HONEST WORK."
-        description="Meet the Winnipeg renovation team that brings more than 60 years of combined experience to every home and business project."
+        description={
+          TEAM.length > 0
+            ? 'Meet the Winnipeg renovation team that brings more than 60 years of combined experience to every home and business project.'
+            : 'A Winnipeg renovation contractor bringing more than 60 years of combined experience to every home and business project.'
+        }
         primaryLink={{ to: '/our-process', label: 'SEE HOW WE WORK' }}
       />
 
@@ -84,6 +102,38 @@ export default function AboutPage() {
           </div>
         </div>
       </article>
+
+      {/* THE TEAM: only once src/data/people.js lists real people. */}
+      {TEAM.length > 0 && (
+        <section className="process-section includes-section" id="team">
+          <div className="container">
+            <div className="section-header center">
+              <span className="section-tag">Our Team</span>
+              <h2 className="section-title">The people behind Bridgeland Builders</h2>
+            </div>
+            <div className="includes-grid">
+              {TEAM.map(([id, person]) => (
+                <div className="include-card" id={id} key={id}>
+                  {person.image && (
+                    <img
+                      className="team-card-photo"
+                      src={person.image}
+                      alt={person.name}
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                  {person.role && <div className="include-num">{person.role}</div>}
+                  <h3>{person.name}</h3>
+                  {person.bio && <p>{person.bio}</p>}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <Stats />
       <WhyUs />

@@ -40,7 +40,7 @@ export default {
     floatingText: 'The schedule starts from your opening date and works backwards.',
     paragraphs: [
       'A commercial renovation rebuilds a working space, such as an office, store, restaurant, hotel or clinic, around a lease, an opening date and the hours you need to stay open. It usually covers demolition, new walls and ceilings, electrical and mechanical changes, washrooms, finishes, a City building permit and the inspections that follow.',
-      'Commercial work runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. So we build the plan backwards from your date and tell you honestly at the site visit whether it’s realistic.',
+      'A commercial remodel runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. So we build the plan backwards from your date and tell you honestly at the site visit whether it’s realistic.',
       'Where it helps, we schedule work in the evenings and on weekends so you can keep trading, and we phase the job so only part of the space is closed at a time. You get a progress update every week, so you’re never chasing us for news.',
       'We work across Winnipeg and nearby communities, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach, and we coordinate permits and inspections with the City of Winnipeg or the local municipality.',
     ],
@@ -117,7 +117,7 @@ export default {
     // the people who run commercial property.
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'commercial renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Optional sections (plan §7), rendered by ProjectPage only when filled in:
@@ -127,12 +127,12 @@ export default {
   //   related    [path]                                   related service pages (registry paths)
   //   guides     [blogSlug]                               related guides (blog posts)
   //   faqsTitle  string                                   heading over the FAQs
-  //   signoff    { name, role, date }                     owner sign-off line
+  //   ownerSignoff { name, role, date }                   owner sign-off line
   // gallery and testimonial are optional too.
   //
-  // `to` on a types card is the vertical's page. ProjectPage does not render it
-  // yet (handoff: link the card when its page is live); the same pages are
-  // linked from the related-services cards below.
+  // `to` on a types card is the vertical's page (with an optional #anchor:
+  // Hotels goes to the hotel cards on the restaurant page). ProjectPage links
+  // the card title while that page is live.
   typesTag: 'Spaces & Who It’s For',
   typesTitle: 'Commercial Spaces We Renovate',
   typesDesc: 'Each kind of space has its own page. We also quote work for property managers, developers and design professionals.',
@@ -140,10 +140,10 @@ export default {
     { title: 'Office Renovations', to: '/services/office-renovations', text: 'Tenant fit-ups, meeting rooms, private offices and open work areas, planned around your lease dates and your team’s hours.' },
     { title: 'Retail Renovations', to: '/services/retail-renovations', text: 'Store layouts, fitting rooms, cash areas, showrooms and storefronts, built to your opening date with after-hours work where it helps.' },
     { title: 'Restaurants, Cafés & Bars', to: '/services/restaurant-renovations', text: 'Dining rooms, bars and back-of-house areas, scheduled around service and planned with the public health plan review in mind.' },
-    { title: 'Hotels', to: '/services/restaurant-renovations', text: 'Guest rooms, corridors, lobbies and common areas, phased so the rest of the property keeps welcoming guests.' },
+    { title: 'Hotels', to: '/services/restaurant-renovations#hotels', text: 'Guest rooms, corridors, lobbies and common areas, phased so the rest of the property keeps welcoming guests.' },
     { title: 'Medical & Dental Offices', to: '/services/medical-dental-office-renovations', text: 'Exam rooms, dental operatories, physio clinics, reception and sterilization areas, with cleanable finishes and phasing around patients.' },
     { title: 'General Contracting', to: '/services/general-contracting', text: 'A commercial general contractor to run the trades, schedule, permits and inspections, building to supplied drawings.' },
-    { title: 'Property Managers & Building Owners', text: 'Commercial property renovation for vacant units, tenant turnovers, washrooms and common areas, with weekly updates you can pass on.' },
+    { title: 'Property Managers & Building Owners', text: 'Commercial property renovation for vacant units, tenant turnovers, washrooms and common areas, with weekly updates you can pass on to owners or your management company.' },
     { title: 'Real Estate Developers & Realtors', text: 'Practical improvements that get a property ready to sell, lease or occupy, scoped and quoted in writing after a free site visit.' },
     { title: 'Architects & Designers', to: '/services/general-contracting', text: 'Construction that turns your drawings and specifications into a finished space, with site conflicts raised before they become change orders.' },
   ],
@@ -171,10 +171,15 @@ export default {
     ],
   },
 
-  // Commercial cost page stays unpublished (no data, plan §8).
-  costTeaser: null,
+  // Commercial cost page stays unpublished (no data, plan §8): the teaser
+  // points to the cost hub's "priced after a visit" section. No numbers.
+  costTeaser: {
+    text: 'Commercial renovations are priced in a free written quote after a site visit, not from an online estimate, because the scope, permits and working hours differ from one space to the next. Our Winnipeg cost guide explains what moves the price.',
+    to: '/renovation-cost-winnipeg#priced-after-a-visit',
+    label: 'Renovation costs in Winnipeg',
+  },
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/office-renovations', '/services/retail-renovations', '/services/restaurant-renovations', '/services/medical-dental-office-renovations', '/services/general-contracting'],
+  related: ['/services/office-renovations', '/services/retail-renovations', '/services/restaurant-renovations', '/services/medical-dental-office-renovations', '/services/general-contracting', '/services/demolition'],
   guides: ['the-biggest-cost-factors-in-commercial-renovation-projects', 'how-to-prepare-your-business-for-a-major-renovation', 'how-to-finance-a-commercial-renovation-without-breaking-the-bank'],
-  signoff: null,
+  ownerSignoff: null,
 };

@@ -10,8 +10,9 @@
 // progress updates and permit coordination are owner-confirmed. "One crew" /
 // "one team" wording is not confirmed and stays off the page. Every City of
 // Winnipeg / Health Canada statement in `local` and the FAQs was checked on
-// 2026-10-13 against the sources in local.sources. No cost teaser: the
-// estimator has no whole-home price data, so the cost page stays unpublished.
+// 2026-10-13 against the sources in local.sources. The estimator has no
+// whole-home price data, so there is no cost page: the cost teaser links the
+// hub's "priced after a visit" section and carries no numbers.
 
 export default {
   slug: 'whole-home-renovation',
@@ -145,13 +146,18 @@ export default {
       'Whole home renovations in Winnipeg under one plan and one written scope: layout, kitchen, baths, flooring and paint. Most take 8–16 weeks. Free visit.',
     serviceType: 'Whole home renovation',
     primaryKeyword: 'whole home renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
-  // No costTeaser: the estimator has no whole-home data (cost page unpublished).
-  costTeaser: null,
+  // No whole-home cost page (the estimator has no whole-home data), so the
+  // teaser points to the cost hub's "priced after a visit" section. No numbers.
+  costTeaser: {
+    text: 'Whole home renovations are priced in a free written quote after an on-site visit, not from a few online questions, because no two houses need the same scope. Our Winnipeg cost guide shows the starting ranges for kitchens, bathrooms and basements, and what moves the price.',
+    to: '/renovation-cost-winnipeg#priced-after-a-visit',
+    label: 'Renovation costs in Winnipeg',
+  },
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/kitchen-renovations', '/services/bathroom-renovations', '/services/home-additions', '/services/general-contracting'],
+  related: ['/services/kitchen-renovations', '/services/bathroom-renovations', '/services/home-additions', '/services/general-contracting', '/services/flooring', '/services/demolition'],
   guides: ['renovating-a-character-home-in-winnipeg', 'how-to-choose-between-a-full-renovation-and-partial-upgrades', 'home-renovation-planning-guide-canada'],
-  signoff: null,
+  ownerSignoff: null,
 };

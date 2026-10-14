@@ -27,7 +27,7 @@ export const LANDING_SERVICES = [
     img: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80',
     alt: 'White bathroom with a pedestal sink and black-and-white checkered floor tile',
     text: 'Modern fixtures, clean tiling, and waterproofing done properly underneath where you’ll never see it.',
-    points: ['Free on-site measure', 'Fixed written price', 'Waterproofed before tile goes on'],
+    points: ['Free on-site visit', 'Free written quote', 'Waterproofed before tile goes on'],
     cta: 'Get my free bathroom quote',
   },
   {

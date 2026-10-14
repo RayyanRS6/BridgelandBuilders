@@ -3,6 +3,7 @@ import {
   BBB_PROFILE_URL,
   BUSINESS,
   BUSINESS_HOURS,
+  COST_HUB_PATH,
   GBP,
   SERVICE_AREAS,
   SERVICE_CATALOG,
@@ -11,8 +12,11 @@ import {
   SOCIAL_PROFILES,
 } from './siteConfig.js';
 
-/** The renovation cost hub (plan §8). Its page only renders once its guide is live. */
-export const COST_HUB_PATH = '/renovation-cost-winnipeg';
+/**
+ * The renovation cost hub (plan §8), defined in siteConfig.js. Re-exported for
+ * existing imports; new code should import it from siteConfig.js.
+ */
+export { COST_HUB_PATH };
 
 /**
  * Branded 1200x630 share image (public/og/, made by scripts/build-images.mjs),
@@ -66,25 +70,25 @@ export const PAGE_SEO = {
     description:
       'Winnipeg renovation contractor for kitchens, bathrooms, basement development, additions and commercial spaces. Free on-site visit and free written quote.',
     image: DEFAULT_IMAGE,
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/services': {
     title: 'Renovation Services in Winnipeg | Bridgeland Builders',
     description:
       'Renovation services in Winnipeg for homes and businesses: kitchens, bathrooms, basements, whole homes, additions, commercial fit-ups, flooring and more.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/about-us': {
     title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
       'Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over 60 years of combined experience and 100+ projects.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/our-process': {
     title: 'Our Renovation Process | Bridgeland Builders Winnipeg',
     description:
       'How a Bridgeland Builders renovation runs, from a free on-site visit and written quote to permits, weekly updates, inspections and handover.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/projects': {
     title: 'Renovation Projects & Ideas | Bridgeland Builders Winnipeg',
@@ -96,25 +100,25 @@ export const PAGE_SEO = {
     title: 'Winnipeg Renovation FAQs | Bridgeland Builders',
     description:
       'Answers to common Winnipeg renovation questions: costs and written quotes, permits, timelines, living through the work, where we work and how to start.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/instant-quote': {
     title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',
     description:
       'Get a free instant renovation quote in Winnipeg. Answer a few questions for a starting price range, then book a free on-site visit for a written quote.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/book-online': {
     title: 'Book a Free On-Site Renovation Visit | Bridgeland Builders',
     description:
       'Book a free on-site renovation visit in Winnipeg or a nearby community. We look at the space with you, then send a free written quote. No obligation.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
       'Contact Bridgeland Builders about your Winnipeg renovation. Call 431-866-5644, email us or send your project details. We reply within one business day.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
   // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in siteConfig.js.
@@ -123,7 +127,7 @@ export const PAGE_SEO = {
     title: 'Service Areas: Winnipeg & Nearby | Bridgeland Builders',
     description:
       'Renovation contractor serving Winnipeg and communities within about an hour: Headingley, East and West St. Paul, Oak Bluff, Selkirk and Steinbach.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   // How guides, cost pages and service pages are written, sourced and reviewed
   // (plan §11.3). Page content: src/data/editorialPolicy.js.
@@ -131,13 +135,13 @@ export const PAGE_SEO = {
     title: 'Editorial Policy | Bridgeland Builders',
     description:
       'How Bridgeland Builders writes, sources, reviews and updates the renovation guides, cost information and service pages published on this website.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/blog': {
     title: 'Winnipeg Renovation Guides | Bridgeland Builders',
     description:
       'Renovation guides for Winnipeg homes and businesses: costs, permits, basements, kitchens and bathrooms, hiring a contractor, commercial work and money.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   // Second contact page, holding the GoHighLevel form with the SMS consent
   // checkbox that the Privacy Policy and Terms of Service point to (A2P). Kept
@@ -154,7 +158,7 @@ export const PAGE_SEO = {
     title: 'Privacy Policy | Bridgeland Builders',
     description:
       'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, chat and texts.',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
   '/terms-of-service': {
     title: 'Terms of Service | Bridgeland Builders',
@@ -172,7 +176,7 @@ export const PAGE_SEO = {
       'Get a free, no-obligation renovation quote in Winnipeg. Kitchens, bathrooms and basements with clear written pricing and a reply within one business day.',
     image: DEFAULT_IMAGE,
     robots: 'noindex, follow',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 };
 
@@ -295,7 +299,8 @@ export function buildOrganizationGraph() {
       name: BUSINESS.name,
       // No legalName until the registered name is confirmed (plan §3.5, O-5).
       url: `${SITE_URL}/`,
-      description: BUSINESS.description,
+      // The one short entity description (plan §12), as in the llms files.
+      description: BUSINESS.shortDescription,
       disambiguatingDescription: BUSINESS.disambiguatingDescription,
       slogan: BUSINESS.slogan,
       telephone: BUSINESS.telephone,
@@ -355,7 +360,7 @@ export function buildOrganizationGraph() {
       url: `${SITE_URL}/`,
       name: SITE_NAME,
       alternateName: ['Bridgeland Builders Winnipeg'],
-      description: BUSINESS.description,
+      description: BUSINESS.shortDescription,
       publisher: organizationRef,
       inLanguage: 'en-CA',
     },
@@ -366,8 +371,9 @@ const breadcrumbId = (path) => `${SITE_URL}${path}#breadcrumb`;
 
 /**
  * BreadcrumbList from a list of [name, path] pairs. Home is added for you.
- * Returns null for the home page (an empty trail): a one-item trail is noise.
- * `path` is the page the trail belongs to; it defaults to the trail's last item.
+ * Returns null for an empty trail (home, and the one-level pages that show no
+ * visible breadcrumb: see ROUTE_TRAILS). `path` is the page the trail belongs
+ * to; it defaults to the trail's last item.
  */
 export function buildBreadcrumbs(trail, path) {
   if (!trail || !trail.length) return null;
@@ -393,7 +399,12 @@ export function buildBreadcrumbs(trail, path) {
  * - `dateModified`: defaults to the route's `updated` date (updatedFor).
  * - `about`: defaults to the organisation; `false` omits it.
  * - `mainEntity`: an `{ '@id' }` reference to the page's main node (Service,
- *   BlogPosting, Blog or FAQPage); omitted when the page has none.
+ *   BlogPosting, Blog, ItemList, FAQPage or the organisation); omitted when
+ *   the page has none.
+ * - `primaryImage`: `{ url, width, height }` (absolute url) of an image that
+ *   is the page's own (a post's title card, a real project photo), emitted as
+ *   primaryImageOfPage with the id `<page>#primaryimage`. Never the branded
+ *   default share image.
  */
 export function buildWebPage({
   path,
@@ -404,17 +415,29 @@ export function buildWebPage({
   dateModified,
   about = organizationRef,
   mainEntity,
+  primaryImage,
 }) {
   const crumb = breadcrumb === undefined ? (path !== '/' ? { '@id': breadcrumbId(path) } : undefined) : breadcrumb || undefined;
+  const url = `${SITE_URL}${path}`;
   return {
     '@type': type,
-    '@id': `${SITE_URL}${path}#webpage`,
-    url: `${SITE_URL}${path}`,
+    '@id': `${url}#webpage`,
+    url,
     name: title,
     description,
     isPartOf: { '@id': SITE_ID },
     about: about || undefined,
     mainEntity: mainEntity || undefined,
+    primaryImageOfPage:
+      primaryImage && primaryImage.url
+        ? {
+            '@type': 'ImageObject',
+            '@id': `${url}#primaryimage`,
+            url: primaryImage.url,
+            width: Number(primaryImage.width) || undefined,
+            height: Number(primaryImage.height) || undefined,
+          }
+        : undefined,
     breadcrumb: crumb,
     dateModified: dateModified || updatedFor(path),
     inLanguage: 'en-CA',
@@ -426,6 +449,10 @@ export function buildWebPage({
  * (commercial pages: BusinessAudience) and is passed in explicitly, so the
  * prerender and the browser build the same node. `areaServed` defaults to the
  * whole confirmed service area; an area page passes its one community.
+ * A registry parent with live child pages (commercial renovations → office,
+ * retail, …) lists them in hasOfferCatalog: references to the children's
+ * Service nodes, which the sitewide Organization catalog defines. No Offers,
+ * no prices.
  */
 export function buildService({ path, serviceType, description, audience, areaServed }) {
   return {
@@ -437,7 +464,21 @@ export function buildService({ path, serviceType, description, audience, areaSer
     provider: organizationRef,
     areaServed: areaServed || areaServedNodes(),
     audience: audience || undefined,
+    hasOfferCatalog: childServiceCatalog(path),
     url: `${SITE_URL}${path}`,
+  };
+}
+
+const serviceId = (path) => `${SITE_URL}${path}#service`;
+
+function childServiceCatalog(path) {
+  const parent = serviceByPath(path);
+  const children = parent ? SERVICES.filter((service) => service.parent === path && service.status === 'live') : [];
+  if (!children.length) return undefined;
+  return {
+    '@type': 'OfferCatalog',
+    name: parent.navLabel,
+    itemListElement: children.map((child) => ({ '@id': serviceId(child.path) })),
   };
 }
 
@@ -549,14 +590,15 @@ export function pageGraph({
   areaServed,
   updated,
   faqs,
+  primaryImage,
   nodes = [],
 }) {
   const crumbs = buildBreadcrumbs(trail || trailFor(path, title), path);
   const service = serviceType ? buildService({ path, serviceType, description, audience, areaServed }) : null;
   const faqPage = buildFaqPage(path, faqs);
   // The page's main node: its Service, else a main node passed in (the /blog
-  // Blog node, a cost guide's Article, a watch page's VideoObject), else the
-  // FAQ list on the FAQ page itself.
+  // Blog node, the /services ItemList, a cost guide's Article, a watch page's
+  // VideoObject), else the FAQ list on the FAQ page itself.
   const main =
     service ||
     nodes.find((node) => node && MAIN_NODE_TYPES.includes(node['@type'])) ||
@@ -569,7 +611,9 @@ export function pageGraph({
       type: type || ROUTE_PAGE_TYPES[path],
       breadcrumb: crumbs ? { '@id': crumbs['@id'] } : false,
       dateModified: updated,
-      mainEntity: main && main['@id'] ? { '@id': main['@id'] } : undefined,
+      mainEntity:
+        main && main['@id'] ? { '@id': main['@id'] } : ORGANIZATION_PAGES.includes(path) ? organizationRef : undefined,
+      primaryImage,
     }),
     crumbs,
     service,
@@ -578,7 +622,31 @@ export function pageGraph({
   );
 }
 
-const MAIN_NODE_TYPES = ['Blog', 'Article', 'BlogPosting', 'VideoObject'];
+const MAIN_NODE_TYPES = ['Blog', 'ItemList', 'Article', 'BlogPosting', 'VideoObject'];
+
+/** Pages about the business itself: their mainEntity is the organisation. */
+const ORGANIZATION_PAGES = ['/about-us', '/contact-us', '/contact'];
+
+const SERVICE_LIST_ID = `${SITE_URL}/services#services`;
+
+/**
+ * The /services directory as an ItemList of every live service page's Service
+ * node (the ids the sitewide Organization catalog defines), in registry order.
+ * Added to /services by templateNodes(), so the page passes nothing.
+ */
+export function buildServiceList() {
+  return {
+    '@type': 'ItemList',
+    '@id': SERVICE_LIST_ID,
+    name: 'Renovation and construction services',
+    numberOfItems: SERVICE_CATALOG.length,
+    itemListElement: SERVICE_CATALOG.map((service, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: { '@id': serviceId(service.path) },
+    })),
+  };
+}
 
 /**
  * A service page's breadcrumb trail from the registry: Services › (parent) ›
@@ -602,24 +670,14 @@ const crumbName = (service) => service.crumb || service.label;
  * labels match the visible breadcrumbs. Service pages come from the registry
  * (src/data/services.js); template routes (cost guides, areas, case studies,
  * videos) are resolved by trailFor().
+ *
+ * The one-level pages (/services, /about-us, /faqs, /blog, …) show no visible
+ * breadcrumb (PageHero renders none), so they have no trail and no
+ * BreadcrumbList: visible trail = schema trail (plan §3.5). The cost hub and
+ * the watch pages are one level deep too, but they do show theirs.
  */
 export const ROUTE_TRAILS = {
   '/': [],
-  '/services': [['Services', '/services']],
-  '/about-us': [['About Us', '/about-us']],
-  '/our-process': [['Our Process', '/our-process']],
-  '/projects': [['Projects', '/projects']],
-  '/faqs': [['FAQs', '/faqs']],
-  '/contact-us': [['Contact Us', '/contact-us']],
-  '/instant-quote': [['Instant Quote', '/instant-quote']],
-  '/book-online': [['Book Online', '/book-online']],
-  '/service-areas': [['Service Areas', '/service-areas']],
-  '/editorial-policy': [['Editorial Policy', '/editorial-policy']],
-  '/blog': [['Blog', '/blog']],
-  '/free-quote': [['Free Quote', '/free-quote']],
-  '/contact': [['Get in Touch', '/contact']],
-  '/privacy-policy': [['Privacy Policy', '/privacy-policy']],
-  '/terms-of-service': [['Terms of Service', '/terms-of-service']],
   ...Object.fromEntries(SERVICES.map((service) => [service.path, serviceTrail(service)])),
 };
 
@@ -659,6 +717,7 @@ export const ROUTE_PAGE_TYPES = {
   '/services': 'CollectionPage',
   '/projects': 'CollectionPage',
   '/blog': 'CollectionPage',
+  '/about-us': 'AboutPage',
   '/contact-us': 'ContactPage',
   '/contact': 'ContactPage',
 };
@@ -687,8 +746,13 @@ const serviceRef = (service) =>
  * so the page and the prerender add them without the page passing anything:
  *   cost guides  Article, about the service page's Service (plan §3.5, §8),
  *                with the page's og:image as its image
+ *   /services    the ItemList of live services (buildServiceList), its
+ *                mainEntity; nothing for ServicesPage.jsx to import
  */
 function templateNodes(path, meta, nodes, image) {
+  if (path === '/services' && !nodes.some((node) => node['@id'] === SERVICE_LIST_ID)) {
+    return [buildServiceList()];
+  }
   if (isCostGuidePath(path) && !nodes.some((node) => node['@type'] === 'Article')) {
     const match = /^\/services\/([^/]+)\/cost$/.exec(path);
     return [
@@ -704,6 +768,13 @@ function templateNodes(path, meta, nodes, image) {
     ];
   }
   return [];
+}
+
+/** buildWebPage's primaryImage for an og:image: absolute url, size as og:image:width/height. */
+function primaryImageFor(image) {
+  const url = absoluteUrl(image);
+  const { width, height } = imageMeta(url);
+  return { url, width, height };
 }
 
 /**
@@ -734,6 +805,9 @@ export function resolvePageSeo(path, options = {}) {
     areaServed: options.areaServed,
     updated: meta.updated,
     faqs: options.faqs,
+    // A page's own image (the /blog lead card, a real project photo) is also
+    // its primaryImageOfPage; the branded default never is.
+    primaryImage: image !== DEFAULT_IMAGE ? primaryImageFor(image) : undefined,
     nodes: [...nodes, ...templateNodes(path, meta, nodes, image)],
   });
   return {

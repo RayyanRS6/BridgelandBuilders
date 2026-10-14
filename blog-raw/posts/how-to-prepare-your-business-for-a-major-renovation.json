@@ -21,7 +21,7 @@
   "reviewedBy": "",
   "answer": "Start from the date you need the space back and work backwards: written scope and quote, drawings, permits, construction in phases or after hours, inspections and the occupancy permit. Tell staff and customers early, keep accessible routes open or announce when they are not, and plan restocking, training and reopening for after the City allows occupancy.",
   "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
-  "heroAlt": "Business renovation progress with tools and sunlight.",
+  "heroAlt": "Title graphic reading “How to Prepare Your Business for a Major Renovation: Plan. Protect. Prosper.” with a man using a tablet and construction cranes behind him",
   "sources": [
     {
       "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
@@ -85,7 +85,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "A major renovation tests a business twice: once in the construction, and again in keeping customers, staff and revenue intact while it happens. Businesses that come through well treat the renovation as a project with its own plan, not something that happens around them. This guide sets out the stages of a commercial renovation in Winnipeg, how to stay open through them, and what to settle before the first day of work."
+      "x": "A major renovation tests a business twice: once in the construction, and again in keeping customers, staff and revenue intact while it happens. Businesses that come through well treat the renovation as a project with its own plan, not something that happens around them."
+    },
+    {
+      "t": "p",
+      "x": "This guide sets out the stages of a commercial renovation in Winnipeg, how to stay open through them, and what to settle before the first day of work."
     },
     {
       "t": "h2",
@@ -159,7 +163,11 @@
     },
     {
       "t": "p",
-      "x": "Two Winnipeg rules shape this. Within 150 metres of a home, the City allows loud construction work only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so loud work cannot run overnight near homes. And the City's occupancy bulletin says the general contractor is responsible for the safety of everyone entering the construction site before the occupancy permit is issued, so keep customers and staff out of active work areas."
+      "x": "Two Winnipeg rules shape this. Within 150 metres of a home, the City allows loud construction work only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so loud work cannot run overnight near homes."
+    },
+    {
+      "t": "p",
+      "x": "And the City's occupancy bulletin says the general contractor is responsible for the safety of everyone entering the construction site before the occupancy permit is issued, so keep customers and staff out of active work areas."
     },
     {
       "t": "p",

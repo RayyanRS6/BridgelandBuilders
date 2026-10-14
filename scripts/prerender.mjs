@@ -10,13 +10,17 @@
  *
  * Per page it also adds (plan §4 "Preloads"):
  *   - <link rel="modulepreload"> for the route's page chunk and the chunks it
- *     imports (plus a per-page content chunk such as src/data/services/<slug>.js),
- *     so hydration doesn't wait on a second round trip. Routes are mapped to
+ *     imports (plus a per-page content chunk such as src/data/services/<slug>.js,
+ *     and a service page's guide cards, src/data/postCards/<slug>.js), so
+ *     hydration doesn't wait on a second round trip. Routes are mapped to
  *     page files by reading src/AppShell.jsx (its lazy() imports and <Route>s)
  *     and the client build's manifest (dist/.vite/manifest.json, which is then
  *     moved to dist-ssr/client-manifest.json so it is never served);
  *   - <link rel="preload" as="image"> for the page's LCP image: the first
- *     <img fetchpriority="high"> (or its <picture>'s first <source>).
+ *     <img fetchpriority="high"> (or its <picture>'s first <source>);
+ *   - <link rel="preconnect"> to the estimator's origin on pages that embed it.
+ * Developer comments in index.html are removed from every page (the template
+ * only, never the app HTML: React's comment markers are needed to hydrate).
  */
 import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, posix } from 'node:path';
@@ -40,6 +44,24 @@ const { headFor, NOT_FOUND_HEAD } = await import(pathToFileURL(join(ROOT, 'src/d
 const routes = JSON.parse(readFileSync(join(ROOT, 'prerender-routes.json'), 'utf8'));
 const template = readFileSync(join(DIST, 'index.html'), 'utf8');
 const SITE_URL = (await import(pathToFileURL(join(ROOT, 'src/data/siteConfig.js')).href)).SITE_URL;
+
+/**
+ * The template every page is built from, without index.html's developer
+ * comments (notes on tracking, fonts and file paths that would otherwise ship
+ * in every page). Only the template is cleaned, once, before any page content
+ * goes in: the app HTML carries React's own comment markers (<!-- -->,
+ * <!--$-->, <!--/$-->, <!--$?-->, <!--$!-->), which hydration needs, so it is
+ * never touched. The seo:head markers stay until pageHtml() replaces the
+ * block they enclose. A comment alone on its line(s) goes with its line.
+ */
+const SEO_HEAD_BLOCK = /<!-- seo:head:start -->[\s\S]*?<!-- seo:head:end -->/;
+const TEMPLATE_COMMENT_LINE = /^[ \t]*<!--(?!\s*seo:head:)(?:(?!-->)[\s\S])*-->[ \t]*\r?\n/gm;
+const TEMPLATE_COMMENT = /<!--(?!\s*seo:head:)(?:(?!-->)[\s\S])*-->/g;
+const pageTemplate = template.replace(TEMPLATE_COMMENT_LINE, '').replace(TEMPLATE_COMMENT, '');
+if (!SEO_HEAD_BLOCK.test(pageTemplate)) {
+  console.error('[prerender] the <!-- seo:head:start --> … <!-- seo:head:end --> block is missing from index.html.');
+  process.exit(1);
+}
 
 const escapeAttr = (value) =>
   String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -269,7 +291,7 @@ function routePreloads(url, appHtml = '') {
   if (!route || !route.file || !manifest[route.file]) return none;
   const keys = [route.file];
   // The page's own content chunk, if the page (or a chunk it imports, e.g.
-  // BlogCard.jsx for post bodies) loads one named after the URL's last
+  // BlogCard.jsx for post modules) loads one named after the URL's last
   // segment (src/data/services/<slug>.js, src/data/posts/<slug>.js, …).
   const last = url.split('/').filter(Boolean).pop();
   const pageChunks = new Set();
@@ -279,17 +301,21 @@ function routePreloads(url, appHtml = '') {
     for (const imp of manifest[key].imports || []) collect(imp);
   };
   collect(route.file);
-  // A service page with a "Related guides" section loads the blog index right
-  // after its content chunk (ServiceRoute.jsx loadGuidePosts); preloading it
-  // too saves hydration a round trip.
   const wanted = new Set([last]);
-  if (/\bid="guides"/.test(appHtml)) wanted.add('blogIndex');
   // A cost guide (/services/<slug>/cost) loads src/data/costGuides/<slug>.js.
   // Its last segment is "cost", and the service page's own chunk has the same
   // file name, so it is matched by manifest key.
   const wantedKeys = new Set();
   const costGuide = /^\/services\/([^/]+)\/cost\/?$/.exec(url);
   if (costGuide) wantedKeys.add(`src/data/costGuides/${costGuide[1]}.js`);
+  // A service page's "Related guides" section loads one card module per guide
+  // (src/data/postCards/<slug>.js, ServiceRoute.jsx loadGuidePosts) right
+  // after its content chunk; preloading them too saves hydration a round trip.
+  // Only a page whose chunks import those modules (service pages) uses them.
+  const guides = /<section\b[^>]*\bid="guides"[^>]*>([\s\S]*?)<\/section>/.exec(appHtml);
+  if (guides) {
+    for (const [, slug] of guides[1].matchAll(/href="\/blog\/([^"/?#]+)"/g)) wantedKeys.add(`src/data/postCards/${slug}.js`);
+  }
   for (const key of pageChunks) {
     for (const dyn of manifest[key].dynamicImports || []) {
       const name = posix.basename(dyn).replace(/\.[^.]+$/, '');
@@ -337,35 +363,51 @@ function lcpImagePreload(appHtml) {
   return `  <link rel="preload" as="image" href="${src}"${srcset ? ` imagesrcset="${srcset}"` : ''}${srcset && sizes ? ` imagesizes="${sizes}"` : ''} fetchpriority="high">\n`;
 }
 
-// Where the extra tags go: the LCP image right after the SEO block (early, so
-// it starts downloading first), route chunks right after the entry script,
-// and any route stylesheet at the end of <head> (after the entry CSS, the same
-// cascade order as when the chunk loads it at runtime).
+/**
+ * Preconnect to the estimator's origin (taken from the embed's own src) on a
+ * page that embeds it, so the calculator starts loading sooner: above all on
+ * /instant-quote, where it is the main content and loads eagerly.
+ */
+function estimatorPreconnect(appHtml) {
+  const iframe = /<iframe\b[^>]*\bclass="estimator-embed"[^>]*>/i.exec(appHtml);
+  const src = iframe && attrOf(iframe[0], 'src');
+  if (!src) return '';
+  try {
+    return `  <link rel="preconnect" href="${new URL(src.replace(/&amp;/g, '&')).origin}">\n`;
+  } catch {
+    return '';
+  }
+}
+
+// Where the extra tags go: the LCP image and the estimator preconnect right
+// after the SEO tags (early, so they start first), route chunks right after
+// the entry script, and any route stylesheet at the end of <head> (after the
+// entry CSS, the same cascade order as when the chunk loads it at runtime).
 const ENTRY_SCRIPT = /<script type="module" crossorigin src="[^"]+"><\/script>\r?\n?/;
 
 // Replacer functions, not strings, so a "$$", "$&" or "$'" in the page content
 // (prices, for example) is inserted as written instead of read as a pattern.
 function pageHtml(head, appHtml, url) {
-  const imagePreload = lcpImagePreload(appHtml);
+  const early = lcpImagePreload(appHtml) + estimatorPreconnect(appHtml);
   const { modules, styles } = routePreloads(url, appHtml);
-  let html = template
-    .replace(/<!-- seo:head:start -->[\s\S]*?<!-- seo:head:end -->/, () => `<!-- seo:head:start -->\n${headHtml(head)}  <!-- seo:head:end -->${imagePreload ? `\n${imagePreload.trimEnd()}` : ''}`)
-    .replace('<div id="root"></div>', () => `<div id="root">${appHtml}</div>`);
+  // The template's own tags are settled before the page content goes in.
+  let html = pageTemplate.replace(SEO_HEAD_BLOCK, () => `${headHtml(head)}${early}`.trim());
+  // The Unsplash preconnect (index.html) only helps pages that show an
+  // Unsplash photo; elsewhere it opens a connection for nothing.
+  if (!appHtml.includes('images.unsplash.com')) html = html.replace(UNSPLASH_PRECONNECT, '');
+  html = html.replace('<div id="root"></div>', () => `<div id="root">${appHtml}</div>`);
   if (modules) {
     html = ENTRY_SCRIPT.test(html)
       ? html.replace(ENTRY_SCRIPT, (tag) => `${/\n$/.test(tag) ? tag : `${tag}\n`}${modules}`)
       : html.replace('</head>', () => `${modules}</head>`);
   }
   if (styles) html = html.replace('</head>', () => `${styles}</head>`);
-  // The Unsplash preconnect (index.html) only helps pages that show an
-  // Unsplash photo; elsewhere it opens a connection for nothing.
-  if (!appHtml.includes('images.unsplash.com')) html = html.replace(UNSPLASH_PRECONNECT, '');
   return html;
 }
 
-const UNSPLASH_PRECONNECT = /[ \t]*<!-- Unsplash [\s\S]*?-->\r?\n[ \t]*<link rel="preconnect" href="https:\/\/images\.unsplash\.com">\r?\n/;
-if (!UNSPLASH_PRECONNECT.test(template)) {
-  console.warn('[prerender] Unsplash preconnect block not found in index.html; it is left on every page as written.');
+const UNSPLASH_PRECONNECT = /[ \t]*<link rel="preconnect" href="https:\/\/images\.unsplash\.com">\r?\n/;
+if (!UNSPLASH_PRECONNECT.test(pageTemplate)) {
+  console.warn('[prerender] Unsplash preconnect not found in index.html; nothing to remove on pages without an Unsplash photo.');
 }
 
 let written = 0;

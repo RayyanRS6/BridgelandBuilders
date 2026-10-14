@@ -10,25 +10,32 @@
  *   ERROR  invariants: route <-> SEO <-> prerender <-> sitemap parity, noindex
  *          pages kept out of the sitemap, FAQPage text present in the HTML,
  *          forbidden schema, JSON-LD that parses and whose @ids resolve, one
- *          page JSON-LD block, one <h1>, one <main>, redirect parity, NAP rules,
- *          no changefreq/priority, no leaked Suspense fallback.
- *   WARN   quality: title/description lengths, duplicates, .reveal gating,
- *          image hygiene, internal-link coverage, lastmod uniformity, keyword
- *          map, readability, JS budgets.
+ *          page JSON-LD block, one <h1>, one <main> (Home included), redirect
+ *          parity, NAP rules (incl. the phone-format allowlist), .reveal never
+ *          gating the hero / forms / long bodies, an estimator iframe on every
+ *          service page, no banned claims, no changefreq/priority, no leaked
+ *          Suspense fallback, no keyword listed twice in the keyword map.
+ *   WARN   quality: title/description lengths, duplicates, image hygiene,
+ *          internal-link coverage, lastmod uniformity, <main> text changed
+ *          without an `updated` bump (content-hash guard), stale cost guides
+ *          and source dates, keyword map, readability, JS budgets.
  *   INFO   accepted interim states (Wix-hosted images until the migration,
  *          307 interim redirects, planned pages not live yet).
  *
  * Output: a grouped console report and dist-ssr/audit.json.
  * Exit code: 0, unless --strict is passed and there is at least one ERROR.
  *
- * Usage: node scripts/audit-seo.mjs [--strict] [--verbose] [--wix-error]
- *   --verbose    print every finding (default: first 12 per check)
- *   --wix-error  treat static.wixstatic.com images as errors (after migration)
+ * Usage: node scripts/audit-seo.mjs [--strict] [--verbose] [--wix-error] [--update-hashes]
+ *   --verbose        print every finding (default: first 12 per check)
+ *   --wix-error      treat static.wixstatic.com images as errors (after migration)
+ *   --update-hashes  rewrite scripts/seo-content-hashes.json from this dist/
+ *                    (after bumping `updated` on the pages whose copy changed)
  *
  * Node built-ins only. The HTML is read with a small tokenizer
  * (scripts/lib/audit/html.mjs) that understands React's prerendered output.
  */
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { brotliCompressSync, constants as zlibConstants } from 'node:zlib';
@@ -66,11 +73,13 @@ const started = performance.now();
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const DIST = join(ROOT, 'dist');
 const OUT_FILE = join(ROOT, 'dist-ssr', 'audit.json');
+const CONTENT_HASHES_FILE = join(ROOT, 'scripts', 'seo-content-hashes.json');
 
 const ARGS = new Set(process.argv.slice(2));
 const STRICT = ARGS.has('--strict');
 const VERBOSE = ARGS.has('--verbose');
 const WIX_IS_ERROR = ARGS.has('--wix-error') || process.env.AUDIT_WIX_ERROR === '1';
+const UPDATE_HASHES = ARGS.has('--update-hashes');
 
 /* ------------------------------------------------------------ policy */
 const SITE_PHONE_TEL = 'tel:+14318665644';
@@ -84,11 +93,27 @@ const REVEAL_FORBIDDEN_CLASSES = ['hero-card', 'page-hero-card', 'blog-hero-figu
 const TITLE_WARN = 60;
 const TITLE_ERROR = 70;
 const DESC_MIN = 70;
-const DESC_MAX = 160;
+const DESC_MAX = 155;
 const LONG_PARAGRAPH_WORDS = 90;
 const MIN_INBOUND = 3;
 const STALE_307_DAYS = 45;
 const ESTIMATOR_HOST = 'estimator.bridgelandbuilders.com';
+// Claims the owner has not confirmed (or that the plan removed as superlatives).
+// Matched case-insensitively at a word start, in body text, <title> and meta
+// description, on every page except the legal pages.
+const BANNED_CLAIMS = [
+  '100% satisf',
+  '5-star rated',
+  'best renovation and construction',
+  'top construction',
+  'on-site measure',
+  'same winnipeg crew',
+  'fixed written price',
+  'verified homeowner',
+];
+// Yearly refresh guard (plan §8/§9): cost-guide data and source "verified" dates.
+const COST_GUIDE_STALE_MONTHS = 13;
+const SOURCE_STALE_DAYS = 365;
 // Brotli KB of JS loaded before interaction (plan §4 budgets).
 const jsBudgetKb = (route) => {
   if (route === '/') return 80;
@@ -99,7 +124,7 @@ const jsBudgetKb = (route) => {
 };
 const EXPECTED_FILES = {
   error: ['robots.txt', 'sitemap.xml', '404.html'],
-  warn: ['llms.txt', 'llms-full.txt', 'favicon.ico', 'favicon.png', 'favicon.svg', 'site.webmanifest', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png'],
+  warn: ['llms.txt', 'llms-full.txt', 'favicon.ico', 'favicon.png', 'site.webmanifest', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png'],
 };
 const NETLIFY_FILES = ['_headers', '_redirects'];
 
@@ -228,16 +253,22 @@ const routeFile = (route) => (route === '/' ? join(DIST, 'index.html') : join(DI
 const distStaticExists = (path) => /\.[a-z0-9]+$/i.test(path) && existsSync(join(DIST, ...path.slice(1).split('/')));
 const shortUrl = (url) => (url.length > 70 ? `${url.slice(0, 67)}…` : url);
 
+// Budgets are checked at brotli quality 11 (plan §4 baseline). Vercel
+// compresses on the fly at about quality 4, so that size is reported too, as
+// the closer estimate of what a visitor downloads.
 const brotliCache = new Map();
 function brotliKb(path) {
   if (brotliCache.has(path)) return brotliCache.get(path);
   const file = join(DIST, ...path.replace(/^\//, '').split('?')[0].split('/'));
-  let kb = 0;
+  const sizes = { kb: 0, servedKb: 0 };
   if (existsSync(file)) {
-    kb = brotliCompressSync(readFileSync(file), { params: { [zlibConstants.BROTLI_PARAM_QUALITY]: 11 } }).length / 1024;
+    const bytes = readFileSync(file);
+    const at = (quality) => brotliCompressSync(bytes, { params: { [zlibConstants.BROTLI_PARAM_QUALITY]: quality } }).length / 1024;
+    sizes.kb = at(11);
+    sizes.servedKb = at(4);
   }
-  brotliCache.set(path, kb);
-  return kb;
+  brotliCache.set(path, sizes);
+  return sizes;
 }
 
 /* ------------------------------------------------------- page parsing */
@@ -399,7 +430,7 @@ function auditStructure(page) {
   const { route, doc } = page;
   if (page.h1s.length !== 1) report.error('html.h1', route, `${page.h1s.length} <h1> elements`);
   if (page.mainCount !== 1) {
-    if (route === '/' && page.mainCount === 0) report.warn('html.main', route, 'Home has no <main> landmark (plan §2)');
+    if (route === '/' && page.mainCount === 0) report.error('html.main', route, 'Home has no <main> landmark (plan §2)');
     else report.error('html.main', route, `${page.mainCount} <main> elements`);
   }
   if (/route-loading|Loading page\.\.\./.test(page.html)) report.error('html.loading-fallback', route, 'Suspense "Loading page..." fallback rendered instead of the page');
@@ -427,7 +458,7 @@ function auditStructure(page) {
   for (const { el, forbidden, hides } of wrappers.values()) {
     const cls = [...classesOf(el)].filter((c) => c !== 'reveal');
     const label = forbidden ? `.${forbidden}` : `${el.tag}${cls.length ? `.${cls.slice(0, 2).join('.')}` : ''}`;
-    report.warn('html.reveal-gated', route, `${label} has .reveal${hides.size ? ` (hides ${[...hides].join(', ')})` : ''}`);
+    report.error('html.reveal-gated', route, `${label} has .reveal${hides.size ? ` (hides ${[...hides].join(', ')})` : ''}`);
   }
 
   // Readability: very long paragraphs in the main content.
@@ -464,7 +495,7 @@ function auditNap(page) {
       if (!PHONE_FORMATS.has(raw)) formats.set(raw, (formats.get(raw) || 0) + 1);
     } else others.set(raw, (others.get(raw) || 0) + 1);
   }
-  for (const [raw, n] of formats) report.warn('nap.phone-format', route, `"${raw}" ×${n} (allowed: ${[...PHONE_FORMATS].join(', ')})`);
+  for (const [raw, n] of formats) report.error('nap.phone-format', route, `"${raw}" ×${n} (allowed: ${[...PHONE_FORMATS].join(', ')})`);
   for (const [raw, n] of others) report.info('nap.other-phone', route, `"${raw}" ×${n}`);
   if (/@gmail\.com/i.test(page.html)) report.warn('nap.gmail', route, 'a gmail.com address appears (use info@bridgelandbuilders.com)');
 }
@@ -516,11 +547,14 @@ function auditPerformance(page) {
     if (el.tag === 'script' && (el.attrs.type || '') === 'module' && (el.attrs.src || '').startsWith('/')) scripts.add(el.attrs.src);
     if (el.tag === 'link' && (el.attrs.rel || '').toLowerCase() === 'modulepreload' && (el.attrs.href || '').startsWith('/')) scripts.add(el.attrs.href);
   }
-  const kb = [...scripts].reduce((sum, src) => sum + brotliKb(src), 0);
+  const sizes = [...scripts].map((src) => brotliKb(src));
+  const kb = sizes.reduce((sum, s) => sum + s.kb, 0);
+  const servedKb = sizes.reduce((sum, s) => sum + s.servedKb, 0);
   page.stats.jsBrotliKb = Math.round(kb * 10) / 10;
+  page.stats.jsServedKb = Math.round(servedKb * 10) / 10;
   const budget = jsBudgetKb(page.route);
   if (kb > budget) {
-    report.warn('perf.js-budget', page.route, `${page.stats.jsBrotliKb} KB br (entry + modulepreload; lazy route chunks not counted) > ${budget} KB budget`);
+    report.warn('perf.js-budget', page.route, `${page.stats.jsBrotliKb} KB br q11 (~${Math.round(servedKb)} KB as served; entry + modulepreload, lazy route chunks not counted) > ${budget} KB budget`);
   }
 }
 
@@ -529,8 +563,45 @@ function auditEstimator(page) {
   const isServicePage = (SERVICE_SEO && route in SERVICE_SEO) || (/^\/services\/[^/]+$/.test(route) && !route.endsWith('/cost'));
   if (!isServicePage) return;
   const ok = byTag(page.doc, 'iframe').some((f) => (f.attrs.src || '').includes(ESTIMATOR_HOST));
-  if (!ok) report.warn('estimator.missing', route, `no <iframe> with an ${ESTIMATOR_HOST} src`);
+  if (!ok) report.error('estimator.missing', route, `no <iframe> with an ${ESTIMATOR_HOST} src`);
 }
+
+// Lower-cased, one space between words, every dash and hyphen as "-".
+const claimText = (text) =>
+  String(text || '')
+    .toLowerCase()
+    .replace(/[‐-―−]/g, '-')
+    .replace(/\s+/g, ' ');
+const BANNED_CLAIM_RES = BANNED_CLAIMS.map((phrase) => ({
+  phrase,
+  re: new RegExp(`(?<![a-z0-9])${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`),
+}));
+
+/** Unconfirmed or removed claims (owner decisions, plan §11.1) anywhere a visitor or a result page shows them. */
+function auditClaims(page) {
+  if (LEGAL_ROUTES.has(page.route)) return;
+  const places = [
+    ['body', claimText(textBetween(page.doc, page.body.start, page.body.end, ' '))],
+    ['<title>', claimText(page.title)],
+    ['meta description', claimText(page.description)],
+  ];
+  for (const { phrase, re } of BANNED_CLAIM_RES) {
+    for (const [where, text] of places) {
+      const m = re.exec(text);
+      if (!m) continue;
+      const context = text.slice(Math.max(0, m.index - 30), m.index + phrase.length + 30).trim();
+      report.error('claims.banned', page.route, `"${phrase}" in ${where}: "…${context}…"`);
+      break;
+    }
+  }
+}
+
+/** Normalised visible text of <main>, for the content-hash guard. */
+const mainTextHash = (page) =>
+  createHash('sha256')
+    .update(textBetween(page.doc, page.main.start, page.main.end, ' ').replace(/\s+/g, ' ').trim())
+    .digest('hex')
+    .slice(0, 16);
 
 /* =================================================================== run */
 const pages = new Map(); // route -> page
@@ -597,10 +668,12 @@ for (const page of [...pages.values(), ...(notFound ? [notFound] : [])]) {
   auditStructure(page);
   auditNap(page);
   auditImages(page);
+  auditClaims(page);
   if (page.is404) continue;
   collectLinks(page);
   auditPerformance(page);
   auditEstimator(page);
+  page.mainHash = mainTextHash(page);
   if ((notFoundH1 && page.h1s[0] === notFoundH1) || /ISN&#x27;T IN THE|ISN'T IN THE BLUEPRINT/.test(page.html)) {
     report.error('parity.renders-404', page.route, 'prerendered HTML is the 404 page — route missing from the router');
   }
@@ -654,6 +727,7 @@ if (SEO_AVAILABLE) {
 // flagged as future just because the build machine's UTC date lags behind.
 const today = new Date(Date.now() + 14 * 3600 * 1000).toISOString().slice(0, 10);
 const sitemapPaths = new Set();
+const sitemapLastmod = new Map(); // path -> lastmod
 if (sitemapXml == null) {
   report.error('sitemap.missing', null, 'public/sitemap.xml not found');
 } else {
@@ -677,6 +751,7 @@ if (sitemapXml == null) {
 
     if (u.lastmod) {
       lastmods.push(u.lastmod);
+      sitemapLastmod.set(path, u.lastmod.slice(0, 10));
       if (!/^\d{4}-\d{2}-\d{2}(T[\d:.]+(Z|[+-]\d{2}:\d{2}))?$/.test(u.lastmod)) report.warn('sitemap.lastmod-invalid', path, `lastmod "${u.lastmod}" is not W3C date format`);
       else if (u.lastmod.slice(0, 10) > today) report.warn('sitemap.lastmod-invalid', path, `lastmod ${u.lastmod} is in the future`);
     }
@@ -713,6 +788,108 @@ if (sitemapXml == null) {
   }
   const distSitemap = readText(join(DIST, 'sitemap.xml'));
   if (distSitemap != null && distSitemap !== sitemapXml) report.warn('sitemap.stale-dist', null, 'dist/sitemap.xml differs from public/sitemap.xml (dist is stale — rebuild)');
+}
+
+/* ------------------------------------------- content-hash guard (§3.2) */
+// lastmod (and the IndexNow pings that key off it) must move when a page's
+// copy moves. scripts/seo-content-hashes.json records, per indexable route,
+// a hash of the visible <main> text and the `updated` date it was recorded
+// with. Text changed + same `updated` = a lastmod that lies. `updated` is
+// read from dist/sitemap.xml first: it was built with this HTML, so it is the
+// lastmod these pages were published with (src/ may be ahead of dist/).
+const distSitemapXml = readText(join(DIST, 'sitemap.xml'));
+const distLastmod = new Map(
+  (distSitemapXml ? parseSitemap(distSitemapXml).urls : [])
+    .filter((u) => u.loc && u.loc.startsWith(SITE_URL) && u.lastmod)
+    .map((u) => [cleanPath(u.loc.slice(SITE_URL.length) || '/'), u.lastmod.slice(0, 10)])
+);
+const routeUpdated = new Map(
+  (Array.isArray(headModel.SITE_ROUTES) ? headModel.SITE_ROUTES : [])
+    .filter((r) => r && r.path && r.lastmod)
+    .map((r) => [cleanPath(r.path), String(r.lastmod).slice(0, 10)])
+);
+const updatedOf = (route) => distLastmod.get(route) || routeUpdated.get(route) || sitemapLastmod.get(route) || null;
+// Indexable = in the sitemap built with this dist/ (or indexable per src/).
+const hashedPages = [...pages.values()].filter((p) => p.mainHash && (distLastmod.has(p.route) || p.indexable));
+const recordedHashes = existsSync(CONTENT_HASHES_FILE) ? readJsonFile('scripts/seo-content-hashes.json') : null;
+let hashesChanged = 0;
+if (!recordedHashes || typeof recordedHashes !== 'object') {
+  if (!UPDATE_HASHES) report.info('sitemap.hash-missing', null, 'scripts/seo-content-hashes.json not found — run the audit with --update-hashes to record');
+} else {
+  const missing = [];
+  for (const page of hashedPages) {
+    const recorded = recordedHashes[page.route];
+    const updated = updatedOf(page.route);
+    if (!recorded || !recorded.hash) {
+      missing.push(page.route);
+      continue;
+    }
+    if (recorded.hash !== page.mainHash || recorded.updated !== updated) hashesChanged += 1;
+    const textChanged = recorded.hash !== page.mainHash;
+    if (textChanged && recorded.updated === updated) {
+      report.warn('sitemap.stale-updated', page.route, `<main> text changed since it was recorded, but "updated" is still ${updated || '(none)'} — bump "updated", rebuild, then run the audit with --update-hashes`);
+    } else if (recorded.updated !== updated && !UPDATE_HASHES) {
+      report.info('sitemap.hash-outdated', page.route, `${textChanged ? '<main> text changed and ' : 'no <main> text change; '}updated ${recorded.updated} -> ${updated} — run the audit with --update-hashes to record`);
+    }
+  }
+  if (missing.length && !UPDATE_HASHES) {
+    report.info('sitemap.hash-missing', null, `${missing.length} indexable route(s) without a recorded hash (new pages): ${missing.slice(0, 8).join(', ')}${missing.length > 8 ? ', …' : ''} — run the audit with --update-hashes`, missing);
+  }
+}
+if (UPDATE_HASHES && hashedPages.length) {
+  const next = {};
+  for (const page of [...hashedPages].sort((a, b) => a.route.localeCompare(b.route))) {
+    next[page.route] = { hash: page.mainHash, updated: updatedOf(page.route) };
+  }
+  writeFileSync(CONTENT_HASHES_FILE, `${JSON.stringify(next, null, 2)}\n`);
+}
+
+/* ------------------------------------------ yearly refresh guard (§8/§9) */
+const NOW = new Date();
+const MONTH_NAMES = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+const isoDay = (date) => date.toISOString().slice(0, 10);
+/** The latest date a free-text period names ("October 2026", "2025-2026", "2026-10"); a bare year counts as December. */
+function periodEnd(text) {
+  let latest = null;
+  const s = String(text || '').toLowerCase();
+  for (const m of s.matchAll(/\b(?:(january|february|march|april|may|june|july|august|september|october|november|december)\s+)?(20\d{2})(?:-(\d{2}))?\b/g)) {
+    const month = m[1] ? MONTH_NAMES.indexOf(m[1]) : m[3] ? Number(m[3]) - 1 : 11;
+    const date = new Date(Date.UTC(Number(m[2]), Math.min(Math.max(month, 0), 11), 1));
+    if (!latest || date > latest) latest = date;
+  }
+  return latest;
+}
+const monthsAgo = (months) => {
+  const d = new Date(NOW);
+  d.setMonth(d.getMonth() - months);
+  return d;
+};
+const costCutoff = monthsAgo(COST_GUIDE_STALE_MONTHS);
+const sourceCutoff = isoDay(new Date(NOW.getTime() - SOURCE_STALE_DAYS * 86400000));
+const liveGuides = Array.isArray(headModel.LIVE_COST_GUIDES) ? headModel.LIVE_COST_GUIDES : [];
+for (const guide of liveGuides) {
+  if (!guide || !guide.path) continue;
+  const seoFields = guide.seo || {};
+  const problems = [];
+  const updated = /^\d{4}-\d{2}-\d{2}/.test(String(seoFields.updated || '')) ? new Date(`${String(seoFields.updated).slice(0, 10)}T00:00:00Z`) : null;
+  if (updated && updated < costCutoff) problems.push(`updated ${isoDay(updated)} is more than ${COST_GUIDE_STALE_MONTHS} months old`);
+  const period = guide.dataBasis && guide.dataBasis.period;
+  const periodDate = periodEnd(period);
+  if (periodDate && periodDate < costCutoff) problems.push(`data period "${period}" is more than ${COST_GUIDE_STALE_MONTHS} months old`);
+  const titleYear = Number((String(seoFields.title || '').match(/\b(20\d{2})\b/) || [])[1]);
+  if (titleYear && NOW.getMonth() > 0 && titleYear < NOW.getFullYear()) problems.push(`title year ${titleYear} is behind ${NOW.getFullYear()}`);
+  if (problems.length) report.warn('content.stale-cost-guide', guide.path, `${problems.join('; ')} — refresh the prices from the estimator, then the title year, period and updated`);
+}
+const sourcedPages = [
+  ...liveGuides.map((guide) => [guide.path, guide.sources]),
+  ...BLOG_POSTS.filter((post) => post && post.slug && (post.status || 'published') !== 'draft').map((post) => [`/blog/${post.slug}`, post.sources]),
+];
+for (const [route, sources] of sourcedPages) {
+  const stale = (Array.isArray(sources) ? sources : [])
+    .map((s) => String((s && s.accessed) || '').slice(0, 10))
+    .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d) && d < sourceCutoff)
+    .sort();
+  if (stale.length) report.warn('content.stale-source', route, `${stale.length} source(s) last verified more than ${SOURCE_STALE_DAYS} days ago (oldest ${stale[0]}) — re-check them and update "accessed"`);
 }
 
 /* -------------------------------------------------------------- robots */
@@ -913,6 +1090,8 @@ const pageSummaries = [...pages.values()].map((p) => ({
   inboundContextual: p.stats.inboundContextual ?? 0,
   wixImages: p.stats.wixImages ?? 0,
   jsBrotliKb: p.stats.jsBrotliKb ?? null,
+  jsServedKb: p.stats.jsServedKb ?? null,
+  mainHash: p.mainHash ?? null,
 }));
 
 writeJson(OUT_FILE, {
@@ -944,6 +1123,13 @@ console.log(
     .join(', ') || '(none)'
 );
 printReport(report, { verbose: VERBOSE });
+if (UPDATE_HASHES) {
+  console.log(
+    hashedPages.length
+      ? `\ncontent hashes: wrote ${hashedPages.length} routes to scripts/seo-content-hashes.json (${recordedHashes ? `${hashesChanged} changed` : 'new file'})`
+      : '\ncontent hashes: no indexable pages in dist/ — scripts/seo-content-hashes.json not written'
+  );
+}
 console.log(`\n${counts.error} errors, ${counts.warn} warnings, ${counts.info} info — ${durationMs} ms — ${OUT_FILE.slice(ROOT.length).replace(/\\/g, '/')}`);
 if (counts.error && !STRICT) console.log('(warn mode: errors do not fail the build; run with --strict to enforce)');
 

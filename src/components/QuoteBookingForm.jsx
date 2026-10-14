@@ -28,6 +28,8 @@ const EMPTY = {
   postalCode: '',
   winnipeg: '',
   types: [],
+  // Optional marketing-email consent (CASL): never ticked by default.
+  marketingConsent: false,
   // Honeypot. Named so browser autofill never recognises it (a field called
   // 'company' can be autofilled with a saved organisation, which would make the
   // server discard a real lead).
@@ -42,6 +44,29 @@ const ALERTS = {
 };
 
 const cx = (...classes) => classes.filter(Boolean).join(' ');
+
+// The marketing-consent checkbox sits outside .form-group, whose input and
+// label rules are made for text fields. 16px text (no iOS zoom), a 44px-high
+// tap area, and the theme's own colour tokens.
+const CONSENT_LABEL_STYLE = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '10px',
+  minHeight: '44px',
+  color: 'var(--text-muted)',
+  fontSize: '16px',
+  lineHeight: 1.4,
+  textAlign: 'left',
+  cursor: 'pointer',
+};
+const CONSENT_BOX_STYLE = {
+  flex: 'none',
+  width: '20px',
+  height: '20px',
+  margin: 0,
+  accentColor: 'var(--accent-seagreen)',
+  cursor: 'pointer',
+};
 
 // Validation needs the phone-number library, so it is downloaded on first
 // focus or idle time rather than with the page (src/data/leadValidation.js).
@@ -372,6 +397,21 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
             );
           })}
 
+          {/* Optional, unticked, never required: express consent to marketing
+              emails (CASL). Ticking it only adds a GoHighLevel tag
+              (MARKETING_CONSENT_TAG); it never affects saving the lead. */}
+          <label htmlFor={`${uid}-marketingConsent`} style={CONSENT_LABEL_STYLE}>
+            <input
+              type="checkbox"
+              id={`${uid}-marketingConsent`}
+              name="marketingConsent"
+              checked={values.marketingConsent}
+              onChange={(event) => setField('marketingConsent', event.target.checked)}
+              style={CONSENT_BOX_STYLE}
+            />
+            <span>Email me occasional renovation tips and offers. Unsubscribe any time.</span>
+          </label>
+
           {/* Honeypot — hidden from people, filled in by bots. */}
           <div className="qf-hp" aria-hidden="true">
             <label>
@@ -416,7 +456,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
           {alertBox}
 
           <button type="button" className="btn-pill-red qf-submit" disabled={!slot || busy} onClick={confirmBooking}>
-            {busy ? 'BOOKING…' : slot ? (<><span>CONFIRM MY CALL</span><ArrowRightIcon size={15} /></>) : 'CHOOSE A TIME ABOVE'}
+            {busy ? 'BOOKING…' : slot ? (<><span>CONFIRM MY VISIT</span><ArrowRightIcon size={15} /></>) : 'CHOOSE A TIME ABOVE'}
           </button>
 
           <button type="button" className="qf-text-btn qf-back" onClick={() => { setAlert(null); setStep('details'); }}>

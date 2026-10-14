@@ -18,7 +18,7 @@
  *                   route in SITE_ROUTES (for the audit).
  */
 import { existsSync } from 'node:fs';
-import { SITE_FAQS } from './faqs.js';
+import { CONTACT_FAQS, SITE_FAQS } from './faqs.js';
 import { buildPostHead } from './postContent.js';
 import { LIVE_SERVICE_PAGES } from './projects.js';
 import { serviceBySlug } from './services.js';
@@ -36,7 +36,6 @@ async function optionalModule(rel) {
   return import(url.href);
 }
 
-const blogIndex = await optionalModule('./blogIndex.js');
 const blogFull = await optionalModule('./blogPosts.js');
 const costGuides = await optionalModule('./costGuides/index.js');
 const areasContent = await optionalModule('./serviceAreasContent.js');
@@ -45,8 +44,12 @@ const videos = await optionalModule('./videos.js');
 
 const isPublished = (post) => post && (post.status || 'published') === 'published';
 
-/** Published posts' metadata, newest first — the list /blog renders (blogIndex.js). */
-export const PUBLISHED_POSTS = (blogIndex.BLOG_POSTS || blogFull.BLOG_POSTS || []).filter(isPublished);
+/**
+ * Published posts, newest first, from the build-only blogPosts.js (full posts:
+ * the /blog Blog node needs metaDescription and ogImage, which the client card
+ * modules leave out). /blog itself renders src/data/blogList.js.
+ */
+export const PUBLISHED_POSTS = (blogFull.BLOG_POSTS || []).filter(isPublished);
 
 const fullPost = (slug) =>
   (typeof blogFull.getPostBySlug === 'function' ? blogFull.getPostBySlug(slug) : null) ||
@@ -141,8 +144,14 @@ for (const video of PUBLISHED_VIDEOS) {
 
 // EditorialPolicyPage.jsx and every other static page: usePageSeo(path), PAGE_SEO only.
 
+// ServicesPage.jsx: usePageSeo('/services'); seo.js resolvePageSeo adds the
+// ItemList of live services from the path alone (templateNodes), on both sides.
+
 // FaqsPage.jsx
 ROUTE_OPTIONS.set('/faqs', () => ({ faqs: SITE_FAQS }));
+
+// ContactPage.jsx (/contact-us)
+ROUTE_OPTIONS.set('/contact-us', () => ({ faqs: CONTACT_FAQS }));
 
 // BlogPage.jsx: the Blog node and the latest post's 1200x630 image.
 ROUTE_OPTIONS.set('/blog', () => {

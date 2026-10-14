@@ -58,7 +58,9 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
             aria-controls={answerId}
           >
             <span>{item.q}</span>
-            <span className="faq-toggle">+</span>
+            {/* The "+" is drawn by CSS (.faq-toggle::before), so it is never
+                part of the question's heading text. */}
+            <span className="faq-toggle" aria-hidden="true" />
           </button>
         );
         return (

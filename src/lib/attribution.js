@@ -14,6 +14,7 @@
 // Do Not Track: nothing is stored and no cookie ids are read; only the
 // current visit's own tags are sent with a form the visitor submits.
 import { ATTRIBUTION_TTL_DAYS } from '../data/analyticsConfig.js';
+import { CANONICAL_SITE_URL } from '../data/siteConfig.js';
 
 const STORAGE_KEY = 'bb:attribution';
 const SESSION_KEY = 'bb:landing';
@@ -58,11 +59,22 @@ function write(storage, key, value) {
   }
 }
 
+// The site's own domain. It and every subdomain of it (www, the price
+// estimator at estimator.bridgelandbuilders.com) are internal, so a visit
+// from one of them never replaces the touch (an ad click, say) that brought
+// the visitor in.
+const SITE_HOSTNAME = new URL(CANONICAL_SITE_URL).hostname;
+
+function internalHost(hostname) {
+  const host = hostname.toLowerCase();
+  return host === window.location.hostname || host === SITE_HOSTNAME || host.endsWith(`.${SITE_HOSTNAME}`);
+}
+
 function externalReferrer() {
   try {
     if (!document.referrer) return undefined;
     const url = new URL(document.referrer);
-    if (!/^https?:$/.test(url.protocol) || url.host === window.location.host) return undefined;
+    if (!/^https?:$/.test(url.protocol) || url.host === window.location.host || internalHost(url.hostname)) return undefined;
     return `${url.host}${url.pathname === '/' ? '' : url.pathname}`.slice(0, 200);
   } catch {
     return undefined;

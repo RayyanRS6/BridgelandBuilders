@@ -2,8 +2,9 @@
 // Do not edit by hand — edit the post file and re-run: node scripts/build-blog-data.mjs
 //
 // BUILD ONLY (head.js, build-seo-files, sync-redirects, audit-seo): every
-// published post WITH its body. Client code imports src/data/blogIndex.js
-// instead; build-blog-data.mjs fails if any other src file imports this one.
+// published post WITH its body. Client code imports the smaller generated
+// modules instead (src/data/posts/, postCards/, blogList.js, homeGuides.js,
+// blogIndex.js); build-blog-data.mjs fails if any other src file imports this one.
 
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = [
@@ -20,6 +21,293 @@ export const BLOG_CATEGORIES = [
 /** Published posts only (blog-raw status "published"), newest first, with bodies. */
 export const BLOG_POSTS = [
   {
+    "slug": "home-renovation-cost-canada",
+    "title": "How Much Does a Home Renovation Cost in Canada?",
+    "metaTitle": "How Much Does a Home Renovation Cost in Canada?",
+    "metaDescription": "There’s no official average renovation cost in Canada. What Statistics Canada data does show, why per-square-foot prices mislead, and our Winnipeg ranges.",
+    "excerpt": "Why there’s no reliable national average for what a renovation costs, what Statistics Canada’s construction price data does show, why per-square-foot figures mislead, and how to get a real number for your project.",
+    "category": "Costs & Budgets",
+    "categories": [
+      "Costs & Budgets"
+    ],
+    "date": "2026-10-14",
+    "updated": "2026-10-14",
+    "readMinutes": 7,
+    "hero": null,
+    "heroSrc": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
+    "heroSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w",
+    "ogImage": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x630.2525769f.jpg",
+    "heroAlt": "Title card: How Much Does a Home Renovation Cost in Canada?",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/whole-home-renovations",
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations",
+      "/services/basement-renovations"
+    ],
+    "cluster": "renovation-money",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Search for what a home renovation costs in Canada and you’ll find averages and per-square-foot figures that look precise. None of them comes from a current official national survey, because there isn’t one. This guide sets out what Statistics Canada and CMHC do publish, checked on October 14, 2026, and what renovations start at in Winnipeg, where we work."
+      },
+      {
+        "t": "h2",
+        "x": "Is there an official average renovation cost in Canada?"
+      },
+      {
+        "t": "p",
+        "x": "No. Neither Statistics Canada nor CMHC currently publishes an average cost per renovation project. Statistics Canada’s Homeowner Repair and Renovation Survey, which measured homeowners’ repair and renovation spending, is listed as inactive: its last stand-alone reference year was 2002, and it was integrated into the Survey of Household Spending from 2003."
+      },
+      {
+        "t": "p",
+        "x": "That household survey reports average annual spending per household, not the cost of a project. CMHC’s annual Renovation and Home Purchase Report has 2012 as its most recent issue in the Government of Canada publications archive."
+      },
+      {
+        "t": "p",
+        "x": "So treat any national renovation average with care. Ask who collected it, when, from how many homes, and whether it covers the same work you’re planning."
+      },
+      {
+        "t": "h2",
+        "x": "Are building costs still rising in Canada?"
+      },
+      {
+        "t": "p",
+        "x": "Yes, overall, though not in every city. Statistics Canada’s building construction price index for new residential buildings rose 0.5% in the second quarter of 2026 and 2.3% over the year across its 15-city composite. In Winnipeg, it rose 1.4% in the quarter and 4.0% over the year."
+      },
+      {
+        "t": "p",
+        "x": "The index measures what contractors charge to build new houses and apartment buildings, including materials, labour, equipment, overhead and profit, but not sales taxes, land or building design. It doesn’t cover renovations, so read it as a sign of where labour and material prices are heading rather than a price for your project."
+      },
+      {
+        "t": "table",
+        "caption": "Residential building construction price index, second quarter 2026",
+        "head": [
+          "Area",
+          "Index (2023 = 100)",
+          "Change from Q1 2026",
+          "Change from Q2 2025"
+        ],
+        "rows": [
+          [
+            "15-city composite",
+            "110.3",
+            "0.5%",
+            "2.3%"
+          ],
+          [
+            "Winnipeg",
+            "112.9",
+            "1.4%",
+            "4.0%"
+          ],
+          [
+            "Regina",
+            "124.5",
+            "2.0%",
+            "7.6%"
+          ],
+          [
+            "Saskatoon",
+            "115.3",
+            "2.0%",
+            "5.7%"
+          ],
+          [
+            "Calgary",
+            "112.0",
+            "−0.1%",
+            "−0.5%"
+          ],
+          [
+            "Edmonton",
+            "110.9",
+            "1.3%",
+            "3.1%"
+          ],
+          [
+            "Toronto",
+            "105.7",
+            "−0.8%",
+            "0.1%"
+          ],
+          [
+            "Montréal",
+            "115.9",
+            "2.5%",
+            "8.4%"
+          ],
+          [
+            "Vancouver",
+            "109.0",
+            "−0.2%",
+            "0.5%"
+          ]
+        ],
+        "note": "Source: Statistics Canada, Building construction price indexes, second quarter 2026 (released July 24, 2026), Table 1, checked October 14, 2026. The index covers new residential buildings in 15 census metropolitan areas, is not seasonally adjusted, and earlier quarters may be revised."
+      },
+      {
+        "t": "p",
+        "x": "An index of 112.9 means contractors’ prices for new residential buildings in Winnipeg were about 12.9% higher in the second quarter of 2026 than their 2023 average. A quote from a year or two ago may no longer hold, so ask for a current written quote before you settle on a budget."
+      },
+      {
+        "t": "h2",
+        "x": "Is there a reliable renovation cost per square foot in Canada?"
+      },
+      {
+        "t": "p",
+        "x": "No. Cost isn’t spread evenly across a room, so a per-square-foot figure from one project rarely fits another. A small bathroom packs plumbing, tile and fixtures into very little floor, while a basement spreads framing and drywall over a large open area. That’s why we don’t price renovations by the square foot."
+      },
+      {
+        "t": "p",
+        "x": "Our own Winnipeg estimator shows the gap: a bathroom up to 50 sq ft starts at $16,000–$20,000, and a basement up to 500 sq ft starts at $25,000–$80,000. Ten times the floor area doesn’t mean ten times the price. A national average per square foot would blur things further, because construction prices move differently from city to city."
+      },
+      {
+        "t": "h2",
+        "x": "What does a renovation cost in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Our instant estimator starts a bathroom renovation in Winnipeg at $16,000, a basement development at $25,000 and a kitchen renovation at $40,000. These are Bridgeland Builders’ own starting ranges for Winnipeg, not national averages. The size of the space sets the range, and your fixtures, finishes and extras move it from there."
+      },
+      {
+        "t": "table",
+        "caption": "Bridgeland Builders’ Winnipeg estimator starting ranges (October 2026)",
+        "head": [
+          "Service",
+          "Starting range by size"
+        ],
+        "rows": [
+          [
+            "[Bathroom renovation](/services/bathroom-renovations/cost)",
+            "$16,000–$36,000 (up to 50 sq ft through 150+ sq ft)"
+          ],
+          [
+            "[Basement development](/services/basement-renovations/cost)",
+            "$25,000–$150,000 (up to 500 sq ft through 1,500 sq ft)"
+          ],
+          [
+            "[Kitchen renovation](/services/kitchen-renovations/cost)",
+            "$40,000–$190,000 (up to 100 sq ft through over 200 sq ft)"
+          ]
+        ],
+        "note": "Each service links to its full Winnipeg cost guide. Options such as a new shower, cabinets, countertops, flooring or an egress window each have their own range in the estimator. Your written quote after the free on-site visit is the final price."
+      },
+      {
+        "t": "p",
+        "x": "Whole-home renovations, additions and commercial projects aren’t in the estimator, because their scope varies too much to price from a few questions. They’re priced after a free on-site visit. To see what moves each number, read our [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "What makes one renovation cost more than another?"
+      },
+      {
+        "t": "p",
+        "x": "The same few things move the price on almost every job, wherever you live:"
+      },
+      {
+        "t": "li",
+        "x": "**Size and scope:** more floor area and more rooms mean more material and more labour hours."
+      },
+      {
+        "t": "li",
+        "x": "**Layout changes:** moving plumbing, gas lines or walls brings in more trades, and taking out a load-bearing wall needs a beam and the right permits."
+      },
+      {
+        "t": "li",
+        "x": "**Finish level:** stock or custom cabinets, laminate or quartz, a standard vanity or a custom one."
+      },
+      {
+        "t": "li",
+        "x": "**What’s behind the walls:** older homes can hide outdated wiring, tired plumbing or water damage that only shows up once the walls are opened."
+      },
+      {
+        "t": "li",
+        "x": "**Permits and code items:** permit fees, and requirements such as a bedroom egress window, are part of the cost."
+      },
+      {
+        "t": "li",
+        "x": "**Changes once work starts:** the federal Office of Consumer Affairs points out that changing your mind partway through a project changes the cost too."
+      },
+      {
+        "t": "h2",
+        "x": "How do you get an accurate renovation price?"
+      },
+      {
+        "t": "p",
+        "x": "Get written quotes for the same scope. The federal Office of Consumer Affairs suggests meeting at least three contractors and comparing quotes built on the same specifications, with all costs and taxes shown. A quote from someone who has seen your home is the only number that accounts for your walls, wiring and plumbing."
+      },
+      {
+        "t": "p",
+        "x": "Before you collect quotes, our [home renovation planning guide](/blog/home-renovation-planning-guide-canada) helps you build a budget with a contingency, and our [home renovation financing guide](/blog/home-renovation-financing-canada) compares the ways Canadians pay for the work. For credits and rebates, see our guide to [renovation grants and tax credits in Manitoba](/blog/manitoba-renovation-tax-credits-rebates)."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Renovating in Winnipeg or a nearby community? [Book a free on-site visit](/book-online): we’ll look at the space, talk through what you want and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote), or see how we plan a [kitchen renovation](/services/kitchen-renovations) or a [whole-home renovation](/services/whole-home-renovations)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Are renovation costs still going up in Canada?",
+        "a": "Building costs are. Statistics Canada’s price index for new residential buildings rose 2.3% across its 15-city composite in the year to the second quarter of 2026, and 4.0% in Winnipeg. The index tracks new construction rather than renovations, but it shows which way contractors’ prices for labour and materials are moving."
+      },
+      {
+        "q": "How much does it cost to renovate a whole house in Canada?",
+        "a": "There’s no official figure, and whole-house projects vary too much for an average to mean much: one house needs new finishes, another needs new wiring, plumbing and walls moved. Our instant estimator doesn’t price whole-home work. In Winnipeg, we price it after a free on-site visit, and most whole-home renovations run eight to sixteen weeks."
+      },
+      {
+        "q": "Why do online renovation cost calculators give such different numbers?",
+        "a": "Each one is built on its own assumptions about size, finishes and local prices, and none of them can see your house. Our own estimator gives starting ranges for Winnipeg kitchens, bathrooms and basements before anyone has looked at the space. Treat any calculator as a starting point; a written quote after an on-site visit is the real number."
+      },
+      {
+        "q": "How do I get a price for my renovation in Winnipeg?",
+        "a": "Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 to 4:30. We look at the space and talk through what you want, then send a free written quote. For a ballpark first, the instant estimator gives a starting range for kitchens, bathrooms and basements. We reply to every request within one business day."
+      }
+    ],
+    "answer": "There’s no current official average for what a home renovation costs in Canada. Statistics Canada tracks building costs instead: its price index for new residential buildings rose 2.3% in the year to the second quarter of 2026. In Winnipeg, our instant estimator starts a bathroom renovation at $16,000, a basement development at $25,000 and a kitchen renovation at $40,000.",
+    "sources": [
+      {
+        "label": "Statistics Canada: Building construction price indexes, second quarter 2026 (The Daily, July 24, 2026)",
+        "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260724/dq260724b-eng.htm",
+        "accessed": "2026-10-14"
+      },
+      {
+        "label": "Statistics Canada: Building construction price indexes, Table 1 (second quarter 2026)",
+        "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/260724/t001b-eng.htm",
+        "accessed": "2026-10-14"
+      },
+      {
+        "label": "Statistics Canada: Homeowner Repair and Renovation Survey (survey record, status inactive)",
+        "url": "https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=3886",
+        "accessed": "2026-10-14"
+      },
+      {
+        "label": "Statistics Canada: Survey of Household Spending, 2023 (The Daily, May 21, 2025)",
+        "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/250521/dq250521a-eng.htm",
+        "accessed": "2026-10-14"
+      },
+      {
+        "label": "Government of Canada Publications: CMHC Renovation and home purchase report (issues 2007–2012)",
+        "url": "https://publications.gc.ca/site/eng/331408/publication.html",
+        "accessed": "2026-10-14"
+      },
+      {
+        "label": "Office of Consumer Affairs (Government of Canada): Home renovations",
+        "url": "https://ised-isde.canada.ca/site/office-consumer-affairs/en/buying-and-leasing-big-ticket-items/home-renovations",
+        "accessed": "2026-10-14"
+      }
+    ]
+  },
+  {
     "slug": "basement-development-permits-winnipeg",
     "title": "Basement Development Permits in Winnipeg: How to Apply",
     "metaTitle": "Basement Development Permits in Winnipeg | Bridgeland",
@@ -31,7 +319,7 @@ export const BLOG_POSTS = [
       "Basements & Suites"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
@@ -50,7 +338,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Basement development is the City of Winnipeg’s term for turning an unfinished lower level into rooms, bedrooms or living space. The City updated its basement construction guide and permit application form in October 2025, and most of the rules that shape a layout, such as ceiling heights, bedroom windows and door widths, are in them. Here’s what they say in plain terms, checked on October 13, 2026. If anything here differs from the City’s documents or by-laws, theirs govern."
+        "x": "Basement development is the City of Winnipeg’s term for turning an unfinished lower level into rooms, bedrooms or living space. The City updated its basement construction guide and permit application form in October 2025, and most of the rules that shape a layout, such as ceiling heights, bedroom windows and door widths, are in them."
+      },
+      {
+        "t": "p",
+        "x": "Here’s what they say in plain terms, checked on October 13, 2026. If anything here differs from the City’s documents or by-laws, theirs govern."
       },
       {
         "t": "h2",
@@ -62,7 +354,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "A development permit is a separate zoning approval. The basement application form asks you to declare whether you need one and warns that the building permit will be refused if it turns out you did. One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite."
+        "x": "A development permit is a separate zoning approval. The basement application form asks you to declare whether you need one and warns that the building permit will be refused if it turns out you did."
+      },
+      {
+        "t": "p",
+        "x": "One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite."
       },
       {
         "t": "h2",
@@ -260,7 +556,7 @@ export const BLOG_POSTS = [
       },
       {
         "q": "What ceiling height do I need to finish a basement in Winnipeg?",
-        "a": "The City’s guide sets 2.1 m (6 ft. 11 in.) from finished floor to ceiling for bedrooms, bathrooms, halls and other finished rooms; bedrooms and bathrooms need it over only part of the floor, next to the entry. Under beams on the way to laundry and storage, 2 m (6 ft. 7 in.) is allowed. Measure under beams and ducts first."
+        "a": "The City’s guide sets 2.1 m (6 ft. 11 in.) from finished floor to ceiling for bedrooms, bathrooms, halls and other finished rooms; bedrooms and bathrooms need it over part of the floor, next to the entry. Under beams on the way to laundry and storage, 2 m (6 ft. 7 in.) is allowed. Measure under beams and ducts first."
       },
       {
         "q": "Can I do my own basement electrical and plumbing in Winnipeg?",
@@ -331,13 +627,13 @@ export const BLOG_POSTS = [
       "Basements & Suites"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "readMinutes": 7,
     "hero": null,
-    "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.9f921e14.webp",
-    "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1320.89704a8b.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1320.99427962.avif 1320w",
-    "ogImage": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1200x630.bca545a6.jpg",
+    "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
+    "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.99427962.avif 1320w",
+    "ogImage": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x630.bca545a6.jpg",
     "heroAlt": "Title card: Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits",
     "author": "",
     "reviewedBy": "",
@@ -413,7 +709,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "The City says homes not protected by a backwater valve or sump pit drainage system are at greater risk of basement flooding. The two work together: if the weeping tile drains into the sewer line and there is no sump pit, that water has nowhere to go while the backwater valve is closed. Ask a licensed plumber how your house is connected before you decide what to add."
+        "x": "The City says homes not protected by a backwater valve or sump pit drainage system are at greater risk of basement flooding. The two work together: if the weeping tile drains into the sewer line and there is no sump pit, that water has nowhere to go while the backwater valve is closed."
+      },
+      {
+        "t": "p",
+        "x": "Ask a licensed plumber how your house is connected before you decide what to add."
       },
       {
         "t": "h2",
@@ -489,7 +789,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "A dry basement is the starting point for any [basement renovation](/services/basement-renovations). Every project starts with a free on-site visit and a free written quote; ask us to look at drainage and moisture while we’re there. [Book your visit](/book-online), or see [what a basement renovation costs in Winnipeg](/services/basement-renovations/cost) first. If spring is coming, our [spring flood prep checklist](/blog/spring-flood-prep-winnipeg-basements) has the seasonal steps."
+        "x": "A dry basement is the starting point for any [basement renovation](/services/basement-renovations). Every project starts with a free on-site visit and a free written quote; ask us to look at drainage and moisture while we’re there."
+      },
+      {
+        "t": "p",
+        "x": "[Book your visit](/book-online), or see [what a basement renovation costs in Winnipeg](/services/basement-renovations/cost) first. If spring is coming, our [spring flood prep checklist](/blog/spring-flood-prep-winnipeg-basements) has the seasonal steps."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
@@ -500,7 +804,7 @@ export const BLOG_POSTS = [
       },
       {
         "q": "Can I install a backwater valve myself?",
-        "a": "The City advises having a licensed plumber install a backwater valve or sump pit drainage system. A homeowner can take out a plumbing permit only for a single detached house that is their primary residence and only if they do the work themselves. Either way the work needs a plumbing permit and a City inspection. If the work includes a sump pit with new or replaced weeping tile, a building permit and an electrical permit are needed too."
+        "a": "The City advises using a licensed plumber. A homeowner can take out the plumbing permit only for work they do themselves in the single detached house that is their primary residence. Either way, the work needs a plumbing permit and a City inspection, and a sump pit with new or replaced weeping tile also needs building and electrical permits."
       },
       {
         "q": "How often should I test my sump pump?",
@@ -585,7 +889,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Ask anyone who has owned a Winnipeg house for a few years about sticking doors or a crack in the basement wall, and you’ll hear a story. The cause is usually underfoot. This guide explains what the clay does, how to read the cracks you can see, and how to finish a basement so it tolerates some movement. It’s general guidance, not an engineering assessment of your house."
+        "x": "Ask anyone who has owned a Winnipeg house for a few years about sticking doors or a crack in the basement wall, and you’ll hear a story. The cause is usually underfoot."
+      },
+      {
+        "t": "p",
+        "x": "This guide explains what the clay does, how to read the cracks you can see, and how to finish a basement so it tolerates some movement. It’s general guidance, not an engineering assessment of your house."
       },
       {
         "t": "h2",
@@ -799,10 +1107,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 8,
     "hero": null,
-    "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.6b2a1b51.webp",
-    "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1320.0e8b8a5a.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1320.75e30f7c.avif 1320w",
-    "ogImage": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1200x630.bc757f21.jpg",
+    "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
+    "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.75e30f7c.avif 1320w",
+    "ogImage": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x630.bc757f21.jpg",
     "heroAlt": "Title card: Clinic Renovation Permits in Winnipeg: What to Plan For",
     "author": "",
     "reviewedBy": "",
@@ -832,7 +1140,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "If the space was used for something else, check the zoning before you sign the lease: the City's zoning by-laws decide whether a use is permitted, conditional or not allowed. A development permit, where needed, can be reviewed before or alongside the building permit. Our [commercial renovation services](/services/commercial-renovations) page explains how we run a commercial project from site visit to handover."
+        "x": "If the space was used for something else, check the zoning before you sign the lease: the City's zoning by-laws decide whether a use is permitted, conditional or not allowed."
+      },
+      {
+        "t": "p",
+        "x": "A development permit, where needed, can be reviewed before or alongside the building permit. Our [commercial renovation services](/services/commercial-renovations) page explains how we run a commercial project from site visit to handover."
       },
       {
         "t": "h2",
@@ -899,7 +1211,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Under Manitoba's X-Ray Safety Regulation, X-ray equipment must be registered, and installing a machine in a permanent location needs the minister's prior approval, with scaled drawings showing the shielding built into the room's boundaries. Substantial alterations to an approved X-ray area need approval too. Get the shielding design and approval started as soon as the layout is fixed, because shielding goes in before the walls are closed."
+        "x": "Under Manitoba's X-Ray Safety Regulation, X-ray equipment must be registered, and installing a machine in a permanent location needs the minister's prior approval, with scaled drawings showing the shielding built into the room's boundaries. Substantial alterations to an approved X-ray area need approval too."
+      },
+      {
+        "t": "p",
+        "x": "Get the shielding design and approval started as soon as the layout is fixed, because shielding goes in before the walls are closed."
       },
       {
         "t": "h3",
@@ -907,7 +1223,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings. How much of your space must be upgraded is settled in plan review."
+        "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings."
+      },
+      {
+        "t": "p",
+        "x": "How much of your space must be upgraded is settled in plan review."
       },
       {
         "t": "p",
@@ -923,7 +1243,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits. Construction and the delivery and installation of fixed equipment and furnishings, such as reception desks, dental chairs and X-ray machines, are allowed before it is issued; bringing in supplies or personal belongings, installing computers and printers, training staff and seeing patients are not. Progress inspections must reach the final stage, and professional certifications be submitted, before you can request occupancy."
+        "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits."
+      },
+      {
+        "t": "p",
+        "x": "Construction and the delivery and installation of fixed equipment and furnishings, such as reception desks, dental chairs and X-ray machines, are allowed before it is issued; bringing in supplies or personal belongings, installing computers and printers, training staff and seeing patients are not. Progress inspections must reach the final stage, and professional certifications be submitted, before you can request occupancy."
       },
       {
         "t": "p",
@@ -1001,7 +1325,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** Bridgeland Builders renovates medical, dental and physiotherapy clinics in Winnipeg and nearby communities, and we coordinate permits and inspections with the City of Winnipeg or your local municipality. Every project starts with a free on-site visit and a free written quote. [Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
+        "x": "**Next step:** Bridgeland Builders renovates medical, dental and physiotherapy clinics in Winnipeg and nearby communities, and we coordinate permits and inspections with the City of Winnipeg or your local municipality. Every project starts with a free on-site visit and a free written quote."
+      },
+      {
+        "t": "p",
+        "x": "[Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
       }
     ],
     "faqsTitle": "Clinic renovation permit questions",
@@ -1096,10 +1424,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 8,
     "hero": null,
-    "heroSrc": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.fe4be3e4.webp",
-    "heroSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1320.1282306c.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-480.e5e54e79.avif 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.6a5c883c.avif 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1320.6cd34f58.avif 1320w",
-    "ogImage": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1200x630.ccbdff08.jpg",
+    "heroSrc": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp",
+    "heroSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.1282306c.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.e5e54e79.avif 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.6a5c883c.avif 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.6cd34f58.avif 1320w",
+    "ogImage": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x630.ccbdff08.jpg",
     "heroAlt": "Title card: How Much Should an Ensuite Renovation Cost in Winnipeg?",
     "author": "",
     "reviewedBy": "",
@@ -1112,7 +1440,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "An ensuite is the bathroom attached to a bedroom, usually the main bedroom. Because it is private, people tend to want more from it than from a hall bathroom: a bigger shower, two sinks, better lighting, sometimes a soaker tub. Each of those choices moves the price, and a few of them move it a lot. This guide explains what drives the cost so you can decide where your money does the most."
+        "x": "An ensuite is the bathroom attached to a bedroom, usually the main bedroom. Because it is private, people tend to want more from it than from a hall bathroom: a bigger shower, two sinks, better lighting, sometimes a soaker tub."
+      },
+      {
+        "t": "p",
+        "x": "Each of those choices moves the price, and a few of them move it a lot. This guide explains what drives the cost so you can decide where your money does the most."
       },
       {
         "t": "h2",
@@ -1249,7 +1581,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Because it is not usually the only bathroom in the house, an ensuite is easier to live through than a main bathroom. Plan where you will sleep if dust and noise are next to the bedroom, and choose the vanity, fixtures and tile before demolition so nothing waits on a delivery. You get weekly progress updates while the work is under way."
+        "x": "Because it is not usually the only bathroom in the house, an ensuite is easier to live through than a main bathroom."
+      },
+      {
+        "t": "p",
+        "x": "Plan where you will sleep if dust and noise are next to the bedroom, and choose the vanity, fixtures and tile before demolition so nothing waits on a delivery. You get weekly progress updates while the work is under way."
       },
       {
         "t": "h2",
@@ -1515,7 +1851,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Do the messy work first. If windows, doors, siding repairs or stucco patching are planned, finish them before painting so the new trim and patches are painted with everything else. Interior work carries on year-round, so a renovation done over the winter can be followed by exterior painting once the weather allows."
+        "x": "Do the messy work first. If windows, doors, siding repairs or [stucco patching](/services/masonry-stucco) are planned, finish them before painting so the new trim and patches are painted with everything else. Interior work carries on year-round, so a renovation done over the winter can be followed by exterior painting once the weather allows."
       },
       {
         "t": "li",
@@ -1559,7 +1895,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** see what our [exterior painting](/services/exterior-painting) work includes, then [book a free on-site visit](/book-online) and we will look at the siding, trim and soffits with you and send a free written quote that spells out the preparation and any repairs. For a first range on a larger renovation, try the [instant estimate](/instant-quote), or call [431-866-5644](tel:+14318665644), Monday to Friday, 8:30 to 4:30."
+        "x": "**Next step:** see what our [exterior painting](/services/exterior-painting) work includes, then [book a free on-site visit](/book-online) and we will look at the siding, trim and soffits with you and send a free written quote that spells out the preparation and any repairs."
+      },
+      {
+        "t": "p",
+        "x": "For a first range on a larger renovation, try the [instant estimate](/instant-quote), or call [431-866-5644](tel:+14318665644), Monday to Friday, 8:30 to 4:30."
       }
     ],
     "faqsTitle": "Common questions",
@@ -1619,10 +1959,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 8,
     "hero": null,
-    "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.b9f76c7b.webp",
-    "heroSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1320.b7b5971a.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1320.4c809500.avif 1320w",
-    "ogImage": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1200x630.420c23b0.jpg",
+    "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
+    "heroSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.b7b5971a.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.4c809500.avif 1320w",
+    "ogImage": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x630.420c23b0.jpg",
     "heroAlt": "Title card: Home Addition Zoning in Winnipeg: Permits and Variances",
     "author": "",
     "reviewedBy": "",
@@ -1635,7 +1975,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "An addition is often the answer when you like your street but have run out of room: a bigger kitchen, a family room, a main-floor bedroom or a proper mudroom. Before anyone draws it, though, the addition has to fit your lot's zoning, and before anyone builds it, the drawings have to pass a building permit review. Knowing how those two steps work saves design time and avoids surprises."
+        "x": "An addition is often the answer when you like your street but have run out of room: a bigger kitchen, a family room, a main-floor bedroom or a proper mudroom."
+      },
+      {
+        "t": "p",
+        "x": "Before anyone draws it, though, the addition has to fit your lot's zoning, and before anyone builds it, the drawings have to pass a building permit review. Knowing how those two steps work saves design time and avoids surprises."
       },
       {
         "t": "h2",
@@ -1692,7 +2036,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "A building location certificate, prepared by a Manitoba land surveyor, shows exactly where the existing house sits on the lot. The City may ask for one with a variance application, and even when it is not required it is a reliable starting point for design. Riverside lots need extra care, because site plans for variance applications show floodway and flood fringe levels where they apply."
+        "x": "A building location certificate, prepared by a Manitoba land surveyor, shows exactly where the existing house sits on the lot. The City may ask for one with a variance application, and even when it is not required it is a reliable starting point for design."
+      },
+      {
+        "t": "p",
+        "x": "Riverside lots need extra care, because site plans for variance applications show floodway and flood fringe levels where they apply."
       },
       {
         "t": "h2",
@@ -1728,7 +2076,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For a typical single-family addition, such as a family room or a larger kitchen, the City's pages do not describe new addition rules: you still need the development permit and building permit above. The changes matter more if you are thinking of adding a unit rather than a room, and whether your lot qualifies depends on its zoning and other conditions. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) covers the suite side of that question."
+        "x": "For a typical single-family addition, such as a family room or a larger kitchen, the City's pages do not describe new addition rules: you still need the development permit and building permit above."
+      },
+      {
+        "t": "p",
+        "x": "The changes matter more if you are thinking of adding a unit rather than a room, and whether your lot qualifies depends on its zoning and other conditions. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) covers the suite side of that question."
       },
       {
         "t": "p",
@@ -1890,20 +2242,20 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "readMinutes": 8,
     "hero": null,
-    "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-880.311eab5d.webp",
-    "heroSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-1320.1e034cbf.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-1320.a983957b.avif 1320w",
-    "ogImage": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-1200x630.fdd817b3.jpg",
+    "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
+    "heroSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.1e034cbf.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.a983957b.avif 1320w",
+    "ogImage": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x630.fdd817b3.jpg",
     "heroAlt": "Title card: Home Renovation Financing in Canada: Your Options",
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/basement-renovations",
+      "/services/whole-home-renovations",
       "/services/basement-suites",
-      "/services/whole-home-renovations"
+      "/services/basement-renovations"
     ],
     "cluster": "renovation-money",
     "memberOnly": false,
@@ -2069,7 +2421,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "In Manitoba, the Builders' Liens Act requires the person paying to hold back 7.5% of each payment for at least 60 days after substantial performance is certified or the work is completed or abandoned, whichever comes first, so part of the money is released later rather than all at once. Our free written quote sets out the scope and the taxes, which is the document to take to your lender. Winnipeg price ranges are in our [renovation cost guide](/renovation-cost-winnipeg)."
+        "x": "In Manitoba, the Builders' Liens Act requires the person paying to hold back 7.5% of each payment for at least 60 days after substantial performance is certified or the work is completed or abandoned, whichever comes first, so part of the money is released later rather than all at once."
+      },
+      {
+        "t": "p",
+        "x": "Our free written quote sets out the scope and the taxes, which is the document to take to your lender. Winnipeg price ranges are in our [renovation cost guide](/renovation-cost-winnipeg), and our guide to [home renovation costs in Canada](/blog/home-renovation-cost-canada) explains what national figures can and can't tell you."
       },
       {
         "t": "h2",
@@ -2179,7 +2535,7 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
@@ -2270,7 +2626,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For Winnipeg price ranges, see our [renovation cost guide](/renovation-cost-winnipeg). If you'll borrow for part of it, read the [home renovation financing guide](/blog/home-renovation-financing-canada) before you lock in the budget."
+        "x": "For Winnipeg price ranges, see our [renovation cost guide](/renovation-cost-winnipeg); [how much a home renovation costs in Canada](/blog/home-renovation-cost-canada) explains why national averages can't set your budget. If you'll borrow for part of it, read the [home renovation financing guide](/blog/home-renovation-financing-canada) before you lock in the budget."
       },
       {
         "t": "h2",
@@ -2278,11 +2634,19 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Often, yes. Provinces and territories adopt the building code, most of them based on the National Building Code, and enforcement is usually delegated to municipal building officials who issue permits and inspect the work. In Winnipeg, for example, creating a new bedroom requires a building permit, kitchens, bathrooms and new or larger exterior openings may need one, and painting and flooring don't."
+        "x": "Often, yes. Provinces and territories adopt the building code, most of them based on the National Building Code, and enforcement is usually delegated to municipal building officials who issue permits and inspect the work."
       },
       {
         "t": "p",
-        "x": "Trade work usually has its own permit. In Winnipeg, electrical and plumbing permits go to City-licensed contractors, or to homeowners doing their own work in a single detached home they live in. Check your municipality's website before you finalize the plan, make sure the contract says who applies, and if you're in Winnipeg, start with our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits)."
+        "x": "In Winnipeg, for example, creating a new bedroom requires a building permit, kitchens, bathrooms and new or larger exterior openings may need one, and painting and flooring don't."
+      },
+      {
+        "t": "p",
+        "x": "Trade work usually has its own permit. In Winnipeg, electrical and plumbing permits go to City-licensed contractors, or to homeowners doing their own work in a single detached home they live in."
+      },
+      {
+        "t": "p",
+        "x": "Check your municipality's website before you finalize the plan, make sure the contract says who applies, and if you're in Winnipeg, start with our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits)."
       },
       {
         "t": "h2",
@@ -2318,7 +2682,7 @@ export const BLOG_POSTS = [
           ],
           [
             "Construction",
-            "Demolition through finishing, with inspections at set stages",
+            "[Demolition](/services/demolition) through finishing, with inspections at set stages",
             "Scope, trade availability, inspection booking and what's found behind walls"
           ],
           [
@@ -2539,10 +2903,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": null,
-    "heroSrc": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.abd27f5e.webp",
-    "heroSrcSet": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1320.a1fe8363.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1320.b0d9c3f3.avif 1320w",
-    "ogImage": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1200x630.8a999200.jpg",
+    "heroSrc": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp",
+    "heroSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.a1fe8363.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.b0d9c3f3.avif 1320w",
+    "ogImage": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x630.8a999200.jpg",
     "heroAlt": "Title card: How to Check a Contractor's WCB Clearance in Manitoba",
     "author": "",
     "reviewedBy": "",
@@ -2556,7 +2920,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Of all the checks you can run on a contractor, a WCB clearance is one of the quickest. It's a letter from the Workers Compensation Board of Manitoba showing whether a business is in good standing, and anyone can request one online. This guide shows the steps, what the letter does and doesn't prove, and what to do when a contractor doesn't show up in the search."
+        "x": "Of all the checks you can run on a contractor, a WCB clearance is one of the quickest. It's a letter from the Workers Compensation Board of Manitoba showing whether a business is in good standing, and anyone can request one online."
+      },
+      {
+        "t": "p",
+        "x": "This guide shows the steps, what the letter does and doesn't prove, and what to do when a contractor doesn't show up in the search."
       },
       {
         "t": "h2",
@@ -2636,7 +3004,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For businesses, WCB is direct about the risk: if you hire a contractor who isn't in good standing, you may be responsible for including the labour portion of their earnings in your own assessable payroll, and could be liable for their assessment costs. If you're renovating an office, shop or restaurant, that applies to you. See our [commercial renovation services](/services/commercial-renovations) for how we plan fit-ups. Homeowners with questions about their own situation should ask WCB directly and check what their home insurance covers."
+        "x": "For businesses, WCB is direct about the risk: if you hire a contractor who isn't in good standing, you may be responsible for including the labour portion of their earnings in your own assessable payroll, and could be liable for their assessment costs. If you're renovating an office, shop or restaurant, that applies to you."
+      },
+      {
+        "t": "p",
+        "x": "See our [commercial renovation services](/services/commercial-renovations) for how we plan fit-ups. Homeowners with questions about their own situation should ask WCB directly and check what their home insurance covers."
       },
       {
         "t": "h2",
@@ -2761,10 +3133,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 9,
     "hero": null,
-    "heroSrc": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.b1620437.webp",
-    "heroSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1320.707c702f.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1320.70228dd9.avif 1320w",
-    "ogImage": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1200x630.5496f199.jpg",
+    "heroSrc": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp",
+    "heroSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.707c702f.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.70228dd9.avif 1320w",
+    "ogImage": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x630.5496f199.jpg",
     "heroAlt": "Title card: Insulation Rebates in Manitoba: How to Use Them During a Renovation",
     "author": "",
     "reviewedBy": "",
@@ -2778,7 +3150,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "A renovation is often the easiest time to add insulation. The basement is bare studs, the walls are open, or the old siding is coming off anyway. In Manitoba, the main program that helps with the cost of the insulation itself is Efficiency Manitoba's Home Insulation Rebate. The catch is timing: the rebate is approved before work starts, so it has to be part of the plan from the first conversation, not something you remember once the old drywall is in the bin."
+        "x": "A renovation is often the easiest time to add insulation. The basement is bare studs, the walls are open, or the old siding is coming off anyway. In Manitoba, the main program that helps with the cost of the insulation itself is Efficiency Manitoba's Home Insulation Rebate."
+      },
+      {
+        "t": "p",
+        "x": "The catch is timing: the rebate is approved before work starts, so it has to be part of the plan from the first conversation, not something you remember once the old drywall is in the bin."
       },
       {
         "t": "p",
@@ -2976,7 +3352,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Manitoba Hydro's Home Energy Efficiency Loan can finance insulation, with payments added to your energy bill. Manitoba Hydro must approve the application before any work starts or materials are bought, and the loan becomes due when the house is sold. Households that meet income requirements may qualify for free insulation upgrades through Efficiency Manitoba's Energy Efficiency Assistance Program, and there are separate First Nation and Métis offers. For the wider picture, see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [financing a home renovation in Canada](/blog/home-renovation-financing-canada)."
+        "x": "Manitoba Hydro's Home Energy Efficiency Loan can finance insulation, with payments added to your energy bill. Manitoba Hydro must approve the application before any work starts or materials are bought, and the loan becomes due when the house is sold."
+      },
+      {
+        "t": "p",
+        "x": "Households that meet income requirements may qualify for free insulation upgrades through Efficiency Manitoba's Energy Efficiency Assistance Program, and there are separate First Nation and Métis offers. For the wider picture, see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [financing a home renovation in Canada](/blog/home-renovation-financing-canada)."
       },
       {
         "t": "h2",
@@ -3028,7 +3408,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** if you are planning a basement or whole-home renovation and want the rebate in the plan, [book a free on-site visit](/book-online). We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
+        "x": "**Next step:** if you are planning a basement or whole-home renovation and want the rebate in the plan, [book a free on-site visit](/book-online)."
+      },
+      {
+        "t": "p",
+        "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
       }
     ],
     "faqsTitle": "Common questions",
@@ -3115,8 +3499,8 @@ export const BLOG_POSTS = [
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/basement-renovations",
       "/services/basement-suites",
+      "/services/basement-renovations",
       "/services/bathroom-renovations"
     ],
     "cluster": "renovation-money",
@@ -3259,7 +3643,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "CRA's page for the 2025 tax year lists the credit at 14.5%, or up to $7,250 per claim. Federal credit rates moved with the 2025 and 2026 income tax changes, so check CRA's page for the year you file. The renovation period ends when the work is complete, for example when it passes final inspection, which is one more reason to have the permit in place."
+        "x": "CRA's page for the 2025 tax year lists the credit at 14.5%, or up to $7,250 per claim. Federal credit rates moved with the 2025 and 2026 income tax changes, so check CRA's page for the year you file."
+      },
+      {
+        "t": "p",
+        "x": "The renovation period ends when the work is complete, for example when it passes final inspection, which is one more reason to have the permit in place."
       },
       {
         "t": "p",
@@ -3271,7 +3659,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Renovations that help a senior or a person eligible for the disability tax credit get into and move around their home, or that reduce the risk of harm, can qualify. CRA's examples include wheelchair ramps, walk-in bathtubs, wheel-in showers and grab bars. Up to $20,000 of eligible expenses can be claimed per year, and that cap applies per home when more than one person qualifies."
+        "x": "Renovations that help a senior or a person eligible for the disability tax credit get into and move around their home, or that reduce the risk of harm, can qualify. CRA's examples include wheelchair ramps, walk-in bathtubs, wheel-in showers and grab bars."
+      },
+      {
+        "t": "p",
+        "x": "Up to $20,000 of eligible expenses can be claimed per year, and that cap applies per home when more than one person qualifies."
       },
       {
         "t": "li",
@@ -3283,7 +3675,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "CRA's page for this credit says an expense that also qualifies as a medical expense can be claimed under both credits, but Budget 2025 proposed ending that double claim from the 2026 tax year, so ask your accountant which rule applies to the year you file. If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
+        "x": "CRA's page for this credit says an expense that also qualifies as a medical expense can be claimed under both credits, but Budget 2025 proposed ending that double claim from the 2026 tax year, so ask your accountant which rule applies to the year you file."
+      },
+      {
+        "t": "p",
+        "x": "If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
       },
       {
         "t": "h2",
@@ -3295,7 +3691,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application. Our guide to [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba) walks through the order of steps, and the [window and door replacement guide](/blog/window-and-door-replacement-winnipeg) covers triple-pane upgrades."
+        "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application."
+      },
+      {
+        "t": "p",
+        "x": "Our guide to [insulation rebates during a renovation](/blog/insulation-rebates-during-a-renovation-manitoba) walks through the order of steps, and the [window and door replacement guide](/blog/window-and-door-replacement-winnipeg) covers triple-pane upgrades."
       },
       {
         "t": "h2",
@@ -3478,13 +3878,13 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
-    "readMinutes": 8,
+    "updated": "2026-10-14",
+    "readMinutes": 7,
     "hero": null,
-    "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.9079ee23.webp",
-    "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1320.1977b93b.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1320.b33e68fe.avif 1320w",
-    "ogImage": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1200x630.96b0b61e.jpg",
+    "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
+    "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.b33e68fe.avif 1320w",
+    "ogImage": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x630.96b0b61e.jpg",
     "heroAlt": "Title card: Office Fit-Up in Winnipeg: Planning Around Your Lease",
     "author": "",
     "reviewedBy": "",
@@ -3498,7 +3898,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "A fit-up, also called tenant or leasehold improvements, is the work that turns a leased space into your office: walls, doors, lighting, power and data, finishes and sometimes mechanical changes. The construction is only part of the timeline. The lease decides who pays and what you may build, and the City decides when people can work there. Our [office renovation services](/services/office-renovations) page covers the build; this guide covers the planning around it."
+        "x": "A fit-up, also called tenant or leasehold improvements, is the work that turns a leased space into your office: walls, doors, lighting, power and data, finishes and sometimes mechanical changes. The construction is only part of the timeline."
+      },
+      {
+        "t": "p",
+        "x": "The lease decides who pays and what you may build, and the City decides when people can work there. Our [office renovation services](/services/office-renovations) page covers the build; this guide covers the planning around it."
       },
       {
         "t": "h2",
@@ -3559,7 +3963,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Office projects have a few specifics. In a multi-tenant building, the form asks for your neighbouring tenants because fire separation requirements depend on their uses. Tenant fit-ups in new Part 3 buildings need a Manitoba Energy Code for Buildings declaration. Projects exempt from a development permit file a declaration instead; otherwise the development permit can be reviewed before or alongside the building permit."
+        "x": "Office projects have a few specifics. In a multi-tenant building, the form asks for your neighbouring tenants because fire separation requirements depend on their uses."
+      },
+      {
+        "t": "p",
+        "x": "Tenant fit-ups in new Part 3 buildings need a Manitoba Energy Code for Buildings declaration. Projects exempt from a development permit file a declaration instead; otherwise the development permit can be reviewed before or alongside the building permit."
       },
       {
         "t": "p",
@@ -3571,7 +3979,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space. Construction and the delivery and installation of furniture such as desks, workstations and cubicle partitions are allowed earlier, but storing personal belongings is not, so plan IT set-up and move day around the permit."
+        "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space."
+      },
+      {
+        "t": "p",
+        "x": "Construction and the delivery and installation of furniture such as desks, workstations and cubicle partitions are allowed earlier, but storing personal belongings is not, so plan IT set-up and move day around the permit."
       },
       {
         "t": "p",
@@ -3624,7 +4036,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Ask the property manager about elevator bookings, after-hours access and restricted tasks. If clients visit and an accessible entrance or washroom will be out of use, Manitoba's Accessible Customer Service Standard requires you to let the public know when and why. Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps and sends a progress update every week. More on staying open is in our guide to [preparing your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation)."
+        "x": "Ask the property manager about elevator bookings, after-hours access and restricted tasks. If clients visit and an accessible entrance or washroom will be out of use, Manitoba's Accessible Customer Service Standard requires you to let the public know when and why."
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps and sends a progress update every week. More on staying open is in our guide to [preparing your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation)."
       },
       {
         "t": "h2",
@@ -3675,7 +4091,7 @@ export const BLOG_POSTS = [
       },
       {
         "q": "Can we move furniture and computers in before the occupancy permit?",
-        "a": "Furniture, yes; computers, no. The City's occupancy bulletin allows desks, workstations, chairs and tables to be delivered and installed before the permit, but lists storing personal belongings and installing loose equipment such as computers, printers and copiers among the things you can't do yet, along with training staff and meeting clients. Plan IT installation and your first workday for after the interim or final occupancy permit is issued."
+        "a": "Furniture, yes; computers, no. The City's occupancy bulletin allows desks, workstations, chairs and tables to be delivered and installed before the permit, but not storing personal belongings, installing loose equipment such as computers, printers and copiers, training staff or meeting clients. Plan IT installation and your first workday for after the interim or final occupancy permit is issued."
       },
       {
         "q": "Do I need an architect for an office fit-up?",
@@ -3761,7 +4177,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Most basement questions in Winnipeg arrive in spring, when the snow melts and the basement reminds people it exists. But a basement is one of the few renovations that barely notices the weather outside, so planning in fall can mean a finished space before the next spring rush. Here’s how to plan a winter basement development, using City of Winnipeg and Health Canada guidance checked on October 13, 2026."
+        "x": "Most basement questions in Winnipeg arrive in spring, when the snow melts and the basement reminds people it exists. But a basement is one of the few renovations that barely notices the weather outside, so planning in fall can mean a finished space before the next spring rush."
+      },
+      {
+        "t": "p",
+        "x": "Here’s how to plan a winter basement development, using City of Winnipeg and Health Canada guidance checked on October 13, 2026."
       },
       {
         "t": "h2",
@@ -3828,7 +4248,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Check the existing windows first. The City’s guide says a bedroom window must open from inside without tools and give at least 0.35 m² (3.77 sq. ft.) of clear opening with no side under 380 mm (15 in.). If existing windows don’t meet that, they have to be replaced or the room can’t be a bedroom. The full list is in our [basement development permits guide](/blog/basement-development-permits-winnipeg)."
+        "x": "Check the existing windows first. The City’s guide says a bedroom window must open from inside without tools and give at least 0.35 m² (3.77 sq. ft.) of clear opening with no side under 380 mm (15 in.)."
+      },
+      {
+        "t": "p",
+        "x": "If existing windows don’t meet that, they have to be replaced or the room can’t be a bedroom. The full list is in our [basement development permits guide](/blog/basement-development-permits-winnipeg)."
       },
       {
         "t": "h2",
@@ -3840,7 +4264,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Two notes from the City’s insulation bulletin are worth knowing in winter. Between November 1 and April 30, the City says conditions in unheated buildings aren’t suited to spray foam, so cavities waiting for foam are marked for later; a heated basement is a different case, but ask how insulation will be sequenced. And batt insulation can’t touch the concrete foundation, so a moisture barrier or air space is needed."
+        "x": "Two notes from the City’s insulation bulletin are worth knowing in winter. Between November 1 and April 30, the City says conditions in unheated buildings aren’t suited to spray foam, so cavities waiting for foam are marked for later; a heated basement is a different case, but ask how insulation will be sequenced."
+      },
+      {
+        "t": "p",
+        "x": "And batt insulation can’t touch the concrete foundation, so a moisture barrier or air space is needed."
       },
       {
         "t": "h2",
@@ -3868,7 +4296,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "li",
-        "x": "Flooring suited to below-grade use, and how it meets the stairs."
+        "x": "[Flooring](/services/flooring) suited to below-grade use, and how it meets the stairs."
       },
       {
         "t": "li",
@@ -3982,10 +4410,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 6,
     "hero": null,
-    "heroSrc": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.4fd769ec.webp",
-    "heroSrcSet": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1320.76850913.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1320.2b128494.avif 1320w",
-    "ogImage": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1200x630.2a82280e.jpg",
+    "heroSrc": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp",
+    "heroSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.76850913.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.2b128494.avif 1320w",
+    "ogImage": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x630.2a82280e.jpg",
     "heroAlt": "Title card: Radon Testing Before Finishing a Basement in Manitoba",
     "author": "",
     "reviewedBy": "",
@@ -3998,7 +4426,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Radon is a radioactive gas that comes from uranium in the ground. You can’t see, smell or taste it, and it tends to build up most in basements, the part of a house closest to the soil. Health Canada calls radon the leading cause of lung cancer in non-smokers. Manitoba Health, citing Health Canada’s 2012 cross-Canada survey, says about 19 per cent of Manitobans live in homes above the radon guideline."
+        "x": "Radon is a radioactive gas that comes from uranium in the ground. You can’t see, smell or taste it, and it tends to build up most in basements, the part of a house closest to the soil."
+      },
+      {
+        "t": "p",
+        "x": "Health Canada calls radon the leading cause of lung cancer in non-smokers. Manitoba Health, citing Health Canada’s 2012 cross-Canada survey, says about 19 per cent of Manitobans live in homes above the radon guideline."
       },
       {
         "t": "p",
@@ -4231,7 +4663,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "To check, look up the address on the City's List of Historical Resources and compare it with the district boundary maps on the City's heritage pages. The City also keeps a Nominated List of properties being evaluated, and a Commemorative List that recognizes heritage value without restricting demolition or alterations. If anything is unclear, the City's heritage staff can be reached at [ppd-heritage@winnipeg.ca](mailto:ppd-heritage@winnipeg.ca)."
+        "x": "To check, look up the address on the City's List of Historical Resources and compare it with the district boundary maps on the City's heritage pages."
+      },
+      {
+        "t": "p",
+        "x": "The City also keeps a Nominated List of properties being evaluated, and a Commemorative List that recognizes heritage value without restricting demolition or alterations. If anything is unclear, the City's heritage staff can be reached at [ppd-heritage@winnipeg.ca](mailto:ppd-heritage@winnipeg.ca)."
       },
       {
         "t": "h2",
@@ -4446,7 +4882,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
@@ -4466,7 +4902,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "A restaurant renovation answers to more offices than most commercial projects. The City of Winnipeg looks at the building, a public health inspector looks at the kitchen, and if you serve alcohol, the Liquor, Gaming and Cannabis Authority of Manitoba (LGCA) wants to hear about major changes. This guide covers restaurants, cafés, bars and hotel food service. For the build itself, see our [restaurant and hospitality renovations](/services/restaurant-renovations)."
+        "x": "A restaurant renovation answers to more offices than most commercial projects. The City of Winnipeg looks at the building, a public health inspector looks at the kitchen, and if you serve alcohol, the Liquor, Gaming and Cannabis Authority of Manitoba (LGCA) wants to hear about major changes."
+      },
+      {
+        "t": "p",
+        "x": "This guide covers restaurants, cafés, bars and hotel food service. For the build itself, see our [restaurant and hospitality renovations](/services/restaurant-renovations)."
       },
       {
         "t": "h2",
@@ -4529,11 +4969,19 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "When the work is construction, a substantial alteration or a change of use. The City gives a retail space becoming a restaurant as an example of a change of use. Until the permit is issued, the space can be used for construction and for delivering and installing fixed equipment such as hard-wired kitchen equipment, but bringing in food and supplies, stocking shelves, training staff and conducting business count as occupying it."
+        "x": "When the work is construction, a substantial alteration or a change of use. The City gives a retail space becoming a restaurant as an example of a change of use."
       },
       {
         "t": "p",
-        "x": "A change of use also changes what the code expects. For an assembly occupancy with an occupant load over 100 people, the City's CADS form treats an increase or change in that occupant load as complex work, which means drawings sealed by an architect or engineer. The same applies to significant changes to fire alarms or sprinklers, any structural change, and significant exit or fire separation work in a Part 3 building. Progress inspections must reach the final stage before you can request occupancy."
+        "x": "Until the permit is issued, the space can be used for construction and for delivering and installing fixed equipment such as hard-wired kitchen equipment, but bringing in food and supplies, stocking shelves, training staff and conducting business count as occupying it."
+      },
+      {
+        "t": "p",
+        "x": "A change of use also changes what the code expects. For an assembly occupancy with an occupant load over 100 people, the City's CADS form treats an increase or change in that occupant load as complex work, which means drawings sealed by an architect or engineer."
+      },
+      {
+        "t": "p",
+        "x": "The same applies to significant changes to fire alarms or sprinklers, any structural change, and significant exit or fire separation work in a Part 3 building. Progress inspections must reach the final stage before you can request occupancy."
       },
       {
         "t": "h2",
@@ -4541,11 +4989,19 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Before any construction or renovation, you submit the Food Handling Permit Registration Form, your menu and a detailed floor plan to your area public health inspector. The plan must be to scale and show food preparation, storage, dishwashing, dining, staff and washroom areas, every piece of equipment and plumbing fixture, finish materials and your hours. Inside Winnipeg, Manitoba's guideline says plans and specifications go to the City's One Stop Plan Approval office at Unit 31–30 Fort Street."
+        "x": "Before any construction or renovation, you submit the Food Handling Permit Registration Form, your menu and a detailed floor plan to your area public health inspector. The plan must be to scale and show food preparation, storage, dishwashing, dining, staff and washroom areas, every piece of equipment and plumbing fixture, finish materials and your hours."
       },
       {
         "t": "p",
-        "x": "Manitoba's design guideline treats an operating restaurant as extensively remodelled when the work changes the structural or equipment layout or demolishes walls, ceilings or floors. The form also asks for construction, finishing and equipment installation dates and your expected opening date. If plans change, contact the inspector and submit a revised plan first. Give at least five working days' notice for the opening inspection; the permit is issued only once construction is complete and requirements are met."
+        "x": "Inside Winnipeg, Manitoba's guideline says plans and specifications go to the City's One Stop Plan Approval office at Unit 31–30 Fort Street."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba's design guideline treats an operating restaurant as extensively remodelled when the work changes the structural or equipment layout or demolishes walls, ceilings or floors. The form also asks for construction, finishing and equipment installation dates and your expected opening date."
+      },
+      {
+        "t": "p",
+        "x": "If plans change, contact the inspector and submit a revised plan first. Give at least five working days' notice for the opening inspection; the permit is issued only once construction is complete and requirements are met."
       },
       {
         "t": "h3",
@@ -4585,7 +5041,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Type I hoods serve cooking that leaves grease, such as frying and grilling; Type II hoods handle steam, heat and odours from baking, boiling or dishwashing. Settle the menu before the mechanical design. In an existing restaurant with a Type II hood, a new owner or menu may mean upgrading the ventilation, and menu or cooking-equipment changes must be submitted in writing for review."
+        "x": "Type I hoods serve cooking that leaves grease, such as frying and grilling; Type II hoods handle steam, heat and odours from baking, boiling or dishwashing. Settle the menu before the mechanical design."
+      },
+      {
+        "t": "p",
+        "x": "In an existing restaurant with a Type II hood, a new owner or menu may mean upgrading the ventilation, and menu or cooking-equipment changes must be submitted in writing for review."
       },
       {
         "t": "h2",
@@ -4621,7 +5081,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** Bridgeland Builders renovates restaurants, cafés, bars and hotel spaces in Winnipeg and nearby communities, coordinating permits and inspections with the City or your local municipality. [Book a free on-site visit](/book-online) for a free written quote, or start with the [instant renovation estimate](/instant-quote). For budgeting, read [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects), or see all our [commercial renovation services](/services/commercial-renovations)."
+        "x": "**Next step:** Bridgeland Builders renovates restaurants, cafés, bars and hotel spaces in Winnipeg and nearby communities, coordinating permits and inspections with the City or your local municipality."
+      },
+      {
+        "t": "p",
+        "x": "[Book a free on-site visit](/book-online) for a free written quote, or start with the [instant renovation estimate](/instant-quote). For budgeting, read [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects), or see all our [commercial renovation services](/services/commercial-renovations)."
       }
     ],
     "faqsTitle": "Restaurant renovation permit questions",
@@ -4632,7 +5096,7 @@ export const BLOG_POSTS = [
       },
       {
         "q": "Can I take over a former restaurant without renovating?",
-        "a": "On the building side, the City ties occupancy permits to construction or a change in major occupancy, so a straight change of tenant may not need one; confirm with the City. On the health side, a change of ownership needs a new registration form, menu and floor plan for your public health inspector, and a new menu can mean ventilation upgrades."
+        "a": "On the building side, the City ties occupancy permits to construction or a change in major occupancy, so a change of tenant may not need one; confirm with the City. On the health side, a change of ownership needs a new registration form, menu and floor plan for your public health inspector, and a new menu can mean ventilation upgrades."
       },
       {
         "q": "Do cafés and bars follow the same rules as restaurants?",
@@ -4704,13 +5168,13 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "readMinutes": 9,
     "hero": null,
-    "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.cc7d6942.webp",
-    "heroSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1320.61116791.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1320.fc70213a.avif 1320w",
-    "ogImage": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1200x630.05e576ee.jpg",
+    "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
+    "heroSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.61116791.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.fc70213a.avif 1320w",
+    "ogImage": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x630.05e576ee.jpg",
     "heroAlt": "Title card: Secondary Suite Rules in Winnipeg: What the City Requires",
     "author": "",
     "reviewedBy": "",
@@ -4724,7 +5188,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "A basement suite can house a family member or bring in rent, but Winnipeg treats it differently from an ordinary finished basement. A suite is a separate dwelling unit, so it needs zoning approval, a smoke-separated layout and its own access to services. This guide follows the City of Winnipeg’s secondary suites page and bulletins as they read on October 13, 2026. The Zoning By-law was amended in 2024 and again in June 2025, so confirm the rules for your address with the City before you design."
+        "x": "A basement suite can house a family member or bring in rent, but Winnipeg treats it differently from an ordinary finished basement. A suite is a separate dwelling unit, so it needs zoning approval, a smoke-separated layout and its own access to services."
+      },
+      {
+        "t": "p",
+        "x": "This guide follows the City of Winnipeg’s secondary suites page and bulletins as they read on October 13, 2026. The Zoning By-law was amended in 2024 and again in June 2025, so confirm the rules for your address with the City before you design."
       },
       {
         "t": "h2",
@@ -4898,7 +5366,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Every suite starts as a basement, so the first questions are the same: is it dry, is the ceiling high enough, and can the windows work for bedrooms? Our [basement suite](/services/basement-suites) and [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote, with permits and inspections coordinated with the City. Get a starting range from the [instant estimate](/instant-quote), or [book your visit](/book-online)."
+        "x": "Every suite starts as a basement, so the first questions are the same: is it dry, is the ceiling high enough, and can the windows work for bedrooms?"
+      },
+      {
+        "t": "p",
+        "x": "Our [basement suite](/services/basement-suites) and [basement renovation](/services/basement-renovations) projects begin with a free on-site visit and a free written quote, with permits and inspections coordinated with the City. Get a starting range from the [instant estimate](/instant-quote), or [book your visit](/book-online)."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
@@ -4913,7 +5385,7 @@ export const BLOG_POSTS = [
       },
       {
         "q": "How big can a basement suite be in Winnipeg?",
-        "a": "The City’s page caps an attached suite at 33% of the combined floor area of the house and suite, or 74 m² (800 sq. ft.), whichever is less, with a minimum of 32.5 m² (350 sq. ft.). If the house and suite total 2,000 sq. ft., the suite tops out at about 660 sq. ft. Confirm current limits with the City."
+        "a": "The City’s page caps an attached suite at 33% of the combined floor area of the house and suite, or 74 m² (800 sq. ft.), whichever is less, with a minimum of 32.5 m² (350 sq. ft.). If the house and suite total 2,000 sq. ft., the suite tops out at about 660 sq. ft. Confirm them with the City."
       },
       {
         "q": "Is the Canada Secondary Suite Loan Program available?",
@@ -4987,10 +5459,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": null,
-    "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.75d2d894.webp",
-    "heroSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1320.cbfdceb0.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1320.05e224cb.avif 1320w",
-    "ogImage": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1200x630.8405f91a.jpg",
+    "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
+    "heroSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.cbfdceb0.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.05e224cb.avif 1320w",
+    "ogImage": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x630.8405f91a.jpg",
     "heroAlt": "Title card: Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist",
     "author": "",
     "reviewedBy": "",
@@ -5296,7 +5768,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors, apart from electrical or plumbing work a homeowner does personally in the single detached house they live in, so a general contractor either holds those licences or brings in licensed trades. Manitoba also treats construction as a mandatory industry for workers compensation coverage. Our [contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) shows how to verify both before you sign."
+        "x": "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors, apart from electrical or plumbing work a homeowner does personally in the single detached house they live in, so a general contractor either holds those licences or brings in licensed trades."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba also treats construction as a mandatory industry for workers compensation coverage. Our [contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) shows how to verify both before you sign."
       },
       {
         "t": "h2",
@@ -5382,7 +5858,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Ask every contractor which method they use, what's included and how allowances work. A quote that looks cheaper may simply carry lower allowances for cabinets, tile or fixtures. At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+        "x": "Ask every contractor which method they use, what's included and how allowances work. A quote that looks cheaper may simply carry lower allowances for cabinets, tile or fixtures."
+      },
+      {
+        "t": "p",
+        "x": "At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
       },
       {
         "t": "h2",
@@ -5540,7 +6020,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, frost on the inside of the glass, and doors that stick or let in cold air at the sill. Replacing them is a well-defined job, but there are three things worth knowing before you order: when the City needs a permit, what the energy labels mean, and how the rebate works. Everything below was checked against official sources on October 13, 2026."
+        "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, frost on the inside of the glass, and doors that stick or let in cold air at the sill."
+      },
+      {
+        "t": "p",
+        "x": "Replacing them is a well-defined job, but there are three things worth knowing before you order: when the City needs a permit, what the energy labels mean, and how the rebate works. Everything below was checked against official sources on October 13, 2026."
       },
       {
         "t": "h2",
@@ -5671,7 +6155,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Custom-sized windows are made to order, so the order usually has to go in well before the installation date. If you are combining windows with other work, such as siding, stucco repair or exterior paint, put the windows in first so the new trim is finished with everything else."
+        "x": "Custom-sized windows are made to order, so the order usually has to go in well before the installation date. If you are combining windows with other work, such as siding, stucco repair or [exterior paint](/services/exterior-painting), put the windows in first so the new trim is finished with everything else."
       },
       {
         "t": "h2",
@@ -5820,20 +6304,20 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 9,
     "hero": null,
-    "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.55b461dd.webp",
-    "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1320.5c78c717.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1320.53975749.avif 1320w",
-    "ogImage": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1200x630.69ac1710.jpg",
+    "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
+    "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w",
+    "ogImage": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x630.69ac1710.jpg",
     "heroAlt": "Title card: Renovation Permits in Winnipeg: What Needs One and How to Apply",
     "author": "",
     "reviewedBy": "",
     "services": [
-      "/services/kitchen-renovations",
-      "/services/bathroom-renovations",
-      "/services/basement-renovations",
       "/services/whole-home-renovations",
+      "/services/basement-renovations",
       "/services/home-additions",
-      "/services/basement-suites"
+      "/services/basement-suites",
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations"
     ],
     "cluster": "winnipeg-permits",
     "memberOnly": false,
@@ -5841,7 +6325,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Permits are the part of a renovation most people would rather skip, but in Winnipeg they’re also how the work gets checked by an inspector before it disappears behind drywall. This guide sorts common home projects into what needs a permit and what doesn’t, using the City of Winnipeg’s own pages, checked on October 13, 2026. Rules change, so treat it as a starting point and confirm your project with the City’s Permits Direct Line at 204-986-5140."
+        "x": "Permits are the part of a renovation most people would rather skip, but in Winnipeg they’re also how the work gets checked by an inspector before it disappears behind drywall."
+      },
+      {
+        "t": "p",
+        "x": "This guide sorts common home projects into what needs a permit and what doesn’t, using the City of Winnipeg’s own pages, checked on October 13, 2026. Rules change, so treat it as a starting point and confirm your project with the City’s Permits Direct Line at 204-986-5140."
       },
       {
         "t": "h2",
@@ -5849,7 +6337,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "The City’s home renovations page lists kitchens, bathrooms, adding or converting rooms to bedrooms, creating open-concept living space, and new or larger exterior door or window openings as work that may need a building permit under the Winnipeg Building By-law. Since February 2026, the By-law requires one to create a new bedroom or finish a previously undeveloped level. Basements, additions, higher decks, larger sheds and garages, and secondary suites need one too."
+        "x": "The City’s home renovations page lists kitchens, bathrooms, adding or converting rooms to bedrooms, creating open-concept living space, and new or larger exterior door or window openings as work that may need a building permit under the Winnipeg Building By-law."
+      },
+      {
+        "t": "p",
+        "x": "Since February 2026, the By-law requires one to create a new bedroom or finish a previously undeveloped level. Basements, additions, higher decks, larger sheds and garages, and secondary suites need one too."
       },
       {
         "t": "table",
@@ -5937,7 +6429,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Trade work has its own exemptions. In an owner-occupied single detached house, swapping a light fixture, switch or receptacle in the same location doesn’t need an electrical permit, as long as the existing copper branch circuit isn’t modified. Repairing a leak or replacing a fixture such as a faucet or water heater in the same location doesn’t need a plumbing permit if the system itself isn’t changed. Moving or adding outlets, circuits or drains does."
+        "x": "Trade work has its own exemptions. In an owner-occupied single detached house, swapping a light fixture, switch or receptacle in the same location doesn’t need an electrical permit, as long as the existing copper branch circuit isn’t modified."
+      },
+      {
+        "t": "p",
+        "x": "Repairing a leak or replacing a fixture such as a faucet or water heater in the same location doesn’t need a plumbing permit if the system itself isn’t changed. Moving or adding outlets, circuits or drains does."
       },
       {
         "t": "h2",
@@ -6169,10 +6665,10 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": null,
-    "heroSrc": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.77698d54.webp",
-    "heroSrcSet": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w",
-    "ogImage": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg",
+    "heroSrc": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp",
+    "heroSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w",
+    "ogImage": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg",
     "heroAlt": "Title card: Winnipeg Renovation Show: Questions to Ask Contractors",
     "author": "",
     "reviewedBy": "",
@@ -6422,11 +6918,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-    "heroSrc": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp",
-    "heroSrcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1320.34a27d10.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1320.43da1cb9.avif 1320w",
-    "ogImage": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1200x630.18501d53.jpg",
-    "heroAlt": "Modern commercial space with balanced decor and furniture.",
+    "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
+    "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w",
+    "ogImage": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x630.18501d53.jpg",
+    "heroAlt": "Open commercial lounge with grey and yellow sofas, colourful wall art, exposed ductwork and tall windows",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -6440,7 +6936,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "A good commercial interior earns its keep twice: once in how smoothly staff and customers move through it, and again in how clearly it says who you are. When the two clash, function should usually win, because a space that slows service or fails an inspection costs money every day. This guide sets out an order of decisions that keeps both in view, whether you run a shop, an office, a restaurant or a clinic in Winnipeg."
+        "x": "A good commercial interior earns its keep twice: once in how smoothly staff and customers move through it, and again in how clearly it says who you are. When the two clash, function should usually win, because a space that slows service or fails an inspection costs money every day."
+      },
+      {
+        "t": "p",
+        "x": "This guide sets out an order of decisions that keeps both in view, whether you run a shop, an office, a restaurant or a clinic in Winnipeg."
       },
       {
         "t": "h2",
@@ -6693,11 +7193,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
-    "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp",
-    "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.a3d281b8.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.1e9a351d.avif 1320w",
-    "ogImage": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1200x630.6b4ae4ef.jpg",
-    "heroAlt": "Comparing full home renovation versus partial upgrades visually.",
+    "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
+    "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
+    "ogImage": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg",
+    "heroAlt": "Title graphic reading “How to Choose Between a Full Renovation / Partial Upgrade: Navigating transformation for your commercial space” over a blue-tinted office",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -6957,14 +7457,14 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-08-12",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
-    "heroSrc": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp",
-    "heroSrcSet": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1320.e95b1d18.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1320.537414ab.avif 1320w",
-    "ogImage": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1200x630.5db48b4e.jpg",
-    "heroAlt": "Commercial renovation before and after office space.",
+    "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
+    "heroSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w",
+    "ogImage": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x630.5db48b4e.jpg",
+    "heroAlt": "Title graphic reading “Understanding ROI: Which Commercial Renovations?” over a bright furnished office beside timber framing, floor plans and hand tools",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -7154,7 +7654,7 @@ export const BLOG_POSTS = [
     "faqs": [
       {
         "q": "What does ROI mean for a business renovation?",
-        "a": "Return on investment compares what a renovation gives back with what it costs. For a business, the return usually comes as extra gross margin from more or faster sales, savings on energy and maintenance, or a property that is easier to lease or sell. If the total benefit over the time you use the space exceeds the total cost, the return is positive."
+        "a": "Return on investment compares what a renovation gives back with what it costs. For a business, the return usually comes as extra gross margin from more or faster sales, savings on energy and maintenance, or a property easier to lease or sell. If the total benefit while you use the space exceeds the total cost, the return is positive."
       },
       {
         "q": "Is there a typical ROI for commercial renovations?",
@@ -7217,11 +7717,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
-    "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.dbbc5f1b.webp",
-    "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.b9481b87.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.54f184c8.avif 1320w",
-    "ogImage": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1200x630.50417805.jpg",
-    "heroAlt": "Financing commercial renovation with money and blueprints.",
+    "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
+    "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w",
+    "ogImage": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x630.50417805.jpg",
+    "heroAlt": "Title card reading “How to Finance Section: Commercial Renovation Without Breaking the Bank” over a wooden house frame, a notebook, a calculator and rolled plans",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -7234,7 +7734,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Paying for a commercial renovation is rarely a single loan. Most projects mix money from the business, a lender and sometimes the landlord, and the right mix depends on whether you own or lease, how long you will stay and how much of the cost is equipment rather than construction. This guide compares the main options in Manitoba. It is general information, not financial advice: rates and terms change, so have your lender and accountant review your plan."
+        "x": "Paying for a commercial renovation is rarely a single loan. Most projects mix money from the business, a lender and sometimes the landlord, and the right mix depends on whether you own or lease, how long you will stay and how much of the cost is equipment rather than construction."
+      },
+      {
+        "t": "p",
+        "x": "This guide compares the main options in Manitoba. It is general information, not financial advice: rates and terms change, so have your lender and accountant review your plan."
       },
       {
         "t": "h2",
@@ -7456,11 +7960,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 10,
     "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-    "heroSrc": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp",
-    "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.3dde30a7.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.504b262f.avif 1320w",
-    "ogImage": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1200x630.d9d7d351.jpg",
-    "heroAlt": "Commercial remodel project with worker and blueprints.",
+    "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
+    "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
+    "ogImage": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg",
+    "heroAlt": "Title graphic reading “How to Avoid Unexpected Expenses? Master cost control and budgeting strategies” beside a model house and a calculator on a desk",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -7475,7 +7979,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Most renovation problems trace back to decisions made before any work started: who was hired, and what was written down. This checklist is built for homeowners in Winnipeg and nearby communities, but the same steps answer how to choose a renovation contractor anywhere in Canada. Each check takes a few minutes, and most use public tools from the Province, the City or the Workers Compensation Board."
+        "x": "Most renovation problems trace back to decisions made before any work started: who was hired, and what was written down."
+      },
+      {
+        "t": "p",
+        "x": "This checklist is built for homeowners in Winnipeg and nearby communities, but the same steps answer how to choose a renovation contractor anywhere in Canada. Each check takes a few minutes, and most use public tools from the Province, the City or the Workers Compensation Board."
       },
       {
         "t": "h2",
@@ -7607,7 +8115,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment. The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
+        "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment."
+      },
+      {
+        "t": "p",
+        "x": "The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
       },
       {
         "t": "h2",
@@ -7619,7 +8131,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits. A contractor who suggests skipping a required permit, or asks you to apply for work they will do, is a reason to walk away."
+        "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+      },
+      {
+        "t": "p",
+        "x": "A contractor who suggests skipping a required permit, or asks you to apply for work they will do, is a reason to walk away."
       },
       {
         "t": "h2",
@@ -7683,7 +8199,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "If you sign with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Direct sellers must also be licensed by the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html), so ask to see the licence. Meeting contractors at a home show? See our [questions to ask at the Winnipeg Renovation Show](/blog/winnipeg-renovation-show-questions-to-ask)."
+        "x": "If you sign with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel a direct sales contract without giving a reason. Direct sellers must also be licensed by the [Consumer Protection Office](https://www.gov.mb.ca/consumerinfo/initiatives/shopping/direct-sales.html), so ask to see the licence."
+      },
+      {
+        "t": "p",
+        "x": "Meeting contractors at a home show? See our [questions to ask at the Winnipeg Renovation Show](/blog/winnipeg-renovation-show-questions-to-ask)."
       },
       {
         "t": "h2",
@@ -7808,11 +8328,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
-    "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp",
-    "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.afcff434.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.6642e0d8.avif 1320w",
-    "ogImage": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1200x630.c1dc6544.jpg",
-    "heroAlt": "Commercial renovation site with construction materials and worker.",
+    "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
+    "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.6642e0d8.avif 1320w",
+    "ogImage": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x630.c1dc6544.jpg",
+    "heroAlt": "Worker in a hard hat and safety vest in a gutted commercial space, with the title “The Biggest Cost Factors: Commercial Renovation Projects”",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -7825,7 +8345,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Two commercial spaces of the same size can cost very different amounts to renovate. The difference is rarely the paint or flooring. It is what sits behind the walls and above the ceiling, what the building code asks for once the use changes, and how the work has to be scheduled around a business that wants to stay open. This guide explains the main cost factors and how to control each one."
+        "x": "Two commercial spaces of the same size can cost very different amounts to renovate. The difference is rarely the paint or flooring. It is what sits behind the walls and above the ceiling, what the building code asks for once the use changes, and how the work has to be scheduled around a business that wants to stay open."
+      },
+      {
+        "t": "p",
+        "x": "This guide explains the main cost factors and how to control each one."
       },
       {
         "t": "p",
@@ -7900,7 +8424,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Asbestos has its own rules. Where asbestos is suspected, Manitoba's workplace safety rules require the work area to be inspected and an asbestos inventory prepared by a person competent in identifying asbestos-containing material before renovation or demolition, and suspected material is treated as asbestos unless it is found to be asbestos-free. Budget for testing, and for abatement if needed, before demolition starts."
+        "x": "Asbestos has its own rules. Where asbestos is suspected, Manitoba's workplace safety rules require the work area to be inspected and an asbestos inventory prepared by a person competent in identifying asbestos-containing material before renovation or demolition, and suspected material is treated as asbestos unless it is found to be asbestos-free."
+      },
+      {
+        "t": "p",
+        "x": "Budget for testing, and for abatement if needed, before demolition starts."
       },
       {
         "t": "h2",
@@ -7960,7 +8488,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Energy upgrades can lower operating costs, and some qualify for incentives: Efficiency Manitoba's Business Lighting Program says not to buy materials or start until your application is approved, so apply before ordering fixtures. After-hours work is a trade-off too. Within 150 metres of a home, the City limits loud construction to 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so late shifts suit quieter tasks."
+        "x": "Energy upgrades can lower operating costs, and some qualify for incentives: Efficiency Manitoba's Business Lighting Program says not to buy materials or start until your application is approved, so apply before ordering fixtures."
+      },
+      {
+        "t": "p",
+        "x": "After-hours work is a trade-off too. Within 150 metres of a home, the City limits loud construction to 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so late shifts suit quieter tasks."
       },
       {
         "t": "h2",
@@ -8047,11 +8579,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
-    "heroSrc": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp",
-    "heroSrcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.09bdb970.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.51c2dc1d.avif 1320w",
-    "ogImage": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1200x630.0c5e2327.jpg",
-    "heroAlt": "Business renovation progress with tools and sunlight.",
+    "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
+    "heroSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.09bdb970.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.51c2dc1d.avif 1320w",
+    "ogImage": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x630.0c5e2327.jpg",
+    "heroAlt": "Title graphic reading “How to Prepare Your Business for a Major Renovation: Plan. Protect. Prosper.” with a man using a tablet and construction cranes behind him",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -8065,7 +8597,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "A major renovation tests a business twice: once in the construction, and again in keeping customers, staff and revenue intact while it happens. Businesses that come through well treat the renovation as a project with its own plan, not something that happens around them. This guide sets out the stages of a commercial renovation in Winnipeg, how to stay open through them, and what to settle before the first day of work."
+        "x": "A major renovation tests a business twice: once in the construction, and again in keeping customers, staff and revenue intact while it happens. Businesses that come through well treat the renovation as a project with its own plan, not something that happens around them."
+      },
+      {
+        "t": "p",
+        "x": "This guide sets out the stages of a commercial renovation in Winnipeg, how to stay open through them, and what to settle before the first day of work."
       },
       {
         "t": "h2",
@@ -8139,7 +8675,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Two Winnipeg rules shape this. Within 150 metres of a home, the City allows loud construction work only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so loud work cannot run overnight near homes. And the City's occupancy bulletin says the general contractor is responsible for the safety of everyone entering the construction site before the occupancy permit is issued, so keep customers and staff out of active work areas."
+        "x": "Two Winnipeg rules shape this. Within 150 metres of a home, the City allows loud construction work only from 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so loud work cannot run overnight near homes."
+      },
+      {
+        "t": "p",
+        "x": "And the City's occupancy bulletin says the general contractor is responsible for the safety of everyone entering the construction site before the occupancy permit is issued, so keep customers and staff out of active work areas."
       },
       {
         "t": "p",
@@ -8318,11 +8858,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
-    "heroSrc": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp",
-    "heroSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1320.f562c9d4.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1320.38be59c3.avif 1320w",
-    "ogImage": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1200x630.d2c7aef8.jpg",
-    "heroAlt": "Eye-level view of a modern bathroom with a freestanding tub and large window",
+    "heroSrc": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp",
+    "heroSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.f562c9d4.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.38be59c3.avif 1320w",
+    "ogImage": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x630.d2c7aef8.jpg",
+    "heroAlt": "Bright bathroom with a freestanding tub, a floating double vanity with vessel sinks, two mirrors and a floor-to-ceiling window",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -8334,7 +8874,11 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Search for bathroom remodel return on investment in Canada and you will find percentages that look precise. They come from different markets, years and methods, and none of them can tell you what your bathroom will add to your house. A more useful question is which upgrades protect the house, make daily life easier and will still look reasonable in ten years. That is what this guide covers."
+        "x": "Search for bathroom remodel return on investment in Canada and you will find percentages that look precise. They come from different markets, years and methods, and none of them can tell you what your bathroom will add to your house."
+      },
+      {
+        "t": "p",
+        "x": "A more useful question is which upgrades protect the house, make daily life easier and will still look reasonable in ten years. That is what this guide covers."
       },
       {
         "t": "h2",
@@ -8409,9 +8953,9 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.38384a07.webp",
-        "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-480.cd309689.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.38384a07.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-1320.052c0c18.webp 1320w",
-        "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-480.50870eef.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.cb2aefbb.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-1320.48524849.avif 1320w",
+        "src": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-880.38384a07.webp",
+        "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-480.cd309689.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-880.38384a07.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-1320.052c0c18.webp 1320w",
+        "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-480.50870eef.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-880.cb2aefbb.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-1320.48524849.avif 1320w",
         "alt": "Close-up of a modern bathroom faucet and sink",
         "width": 880,
         "height": 503
@@ -8561,11 +9105,11 @@ export const BLOG_POSTS = [
     "updated": "2026-10-13",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png",
-    "heroSrc": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp",
-    "heroSrcSet": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1320.41a68949.webp 1320w",
-    "heroAvifSrcSet": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1320.3392ce25.avif 1320w",
-    "ogImage": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1200x630.0638e1e0.jpg",
-    "heroAlt": "Eye-level view of a compact modern kitchen with efficient storage and lighting",
+    "heroSrc": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp",
+    "heroSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.41a68949.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.3392ce25.avif 1320w",
+    "ogImage": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x630.0638e1e0.jpg",
+    "heroAlt": "Kitchen wall with light wood upper cabinets, an open shelf of dishes, under-cabinet lighting, a black sink and grey lower cabinets",
     "author": "",
     "reviewedBy": "",
     "services": [
@@ -8626,9 +9170,9 @@ export const BLOG_POSTS = [
       },
       {
         "t": "img",
-        "src": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp",
-        "srcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.b89f7a97.webp 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.735220d1.webp 1320w",
-        "avifSrcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.4b933c9f.avif 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.46acd47b.avif 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.8309e247.avif 1320w",
+        "src": "/images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-880.37bfe2b9.webp",
+        "srcSet": "/images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-480.b89f7a97.webp 480w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-880.37bfe2b9.webp 880w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-1320.735220d1.webp 1320w",
+        "avifSrcSet": "/images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-480.4b933c9f.avif 480w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-880.46acd47b.avif 880w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-1320.8309e247.avif 1320w",
         "alt": "Small L-shaped kitchen with a peninsula counter",
         "width": 880,
         "height": 503
@@ -8902,11 +9446,12 @@ const shared = (a, b) => (a || []).filter((item) => (b || []).includes(item)).le
 /**
  * Related posts, best first: shared services ×3 + same cluster ×2 + shared
  * categories ×1; ties go to the post published closest in time, then the
- * newer one.
+ * newer one. (Each post module already carries its own, as `related`.)
  */
-export function getRelatedPosts(post, limit = 3) {
+function rankRelated(list, post, limit = 3) {
   if (!post) return [];
-  return BLOG_POSTS.filter((item) => item.slug !== post.slug)
+  return list
+    .filter((item) => item.slug !== post.slug)
     .map((item) => ({
       item,
       score:
@@ -8918,6 +9463,10 @@ export function getRelatedPosts(post, limit = 3) {
     .sort((a, b) => b.score - a.score || a.gap - b.gap || dayOf(b.item.date) - dayOf(a.item.date))
     .slice(0, limit)
     .map(({ item }) => item);
+}
+
+export function getRelatedPosts(post, limit = 3) {
+  return rankRelated(BLOG_POSTS, post, limit);
 }
 
 /** The newest published posts that list a service path in `services`. */

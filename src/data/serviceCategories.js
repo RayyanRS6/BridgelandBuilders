@@ -9,8 +9,10 @@ import { SERVICES, serviceBySlug } from './services.js';
  * item names is added to the end of its category, so a newly launched page is
  * always reachable from both menus.
  *
- * Item fields: label, description (defaults to the registry summary), service
- * (registry slug, optional). `to` is filled in below.
+ * Item fields: label, description (defaults to the registry summary),
+ * cardDescription (the longer /services card text; defaults to the registry
+ * cardDescription, then to description), service (registry slug, optional),
+ * hash (optional anchor on that page, e.g. 'hotels'). `to` is filled in below.
  */
 const CATEGORIES = [
   {
@@ -35,11 +37,34 @@ const CATEGORIES = [
       { label: 'Office renovations', service: 'office-renovations' },
       { label: 'Restaurants & hospitality', service: 'restaurant-renovations' },
       { label: 'Medical & dental offices', service: 'medical-dental-office-renovations' },
-      // Hotel work is covered on the restaurant & hospitality page.
-      { label: 'Hotels', description: 'Guest rooms, common areas, and phased upgrades designed to limit disruption.', service: 'restaurant-renovations' },
-      { label: 'Property managers & building owners', description: 'Reliable turnovers, common-area improvements, and multi-unit renovation support.' },
-      { label: 'Real estate developers & realtors', description: 'Practical improvements that prepare properties for sale, lease, or new occupancy.' },
-      { label: 'Architects & designers', description: 'Construction support that turns supplied drawings and specifications into finished spaces.' },
+      // Hotel work is covered on the restaurant & hospitality page; the link
+      // goes to its hotel cards (id "hotels" in restaurant-renovations.js).
+      {
+        label: 'Hotels',
+        description: 'Guest rooms, common areas, and phased upgrades designed to limit disruption.',
+        cardDescription:
+          'Guest rooms and bathrooms, corridors, lobbies, breakfast and meeting rooms, phased by room, floor or wing so the rest of the hotel keeps welcoming guests, with a weekly update to share with management.',
+        service: 'restaurant-renovations',
+        hash: 'hotels',
+      },
+      {
+        label: 'Property managers & building owners',
+        description: 'Reliable turnovers, common-area improvements, and multi-unit renovation support.',
+        cardDescription:
+          'Vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners. Each job starts with a free site visit and a written quote, and weekly updates give you something to pass on.',
+      },
+      {
+        label: 'Real estate developers & realtors',
+        description: 'Practical improvements that prepare properties for sale, lease, or new occupancy.',
+        cardDescription:
+          'Practical improvements that get a property ready to sell, lease or occupy. Each job is scoped and quoted in writing after a free site visit, and you get a progress update every week once work starts.',
+      },
+      {
+        label: 'Architects & designers',
+        description: 'Construction support that turns supplied drawings and specifications into finished spaces.',
+        cardDescription:
+          'Construction that turns your drawings and specifications into a finished space. We walk the site against the drawings before work starts and raise conflicts, such as a duct that clashes with a beam, before they become change orders.',
+      },
     ],
   },
   {
@@ -56,9 +81,10 @@ const CATEGORIES = [
   },
 ];
 
-const liveLink = (slug) => {
+const liveLink = (slug, hash) => {
   const service = slug ? serviceBySlug(slug) : null;
-  return service && service.status === 'live' ? service.path : undefined;
+  if (!service || service.status !== 'live') return undefined;
+  return hash ? `${service.path}#${hash}` : service.path;
 };
 
 // The commercial hub is the category's overview link, not a list item.
@@ -72,16 +98,23 @@ export const SERVICE_CATEGORIES = CATEGORIES.map((category) => ({
   services: [
     ...category.services.map((item) => {
       const service = item.service ? serviceBySlug(item.service) : null;
+      const description = item.description || (service && service.summary) || '';
       return {
         label: item.label,
-        description: item.description || (service && service.summary) || '',
-        to: liveLink(item.service),
+        description,
+        cardDescription: item.cardDescription || (service && service.cardDescription) || description,
+        to: liveLink(item.service, item.hash),
       };
     }),
     ...SERVICES.filter(
       (service) => service.category === category.id && service.status === 'live' && !named.has(service.slug)
     )
       .sort((a, b) => a.order - b.order)
-      .map((service) => ({ label: service.navLabel, description: service.summary, to: service.path })),
+      .map((service) => ({
+        label: service.navLabel,
+        description: service.summary,
+        cardDescription: service.cardDescription || service.summary,
+        to: service.path,
+      })),
   ],
 }));

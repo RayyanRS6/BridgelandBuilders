@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import BookingAside from '../components/BookingAside.jsx';
+import FaqAccordion from '../components/FaqAccordion.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { ArrowRightIcon } from '../components/icons.jsx';
-import { OFFICE_HOURS_TEXT } from '../data/faqs.js';
+import { CONTACT_FAQS, OFFICE_HOURS_TEXT } from '../data/faqs.js';
 import { SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
+
+// Same options head.js must pass for the prerender (FAQPage from CONTACT_FAQS).
+const SEO_OPTIONS = { faqs: CONTACT_FAQS };
 
 // What happens after someone gets in touch (owner-confirmed steps).
 const NEXT_STEPS = [
@@ -31,7 +35,7 @@ const NEXT_STEPS = [
 // is a service-area business (siteConfig.js), so the mailing address appears
 // only on the legal pages.
 export default function ContactPage() {
-  usePageSeo('/contact-us');
+  usePageSeo('/contact-us', SEO_OPTIONS);
 
   return (
     <main>
@@ -44,7 +48,8 @@ export default function ContactPage() {
       <section className="lead-section contact-page-form">
         <div className="container">
           <div className="lead-grid">
-            <div><BookingAside serviceName="project" showHours /></div>
+            {/* Its own heading, so it doesn't repeat the H1 ("Let's talk about your project"). */}
+            <div><BookingAside serviceName="project" title="What you can count on" showHours /></div>
             <div>
               <QuoteBookingForm id="contact-form" title="Request Your Free Quote" />
             </div>
@@ -58,6 +63,10 @@ export default function ContactPage() {
           <div className="section-header center">
             <span className="section-tag">Contact details</span>
             <h2 className="section-title">How to reach Bridgeland Builders</h2>
+            <p className="section-desc">
+              Phone, email and office hours are below. Want to know who you’ll be dealing with first? Read{' '}
+              <Link className="blog-inline-link" to="/about-us">about Bridgeland Builders</Link>.
+            </p>
           </div>
           <div className="includes-grid">
             <div className="include-card">
@@ -113,6 +122,17 @@ export default function ContactPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQs: no .reveal, so the answers are never held at opacity 0. */}
+      <section className="faq-section" id="faqs">
+        <div className="container">
+          <div className="section-header center">
+            <span className="section-tag">Questions</span>
+            <h2 className="section-title">Questions about getting in touch</h2>
+          </div>
+          <FaqAccordion items={CONTACT_FAQS} headingLevel={3} />
         </div>
       </section>
     </main>

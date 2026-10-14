@@ -21,19 +21,19 @@ export const MEDIA = {
       "bytes": 3098406
     },
     "hero": {
-      "src": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp",
-      "srcSet": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1320.41a68949.webp 1320w",
-      "avifSrcSet": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1320.3392ce25.avif 1320w",
+      "src": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp",
+      "srcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.41a68949.webp 1320w",
+      "avifSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.3392ce25.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp",
-    "srcSet": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1320.41a68949.webp 1320w",
-    "avifSrcSet": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1320.3392ce25.avif 1320w",
+    "src": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp",
+    "srcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.0aff58da.webp 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.41a68949.webp 1320w",
+    "avifSrcSet": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-480.009bde89.avif 480w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.aa2dccf5.avif 880w, /images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1320.3392ce25.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/essential-design-strategies-for-small/eye-level-view-of-a-compact-modern-1200x630.0638e1e0.jpg"
+    "og": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x630.0638e1e0.jpg"
   },
   "https://static.wixstatic.com/media/48172a_54a6ed46264549a88ee3607a0516baaf~mv2.png": {
     "original": {
@@ -41,21 +41,9 @@ export const MEDIA = {
       "height": 768,
       "bytes": 3098406
     },
-    "src": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp",
-    "srcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.b89f7a97.webp 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.37bfe2b9.webp 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.735220d1.webp 1320w",
-    "avifSrcSet": "/images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-480.4b933c9f.avif 480w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-880.46acd47b.avif 880w, /images/blog/essential-design-strategies-for-small/high-angle-view-of-a-small-kitchen-1320.8309e247.avif 1320w",
-    "width": 880,
-    "height": 503
-  },
-  "https://static.wixstatic.com/media/48172a_3d74e529500f449ba47b6e15486c1268~mv2.png": {
-    "original": {
-      "width": 1344,
-      "height": 768,
-      "bytes": 3098406
-    },
-    "src": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.1145290b.webp",
-    "srcSet": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-480.ec8264fe.webp 480w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.1145290b.webp 880w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-1320.32111089.webp 1320w",
-    "avifSrcSet": "/images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-480.90a7e04d.avif 480w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-880.91d92874.avif 880w, /images/blog/essential-design-strategies-for-small/close-up-view-of-a-kitchen-1320.bfe49533.avif 1320w",
+    "src": "/images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-880.37bfe2b9.webp",
+    "srcSet": "/images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-480.b89f7a97.webp 480w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-880.37bfe2b9.webp 880w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-1320.735220d1.webp 1320w",
+    "avifSrcSet": "/images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-480.4b933c9f.avif 480w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-880.46acd47b.avif 880w, /images/blog/essential-design-strategies-for-small/small-l-shaped-kitchen-1320.8309e247.avif 1320w",
     "width": 880,
     "height": 503
   },
@@ -66,31 +54,19 @@ export const MEDIA = {
       "bytes": 1463466
     },
     "hero": {
-      "src": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp",
-      "srcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1320.34a27d10.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1320.43da1cb9.avif 1320w",
+      "src": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
+      "srcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
+      "avifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp",
-    "srcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1320.34a27d10.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1320.43da1cb9.avif 1320w",
+    "src": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
+    "srcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-with-1200x630.18501d53.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_1c5dc6d7dc1b4efca877a2597e24e027~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1437806
-    },
-    "src": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-balancing-880.f135a161.webp",
-    "srcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-balancing-480.baadc292.webp 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-balancing-880.f135a161.webp 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-balancing-1320.22601f5f.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-balance-functionality-and/modern-commercial-space-balancing-480.053327aa.avif 480w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-balancing-880.5f54dc86.avif 880w, /images/blog/how-to-balance-functionality-and/modern-commercial-space-balancing-1320.788e27ab.avif 1320w",
-    "width": 880,
-    "height": 495
+    "og": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x630.18501d53.jpg"
   },
   "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png": {
     "original": {
@@ -99,43 +75,19 @@ export const MEDIA = {
       "bytes": 870285
     },
     "hero": {
-      "src": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp",
-      "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.a3d281b8.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.1e9a351d.avif 1320w",
+      "src": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
+      "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
+      "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp",
-    "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.a3d281b8.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.1e9a351d.avif 1320w",
+    "src": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
+    "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1200x630.6b4ae4ef.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_fe434f71071c41898b44438bec64ec37~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1384226
-    },
-    "src": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.a35f6fbb.webp",
-    "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.293ee29d.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.a35f6fbb.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.1524d129.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-480.1f6b2747.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-880.eea2dd4b.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/comparing-full-home-renovation-1320.6afa87f1.avif 1320w",
-    "width": 880,
-    "height": 495
-  },
-  "https://static.wixstatic.com/media/48172a_25ec2aced2b647c7858ea8a5be039885~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1246986
-    },
-    "src": "/images/blog/how-to-choose-between-a-full-renovation/renovated-room-versus-old-room-880.118c381c.webp",
-    "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/renovated-room-versus-old-room-480.0133b097.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/renovated-room-versus-old-room-880.118c381c.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/renovated-room-versus-old-room-1320.0d705763.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/renovated-room-versus-old-room-480.0eceecaa.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/renovated-room-versus-old-room-880.e771ce7e.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/renovated-room-versus-old-room-1320.e0ce9d46.avif 1320w",
-    "width": 880,
-    "height": 495
+    "og": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg"
   },
   "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png": {
     "original": {
@@ -144,31 +96,19 @@ export const MEDIA = {
       "bytes": 770305
     },
     "hero": {
-      "src": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp",
-      "srcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.3dde30a7.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.504b262f.avif 1320w",
+      "src": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
+      "srcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
+      "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp",
-    "srcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.3dde30a7.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.504b262f.avif 1320w",
+    "src": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
+    "srcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1200x630.d9d7d351.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_9d27d4534f9f4063b37722960d839d11~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1391064
-    },
-    "src": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.eacb67d5.webp",
-    "srcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.6f9887e9.webp 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.eacb67d5.webp 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.de7fb209.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-480.63394cd8.avif 480w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-880.ca1aeea0.avif 880w, /images/blog/how-to-choose-the-right-contractor-for/commercial-remodel-project-with-1320.37576ef1.avif 1320w",
-    "width": 880,
-    "height": 495
+    "og": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg"
   },
   "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png": {
     "original": {
@@ -177,43 +117,19 @@ export const MEDIA = {
       "bytes": 3492567
     },
     "hero": {
-      "src": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.dbbc5f1b.webp",
-      "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.b9481b87.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.54f184c8.avif 1320w",
+      "src": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
+      "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
+      "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.dbbc5f1b.webp",
-    "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.b9481b87.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.54f184c8.avif 1320w",
+    "src": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
+    "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1200x630.50417805.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_19ee30390bf4493387b87a116f74cdd1~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1084928
-    },
-    "src": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.681c7bc8.webp",
-    "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.0cea8cdf.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.681c7bc8.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.96418a1b.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-480.bffc0570.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-880.3b96c688.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/financing-commercial-renovation-1320.a92527eb.avif 1320w",
-    "width": 880,
-    "height": 495
-  },
-  "https://static.wixstatic.com/media/48172a_3e55764f3a964916bb52a6101fd24b3c~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1438761
-    },
-    "src": "/images/blog/how-to-finance-a-commercial-renovation/commercial-renovation-financing-880.4b782655.webp",
-    "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/commercial-renovation-financing-480.62207ef8.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/commercial-renovation-financing-880.4b782655.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/commercial-renovation-financing-1320.f365a24a.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/commercial-renovation-financing-480.841f13f9.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/commercial-renovation-financing-880.3b5c2f34.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/commercial-renovation-financing-1320.acc3d7b6.avif 1320w",
-    "width": 880,
-    "height": 495
+    "og": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x630.50417805.jpg"
   },
   "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png": {
     "original": {
@@ -222,88 +138,19 @@ export const MEDIA = {
       "bytes": 1617508
     },
     "hero": {
-      "src": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp",
-      "srcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.09bdb970.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.51c2dc1d.avif 1320w",
+      "src": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
+      "srcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.09bdb970.webp 1320w",
+      "avifSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.51c2dc1d.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp",
-    "srcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.09bdb970.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.51c2dc1d.avif 1320w",
+    "src": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
+    "srcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.241c3443.webp 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.09bdb970.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-480.cd1bccab.avif 480w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.ab626d7c.avif 880w, /images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1320.51c2dc1d.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1200x630.0c5e2327.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_293589079ef34e179ec253a072c06a25~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1146251
-    },
-    "src": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.cdc72a9d.webp",
-    "srcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.16048b8d.webp 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.cdc72a9d.webp 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.8ee99b74.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-480.76954501.avif 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-880.7c17e263.avif 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-progress-with-1320.d539c41e.avif 1320w",
-    "width": 880,
-    "height": 495
-  },
-  "https://static.wixstatic.com/media/48172a_d81d6d00672c4eb28bb33f5527e02b4e~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1575889
-    },
-    "src": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-preparation-880.9e698921.webp",
-    "srcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-preparation-480.983c0e65.webp 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-preparation-880.9e698921.webp 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-preparation-1320.59512a97.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-prepare-your-business-for-a/business-renovation-preparation-480.c7e8b652.avif 480w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-preparation-880.cbf452b0.avif 880w, /images/blog/how-to-prepare-your-business-for-a/business-renovation-preparation-1320.2c06ac80.avif 1320w",
-    "width": 880,
-    "height": 495
-  },
-  "https://static.wixstatic.com/media/48172a_8cb96e6f6816461fa289291611405b59~mv2.png": {
-    "original": {
-      "width": 1344,
-      "height": 768,
-      "bytes": 3098406
-    },
-    "hero": {
-      "src": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.df3488b4.webp",
-      "srcSet": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-480.eb593480.webp 480w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.df3488b4.webp 880w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1320.8a0b2955.webp 1320w",
-      "avifSrcSet": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-480.3e757957.avif 480w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.436389dd.avif 880w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1320.d8fbd287.avif 1320w",
-      "width": 880,
-      "height": 495
-    },
-    "src": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.df3488b4.webp",
-    "srcSet": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-480.eb593480.webp 480w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.df3488b4.webp 880w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1320.8a0b2955.webp 1320w",
-    "avifSrcSet": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-480.3e757957.avif 480w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-880.436389dd.avif 880w, /images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1320.d8fbd287.avif 1320w",
-    "width": 880,
-    "height": 495,
-    "crop": "16:9",
-    "og": "/images/blog/mastering-general-contracting-tips-for/eye-level-view-of-a-construction-1200x630.e9b9fa3d.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_21090a0f08954449b9fd76ccbbc114a6~mv2.png": {
-    "original": {
-      "width": 1344,
-      "height": 768,
-      "bytes": 3098406
-    },
-    "src": "/images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-880.78e7ff8e.webp",
-    "srcSet": "/images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-480.84a31d17.webp 480w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-880.78e7ff8e.webp 880w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-1320.993ff622.webp 1320w",
-    "avifSrcSet": "/images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-480.8899cb3b.avif 480w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-880.27bdb4a2.avif 880w, /images/blog/mastering-general-contracting-tips-for/close-up-view-of-construction-tools-1320.89cbf8b5.avif 1320w",
-    "width": 880,
-    "height": 503
-  },
-  "https://static.wixstatic.com/media/48172a_7c5e7a35b432455385c1c9aba70cc9a3~mv2.png": {
-    "original": {
-      "width": 1344,
-      "height": 768,
-      "bytes": 3098406
-    },
-    "src": "/images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-880.d3d6f9ed.webp",
-    "srcSet": "/images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-480.b37dfbc6.webp 480w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-880.d3d6f9ed.webp 880w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-1320.80b8b244.webp 1320w",
-    "avifSrcSet": "/images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-480.d1366da0.avif 480w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-880.c14674c0.avif 880w, /images/blog/mastering-general-contracting-tips-for/high-angle-view-of-a-construction-1320.99448c66.avif 1320w",
-    "width": 880,
-    "height": 503
+    "og": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x630.0c5e2327.jpg"
   },
   "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png": {
     "original": {
@@ -312,31 +159,19 @@ export const MEDIA = {
       "bytes": 2038918
     },
     "hero": {
-      "src": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp",
-      "srcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.afcff434.webp 1320w",
-      "avifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.6642e0d8.avif 1320w",
+      "src": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
+      "srcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
+      "avifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.6642e0d8.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp",
-    "srcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.afcff434.webp 1320w",
-    "avifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.6642e0d8.avif 1320w",
+    "src": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
+    "srcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
+    "avifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.6642e0d8.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1200x630.c1dc6544.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_413c10a313fa44569607bc556fa19588~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1367769
-    },
-    "src": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.9c042ed3.webp",
-    "srcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.43f3ad99.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.9c042ed3.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.da40053e.webp 1320w",
-    "avifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-480.84ec2e89.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-880.c713e253.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/commercial-renovation-site-with-1320.e5859933.avif 1320w",
-    "width": 880,
-    "height": 495
+    "og": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x630.c1dc6544.jpg"
   },
   "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png": {
     "original": {
@@ -345,31 +180,19 @@ export const MEDIA = {
       "bytes": 3167824
     },
     "hero": {
-      "src": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp",
-      "srcSet": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1320.e95b1d18.webp 1320w",
-      "avifSrcSet": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1320.537414ab.avif 1320w",
+      "src": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
+      "srcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
+      "avifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp",
-    "srcSet": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1320.e95b1d18.webp 1320w",
-    "avifSrcSet": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1320.537414ab.avif 1320w",
+    "src": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
+    "srcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.90ed6161.webp 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.e95b1d18.webp 1320w",
+    "avifSrcSet": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-480.7be4d1c9.avif 480w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.5a9d610c.avif 880w, /images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1320.537414ab.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/understanding-roi-which-commercial/commercial-renovation-before-and-1200x630.5db48b4e.jpg"
-  },
-  "https://static.wixstatic.com/media/48172a_27e8041f2b1748f3b01531c1e3c19564~mv2.png": {
-    "original": {
-      "width": 1366,
-      "height": 768,
-      "bytes": 1563367
-    },
-    "src": "/images/blog/understanding-roi-which-commercial/bright-modern-living-room-beside-a-880.5d18a8a6.webp",
-    "srcSet": "/images/blog/understanding-roi-which-commercial/bright-modern-living-room-beside-a-480.05773643.webp 480w, /images/blog/understanding-roi-which-commercial/bright-modern-living-room-beside-a-880.5d18a8a6.webp 880w, /images/blog/understanding-roi-which-commercial/bright-modern-living-room-beside-a-1320.b454f714.webp 1320w",
-    "avifSrcSet": "/images/blog/understanding-roi-which-commercial/bright-modern-living-room-beside-a-480.30e0d178.avif 480w, /images/blog/understanding-roi-which-commercial/bright-modern-living-room-beside-a-880.7d286430.avif 880w, /images/blog/understanding-roi-which-commercial/bright-modern-living-room-beside-a-1320.31d96c6a.avif 1320w",
-    "width": 880,
-    "height": 495
+    "og": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x630.5db48b4e.jpg"
   },
   "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png": {
     "original": {
@@ -378,19 +201,19 @@ export const MEDIA = {
       "bytes": 3098406
     },
     "hero": {
-      "src": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp",
-      "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1320.f562c9d4.webp 1320w",
-      "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1320.38be59c3.avif 1320w",
+      "src": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp",
+      "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.f562c9d4.webp 1320w",
+      "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.38be59c3.avif 1320w",
       "width": 880,
       "height": 495
     },
-    "src": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp",
-    "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1320.f562c9d4.webp 1320w",
-    "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1320.38be59c3.avif 1320w",
+    "src": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp",
+    "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.f562c9d4.webp 1320w",
+    "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.38be59c3.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/which-bathroom-remodel-upgrades-offer/eye-level-view-of-a-modern-bathroom-1200x630.d2c7aef8.jpg"
+    "og": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x630.d2c7aef8.jpg"
   },
   "https://static.wixstatic.com/media/48172a_09c6f7f59d2647b7b90a8b67d5c0035e~mv2.png": {
     "original": {
@@ -398,21 +221,9 @@ export const MEDIA = {
       "height": 768,
       "bytes": 3098406
     },
-    "src": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.38384a07.webp",
-    "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-480.cd309689.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.38384a07.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-1320.052c0c18.webp 1320w",
-    "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-480.50870eef.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-880.cb2aefbb.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-view-of-a-sleek-bathroom-1320.48524849.avif 1320w",
-    "width": 880,
-    "height": 503
-  },
-  "https://static.wixstatic.com/media/48172a_37341d9053924df8bdcdf0390fc12bb4~mv2.png": {
-    "original": {
-      "width": 1344,
-      "height": 768,
-      "bytes": 3098406
-    },
-    "src": "/images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-880.7055651d.webp",
-    "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-480.bdb71250.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-880.7055651d.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-1320.d4d0a055.webp 1320w",
-    "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-480.282002a6.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-880.fcce9ddb.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/high-angle-view-of-a-renovated-1320.2786af9d.avif 1320w",
+    "src": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-880.38384a07.webp",
+    "srcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-480.cd309689.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-880.38384a07.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-1320.052c0c18.webp 1320w",
+    "avifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-480.50870eef.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-880.cb2aefbb.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/close-up-of-a-modern-bathroom-faucet-1320.48524849.avif 1320w",
     "width": 880,
     "height": 503
   },
@@ -427,13 +238,13 @@ export const MEDIA = {
     "alt": "Title card: Basement Development Permits in Winnipeg: How to Apply"
   },
   "card:basement-flood-protection-winnipeg": {
-    "src": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.9f921e14.webp",
-    "srcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1320.89704a8b.webp 1320w",
-    "avifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1320.99427962.avif 1320w",
+    "src": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
+    "srcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
+    "avifSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.fa19d7ec.avif 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.22bc170c.avif 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.99427962.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-in-1200x630.bca545a6.jpg",
+    "og": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x630.bca545a6.jpg",
     "alt": "Title card: Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits"
   },
   "card:clay-soil-basement-cracks-winnipeg": {
@@ -447,23 +258,23 @@ export const MEDIA = {
     "alt": "Title card: Clay Soil and Basement Cracks in Winnipeg: What’s Normal"
   },
   "card:clinic-renovation-permits-winnipeg": {
-    "src": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.6b2a1b51.webp",
-    "srcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1320.0e8b8a5a.webp 1320w",
-    "avifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1320.75e30f7c.avif 1320w",
+    "src": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
+    "srcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
+    "avifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.75e30f7c.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-1200x630.bc757f21.jpg",
+    "og": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x630.bc757f21.jpg",
     "alt": "Title card: Clinic Renovation Permits in Winnipeg: What to Plan For"
   },
   "card:ensuite-renovation-winnipeg": {
-    "src": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.fe4be3e4.webp",
-    "srcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1320.1282306c.webp 1320w",
-    "avifSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-480.e5e54e79.avif 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-880.6a5c883c.avif 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1320.6cd34f58.avif 1320w",
+    "src": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp",
+    "srcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.1282306c.webp 1320w",
+    "avifSrcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.e5e54e79.avif 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.6a5c883c.avif 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.6cd34f58.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-an-1200x630.ccbdff08.jpg",
+    "og": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x630.ccbdff08.jpg",
     "alt": "Title card: How Much Should an Ensuite Renovation Cost in Winnipeg?"
   },
   "card:exterior-painting-winnipeg-when-to-paint": {
@@ -477,23 +288,33 @@ export const MEDIA = {
     "alt": "Title card: When to Paint Your House Exterior in Winnipeg"
   },
   "card:home-additions-and-zoning-winnipeg": {
-    "src": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.b9f76c7b.webp",
-    "srcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1320.b7b5971a.webp 1320w",
-    "avifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1320.4c809500.avif 1320w",
+    "src": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
+    "srcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.33ab98c6.webp 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.b7b5971a.webp 1320w",
+    "avifSrcSet": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-480.d6c3ff1f.avif 480w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.7d7c2664.avif 880w, /images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1320.4c809500.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-in-1200x630.420c23b0.jpg",
+    "og": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x630.420c23b0.jpg",
     "alt": "Title card: Home Addition Zoning in Winnipeg: Permits and Variances"
   },
-  "card:home-renovation-financing-canada": {
-    "src": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-880.311eab5d.webp",
-    "srcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-1320.1e034cbf.webp 1320w",
-    "avifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-1320.a983957b.avif 1320w",
+  "card:home-renovation-cost-canada": {
+    "src": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
+    "srcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
+    "avifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-1200x630.fdd817b3.jpg",
+    "og": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x630.2525769f.jpg",
+    "alt": "Title card: How Much Does a Home Renovation Cost in Canada?"
+  },
+  "card:home-renovation-financing-canada": {
+    "src": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
+    "srcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.1e034cbf.webp 1320w",
+    "avifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.a983957b.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x630.fdd817b3.jpg",
     "alt": "Title card: Home Renovation Financing in Canada: Your Options"
   },
   "card:home-renovation-planning-guide-canada": {
@@ -507,23 +328,23 @@ export const MEDIA = {
     "alt": "Title card: Home Renovation Planning in Canada: Guide and Checklist"
   },
   "card:how-to-check-a-contractors-wcb-clearance-manitoba": {
-    "src": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.abd27f5e.webp",
-    "srcSet": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1320.a1fe8363.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1320.b0d9c3f3.avif 1320w",
+    "src": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp",
+    "srcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.a1fe8363.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.b0d9c3f3.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/how-to-check-a-contractors-wcb/title-card-how-to-check-a-1200x630.8a999200.jpg",
+    "og": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x630.8a999200.jpg",
     "alt": "Title card: How to Check a Contractor's WCB Clearance in Manitoba"
   },
   "card:insulation-rebates-during-a-renovation-manitoba": {
-    "src": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.b1620437.webp",
-    "srcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1320.707c702f.webp 1320w",
-    "avifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1320.70228dd9.avif 1320w",
+    "src": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp",
+    "srcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.707c702f.webp 1320w",
+    "avifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.70228dd9.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-in-1200x630.5496f199.jpg",
+    "og": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x630.5496f199.jpg",
     "alt": "Title card: Insulation Rebates in Manitoba: How to Use Them During a Renovation"
   },
   "card:manitoba-renovation-tax-credits-rebates": {
@@ -537,13 +358,13 @@ export const MEDIA = {
     "alt": "Title card: Home Renovation Grants and Tax Credits in Manitoba"
   },
   "card:office-fit-up-lease-planning-winnipeg": {
-    "src": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.9079ee23.webp",
-    "srcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1320.1977b93b.webp 1320w",
-    "avifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1320.b33e68fe.avif 1320w",
+    "src": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
+    "srcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
+    "avifSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.d81177bd.avif 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.432a5aed.avif 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.b33e68fe.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-1200x630.96b0b61e.jpg",
+    "og": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x630.96b0b61e.jpg",
     "alt": "Title card: Office Fit-Up in Winnipeg: Planning Around Your Lease"
   },
   "card:planning-a-winter-basement-development-winnipeg": {
@@ -557,13 +378,13 @@ export const MEDIA = {
     "alt": "Title card: Planning a Winter Basement Development in Winnipeg"
   },
   "card:radon-testing-before-finishing-a-basement": {
-    "src": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.4fd769ec.webp",
-    "srcSet": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1320.76850913.webp 1320w",
-    "avifSrcSet": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1320.2b128494.avif 1320w",
+    "src": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp",
+    "srcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.76850913.webp 1320w",
+    "avifSrcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.74291d9e.avif 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.a477a02e.avif 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.2b128494.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/radon-testing-before-finishing-a/title-card-radon-testing-before-1200x630.2a82280e.jpg",
+    "og": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x630.2a82280e.jpg",
     "alt": "Title card: Radon Testing Before Finishing a Basement in Manitoba"
   },
   "card:renovating-a-character-home-in-winnipeg": {
@@ -587,23 +408,23 @@ export const MEDIA = {
     "alt": "Title card: Restaurant Renovation Permits in Winnipeg: What You Need"
   },
   "card:secondary-suite-rules-winnipeg": {
-    "src": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.cc7d6942.webp",
-    "srcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1320.61116791.webp 1320w",
-    "avifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1320.fc70213a.avif 1320w",
+    "src": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
+    "srcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.61116791.webp 1320w",
+    "avifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.fc70213a.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-in-1200x630.05e576ee.jpg",
+    "og": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x630.05e576ee.jpg",
     "alt": "Title card: Secondary Suite Rules in Winnipeg: What the City Requires"
   },
   "card:spring-flood-prep-winnipeg-basements": {
-    "src": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.75d2d894.webp",
-    "srcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1320.cbfdceb0.webp 1320w",
-    "avifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1320.05e224cb.avif 1320w",
+    "src": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
+    "srcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.cbfdceb0.webp 1320w",
+    "avifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.05e224cb.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-for-1200x630.8405f91a.jpg",
+    "og": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x630.8405f91a.jpg",
     "alt": "Title card: Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist"
   },
   "card:what-does-a-general-contractor-do": {
@@ -627,23 +448,23 @@ export const MEDIA = {
     "alt": "Title card: Window and Door Replacement in Winnipeg: Permits, Glass and Rebates"
   },
   "card:winnipeg-renovation-permits": {
-    "src": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.55b461dd.webp",
-    "srcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1320.5c78c717.webp 1320w",
-    "avifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1320.53975749.avif 1320w",
+    "src": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
+    "srcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-in-1200x630.69ac1710.jpg",
+    "og": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x630.69ac1710.jpg",
     "alt": "Title card: Renovation Permits in Winnipeg: What Needs One and How to Apply"
   },
   "card:winnipeg-renovation-show-questions-to-ask": {
-    "src": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.77698d54.webp",
-    "srcSet": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
-    "avifSrcSet": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w",
+    "src": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp",
+    "srcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.101bf225.webp 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.77698d54.webp 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.77802d2d.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-480.50b98f27.avif 480w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-880.88d1a260.avif 880w, /images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1320.81693fe8.avif 1320w",
     "width": 880,
     "height": 495,
     "crop": "16:9",
-    "og": "/images/blog/winnipeg-renovation-show-questions-to/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg",
+    "og": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg",
     "alt": "Title card: Winnipeg Renovation Show: Questions to Ask Contractors"
   }
 };

@@ -5,12 +5,15 @@ import CtaBanner from '../components/CtaBanner.jsx';
 import YouTubeFacade from '../components/YouTubeFacade.jsx';
 import { formatPostDate } from '../components/BlogCard.jsx';
 import { CalendarIcon, ClockIcon } from '../components/icons.jsx';
-import NotFoundPage from './NotFoundPage.jsx';
 import { caseStudyBySlug, caseStudyPath } from '../data/caseStudies.js';
 import { serviceByPath } from '../data/services.js';
 import { trailFor } from '../data/seo.js';
 import { videoBySlug, videoPath, videoSeoOptions } from '../data/videos.js';
 import { usePageSeo } from '../hooks/useSeo.js';
+import { lazyWithRetry } from '../lib/lazyRetry.js';
+
+// Never rendered for a published video, so it is not modulepreloaded with it.
+const NotFoundPage = lazyWithRetry(() => import('./NotFoundPage.jsx'));
 
 /** 'PT1M45S' → '1 min 45 sec'. */
 function formatDuration(iso) {

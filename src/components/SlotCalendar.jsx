@@ -20,7 +20,7 @@ const cx = (...classes) => classes.filter(Boolean).join(' ');
 const monthKeyOf = ({ year, month }) => `${year}-${String(month).padStart(2, '0')}`;
 
 /**
- * Month view of open discovery-call times from the GoHighLevel calendar, with
+ * Month view of open on-site visit times from the GoHighLevel calendar, with
  * the chosen day's times listed underneath. Everything is shown in `timeZone`.
  * Bump `refreshKey` to re-fetch (e.g. after a slot was taken by someone else).
  */

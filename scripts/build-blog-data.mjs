@@ -5,15 +5,25 @@
  *   node scripts/build-blog-data.mjs            (offline, first step of `npm run build`)
  *   node scripts/build-blog-data.mjs --verify   (also HEAD-checks every remote image URL)
  *
- * Generated files (edit blog-raw/posts/*.json, never these):
- *   src/data/blogIndex.js     CLIENT. Published post metadata without bodies,
- *                             plus helpers (getPostBySlug, getRelatedPosts,
- *                             getPostsForService, BLOG_CATEGORIES). Pages and
- *                             components import blog data from here.
+ * Generated files (edit blog-raw/posts/*.json, never these). Each page loads
+ * only the blog data it shows:
+ *   src/data/posts/<slug>.js  CLIENT. Everything /blog/<slug> shows, loaded
+ *                             lazily by the post page: the full post (as in
+ *                             blogPosts.js, without `status`), its body
+ *                             { blocks, faqsTitle, faqs, answer, sources,
+ *                             reviewedBy } and `related` (three ranked cards).
+ *   src/data/postCards/<slug>.js  CLIENT. One post's card, for the guides on
+ *                             service pages (content.guides).
+ *   src/data/blogList.js      CLIENT. Everything /blog needs in one module:
+ *                             BLOG_CATEGORIES and BLOG_LIST (cards plus
+ *                             categories, metaDescription and ogImage).
+ *   src/data/homeGuides.js    CLIENT. The three guide cards on the home page
+ *                             (GUIDE_SLUGS below).
+ *   src/data/blogIndex.js     CLIENT. BLOG_CARDS: every published post's card
+ *                             and ranking fields, plus helpers (getPostBySlug,
+ *                             getRelatedPosts, getPostsForService), for a page
+ *                             that needs to list or rank posts.
  *                             (BLOG_REDIRECTS is build-only: blogPosts.js.)
- *   src/data/posts/<slug>.js  CLIENT. One body per published post, loaded
- *                             lazily by the post page:
- *                             { blocks, faqsTitle, faqs, answer, sources, reviewedBy }.
  *   src/data/blogPosts.js     BUILD ONLY (head.js, build-seo-files,
  *                             sync-redirects, audit). Full posts including
  *                             bodies, same helpers. Client code must never
@@ -32,8 +42,10 @@
  *   date, updated?  YYYY-MM-DD (updated may carry a time and offset). Change
  *                   `updated` only with a real content change.
  *   cats[]          categories; the first is the card/section tag
- *   services[]      service paths the post supports (first = CTA target,
- *                   used by related posts and service-page guide lists)
+ *   services[]      service paths the post supports (used by related posts;
+ *                   the first is the post's service CTA unless the post is
+ *                   general: 4+ services, or 2+ in a general cluster, see
+ *                   BlogPostPage.jsx serviceCta)
  *   cluster         topic id shared by posts on one subject ('' = none)
  *   author?, reviewedBy?  ids in src/data/people.js ('' = the business)
  *   answer?         40–60 word quick answer shown above the body
@@ -53,8 +65,8 @@
  * Inline text (p/li/quote/answer/faqs/table cells): [label](/path),
  * [label](https://…) and **bold**. Internal links must point at a live,
  * indexable page: links to redirect sources, noindex routes, unpublished
- * posts, draft service pages or ?query URLs fail the build; paths this script
- * cannot place are warned about.
+ * posts, draft service pages, ?query URLs or paths that are not a page on the
+ * site fail the build.
  *
  * Images: when src/data/media.generated.js exists (original URL →
  * { src, srcSet, avifSrcSet, width, height, hero?, og? }) the self-hosted
@@ -70,8 +82,20 @@ const VERIFY = process.argv.includes('--verify');
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const POSTS_DIR = join(ROOT, 'blog-raw', 'posts');
 const OUT_INDEX = join(ROOT, 'src', 'data', 'blogIndex.js');
+const OUT_LIST = join(ROOT, 'src', 'data', 'blogList.js');
+const OUT_HOME = join(ROOT, 'src', 'data', 'homeGuides.js');
 const OUT_FULL = join(ROOT, 'src', 'data', 'blogPosts.js');
 const OUT_BODIES = join(ROOT, 'src', 'data', 'posts');
+const OUT_CARDS = join(ROOT, 'src', 'data', 'postCards');
+
+// The home page guides strip: these posts first, in this order; if one is not
+// published, the newest other posts fill the strip so it always shows three cards.
+const GUIDE_SLUGS = [
+  'winnipeg-renovation-permits',
+  'how-to-choose-the-right-contractor-for-your-renovation-project',
+  'basement-development-permits-winnipeg',
+];
+const GUIDE_COUNT = 3;
 
 const errors = [];
 const warnings = [];
@@ -123,6 +147,19 @@ const redirectsModule = await optionalModule('src/data/redirects.js');
 const costGuidesModule = await optionalModule('src/data/costGuides/index.js');
 // Live cost guides are pages too (hub + /services/<slug>/cost spokes); drafts are not linked.
 const COST_GUIDES = costGuidesModule && Array.isArray(costGuidesModule.COST_GUIDES) ? costGuidesModule.COST_GUIDES : [];
+// Published community pages, case studies and videos (same helpers head.js uses).
+const areasModule = await optionalModule('src/data/serviceAreasContent.js');
+const caseStudiesModule = await optionalModule('src/data/caseStudies.js');
+const videosModule = await optionalModule('src/data/videos.js');
+const livePaths = (mod, list, pathOf, fallback) =>
+  mod && typeof mod[list] === 'function'
+    ? mod[list]().map((entry) => (pathOf && typeof mod[pathOf] === 'function' ? mod[pathOf](entry) : fallback(entry)))
+    : [];
+const TEMPLATE_PAGES = [
+  ...livePaths(areasModule, 'publishedServiceAreas', null, (area) => area.path),
+  ...livePaths(caseStudiesModule, 'publishedCaseStudies', 'caseStudyPath', (study) => `/projects/${study.slug}`),
+  ...livePaths(videosModule, 'publishedVideos', 'videoPath', (video) => `/videos/${video.slug}`),
+];
 
 /* ------------------------------------------------------------ images */
 const WIX_MEDIA = /^https:\/\/static\.wixstatic\.com\/media\/[^/?#]+$/;
@@ -441,6 +478,7 @@ const knownPages = new Set([
   ...Object.keys((seoModule && seoModule.SERVICE_SEO) || {}),
   ...(SERVICES || []).filter((s) => s.status === 'live').map((s) => s.path),
   ...COST_GUIDES.filter((g) => g.status === 'live').map((g) => g.path),
+  ...TEMPLATE_PAGES,
   ...publishedPaths,
 ].map(cleanPath));
 const draftServices = new Set([
@@ -464,7 +502,9 @@ for (const p of published) {
       else if (noindex.has(path)) fail(`${p.slug}: link ${path} is a noindex page`);
       else if (draftServices.has(path)) fail(`${p.slug}: link ${path} is a draft service page`);
       else if (path.startsWith('/blog/') && !publishedPaths.has(path)) fail(`${p.slug}: link ${path} is not a published post`);
-      else if (!knownPages.has(path)) warn(`${p.slug}: link ${path} is not a page this script knows about — check it exists`);
+      // Without the page inventory (seo.js failed to load, warned above) an
+      // unknown path can't be judged, so it is only a warning then.
+      else if (!knownPages.has(path)) (seoModule ? fail : warn)(`${p.slug}: link ${path} is not a page on the site — link a live page`);
     }
   }
 }
@@ -494,22 +534,15 @@ if (errors.length) {
 }
 
 /* ------------------------------------------------------------ write */
-const HELPERS = `
-export function getPostBySlug(slug) {
-  return BLOG_POSTS.find((post) => post.slug === slug);
-}
-
+// The related-posts ranking runs here (each post module carries its related
+// cards) and is copied, as written, into the generated helpers below.
 const dayOf = (date) => Date.parse(String(date || '').slice(0, 10)) || 0;
 const shared = (a, b) => (a || []).filter((item) => (b || []).includes(item)).length;
 
-/**
- * Related posts, best first: shared services ×3 + same cluster ×2 + shared
- * categories ×1; ties go to the post published closest in time, then the
- * newer one.
- */
-export function getRelatedPosts(post, limit = 3) {
+function rankRelated(list, post, limit = 3) {
   if (!post) return [];
-  return BLOG_POSTS.filter((item) => item.slug !== post.slug)
+  return list
+    .filter((item) => item.slug !== post.slug)
     .map((item) => ({
       item,
       score:
@@ -523,9 +556,29 @@ export function getRelatedPosts(post, limit = 3) {
     .map(({ item }) => item);
 }
 
+// LIST: the module's post array (BLOG_CARDS in blogIndex.js, BLOG_POSTS in blogPosts.js).
+const helpers = (LIST) => `
+export function getPostBySlug(slug) {
+  return ${LIST}.find((post) => post.slug === slug);
+}
+
+const dayOf = ${dayOf};
+const shared = ${shared};
+
+/**
+ * Related posts, best first: shared services ×3 + same cluster ×2 + shared
+ * categories ×1; ties go to the post published closest in time, then the
+ * newer one. (Each post module already carries its own, as \`related\`.)
+ */
+${rankRelated}
+
+export function getRelatedPosts(post, limit = 3) {
+  return rankRelated(${LIST}, post, limit);
+}
+
 /** The newest published posts that list a service path in \`services\`. */
 export function getPostsForService(path, limit = 3) {
-  return BLOG_POSTS.filter((post) => (post.services || []).includes(path)).slice(0, limit);
+  return ${LIST}.filter((post) => (post.services || []).includes(path)).slice(0, limit);
 }
 `;
 
@@ -534,24 +587,61 @@ const HEADER = `// Generated by scripts/build-blog-data.mjs from blog-raw/posts/
 
 const json = (value) => JSON.stringify(value, null, 2);
 
+/** `post` with only `fields`, in that order, leaving out empty values ('', null, false). */
+const pick = (post, fields) =>
+  Object.fromEntries(
+    fields.filter((key) => post[key] !== undefined && post[key] !== null && post[key] !== '' && post[key] !== false).map((key) => [key, post[key]])
+  );
+
+// What a blog card shows (src/components/BlogCard.jsx).
+const CARD_FIELDS = ['slug', 'title', 'excerpt', 'category', 'date', 'readMinutes', 'hero', 'heroSrc', 'heroSrcSet', 'heroAvifSrcSet'];
+const cardOf = (post) => pick(post, CARD_FIELDS);
+
 const indexOut = `${HEADER}
 //
-// Client-side blog data: published post metadata only (no bodies). Each body
-// is its own module in src/data/posts/<slug>.js, loaded by the post page.
+// Client-side card index: each published post's card and ranking fields (no
+// bodies, no head-only fields; empty values are left out), for a page that
+// needs to list or rank posts. The pages that show posts today load smaller
+// modules: the post page src/data/posts/<slug>.js, service pages
+// src/data/postCards/<slug>.js, /blog blogList.js and the home page homeGuides.js.
+
+/** Published posts only (blog-raw status "published"), newest first, card and ranking fields. */
+export const BLOG_CARDS = ${json(posts.map((post) => pick(post, [...CARD_FIELDS, 'categories', 'services', 'cluster'])))};
+${helpers('BLOG_CARDS')}`;
+
+const listOut = `${HEADER}
+//
+// Everything /blog (src/pages/BlogPage.jsx) needs, in one module: the filter
+// categories and every published post's card, categories, meta description
+// and 1200x630 image (its Blog node, seo.js buildBlogNode).
 
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = ${json(categories)};
 
-/** Published posts only (blog-raw status "published"), newest first, without bodies. */
-export const BLOG_POSTS = ${json(posts)};
-${HELPERS}`;
+/** Published posts only (blog-raw status "published"), newest first. */
+export const BLOG_LIST = ${json(posts.map((post) => pick(post, [...CARD_FIELDS, 'categories', 'metaDescription', 'ogImage'])))};
+`;
+
+for (const slug of GUIDE_SLUGS) {
+  if (!publishedPaths.has(`/blog/${slug}`)) warn(`home guides: ${slug} is not published — the newest other post takes its place`);
+}
+const pickedGuides = GUIDE_SLUGS.map((slug) => posts.find((post) => post.slug === slug)).filter(Boolean);
+const homeGuides = [...pickedGuides, ...posts.filter((post) => !pickedGuides.includes(post))].slice(0, GUIDE_COUNT);
+const homeOut = `${HEADER}
+//
+// The guides strip on the home page (src/pages/Home.jsx): GUIDE_SLUGS in
+// scripts/build-blog-data.mjs, filled with the newest other posts, as cards.
+
+export const HOME_GUIDES = ${json(homeGuides.map(cardOf))};
+`;
 
 const fullPosts = posts.map((post) => ({ ...post, status: 'published', ...bodies.get(post.slug) }));
 const fullOut = `${HEADER}
 //
 // BUILD ONLY (head.js, build-seo-files, sync-redirects, audit-seo): every
-// published post WITH its body. Client code imports src/data/blogIndex.js
-// instead; build-blog-data.mjs fails if any other src file imports this one.
+// published post WITH its body. Client code imports the smaller generated
+// modules instead (src/data/posts/, postCards/, blogList.js, homeGuides.js,
+// blogIndex.js); build-blog-data.mjs fails if any other src file imports this one.
 
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = ${json(categories)};
@@ -561,20 +651,31 @@ export const BLOG_POSTS = ${json(fullPosts)};
 
 /** Retired post URLs and their targets (for the SEO audit; served by src/data/redirects.js). */
 export const BLOG_REDIRECTS = ${json(redirects)};
-${HELPERS}`;
+${helpers('BLOG_POSTS')}`;
 
-mkdirSync(OUT_BODIES, { recursive: true });
 const keep = new Set(posts.map((p) => `${p.slug}.js`));
-for (const file of readdirSync(OUT_BODIES)) {
-  if (file.endsWith('.js') && !keep.has(file)) unlinkSync(join(OUT_BODIES, file));
+for (const dir of [OUT_BODIES, OUT_CARDS]) {
+  mkdirSync(dir, { recursive: true });
+  for (const file of readdirSync(dir)) {
+    if (file.endsWith('.js') && !keep.has(file)) unlinkSync(join(dir, file));
+  }
 }
 for (const post of posts) {
+  // Everything /blog/<slug> shows: the full post (as in blogPosts.js) and the
+  // cards of its related posts, ranked here.
+  const postModule = { ...post, ...bodies.get(post.slug), related: rankRelated(posts, post).map(cardOf) };
   writeFileSync(
     join(OUT_BODIES, `${post.slug}.js`),
-    `${HEADER}\n//\n// Body of /blog/${post.slug}, loaded lazily by src/pages/BlogPostPage.jsx.\nexport default ${json(bodies.get(post.slug))};\n`
+    `${HEADER}\n//\n// /blog/${post.slug}: the post, its body and its related posts' cards, loaded\n// lazily by src/pages/BlogPostPage.jsx (and prefetched by its blog cards).\nexport default ${json(postModule)};\n`
+  );
+  writeFileSync(
+    join(OUT_CARDS, `${post.slug}.js`),
+    `${HEADER}\n//\n// The card of /blog/${post.slug}, for the guides on service pages\n// (src/pages/services/ServiceRoute.jsx).\nexport default ${json(cardOf(post))};\n`
   );
 }
 writeFileSync(OUT_INDEX, indexOut);
+writeFileSync(OUT_LIST, listOut);
+writeFileSync(OUT_HOME, homeOut);
 writeFileSync(OUT_FULL, fullOut);
 
 /* ---------------------------------------------------------- summary */
@@ -583,6 +684,7 @@ const bodyImages = [...bodies.values()].flatMap((b) => b.blocks.filter((block) =
 console.log('blog-raw/posts:', raw.length, JSON.stringify(byStatus));
 console.log('published posts:', posts.length, '| redirects:', redirects.length, '| post modules:', bodies.size);
 console.log('categories:', categories.join(' | '));
+console.log('home guides:', homeGuides.map((p) => p.slug).join(', '));
 console.log('faqs:', posts.map((p) => bodies.get(p.slug).faqs.length).join(','), '| member-only:', posts.filter((p) => p.memberOnly).length);
 console.log(
   'images:',

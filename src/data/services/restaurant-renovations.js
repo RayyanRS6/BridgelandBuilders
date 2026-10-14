@@ -3,7 +3,8 @@
 // Brief (plan §7): front and back of house, service hours, food-premises
 // authority (verified), hotels section (owner confirmed hotel work 2026-10-13).
 // Hotels live in the types section ("Restaurants, Cafés, Bars & Hotels") and
-// the hotel FAQ; the navbar "Hotels" item links here.
+// the hotel FAQ; the navbar, /services and commercial-page "Hotels" items link
+// to the first hotel card (#hotels).
 //
 // The intro image is a stock inspiration photo, not a Bridgeland job: keep its
 // alt to what is visible. No gallery or testimonial until real, consented job
@@ -97,18 +98,19 @@ export default {
     serviceType: 'Restaurant and hospitality renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Restaurants, cafés, bars and hotels' },
     primaryKeyword: 'restaurant renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   typesTag: 'Hospitality Spaces',
   typesTitle: 'Restaurants, Cafés, Bars & Hotels',
   typesDesc: 'Hotels get the same planning around guests that restaurants get around service.',
   types: [
-    { title: 'Full-Service Restaurants', text: 'Dining rooms, kitchens, bars and washrooms, from a refresh of finishes to a full restaurant fit-out for a new location.' },
+    { title: 'Full-Service Restaurants', text: 'Dining rooms, kitchens, bars and washrooms, from a refresh of finishes to a full remodel, or a fit-out for a new location.' },
     { title: 'Cafés & Coffee Shops', text: 'Counters, seating, display cases and compact prep areas planned for quick morning service in a small footprint.' },
     { title: 'Bars & Lounges', text: 'Bar fronts, back bars, seating and lighting. Licensed premises must tell the LGCA about major renovations, so build that into the plan.' },
     { title: 'Quick-Service & Takeout', text: 'Ordering counters, pickup areas and efficient kitchens for restaurants that do most of their business as takeout and delivery.' },
-    { title: 'Hotel Guest Rooms & Corridors', text: 'Room-by-room or floor-by-floor upgrades of finishes, bathrooms, lighting and corridors while the rest of the hotel stays open.' },
+    // id: the anchor the "Hotels" links point to (/services/restaurant-renovations#hotels).
+    { id: 'hotels', title: 'Hotel Guest Rooms & Corridors', text: 'Room-by-room or floor-by-floor upgrades of finishes, bathrooms, lighting and corridors while the rest of the hotel stays open.' },
     { title: 'Hotel Lobbies & Common Areas', text: 'Lobbies, front desks, breakfast rooms, meeting rooms and fitness areas, phased around check-in times and events.' },
   ],
 
@@ -133,10 +135,15 @@ export default {
     ],
   },
 
-  // Commercial cost page stays unpublished (no data, plan §8).
-  costTeaser: null,
+  // Commercial cost page stays unpublished (no data, plan §8): the teaser
+  // points to the cost hub's "priced after a visit" section. No numbers.
+  costTeaser: {
+    text: 'Restaurant and hotel renovations are priced in a free written quote after a site visit, once we have seen the space, your equipment list and your service hours. Our Winnipeg cost guide explains what moves the price of a renovation.',
+    to: '/renovation-cost-winnipeg#priced-after-a-visit',
+    label: 'Renovation costs in Winnipeg',
+  },
   // Live pages only are shown; drafts appear when they launch.
   related: ['/services/commercial-renovations', '/services/retail-renovations', '/services/general-contracting', '/services/office-renovations'],
   guides: ['restaurant-renovation-permits-winnipeg', 'the-biggest-cost-factors-in-commercial-renovation-projects', 'how-to-balance-functionality-and-aesthetics-in-a-commercial-space'],
-  signoff: null,
+  ownerSignoff: null,
 };

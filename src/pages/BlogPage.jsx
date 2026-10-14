@@ -2,10 +2,11 @@ import { useMemo, useState } from 'react';
 import PageHero from '../components/PageHero.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import BlogCard from '../components/BlogCard.jsx';
-// Metadata only: post bodies are separate chunks (src/data/posts/), so the
-// blog index never downloads article text. BLOG_CATEGORIES is the plan's
+// Cards plus what the Blog node needs (meta description, 1200x630 image), in
+// one generated module: post bodies are separate chunks (src/data/posts/),
+// so /blog never downloads article text. BLOG_CATEGORIES is the plan's
 // category set once posts carry it, else the categories posts carry today.
-import { BLOG_CATEGORIES, BLOG_POSTS } from '../data/blogIndex.js';
+import { BLOG_CATEGORIES, BLOG_LIST as BLOG_POSTS } from '../data/blogList.js';
 import { buildBlogNode, seoFor } from '../data/seo.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 

@@ -6,6 +6,7 @@
   "metaDescription": "Plan a Winnipeg office fit-up around your lease: landlord consent, tenant allowances, City permits, inspections and the occupancy permit before move-in.",
   "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
   "date": "2026-10-13",
+  "updated": "2026-10-14",
   "cats": [
     "Commercial",
     "Permits & Planning"
@@ -74,7 +75,7 @@
     },
     {
       "q": "Can we move furniture and computers in before the occupancy permit?",
-      "a": "Furniture, yes; computers, no. The City's occupancy bulletin allows desks, workstations, chairs and tables to be delivered and installed before the permit, but lists storing personal belongings and installing loose equipment such as computers, printers and copiers among the things you can't do yet, along with training staff and meeting clients. Plan IT installation and your first workday for after the interim or final occupancy permit is issued."
+      "a": "Furniture, yes; computers, no. The City's occupancy bulletin allows desks, workstations, chairs and tables to be delivered and installed before the permit, but not storing personal belongings, installing loose equipment such as computers, printers and copiers, training staff or meeting clients. Plan IT installation and your first workday for after the interim or final occupancy permit is issued."
     },
     {
       "q": "Do I need an architect for an office fit-up?",
@@ -88,7 +89,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "A fit-up, also called tenant or leasehold improvements, is the work that turns a leased space into your office: walls, doors, lighting, power and data, finishes and sometimes mechanical changes. The construction is only part of the timeline. The lease decides who pays and what you may build, and the City decides when people can work there. Our [office renovation services](/services/office-renovations) page covers the build; this guide covers the planning around it."
+      "x": "A fit-up, also called tenant or leasehold improvements, is the work that turns a leased space into your office: walls, doors, lighting, power and data, finishes and sometimes mechanical changes. The construction is only part of the timeline."
+    },
+    {
+      "t": "p",
+      "x": "The lease decides who pays and what you may build, and the City decides when people can work there. Our [office renovation services](/services/office-renovations) page covers the build; this guide covers the planning around it."
     },
     {
       "t": "h2",
@@ -149,7 +154,11 @@
     },
     {
       "t": "p",
-      "x": "Office projects have a few specifics. In a multi-tenant building, the form asks for your neighbouring tenants because fire separation requirements depend on their uses. Tenant fit-ups in new Part 3 buildings need a Manitoba Energy Code for Buildings declaration. Projects exempt from a development permit file a declaration instead; otherwise the development permit can be reviewed before or alongside the building permit."
+      "x": "Office projects have a few specifics. In a multi-tenant building, the form asks for your neighbouring tenants because fire separation requirements depend on their uses."
+    },
+    {
+      "t": "p",
+      "x": "Tenant fit-ups in new Part 3 buildings need a Manitoba Energy Code for Buildings declaration. Projects exempt from a development permit file a declaration instead; otherwise the development permit can be reviewed before or alongside the building permit."
     },
     {
       "t": "p",
@@ -161,7 +170,11 @@
     },
     {
       "t": "p",
-      "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space. Construction and the delivery and installation of furniture such as desks, workstations and cubicle partitions are allowed earlier, but storing personal belongings is not, so plan IT set-up and move day around the permit."
+      "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space."
+    },
+    {
+      "t": "p",
+      "x": "Construction and the delivery and installation of furniture such as desks, workstations and cubicle partitions are allowed earlier, but storing personal belongings is not, so plan IT set-up and move day around the permit."
     },
     {
       "t": "p",
@@ -214,7 +227,11 @@
     },
     {
       "t": "p",
-      "x": "Ask the property manager about elevator bookings, after-hours access and restricted tasks. If clients visit and an accessible entrance or washroom will be out of use, Manitoba's Accessible Customer Service Standard requires you to let the public know when and why. Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps and sends a progress update every week. More on staying open is in our guide to [preparing your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation)."
+      "x": "Ask the property manager about elevator bookings, after-hours access and restricted tasks. If clients visit and an accessible entrance or washroom will be out of use, Manitoba's Accessible Customer Service Standard requires you to let the public know when and why."
+    },
+    {
+      "t": "p",
+      "x": "Bridgeland Builders schedules commercial work in the evenings and on weekends where it helps and sends a progress update every week. More on staying open is in our guide to [preparing your business for a major renovation](/blog/how-to-prepare-your-business-for-a-major-renovation)."
     },
     {
       "t": "h2",

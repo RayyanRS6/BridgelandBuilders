@@ -17,7 +17,10 @@
  *   crumb         page name in breadcrumbs (visible trail = schema trail); the
  *                 singular form the first six pages always showed
  *   navLabel      name used in menus, the footer and the llms files
- *   summary       one-line description for directory / related-service cards
+ *   summary       one-line description for related-service cards (and the
+ *                 /services card when there is no cardDescription)
+ *   cardDescription  25–40 words for the /services directory card, written
+ *                 from the page's own intro (owner-confirmed facts only)
  *   category      'residential' | 'commercial' | 'additional'
  *   parent        path of the parent service page (nested breadcrumbs), or null
  *   status        'live'  = routed, prerendered, in the sitemap and linked
@@ -45,6 +48,8 @@ export const SERVICES = [
     crumb: 'Basement Renovation',
     navLabel: 'Basement renovations',
     summary: 'Turn an unfinished or outdated basement into warm, dry, useful living space.',
+    cardDescription:
+      'Turn an unfinished or outdated basement into warm, dry living space. We check for moisture before framing, insulate the walls for Winnipeg winters and coordinate the permits. A typical basement takes four to eight weeks.',
     category: 'residential',
     parent: null,
     status: 'live',
@@ -60,6 +65,8 @@ export const SERVICES = [
     crumb: 'Basement Suite',
     navLabel: 'Basement suites',
     summary: 'Self-contained basement suites, with permits, egress windows and the layout planned before framing starts.',
+    cardDescription:
+      'A self-contained suite for a tenant or a family member. We confirm zoning and permits first, then plan the entrance, egress windows, kitchen, bathroom, fire protection and sound control before framing starts.',
     category: 'residential',
     parent: '/services/basement-renovations',
     status: 'live',
@@ -75,6 +82,8 @@ export const SERVICES = [
     crumb: 'Bathroom Renovation',
     navLabel: 'Bathroom renovations',
     summary: 'Well-planned bathrooms with reliable waterproofing, durable finishes, and practical storage.',
+    cardDescription:
+      'Bathrooms, ensuites and powder rooms rebuilt with backer board, a waterproofing membrane and a properly sloped shower base under the tile. Most bathrooms take two to three weeks from demolition to the final clean.',
     category: 'residential',
     parent: null,
     status: 'live',
@@ -90,6 +99,8 @@ export const SERVICES = [
     crumb: 'Home Addition',
     navLabel: 'Home additions',
     summary: 'Add the room your home is missing with an addition designed to feel like it has always belonged.',
+    cardDescription:
+      'Add the room your home is missing, such as a family room, larger kitchen, main-floor bedroom or mudroom. Foundation, structure, roof, utilities and finishes are planned so it connects with the existing house.',
     category: 'residential',
     parent: null,
     status: 'live',
@@ -108,6 +119,8 @@ export const SERVICES = [
     crumb: 'Kitchen Renovation',
     navLabel: 'Kitchen renovations',
     summary: 'Improve the layout, storage, lighting, and finishes in the hardest-working room in your home.',
+    cardDescription:
+      'Layout, cabinets, countertops, backsplash, lighting and appliance fit, planned around how you cook before the finishes are chosen. Most full kitchens take four to six weeks once the cabinets arrive.',
     category: 'residential',
     parent: null,
     status: 'live',
@@ -123,6 +136,8 @@ export const SERVICES = [
     crumb: 'Whole Home Renovation',
     navLabel: 'Whole home renovations',
     summary: 'Coordinate every room under one clear plan and one consistent finish.',
+    cardDescription:
+      'Layout, kitchen, bathrooms, flooring, paint, wiring and plumbing under one schedule and one written scope, so the finishes match from room to room. Most whole home renovations take eight to sixteen weeks.',
     category: 'residential',
     parent: null,
     status: 'live',
@@ -155,6 +170,8 @@ export const SERVICES = [
     crumb: 'Office Renovation',
     navLabel: 'Office renovations',
     summary: 'Workspaces, meeting rooms, lighting, and layouts built around your team.',
+    cardDescription:
+      'From a single meeting room to a full tenant fit-up, planned around your lease dates and your team’s working hours. Noisy work can be scheduled for evenings and weekends, so your team can keep working where possible.',
     category: 'commercial',
     parent: '/services/commercial-renovations',
     status: 'live',
@@ -170,6 +187,8 @@ export const SERVICES = [
     crumb: 'Retail Renovation',
     navLabel: 'Retail renovations',
     summary: 'Customer-ready retail layouts, finishes, displays, and service areas.',
+    cardDescription:
+      'Store layouts, storefronts, fitting rooms, cash areas and showrooms, planned around your opening date. Much of the work can happen after close and on weekends, and you get a progress update every week.',
     category: 'commercial',
     parent: '/services/commercial-renovations',
     status: 'live',
@@ -185,6 +204,8 @@ export const SERVICES = [
     crumb: 'Restaurant Renovation',
     navLabel: 'Restaurants & hospitality',
     summary: 'Guest-facing spaces and back-of-house areas delivered around your operating schedule.',
+    cardDescription:
+      'Dining rooms, bars, cafés and commercial kitchens, front of house and back, scheduled around your service hours and planned with the public health plan review in mind. Evening and weekend work is available.',
     category: 'commercial',
     parent: '/services/commercial-renovations',
     status: 'live',
@@ -200,6 +221,8 @@ export const SERVICES = [
     crumb: 'Medical & Dental Office Renovation',
     navLabel: 'Medical & dental offices',
     summary: 'Professional clinical environments planned for workflow, privacy, and accessibility.',
+    cardDescription:
+      'Operatories, exam and treatment rooms, reception and sterilization areas for dental, medical and physio clinics, phased around patient hours and finished with surfaces that are easy to clean.',
     category: 'commercial',
     parent: '/services/commercial-renovations',
     status: 'live',
@@ -215,6 +238,8 @@ export const SERVICES = [
     crumb: 'General Contracting',
     navLabel: 'General contracting',
     summary: 'One contractor to run the work from drawings to handover: trades, schedule, permits and inspections.',
+    cardDescription:
+      'One contractor to run your project from start to handover: scheduling and supervising the trades, ordering materials, coordinating permits and inspections, and building to your architect’s or designer’s drawings, for homes and businesses.',
     category: 'commercial',
     parent: null,
     status: 'live',
@@ -233,6 +258,8 @@ export const SERVICES = [
     crumb: 'Windows & Doors',
     navLabel: 'Windows and doors installation',
     summary: 'Secure, weather-tight installations with clean interior and exterior finishing.',
+    cardDescription:
+      'Replacement windows, entry and patio doors, and new or larger openings with any permit arranged first. Each unit is set level, insulated and sealed against freeze and thaw, and the trim is finished inside and out.',
     category: 'additional',
     parent: null,
     status: 'live',
@@ -248,6 +275,8 @@ export const SERVICES = [
     crumb: 'Exterior Painting',
     navLabel: 'Exterior painting',
     summary: 'Careful preparation and durable exterior coatings suited to Winnipeg conditions.',
+    cardDescription:
+      'Siding, trim, stucco and doors repainted on homes and commercial buildings. Most of the work is preparation: washing, scraping, repairs and priming before the finish coats, booked for dry days in the warmer months.',
     category: 'additional',
     parent: null,
     status: 'live',
@@ -263,6 +292,8 @@ export const SERVICES = [
     crumb: 'Masonry & Stucco',
     navLabel: 'Masonry & stucco',
     summary: 'Repairs, upgrades, and new masonry finishes for homes and commercial properties.',
+    cardDescription:
+      'Cracked stucco, crumbling mortar joints and loose or damaged brick and stone repaired on homes and commercial buildings. We look for the cause of the damage first, then rebuild with compatible materials and blend the finish.',
     category: 'additional',
     parent: null,
     status: 'live',
@@ -278,6 +309,8 @@ export const SERVICES = [
     crumb: 'Flooring',
     navLabel: 'Flooring',
     summary: 'Removal, preparation, and installation for durable, level, finished floors.',
+    cardDescription:
+      'Old flooring taken up, the subfloor checked for level, moisture and movement, then new floors laid over the right underlayment in homes, basements and commercial spaces, with trim and transitions fitted cleanly.',
     category: 'additional',
     parent: null,
     status: 'live',
@@ -293,6 +326,8 @@ export const SERVICES = [
     crumb: 'Demolition',
     navLabel: 'Demolition',
     summary: 'Controlled demolition, removal, and cleanup that leaves the space ready for its next stage.',
+    cardDescription:
+      'Interior strip-outs of kitchens, bathrooms, basements and commercial spaces ahead of a renovation, with dust control, older materials checked before anything comes down, and debris hauled away so the space is ready for the next stage.',
     category: 'additional',
     parent: null,
     status: 'live',

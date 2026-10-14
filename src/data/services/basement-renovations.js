@@ -42,7 +42,8 @@ export default {
     floatingText: 'We check moisture and insulation before any framing goes up.',
     paragraphs: [
       'Basements are the easiest room to finish badly. Frame straight onto a cold foundation wall, skip the vapour control, and two winters later you’ve got a musty smell and mould behind brand new drywall.',
-      'So we start underground, not with paint chips. We check for signs of moisture, look at how water moves around your foundation, and make sure any drainage or leak problem is fixed — by a specialist where it needs one — before we frame anything. Then we insulate properly for a Winnipeg winter so the room is actually warm in February.',
+      'So we start underground, not with paint chips. We check for signs of moisture, look at how water moves around your foundation, and make sure any drainage or leak problem is fixed — by a specialist where it needs one — before we frame anything.',
+      'Then we insulate properly for a Winnipeg winter so the room is actually warm in February.',
       'Once that’s handled, the fun part is easy. Family room, home office, guest room, gym, a bathroom down there, a wet bar — whatever you’re after. And if you’re thinking about a rental suite, we’ll walk you through the egress window and ceiling height rules before you commit to anything.',
     ],
     checklist: ['Family & Rec Rooms', 'Basement Bathrooms', 'Egress Windows', 'Proper Insulation'],
@@ -65,7 +66,7 @@ export default {
   typesTag: 'Project Types',
   typesTitle: 'What can a finished basement be used for?',
   typesDesc:
-    'Most basement projects are one of three things: finishing an unfinished basement, renovating one that is already finished, or adding a bedroom, bathroom or self-contained suite. How you plan to use the space decides the layout, the permits and whether you need an egress window, so that is the first thing we ask about.',
+    'Most basement projects are one of three things: finishing an unfinished basement, a remodel of one that is already finished, or adding a bedroom, bathroom or self-contained suite. How you plan to use the space decides the layout, the permits and whether you need an egress window, so that is the first thing we ask about.',
   types: [
     { title: 'Unfinished basement finishing', text: 'From bare concrete to finished rooms: framing, insulation, electrical, heating, drywall and flooring, with a building permit and inspections along the way.' },
     { title: 'Renovating a finished basement', text: 'Replacing dated finishes, opening up the layout or adding rooms. New flooring, trim and paint alone need no building permit; a new bedroom does.' },
@@ -83,7 +84,14 @@ export default {
     items: [
       { title: 'Building permit', text: 'The Winnipeg Building By-law, amended in February 2026, requires a building permit to finish a previously undeveloped level or create a new bedroom. Cosmetic updates to an already finished basement, such as flooring, trim and paint, do not. Electrical and plumbing work often need permits of their own.' },
       { title: 'Inspections before drywall', text: 'Rough-in inspections of framing, heating, electrical and plumbing happen before anything is covered. In a new house bought with an unfinished basement, the City also requires a pre-board inspection of the insulated frost walls before they are covered.' },
-      { title: 'A second exit for bedrooms', text: 'The City’s basement guide says a new bedroom needs a window that opens from inside without tools, with at least 0.35 m² (3.77 sq ft) of clear opening and no dimension under 380 mm (15 in.), and 760 mm (30 in.) of clearance in front of it in a window well. A door leading directly outside removes the need for the window.' },
+      // Two short paragraphs (plan §19: 60 words or fewer each).
+      {
+        title: 'A second exit for bedrooms',
+        text: [
+          'The City’s basement guide says a new bedroom needs a window that opens from inside without tools, with at least 0.35 m² (3.77 sq ft) of clear opening and no dimension under 380 mm (15 in.), and 760 mm (30 in.) of clearance in front of it in a window well.',
+          'A door leading directly outside removes the need for the window.',
+        ],
+      },
       { title: 'Moisture control before framing', text: 'The City requires a backwater valve in homes built since 1979 and a sump pit with a pump in homes built since 1990, and asks owners to keep downspouts and grading directing water away. Waterproofing and foundation repair are specialist work, so active leaks go to a specialist first.' },
       { title: 'Radon testing', text: 'Health Canada says all homes have some radon and levels are generally highest in basements. It recommends a long-term test of at least three months, ideally in fall or winter, on the lowest lived-in level. Above the 200 Bq/m³ guideline, hire a certified mitigation professional.' },
       { title: 'Insulation rebates', text: 'Efficiency Manitoba’s Home Insulation Rebate includes foundation walls, but approval must come before buying materials or starting any work, including removing drywall, and materials must come from a registered contractor or retailer. Raise it at the on-site visit so the timing works.' },
@@ -142,7 +150,7 @@ export default {
   faqs: [
     { q: 'How long does basement development take?', a: 'A typical basement takes four to eight weeks of work, depending on its size, the number of rooms, and whether a bathroom is added. Permit review and inspections are part of the schedule, so we build them into the timeline we give you with the written quote instead of leaving them as a surprise.' },
     { q: 'Do I need a permit to finish my basement in Winnipeg?', a: 'Yes, if you are finishing a previously undeveloped basement or creating a new bedroom: the Winnipeg Building By-law requires a building permit for both. Updating finishes in a basement that is already developed does not need one. Electrical and plumbing work often need separate permits. We coordinate them as part of the job.' },
-    { q: 'My basement smells damp. Can it still be finished?', a: 'Usually, but not until the cause is known. Sometimes it’s grading or a downspout outside; sometimes it’s a foundation crack or a failing sump pump. Outside drainage gets fixed first, and active leaks or cracks go to a waterproofing or foundation specialist before we frame. Finishing over a damp wall only hides the problem.' },
+    { q: 'My basement smells damp. Can it still be finished?', a: 'Usually, but not until the cause is known. Sometimes it’s grading or a downspout outside; sometimes it’s a foundation crack or a failing sump pump. Outside drainage gets fixed first, and active leaks or cracks go to a waterproofing or foundation repair company before we frame. Finishing over a damp wall only hides the problem.' },
     { q: 'What is an egress window, and do I need one?', a: 'It’s a window large enough to climb out of in an emergency. The City’s basement guide says a new basement bedroom needs one that opens from inside without tools, with at least 0.35 m² of clear opening and no dimension under 380 mm, unless the bedroom has a door straight outside. We cut the opening, install the window, and set the window well.' },
     { q: 'Can you add a bathroom in the basement?', a: 'Yes. If there’s no drain where you want the bathroom, we either break the concrete and run new drain lines or use an up-flush system. At the on-site visit we’ll tell you which suits your basement and what each involves, and the plumbing permit is part of the plan from the start.' },
     { q: 'Should I test for radon before finishing my basement?', a: 'It’s worth doing. Health Canada recommends a long-term radon test of at least three months, ideally in fall or winter, on the lowest lived-in level. Test your current living space now, then again once the basement is in use. If a result is above 200 Bq/m³, a certified mitigation professional can recommend a fix.' },
@@ -159,11 +167,11 @@ export default {
       'Basement development and renovations in Winnipeg: moisture checked first, walls insulated for winter, permits coordinated. Free on-site visit and quote.',
     serviceType: 'Basement renovation',
     primaryKeyword: 'basement development Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/basement-suites', '/services/bathroom-renovations', '/services/home-additions'],
+  related: ['/services/basement-suites', '/services/bathroom-renovations', '/services/flooring', '/services/home-additions'],
   guides: ['basement-development-permits-winnipeg', 'radon-testing-before-finishing-a-basement', 'basement-flood-protection-winnipeg'],
-  signoff: null,
+  ownerSignoff: null,
 };

@@ -1,8 +1,9 @@
 /**
  * Keyword-map checks (plan §6): every keyword in scripts/keyword-list.json is
- * accounted for in scripts/keyword-map.json, no keyword is owned (primary or
- * secondary) by two pages, and each live page's primary keyword appears in its
- * <title> and <h1> as a word set. Unassigned and double-owned keywords are
+ * accounted for in scripts/keyword-map.json, every keyword appears exactly
+ * once across the five buckets (pages' primary / secondary / supporting,
+ * gbpOnly, notTargeted), and each live page's primary keyword appears in its
+ * <title> and <h1> as a word set. Unassigned and double-listed keywords are
  * errors (plan §3.13 invariants); everything else warns.
  *
  * The readers accept a few shapes so the map can evolve without breaking the
@@ -94,23 +95,26 @@ export function wordSet(text) {
  * @param ctx { list: string[]|null, map: {pages, extras}|null, pages: Map<route, {title, h1}>, report }
  */
 export function checkKeywords({ list, map, pages, report }) {
-  const owners = new Map(); // keyword -> Set(path) for primary/secondary
-  const assigned = new Set();
+  // Every occurrence is counted (keyword -> where it is listed), so a keyword
+  // listed twice on one page, or on a page and in gbpOnly / notTargeted, is
+  // caught as well as one owned by two pages (keyword-map.json _meta.rule).
+  const places = new Map();
+  const add = (kw, where) => {
+    const k = norm(kw);
+    if (!k) return;
+    if (!places.has(k)) places.set(k, []);
+    places.get(k).push(where);
+  };
   for (const page of map.pages) {
-    for (const kw of [...page.primary, ...page.secondary]) {
-      const k = norm(kw);
-      assigned.add(k);
-      if (!owners.has(k)) owners.set(k, new Set());
-      owners.get(k).add(page.path);
-    }
-    page.supporting.forEach((kw) => assigned.add(norm(kw)));
+    for (const bucket of ['primary', 'secondary', 'supporting']) page[bucket].forEach((kw) => add(kw, `${page.path} ${bucket}`));
   }
-  map.extras.gbpOnly.forEach((kw) => assigned.add(norm(kw)));
-  map.extras.notTargeted.forEach((kw) => assigned.add(norm(kw)));
+  map.extras.gbpOnly.forEach((kw) => add(kw, 'gbpOnly'));
+  map.extras.notTargeted.forEach((kw) => add(kw, 'notTargeted'));
+  const assigned = new Set(places.keys());
 
-  // Plan §3.13: an unassigned or double-owned brief keyword is an invariant.
-  for (const [kw, paths] of owners) {
-    if (paths.size > 1) report.error('keywords.double-owned', null, `"${kw}" owned by ${[...paths].join(', ')}`);
+  // Plan §3.13: an unassigned or double-listed brief keyword is an invariant.
+  for (const [kw, where] of places) {
+    if (where.length > 1) report.error('keywords.double-owned', null, `"${kw}" listed ${where.length} times: ${where.join(', ')}`);
   }
 
   const mapPaths = new Set(map.pages.map((page) => page.path));

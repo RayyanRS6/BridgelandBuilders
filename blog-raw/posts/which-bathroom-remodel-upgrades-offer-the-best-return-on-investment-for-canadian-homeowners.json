@@ -18,7 +18,7 @@
   "reviewedBy": "",
   "answer": "The bathroom upgrades that add the most value protect the house and make the room easier to live with: proper waterproofing, an exhaust fan vented outdoors, good lighting, practical storage and durable, easy-to-clean finishes. Accessibility features such as wall backing for future grab bars add long-term value at low cost while the walls are open.",
   "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
-  "heroAlt": "Eye-level view of a modern bathroom with a freestanding tub and large window",
+  "heroAlt": "Bright bathroom with a freestanding tub, a floating double vanity with vessel sinks, two mirrors and a floor-to-ceiling window",
   "sources": [
     {
       "label": "Health Canada: Guide to addressing moisture and mould indoors",
@@ -58,7 +58,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Search for bathroom remodel return on investment in Canada and you will find percentages that look precise. They come from different markets, years and methods, and none of them can tell you what your bathroom will add to your house. A more useful question is which upgrades protect the house, make daily life easier and will still look reasonable in ten years. That is what this guide covers."
+      "x": "Search for bathroom remodel return on investment in Canada and you will find percentages that look precise. They come from different markets, years and methods, and none of them can tell you what your bathroom will add to your house."
+    },
+    {
+      "t": "p",
+      "x": "A more useful question is which upgrades protect the house, make daily life easier and will still look reasonable in ten years. That is what this guide covers."
     },
     {
       "t": "h2",

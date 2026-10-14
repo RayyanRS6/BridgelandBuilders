@@ -77,7 +77,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Most basement questions in Winnipeg arrive in spring, when the snow melts and the basement reminds people it exists. But a basement is one of the few renovations that barely notices the weather outside, so planning in fall can mean a finished space before the next spring rush. Here’s how to plan a winter basement development, using City of Winnipeg and Health Canada guidance checked on October 13, 2026."
+      "x": "Most basement questions in Winnipeg arrive in spring, when the snow melts and the basement reminds people it exists. But a basement is one of the few renovations that barely notices the weather outside, so planning in fall can mean a finished space before the next spring rush."
+    },
+    {
+      "t": "p",
+      "x": "Here’s how to plan a winter basement development, using City of Winnipeg and Health Canada guidance checked on October 13, 2026."
     },
     {
       "t": "h2",
@@ -144,7 +148,11 @@
     },
     {
       "t": "p",
-      "x": "Check the existing windows first. The City’s guide says a bedroom window must open from inside without tools and give at least 0.35 m² (3.77 sq. ft.) of clear opening with no side under 380 mm (15 in.). If existing windows don’t meet that, they have to be replaced or the room can’t be a bedroom. The full list is in our [basement development permits guide](/blog/basement-development-permits-winnipeg)."
+      "x": "Check the existing windows first. The City’s guide says a bedroom window must open from inside without tools and give at least 0.35 m² (3.77 sq. ft.) of clear opening with no side under 380 mm (15 in.)."
+    },
+    {
+      "t": "p",
+      "x": "If existing windows don’t meet that, they have to be replaced or the room can’t be a bedroom. The full list is in our [basement development permits guide](/blog/basement-development-permits-winnipeg)."
     },
     {
       "t": "h2",
@@ -156,7 +164,11 @@
     },
     {
       "t": "p",
-      "x": "Two notes from the City’s insulation bulletin are worth knowing in winter. Between November 1 and April 30, the City says conditions in unheated buildings aren’t suited to spray foam, so cavities waiting for foam are marked for later; a heated basement is a different case, but ask how insulation will be sequenced. And batt insulation can’t touch the concrete foundation, so a moisture barrier or air space is needed."
+      "x": "Two notes from the City’s insulation bulletin are worth knowing in winter. Between November 1 and April 30, the City says conditions in unheated buildings aren’t suited to spray foam, so cavities waiting for foam are marked for later; a heated basement is a different case, but ask how insulation will be sequenced."
+    },
+    {
+      "t": "p",
+      "x": "And batt insulation can’t touch the concrete foundation, so a moisture barrier or air space is needed."
     },
     {
       "t": "h2",
@@ -184,7 +196,7 @@
     },
     {
       "t": "li",
-      "x": "Flooring suited to below-grade use, and how it meets the stairs."
+      "x": "[Flooring](/services/flooring) suited to below-grade use, and how it meets the stairs."
     },
     {
       "t": "li",

@@ -4,8 +4,8 @@
  * render always emit the same JSON-LD.
  *
  * The prerender passes a full post from blogPosts.js (metadata + body); the
- * page passes the index metadata plus the lazily loaded body module. Both
- * carry the same fields, so the output is identical.
+ * page passes its lazily loaded post module (src/data/posts/<slug>.js), which
+ * is the same post plus its related cards, so the output is identical.
  */
 import { SITE_URL } from './siteConfig.js';
 import { PEOPLE, personPath } from './people.js';
@@ -56,11 +56,16 @@ function aboutServices(paths) {
     .map((path) => ({ '@id': `${SITE_URL}${path}#service` }));
 }
 
+// The post's own 1200x630 Open Graph JPEG (scripts/build-images.mjs: the hero
+// photo's crop or the title card), not a remote original or the site default.
+const OWN_OG_IMAGE = /^\/images\/.+-1200x630\.[a-f0-9]{8}\.jpe?g$/i;
+
 /**
  * Everything the <head> needs for one blog post.
- * @param {object} post  post metadata (blogIndex.js) or a full post (blogPosts.js)
- * @param {object} [body] the post's body module ({ faqs, sources, reviewedBy, ... });
- *                        defaults to `post` for a full post
+ * @param {object} post  a full post: blogPosts.js, or the post's own module
+ *                       (src/data/posts/<slug>.js)
+ * @param {object} [body] the post's body ({ faqs, sources, reviewedBy, ... });
+ *                        defaults to `post`, which carries it
  */
 export function buildPostHead(post, body = post) {
   const path = `/blog/${post.slug}`;
@@ -89,6 +94,7 @@ export function buildPostHead(post, body = post) {
     dateModified: modified,
     about: false,
     mainEntity: { '@id': `${url}#article` },
+    primaryImage: OWN_OG_IMAGE.test(post.ogImage || '') ? { url: image, width: 1200, height: 630 } : undefined,
   });
   if (reviewer) webPage.reviewedBy = { '@id': reviewer['@id'] };
 

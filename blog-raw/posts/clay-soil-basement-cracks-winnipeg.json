@@ -82,7 +82,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Ask anyone who has owned a Winnipeg house for a few years about sticking doors or a crack in the basement wall, and you’ll hear a story. The cause is usually underfoot. This guide explains what the clay does, how to read the cracks you can see, and how to finish a basement so it tolerates some movement. It’s general guidance, not an engineering assessment of your house."
+      "x": "Ask anyone who has owned a Winnipeg house for a few years about sticking doors or a crack in the basement wall, and you’ll hear a story. The cause is usually underfoot."
+    },
+    {
+      "t": "p",
+      "x": "This guide explains what the clay does, how to read the cracks you can see, and how to finish a basement so it tolerates some movement. It’s general guidance, not an engineering assessment of your house."
     },
     {
       "t": "h2",

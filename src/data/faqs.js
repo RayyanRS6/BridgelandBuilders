@@ -1,4 +1,5 @@
-// Site-wide FAQs for /faqs, grouped by topic. Lives in data so the page, the
+// Site-wide FAQs for /faqs, grouped by topic, and the three /contact-us
+// questions (CONTACT_FAQS, at the end). Lives in data so the page, the
 // build-time SEO layer (head.js: FAQPage JSON-LD) and the llms files
 // (build-seo-files.mjs) read exactly the same answers.
 //
@@ -10,7 +11,7 @@
 //
 // `more` ({ label, to }) adds a link under an answer on the page only; the
 // FAQPage schema and the llms files use `q` and `a`.
-import { BUSINESS_HOURS, SERVICE_AREA_STATEMENT, SITE_PHONE } from './siteConfig.js';
+import { BUSINESS_HOURS, SERVICE_AREA_NAMES, SERVICE_AREA_STATEMENT, SITE_EMAIL, SITE_PHONE } from './siteConfig.js';
 
 /** '16:30' -> '4:30 p.m.' */
 function clock(time) {
@@ -65,12 +66,22 @@ export const FAQ_GROUPS = [
         more: { label: 'Get a free instant quote', to: '/instant-quote' },
       },
       {
+        q: 'What does the instant quote cover?',
+        a: 'Kitchen, bathroom and basement renovations. You pick the size of the space and your options, and it shows the starting range our estimator uses. It can’t see your home, so wiring, plumbing, structure and site conditions aren’t in it. Whole-home, addition and commercial projects aren’t covered: they are priced after a free on-site visit.',
+      },
+      {
         q: 'What makes a renovation cost more?',
         a: 'The biggest factors are size, moving plumbing, walls or windows, the finishes you choose, and the condition of what is already there, such as old wiring, moisture or uneven floors. Permits, drawings and access also play a part. We point out the cost drivers at the on-site visit, so there are fewer surprises later.',
       },
       {
         q: 'What happens if the scope changes during the project?',
         a: 'Changes happen, whether you decide to add something or a problem turns up behind a wall. Any change to the scope should be agreed, with its cost in writing, before that work is done, so ask how changes are handled when you review your written quote. In older homes, keep a contingency for surprises.',
+      },
+      {
+        // General explainer only: no financing is offered or implied (plan guardrail).
+        q: 'How do people pay for a renovation?',
+        a: 'Many homeowners talk to their own bank or credit union, and a home equity line of credit, which is secured by the home, is one option many consider. Businesses often look at bank loans or a landlord’s improvement allowance. Whichever route you take, get your written quote first, so you know how much you actually need to borrow.',
+        more: { label: 'Read our guide to renovation financing in Canada', to: '/blog/home-renovation-financing-canada' },
       },
     ],
   },
@@ -132,6 +143,15 @@ export const FAQ_GROUPS = [
         a: 'Yes. For commercial projects we can schedule work after hours or on weekends, so your business can keep serving customers or patients while the renovation goes ahead. We plan the work around your lease dates and opening hours from the start, and send weekly updates so you always know what is happening next.',
         more: { label: 'See our commercial renovation services', to: '/services/commercial-renovations' },
       },
+      {
+        q: 'Do you take on smaller jobs as well as full renovations?',
+        a: 'Yes. Alongside full renovations, we quote smaller scopes such as new countertops or a backsplash, a new vanity or tub, flooring, windows and doors, or exterior painting. Tell us what you have in mind and we will scope just that part at the free on-site visit, with a written quote before anything starts.',
+      },
+      {
+        q: 'Do you work with property managers, architects and designers?',
+        a: 'Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners, and we build to supplied drawings and specifications from architects, engineers and interior designers. We walk the site against the drawings before work starts and raise anything that won’t work on site early, before it becomes a change order.',
+        more: { label: 'See our general contracting service', to: '/services/general-contracting' },
+      },
     ],
   },
   {
@@ -142,6 +162,10 @@ export const FAQ_GROUPS = [
         q: 'How do I get started?',
         a: `Use our free instant quote for a starting price range, call ${SITE_PHONE}, or book a free on-site visit online. We reply within one business day, arrange a time to see the space, and follow up with a written quote. Our office hours are ${OFFICE_HOURS_TEXT}${OFFICE_HOURS_TEXT.endsWith('.') ? '' : '.'}`,
         more: { label: 'Book a free on-site visit', to: '/book-online' },
+      },
+      {
+        q: 'What are your office hours?',
+        a: `Our office is open ${OFFICE_HOURS_TEXT} and closed on weekends. Call ${SITE_PHONE} during those hours, or email ${SITE_EMAIL} or send your project details online at any time, and we will reply within one business day. Commercial renovation work itself can be scheduled after hours or on weekends.`,
       },
       {
         q: 'What happens at the free on-site visit?',
@@ -161,3 +185,30 @@ export const FAQ_GROUPS = [
 
 /** Every FAQ in page order, flat ([{ q, a, more? }]): the FAQPage schema and llms files. */
 export const SITE_FAQS = FAQ_GROUPS.flatMap((group) => group.items);
+
+const listJoin = (items) =>
+  items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('');
+
+/**
+ * The three questions on /contact-us (plan §7): the free visit, how fast we
+ * reply, and where we go. Worded for that page, so no question and answer
+ * repeats one on /faqs. ContactPage.jsx renders them and passes them to
+ * usePageSeo; head.js must pass the same list for the prerendered FAQPage.
+ */
+export const CONTACT_FAQS = [
+  {
+    q: 'Is there a charge for the on-site visit?',
+    a: 'No. The on-site visit is free, and so is the written quote that follows it. We come to your home or business at a time that suits you, look at the space with you and take measurements. There is no obligation to go ahead, and nothing starts until you approve the quote.',
+  },
+  {
+    q: 'How soon will I hear back after I get in touch?',
+    a: `Within one business day. We reply by phone, text or email, whichever you prefer, ask a few questions about the project and set up a time to see the space. Our office is open ${OFFICE_HOURS_TEXT}, and you can send your details through the form on this page at any time.`,
+  },
+  {
+    q: 'Do you come out to my area?',
+    a: `Yes, anywhere in Winnipeg and in nearby communities within about an hour of the city: ${listJoin(
+      SERVICE_AREA_NAMES.filter((name) => name !== 'Winnipeg')
+    )}. We come to your home or business for the free on-site visit. Further out? Call ${SITE_PHONE} and we will tell you honestly whether we can help.`,
+    more: { label: 'See our service area', to: '/service-areas' },
+  },
+];

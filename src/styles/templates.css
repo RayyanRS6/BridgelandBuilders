@@ -41,6 +41,12 @@
   min-height: 44px;
 }
 
+/* Plain community labels (not links) keep the resting look on hover. */
+.tpl-pill-row span.blog-filter-pill:hover {
+  color: var(--text-muted);
+  border-color: var(--border-subtle);
+}
+
 /* Card footnote (e.g. "Checked October 13, 2026" on a community card). */
 .include-card .tpl-card-foot {
   margin-top: 10px;

@@ -82,7 +82,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "A renovation is often the easiest time to add insulation. The basement is bare studs, the walls are open, or the old siding is coming off anyway. In Manitoba, the main program that helps with the cost of the insulation itself is Efficiency Manitoba's Home Insulation Rebate. The catch is timing: the rebate is approved before work starts, so it has to be part of the plan from the first conversation, not something you remember once the old drywall is in the bin."
+      "x": "A renovation is often the easiest time to add insulation. The basement is bare studs, the walls are open, or the old siding is coming off anyway. In Manitoba, the main program that helps with the cost of the insulation itself is Efficiency Manitoba's Home Insulation Rebate."
+    },
+    {
+      "t": "p",
+      "x": "The catch is timing: the rebate is approved before work starts, so it has to be part of the plan from the first conversation, not something you remember once the old drywall is in the bin."
     },
     {
       "t": "p",
@@ -280,7 +284,11 @@
     },
     {
       "t": "p",
-      "x": "Manitoba Hydro's Home Energy Efficiency Loan can finance insulation, with payments added to your energy bill. Manitoba Hydro must approve the application before any work starts or materials are bought, and the loan becomes due when the house is sold. Households that meet income requirements may qualify for free insulation upgrades through Efficiency Manitoba's Energy Efficiency Assistance Program, and there are separate First Nation and Métis offers. For the wider picture, see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [financing a home renovation in Canada](/blog/home-renovation-financing-canada)."
+      "x": "Manitoba Hydro's Home Energy Efficiency Loan can finance insulation, with payments added to your energy bill. Manitoba Hydro must approve the application before any work starts or materials are bought, and the loan becomes due when the house is sold."
+    },
+    {
+      "t": "p",
+      "x": "Households that meet income requirements may qualify for free insulation upgrades through Efficiency Manitoba's Energy Efficiency Assistance Program, and there are separate First Nation and Métis offers. For the wider picture, see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [financing a home renovation in Canada](/blog/home-renovation-financing-canada)."
     },
     {
       "t": "h2",
@@ -332,7 +340,11 @@
     },
     {
       "t": "p",
-      "x": "**Next step:** if you are planning a basement or whole-home renovation and want the rebate in the plan, [book a free on-site visit](/book-online). We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
+      "x": "**Next step:** if you are planning a basement or whole-home renovation and want the rebate in the plan, [book a free on-site visit](/book-online)."
+    },
+    {
+      "t": "p",
+      "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
     }
   ]
 }

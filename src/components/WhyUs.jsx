@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
+import { unsplashImage } from '../lib/unsplash.js';
 import { ArrowRightIcon, CheckIcon } from './icons.jsx';
 
 // Owner-confirmed facts only (no superlatives, SEO plan §11.1).
@@ -10,7 +11,19 @@ const CHECKLIST = [
   'Weekly Progress Updates',
 ];
 
+// The photo fills a 460px-tall box (250px on phones) with object-fit: cover,
+// so a 3:2 photo is drawn about 690px wide on desktop and never under ~375px.
+const WHY_IMAGE = unsplashImage(
+  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80',
+  { sizes: '(max-width: 480px) 380px, (max-width: 1024px) calc(100vw - 72px), 690px', maxWidth: 1200 }
+);
+
+const ABOUT_PATH = '/about-us';
+
 export default function WhyUs() {
+  // This section also sits on /about-us, which should not link to itself.
+  const onAboutPage = useLocation().pathname.replace(/\/+$/, '') === ABOUT_PATH;
+
   return (
     <section className="why-section" id="why-us">
       <div className="container">
@@ -18,7 +31,7 @@ export default function WhyUs() {
           <div className="why-visual-stack reveal" style={{ position: 'relative' }}>
             <div className="why-main-img">
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80"
+                {...WHY_IMAGE}
                 alt="Living room with a grey sofa, wooden tables and tall windows"
                 width="900"
                 height="600"
@@ -38,6 +51,11 @@ export default function WhyUs() {
             <div className="why-paragraphs">
               <p>
                 Bridgeland Builders is a Winnipeg renovation and construction team with over 60 years of combined experience. Together we have completed more than 100 projects, from single-room updates in family homes to commercial fit-ups for local businesses.
+                {!onAboutPage && (
+                  <>
+                    {' '}Read <Link className="blog-inline-link" to={ABOUT_PATH}>more about who we are</Link>.
+                  </>
+                )}
               </p>
               <p>
                 Every project starts with a free on-site visit and a free written quote, and nothing starts until you approve it. When the work needs permits and inspections, we coordinate them with the City of Winnipeg or your local municipality.

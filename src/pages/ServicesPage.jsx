@@ -3,7 +3,7 @@ import PageHero from '../components/PageHero.jsx';
 import ServiceDirectory from '../components/ServiceDirectory.jsx';
 import Gallery from '../components/Gallery.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
-import { COST_HUB_PATH } from '../data/seo.js';
+import { COST_HUB_PATH } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // "Not sure where to start?" — the three usual first steps.
@@ -14,14 +14,15 @@ const START_LINKS = [
 ];
 
 export default function ServicesPage() {
+  // The ItemList of live services is added by seo.js from the path alone.
   usePageSeo('/services');
 
   return (
     <main>
       <PageHero
         eyebrow="Renovation & Construction"
-        title="WINNIPEG RENOVATION"
-        highlight="SERVICES"
+        title="WINNIPEG RENOVATION SERVICES"
+        highlight="BUILT AROUND YOUR SPACE"
         description="Home and commercial renovations in Winnipeg and nearby communities, from kitchens, bathrooms and basements to flooring, windows, masonry and demolition."
         primaryLink={{ to: '/projects', label: 'VIEW OUR PROJECTS' }}
       />

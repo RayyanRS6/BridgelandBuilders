@@ -92,7 +92,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, frost on the inside of the glass, and doors that stick or let in cold air at the sill. Replacing them is a well-defined job, but there are three things worth knowing before you order: when the City needs a permit, what the energy labels mean, and how the rebate works. Everything below was checked against official sources on October 13, 2026."
+      "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, frost on the inside of the glass, and doors that stick or let in cold air at the sill."
+    },
+    {
+      "t": "p",
+      "x": "Replacing them is a well-defined job, but there are three things worth knowing before you order: when the City needs a permit, what the energy labels mean, and how the rebate works. Everything below was checked against official sources on October 13, 2026."
     },
     {
       "t": "h2",
@@ -223,7 +227,7 @@
     },
     {
       "t": "p",
-      "x": "Custom-sized windows are made to order, so the order usually has to go in well before the installation date. If you are combining windows with other work, such as siding, stucco repair or exterior paint, put the windows in first so the new trim is finished with everything else."
+      "x": "Custom-sized windows are made to order, so the order usually has to go in well before the installation date. If you are combining windows with other work, such as siding, stucco repair or [exterior paint](/services/exterior-painting), put the windows in first so the new trim is finished with everything else."
     },
     {
       "t": "h2",

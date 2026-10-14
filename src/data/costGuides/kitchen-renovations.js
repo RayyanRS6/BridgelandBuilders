@@ -23,7 +23,7 @@ export default {
       'Kitchen renovation costs in Winnipeg: starting ranges from $40,000 to $190,000 by size in our estimator, plus what cabinets, counters and appliances add.',
     primaryKeyword: 'kitchen renovation cost Winnipeg',
     published: '2026-10-13',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   eyebrow: 'Kitchen Renovation Cost',

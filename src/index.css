@@ -54,6 +54,19 @@
   line-gap-override: 0%;
 }
 
+/* Android phones have no Arial, so the face above is skipped there and the
+   text would start in Roboto with no adjustment. The same stand-in made from
+   local Roboto (upm 2048, avg x-width 911; @capsizecss/metrics):
+   size-adjust = (466/1000)/(911/2048), overrides = DM Sans metric / size-adjust. */
+@font-face {
+  font-family: 'DM Sans Fallback Roboto';
+  src: local('Roboto'), local('Roboto-Regular');
+  size-adjust: 104.76%;
+  ascent-override: 94.69%;
+  descent-override: 29.59%;
+  line-gap-override: 0%;
+}
+
 /* -------------------------------------------------------------
    1. CSS VARIABLES & THEME (Cozy Base + Red & Sea Green Accents)
    ------------------------------------------------------------- */
@@ -86,7 +99,7 @@
   --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Typography: Clean, Accessible DM Sans */
-  --font-family: 'DM Sans', 'DM Sans Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family: 'DM Sans', 'DM Sans Fallback', 'DM Sans Fallback Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* -------------------------------------------------------------
@@ -253,6 +266,13 @@ button {
   object-fit: contain;
   display: block;
   flex: none;
+}
+
+/* The logos' <picture> wrappers (WebP with a PNG fallback) take no part in
+   the layout: the <img> inside is laid out exactly as it was on its own. */
+.brand-logo picture,
+.footer-logo picture {
+  display: contents;
 }
 
 .nav-links {
@@ -430,9 +450,12 @@ button {
   text-transform: uppercase;
 }
 
-.service-category-heading h3 {
+/* The category name was an h3; it is a <p> now (the menu precedes each
+   page's h1), with the h3's bold weight kept. */
+.service-category-heading .service-category-title {
   margin-top: 3px;
   font-size: 1.3rem;
+  font-weight: 700;
   line-height: 1.25;
   text-transform: none;
 }
@@ -550,6 +573,7 @@ button {
   transform: translateY(-2px);
 }
 
+/* Seagreen pill (home "Where we work" box). */
 .btn-pill-seagreen {
   background: var(--accent-seagreen);
   color: #fff;
@@ -1299,6 +1323,12 @@ button {
   margin-bottom: 16px;
 }
 
+/* The in-text link keeps the site's underlined link style; on this dark
+   card it is white, like the footer's links, as sea green would be too dim. */
+.why-paragraphs .blog-inline-link {
+  color: #fff;
+}
+
 .why-checklist {
   list-style: none;
   margin: 24px 0 32px;
@@ -1505,6 +1535,8 @@ button {
   opacity: 1;
 }
 
+/* h3 on the home gallery tiles, h4 where other pages reuse the overlay. */
+.gallery-overlay h3,
 .gallery-overlay h4 {
   font-size: 1.15rem;
   font-weight: 700;
@@ -1658,6 +1690,7 @@ button {
 
 .footer-social-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -1676,9 +1709,18 @@ button {
 /* Social badges that link to a profile: the badge keeps its look, without
    the underline footer-bottom links get. */
 .footer-bottom .footer-social-links a {
+  position: relative;
   display: flex;
   border-radius: 50%;
   text-decoration: none;
+}
+
+/* A 44px tap target around the 34px badge, without changing how it looks
+   (the 12px gaps leave 2px between neighbouring targets). */
+.footer-social-links a::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
 }
 
 .footer-social-links a:hover span,
@@ -1693,78 +1735,10 @@ button {
 }
 
 /* -------------------------------------------------------------
-   16. INSTANT QUOTE MODAL
+   16. QUOTE FORM FIELDS
+   (The old instant-quote modal's rules are gone; these field
+   styles are what the booking forms still use.)
    ------------------------------------------------------------- */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(25, 23, 21, 0.75);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition-smooth);
-}
-
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal-card {
-  background: var(--bg-warm);
-  border-radius: var(--radius-lg);
-  width: 100%;
-  max-width: 600px;
-  padding: 40px;
-  position: relative;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
-  transform: scale(0.94);
-  transition: var(--transition-smooth);
-  border-top: 5px solid var(--accent-red);
-}
-
-.modal-overlay.active .modal-card {
-  transform: scale(1);
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--bg-cream);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: var(--text-main);
-  transition: var(--transition-smooth);
-}
-
-.modal-close-btn:hover {
-  background: var(--accent-red);
-  color: #fff;
-}
-
-.modal-header h3 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 6px;
-}
-
-.modal-header p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 22px;
-}
-
 .quote-form {
   display: flex;
   flex-direction: column;
@@ -1816,13 +1790,18 @@ button {
 /* -------------------------------------------------------------
    17. SMOOTH SCROLL REVEAL ANIMATIONS
    ------------------------------------------------------------- */
-.reveal {
+/* The hidden start state only applies once the inline script in index.html
+   has put a `js` class on <html>, so without JavaScript (or if the bundle
+   fails to load) the content simply shows. :where() adds no specificity, so
+   these rules weigh exactly what .reveal and .reveal.active did and every
+   override (hover lifts, reduced motion) behaves as before. */
+:where(.js) .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.active {
+:where(.js) .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
@@ -2088,8 +2067,17 @@ button {
     gap: 12px;
   }
   .top-bar-contact a {
+    position: relative;
     min-height: 30px;
     padding: 4px 12px;
+  }
+  /* Tap targets: the invisible ::before boxes below grow the touch area of
+     the phone pill, the quote pill and the menu button to at least 44px
+     tall without changing their size on screen. */
+  .top-bar-contact a::before {
+    content: '';
+    position: absolute;
+    inset: -7px 0;
   }
 
   /* ---- Floating navbar ---- */
@@ -2131,18 +2119,30 @@ button {
     display: inline;
   }
   .nav-quote-btn {
+    position: relative;
     padding: 10px 16px;
     font-size: 0.75rem;
     letter-spacing: 0.2px;
     gap: 6px;
     white-space: nowrap;
   }
+  .nav-quote-btn::before {
+    content: '';
+    position: absolute;
+    inset: -4px 0;
+  }
   .mobile-menu-btn {
+    position: relative;
     display: grid;
     place-items: center;
     width: 40px;
     height: 40px;
     padding: 0;
+  }
+  .mobile-menu-btn::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
   }
 
   /* ---- Hero ---- */
@@ -2195,9 +2195,13 @@ button {
     border-radius: 130px 130px 16px 16px;
     border-width: 3px;
   }
+  /* The badge is 96% opaque white, so the blur behind it shows nothing on a
+     phone; dropping it saves the compositing work. */
   .hero-floating-badge {
     gap: 10px;
     padding: 11px 16px;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
   .hero-floating-badge .avatar-group {
     width: 34px;
@@ -2418,6 +2422,7 @@ button {
   .gallery-overlay {
     padding: 16px;
   }
+  .gallery-overlay h3,
   .gallery-overlay h4 {
     font-size: 1.05rem;
   }
@@ -2489,26 +2494,7 @@ button {
     font-size: 0.8rem;
   }
 
-  /* ---- Quote modal ---- */
-  .modal-overlay {
-    padding: 16px 12px;
-  }
-  .modal-card {
-    padding: 24px 12px;
-    border-radius: var(--radius-md);
-  }
-  .modal-close-btn {
-    top: 14px;
-    right: 14px;
-  }
-  .modal-header h3 {
-    padding-right: 42px;
-    font-size: 1.35rem;
-  }
-  .modal-header p {
-    margin-bottom: 18px;
-    font-size: 0.9rem;
-  }
+  /* ---- Form fields ---- */
   /* 16px is the threshold below which iOS Safari zooms the page in on focus. */
   .form-group input,
   .form-group select,
@@ -2547,6 +2533,9 @@ button {
     width: 36px;
     height: 36px;
   }
+  .mobile-menu-btn::before {
+    inset: -4px;
+  }
 
   .hero-card {
     padding: 26px 16px;
@@ -2578,9 +2567,6 @@ button {
   .testimonial-card,
   .cta-banner-card {
     padding: 26px 16px;
-  }
-  .modal-card {
-    padding: 22px 10px;
   }
 }
 

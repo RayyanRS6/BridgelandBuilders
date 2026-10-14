@@ -20,7 +20,7 @@
   "reviewedBy": "",
   "answer": "Decide how the space has to work first, then make it look like your brand within those limits. Settle exits, accessible routes, washrooms, plumbing, ventilation and lighting before choosing finishes, because they are costly to move later. Then pick durable materials, a consistent colour palette and signage that helps customers find their way.",
   "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-  "heroAlt": "Modern commercial space with balanced decor and furniture.",
+  "heroAlt": "Open commercial lounge with grey and yellow sofas, colourful wall art, exposed ductwork and tall windows",
   "sources": [
     {
       "label": "Province of Manitoba: 2020 Construction Codes Adoption",
@@ -94,7 +94,11 @@
   "blocks": [
     {
       "t": "p",
-      "x": "A good commercial interior earns its keep twice: once in how smoothly staff and customers move through it, and again in how clearly it says who you are. When the two clash, function should usually win, because a space that slows service or fails an inspection costs money every day. This guide sets out an order of decisions that keeps both in view, whether you run a shop, an office, a restaurant or a clinic in Winnipeg."
+      "x": "A good commercial interior earns its keep twice: once in how smoothly staff and customers move through it, and again in how clearly it says who you are. When the two clash, function should usually win, because a space that slows service or fails an inspection costs money every day."
+    },
+    {
+      "t": "p",
+      "x": "This guide sets out an order of decisions that keeps both in view, whether you run a shop, an office, a restaurant or a clinic in Winnipeg."
     },
     {
       "t": "h2",

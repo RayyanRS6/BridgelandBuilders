@@ -1,0 +1,68 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "https://bridgelandbuilders.com/",
+        "https://bridgelandbuilders.com/services/kitchen-renovations",
+        "https://bridgelandbuilders.com/blog/winnipeg-renovation-permits",
+        "https://bridgelandbuilders.com/instant-quote",
+        "https://bridgelandbuilders.com/services"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "formFactor": "mobile",
+        "chromeFlags": "--no-sandbox",
+        "blockedUrlPatterns": [
+          "*google-analytics.com/g/collect*",
+          "*analytics.google.com/g/collect*",
+          "*facebook.com/tr*"
+        ]
+      }
+    },
+    "assert": {
+      "assertMatrix": [
+        {
+          "matchingUrlPattern": ".*",
+          "assertions": {
+            "cumulative-layout-shift": ["warn", { "maxNumericValue": 0.05, "aggregationMethod": "median" }],
+            "total-blocking-time": ["warn", { "maxNumericValue": 200, "aggregationMethod": "median" }]
+          }
+        },
+        {
+          "matchingUrlPattern": "^https://bridgelandbuilders\\.com/$",
+          "assertions": {
+            "largest-contentful-paint": ["warn", { "maxNumericValue": 2500, "aggregationMethod": "median" }]
+          }
+        },
+        {
+          "matchingUrlPattern": "^https://bridgelandbuilders\\.com/services/[^/]+$",
+          "assertions": {
+            "largest-contentful-paint": ["warn", { "maxNumericValue": 2500, "aggregationMethod": "median" }]
+          }
+        },
+        {
+          "matchingUrlPattern": "^https://bridgelandbuilders\\.com/blog/[^/]+$",
+          "assertions": {
+            "largest-contentful-paint": ["warn", { "maxNumericValue": 2500, "aggregationMethod": "median" }]
+          }
+        },
+        {
+          "matchingUrlPattern": "^https://bridgelandbuilders\\.com/instant-quote$",
+          "assertions": {
+            "largest-contentful-paint": ["warn", { "maxNumericValue": 2000, "aggregationMethod": "median" }]
+          }
+        },
+        {
+          "matchingUrlPattern": "^https://bridgelandbuilders\\.com/services$",
+          "assertions": {
+            "largest-contentful-paint": ["warn", { "maxNumericValue": 1800, "aggregationMethod": "median" }]
+          }
+        }
+      ]
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": ".lighthouseci/reports"
+    }
+  }
+}

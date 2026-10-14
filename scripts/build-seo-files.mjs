@@ -55,8 +55,10 @@ if (missingLastmod.length) {
 }
 
 /* --------------------------------------------------------------- sitemap */
-// No changefreq/priority (ignored by Google) and no image entries until blog
-// images are self-hosted.
+// No changefreq/priority (ignored by Google). No image entries on purpose:
+// plan §13 keeps the image sitemap for owned job photos used with the
+// client's consent. Stock photos and the generated blog title cards are not
+// listed, even though the blog images are now self-hosted.
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 out('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
@@ -136,6 +138,7 @@ const PROFILE_LABELS = {
   linkedin: 'LinkedIn',
   youtube: 'YouTube',
   tiktok: 'TikTok',
+  x: 'X (Twitter)',
 };
 const profileLines = [
   GBP && GBP.mapsUrl ? ['Google Maps (Google Business Profile)', GBP.mapsUrl] : null,
@@ -150,9 +153,11 @@ const profileLines = [
 const doc = (...sections) => `${sections.filter(Boolean).join('\n\n')}\n`;
 
 /* ------------------------------------------------------------- llms.txt */
+// The blockquote is the entity description: BUSINESS.shortDescription, the
+// one sentence every listing and summary reuses.
 out('llms.txt', doc(
   `# ${SITE_NAME}`,
-  `> ${BUSINESS.description} Phone: ${SITE_PHONE}. ${SERVICE_AREA_STATEMENT}`,
+  `> ${BUSINESS.shortDescription || BUSINESS.description} Phone: ${SITE_PHONE}. ${SERVICE_AREA_STATEMENT}`,
   BUSINESS.disambiguatingDescription,
   // Experience and project count confirmed by the owner 2026-10-13 (O-2).
   `${SITE_NAME} is a service-area renovation and construction contractor based in Winnipeg, Manitoba,
@@ -169,7 +174,7 @@ with the City of Winnipeg or the local municipality when a project requires them
 - Location: Winnipeg, Manitoba, Canada
 - Service area: ${SERVICE_AREA_STATEMENT}
 - Quote requests (instant price estimator): ${SITE_URL}/instant-quote
-- Book a call or visit: ${SITE_URL}/book-online
+- Book a free on-site visit: ${SITE_URL}/book-online
 - Contact form: ${SITE_URL}/contact-us`,
   profileLines && `## Profiles\n${profileLines}`,
 ));
@@ -201,7 +206,7 @@ const faqBlocks = [
 
 out('llms-full.txt', doc(
   `# ${SITE_NAME} — full reference`,
-  `> ${BUSINESS.description}`,
+  `> ${BUSINESS.shortDescription || BUSINESS.description}`,
   BUSINESS.disambiguatingDescription,
   `Phone: ${SITE_PHONE} · Email: ${BUSINESS.email} · Winnipeg, Manitoba, Canada · Free written quotes`,
   `## Services offered\n${serviceLines}`,

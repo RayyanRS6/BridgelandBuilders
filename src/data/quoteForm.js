@@ -78,6 +78,14 @@ export const LEAD_TAG = 'free-quote-page';
 export const FORM_FILLED_TAG = 'website-form-filled';
 export const LEAD_SOURCE = 'Free Quote Page';
 
+// Added only when the visitor ticks the form's optional "Email me occasional
+// renovation tips and offers" box: express consent to marketing emails under
+// Canada's Anti-Spam Legislation (CASL). Without it, marketing emails rely on
+// implied consent (6 months after an inquiry). A booked visit's notes also
+// record the date it was given (api/_lib/ghl.js). Never removed here: leaving
+// the box unticked on a later request is not a withdrawal of consent.
+export const MARKETING_CONSENT_TAG = 'marketing-consent-express';
+
 // Per-page tags and a channel label (SEO plan §18). OFF until the GoHighLevel
 // admin has audited every workflow that triggers on LEAD_TAG / LEAD_SOURCE and
 // test leads confirm follow-ups still run (plan O-19). While false, tags and
@@ -96,8 +104,11 @@ const LEAD_TAG_PAGE = '/free-quote';
 // exist, e.g. channel: 'AbC123…'. Values come from the cleaned attribution
 // (api/_lib/http.js cleanAttribution):
 //   channel, formPage, landingPage, referrer, firstSource, firstMedium,
-//   firstCampaign, firstReferrer, lastSource, lastMedium, lastCampaign,
-//   lastTerm, lastContent, gclid, gbraid, wbraid, fbclid, msclkid, gaClientId
+//   firstCampaign, firstTerm, firstReferrer, firstLanding, lastSource,
+//   lastMedium, lastCampaign, lastTerm, lastContent, gclid, gbraid, wbraid,
+//   fbclid, msclkid, gaClientId, fbp, fbc
+// A wrong or deleted id never costs a lead: GoHighLevel's refusal is logged
+// and the contact saved again without these fields (api/_lib/ghl.js).
 export const ATTRIBUTION_FIELDS = {};
 
 /** "/services/kitchen-renovations" -> "services-kitchen-renovations" ("/" -> "home"). */
@@ -118,15 +129,17 @@ export function sourceFor({ utmSource, formPage, channel } = {}) {
 
 /**
  * Every tag a lead should carry: the website-form-filled tag, the page tag,
- * one per answer for each question that has a tagPrefix, and OUTSIDE_AREA_TAG
- * when out of the service area. GoHighLevel stores tags in lower case, so they
- * are built that way here. `context` ({ formPage, channel }) only matters when
+ * one per answer for each question that has a tagPrefix, OUTSIDE_AREA_TAG
+ * when out of the service area, and MARKETING_CONSENT_TAG when the consent
+ * box was ticked. GoHighLevel stores tags in lower case, so they are built
+ * that way here. `context` ({ formPage, channel }) only matters when
  * TAG_BY_FORM_PAGE is on.
  */
 export function tagsForLead(lead, context = {}) {
   const tags = [FORM_FILLED_TAG, pageTagFor(context.formPage)];
   if (TAG_BY_FORM_PAGE && context.channel) tags.push(`channel:${context.channel}`);
   if (!isInServiceArea(lead)) tags.push(OUTSIDE_AREA_TAG);
+  if (lead.marketingConsent === true) tags.push(MARKETING_CONSENT_TAG);
   for (const question of QUOTE_QUESTIONS) {
     if (question.tagPrefix === undefined) continue;
     for (const answer of [].concat(lead[question.key] ?? [])) {
@@ -153,7 +166,9 @@ export function attributionCustomFields(attribution, ids = ATTRIBUTION_FIELDS) {
     firstSource: first.source,
     firstMedium: first.medium,
     firstCampaign: first.campaign,
+    firstTerm: first.term,
     firstReferrer: first.referrer,
+    firstLanding: first.landing,
     lastSource: last.source,
     lastMedium: last.medium,
     lastCampaign: last.campaign,
@@ -165,6 +180,8 @@ export function attributionCustomFields(attribution, ids = ATTRIBUTION_FIELDS) {
     fbclid: last.fbclid || first.fbclid,
     msclkid: last.msclkid || first.msclkid,
     gaClientId: attribution.gaClientId,
+    fbp: attribution.fbp,
+    fbc: attribution.fbc,
   };
   return Object.entries(ids)
     .filter(([key, id]) => typeof id === 'string' && id && values[key])

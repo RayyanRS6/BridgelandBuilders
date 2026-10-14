@@ -15,9 +15,13 @@
 //
 // Only runs when the browser sent an event id, which it only does when the
 // pixel itself is running, so Do Not Track visitors and localhost are never
-// sent. Contact details are SHA-256 hashed, as Meta requires. Never throws and
-// never runs in the response path: callers use afterResponse().
+// sent. Never for a request from Quebec, the EEA, the UK or Switzerland
+// either (CONSENT_REGIONS, read from Vercel's IP-location headers on the
+// request itself, so it holds even if the browser's own check hadn't
+// finished). Contact details are SHA-256 hashed, as Meta requires. Never
+// throws and never runs in the response path: callers use afterResponse().
 import { createHash } from 'node:crypto';
+import { consentRequired } from './region.js';
 
 const DEFAULT_GRAPH_VERSION = 'v24.0';
 const TIMEOUT_MS = 8000;
@@ -66,7 +70,7 @@ function sourceUrl(req, attribution) {
  */
 export async function sendMetaEvent({ eventName, eventId, lead, attribution, req } = {}) {
   try {
-    if (!metaConfigured() || !eventId || !eventName || !lead) return;
+    if (!metaConfigured() || !eventId || !eventName || !lead || consentRequired(req)) return;
     const version = /^v\d{2}\.\d$/.test(process.env.META_GRAPH_VERSION || '') ? process.env.META_GRAPH_VERSION : DEFAULT_GRAPH_VERSION;
     const pixelId = String(process.env.META_PIXEL_ID).replace(/\D/g, '');
     const body = {

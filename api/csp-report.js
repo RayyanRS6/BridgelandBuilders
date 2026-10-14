@@ -6,6 +6,10 @@
 // Logs a short sample (directive + blocked origin + page path, never query
 // strings) to the function logs so the policy can be extended before it is
 // enforced (plan §3.7: enforce after 14 clean days). Always answers 204.
+// Added from these reports (2026-10-14): https://fonts.bunny.net (style-src,
+// font-src: the GoHighLevel chat widget's Poppins font) and GoHighLevel's
+// telemetry host https://xd-f1cf3d4fdb19408ea770fc6f80817dcb.ecs.us-east-1.on.aws
+// (connect-src; the exact host, not *.on.aws, so a rotated host shows up here).
 
 const MAX_BYTES = 32 * 1024;
 const SAMPLE_RATE = 0.25; // log about 1 in 4 reports to keep logs small

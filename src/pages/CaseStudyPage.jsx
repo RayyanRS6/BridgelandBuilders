@@ -8,7 +8,6 @@ import CtaBanner from '../components/CtaBanner.jsx';
 import YouTubeFacade from '../components/YouTubeFacade.jsx';
 import { formatPostDate } from '../components/BlogCard.jsx';
 import { ArrowRightIcon, CalendarIcon, PinIcon } from '../components/icons.jsx';
-import NotFoundPage from './NotFoundPage.jsx';
 import {
   caseStudyBySlug,
   caseStudyCover,
@@ -21,6 +20,10 @@ import { publishedServiceArea } from '../data/serviceAreasContent.js';
 import { serviceByPath } from '../data/services.js';
 import { videoBySlug, videoPath } from '../data/videos.js';
 import { usePageSeo } from '../hooks/useSeo.js';
+import { lazyWithRetry } from '../lib/lazyRetry.js';
+
+// Never rendered for a published case study, so it is not modulepreloaded with it.
+const NotFoundPage = lazyWithRetry(() => import('./NotFoundPage.jsx'));
 
 const STAGE_LABELS = { before: 'Before', during: 'During', after: 'After' };
 const CARD_SIZES = '(max-width: 680px) 100vw, (max-width: 1024px) 50vw, 400px';

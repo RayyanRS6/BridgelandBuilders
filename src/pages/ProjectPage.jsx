@@ -8,22 +8,33 @@ import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import Ticker from '../components/Ticker.jsx';
 import { ArrowRightIcon, CheckIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS, PROJECT_ESTIMATORS } from '../data/estimators.js';
-import { serviceTrail } from '../data/seo.js';
+import { COST_HUB_PATH, serviceTrail } from '../data/seo.js';
 import { serviceByPath } from '../data/services.js';
 import { INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { unsplashImage } from '../lib/unsplash.js';
 
 const FORM_ID = 'service-quote-form';
 const ESTIMATOR_ID = 'service-price-guide';
+// Drawn sizes of the stock photos, as on the home page: the intro photo fills
+// the same box as WhyUs (WhyUs.jsx), the gallery tiles are the col-4 tiles of
+// Gallery.jsx.
+const INTRO_IMAGE = { sizes: '(max-width: 480px) 380px, (max-width: 1024px) calc(100vw - 72px), 690px', maxWidth: 1200 };
+const GALLERY_IMAGE = { sizes: '(max-width: 768px) calc(100vw - 48px), 460px', maxWidth: 1200 };
 
 const has = (list) => Array.isArray(list) && list.length > 0;
 const pad = (n) => String(n).padStart(2, '0');
 // "a kitchen renovation" / "an office renovation".
 const withArticle = (text) => `${/^[aeiou]/i.test(text) ? 'an' : 'a'} ${text}`;
-// A type card's `to` is linked only while it is a live service page (never a draft or a 404).
+// A type card's `to` is linked only while it is a live service page (never a
+// draft or a 404). A #fragment is kept: '/services/restaurant-renovations#hotels'.
 const liveServicePath = (to) => {
-  const target = to ? serviceByPath(to) : null;
-  return target && target.status === 'live' ? target.path : null;
+  const [path, hash] = to ? to.split('#') : [];
+  const target = path ? serviceByPath(path) : null;
+  if (!target || target.status !== 'live') return null;
+  return hash ? `${target.path}#${hash}` : target.path;
 };
+// A card's text as paragraphs: a string, or an array of short paragraphs.
+const paragraphs = (text) => (Array.isArray(text) ? text : [text]).filter(Boolean);
 // The instant estimator has price data for these services only (its API lists
 // kitchen, bathroom and basement). Other pages keep the same embed, but the
 // card doesn't promise a price range for their own service.
@@ -63,7 +74,10 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
   const related = (project.related || [])
     .map((path) => serviceByPath(path))
     .filter((item) => item && item.status === 'live' && (!service || item.path !== service.path));
-  const signoff = project.signoff || project.ownerSignoff || null;
+  const signoff = project.ownerSignoff || null;
+  // "your kitchen renovation" / "your flooring project": reads right with every
+  // page name (the price guide card and the CTA banner below).
+  const projectName = name.toLowerCase();
 
   return (
     <>
@@ -113,8 +127,9 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 </ul>
               )}
               <div className="hero-cta-group">
+                {/* Shorter than the old "BOOK AN APPOINTMENT", so it stays on one line at 320px. */}
                 <a href={`#${FORM_ID}`} className="btn-pill-red btn-line-normal" data-cta="service-hero-book-visit">
-                  <span>BOOK AN APPOINTMENT</span>
+                  <span>BOOK A FREE VISIT</span>
                   <ArrowRightIcon size={15} />
                 </a>
                 <a href={SITE_PHONE_TEL} className="btn-pill-ghost" data-cta="service-hero-call">
@@ -125,7 +140,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
 
             <QuoteBookingForm
               id={FORM_ID}
-              title="Book Your Free Consultation"
+              title="Book Your Free On-Site Visit"
               initialTypes={formType ? [formType] : []}
             />
           </div>
@@ -162,7 +177,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="why-grid">
               <div className="why-visual-stack reveal" style={{ position: 'relative' }}>
                 <div className="why-main-img">
-                  <img src={project.intro.image} alt={project.intro.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
+                  <img {...unsplashImage(project.intro.image, INTRO_IMAGE)} alt={project.intro.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
                 </div>
                 <div className="why-floating-card">
                   <h4>{project.intro.floatingTitle}</h4>
@@ -219,7 +234,9 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 >
                   <div className="include-num">{item.num}</div>
                   <h3>{item.title}</h3>
-                  <p>{item.text}</p>
+                  {paragraphs(item.text).map((text) => (
+                    <p key={text.slice(0, 40)}>{text}</p>
+                  ))}
                 </div>
               ))}
             </div>
@@ -243,13 +260,16 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 return (
                   <div
                     className="include-card reveal"
+                    id={item.id}
                     key={item.title}
                     style={delay(index, (index % 3) * 0.1)}
                   >
                     <div className="include-num">{item.num || pad(index + 1)}</div>
                     {/* Same linked-title pattern as the /service-areas cards. */}
                     <h3>{to ? <Link to={to}>{item.title}</Link> : item.title}</h3>
-                    <p>{item.text}</p>
+                    {paragraphs(item.text).map((text) => (
+                      <p key={text.slice(0, 40)}>{text}</p>
+                    ))}
                   </div>
                 );
               })}
@@ -266,6 +286,15 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
               <span className="section-tag">{local.tag || 'In Winnipeg'}</span>
               <h2 className="section-title">{local.title}</h2>
               {local.intro && <p className="section-desc">{local.intro}</p>}
+              {/* The page's one link to the service-area hub, which lists who
+                  issues permits in each community. */}
+              <p className="section-desc">
+                Outside Winnipeg? See{' '}
+                <Link className="blog-inline-link" to="/service-areas">
+                  who issues permits in each community we serve
+                </Link>
+                .
+              </p>
               {localSources.length > 0 && (
                 <p className="section-desc">
                   Sources:{' '}
@@ -289,7 +318,9 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 >
                   <div className="include-num">{item.num || pad(index + 1)}</div>
                   <h3>{item.title}</h3>
-                  <p>{item.text}</p>
+                  {paragraphs(item.text).map((text) => (
+                    <p key={text.slice(0, 40)}>{text}</p>
+                  ))}
                 </div>
               ))}
             </div>
@@ -314,7 +345,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   key={item.title}
                   style={delay(index, index * 0.1)}
                 >
-                  <img src={item.img} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
+                  <img {...unsplashImage(item.img, GALLERY_IMAGE)} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
                   <div className="gallery-overlay">
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>
@@ -372,9 +403,10 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
         <section className="testimonial-section">
           <div className="container">
             <div className="testimonial-card reveal">
+              {/* An h2 like every other section title on the page (same class and
+                  look); no star glyphs, since a rating needs a source (plan §19). */}
               <div className="testimonial-left">
-                <div className="stars-badge">★★★★★</div>
-                <h3 className="testimonial-headline">What Our Clients Say</h3>
+                <h2 className="testimonial-headline">What Our Clients Say</h2>
                 <p className="testimonial-sub">In their own words: what it’s like working with Bridgeland Builders.</p>
               </div>
               <div className="testimonial-right">
@@ -405,12 +437,12 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   {hasPriceData ? (
                     <>
                       <h3>Get Your Free {name} Price Guide</h3>
-                      <p>Answer a few quick questions to receive a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.</p>
+                      <p>Answer a few quick questions for an instant estimate: a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.</p>
                     </>
                   ) : (
                     <>
                       <h3>Get a Free Instant Price Guide</h3>
-                      <p>Our instant price guide gives starting ranges for kitchen, bathroom and basement renovations. {name} projects are priced in the free written quote that follows an on-site visit.</p>
+                      <p>Our instant price guide gives starting ranges for kitchen, bathroom and basement renovations. Your {projectName} is priced in the free written quote that follows an on-site visit.</p>
                     </>
                   )}
                 </div>
@@ -433,7 +465,11 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">Questions</span>
               <h2 className="section-title">{project.faqsTitle || 'Frequently Asked Questions'}</h2>
-              <p className="section-desc">The things people ask us most before booking {withArticle(name.toLowerCase())}.</p>
+              <p className="section-desc">The things people ask us most before booking {withArticle(projectName)}.</p>
+              {/* The page's one link to the site-wide FAQs. */}
+              <Link className="blog-card-link" to="/faqs">
+                MORE RENOVATION FAQS <ArrowRightIcon size={13} />
+              </Link>
             </div>
             <div className="reveal">
               <FaqAccordion items={project.faqs} />
@@ -456,8 +492,10 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   <span className="service-directory-number">{pad(index + 1)}</span>
                   <h3>{item.label}</h3>
                   <p>{item.summary}</p>
+                  {/* The hidden name makes the link "Explore service: Kitchen
+                      Renovations" for screen readers and search, with no visual change. */}
                   <Link className="service-directory-action" to={item.path}>
-                    Explore service <ArrowRightIcon size={13} />
+                    Explore service<span className="visually-hidden">: {item.label}</span> <ArrowRightIcon size={13} />
                   </Link>
                 </article>
               ))}
@@ -483,21 +521,40 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
         </section>
       )}
 
-      {/* CTA BANNER */}
+      {/* CTA BANNER. Only pages the estimator has price data for promise
+          instant numbers; the others are priced after a visit, so their banner
+          goes to this page's booking form instead. Every page also links the
+          cost hub, as CtaBanner does elsewhere (.cta-banner-link). */}
       <section className="cta-banner-section" id="quote">
         <div className="container">
           <div className="cta-banner-card reveal">
             <div className="cta-banner-left">
               <h2>Still thinking it over?</h2>
-              <p>Grab a free quote instead — tell us roughly what you need and we’ll come back with numbers. No appointment required.</p>
+              {hasPriceData ? (
+                <p>Grab a free quote instead — tell us roughly what you need and we’ll come back with numbers. No appointment required.</p>
+              ) : (
+                <p>Book a free on-site visit and we’ll follow up with a free written quote for your {projectName}. There’s no obligation to go ahead.</p>
+              )}
+              <p className="cta-banner-link">
+                <Link to={COST_HUB_PATH} data-cta="service-cta-costs">
+                  See renovation cost ranges
+                </Link>
+              </p>
             </div>
             <div className="cta-banner-right">
-              {/* Goes to this page's own estimator, already set to this service,
-                  rather than the general one on /instant-quote. */}
-              <a href={`#${ESTIMATOR_ID}`} className="btn-pill-red btn-pill-lg btn-line-normal" data-cta="service-cta-price-guide">
-                <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
-                <ArrowRightIcon size={16} />
-              </a>
+              {hasPriceData ? (
+                // This page's own estimator, already set to this service,
+                // rather than the general one on /instant-quote.
+                <a href={`#${ESTIMATOR_ID}`} className="btn-pill-red btn-pill-lg btn-line-normal" data-cta="service-cta-price-guide">
+                  <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
+                  <ArrowRightIcon size={16} />
+                </a>
+              ) : (
+                <a href={`#${FORM_ID}`} className="btn-pill-red btn-pill-lg btn-line-normal" data-cta="service-cta-book-visit">
+                  <span>BOOK A FREE VISIT</span>
+                  <ArrowRightIcon size={16} />
+                </a>
+              )}
             </div>
           </div>
         </div>

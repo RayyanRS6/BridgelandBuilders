@@ -121,10 +121,14 @@
     { "source": "/flooring-free-estimate-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services/flooring", "permanent": true },
     { "source": "/service-page/flooring", "destination": "https://bridgelandbuilders.com/services/flooring", "permanent": true },
     { "source": "/booking-calendar/flooring", "destination": "https://bridgelandbuilders.com/services/flooring", "permanent": true },
+    { "source": "/demolition", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
+    { "source": "/demolition-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
     { "source": "/demolition-services", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
     { "source": "/demolition-services-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
     { "source": "/demolition-free-estimate", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
     { "source": "/demolition-free-estimate-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
+    { "source": "/service-page/demolition", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
+    { "source": "/booking-calendar/demolition", "destination": "https://bridgelandbuilders.com/services/demolition", "permanent": true },
     { "source": "/residential", "destination": "https://bridgelandbuilders.com/services", "permanent": true },
     { "source": "/residential-renovation", "destination": "https://bridgelandbuilders.com/services", "permanent": true },
     { "source": "/residential-renovation-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/services", "permanent": true },
@@ -210,7 +214,8 @@
     { "source": "/booking-calendar/:path*", "destination": "https://bridgelandbuilders.com/book-online", "permanent": true },
     { "source": "/blog/categories/:path*", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
     { "source": "/portfolio-collections/:path*", "destination": "https://bridgelandbuilders.com/projects", "permanent": true },
-    { "source": "/post/:path*", "destination": "https://bridgelandbuilders.com/blog", "permanent": true }
+    { "source": "/post/:path*", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "bridgeland-builders-website.vercel.app" }], "destination": "https://bridgelandbuilders.com/:path*", "permanent": true }
   ],
   "headers": [
     {
@@ -232,11 +237,11 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
-        { "key": "Content-Security-Policy-Report-Only", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://*.leadconnectorhq.com https://link.msgsndr.com https://*.msgsndr.com; style-src 'self' 'unsafe-inline' https://*.leadconnectorhq.com; font-src 'self' data: https://*.leadconnectorhq.com; img-src 'self' data: blob: https://images.unsplash.com https://i.ytimg.com https://www.facebook.com https://*.google-analytics.com https://*.googletagmanager.com https://*.leadconnectorhq.com https://*.msgsndr.com https://storage.googleapis.com; connect-src 'self' https://connect.facebook.net https://www.facebook.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.leadconnectorhq.com wss://*.leadconnectorhq.com https://*.msgsndr.com https://estimator.bridgelandbuilders.com; frame-src https://estimator.bridgelandbuilders.com https://www.youtube-nocookie.com https://*.leadconnectorhq.com https://link.msgsndr.com https://www.facebook.com; media-src 'self' https://*.leadconnectorhq.com; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://*.leadconnectorhq.com https://link.msgsndr.com; frame-ancestors 'self'; report-uri /api/csp-report" }
+        { "key": "Content-Security-Policy-Report-Only", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://connect.facebook.net https://www.googletagmanager.com https://*.leadconnectorhq.com https://link.msgsndr.com https://*.msgsndr.com; style-src 'self' 'unsafe-inline' https://*.leadconnectorhq.com https://fonts.bunny.net; font-src 'self' data: https://*.leadconnectorhq.com https://fonts.bunny.net; img-src 'self' data: blob: https://images.unsplash.com https://i.ytimg.com https://www.facebook.com https://*.google-analytics.com https://*.googletagmanager.com https://*.leadconnectorhq.com https://*.msgsndr.com https://storage.googleapis.com; connect-src 'self' https://connect.facebook.net https://www.facebook.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.leadconnectorhq.com wss://*.leadconnectorhq.com https://*.msgsndr.com https://estimator.bridgelandbuilders.com https://xd-f1cf3d4fdb19408ea770fc6f80817dcb.ecs.us-east-1.on.aws; frame-src https://estimator.bridgelandbuilders.com https://www.youtube-nocookie.com https://*.leadconnectorhq.com https://link.msgsndr.com https://www.facebook.com; media-src 'self' https://*.leadconnectorhq.com; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://*.leadconnectorhq.com https://link.msgsndr.com; frame-ancestors 'self'; report-uri /api/csp-report" }
       ]
     },
     {
-      "source": "/(favicon\\.ico|favicon\\.png|favicon\\.svg|apple-touch-icon\\.png|logo-.*\\.png|site\\.webmanifest|icons/.*|og/.*)",
+      "source": "/(favicon\\.ico|favicon\\.png|apple-touch-icon\\.png|logo-.*\\.(png|webp)|site\\.webmanifest|icons/.*|og/.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {

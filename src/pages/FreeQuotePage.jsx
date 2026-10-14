@@ -4,6 +4,10 @@ import { ArrowRightIcon, CheckIcon, PhoneIcon, StarIcon } from '../components/ic
 import { LANDING_SERVICES } from '../data/landingServices.js';
 import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
+import { unsplashImage } from '../lib/unsplash.js';
+
+// Drawn width of a service card photo, as on the home page cards.
+const CARD_IMAGE = { sizes: '(max-width: 768px) calc(100vw - 48px), 400px', maxWidth: 1200 };
 
 // Every call to action on this page lands on the form in the hero. Plain hash
 // links rather than click handlers, so they already work in the prerendered
@@ -79,7 +83,7 @@ export default function FreeQuotePage() {
             <span className="section-tag">What We Build</span>
             <h2 className="section-title">Renovations We Specialize In</h2>
             <p className="section-desc">
-              Each one planned properly, priced in writing, and built by the same Winnipeg crew from start to finish.
+              Each one planned properly, priced in writing, with a progress update every week once work begins.
             </p>
           </div>
 
@@ -92,7 +96,7 @@ export default function FreeQuotePage() {
               >
                 <div className="service-img-wrapper">
                   <span className="service-tag-floating">{service.tag}</span>
-                  <img src={service.img} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
+                  <img {...unsplashImage(service.img, CARD_IMAGE)} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
                 </div>
                 <div className="service-body">
                   <div>

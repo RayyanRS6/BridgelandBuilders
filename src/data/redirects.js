@@ -301,10 +301,16 @@ export const REDIRECTS = [
     planned: '/services/demolition',
     note: 'Wix demolition page family (interim: services hub)',
   }, [
+    ['/demolition', A, 'Assumed from the Wix family pattern (plan §1: /demolition*)'],
+    ['/demolition-winnipeg-manitoba', A, 'Assumed from the Wix family pattern (plan §1: /demolition*)'],
     ['/demolition-services', W],
     ['/demolition-services-winnipeg-manitoba', S],
     ['/demolition-free-estimate', W],
     ['/demolition-free-estimate-winnipeg-manitoba', W],
+    // Explicit, so they reach the demolition page instead of the
+    // /service-page and /booking-calendar wildcards.
+    ['/service-page/demolition', A, 'Wix booking service page (assumed)'],
+    ['/booking-calendar/demolition', A, 'Wix booking calendar (assumed)'],
   ]),
 
   /* -------------------------------------------------------- services hub */
@@ -445,6 +451,18 @@ export const REDIRECTS = [
 ];
 
 /**
+ * Whole-host redirects (plan §3.10): every path on these hosts answers a
+ * permanent 308 to the same path on the apex. Vercel's public production
+ * alias serves the full site with its own robots.txt, so it is folded into
+ * the apex instead of competing with it. sync-redirects writes these after
+ * every rule above, so a legacy URL requested on the alias still reaches its
+ * final page in one hop (the rules above use absolute apex destinations).
+ */
+export const HOST_REDIRECTS = [
+  { host: 'bridgeland-builders-website.vercel.app', note: 'Vercel production alias (public, unprotected)' },
+];
+
+/**
  * Legacy URLs deliberately left as 404 (nothing useful to send them to).
  * Listed so the redirect check can confirm they really return 404 and that no
  * wildcard rule swallows them.
@@ -460,5 +478,7 @@ export const LEAVE_404 = [
   '/feed.xml',
   '/feeds/:path*',
   '/quality_auto/:path*',
+  // Production answers 403 here (the Vercel firewall denies WordPress probes
+  // before routing); check-redirects accepts that in production mode.
   '/wp-content/:path*',
 ];

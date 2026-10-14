@@ -61,6 +61,10 @@ export function validateLead(input = {}) {
 
   if (Object.keys(errors).length) return { errors };
 
+  // The optional marketing-email box: true only when actually ticked. It is
+  // never required and can't make a submission invalid.
+  const marketingConsent = input.marketingConsent === true;
+
   // E.164 (no extension), which GoHighLevel can call and text.
-  return { lead: { name, email, phone: phone.number, address, city, postalCode, ...answers } };
+  return { lead: { name, email, phone: phone.number, address, city, postalCode, ...answers, marketingConsent } };
 }

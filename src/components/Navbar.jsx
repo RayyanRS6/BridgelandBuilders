@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '../data/serviceCategories.js';
 import { INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
@@ -21,6 +21,30 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false);
   const [activeServiceCategory, setActiveServiceCategory] = useState('residential');
+  const navLinksRef = useRef(null);
+  const megaMenuRef = useRef(null);
+  const servicesToggleRef = useRef(null);
+  const menuButtonRef = useRef(null);
+
+  // Escape closes the innermost open menu (the mega menu first, then the
+  // mobile panel), the usual disclosure-menu behaviour. Focus that was inside
+  // the closing menu goes back to the button that opens it.
+  useEffect(() => {
+    if (!isMenuOpen && !isServicesMenuOpen) return undefined;
+    const closeOnEscape = (event) => {
+      if (event.key !== 'Escape') return;
+      const focused = document.activeElement;
+      if (isServicesMenuOpen) {
+        if (megaMenuRef.current?.contains(focused)) servicesToggleRef.current?.focus();
+        setIsServicesMenuOpen(false);
+      } else {
+        if (navLinksRef.current?.contains(focused)) menuButtonRef.current?.focus();
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, [isMenuOpen, isServicesMenuOpen]);
 
   const selectedCategory = SERVICE_CATEGORIES.find(
     (category) => category.id === activeServiceCategory
@@ -60,18 +84,23 @@ export default function Navbar() {
     <div className="header-wrapper">
       <nav className="navbar" id="navbar">
         <Link to="/" className="brand-logo" onClick={closeNavigation}>
-          <img
-            className="logo-mark"
-            src="/logo-mark.png"
-            alt=""
-            width="96"
-            height="96"
-            decoding="async"
-          />
+          {/* WebP at the display size (1x/2x) from scripts/build-images.mjs,
+              the PNG as the fallback. */}
+          <picture>
+            <source type="image/webp" srcSet="/logo-mark-48.webp 1x, /logo-mark-96.webp 2x" />
+            <img
+              className="logo-mark"
+              src="/logo-mark.png"
+              alt=""
+              width="96"
+              height="96"
+              decoding="async"
+            />
+          </picture>
           <span>Bridgeland Builders</span>
         </Link>
 
-        <ul className={`nav-links${isMenuOpen ? ' is-open' : ''}`}>
+        <ul className={`nav-links${isMenuOpen ? ' is-open' : ''}`} ref={navLinksRef}>
           {NAV_LINKS.map((link) => {
             if (link.to !== '/services') {
               return (
@@ -108,6 +137,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     className="services-menu-toggle"
+                    ref={servicesToggleRef}
                     aria-label={`${isServicesMenuOpen ? 'Hide' : 'Show'} service categories`}
                     aria-expanded={isServicesMenuOpen}
                     aria-controls="services-mega-menu"
@@ -120,7 +150,7 @@ export default function Navbar() {
                 {/* Always in the HTML (hidden while closed) so the service links are
                     crawlable; every category's panel is rendered and only the
                     selected one is shown. */}
-                <div className="services-mega-menu" id="services-mega-menu" hidden={!isServicesMenuOpen}>
+                <div className="services-mega-menu" id="services-mega-menu" hidden={!isServicesMenuOpen} ref={megaMenuRef}>
                   <div className="services-mega-menu-inner">
                     <div className="service-category-list">
                       <p className="services-menu-kicker">Browse by category</p>
@@ -150,9 +180,12 @@ export default function Navbar() {
                         key={category.id}
                         hidden={category.id !== selectedCategory.id}
                       >
+                        {/* Not a heading: the menu is in every page's HTML
+                            ahead of the page's own h1. The panel's region
+                            label carries the category name. */}
                         <div className="service-category-heading">
                           <span>Related services</span>
-                          <h3>{category.label}</h3>
+                          <p className="service-category-title">{category.label}</p>
                         </div>
                         <ul>
                           {category.services.map((service) => (
@@ -196,6 +229,7 @@ export default function Navbar() {
           <button
             className="mobile-menu-btn"
             id="mobileMenuToggle"
+            ref={menuButtonRef}
             aria-label="Toggle Navigation"
             aria-expanded={isMenuOpen}
             onClick={toggleMenu}

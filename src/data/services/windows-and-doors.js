@@ -6,7 +6,7 @@
 // Every rule, program and number in `local` and `faqs` was checked against
 // the official page listed in local.sources on 2026-10-13. Re-check the
 // Efficiency Manitoba rebate before each content update (rebates change).
-// Owner sign-off (signoff) is still to be added.
+// Owner sign-off (ownerSignoff) is still to be added.
 
 const ACCESSED = '2026-10-13';
 
@@ -115,7 +115,7 @@ export default {
     serviceType: 'Window and door installation',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'window and door installation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Optional sections (plan §7), rendered by ProjectPage only when filled in:
@@ -125,12 +125,12 @@ export default {
   //   related    [path]                                   related service pages (registry paths)
   //   guides     [blogSlug]                               related guides (blog posts)
   //   faqsTitle  string                                   heading over the FAQs
-  //   signoff    { name, role, date }                     owner sign-off line
+  //   ownerSignoff { name, role, date }                   owner sign-off line
   // No cost page for this service (no Bridgeland price data), so no teaser.
   costTeaser: null,
   // Live pages only are shown; drafts appear when they launch.
   related: ['/services/exterior-painting', '/services/masonry-stucco', '/services/basement-renovations', '/services/whole-home-renovations'],
   // Unpublished slugs are skipped by ServiceRoute until the post goes live.
   guides: ['window-and-door-replacement-winnipeg', 'renovating-a-character-home-in-winnipeg', 'insulation-rebates-during-a-renovation-manitoba'],
-  signoff: null,
+  ownerSignoff: null,
 };

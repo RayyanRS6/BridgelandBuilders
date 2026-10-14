@@ -138,7 +138,7 @@ export default {
     { q: 'Can you install heated floors?', a: 'Yes. A bathroom renovation is the right time to add them, since the floor is already open. The heating mat goes under the tile on its own circuit with a thermostat, and the wiring may need its own electrical permit. On a cold Winnipeg morning, a warm floor makes a real difference.' },
     { q: 'What if you find water damage under the old shower?', a: 'It happens, especially under older tubs and showers. We photograph it, show you, and price the repair in writing before going further. Rotten subfloor is replaced, never tiled over, because new tile on a damaged floor won’t last. Catching it during demolition is far better than finding it after.' },
     { q: 'Who arranges the permits and inspections?', a: 'We coordinate them. When your bathroom needs a building permit or plumbing and electrical permits, we arrange them with the City of Winnipeg or your local municipality and schedule inspections before the walls are closed. The City says the homeowner and the permit applicant share responsibility for inspections, so you’ll know what was booked and passed.' },
-    { q: 'What happens at the free on-site visit?', a: 'We measure the room, look at the plumbing, venting and floor, and talk about what you want to change. You then receive a free written quote listing labour, materials and what’s included. If you later swap a tile or a vanity, we re-price it before anything is ordered.' },
+    { q: 'What happens at the free on-site visit?', a: 'We measure the room, look at the plumbing, venting and floor, and talk about what you want to change. You then receive a free written quote listing labour, materials and what’s included, so it is easy to compare with any other company’s quote. If you later swap a tile or a vanity, we re-price it before anything is ordered.' },
   ],
 
   // Title, meta description and Service schema for this page. `updated`
@@ -150,11 +150,11 @@ export default {
       'Bathroom renovations in Winnipeg with proper waterproofing under the tile. Most take 2–3 weeks. Start with a free on-site visit and a written quote.',
     serviceType: 'Bathroom renovation',
     primaryKeyword: 'bathroom renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/kitchen-renovations', '/services/basement-renovations', '/services/whole-home-renovations'],
+  related: ['/services/kitchen-renovations', '/services/basement-renovations', '/services/whole-home-renovations', '/services/demolition'],
   guides: ['which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners', 'ensuite-renovation-winnipeg', 'winnipeg-renovation-permits'],
-  signoff: null,
+  ownerSignoff: null,
 };

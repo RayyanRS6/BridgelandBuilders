@@ -4,7 +4,7 @@
 // No intro, gallery or testimonial: there are no real job photos or reviews
 // for this service yet, and stock photos are never shown as our work.
 // Every rule and guideline in `local` and `faqs` was checked against the page
-// listed in local.sources on 2026-10-13. Owner sign-off (signoff) is still to be added.
+// listed in local.sources on 2026-10-13. Owner sign-off (ownerSignoff) is still to be added.
 
 const ACCESSED = '2026-10-13';
 
@@ -111,7 +111,7 @@ export default {
       'Flooring installation in Winnipeg for homes, basements and commercial spaces: removal, subfloor prep and clean trim. Free on-site visit and written quote.',
     serviceType: 'Flooring installation',
     primaryKeyword: 'flooring installation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.
@@ -121,5 +121,5 @@ export default {
   related: ['/services/basement-renovations', '/services/kitchen-renovations', '/services/whole-home-renovations', '/services/commercial-renovations'],
   // Unpublished slugs are skipped by ServiceRoute until the post goes live.
   guides: ['radon-testing-before-finishing-a-basement', 'basement-flood-protection-winnipeg', 'planning-a-winter-basement-development-winnipeg'],
-  signoff: null,
+  ownerSignoff: null,
 };

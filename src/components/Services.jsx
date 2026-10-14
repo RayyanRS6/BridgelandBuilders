@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
+import { unsplashImage } from '../lib/unsplash.js';
 import { ArrowRightIcon } from './icons.jsx';
 
+// Drawn width of a card photo: a third of the container on desktop (about
+// 400px), the full container from 768px down.
+const CARD_IMAGE = { sizes: '(max-width: 768px) calc(100vw - 48px), 400px', maxWidth: 1200 };
+
+// Stock photos: the alts describe what is in the picture, not our work.
 const SERVICES = [
   {
     tag: 'Residential',
     img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80',
-    alt: 'Residential kitchen and bathroom renovation',
+    alt: 'Person cooking at a gas cooktop in a white kitchen with a stone island',
     title: 'Residential Services',
     to: '/services#residential',
     action: 'View residential services',
@@ -14,7 +20,7 @@ const SERVICES = [
   {
     tag: 'Commercial',
     img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-    alt: 'Commercial space and office renovations',
+    alt: 'Open office with glass-walled rooms, a kitchenette and teal bench seating',
     title: 'Commercial Services',
     to: '/services#commercial',
     action: 'View commercial services',
@@ -23,7 +29,7 @@ const SERVICES = [
   {
     tag: 'Specialty',
     img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
-    alt: 'Other renovation and construction services',
+    alt: 'Room with light grey walls, a black loveseat, a white dresser and a floor lamp',
     title: 'Other Services',
     to: '/services#additional',
     action: 'View additional services',
@@ -50,7 +56,7 @@ export default function Services() {
             >
               <div className="service-img-wrapper">
                 <span className="service-tag-floating">{service.tag}</span>
-                <img src={service.img} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
+                <img {...unsplashImage(service.img, CARD_IMAGE)} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div className="service-body">
                 <div>

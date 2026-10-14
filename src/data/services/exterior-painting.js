@@ -5,7 +5,7 @@
 // for this service yet, and stock photos are never shown as our work.
 // Every rule and guideline in `local` and `faqs` was checked against the page
 // listed in local.sources on 2026-10-13. Weather guidance stays general (each
-// paint's own label sets its limits). Owner sign-off (signoff) is still to be added.
+// paint's own label sets its limits). Owner sign-off (ownerSignoff) is still to be added.
 
 const ACCESSED = '2026-10-13';
 
@@ -112,7 +112,7 @@ export default {
     serviceType: 'Exterior painting',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'exterior painting Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.
@@ -122,5 +122,5 @@ export default {
   related: ['/services/windows-and-doors', '/services/masonry-stucco', '/services/whole-home-renovations', '/services/commercial-renovations'],
   // Unpublished slugs are skipped by ServiceRoute until the post goes live.
   guides: ['exterior-painting-winnipeg-when-to-paint', 'renovating-a-character-home-in-winnipeg'],
-  signoff: null,
+  ownerSignoff: null,
 };

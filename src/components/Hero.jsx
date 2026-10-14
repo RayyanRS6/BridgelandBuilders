@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
+import { unsplashImage } from '../lib/unsplash.js';
 import { ArrowRightIcon, StarIcon } from './icons.jsx';
+
+// The LCP image. The arch frame crops a 3:2 photo with object-fit: cover, so
+// the photo is drawn at 1.5x the frame height: about 96vw on phones (the frame
+// is clamp(240px, 64vw, 330px) tall), 540px on tablets and 690px on desktop.
+// scripts/prerender.mjs copies srcset/sizes into the image preload.
+const HERO_IMAGE = unsplashImage(
+  'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80',
+  { sizes: '(max-width: 640px) 96vw, (max-width: 1024px) 540px, 690px', maxWidth: 1200 }
+);
 
 export default function Hero() {
   return (
@@ -36,7 +46,7 @@ export default function Hero() {
           <div className="hero-visual">
             <div className="hero-arch-frame">
               <img
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
+                {...HERO_IMAGE}
                 alt="Bright living room with a sofa, armchair and large windows"
                 width="1000"
                 height="667"

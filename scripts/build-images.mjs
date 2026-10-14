@@ -4,7 +4,8 @@
  *   npm run images                       everything below
  *   node scripts/build-images.mjs --only=blog    blog images (legacy + title cards) only
  *   node scripts/build-images.mjs --only=cards   title cards only (legacy files kept)
- *   node scripts/build-images.mjs --only=brand   default OG image + app icons only
+ *   node scripts/build-images.mjs --only=brand   default OG image, app icons and WebP logos
+ *   node scripts/build-images.mjs --only=logos   WebP logos only
  *
  * Blog: reads media-src/manifest.json (from scripts/fetch-legacy-images.mjs)
  * and writes, per image, to public/images/blog/<post-slug>/:
@@ -16,6 +17,10 @@
  * and src/data/media.generated.js mapping each original Wix URL to its files.
  * Names carry a content hash, so vercel.json serves /images/* as immutable.
  * Metadata (EXIF/GPS) is stripped. public/images/blog/ is regenerated whole.
+ * Only images that a published post in blog-raw/posts/ shows now are built
+ * (a post turned into a redirect or draft takes its images with it), and the
+ * names come from the alts in those posts, so a rewritten alt renames its
+ * files on the next run without fetching anything again.
  *
  * Title cards: every published post in blog-raw/posts/ without a `hero` gets
  * a branded card instead (dark background, red accent bar, the post title in
@@ -24,13 +29,20 @@
  * WebP) plus a separate 1200x630 OG layout, under the same short names
  * (title-card-<title-slug>-…). Its media.generated.js entry is keyed
  * 'card:<slug>'. Without media-src/manifest.json (or with --only=cards) the
- * legacy files and entries are kept and only the cards are redone.
+ * legacy files and entries are kept (less those no published post shows any
+ * more) and only the cards are redone.
  *
  * Brand: public/og/default-1200x630.jpg (brand colours, logo-on-dark.png and
  * DM Sans text) and public/icons/icon-192.png, icon-512.png,
  * icon-maskable-512.png (the bridge mark from the 1080px master logo, else
  * apple-touch-icon.png). The DM Sans TTFs used for the OG text are downloaded
  * once from Google Fonts into media-src/fonts/ (git-ignored).
+ *
+ * Logos: WebP copies of the header and footer logos at their display sizes,
+ * 1x and 2x (public/logo-mark-48.webp / -96.webp for the navbar mark,
+ * public/logo-on-dark-220.webp / -440.webp for the footer), made from the
+ * PNGs next to them. Navbar.jsx and Footer.jsx serve them through <picture>
+ * with the PNG as the fallback; logo-on-light.png stays the schema logo.
  */
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
@@ -51,6 +63,7 @@ const MAIN_WIDTH = 880;
 const OG = { width: 1200, height: 630 };
 const BUDGET_KB = 300; // any image (plan §4)
 const LCP_BUDGET_KB = 120; // the hero shown first
+const WIX_MEDIA = /^https:\/\/static\.wixstatic\.com\/media\/[^/?#]+$/;
 
 const BRAND = {
   dark: '#191715',
@@ -78,7 +91,18 @@ function slugify(text, fallback) {
 // in a deep folder, so folder and file names are capped (still descriptive).
 const MAX_NAME = 36;
 const MAX_FOLDER = 40;
-const cutWords = (slug, max) => (slug.length > max ? slug.slice(0, max).replace(/-[^-]*$/, '') : slug);
+// Words a shortened name should not end on ("…-project-with", "…-for-a").
+const TRAILING_STOP_WORDS = new Set(['a', 'an', 'and', 'at', 'by', 'for', 'from', 'in', 'of', 'on', 'or', 'the', 'to', 'with', 'your']);
+
+/** The slug cut to at most `max` characters at a whole word, without a dangling stop word. */
+function cutWords(slug, max) {
+  if (slug.length <= max) return slug;
+  const head = slug[max] === '-' ? slug.slice(0, max) : slug.slice(0, max).replace(/-[^-]*$/, '');
+  const words = head.split('-');
+  while (words.length > 1 && TRAILING_STOP_WORDS.has(words[words.length - 1])) words.pop();
+  return words.join('-');
+}
+
 const folderFor = (slug) => cutWords(slug, MAX_FOLDER);
 
 function writeOnce(dir, base, ext, buffer) {
@@ -147,18 +171,32 @@ async function buildBlog({ cardsOnly = false } = {}) {
 
 async function buildLegacyImages(manifestPath) {
   const images = JSON.parse(readFileSync(manifestPath, 'utf8'));
+  const current = currentUses();
+  if (current) {
+    const fetched = new Set(images.map((image) => image.url));
+    for (const [url, uses] of current) {
+      if (WIX_MEDIA.test(url) && !fetched.has(url)) {
+        warnings.push(`${uses[0].slug} uses ${url}, which is not in media-src/manifest.json (run node scripts/fetch-legacy-images.mjs)`);
+      }
+    }
+  }
   rmSync(BLOG_OUT, { recursive: true, force: true });
   const media = {};
   let files = 0;
+  let built = 0;
 
   for (const image of images) {
+    // How the published posts use the image now; no use, no files.
+    const uses = current ? current.get(image.url) || [] : image.uses;
+    if (!uses.length) continue;
+    built += 1;
     const input = readFileSync(join(MEDIA_SRC, image.file));
     const meta = await sharp(input).rotate().metadata();
     const width = meta.autoOrient?.width || meta.width;
     const height = meta.autoOrient?.height || meta.height;
-    const heroUse = image.uses.find((u) => u.role === 'hero');
-    const bodyUse = image.uses.find((u) => u.role === 'body');
-    const owner = (heroUse || bodyUse || image.uses[0]).slug;
+    const heroUse = uses.find((u) => u.role === 'hero');
+    const bodyUse = uses.find((u) => u.role === 'body');
+    const owner = (heroUse || bodyUse || uses[0]).slug;
     const folder = folderFor(owner);
     const dir = join(BLOG_OUT, folder);
     const urlDir = `/images/blog/${folder}`;
@@ -193,20 +231,49 @@ async function buildLegacyImages(manifestPath) {
     process.stdout.write('.');
   }
   process.stdout.write('\n');
-  return { media, summary: `${images.length} originals -> ${files} files in public/images/blog/` };
+  const skipped = images.length - built;
+  return {
+    media,
+    summary: `${built} originals -> ${files} files in public/images/blog/${skipped ? ` (${skipped} no published post uses skipped)` : ''}`,
+  };
+}
+
+/**
+ * The Wix originals the published posts show now, by URL, as manifest-style
+ * uses ({ slug, role, alt }, the alts as fetch-legacy-images.mjs reads them):
+ * each post's hero (alt: heroAlt, else the title) and its body images. Null
+ * without blog-raw/posts/, in which case the manifest's own uses stand.
+ */
+function currentUses() {
+  if (!existsSync(POSTS_DIR)) return null;
+  const uses = new Map();
+  const add = (url, use) => {
+    if (!url) return;
+    if (!uses.has(url)) uses.set(url, []);
+    uses.get(url).push(use);
+  };
+  for (const post of publishedPosts()) {
+    add(post.hero, { slug: post.slug, role: 'hero', alt: post.heroAlt || post.title });
+    for (const block of Array.isArray(post.blocks) ? post.blocks : []) {
+      if (block && block.t === 'img') add(block.src, { slug: post.slug, role: 'body', alt: block.alt });
+    }
+  }
+  return uses;
 }
 
 /**
  * The current media.generated.js minus its title cards (whose files are
- * deleted, as they are redrawn next), for runs that do not rebuild the legacy
+ * deleted, as they are redrawn next) and minus any original no published post
+ * shows any more (files deleted too), for runs that do not rebuild the legacy
  * images.
  */
 async function keptLegacyMedia() {
   if (!existsSync(GENERATED)) return {};
   const { MEDIA = {} } = await import(pathToFileURL(GENERATED).href);
+  const current = currentUses();
   const media = {};
   for (const [key, entry] of Object.entries(MEDIA)) {
-    if (key.startsWith(CARD_PREFIX)) removeImageFiles(entry);
+    if (key.startsWith(CARD_PREFIX) || (current && !current.has(key))) removeImageFiles(entry);
     else media[key] = entry;
   }
   return media;
@@ -214,9 +281,11 @@ async function keptLegacyMedia() {
 
 /** Deletes the /images/blog/ files of a media entry (and its folder once empty). */
 function removeImageFiles(entry) {
-  const sets = [entry.srcSet, entry.avifSrcSet].flatMap((set) => String(set || '').split(', ').map((item) => item.split(' ')[0]));
+  const sets = [entry.srcSet, entry.avifSrcSet, entry.hero?.srcSet, entry.hero?.avifSrcSet].flatMap((set) =>
+    String(set || '').split(', ').map((item) => item.split(' ')[0])
+  );
   const folders = new Set();
-  for (const url of new Set([entry.src, entry.og, ...sets])) {
+  for (const url of new Set([entry.src, entry.og, entry.hero?.src, ...sets])) {
     if (!url || !url.startsWith('/images/blog/')) continue;
     const parts = url.slice(1).split('/');
     rmSync(join(PUBLIC, ...parts), { force: true });
@@ -293,13 +362,19 @@ const CARD_LAYOUTS = {
   },
 };
 
-/** Published posts (blog-raw/posts/*.json) without a hero image, by slug. */
-function postsWithoutHero() {
+/** Published posts (blog-raw/posts/*.json; a missing status means published). */
+function publishedPosts() {
   if (!existsSync(POSTS_DIR)) return [];
   return readdirSync(POSTS_DIR)
     .filter((file) => file.endsWith('.json'))
     .map((file) => JSON.parse(readFileSync(join(POSTS_DIR, file), 'utf8')))
-    .filter((post) => (post.status || 'published') === 'published' && !post.hero && post.slug && String(post.title || '').trim())
+    .filter((post) => (post.status || 'published') === 'published' && post.slug);
+}
+
+/** Published posts without a hero image, by slug. */
+function postsWithoutHero() {
+  return publishedPosts()
+    .filter((post) => !post.hero && String(post.title || '').trim())
     .sort((a, b) => a.slug.localeCompare(b.slug));
 }
 
@@ -602,6 +677,33 @@ async function buildIcons() {
   console.log(`[images] icons (public/icons/): ${sizes.join(', ')}`);
 }
 
+/**
+ * The header and footer logos as WebP at their display sizes (1x and 2x),
+ * from the PNGs in public/: the navbar mark shows at 30–38px, the footer logo
+ * at up to 220px. Never enlarged past the PNG.
+ */
+const LOGOS = [
+  { file: 'logo-mark.png', widths: [48, 96] },
+  { file: 'logo-on-dark.png', widths: [220, 440] },
+];
+
+async function buildLogos() {
+  const sizes = [];
+  for (const { file, widths } of LOGOS) {
+    const input = readFileSync(join(PUBLIC, file));
+    for (const width of widths) {
+      const webp = await sharp(input)
+        .resize({ width, withoutEnlargement: true })
+        .webp({ quality: 90, alphaQuality: 100, effort: 6 })
+        .toBuffer();
+      const name = `${file.replace(/\.png$/, '')}-${width}.webp`;
+      writeFileSync(join(PUBLIC, name), webp);
+      sizes.push(`${name} ${kb(webp)} KB`);
+    }
+  }
+  console.log(`[images] logos (public/): ${sizes.join(', ')}`);
+}
+
 async function buildDefaultOg() {
   const dir = join(PUBLIC, 'og');
   mkdirSync(dir, { recursive: true });
@@ -657,4 +759,5 @@ if (!only || only === 'brand') {
   await buildDefaultOg();
   await buildIcons();
 }
+if (!only || only === 'brand' || only === 'logos') await buildLogos();
 for (const warning of new Set(warnings)) console.warn(`[images] warning: ${warning}`);

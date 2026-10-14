@@ -93,7 +93,7 @@ export default {
     serviceType: 'Retail renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Retailers and commercial property owners' },
     primaryKeyword: 'retail renovation Winnipeg',
-    updated: '2026-10-13',
+    updated: '2026-10-14',
   },
 
   typesTitle: 'Types of Retail Renovations',
@@ -129,10 +129,15 @@ export default {
     ],
   },
 
-  // Commercial cost page stays unpublished (no data, plan §8).
-  costTeaser: null,
+  // Commercial cost page stays unpublished (no data, plan §8): the teaser
+  // points to the cost hub's "priced after a visit" section. No numbers.
+  costTeaser: {
+    text: 'Retail renovations are priced in a free written quote after a site visit, once we know the scope and your opening date. Our Winnipeg cost guide explains what moves the price of a renovation.',
+    to: '/renovation-cost-winnipeg#priced-after-a-visit',
+    label: 'Renovation costs in Winnipeg',
+  },
   // Live pages only are shown; drafts appear when they launch.
-  related: ['/services/commercial-renovations', '/services/restaurant-renovations', '/services/office-renovations', '/services/general-contracting'],
+  related: ['/services/commercial-renovations', '/services/restaurant-renovations', '/services/office-renovations', '/services/general-contracting', '/services/demolition'],
   guides: ['how-to-balance-functionality-and-aesthetics-in-a-commercial-space', 'understanding-roi-which-commercial-renovations-bring-the-most-value', 'how-to-prepare-your-business-for-a-major-renovation'],
-  signoff: null,
+  ownerSignoff: null,
 };
