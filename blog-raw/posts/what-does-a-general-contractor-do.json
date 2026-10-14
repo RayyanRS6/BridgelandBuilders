@@ -6,6 +6,7 @@
   "metaDescription": "What a general contractor does on a renovation, from pricing and permits to trades, schedule and handover, plus how GCs charge and when you need one.",
   "excerpt": "A plain-language guide for homeowners and business owners: what a general contractor is responsible for, how general contractors price work, and when hiring one makes sense.",
   "date": "2026-10-13",
+  "updated": "2026-10-15",
   "cats": [
     "Hiring a Contractor"
   ],
@@ -15,6 +16,7 @@
     "/services/whole-home-renovations"
   ],
   "cluster": "hiring-a-contractor",
+  "ctaService": "/services/general-contracting",
   "author": "",
   "reviewedBy": "",
   "answer": "A general contractor takes responsibility for delivering the whole project: pricing it, hiring and scheduling the trades, ordering materials, arranging permits and inspections, keeping the site safe, and handing over finished work. Instead of managing an electrician, plumber, framer and finisher separately, you sign one contract and deal with one point of contact.",
@@ -136,7 +138,7 @@
     },
     {
       "t": "p",
-      "x": "At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      "x": "At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or [our cost guide](/renovation-cost-winnipeg)."
     },
     {
       "t": "h2",
@@ -148,7 +150,7 @@
     },
     {
       "t": "p",
-      "x": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City of Winnipeg or the local municipality on every project. Our guide to [Winnipeg renovation permits](/blog/winnipeg-renovation-permits) covers which projects need one."
+      "x": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City of Winnipeg or the local municipality on every project. Our guide to [City permit rules](/blog/winnipeg-renovation-permits) covers which projects need one."
     },
     {
       "t": "h2",

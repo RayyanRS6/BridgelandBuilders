@@ -6,7 +6,8 @@
   "metaDescription": "Winnipeg secondary suite rules as the City lists them: permits, size limits, separation, the 2025 zoning changes, and which suite funding programs exist.",
   "excerpt": "Permits, size limits, separation and the 2025 zoning changes for basement and garden suites in Winnipeg, plus the federal programs that do and don’t exist.",
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-01-15",
   "cats": [
     "Basements & Suites",
     "Permits & Planning"
@@ -16,6 +17,7 @@
     "/services/basement-renovations"
   ],
   "cluster": "winnipeg-permits",
+  "ctaService": "/services/basement-suites",
   "author": "",
   "reviewedBy": "",
   "answer": "Winnipeg allows one secondary suite per single-family property. It needs a development permit and a building permit before construction, plus electrical and plumbing permits. The City lists an attached suite’s size as no more than 33% of the combined floor area or 74 m² (800 sq. ft.), whichever is less, and at least 32.5 m² (350 sq. ft.).",
@@ -46,6 +48,11 @@
       "label": "City of Winnipeg – Zoning changes to accommodate infill housing",
       "url": "https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
     },
     {
       "label": "Province of Manitoba – Adoption of the 2020 national model construction codes",
@@ -119,6 +126,10 @@
     {
       "t": "p",
       "x": "Both a development permit and a building permit, before construction starts, plus separate electrical and plumbing permits. The City offers concurrent review, where the building permit application goes in once the development application is confirmed complete, or sequential review, after development approval. Apply through Permits Online or at the Zoning & Permits office, Unit 31-30 Fort Street."
+    },
+    {
+      "t": "p",
+      "x": "In September 2026, the City took an average of 13 business days to review housing permit applications where one dwelling is stacked above another, as in a house with a basement suite, against its own target of 15 business days; that’s review time, not the total time until a permit is issued."
     },
     {
       "t": "p",

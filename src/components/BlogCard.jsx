@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon, CalendarIcon, ClockIcon } from './icons.jsx';
 import Picture from './Picture.jsx';
+import { cardImage } from '../lib/cardImage.js';
 
 /** "August 4, 2026" from YYYY-MM-DD (a time and offset after the date are ignored). */
 export function formatPostDate(iso) {
@@ -52,9 +53,12 @@ export default function BlogCard({ post, featured = false }) {
   const prefetch = () => prefetchPost(post.slug);
   // A post without a hero photo shows its title card (scripts/build-images.mjs).
   // Until that exists there is no image at all: the media box keeps its 16:9
-  // space and background (pages.css), so the grid stays even.
-  const imageSrc = post.heroSrc || post.hero;
-  const isTitleCard = Boolean(!post.hero && post.heroSrc);
+  // space and background (pages.css), so the grid stays even. Self-hosted
+  // images arrive as a compact record (`image`, with `titleCard` set when it
+  // is the title card); cardImage rebuilds src and srcsets.
+  const image = cardImage(post);
+  const imageSrc = image.src;
+  const isTitleCard = post.image ? Boolean(post.titleCard) : Boolean(!post.hero && post.heroSrc);
 
   return (
     <article
@@ -71,8 +75,8 @@ export default function BlogCard({ post, featured = false }) {
       >
         {imageSrc && (
           <Picture
-            avifSrcSet={post.heroAvifSrcSet}
-            srcSet={post.heroSrcSet}
+            avifSrcSet={image.avifSrcSet}
+            srcSet={image.srcSet}
             sizes={featured ? FEATURED_SIZES : CARD_SIZES}
             src={imageSrc}
             alt=""

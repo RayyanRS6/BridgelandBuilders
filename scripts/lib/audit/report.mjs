@@ -47,6 +47,7 @@ export const CODE_TITLES = {
   'seo.updated-missing': 'SEO entry without "updated" date',
   'content.stale-cost-guide': 'Cost guide due for its yearly refresh',
   'content.stale-source': 'Sources last verified more than a year ago',
+  'content.review-due': 'Post past its review-by date (blog-raw "reviewBy")',
   'claims.banned': 'Unconfirmed or removed claim in page copy',
   'facts.timeline-drift': 'Service timeline in page copy differs from facts.js TIMELINES',
   'robots.missing': 'robots.txt missing',

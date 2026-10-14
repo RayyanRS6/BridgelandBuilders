@@ -6,7 +6,7 @@
   "metaDescription": "A 12-point Winnipeg checklist for hiring a renovation contractor: WCB clearance, insurance, registration, permits, deposits, contracts and red flags.",
   "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
   "date": "2026-08-05",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "cats": [
     "Hiring a Contractor"
   ],
@@ -117,7 +117,7 @@
       "x": "A renovation contract should list the business's details, the full scope and materials, allowances for unchosen finishes, the total cost with taxes, the schedule and completion date, the deposit and progress payments, who handles permits, how changes are approved, and the warranty. Manitoba's Consumer Protection Office recommends getting estimates from several contractors before you sign. Use this as the minimum:"
     },
     { "t": "li", "x": "The contractor's business name, address and contact information." },
-    { "t": "li", "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on a [kitchen renovation](/services/kitchen-renovations), where cabinets and counters drive the price." },
+    { "t": "li", "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on [kitchen remodels](/services/kitchen-renovations), where cabinets and counters drive the price." },
     { "t": "li", "x": "The total estimated cost, with taxes shown." },
     { "t": "li", "x": "A work schedule and a completion date." },
     { "t": "li", "x": "The deposit and the progress-payment schedule, with each payment tied to a stage of work." },
@@ -141,7 +141,7 @@
     },
     {
       "t": "p",
-      "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+      "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our permit guide explains [which projects need which permits](/blog/winnipeg-renovation-permits)."
     },
     {
       "t": "p",
@@ -203,7 +203,7 @@
     },
     {
       "t": "p",
-      "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and the [Winnipeg renovation cost guide](/renovation-cost-winnipeg) explains what drives the price."
+      "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and our cost guide explains [what drives the price of a Winnipeg renovation](/renovation-cost-winnipeg)."
     }
   ]
 }

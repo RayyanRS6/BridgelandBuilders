@@ -6,7 +6,8 @@
   "metaDescription": "What Winnipeg requires to finish a basement: when you need a permit, ceiling heights, bedroom windows, insulation, alarms, drawings and inspections.",
   "excerpt": "What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.",
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-01-15",
   "cats": [
     "Permits & Planning",
     "Basements & Suites"
@@ -55,6 +56,11 @@
       "label": "City of Winnipeg – Permits Online",
       "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg – Basement & overland flooding",
@@ -253,6 +259,10 @@
     {
       "t": "oli",
       "x": "Book each inspection before the work it covers is closed in."
+    },
+    {
+      "t": "p",
+      "x": "In September 2026, the City took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against its own target of 10 business days; that’s review time, not the total time until a permit is issued."
     },
     {
       "t": "h2",

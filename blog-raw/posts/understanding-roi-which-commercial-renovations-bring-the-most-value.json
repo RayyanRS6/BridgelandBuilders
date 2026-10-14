@@ -18,6 +18,7 @@
     "/services/office-renovations"
   ],
   "cluster": "commercial-costs",
+  "ctaService": "/services/commercial-renovations",
   "author": "",
   "reviewedBy": "",
   "answer": "No renovation comes with a guaranteed return. The upgrades most likely to pay back are tied to a measurable result: more customers or seats served, fewer staff hours lost to a poor layout, lower energy and maintenance bills, or a space that is easier to lease or sell. Estimate each one against how long you will use the space.",

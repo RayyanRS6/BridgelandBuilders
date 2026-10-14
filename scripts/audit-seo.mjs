@@ -18,7 +18,8 @@
  *   WARN   quality: title/description lengths, duplicates, image hygiene,
  *          internal-link coverage, lastmod uniformity, <main> text changed
  *          without an `updated` bump (content-hash guard), stale cost guides
- *          and source dates, keyword map, readability, JS budgets, service
+ *          and source dates, posts past their review-by date, keyword map,
+ *          readability, JS budgets, service
  *          timelines that disagree with src/data/facts.js (fact drift).
  *   INFO   accepted interim states (Wix-hosted images until the migration,
  *          307 interim redirects, planned pages not live yet; keyword-map
@@ -901,6 +902,16 @@ for (const [route, sources] of sourcedPages) {
     .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d) && d < sourceCutoff)
     .sort();
   if (stale.length) report.warn('content.stale-source', route, `${stale.length} source(s) last verified more than ${SOURCE_STALE_DAYS} days ago (oldest ${stale[0]}) — re-check them and update "accessed"`);
+}
+// Review-by dates (blog-raw "reviewBy"): a post with facts tied to a date (an
+// event, a season, a program year, a monthly figure) warns once it has passed.
+const todayIso = isoDay(NOW);
+for (const post of BLOG_POSTS) {
+  if (!post || !post.slug || (post.status || 'published') === 'draft') continue;
+  const reviewBy = String(post.reviewBy || '').slice(0, 10);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(reviewBy) && todayIso > reviewBy) {
+    report.warn('content.review-due', `/blog/${post.slug}`, `review-by date ${reviewBy} has passed — re-check its dated facts, then set a new "reviewBy" in blog-raw/posts/${post.slug}.json`);
+  }
 }
 
 /* ------------------------------------------------- fact drift (§12) */
