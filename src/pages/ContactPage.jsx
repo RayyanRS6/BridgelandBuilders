@@ -4,7 +4,8 @@ import BookingAside from '../components/BookingAside.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { ArrowRightIcon } from '../components/icons.jsx';
-import { CONTACT_FAQS, OFFICE_HOURS_TEXT } from '../data/faqs.js';
+import { CONTACT_FAQS } from '../data/faqs.js';
+import { OFFICE_HOURS_TEXT, REPLY_TIME } from '../data/facts.js';
 import { SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
@@ -15,7 +16,7 @@ const SEO_OPTIONS = { faqs: CONTACT_FAQS };
 const NEXT_STEPS = [
   {
     num: '01',
-    title: 'We reply within one business day',
+    title: `We reply within ${REPLY_TIME}`,
     text: 'We get back to you by phone, text or email, ask a few questions about the project and set up a time to see the space.',
   },
   {
@@ -43,7 +44,7 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="LET'S TALK ABOUT"
         highlight="YOUR PROJECT"
-        description="Tell us what you want to change and we will get back to you within one business day."
+        description={`Tell us what you want to change and we will get back to you within ${REPLY_TIME}.`}
       />
       <section className="lead-section contact-page-form">
         <div className="container">
@@ -74,7 +75,7 @@ export default function ContactPage() {
               <h3>Call or email us</h3>
               <p>
                 Call <a href={SITE_PHONE_TEL}><strong>{SITE_PHONE}</strong></a> or email{' '}
-                <a href={`mailto:${SITE_EMAIL}`} className="wrap-anywhere"><strong>{SITE_EMAIL}</strong></a>. We reply within one business day.
+                <a href={`mailto:${SITE_EMAIL}`} className="wrap-anywhere"><strong>{SITE_EMAIL}</strong></a>. We reply within {REPLY_TIME}.
               </p>
             </div>
             <div className="include-card">
@@ -108,7 +109,7 @@ export default function ContactPage() {
             <span className="section-tag">What happens next</span>
             <h2 className="section-title">What happens after you contact us?</h2>
             <p className="section-desc">
-              We reply within one business day and set up a free on-site visit. At the visit we look at the space and
+              We reply within {REPLY_TIME} and set up a free on-site visit. At the visit we look at the space and
               talk through what you want. Then you get a free written quote with the scope, price and schedule, and
               nothing starts until you approve it.
             </p>

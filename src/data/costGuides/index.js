@@ -221,7 +221,8 @@ export function liveCostGuides() {
 /**
  * usePageSeo / resolvePageSeo options for a guide. CostGuidePage and the
  * prerender (head.js) must both use this, so the static and client JSON-LD
- * match. The breadcrumb trail is left to seo.js trailFor() (hub: Renovation
+ * match. The breadcrumb trail is left to trails.js trailFor() (re-exported by
+ * seo.js; hub: Renovation
  * Costs; spoke: Services › <service> › Cost Guide), and seo.js adds the
  * guide's Article node from the path and `seo`.
  */

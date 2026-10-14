@@ -7,7 +7,7 @@ import { formatPostDate } from '../components/BlogCard.jsx';
 import { CalendarIcon, ClockIcon } from '../components/icons.jsx';
 import { caseStudyBySlug, caseStudyPath } from '../data/caseStudies.js';
 import { serviceByPath } from '../data/services.js';
-import { trailFor } from '../data/seo.js';
+import { trailFor } from '../data/trails.js';
 import { videoBySlug, videoPath, videoSeoOptions } from '../data/videos.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 import { lazyWithRetry } from '../lib/lazyRetry.js';

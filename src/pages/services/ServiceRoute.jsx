@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 import ProjectPage from '../ProjectPage.jsx';
-import { serviceSeo } from '../../data/seo.js';
-import { serviceByPath } from '../../data/services.js';
+import { serviceByPath, serviceSeo } from '../../data/services.js';
 import { usePageSeo } from '../../hooks/useSeo.js';
 import { keepServerHtml, lazyWithRetry, retryLoad } from '../../lib/lazyRetry.js';
 
@@ -35,7 +34,7 @@ async function loadGuidePosts(slugs) {
 }
 
 function ServicePage({ service, content, guidePosts }) {
-  // Same options head.js uses for the prerender (seo.js serviceSeo).
+  // Same options head.js uses for the prerender (services.js serviceSeo).
   usePageSeo(service.path, serviceSeo(content));
   return (
     <main>

@@ -125,7 +125,7 @@ function contentKey(value) {
  * Pages whose title/description live in a data module get their options from
  * a builder exported next to that data, and head.js (src/data/head.js) calls
  * the same builder for the prerender:
- *   service page  serviceSeo(content)             src/data/seo.js
+ *   service page  serviceSeo(content)             src/data/services.js
  *   cost guide    costGuideSeoOptions(guide)      src/data/costGuides/index.js
  *   area pages    serviceAreasSeoOptions() / serviceAreaSeoOptions(area)
  *   case study    caseStudySeoOptions(study)      src/data/caseStudies.js

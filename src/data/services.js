@@ -351,3 +351,20 @@ export const serviceBySlug = (slug) => SERVICES.find((service) => service.slug =
 
 /** Live services of one category, in display order. */
 export const liveServicesIn = (category) => liveServices().filter((service) => service.category === category);
+
+/**
+ * usePageSeo options for a service page (ServiceRoute.jsx). head.js passes the
+ * same object to resolvePageSeo, so prerendered and client JSON-LD match. It
+ * lives here (seo.js re-exports it) so service pages don't load seo.js on
+ * their first visit.
+ */
+export function serviceSeo(content) {
+  return {
+    meta: content.seo,
+    faqs: content.faqs,
+    // No page image: the intro photos are stock (Unsplash) images, which must
+    // not be shared as if they were Bridgeland's work (plan §11.2), and their
+    // size is unknown. The branded 1200×630 default is used until a page has
+    // a real project photo (content.seo.image / imageAlt).
+  };
+}

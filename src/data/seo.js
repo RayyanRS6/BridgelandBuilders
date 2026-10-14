@@ -13,6 +13,7 @@ import {
   SITE_URL,
   SOCIAL_PROFILES,
 } from './siteConfig.js';
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from './facts.js';
 import { ROUTE_TRAILS, pageName, serviceTrail, trailFor } from './trails.js';
 
 /**
@@ -90,7 +91,7 @@ export const PAGE_SEO = {
   '/about-us': {
     title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
-      'Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over 60 years of combined experience and 100+ projects.',
+      `Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over ${EXPERIENCE_YEARS} years of combined experience and ${PROJECT_COUNT}+ projects.`,
     updated: '2026-10-14',
   },
   '/our-process': {
@@ -126,7 +127,7 @@ export const PAGE_SEO = {
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
-      `Contact Bridgeland Builders about your Winnipeg renovation. Call ${SITE_PHONE}, email us or send your project details. We reply within one business day.`,
+      `Contact Bridgeland Builders about your Winnipeg renovation. Call ${SITE_PHONE}, email us or send your project details. We reply within ${REPLY_TIME}.`,
     updated: '2026-10-14',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
@@ -182,7 +183,7 @@ export const PAGE_SEO = {
   '/free-quote': {
     title: 'Free Renovation Quote in Winnipeg | Bridgeland Builders',
     description:
-      'Get a free, no-obligation renovation quote in Winnipeg. Kitchens, bathrooms and basements with clear written pricing and a reply within one business day.',
+      `Get a free, no-obligation renovation quote in Winnipeg. Kitchens, bathrooms and basements with clear written pricing and a reply within ${REPLY_TIME}.`,
     image: DEFAULT_IMAGE,
     robots: 'noindex, follow',
     updated: '2026-10-14',
@@ -767,20 +768,18 @@ export function resolvePageSeo(path, options = {}) {
   };
 }
 
+// usePageSeo options for a service page; defined in services.js.
+export { serviceSeo } from './services.js';
+
 /**
- * usePageSeo options for a service page (ServiceRoute.jsx). head.js passes the
- * same object to resolvePageSeo, so prerendered and client JSON-LD match.
+ * Head of the 404 page: the prerendered dist/404.html (head.js → prerender)
+ * and NotFoundPage.jsx after an in-browser navigation use the same values.
  */
-export function serviceSeo(content) {
-  return {
-    meta: content.seo,
-    faqs: content.faqs,
-    // No page image: the intro photos are stock (Unsplash) images, which must
-    // not be shared as if they were Bridgeland's work (plan §11.2), and their
-    // size is unknown. The branded 1200×630 default is used until a page has
-    // a real project photo (content.seo.image / imageAlt).
-  };
-}
+export const NOT_FOUND_HEAD = {
+  title: 'Page Not Found | Bridgeland Builders',
+  description: 'That page does not exist. Browse our Winnipeg renovation services or get in touch for a free quote.',
+  robots: 'noindex, follow',
+};
 
 /**
  * The date (YYYY-MM-DD) a route's content last changed: its own `updated`,

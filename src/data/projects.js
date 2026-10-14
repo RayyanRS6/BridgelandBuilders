@@ -56,8 +56,7 @@ for (const { service, content } of LIVE_SERVICE_PAGES) registerServiceSeo(servic
 
 /**
  * Live pages' content, each with its page path (back-compat with the old
- * PROJECTS list: build-seo-files reads FAQs from it, generate_copy_docs.js
- * the copy).
+ * PROJECTS list: build-seo-files reads FAQs from it).
  */
 export const PROJECTS = LIVE_SERVICE_PAGES.map(({ service, content }) => ({ ...content, path: service.path }));
 

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { EXPERIENCE_YEARS } from '../data/facts.js';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
 import { unsplashImage } from '../lib/unsplash.js';
 import { ArrowRightIcon, StarIcon } from './icons.jsx';
@@ -60,7 +61,7 @@ export default function Hero() {
                     10+ reviews (SEO plan §19). Free written quotes are stated
                     across the site (FAQs, booking aside, /free-quote). */}
                 <h4>Free Written Quotes</h4>
-                <p>Over 60 Years Combined Experience</p>
+                <p>Over {EXPERIENCE_YEARS} Years Combined Experience</p>
               </div>
             </div>
           </div>

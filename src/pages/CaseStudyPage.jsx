@@ -15,7 +15,7 @@ import {
   caseStudySeoOptions,
   caseStudiesForService,
 } from '../data/caseStudies.js';
-import { trailFor } from '../data/seo.js';
+import { trailFor } from '../data/trails.js';
 import { publishedServiceArea } from '../data/serviceAreasContent.js';
 import { serviceByPath } from '../data/services.js';
 import { videoBySlug, videoPath } from '../data/videos.js';
