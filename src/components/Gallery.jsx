@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { unsplashImage } from '../lib/unsplash.js';
+import { stockImage } from '../lib/unsplash.js';
+import Picture from './Picture.jsx';
 
 // Drawn widths per tile size, for srcset/sizes. Tiles are 300px tall with
 // object-fit: cover, so a one-third tile still shows about 450px of a 3:2
@@ -86,7 +87,7 @@ export default function Gallery() {
               aria-label={`${item.title} — view details and book an appointment`}
               style={item.delay ? { transitionDelay: item.delay } : undefined}
             >
-              <img {...unsplashImage(item.img, TILE_IMAGES[item.span])} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
+              <Picture {...stockImage(item.img, TILE_IMAGES[item.span])} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
               <div className="gallery-overlay">
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>

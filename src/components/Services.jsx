@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { unsplashImage } from '../lib/unsplash.js';
+import { stockImage } from '../lib/unsplash.js';
+import Picture from './Picture.jsx';
 import { ArrowRightIcon } from './icons.jsx';
 
 // Drawn width of a card photo: a third of the container on desktop (about
@@ -56,7 +57,7 @@ export default function Services() {
             >
               <div className="service-img-wrapper">
                 <span className="service-tag-floating">{service.tag}</span>
-                <img {...unsplashImage(service.img, CARD_IMAGE)} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
+                <Picture {...stockImage(service.img, CARD_IMAGE)} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
               </div>
               <div className="service-body">
                 <div>

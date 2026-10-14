@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { EXPERIENCE_YEARS, PROJECT_COUNT } from '../data/facts.js';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
-import { unsplashImage } from '../lib/unsplash.js';
+import { stockImage } from '../lib/unsplash.js';
+import Picture from './Picture.jsx';
 import { ArrowRightIcon, CheckIcon } from './icons.jsx';
 
 // Owner-confirmed facts only (no superlatives, SEO plan §11.1).
@@ -14,7 +15,7 @@ const CHECKLIST = [
 
 // The photo fills a 460px-tall box (250px on phones) with object-fit: cover,
 // so a 3:2 photo is drawn about 690px wide on desktop and never under ~375px.
-const WHY_IMAGE = unsplashImage(
+const WHY_IMAGE = stockImage(
   'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80',
   { sizes: '(max-width: 480px) 380px, (max-width: 1024px) calc(100vw - 72px), 690px', maxWidth: 1200 }
 );
@@ -31,7 +32,7 @@ export default function WhyUs() {
         <div className="why-grid">
           <div className="why-visual-stack reveal" style={{ position: 'relative' }}>
             <div className="why-main-img">
-              <img
+              <Picture
                 {...WHY_IMAGE}
                 alt="Living room with a grey sofa, wooden tables and tall windows"
                 width="900"

@@ -90,6 +90,7 @@ export const CODE_TITLES = {
   'nap.gmail': 'Gmail address on page',
   'img.wix-host': 'Images on static.wixstatic.com (until migration)',
   'img.stock-claim': 'Stock (Unsplash) image captioned as own/Winnipeg work',
+  'img.unsplash-host': 'Stock photo still hotlinked from images.unsplash.com',
   'img.attributes': '<img> without width/height/alt',
   'links.broken': 'Internal link to an unknown path',
   'links.to-redirect': 'Internal link to a redirect source',

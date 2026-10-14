@@ -11,7 +11,8 @@ import { ESTIMATOR_URLS, PROJECT_ESTIMATORS } from '../data/estimators.js';
 import { serviceByPath } from '../data/services.js';
 import { COST_HUB_PATH, INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { serviceTrail } from '../data/trails.js';
-import { unsplashImage } from '../lib/unsplash.js';
+import { stockImage } from '../lib/unsplash.js';
+import Picture from '../components/Picture.jsx';
 
 const FORM_ID = 'service-quote-form';
 const ESTIMATOR_ID = 'service-price-guide';
@@ -177,7 +178,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="why-grid">
               <div className="why-visual-stack reveal" style={{ position: 'relative' }}>
                 <div className="why-main-img">
-                  <img {...unsplashImage(project.intro.image, INTRO_IMAGE)} alt={project.intro.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
+                  <Picture {...stockImage(project.intro.image, INTRO_IMAGE)} alt={project.intro.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
                 </div>
                 <div className="why-floating-card">
                   <div className="why-floating-title">{project.intro.floatingTitle}</div>
@@ -345,7 +346,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   key={item.title}
                   style={delay(index, index * 0.1)}
                 >
-                  <img {...unsplashImage(item.img, GALLERY_IMAGE)} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
+                  <Picture {...stockImage(item.img, GALLERY_IMAGE)} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
                   <div className="gallery-overlay">
                     <div className="gallery-overlay-title">{item.title}</div>
                     <p>{item.text}</p>

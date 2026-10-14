@@ -509,6 +509,7 @@ function auditNap(page) {
 function auditImages(page) {
   const { route, doc } = page;
   let wix = 0;
+  let unsplash = 0;
   const badAttrs = [];
   const countWix = (value) => {
     if (value && value.includes('static.wixstatic.com')) wix += 1;
@@ -523,17 +524,23 @@ function auditImages(page) {
     const missing = ['width', 'height', 'alt'].filter((a) => !(a in el.attrs));
     if (missing.length) badAttrs.push(`${shortUrl(src || '(no src)')} [no ${missing.join('/')}]`);
 
-    if (src.includes('images.unsplash.com')) {
+    // Stock photos: hotlinked from Unsplash, or self-hosted under
+    // /images/stock/ (scripts/build-images.mjs STOCK) — never "our" work.
+    if (src.includes('images.unsplash.com')) unsplash += 1;
+    if (src.includes('images.unsplash.com') || src.includes('/images/stock/')) {
       const figure = ancestors(doc, el).find((a) => a.tag === 'figure');
       const caption = figure
         ? doc.elements.filter((c) => c.tag === 'figcaption' && isInside(c, { start: figure.start, end: figure.end })).map((c) => textOf(doc, c)).join(' ')
         : '';
       const words = `${el.attrs.alt || ''} ${caption}`;
       const hit = words.match(/\b(winnipeg|our|we)\b/i);
-      if (hit) report.warn('img.stock-claim', route, `Unsplash photo described with "${hit[0]}": "${shortUrl((el.attrs.alt || caption).trim())}"`);
+      if (hit) report.warn('img.stock-claim', route, `Stock photo described with "${hit[0]}": "${shortUrl((el.attrs.alt || caption).trim())}"`);
     }
   }
   if (wix) report.add(WIX_IS_ERROR ? 'error' : 'info', 'img.wix-host', route, `${wix} image reference(s) on static.wixstatic.com`);
+  // A new Unsplash photo is served from this site once it is added to STOCK in
+  // scripts/build-images.mjs and `node scripts/build-images.mjs --only=stock` runs.
+  if (unsplash) report.warn('img.unsplash-host', route, `${unsplash} <img> still loaded from images.unsplash.com (add the photo to STOCK in scripts/build-images.mjs)`);
   if (badAttrs.length) report.warn('img.attributes', route, `${badAttrs.length} <img> missing attributes, e.g. ${badAttrs.slice(0, 2).join('; ')}`, badAttrs);
   page.stats.wixImages = wix;
 }

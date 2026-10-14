@@ -4,7 +4,8 @@ import { ArrowRightIcon, CheckIcon, PhoneIcon, StarIcon } from '../components/ic
 import { LANDING_SERVICES } from '../data/landingServices.js';
 import { EXPERIENCE_YEARS, REPLY_TIME, SITE_PHONE, SITE_PHONE_TEL } from '../data/facts.js';
 import { usePageSeo } from '../hooks/useSeo.js';
-import { unsplashImage } from '../lib/unsplash.js';
+import { stockImage } from '../lib/unsplash.js';
+import Picture from '../components/Picture.jsx';
 
 // Drawn width of a service card photo, as on the home page cards.
 const CARD_IMAGE = { sizes: '(max-width: 768px) calc(100vw - 48px), 400px', maxWidth: 1200 };
@@ -96,7 +97,7 @@ export default function FreeQuotePage() {
               >
                 <div className="service-img-wrapper">
                   <span className="service-tag-floating">{service.tag}</span>
-                  <img {...unsplashImage(service.img, CARD_IMAGE)} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
+                  <Picture {...stockImage(service.img, CARD_IMAGE)} alt={service.alt} width="800" height="600" loading="lazy" decoding="async" />
                 </div>
                 <div className="service-body">
                   <div>
