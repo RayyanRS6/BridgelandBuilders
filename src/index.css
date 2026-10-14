@@ -565,6 +565,20 @@ button {
   }
 }
 
+/* Narrow desktop windows just above the phone breakpoint: media queries count
+   the scrollbar, so a classic 15px one leaves ~15px less room than the width
+   says, and the full "GET INSTANT QUOTE" label beside the call icon wrapped
+   the logo and the pill onto two lines (641-649px). The phone label takes
+   over up to 680px, which also covers wider scrollbars. */
+@media (min-width: 641px) and (max-width: 680px) {
+  .nav-quote-label-full {
+    display: none;
+  }
+  .nav-quote-label-short {
+    display: inline;
+  }
+}
+
 /* Red Primary Buttons */
 .btn-pill-red {
   background: var(--accent-red);
