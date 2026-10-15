@@ -102,7 +102,7 @@ export const FAQ_GROUPS = [
       },
       {
         q: 'Who issues building permits outside Winnipeg?',
-        a: 'Outside the city, building permits come from the local municipality or planning district, and their requirements can differ from Winnipeg’s.\n\nOur service-area page lists who issues building permits in each community we serve, and we coordinate with that office for you as part of the project, just as we do with the City of Winnipeg.',
+        a: 'Outside the city, building permits come from the municipality, a planning district or the Province’s Inspection and Technical Services, depending on where the property is and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. Their requirements can differ from Winnipeg’s.\n\nOur service-area page lists who issues building permits in each community we serve, and we coordinate with that office for you as part of the project, just as we do with the City of Winnipeg.',
         more: { label: 'See who issues permits in each community', to: '/service-areas' },
       },
     ],

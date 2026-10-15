@@ -136,7 +136,7 @@
     },
     {
       "q": "Is there a grant for seniors' home modifications in Manitoba?",
-      "a": "Yes. The Province's Manitoba Safe and Healthy Home for Seniors Program offers up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations essential for daily living. Seniors 65 or older, or family living with them, can apply if combined household income is $60,000 or less. Total funding is up to $1.5 million, so it may run out."
+      "a": "The Province's Manitoba Safe and Healthy Home for Seniors Program offers up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations essential for daily living. Seniors 65 or older, or family living with them, can apply if combined household income is $60,000 or less. Funding is up to $1.5 million a year, so it may run out."
     },
     {
       "q": "Does the City of Winnipeg still pay for backwater valves?",
@@ -167,7 +167,11 @@
     },
     {
       "t": "p",
-      "x": "As of October 13, 2026, the programs below are listed as available on their official pages. Each has its own eligibility rules, and the Efficiency Manitoba rebates and the Manitoba Hydro loan need approval before you buy materials or start work. Amounts are what each program publishes; what you receive depends on your project and tax situation."
+      "x": "As of October 13, 2026 (October 15 for the two programs marked in the table), the programs below are listed as available on their official pages. Each has its own eligibility rules, and the Efficiency Manitoba rebates and the Manitoba Hydro loan need approval before you buy materials or start work."
+    },
+    {
+      "t": "p",
+      "x": "Amounts are what each program publishes; what you receive depends on your project and tax situation."
     },
     {
       "t": "table",
@@ -243,7 +247,7 @@
           "[Manitoba Safe and Healthy Home for Seniors Program](https://gov.mb.ca/seniors/resources/housing-options-and-care-planning.html)",
           "Seniors aged 65 and older, and family members who have seniors living with them, with a combined household income of $60,000 or less",
           "Up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations that are essential for daily living",
-          "Listed by the Province (verified October 15, 2026); up to $1.5 million in total, so funds may run out. Administered by March of Dimes Canada (1-866-906-6006); confirm intake with them"
+          "Listed by the Province (verified October 15, 2026); funding is up to $1.5 million a year (announced as an annual budget), so funds may run out. Administered by March of Dimes Canada (1-866-906-6006); confirm intake with them"
         ]
       ],
       "note": "Status as published on each official page on the checked date. Interest rates are not shown; ask Manitoba Hydro for current loan terms."
