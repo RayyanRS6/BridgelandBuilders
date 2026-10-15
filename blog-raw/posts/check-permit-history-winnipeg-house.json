@@ -1,0 +1,374 @@
+{
+  "slug": "check-permit-history-winnipeg-house",
+  "status": "published",
+  "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+  "metaTitle": "Permit History & Permit Amnesty in Winnipeg | Bridgeland",
+  "metaDescription": "Check a Winnipeg home’s permit history: the City’s free permit search, open permits and orders, what each status means, and how Permit Amnesty works.",
+  "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
+  "date": "2026-10-15",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-04-15",
+  "cats": [
+    "Permits & Planning",
+    "Basements & Suites",
+    "Older Homes"
+  ],
+  "services": [
+    "/services/basement-renovations",
+    "/services/basement-suites",
+    "/services/whole-home-renovations"
+  ],
+  "cluster": "winnipeg-permits",
+  "ctaService": "/services/basement-renovations",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Start with the City of Winnipeg’s free permit search by address, which lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. For open permits, orders and violations, a Centralized Property File Search needs the registered owner’s signed authorization. Unpermitted work in an owner’s primary residence can go through Permit Amnesty.",
+  "hero": "",
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "City of Winnipeg – Search for issued construction-related permits (archived copy, June 2026)",
+      "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Construction-related permit search: frequently asked questions (archived copy, June 2026)",
+      "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/SearchFAQ.jsp",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Request copies of building records",
+      "url": "https://www.winnipeg.ca/building-development/property-information-records/request-copies-building-records",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Centralized property file search",
+      "url": "https://www.winnipeg.ca/building-development/property-records/centralized-property-file-search",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Permit Amnesty program",
+      "url": "https://www.winnipeg.ca/building-development/permits-applications/programs-incentives/permit-amnesty-program",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Amnesty offered from post-construction fees for bringing unpermitted work up to code (June 1, 2021)",
+      "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/amnesty-offered-post-construction-fees-bringing-unpermitted",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Housing inspections",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/housing-inspections",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Tips for buying a home or property (archived copy, January 2026)",
+      "url": "https://legacy.winnipeg.ca/ppd/permits/Tips-for-buying-a-home-or-property.stm",
+      "accessed": "2026-10-15"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Can a buyer order a Centralized Property File Search in Winnipeg?",
+      "a": "Not without the seller. The City needs a letter of authorization signed by the registered owner, and says the owner’s signature cannot be electronically generated. The applicant named in the letter must match the application. Ask the seller to authorize the search or share the results, and ask your lawyer how to handle it in an offer."
+    },
+    {
+      "q": "Are rental properties eligible for Winnipeg’s Permit Amnesty program?",
+      "a": "No. The City’s Permit Amnesty program covers work at the homeowner’s primary residence, and its page lists rental properties as not eligible. Homeowners who receive a notice or order for work done without permits following a City investigation aren’t eligible either."
+    },
+    {
+      "q": "Can I ask the City to inspect old work to see if it had a permit?",
+      "a": "No. The City’s Permit Amnesty page says: “You cannot request an inspection to determine if past work was done without permits.” It makes homeowners responsible for finding out, by discussing the work with qualified contractors or design professionals. Start with the permit search by address, and ask Central Files about anything before 2000."
+    },
+    {
+      "q": "Is a house unsafe if a permit was closed with an incomplete inspection?",
+      "a": "Not necessarily, according to the City, but the work wasn’t audited by the City through the inspection process. The City recommends that the current owner arrange inspections for these permits before selling. For a housing permit, note the permit number and call 204-986-5300."
+    },
+    {
+      "q": "How long do I have to finish work under an amnesty permit?",
+      "a": "The City says work under building and trade permits issued through Permit Amnesty must be completed and inspected within three years of the permit being issued. Non-compliance fees may be added if a project isn’t completed and no extension is requested, or if you don’t comply with requirements ordered by a City inspector."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Before you buy a house, sell one, or renovate a basement someone else finished, it helps to know which work was done with permits. In Winnipeg, the City’s own records answer most of that question, and the main search is free."
+    },
+    {
+      "t": "p",
+      "x": "This guide walks through the permit search, the Centralized Property File Search and the Permit Amnesty program, using City of Winnipeg pages checked on October 15, 2026 (archived copies where the sources say so). It covers properties in the City of Winnipeg only. It’s general information, not legal advice."
+    },
+    {
+      "t": "h2",
+      "x": "How do you check a Winnipeg house’s permit history?"
+    },
+    {
+      "t": "p",
+      "x": "Start with the City’s free [permit search by address](https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp). Enter the house number and street name to see building and trade permits (electrical, mechanical and plumbing) issued after January 1, 2000, and development permits issued after November 14, 2022, each with its status."
+    },
+    {
+      "t": "p",
+      "x": "The search doesn’t show everything. The City says results leave out permits that were cancelled or are still in the application process, and permits to demolish an entire house, which stay with the previous property record. Occupancy and sign permits aren’t included either, and personal information isn’t displayed."
+    },
+    {
+      "t": "p",
+      "x": "Occupancy permits, which most commercial buildings need, have their own City search. If you’re buying or leasing commercial space, our guide to [occupancy permits and change of use](/blog/occupancy-permit-change-of-use-winnipeg) covers them."
+    },
+    {
+      "t": "h2",
+      "x": "How do you find permits issued before 2000?"
+    },
+    {
+      "t": "p",
+      "x": "Older records come from the City’s Central Files Office. Email ppd-centralfiles@winnipeg.ca with the address, whether you’re the owner, and the records you want. The City says its team will tell you what’s on file and, if you ask, provide a copy for a fee, which may be edited to remove personal information."
+    },
+    {
+      "t": "p",
+      "x": "Not every property has old records. The City notes that its database doesn’t cover every building in Winnipeg and that very old buildings may have no plans on file. If you aren’t the registered owner, copies of building plans need a letter of authorization signed by the owner."
+    },
+    {
+      "t": "h2",
+      "x": "What do the statuses in Winnipeg’s permit search mean?"
+    },
+    {
+      "t": "p",
+      "x": "Each building or trade permit in the results carries a status. The City’s search FAQ defines them like this:"
+    },
+    {
+      "t": "table",
+      "caption": "Building and trade permit statuses in the City of Winnipeg permit search",
+      "head": [
+        "Status",
+        "What the City says it means"
+      ],
+      "rows": [
+        [
+          "Issued",
+          "Plan review is complete. Construction may have begun and inspections may have been done, and there may or may not be identified defects."
+        ],
+        [
+          "Closed",
+          "Construction and required inspections are complete and any outstanding defects have been addressed. Permits in the City’s audit program are included and may not have had every standard inspection."
+        ],
+        [
+          "Closed No Final Inspection Required",
+          "Closed. A final inspection wasn’t required and the permit wasn’t selected for audit; no further action is required."
+        ],
+        [
+          "Closed with an incomplete inspection",
+          "A subcategory of closed permits: closed through a ‘bulk’ closing process and/or with no final inspections."
+        ],
+        [
+          "Expired",
+          "No work proceeded within a specific timeframe."
+        ]
+      ],
+      "note": "Source: City of Winnipeg construction-related permit search FAQ, as published in June 2026. Development permits show only Issued or Expired."
+    },
+    {
+      "t": "p",
+      "x": "An issued permit stays open until the work passes all its required inspections; our [Winnipeg renovation permits guide](/blog/winnipeg-renovation-permits) explains how long a permit stays valid and how to close one."
+    },
+    {
+      "t": "h2",
+      "x": "What does “closed with an incomplete inspection” mean?"
+    },
+    {
+      "t": "p",
+      "x": "The City says that where owners hadn’t requested inspections, or City resources weren’t enough to follow up, it grouped certain permits and closed them despite incomplete inspections. It warns that construction under this status “does not represent the standard inspection protocol.”"
+    },
+    {
+      "t": "p",
+      "x": "Does that make the house unsafe? The City’s answer: “Not necessarily. However, the work was not audited by the City through the inspections process.”"
+    },
+    {
+      "t": "p",
+      "x": "The City doesn’t advise on whether to buy. It does recommend that the current owner arrange inspections for these permits before selling, so the permit can be closed before the sale."
+    },
+    {
+      "t": "p",
+      "x": "For a housing permit, note the permit number from the results and call 204-986-5300. If only one inspection is needed, the City says there’s no further cost, because it’s included in the original permit fee; extra inspections because of defects may be charged."
+    },
+    {
+      "t": "h2",
+      "x": "How do you find open permits, orders or violations?"
+    },
+    {
+      "t": "p",
+      "x": "The permit search lists permits, not orders. For a file-based check, the City offers a Centralized Property File Search (CPFS), which it describes as a search of City records on a building. A CPFS may include:"
+    },
+    {
+      "t": "li",
+      "x": "Notice of active permits from the City’s housing and commercial inspections (building, plumbing, mechanical and electrical) and occupancy"
+    },
+    {
+      "t": "li",
+      "x": "Records of compliance with the Residential Buildings Fire Safety By-law"
+    },
+    {
+      "t": "li",
+      "x": "Orders and violations from the City’s planning, property and development enforcement services, fire prevention, licensing and by-law enforcement, and zoning"
+    },
+    {
+      "t": "li",
+      "x": "Zoning information, including whether a proposed use is permissible"
+    },
+    {
+      "t": "p",
+      "x": "What it leaves out matters too. The City says: “Inspections are not included in this search.” A CPFS is a records search, not a visit to the house; a fire prevention inspection is a separate application with extra fees."
+    },
+    {
+      "t": "h2",
+      "x": "How do you apply for a Centralized Property File Search?"
+    },
+    {
+      "t": "oli",
+      "x": "Set up a [Permits Online](https://www.winnipeg.ca/building-development/permits-applications/permits-online) account; the City needs one for a CPFS application."
+    },
+    {
+      "t": "oli",
+      "x": "Get a letter of owner authorization signed by the registered owner. The City is specific: “Owner signature cannot be electronically generated.”"
+    },
+    {
+      "t": "oli",
+      "x": "Use the authorization wording the City sets out, naming the applicant; the applicant’s name and company must match the CPFS application."
+    },
+    {
+      "t": "oli",
+      "x": "Pay the fee set in the City’s Planning, Development & Building Fees and Charges schedule, plus GST, through Permits Online."
+    },
+    {
+      "t": "oli",
+      "x": "Expect results within 15 business days after the City confirms the application is complete and accepts payment."
+    },
+    {
+      "t": "p",
+      "x": "The City won’t accept letters that miss its requirements, so compare yours with the sample letter on the [City’s CPFS page](https://www.winnipeg.ca/building-development/property-records/centralized-property-file-search). Questions go to centralizedpropertyfilesearch@winnipeg.ca or 204-986-5189."
+    },
+    {
+      "t": "p",
+      "x": "Because the registered owner has to sign, a buyer can’t order a CPFS alone. Ask the seller to authorize one or share the results, and ask your lawyer how to handle anything it turns up before you commit."
+    },
+    {
+      "t": "h2",
+      "x": "What if a basement or suite was finished without a permit?"
+    },
+    {
+      "t": "p",
+      "x": "The City’s [Permit Amnesty program](https://www.winnipeg.ca/building-development/permits-applications/programs-incentives/permit-amnesty-program) lets homeowners bring past renovations or upgrades done without permits into compliance with codes, standards and by-laws. The City launched it on June 1, 2021; when we checked the program page on October 15, 2026, it gave no end date."
+    },
+    {
+      "t": "p",
+      "x": "To qualify, the work must have been started or completed without permits at the homeowner’s primary residence. Two groups aren’t eligible:"
+    },
+    {
+      "t": "li",
+      "x": "Rental properties"
+    },
+    {
+      "t": "li",
+      "x": "Homeowners who receive a notice or order for work done without permits following a City investigation"
+    },
+    {
+      "t": "p",
+      "x": "Apply through the standard building permit process, using the application for that kind of project, and include the word “amnesty” in the description of work. The City waives post-construction penalty fees where amnesty is approved and all other regular permit fees have been paid, so the regular fees still apply."
+    },
+    {
+      "t": "p",
+      "x": "Work under the program must be completed and inspected within three years of the permit being issued. Once you declare work and apply, the City says it has an obligation to follow up and inspect, and its inspectors must report any safety concerns or hazards they see."
+    },
+    {
+      "t": "p",
+      "x": "Leaving work undeclared carries its own risk: the City says it may issue notices or orders, and fines or penalties may apply. It also says to confirm development permit and other approval requirements before applying. If the basement has a kitchen or a separate unit, our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes."
+    },
+    {
+      "t": "h2",
+      "x": "Will finished walls have to be opened for an amnesty inspection?"
+    },
+    {
+      "t": "p",
+      "x": "Sometimes. The City says that once permits are issued, walls, ceilings or finishes may in some cases need to be opened so the work can be inspected. Homeowners can do the work themselves at their primary residence if they know the codes, which may mean opening finishes so inspectors can see how it was done."
+    },
+    {
+      "t": "p",
+      "x": "Licensed contractors can take out the plumbing or electrical permits instead, and can submit the City’s “Maintenance Certification Program” form declaring the work complies. A City inspection is still required to close the permit, and the City leaves opening walls to the contractor’s discretion."
+    },
+    {
+      "t": "p",
+      "x": "Structural changes, such as added rooms or removed walls, need an engineer’s approval and as-built drawings showing the work meets code, or what has to change. The engineer must certify they’ve seen the work; otherwise it has to be uncovered for a City inspection. Our guide to [removing a load-bearing wall](/blog/removing-a-load-bearing-wall-winnipeg) explains the drawings involved."
+    },
+    {
+      "t": "p",
+      "x": "If the finished basement includes a bedroom, check its window early. Our guide to [basement development permits](/blog/basement-development-permits-winnipeg) sets out the City’s rules for basement bedrooms, ceilings and insulation."
+    },
+    {
+      "t": "h2",
+      "x": "Can you ask the City whether past work had a permit?"
+    },
+    {
+      "t": "p",
+      "x": "Not by booking an inspection. The City’s Permit Amnesty page is direct: “You cannot request an inspection to determine if past work was done without permits.” It says homeowners are responsible for finding out by discussing the work with qualified contractors and/or design professionals."
+    },
+    {
+      "t": "p",
+      "x": "For permits a previous owner may have taken out, the City points to the permit search by address, and to Central Files for anything before 2000. A finished basement, added bathroom or deck with no matching permit is the place to start asking."
+    },
+    {
+      "t": "h2",
+      "x": "What should buyers check before making an offer on a Winnipeg house?"
+    },
+    {
+      "t": "p",
+      "x": "The City’s tips for buyers say that knowing whether recent upgrades, renovations or accessory structures had proper permits and inspections “can prevent unexpected and expensive surprises.” They also say that if a previous owner did the work, “the current owner has to bring this work into compliance with codes, standards, and bylaws.”"
+    },
+    {
+      "t": "li",
+      "x": "Run the permit search for the address and note each permit’s status."
+    },
+    {
+      "t": "li",
+      "x": "Compare the list with the house. A finished basement, added bathroom, deck, garage or suite with no matching permit is worth asking the seller about."
+    },
+    {
+      "t": "li",
+      "x": "Ask the seller for a CPFS, or for a signed authorization so one can be ordered, to see active permits, orders and violations."
+    },
+    {
+      "t": "li",
+      "x": "Look for permits that are still issued or were closed with an incomplete inspection, and ask whether inspections will be done before the sale."
+    },
+    {
+      "t": "li",
+      "x": "If you plan to rent the house out, remember that Permit Amnesty covers a homeowner’s primary residence, not rental properties."
+    },
+    {
+      "t": "li",
+      "x": "Talk to your lawyer about how any of this should be handled in your offer."
+    },
+    {
+      "t": "p",
+      "x": "Buying a house you plan to renovate? Our guide to [home renovation financing in Canada](/blog/home-renovation-financing-canada) compares the ways to pay for the work."
+    },
+    {
+      "t": "h2",
+      "x": "Why close open permits before you sell?"
+    },
+    {
+      "t": "p",
+      "x": "If a buyer asks for a CPFS, it can show the active permits on the City’s file. For permits closed with an incomplete inspection, the City recommends that the owner arrange inspections before selling, which it says “would ensure the permit can be closed before any real estate transaction takes place.”"
+    },
+    {
+      "t": "p",
+      "x": "The City makes homeowners responsible for making sure each permit’s inspections are done and the permit is closed, which takes a final inspection with no outstanding defects. The permits guide linked above explains the timing rules and how to book that final inspection."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Planning a [basement renovation](/services/basement-renovations), a [basement suite](/services/basement-suites) or a [whole-home renovation](/services/whole-home-renovations) in a house with some history? Every project starts with a free on-site visit and a free written quote, and permits and inspections are coordinated with the City of Winnipeg or your local municipality. [Book your visit](/book-online) when you’re ready."
+    }
+  ]
+}
