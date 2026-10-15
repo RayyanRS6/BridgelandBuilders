@@ -169,7 +169,7 @@ export const PAGE_SEO = {
     title: 'Privacy Policy | Bridgeland Builders',
     description:
       'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, chat and texts.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/terms-of-service': {
     title: 'Terms of Service | Bridgeland Builders',

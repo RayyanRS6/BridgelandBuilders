@@ -2760,6 +2760,13 @@
   color: #8ed2dc;
 }
 
+/* The home service cards link each service they name. At the paragraph's own
+   weight (not the bold inline-link weight) so five links in a card keep the
+   signed-off look of the text; colour and underline still mark them. */
+.service-body .blog-inline-link {
+  font-weight: inherit;
+}
+
 /* Quick answer: the takeaways box with a paragraph instead of a list. */
 .blog-answer p {
   margin: 0;

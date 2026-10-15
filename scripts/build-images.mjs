@@ -921,11 +921,16 @@ async function stockOriginal({ key, photo, url }) {
 }
 
 async function buildStock() {
+  // Every original first (cached in media-src/; a fresh checkout downloads
+  // them): a failed download stops here, before public/images/stock/ is
+  // cleared, so the committed photos are never lost to a network error.
+  const inputs = [];
+  for (const photo of STOCK) inputs.push(await stockOriginal(photo));
   rmSync(STOCK_OUT, { recursive: true, force: true });
   mkdirSync(STOCK_OUT, { recursive: true });
   const images = {};
-  for (const photo of STOCK) {
-    const input = await stockOriginal(photo);
+  for (const [index, photo] of STOCK.entries()) {
+    const input = inputs[index];
     const meta = await sharp(input).metadata();
     const { set, mainKb } = await variantSet(input, {
       dir: STOCK_OUT,
