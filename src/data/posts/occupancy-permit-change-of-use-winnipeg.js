@@ -336,7 +336,7 @@ export default {
       "a": "The City's Occupancy Permit Branch, at occupancy@winnipeg.ca or 204-986-5136. Those are the contacts in its July 2023 occupancy bulletin, and the occupancy permit search page lists the same ones. For building permit and zoning questions, call the Permits Direct Line at 204-986-5140."
     }
   ],
-  "answer": "A Winnipeg commercial space needs a building occupancy permit after construction, a substantial alteration or a change of use, and you need an interim or final permit before occupying. Since April 4, 2022, a new tenant alone doesn't need one if the use and unit size stay the same, occupant load doesn't rise and no permit-triggering work is planned.",
+  "answer": "A Winnipeg commercial space needs an occupancy permit after construction, a substantial alteration or a change of use, before it's occupied. Since April 4, 2022, a new tenant alone doesn't need one if the unit has a valid occupancy permit for that use, the use and size stay the same, occupant load doesn't rise and no permit-triggering work is planned.",
   "sources": [
     {
       "label": "City of Winnipeg: Information Bulletin 2023-005-A/B, Defining Occupancy (July 19, 2023)",

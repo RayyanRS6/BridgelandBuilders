@@ -97,7 +97,7 @@ A: Often, yes. Finishing a basement into living space or creating a new bedroom 
 A: Yes. When a project needs permits or inspections, we include them in the plan and coordinate them with the City of Winnipeg or your local municipality. The City notes that homeowners need the correct permits before certain renovations start, so we tell you what is needed and keep you informed as each inspection is booked and completed.
 
 **Q: Who issues building permits outside Winnipeg?**
-A: Outside the city, building permits come from the local municipality or planning district, and their requirements can differ from Winnipeg’s. Our service-area page lists who issues building permits in each community we serve, and we coordinate with that office for you as part of the project, just as we do with the City of Winnipeg.
+A: Outside the city, building permits come from the municipality, a planning district or the Province’s Inspection and Technical Services, depending on where the property is and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. Their requirements can differ from Winnipeg’s. Our service-area page lists who issues building permits in each community we serve, and we coordinate with that office for you as part of the project, just as we do with the City of Winnipeg.
 
 **Q: How long does a renovation take?**
 A: Most bathrooms take two to three weeks, most kitchens four to six weeks once the cabinets are on site, and basements four to eight weeks. Whole-home renovations and home additions usually run eight to sixteen weeks. Permits, product lead times and what we find when walls are opened can move these dates, and your written quote includes a schedule.
@@ -619,7 +619,7 @@ A: Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 t
 
 ### Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules
 https://bridgelandbuilders.com/blog/asbestos-testing-before-renovating-manitoba
-Health Canada says asbestos was mainly used before 1990 and advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Under rules changed in December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.
+Before 1990, Health Canada says, asbestos was mainly used to insulate buildings and homes, and it advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Since December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.
 
 ### Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor
 https://bridgelandbuilders.com/blog/builders-lien-holdback-manitoba
@@ -627,11 +627,11 @@ Manitoba's Builders' Liens Act requires whoever pays for construction work to ho
 
 ### Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty
 https://bridgelandbuilders.com/blog/check-permit-history-winnipeg-house
-Start with the City of Winnipeg’s free permit search by address, which lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. For open permits, orders and violations, a Centralized Property File Search needs the registered owner’s signed authorization. Unpermitted work in an owner’s primary residence can go through Permit Amnesty.
+Winnipeg’s free permit search by address lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. Open permits, orders and violations need a Centralized Property File Search, with the registered owner’s signed authorization. Permit Amnesty covers unpermitted work in a homeowner’s primary residence, unless a City investigation led to a notice or order.
 
 ### Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease
 https://bridgelandbuilders.com/blog/occupancy-permit-change-of-use-winnipeg
-A Winnipeg commercial space needs a building occupancy permit after construction, a substantial alteration or a change of use, and you need an interim or final permit before occupying. Since April 4, 2022, a new tenant alone doesn't need one if the use and unit size stay the same, occupant load doesn't rise and no permit-triggering work is planned.
+A Winnipeg commercial space needs an occupancy permit after construction, a substantial alteration or a change of use, before it's occupied. Since April 4, 2022, a new tenant alone doesn't need one if the unit has a valid occupancy permit for that use, the use and size stay the same, occupant load doesn't rise and no permit-triggering work is planned.
 
 ### Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams
 https://bridgelandbuilders.com/blog/removing-a-load-bearing-wall-winnipeg

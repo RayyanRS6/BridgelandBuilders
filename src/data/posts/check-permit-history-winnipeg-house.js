@@ -343,16 +343,16 @@ export default {
       "a": "The City says work under building and trade permits issued through Permit Amnesty must be completed and inspected within three years of the permit being issued. Non-compliance fees may be added if a project isn’t completed and no extension is requested, or if you don’t comply with requirements ordered by a City inspector."
     }
   ],
-  "answer": "Start with the City of Winnipeg’s free permit search by address, which lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. For open permits, orders and violations, a Centralized Property File Search needs the registered owner’s signed authorization. Unpermitted work in an owner’s primary residence can go through Permit Amnesty.",
+  "answer": "Winnipeg’s free permit search by address lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. Open permits, orders and violations need a Centralized Property File Search, with the registered owner’s signed authorization. Permit Amnesty covers unpermitted work in a homeowner’s primary residence, unless a City investigation led to a notice or order.",
   "sources": [
     {
-      "label": "City of Winnipeg – Search for issued construction-related permits (archived copy, June 2026)",
-      "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp",
+      "label": "City of Winnipeg – Search for issued construction-related permits (archived copy, June 2, 2026)",
+      "url": "https://web.archive.org/web/20260602140027/https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp",
       "accessed": "2026-10-15"
     },
     {
-      "label": "City of Winnipeg – Construction-related permit search: frequently asked questions (archived copy, June 2026)",
-      "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/SearchFAQ.jsp",
+      "label": "City of Winnipeg – Construction-related permit search: frequently asked questions (archived copy, June 2, 2026)",
+      "url": "https://web.archive.org/web/20260602140038/https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/SearchFAQ.jsp",
       "accessed": "2026-10-15"
     },
     {
@@ -381,8 +381,8 @@ export default {
       "accessed": "2026-10-15"
     },
     {
-      "label": "City of Winnipeg – Tips for buying a home or property (archived copy, January 2026)",
-      "url": "https://legacy.winnipeg.ca/ppd/permits/Tips-for-buying-a-home-or-property.stm",
+      "label": "City of Winnipeg – Tips for buying a home or property (archived copy, January 15, 2026)",
+      "url": "https://web.archive.org/web/20260115141458/https://legacy.winnipeg.ca/ppd/permits/Tips-for-buying-a-home-or-property.stm",
       "accessed": "2026-10-15"
     }
   ],

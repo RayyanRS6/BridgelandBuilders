@@ -220,7 +220,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Leave it undisturbed. Manitoba Health says some vermiculite from the Libby mine in Montana, sold mainly as Zonolite from the 1920s until 1990, was found to contain asbestos. It says it is “reasonable to assume” that older vermiculite-based insulation may contain some. Manitoba’s new definition of asbestos-containing material explicitly includes vermiculite insulation that contains asbestos."
+      "x": "Leave it undisturbed. Manitoba Health says some vermiculite produced at the Libby mine in Montana from the 1920s until 1990, sold mainly under the brand name Zonolite, was found to contain asbestos. It says it is “reasonable to assume” that older vermiculite-based insulation may contain some. Manitoba’s new definition of asbestos-containing material explicitly includes vermiculite insulation that contains asbestos."
     },
     {
       "t": "p",
@@ -326,7 +326,7 @@ export default {
       "a": "From June 1, 2027. Workers doing asbestos abatement or inventory work will need a valid asbestos certificate, and the Province’s FAQ says they must recertify every three years. Employers in the business of asbestos work will need to register each year, and the FAQ says a public registry will list them."
     }
   ],
-  "answer": "Health Canada says asbestos was mainly used before 1990 and advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Under rules changed in December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.",
+  "answer": "Before 1990, Health Canada says, asbestos was mainly used to insulate buildings and homes, and it advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Since December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.",
   "sources": [
     {
       "label": "Health Canada – Asbestos and your health (page dated 2023-02-10)",

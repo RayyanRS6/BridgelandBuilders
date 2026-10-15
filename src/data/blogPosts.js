@@ -238,7 +238,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Leave it undisturbed. Manitoba Health says some vermiculite from the Libby mine in Montana, sold mainly as Zonolite from the 1920s until 1990, was found to contain asbestos. It says it is “reasonable to assume” that older vermiculite-based insulation may contain some. Manitoba’s new definition of asbestos-containing material explicitly includes vermiculite insulation that contains asbestos."
+        "x": "Leave it undisturbed. Manitoba Health says some vermiculite produced at the Libby mine in Montana from the 1920s until 1990, sold mainly under the brand name Zonolite, was found to contain asbestos. It says it is “reasonable to assume” that older vermiculite-based insulation may contain some. Manitoba’s new definition of asbestos-containing material explicitly includes vermiculite insulation that contains asbestos."
       },
       {
         "t": "p",
@@ -344,7 +344,7 @@ export const BLOG_POSTS = [
         "a": "From June 1, 2027. Workers doing asbestos abatement or inventory work will need a valid asbestos certificate, and the Province’s FAQ says they must recertify every three years. Employers in the business of asbestos work will need to register each year, and the FAQ says a public registry will list them."
       }
     ],
-    "answer": "Health Canada says asbestos was mainly used before 1990 and advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Under rules changed in December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.",
+    "answer": "Before 1990, Health Canada says, asbestos was mainly used to insulate buildings and homes, and it advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Since December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.",
     "sources": [
       {
         "label": "Health Canada – Asbestos and your health (page dated 2023-02-10)",
@@ -1058,16 +1058,16 @@ export const BLOG_POSTS = [
         "a": "The City says work under building and trade permits issued through Permit Amnesty must be completed and inspected within three years of the permit being issued. Non-compliance fees may be added if a project isn’t completed and no extension is requested, or if you don’t comply with requirements ordered by a City inspector."
       }
     ],
-    "answer": "Start with the City of Winnipeg’s free permit search by address, which lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. For open permits, orders and violations, a Centralized Property File Search needs the registered owner’s signed authorization. Unpermitted work in an owner’s primary residence can go through Permit Amnesty.",
+    "answer": "Winnipeg’s free permit search by address lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. Open permits, orders and violations need a Centralized Property File Search, with the registered owner’s signed authorization. Permit Amnesty covers unpermitted work in a homeowner’s primary residence, unless a City investigation led to a notice or order.",
     "sources": [
       {
-        "label": "City of Winnipeg – Search for issued construction-related permits (archived copy, June 2026)",
-        "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp",
+        "label": "City of Winnipeg – Search for issued construction-related permits (archived copy, June 2, 2026)",
+        "url": "https://web.archive.org/web/20260602140027/https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp",
         "accessed": "2026-10-15"
       },
       {
-        "label": "City of Winnipeg – Construction-related permit search: frequently asked questions (archived copy, June 2026)",
-        "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/SearchFAQ.jsp",
+        "label": "City of Winnipeg – Construction-related permit search: frequently asked questions (archived copy, June 2, 2026)",
+        "url": "https://web.archive.org/web/20260602140038/https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/SearchFAQ.jsp",
         "accessed": "2026-10-15"
       },
       {
@@ -1096,8 +1096,8 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-15"
       },
       {
-        "label": "City of Winnipeg – Tips for buying a home or property (archived copy, January 2026)",
-        "url": "https://legacy.winnipeg.ca/ppd/permits/Tips-for-buying-a-home-or-property.stm",
+        "label": "City of Winnipeg – Tips for buying a home or property (archived copy, January 15, 2026)",
+        "url": "https://web.archive.org/web/20260115141458/https://legacy.winnipeg.ca/ppd/permits/Tips-for-buying-a-home-or-property.stm",
         "accessed": "2026-10-15"
       }
     ],
@@ -1437,7 +1437,7 @@ export const BLOG_POSTS = [
         "a": "The City's Occupancy Permit Branch, at occupancy@winnipeg.ca or 204-986-5136. Those are the contacts in its July 2023 occupancy bulletin, and the occupancy permit search page lists the same ones. For building permit and zoning questions, call the Permits Direct Line at 204-986-5140."
       }
     ],
-    "answer": "A Winnipeg commercial space needs a building occupancy permit after construction, a substantial alteration or a change of use, and you need an interim or final permit before occupying. Since April 4, 2022, a new tenant alone doesn't need one if the use and unit size stay the same, occupant load doesn't rise and no permit-triggering work is planned.",
+    "answer": "A Winnipeg commercial space needs an occupancy permit after construction, a substantial alteration or a change of use, before it's occupied. Since April 4, 2022, a new tenant alone doesn't need one if the unit has a valid occupancy permit for that use, the use and size stay the same, occupant load doesn't rise and no permit-triggering work is planned.",
     "sources": [
       {
         "label": "City of Winnipeg: Information Bulletin 2023-005-A/B, Defining Occupancy (July 19, 2023)",
@@ -2940,7 +2940,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Only if your policy includes the right optional coverage. In a June 11, 2026 release, the Insurance Bureau of Canada (IBC), the national association of home, auto and business insurers, said basement water damage from sewer backup “is only covered if you have purchased specific, optional sewer backup coverage.”"
+        "x": "It depends on where the water came from. For sewer backup or overland flooding, only if your policy includes the right optional coverage. In a June 11, 2026 release, the Insurance Bureau of Canada (IBC), the insurers’ national association, said basement water damage from sewer backup “is only covered if you have purchased specific, optional sewer backup coverage.”"
       },
       {
         "t": "p",
@@ -5812,7 +5812,7 @@ export const BLOG_POSTS = [
     ],
     "date": "2026-10-13",
     "updated": "2026-10-15",
-    "readMinutes": 11,
+    "readMinutes": 12,
     "hero": null,
     "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
     "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
@@ -5850,7 +5850,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "As of October 13, 2026, the programs below are listed as available on their official pages. Each has its own eligibility rules, and the Efficiency Manitoba rebates and the Manitoba Hydro loan need approval before you buy materials or start work. Amounts are what each program publishes; what you receive depends on your project and tax situation."
+        "x": "As of October 13, 2026 (October 15 for the two programs marked in the table), the programs below are listed as available on their official pages. Each has its own eligibility rules, and the Efficiency Manitoba rebates and the Manitoba Hydro loan need approval before you buy materials or start work."
+      },
+      {
+        "t": "p",
+        "x": "Amounts are what each program publishes; what you receive depends on your project and tax situation."
       },
       {
         "t": "table",
@@ -5926,7 +5930,7 @@ export const BLOG_POSTS = [
             "[Manitoba Safe and Healthy Home for Seniors Program](https://gov.mb.ca/seniors/resources/housing-options-and-care-planning.html)",
             "Seniors aged 65 and older, and family members who have seniors living with them, with a combined household income of $60,000 or less",
             "Up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations that are essential for daily living",
-            "Listed by the Province (verified October 15, 2026); up to $1.5 million in total, so funds may run out. Administered by March of Dimes Canada (1-866-906-6006); confirm intake with them"
+            "Listed by the Province (verified October 15, 2026); funding is up to $1.5 million a year (announced as an annual budget), so funds may run out. Administered by March of Dimes Canada (1-866-906-6006); confirm intake with them"
           ]
         ],
         "note": "Status as published on each official page on the checked date. Interest rates are not shown; ask Manitoba Hydro for current loan terms."
@@ -6114,7 +6118,7 @@ export const BLOG_POSTS = [
       },
       {
         "q": "Is there a grant for seniors' home modifications in Manitoba?",
-        "a": "Yes. The Province's Manitoba Safe and Healthy Home for Seniors Program offers up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations essential for daily living. Seniors 65 or older, or family living with them, can apply if combined household income is $60,000 or less. Total funding is up to $1.5 million, so it may run out."
+        "a": "The Province's Manitoba Safe and Healthy Home for Seniors Program offers up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations essential for daily living. Seniors 65 or older, or family living with them, can apply if combined household income is $60,000 or less. Funding is up to $1.5 million a year, so it may run out."
       },
       {
         "q": "Does the City of Winnipeg still pay for backwater valves?",

@@ -144,7 +144,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Only if your policy includes the right optional coverage. In a June 11, 2026 release, the Insurance Bureau of Canada (IBC), the national association of home, auto and business insurers, said basement water damage from sewer backup “is only covered if you have purchased specific, optional sewer backup coverage.”"
+      "x": "It depends on where the water came from. For sewer backup or overland flooding, only if your policy includes the right optional coverage. In a June 11, 2026 release, the Insurance Bureau of Canada (IBC), the insurers’ national association, said basement water damage from sewer backup “is only covered if you have purchased specific, optional sewer backup coverage.”"
     },
     {
       "t": "p",
