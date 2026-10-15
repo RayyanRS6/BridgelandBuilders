@@ -80,6 +80,37 @@
   padding-top: 38px;
 }
 
+/* /contact-us: the Google Maps embed under the contact cards, the width of
+   the container at a steady shape (the snippet's fixed 600x450 would overflow
+   a phone), framed like the cards around it. */
+.contact-map {
+  margin-top: 28px;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-cream);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-map-link {
+  margin-top: 14px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .contact-map {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 .route-loading {
   min-height: 55vh;
   display: grid;

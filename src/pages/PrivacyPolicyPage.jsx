@@ -44,6 +44,7 @@ const GA_ON = Boolean(gaMeasurementId());
 // optional marketing-email box on the quote form (CASL, section 16), the
 // LeadConnector chat widget and contact form (their own browser storage,
 // whatever Do Not Track says: section 12), the Price Calculator price guide,
+// the Google Maps embed on /contact-us (MAP_EMBED_URL in ContactPage.jsx),
 // (images and fonts are self-hosted: no third party serves them, so none is
 // listed; a photo hotlinked again would be flagged by the build audit,
 // img.unsplash-host).
@@ -359,6 +360,10 @@ export default function PrivacyPolicyPage() {
               <li>
                 <strong>Price Calculator by AutomateX360:</strong> powers our online price guide and passes estimate
                 requests to our customer management system.
+              </li>
+              <li>
+                <strong>Google Maps:</strong> shows our Google Business Profile on our Contact Us page. When the map
+                loads, Google receives your IP address, and Google’s own privacy policy applies to the map.
               </li>
             </ul>
             <p>

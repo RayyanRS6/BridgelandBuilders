@@ -129,7 +129,7 @@ export const PAGE_SEO = {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
       `Contact Bridgeland Builders about your Winnipeg renovation. Call ${SITE_PHONE}, email us or send your project details. We reply within ${REPLY_TIME}.`,
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
   // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in areas.js.
