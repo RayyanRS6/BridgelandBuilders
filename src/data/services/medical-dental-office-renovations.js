@@ -9,7 +9,10 @@
 // projects, no licence/insurance/WCB/warranty claims, no commercial timelines
 // or prices, and no clinical or infection-control rules stated as ours:
 // cleanable finishes are general guidance only. Every rule in `local` was
-// checked against the official page in its sources list on 2026-10-13.
+// checked against the official page in its sources list on 2026-10-13; the
+// "Outside Winnipeg" authorities against the Province's ITS permits page on
+// 2026-10-15. The timeline FAQ names schedule drivers only: no week ranges
+// unless the owner supplies them and they go into timelines.js.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
 import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
@@ -80,6 +83,7 @@ export default {
   faqsTitle: 'Clinic Renovation FAQs',
   faqs: [
     { q: 'Can our clinic stay open during the renovation?', a: 'Often, yes. We phase the work so some operatories or exam rooms keep seeing patients while others are rebuilt, keep the work area closed off, and move the loudest tasks to evenings and weekends where the City’s noise rules allow. Some steps, like tying in new plumbing, may need a short closure, and we’ll name those in the schedule.' },
+    { q: 'How long does a clinic renovation take?', a: 'It depends on the scope and the approvals. A refresh of finishes moves faster than new operatories or exam rooms, which go through the City’s plan review with an electrical declaration for patient care areas. An X-ray room also waits on the Province’s prior approval and the shielding specification.\n\nPhasing around patients and the occupancy permit before patients return set the pace too. You get a schedule with your written quote, built backwards from your reopening date, and an update every week.', more: { label: 'What sets the schedule for a clinic renovation', to: '/blog/clinic-renovation-permits-winnipeg' } },
     { q: 'Do you build dental operatories and sterilization rooms?', a: 'Yes. Dental office construction covers the walls, cabinetry and finishes as well as the plumbing, power and data rough-ins each chair needs. We build to your equipment supplier’s installation drawings and your designer’s layout, so ask your supplier for those early: they decide where every rough-in goes.' },
     { q: 'Do clinic renovations need special finishes?', a: 'Usually. Clinical areas are cleaned often and with strong products, so smooth, non-porous, durable surfaces with few seams are the usual choice: sheet flooring with coved edges, solid-surface or quartz counters, and scrubbable wall finishes. Your clinical policies and your designer set the exact specification, and we build to it.' },
     { q: 'What do we need to know about X-ray rooms?', a: 'Plan them first. Under Manitoba’s X-Ray Safety Regulation, X-ray equipment must be registered, and installing a machine in a permanent location needs the minister’s prior approval, with scaled drawings showing the shielding on the room’s boundaries. Once you have the shielding design, we build the walls, doors and ceiling to match it.' },
@@ -122,7 +126,7 @@ export default {
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with accessibility requirements aligned with CSA B651. Entrances, washrooms, door widths and turning space are planned into the layout from the start.' },
       { title: 'Occupancy Permit', text: 'Substantial alterations, expansions and changes of use need an occupancy permit before the space is used. Moving into a new unit? Ask the landlord what occupancy permit it already has.' },
       { title: 'Cleanable Finishes', text: 'Your clinical policies and professional standards set the infection-control rules. As general guidance, smooth, non-porous surfaces and sealed joints make cleaning easier; your designer confirms the specification.' },
-      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the building permit comes from the local municipality or planning district instead, and we coordinate with them the same way.` },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, building, plumbing and occupancy permits come from the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. We coordinate with whichever one applies.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Commercial projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects', accessed: '2026-10-13' },
@@ -131,6 +135,7 @@ export default {
       { label: 'Manitoba Laws: X-Ray Safety Regulation, M.R. 341/88 R', url: 'https://web2.gov.mb.ca/laws/regs/current/341-88r.php?lang=en', accessed: '2026-10-13' },
       { label: 'Province of Manitoba: 2020 construction codes adoption', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html', accessed: '2026-10-13' },
       { label: 'Province of Manitoba: Manitoba Building Code updates, accessibility', url: 'https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf', accessed: '2026-10-13' },
+      { label: 'Province of Manitoba: Building permits and inspections (Inspection and Technical Services)', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html', accessed: '2026-10-15' },
     ],
   },
 

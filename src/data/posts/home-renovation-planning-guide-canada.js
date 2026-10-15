@@ -190,7 +190,7 @@ export default {
     },
     {
       "t": "li",
-      "x": "**Asbestos:** Health Canada lists older plaster, drywall and spackling, floor and ceiling tiles, roofing, pipe insulation and vermiculite insulation among possible sources. Don't disturb vermiculite yourself, and if asbestos is found, hire a qualified removal specialist."
+      "x": "**Asbestos:** Health Canada lists older plaster, drywall and spackling, floor and ceiling tiles, roofing, pipe insulation and vermiculite insulation among possible sources. Don't disturb vermiculite yourself, and if asbestos is found, hire a qualified removal specialist. In Manitoba, see [asbestos testing before renovating](/blog/asbestos-testing-before-renovating-manitoba) for the rules that changed in 2025."
     },
     {
       "t": "li",
@@ -379,7 +379,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [
@@ -430,31 +430,32 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
-      "title": "How to Choose a Renovation Contractor in Winnipeg",
-      "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
+      "slug": "builders-lien-holdback-manitoba",
+      "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+      "excerpt": "A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.",
       "category": "Hiring a Contractor",
-      "date": "2026-08-05",
-      "readMinutes": 10,
+      "date": "2026-10-15",
+      "readMinutes": 11,
       "image": {
-        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+        "base": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "c1d3b9fa",
-          "3b993117",
-          "3dde30a7"
+          "1b473aa7",
+          "73253ecf",
+          "4cc70a86"
         ],
         "avif": [
-          "c03d571e",
-          "8eb20a2f",
-          "504b262f"
+          "ee61434d",
+          "20180f2d",
+          "7a91bd95"
         ],
         "main": 1
-      }
+      },
+      "titleCard": true
     }
   ]
 };

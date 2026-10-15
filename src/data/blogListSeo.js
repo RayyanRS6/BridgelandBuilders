@@ -9,6 +9,48 @@
 /** Published posts only (blog-raw status "published"), newest first. */
 export const BLOG_NODE_POSTS = [
   {
+    "slug": "asbestos-testing-before-renovating-manitoba",
+    "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
+    "metaDescription": "When to test for asbestos before renovating in Manitoba, what to do about vermiculite insulation, and what the Province’s 2025 asbestos rule changes mean.",
+    "date": "2026-10-15",
+    "ogImage": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x630.85e7027f.jpg"
+  },
+  {
+    "slug": "builders-lien-holdback-manitoba",
+    "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+    "metaDescription": "How Manitoba's 7.5% builders' lien holdback works on a renovation: the 60-day period, substantial performance, liens, holdback accounts and prompt payment.",
+    "date": "2026-10-15",
+    "ogImage": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x630.9da2ce8b.jpg"
+  },
+  {
+    "slug": "check-permit-history-winnipeg-house",
+    "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+    "metaDescription": "Check a Winnipeg home’s permit history: the City’s free permit search, open permits and orders, what each status means, and how Permit Amnesty works.",
+    "date": "2026-10-15",
+    "ogImage": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x630.8eb4b6d0.jpg"
+  },
+  {
+    "slug": "occupancy-permit-change-of-use-winnipeg",
+    "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+    "metaDescription": "When a Winnipeg commercial space needs an occupancy permit, when a new tenant doesn't, what counts as a change of use, and what to check before you lease.",
+    "date": "2026-10-15",
+    "ogImage": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x630.d6f1bcd2.jpg"
+  },
+  {
+    "slug": "removing-a-load-bearing-wall-winnipeg",
+    "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
+    "metaDescription": "Removing a load-bearing wall in Winnipeg: when the City wants structural or engineered drawings, why LVL beams need an engineer, and what gets inspected.",
+    "date": "2026-10-15",
+    "ogImage": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x630.1bd584b1.jpg"
+  },
+  {
+    "slug": "window-condensation-winnipeg-winter",
+    "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
+    "metaDescription": "Why windows frost up in a Winnipeg winter, NRCan's humidity limits from 0°C to −40°C, what fog between the panes means, and when to replace windows.",
+    "date": "2026-10-15",
+    "ogImage": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x630.a5ce35d5.jpg"
+  },
+  {
     "slug": "home-renovation-cost-canada",
     "title": "How Much Does a Home Renovation Cost in Canada?",
     "metaDescription": "There’s no official average renovation cost in Canada. What Statistics Canada data does show, why per-square-foot prices mislead, and our Winnipeg ranges.",

@@ -74,6 +74,11 @@
       "accessed": "2026-10-13"
     },
     {
+      "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+      "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
       "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
       "accessed": "2026-10-13"
@@ -101,6 +106,10 @@
     {
       "q": "Can we open on an interim occupancy permit?",
       "a": "The City issues both interim and final building occupancy permits, and its occupancy bulletin says you need one or the other before occupying a space. Progress inspections must be completed to the final stage before you can request occupancy, so plan your opening date around finished inspections rather than counting on an interim permit."
+    },
+    {
+      "q": "Does renovating part of our clinic mean the whole building must meet current accessibility rules?",
+      "a": "Not automatically. The Manitoba Building Code applies to the part being altered, and the work must not decrease life safety or building performance. If the authority finds it affects life safety elsewhere, those parts must be improved too. Where not every entrance can practically comply, at least one pedestrian entrance must be barrier-free. Plan review settles the details."
     }
   ],
   "blocks": [
@@ -213,11 +222,23 @@
     },
     {
       "t": "p",
-      "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings."
+      "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard."
     },
     {
       "t": "p",
-      "x": "How much of your space must be upgraded is settled in plan review."
+      "x": "For an existing building, Manitoba's own amendments to that code, in the Manitoba Building Code (M.R. 78/2023), set how far a renovation reaches. The Code “applies to the part of an existing building that is altered or repaired”, and “the level of life safety and building performance shall not be decreased.”"
+    },
+    {
+      "t": "p",
+      "x": "If, in the opinion of the authority having jurisdiction, the alteration will affect the level of life safety of parts that are not being altered, those parts “shall be improved to comply”. A change to the major occupancy of a building, or part of it, brings the affected parts under the Code as well."
+    },
+    {
+      "t": "p",
+      "x": "Manitoba's amendments also cover entrances, stairs and alarms. Where an alteration makes it impractical, in the authority's opinion, for every applicable entrance to comply, “at least one pedestrian entrance shall be barrier-free.” Stairways and ramps “shall have handrails on both sides”, and visible signal devices are required in addition to alarm signals “in all buildings.”"
+    },
+    {
+      "t": "p",
+      "x": "How these rules apply to your space is settled with the authority in plan review."
     },
     {
       "t": "p",
@@ -233,7 +254,7 @@
     },
     {
       "t": "p",
-      "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits."
+      "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits. Our guide to [occupancy permits and change of use in Winnipeg](/blog/occupancy-permit-change-of-use-winnipeg) covers what to check before you lease a unit."
     },
     {
       "t": "p",
@@ -319,7 +340,7 @@
     },
     {
       "t": "p",
-      "x": "[Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
+      "x": "[Book your free on-site visit](/book-online) or read about our [medical and dental office renovations](/services/medical-dental-office-renovations). Clinic renovations are priced in the written quote that follows the visit, not from an online estimate."
     }
   ]
 }

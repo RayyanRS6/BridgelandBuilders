@@ -11,7 +11,10 @@
 // photos and quotes exist. Truth rules: no job counts, no named restaurants,
 // hotels or past projects, no licence/insurance/WCB/warranty claims, no
 // commercial timelines or prices. Every rule in `local` and the FAQs was
-// checked against the official page in its sources list on 2026-10-13.
+// checked against the official page in its sources list on 2026-10-13; the
+// outside-Winnipeg permit authorities against the Province's ITS permits page
+// on 2026-10-15. The timeline FAQ names schedule drivers only: no week ranges
+// unless the owner supplies them and they go into timelines.js.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
 import { NEARBY_AREAS_TEXT } from '../areas.js';
@@ -82,13 +85,14 @@ export default {
   faqsTitle: 'Restaurant & Hotel Renovation FAQs',
   faqs: [
     { q: 'Can you renovate while we stay open?', a: 'Often, yes. We work after close, on your closed days and on weekends, and phase the job so part of the room keeps serving.\n\nIn Winnipeg, loud work within 150 m of a home must stop at 9 p.m., so noisy tasks go into daytime closures. Kitchen work that touches plumbing or ventilation may need a short full closure, and we’ll say when.' },
+    { q: 'How long does a restaurant renovation take?', a: 'It depends on the scope and the approvals. A dining-room refresh moves faster than kitchen work, which starts with the public health plan review before construction and then waits on the City’s building permit, the hood and fire suppression sign-off, equipment deliveries and inspections.\n\nThe occupancy permit, where one is needed, comes before reopening, and licensed premises should check the change with the LGCA. You get a schedule with your written quote, built backwards from your opening date, and an update every week.', more: { label: 'Restaurant permits and City review times', to: '/blog/restaurant-renovation-permits-winnipeg' } },
     { q: 'Do restaurant plans need health approval in Manitoba?', a: 'Yes. Manitoba’s guideline requires the owner to submit a registration form and a scaled plan showing equipment, plumbing fixtures and finishes to the local public health inspector for approval before construction, renovation or conversion begins. The health permit is issued only after an inspection once construction is complete, so the schedule allows for both steps.' },
     { q: 'Do you renovate commercial kitchens?', a: 'Yes. Commercial kitchen renovation covers walls, ceilings and floors in cleanable materials, hand, prep and dish sinks, floor drains, and the rough-ins for hoods and equipment. The hood and fire suppression design comes from your designer, engineer and hood supplier; we build to it and sequence the trades so inspections happen in the right order.' },
     { q: 'Does my restaurant need a grease interceptor?', a: 'Plan on one. Manitoba’s food premises guideline says properly sized grease traps or interceptors serving the utensil washing sinks must meet the Manitoba Plumbing Code and be easy to reach for cleaning; check the City’s sewer requirements too. Settle the size and location at the plan stage, since an interceptor is hard to move later.' },
     { q: 'Do you renovate hotels?', a: 'Yes. We renovate guest rooms and bathrooms, corridors, lobbies, breakfast rooms and meeting rooms. Work is phased by room, floor or wing so the rest of the hotel keeps operating, noisy tasks are kept to daytime hours, and you get a weekly update to share with management or ownership.' },
     { q: 'We serve alcohol. Does a renovation affect our liquor licence?', a: 'It can. The Liquor, Gaming and Cannabis Authority of Manitoba says it is the licensee’s responsibility to notify the LGCA if major renovations are made to licensed premises. Check with them before work starts, especially if the bar, seating or floor plan is changing, and build their timeline into your opening date.' },
     { q: 'Can you build to our designer’s drawings?', a: 'Yes. We build to supplied drawings and specifications for dining rooms, bars and kitchens, and walk the space against them before work starts. If a detail won’t work on site, such as a drain that can’t reach the planned sink location, we raise it with you and your designer before it becomes a costly change.' },
-    { q: 'Do you work outside Winnipeg?', a: `Yes, within about an hour of the city, including ${NEARBY_AREAS_TEXT}. The building permit then comes from the local municipality or planning district, and the health plan review still goes to your area public health inspector before construction starts.` },
+    { q: 'Do you work outside Winnipeg?', a: `Yes, within about an hour of the city, including ${NEARBY_AREAS_TEXT}.\n\nBuilding, plumbing and occupancy permits then come from the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. The health plan review still goes to your area public health inspector before construction starts.` },
   ],
 
   // Title, meta description and Service schema for this page. `updated`
@@ -109,7 +113,7 @@ export default {
   typesDesc: 'Hotels get the same planning around guests that restaurants get around service.',
   types: [
     { title: 'Full-Service Restaurants', text: 'Dining rooms, kitchens, bars and washrooms, from a refresh of finishes to a full remodel, or [a fit-out for a new location](/services/commercial-renovations).' },
-    { title: 'Cafés & Coffee Shops', text: 'Counters, seating, display cases and compact prep areas planned for quick morning service in a small footprint.' },
+    { title: 'Cafés & Coffee Shops', text: 'Counters, seating, display cases and compact prep areas planned for quick morning service in a small footprint. Downtown cafés can read about the Storefront Success grant in our [commercial renovation financing guide](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank).' },
     { title: 'Bars & Lounges', text: 'Bar fronts, back bars, seating and lighting. Licensed premises must tell the LGCA about major renovations, so build that into the plan.' },
     { title: 'Quick-Service & Takeout', text: 'Ordering counters, pickup areas and efficient kitchens for restaurants that do most of their business as takeout and delivery.' },
     // id: the anchor the "Hotels" links point to (/services/restaurant-renovations#hotels).
@@ -135,6 +139,7 @@ export default {
       { label: 'City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025', url: 'https://www.winnipeg.ca/media/6330', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Construction in your neighbourhood', url: 'https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood', accessed: '2026-10-13' },
       { label: 'Liquor, Gaming and Cannabis Authority of Manitoba: How to apply for a liquor service licence', url: 'https://lgcamb.ca/liquor/liquor-service-licences-2/how-to-apply/', accessed: '2026-10-13' },
+      { label: 'Province of Manitoba: Building permits and inspections (Inspection and Technical Services)', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html', accessed: '2026-10-15' },
     ],
   },
 

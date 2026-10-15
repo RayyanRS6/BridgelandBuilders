@@ -223,7 +223,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, sort what needs doing now from what can wait, and send a free written quote for the scope you choose. For a first range, try the [instant estimate](/instant-quote)."
+      "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, sort what needs doing now from what can wait, and send a free written quote for the scope you choose. For a kitchen, bathroom or basement, try the [instant estimate](/instant-quote) for a first range; for everything else, the visit comes first."
     }
   ],
   "faqsTitle": "Common questions",
@@ -330,28 +330,28 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "exterior-painting-winnipeg-when-to-paint",
-      "title": "When to Paint Your House Exterior in Winnipeg",
-      "excerpt": "Winnipeg's painting season is short, and the weather decides more than the calendar does. Here is how to time an exterior paint job, prepare the surfaces properly and avoid the mistakes that make paint fail early.",
-      "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 7,
+      "slug": "builders-lien-holdback-manitoba",
+      "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+      "excerpt": "A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.",
+      "category": "Hiring a Contractor",
+      "date": "2026-10-15",
+      "readMinutes": 11,
       "image": {
-        "base": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house",
+        "base": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "acff5638",
-          "f29111e2",
-          "5f986ef8"
+          "1b473aa7",
+          "73253ecf",
+          "4cc70a86"
         ],
         "avif": [
-          "0b02a5a2",
-          "17af2839",
-          "bb4a7cd2"
+          "ee61434d",
+          "20180f2d",
+          "7a91bd95"
         ],
         "main": 1
       },

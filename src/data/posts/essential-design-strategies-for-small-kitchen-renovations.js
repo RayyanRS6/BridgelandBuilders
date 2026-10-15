@@ -199,7 +199,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our permit guide explains [how the City's permit process works](/blog/winnipeg-renovation-permits)."
+      "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our guides explain [what removing a load-bearing wall involves](/blog/removing-a-load-bearing-wall-winnipeg) and [how the City's permit process works](/blog/winnipeg-renovation-permits)."
     },
     {
       "t": "h2",
@@ -317,7 +317,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [

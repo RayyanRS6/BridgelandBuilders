@@ -228,11 +228,11 @@ export default {
     },
     {
       "t": "p",
-      "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and our cost guide for [current price ranges by project type](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
+      "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and our cost guide for [what drives the cost of a home addition](/renovation-cost-winnipeg#priced-after-a-visit). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
     },
     {
       "t": "p",
-      "x": "**Next step:** [book a free on-site visit](/book-online). We look at the lot, the existing house and where an addition could connect, and you receive a free written quote for the work. For a first range, try the [instant estimate](/instant-quote)."
+      "x": "**Next step:** [book a free on-site visit](/book-online). We look at the lot, the existing house and where an addition could connect, and you receive a free written quote for the work. For kitchens, bathrooms and basements, try the [instant estimate](/instant-quote); additions and everything else are priced after the visit."
     }
   ],
   "faqsTitle": "Common questions",
@@ -298,7 +298,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [

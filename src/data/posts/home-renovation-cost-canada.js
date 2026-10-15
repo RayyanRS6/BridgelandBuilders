@@ -314,7 +314,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [

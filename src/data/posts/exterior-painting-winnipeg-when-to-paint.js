@@ -228,7 +228,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "For a first range on a larger renovation, try the [instant estimate](/instant-quote), or call [431-866-5644](tel:+14318665644), Monday to Friday, 8:30 to 4:30."
+      "x": "For kitchens, bathrooms and basements, try the [instant estimate](/instant-quote); for exterior painting and everything else, start with the free on-site visit above, or call [431-866-5644](tel:+14318665644), Monday to Friday, 8:30 to 4:30."
     }
   ],
   "faqsTitle": "Common questions",
@@ -336,7 +336,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [

@@ -8,7 +8,9 @@
 // No intro, gallery or testimonial: there are no real job photos or reviews
 // for this service yet, and stock photos are never shown as our work.
 // Every rule in `local` and `faqs` was checked against the page listed in
-// local.sources on 2026-10-13. Owner sign-off (ownerSignoff) is still to be added.
+// local.sources on 2026-10-13. The "Notice for Asbestos Work" item was updated on
+// 2026-10-15 to M.R. 108/2025 s. 37.9(2)-(3) (5 to 10 days' notice, serial number)
+// and the Province's new-asbestos-regulations FAQ. Owner sign-off (ownerSignoff) is still to be added.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
 
@@ -69,16 +71,18 @@ export default {
     items: [
       { title: 'Interior Removal Isn’t Demolition', text: 'According to the City, removing interior components such as walls and partitions needs no demolition permit or licensed demolition contractor.' },
       { title: 'The Renovation May Need a Permit', text: 'Kitchens, bathrooms and open-concept changes can need a building permit, and commercial alterations need one before work starts. [We coordinate permits and inspections](/our-process).' },
-      { title: 'Asbestos Comes First', text: 'Under Manitoba’s workplace safety rules, where asbestos is suspected, a competent person inspects the area, and asbestos that will be disturbed is removed before demolition starts.' },
+      { title: 'Asbestos Comes First', text: 'Under Manitoba’s workplace safety rules, before an alteration or renovation, measures must keep asbestos-containing material in the work area from being released. Before a building is demolished, material that could release asbestos has to be removed.' },
       { title: 'Buildings From Before 1990', text: 'The Province says asbestos was used in buildings built or renovated before 1990. Health Canada lists tiles, plaster, drywall and insulation among materials that may contain it.' },
       { title: 'Lead Paint', text: 'Health Canada says [homes built before 1960](/blog/renovating-a-character-home-in-winnipeg) probably contain lead-based paint, and advises against sanders, heat guns and blowlamps on it.' },
-      { title: 'Notice for Asbestos Work', text: 'Work that may release asbestos fibres has to be reported to Manitoba Workplace Safety and Health before it starts.' },
+      { title: 'Notice for Asbestos Work', text: 'The employer or the owner must notify Manitoba Workplace Safety and Health 5 to 10 days before work that may release asbestos-containing material, and an employer can’t start until the work has a serial number. Our guide covers [asbestos testing before you renovate](/blog/asbestos-testing-before-renovating-manitoba).' },
     ],
     sources: [
       { label: 'City of Winnipeg: demolition contractor information', url: 'https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information', accessed: ACCESSED },
       { label: 'City of Winnipeg: home renovations', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations', accessed: ACCESSED },
       { label: 'City of Winnipeg: commercial building inspections', url: 'https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial/building', accessed: ACCESSED },
       { label: 'Manitoba Workplace Safety and Health: asbestos FAQs', url: 'https://www.gov.mb.ca/labour/safety/faq/asbestos.html', accessed: ACCESSED },
+      { label: 'Manitoba Workplace Safety and Health: new asbestos regulations FAQ', url: 'https://gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html', accessed: '2026-10-15' },
+      { label: 'Manitoba Laws: Workplace Safety and Health Regulation, amendment, M.R. 108/2025 (s. 37.9, notice before asbestos work)', url: 'https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en', accessed: '2026-10-15' },
       { label: 'Health Canada: health risks of asbestos', url: 'https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html', accessed: ACCESSED },
       { label: 'Health Canada: lead-based paint', url: 'https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html', accessed: ACCESSED },
     ],
@@ -104,7 +108,7 @@ export default {
   faqs: [
     { q: 'Do you demolish whole buildings?', a: 'No. We do interior and selective demolition ahead of a renovation. In Winnipeg, demolishing a building or part of one needs a demolition permit, and the City requires the applicant to hold a demolition contractor licence. For a whole building, hire a licensed demolition contractor.' },
     { q: 'Can you remove a wall to open up my kitchen?', a: 'Yes, as part of a renovation. A non-structural partition can come out with the rest of the demolition. A load-bearing wall needs a beam and a building permit, so it is planned with the renovation rather than treated as stand-alone demolition. We tell you at the on-site visit which kind of wall you have.' },
-    { q: 'What happens if asbestos is found?', a: 'Work in that area stops until it is dealt with. Manitoba’s rules require asbestos that will be disturbed to be removed before demolition or alteration starts, and that removal is specialist work. Testing older materials before the strip-out is scheduled avoids a stop in the middle of the job.' },
+    { q: 'What happens if asbestos is found?', a: 'Work in that area stops until it is dealt with. Before an alteration or renovation, Manitoba’s rules require measures that keep asbestos-containing material in the work area from being released, and that is specialist work. Testing older materials before the strip-out is scheduled avoids a stop in the middle of the job.' },
     { q: 'How do you keep dust out of the rest of the building?', a: 'The work area is sealed off with plastic barriers, floors and paths to the door are covered, and debris goes out by the shortest route. In occupied homes and businesses that stay open, the messiest work is planned for the times that disturb you least.' },
     { q: 'Can you strip out a commercial space while we stay open?', a: 'Often, yes. Strip-outs can be scheduled after hours or on weekends, with the work area sealed off from the rest of the space and debris taken out on an agreed route. On longer jobs you get a progress update every week, so you know what is coming next.' },
     { q: 'How much does interior demolition cost?', a: 'It depends on how much is coming out, how it was built, access for hauling debris, and whether older materials need testing. The on-site visit and written quote are free. When demolition is the first stage of a larger renovation with us, it is part of that project’s quote.', more: { label: 'What changes the cost of a renovation', to: '/renovation-cost-winnipeg#cost-drivers' } },

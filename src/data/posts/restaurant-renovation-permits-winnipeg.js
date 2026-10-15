@@ -114,7 +114,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "When the work is construction, a substantial alteration or a change of use. The City gives a retail space becoming a restaurant as an example of a change of use."
+      "x": "When the work is construction, a substantial alteration or a change of use. The City gives a retail space becoming a restaurant as an example of a change of use. Our guide to [occupancy permits and change of use in Winnipeg](/blog/occupancy-permit-change-of-use-winnipeg) covers what to check before you lease a unit."
     },
     {
       "t": "p",
@@ -230,7 +230,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "[Book a free on-site visit](/book-online) for a free written quote, or start with the [instant renovation estimate](/instant-quote). For budgeting, read [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects), or see all our [commercial renovation services](/services/commercial-renovations)."
+      "x": "[Book a free on-site visit](/book-online) for a free written quote; restaurant work is priced after that visit, not from an online estimate. For budgeting, read [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects), or see all our [commercial renovation services](/services/commercial-renovations)."
     }
   ],
   "faqsTitle": "Restaurant renovation permit questions",
@@ -307,12 +307,40 @@ export default {
   ],
   "related": [
     {
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
+      "category": "Commercial",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
+        ],
+        "avif": [
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "clinic-renovation-permits-winnipeg",
       "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
       "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
       "category": "Commercial",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
         "widths": [
@@ -357,33 +385,6 @@ export default {
           "7be4d1c9",
           "5a9d610c",
           "537414ab"
-        ],
-        "main": 1
-      }
-    },
-    {
-      "slug": "the-biggest-cost-factors-in-commercial-renovation-projects",
-      "title": "The Biggest Cost Factors in Commercial Renovation Projects",
-      "excerpt": "The parts of a commercial renovation that move the price most, why older buildings and changes of use cost more, and the steps that keep a project from running over budget.",
-      "category": "Commercial",
-      "date": "2026-08-04",
-      "readMinutes": 7,
-      "image": {
-        "base": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "f2db0b8c",
-          "eaf95e2d",
-          "afcff434"
-        ],
-        "avif": [
-          "b0fa83b7",
-          "e36c2cee",
-          "6642e0d8"
         ],
         "main": 1
       }

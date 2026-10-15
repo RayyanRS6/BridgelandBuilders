@@ -7,7 +7,8 @@
 // photos and quotes exist. Truth rules: no job counts, no named clients or past
 // projects, no licence/insurance/WCB/warranty claims, no commercial timelines
 // or prices. Every rule in `local` was checked against the official page in its
-// sources list on 2026-10-13.
+// sources list on 2026-10-13; the "Outside Winnipeg" authorities against the
+// Province's ITS permits page on 2026-10-15.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
 import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
@@ -119,10 +120,10 @@ export default {
     items: [
       { title: 'Permit Application', text: 'Commercial alterations are filed through the City’s Permits Online system with a Commercial Alteration Design Summary. The City says incomplete applications result in delays, so the details are checked before filing.' },
       { title: 'Demising Walls & Exits', text: 'Walls between tenants, exits and public corridors affect fire safety. The City’s CADS form says significant alterations to exits, lobbies used as exits or public corridors in Part 3 buildings need drawings sealed by an architect or engineer.' },
-      { title: 'Occupancy Permit', text: 'A new tenant establishing a use without a valid occupancy permit, or a tenant expanding into more space, generally needs an occupancy permit before moving in. Ask your landlord what permit the unit already has.' },
+      { title: 'Occupancy Permit', text: 'A new tenant establishing a use without a valid occupancy permit, or a tenant expanding into more space, generally needs an occupancy permit before moving in. Ask your landlord what permit the unit already has, and see [what to check about occupancy before you lease](/blog/occupancy-permit-change-of-use-winnipeg).' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with accessibility requirements aligned with CSA B651. Entrances, washrooms and door clearances are planned into the layout from the start.' },
       { title: 'After-Hours Noise', text: 'Loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays. Your building may set its own work-hour rules too, so check the lease.' },
-      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.` },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, building, plumbing and occupancy permits come from the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. We coordinate with whichever one applies.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Permits Online', url: 'https://www.winnipeg.ca/building-development/permits-applications/permits-online', accessed: '2026-10-13' },
@@ -130,6 +131,7 @@ export default {
       { label: 'City of Winnipeg: Occupancy permits', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects/occupancy-permits', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Construction in your neighbourhood', url: 'https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood', accessed: '2026-10-13' },
       { label: 'Province of Manitoba: Manitoba Building Code updates, accessibility', url: 'https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf', accessed: '2026-10-13' },
+      { label: 'Province of Manitoba: Building permits and inspections (Inspection and Technical Services)', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html', accessed: '2026-10-15' },
     ],
   },
 
@@ -142,6 +144,8 @@ export default {
   },
   // Live pages only are shown; drafts appear when they launch.
   related: ['/services/commercial-renovations', '/services/general-contracting', '/services/retail-renovations', '/services/medical-dental-office-renovations', '/services/demolition'],
-  guides: ['office-fit-up-lease-planning-winnipeg', 'how-to-balance-functionality-and-aesthetics-in-a-commercial-space', 'how-to-prepare-your-business-for-a-major-renovation'],
+  // Wave 5: the cost-factors guide (owner of "office renovation cost Winnipeg")
+  // took the commercial interior design guide's card slot.
+  guides: ['office-fit-up-lease-planning-winnipeg', 'the-biggest-cost-factors-in-commercial-renovation-projects', 'how-to-prepare-your-business-for-a-major-renovation'],
   ownerSignoff: null,
 };

@@ -15,7 +15,7 @@ export default {
     "Costs & Budgets"
   ],
   "date": "2026-08-12",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
   "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
@@ -210,7 +210,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** For a first number to test your ROI, try the [instant renovation estimate](/instant-quote). For a figure you can plan around, [book a free on-site visit](/book-online) and get a free written quote. Bridgeland Builders renovates [retail stores](/services/retail-renovations) and other [commercial spaces](/services/commercial-renovations) in Winnipeg and nearby communities."
+      "x": "**Next step:** For a figure to test your ROI against, [book a free on-site visit](/book-online) and get a free written quote; commercial work is priced after that visit, not from an online estimate. Bridgeland Builders renovates [retail stores](/services/retail-renovations) and other [commercial spaces](/services/commercial-renovations) in Winnipeg and nearby communities."
     }
   ],
   "faqsTitle": "Renovation ROI questions",
@@ -266,12 +266,40 @@ export default {
   ],
   "related": [
     {
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
+      "category": "Commercial",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
+        ],
+        "avif": [
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "the-biggest-cost-factors-in-commercial-renovation-projects",
       "title": "The Biggest Cost Factors in Commercial Renovation Projects",
       "excerpt": "The parts of a commercial renovation that move the price most, why older buildings and changes of use cost more, and the steps that keep a project from running over budget.",
       "category": "Commercial",
       "date": "2026-08-04",
-      "readMinutes": 7,
+      "readMinutes": 9,
       "image": {
         "base": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest",
         "widths": [
@@ -298,7 +326,7 @@ export default {
       "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
       "category": "Commercial",
       "date": "2026-09-03",
-      "readMinutes": 7,
+      "readMinutes": 8,
       "image": {
         "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
         "widths": [
@@ -315,33 +343,6 @@ export default {
           "0f59d06c",
           "12dcb183",
           "43da1cb9"
-        ],
-        "main": 1
-      }
-    },
-    {
-      "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
-      "title": "Commercial Renovation Financing in Manitoba: Your Options",
-      "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
-      "category": "Commercial",
-      "date": "2026-08-11",
-      "readMinutes": 7,
-      "image": {
-        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "76344da3",
-          "dbbc5f1b",
-          "b9481b87"
-        ],
-        "avif": [
-          "26670bc4",
-          "3191a00b",
-          "54f184c8"
         ],
         "main": 1
       }

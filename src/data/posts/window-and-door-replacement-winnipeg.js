@@ -38,7 +38,7 @@ export default {
   "blocks": [
     {
       "t": "p",
-      "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, frost on the inside of the glass, and doors that stick or let in cold air at the sill."
+      "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, [frost on the inside of the glass](/blog/window-condensation-winnipeg-winter), and doors that stick or let in cold air at the sill."
     },
     {
       "t": "p",
@@ -233,7 +233,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** see what our [window and door installation](/services/windows-and-doors) work includes, then [book a free on-site visit](/book-online) so we can look at each window and door with you and send a free written quote. For a first range on a larger renovation, try the [instant estimate](/instant-quote)."
+      "x": "**Next step:** see what our [window and door installation](/services/windows-and-doors) work includes, then [book a free on-site visit](/book-online) so we can look at each window and door with you and send a free written quote. For kitchens, bathrooms and basements, you can try the [instant estimate](/instant-quote) first; windows, doors and everything else start with that visit."
     }
   ],
   "faqsTitle": "Common questions",
@@ -309,6 +309,34 @@ export default {
   ],
   "related": [
     {
+      "slug": "window-condensation-winnipeg-winter",
+      "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
+      "excerpt": "Frost and water on the inside of your windows are usually a humidity problem first. Using Natural Resources Canada's humidity table and Health Canada's moisture advice, this guide explains how humid a Winnipeg house can be in a cold snap, what fog between the panes means and when replacement makes sense.",
+      "category": "Older Homes",
+      "date": "2026-10-15",
+      "readMinutes": 10,
+      "image": {
+        "base": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "94567594",
+          "96a34dae",
+          "6c520be8"
+        ],
+        "avif": [
+          "939ce55c",
+          "6a8c29ad",
+          "8433cb61"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "exterior-painting-winnipeg-when-to-paint",
       "title": "When to Paint Your House Exterior in Winnipeg",
       "excerpt": "Winnipeg's painting season is short, and the weather decides more than the calendar does. Here is how to time an exterior paint job, prepare the surfaces properly and avoid the mistakes that make paint fail early.",
@@ -359,34 +387,6 @@ export default {
           "7c9f9167",
           "e0167740",
           "c81697cc"
-        ],
-        "main": 1
-      },
-      "titleCard": true
-    },
-    {
-      "slug": "winnipeg-renovation-permits",
-      "title": "Renovation Permits in Winnipeg: What Needs One and How to Apply",
-      "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
-      "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 9,
-      "image": {
-        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "0f487983",
-          "55b461dd",
-          "5c78c717"
-        ],
-        "avif": [
-          "6bd25ab0",
-          "eac9efdc",
-          "53975749"
         ],
         "main": 1
       },

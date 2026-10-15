@@ -9,7 +9,7 @@ export default {
   "excerpt": "A status check of the renovation tax credits, rebates and loans Manitoba homeowners can still use, the programs that have closed, and the steps that keep a claim valid.",
   "category": "Money & Rebates",
   "date": "2026-10-13",
-  "readMinutes": 10,
+  "readMinutes": 12,
   "image": {
     "base": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants",
     "widths": [

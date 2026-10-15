@@ -306,7 +306,7 @@ export default {
       "excerpt": "A status check of the renovation tax credits, rebates and loans Manitoba homeowners can still use, the programs that have closed, and the steps that keep a claim valid.",
       "category": "Money & Rebates",
       "date": "2026-10-13",
-      "readMinutes": 10,
+      "readMinutes": 12,
       "image": {
         "base": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants",
         "widths": [
@@ -334,7 +334,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [

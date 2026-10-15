@@ -240,6 +240,10 @@ export default {
       "x": "Bedroom windows: measure the clear opening of each existing window against the 0.35 m² and 380 mm minimums."
     },
     {
+      "t": "li",
+      "x": "Earlier work: if part of the basement was finished before you owned the house, [check the home’s permit history](/blog/check-permit-history-winnipeg-house) before you plan around it."
+    },
+    {
       "t": "h2",
       "x": "Next step"
     },
@@ -354,12 +358,40 @@ export default {
       "titleCard": true
     },
     {
+      "slug": "check-permit-history-winnipeg-house",
+      "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+      "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
+      "category": "Permits & Planning",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "dfc78763",
+          "1189cd90",
+          "d00db2e5"
+        ],
+        "avif": [
+          "e09156f1",
+          "a5b2e756",
+          "574fa93a"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "winnipeg-renovation-permits",
       "title": "Renovation Permits in Winnipeg: What Needs One and How to Apply",
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [
@@ -376,34 +408,6 @@ export default {
           "6bd25ab0",
           "eac9efdc",
           "53975749"
-        ],
-        "main": 1
-      },
-      "titleCard": true
-    },
-    {
-      "slug": "planning-a-winter-basement-development-winnipeg",
-      "title": "Planning a Winter Basement Development in Winnipeg",
-      "excerpt": "Winter suits basement work in Winnipeg: the job is indoors and permit applications avoid the construction-season rush. Here’s how to plan it, month by month.",
-      "category": "Basements & Suites",
-      "date": "2026-10-13",
-      "readMinutes": 7,
-      "image": {
-        "base": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "565cba54",
-          "2d7fc4b5",
-          "3669a5da"
-        ],
-        "avif": [
-          "59e02b43",
-          "b83b3c92",
-          "c31bba81"
         ],
         "main": 1
       },

@@ -15,8 +15,8 @@ export default {
     "Costs & Budgets"
   ],
   "date": "2026-08-04",
-  "updated": "2026-10-13",
-  "readMinutes": 7,
+  "updated": "2026-10-15",
+  "readMinutes": 9,
   "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
   "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
   "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
@@ -118,7 +118,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Asbestos has its own rules. Where asbestos is suspected, Manitoba's workplace safety rules require the work area to be inspected and an asbestos inventory prepared by a person competent in identifying asbestos-containing material before renovation or demolition, and suspected material is treated as asbestos unless it is found to be asbestos-free."
+      "x": "Asbestos has its own rules. Manitoba's workplace safety regulation requires employers and owners to have asbestos-containing material inventoried by a person competent in identifying it, and treats material likely to contain asbestos as asbestos-containing until a qualified person finds otherwise. The employer or owner must notify Workplace Safety and Health 5 to 10 days before work that may release it."
     },
     {
       "t": "p",
@@ -134,7 +134,63 @@ export default {
     },
     {
       "t": "p",
-      "x": "The City's commercial permit form is a useful reality check: its declared construction value includes design fees, project management fees, every sub-trade, building equipment, finishes, millwork and fixed cabinetry. In restaurants, Manitoba's food premises guideline adds items such as an approved kitchen hood, grease interceptors and washable finishes. See our guides to [restaurant renovation permits](/blog/restaurant-renovation-permits-winnipeg) and [clinic renovation permits](/blog/clinic-renovation-permits-winnipeg)."
+      "x": "The City's commercial permit form is a useful reality check: its declared construction value includes design fees, project management fees, every sub-trade, building equipment, finishes, millwork and fixed cabinetry. See our guides to [restaurant renovation permits](/blog/restaurant-renovation-permits-winnipeg) and [clinic renovation permits](/blog/clinic-renovation-permits-winnipeg)."
+    },
+    {
+      "t": "h2",
+      "x": "What drives the cost of an office, restaurant or retail renovation in Winnipeg?"
+    },
+    {
+      "t": "p",
+      "x": "Each type of space has its own expensive parts. In an office it is usually the walls, exits and building services; in a restaurant, the kitchen the health inspector reviews; in a store, the entrance, signs and lighting. These are cost drivers, not prices: each one is priced in the written quote after an on-site visit."
+    },
+    {
+      "t": "h3",
+      "x": "Office renovation costs"
+    },
+    {
+      "t": "p",
+      "x": "Office costs follow the walls and the services behind them. Demising walls between tenants affect fire separations, and the City's CADS form asks for your neighbouring tenants because those requirements depend on their uses. Significant work on exits, public corridors or fire separations in a Part 3 building needs drawings sealed by an architect or engineer."
+    },
+    {
+      "t": "p",
+      "x": "Every new room also needs power, data, lighting and heating and cooling that suit it, and work in an occupied office often moves to evenings and weekends. Your team can move in only once the City issues an interim or final occupancy permit, where one is required, so rent paid before then belongs in the budget too."
+    },
+    {
+      "t": "p",
+      "x": "For the lease side of those dates, see [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg)."
+    },
+    {
+      "t": "h3",
+      "x": "Restaurant renovation costs"
+    },
+    {
+      "t": "p",
+      "x": "Most of the extra requirements sit in the kitchen. Manitoba's food premises guideline requires a public health inspector to review the plans before construction, and every new or renovated food premises to have an approved Type I or Type II hood suited to the menu."
+    },
+    {
+      "t": "p",
+      "x": "The ventilation and fire suppression system is settled with the local permit authority and the inspector, and the health permit waits for the authority's written confirmation. In an existing restaurant with a Type II hood, the guideline warns that a change of owner or menu may mean upgrading the kitchen ventilation."
+    },
+    {
+      "t": "p",
+      "x": "The guideline also calls for properly sized grease traps or interceptors serving the utensil washing sinks, built to the Manitoba Plumbing Code and easy to reach for cleaning, plus smooth, impervious floors coved and sealed 10 cm (4 inches) up the wall and easily cleaned, non-absorbent walls and ceilings in food preparation and dishwashing areas."
+    },
+    {
+      "t": "p",
+      "x": "Licensed premises must also tell the LGCA when major renovations are made."
+    },
+    {
+      "t": "h3",
+      "x": "Retail renovation costs"
+    },
+    {
+      "t": "p",
+      "x": "Retail budgets go where customers look first: the storefront, entrance, signs and lighting. When an existing building is altered and the authority finds it isn't practical for every applicable entrance to comply with the barrier-free rules, Manitoba's amendment to the 2020 National Building Code says “at least one pedestrian entrance shall be barrier-free.”"
+    },
+    {
+      "t": "p",
+      "x": "Signs are their own line item: the City says to get a permit before starting any construction or alteration to any part of a sign, and new internally illuminated signs need a separate electrical sign permit. If the unit was last used for something other than retail, a change of use can add drawings and an occupancy permit."
     },
     {
       "t": "h2",
@@ -194,11 +250,11 @@ export default {
     },
     {
       "t": "p",
-      "x": "Start with a ballpark, then get a written quote based on the actual space. Bridgeland Builders' instant estimate gives a quick first figure, and every project starts with a free on-site visit and a free written quote that sets out the scope, inclusions and exclusions. Taxes are shown on your written quote."
+      "x": "From a written quote based on the actual space. Commercial work isn't priced online: every commercial project with Bridgeland Builders starts with a free on-site visit and a free written quote that sets out the scope, inclusions and exclusions. Taxes are shown on your written quote."
     },
     {
       "t": "p",
-      "x": "**Next step:** Try the [instant renovation estimate](/instant-quote), then [book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, retail stores and clinics across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
+      "x": "**Next step:** [Book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, retail stores and clinics across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
     }
   ],
   "faqsTitle": "Commercial renovation cost questions",
@@ -221,7 +277,7 @@ export default {
     },
     {
       "q": "Who is responsible for asbestos checks before a renovation?",
-      "a": "Where asbestos is suspected, Manitoba's workplace safety rules say the property owner, contractor or employer must make sure the work area is inspected and an asbestos inventory prepared before work begins. Who pays is set by your lease and contract, so tenants should ask the landlord for any existing inventory before signing."
+      "a": "Manitoba's workplace safety regulation puts the duties on the employer and the owner: an inventory of asbestos-containing material by a person competent in identifying it, and notice to Workplace Safety and Health 5 to 10 days before work that may release it. Your lease and contract decide who pays, so ask the landlord for any existing inventory before signing."
     }
   ],
   "answer": "The biggest cost drivers in a commercial renovation are usually behind the walls, not the finishes: mechanical, electrical, plumbing and fire protection changes; code requirements triggered by a change of use; hidden conditions such as asbestos; after-hours or phased work; and scope changes once construction starts. Complete drawings and a contingency keep them in check.",
@@ -229,7 +285,7 @@ export default {
     {
       "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
       "url": "https://www.winnipeg.ca/media/6330",
-      "accessed": "2026-10-13"
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
@@ -237,14 +293,39 @@ export default {
       "accessed": "2026-10-13"
     },
     {
-      "label": "Manitoba Workplace Safety and Health: Asbestos containing material FAQ",
-      "url": "https://www.gov.mb.ca/labour/safety/wsh_faqs_asbestos.html",
-      "accessed": "2026-10-13"
+      "label": "Manitoba Workplace Safety and Health: New asbestos regulations FAQ",
+      "url": "https://gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Manitoba Laws: Workplace Safety and Health Regulation, amendment, M.R. 108/2025 (Part 37, Asbestos)",
+      "url": "https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en",
+      "accessed": "2026-10-15"
     },
     {
       "label": "Manitoba Health: Guideline for the Design, Construction and Reconstruction of a Food Handling Establishment",
       "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/protection/docs/construction.pdf",
-      "accessed": "2026-10-13"
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+      "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg: Commercial sign inspections",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial/sign",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+      "url": "https://www.winnipeg.ca/media/6131",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Liquor, Gaming and Cannabis Authority of Manitoba: How to Apply for a Liquor Service Licence",
+      "url": "https://lgcamb.ca/liquor/liquor-service-licences-2/how-to-apply/",
+      "accessed": "2026-10-15"
     },
     {
       "label": "BDC: Leasehold improvements, the 8 steps to follow",
@@ -254,7 +335,7 @@ export default {
     {
       "label": "Efficiency Manitoba: Business Lighting Program",
       "url": "https://efficiencymb.ca/business/business-lighting/",
-      "accessed": "2026-10-13"
+      "accessed": "2026-10-15"
     }
   ],
   "related": [
@@ -314,31 +395,32 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
-      "title": "Commercial Renovation Financing in Manitoba: Your Options",
-      "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
       "category": "Commercial",
-      "date": "2026-08-11",
-      "readMinutes": 7,
+      "date": "2026-10-15",
+      "readMinutes": 11,
       "image": {
-        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "76344da3",
-          "dbbc5f1b",
-          "b9481b87"
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
         ],
         "avif": [
-          "26670bc4",
-          "3191a00b",
-          "54f184c8"
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
         ],
         "main": 1
-      }
+      },
+      "titleCard": true
     }
   ]
 };

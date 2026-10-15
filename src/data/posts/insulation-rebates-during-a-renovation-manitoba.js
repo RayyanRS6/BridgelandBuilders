@@ -14,7 +14,7 @@ export default {
     "Money & Rebates"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp",
@@ -224,6 +224,12 @@ export default {
           "On-bill financing; approval before work starts"
         ],
         [
+          "Energy Efficiency Assistance Program",
+          "Efficiency Manitoba",
+          "Current offer (checked October 15, 2026)",
+          "Free insulation for income-qualified households, installed by Efficiency Manitoba's registered program contractors"
+        ],
+        [
           "Canada Greener Homes Grant",
           "Natural Resources Canada",
           "Closed",
@@ -300,7 +306,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
+      "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For kitchens, bathrooms and basements, try the [instant estimate](/instant-quote) for a first range; for everything else, the on-site visit comes first."
     }
   ],
   "faqsTitle": "Common questions",
@@ -337,6 +343,11 @@ export default {
       "label": "Efficiency Manitoba: EnerGuide Home Evaluation Rebate",
       "url": "https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Energy Efficiency Assistance Program",
+      "url": "https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/",
+      "accessed": "2026-10-15"
     },
     {
       "label": "Manitoba Hydro: Home Energy Efficiency Loan",
@@ -427,7 +438,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [

@@ -14,7 +14,7 @@ export default {
     "Basements & Suites"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": null,
   "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
@@ -120,10 +120,6 @@ export default {
       "x": "Check and clean it regularly, and remove anything that could stop it closing. Homes built after 1979 were required to have one, and homes built since 1990 a sump pit as well. If you’re unsure what your house has, or whether it works, the City suggests asking a licensed plumber."
     },
     {
-      "t": "p",
-      "x": "Our [basement flood protection guide](/blog/basement-flood-protection-winnipeg) explains how a backwater valve and sump pit work together, and which permits apply if you add either one."
-    },
-    {
       "t": "h2",
       "x": "How do you keep surface water away from the house?"
     },
@@ -178,6 +174,10 @@ export default {
     {
       "t": "p",
       "x": "Report flooding to 311 and contact your home insurance company; the City also notes you can file a claim with it for injury or property damage. Photograph everything and ask your insurer before tearing out finishes. When you rebuild, fix what let the water in first, whether that’s a missing backwater valve, a sump problem or grading."
+    },
+    {
+      "t": "p",
+      "x": "Our basement flooding guide explains [whether home insurance covers a flooded basement in Manitoba](/blog/basement-flood-protection-winnipeg), along with how a backwater valve and sump pit work together and the permits for adding either one."
     },
     {
       "t": "p",
@@ -250,7 +250,7 @@ export default {
       "excerpt": "Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.",
       "category": "Basements & Suites",
       "date": "2026-10-13",
-      "readMinutes": 7,
+      "readMinutes": 9,
       "image": {
         "base": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding",
         "widths": [

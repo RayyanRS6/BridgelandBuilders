@@ -9,7 +9,7 @@ export default {
   "excerpt": "Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.",
   "category": "Basements & Suites",
   "date": "2026-10-13",
-  "readMinutes": 7,
+  "readMinutes": 9,
   "image": {
     "base": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding",
     "widths": [

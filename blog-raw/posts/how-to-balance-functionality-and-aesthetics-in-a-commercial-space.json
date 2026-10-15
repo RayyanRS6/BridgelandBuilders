@@ -6,7 +6,7 @@
   "metaDescription": "Plan a commercial interior that works first and looks right: code-driven layout choices, durable finishes, lighting, brand colour and flexible design.",
   "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
   "date": "2026-09-03",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "cats": [
     "Commercial"
   ],
@@ -31,6 +31,11 @@
       "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
       "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+      "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+      "accessed": "2026-10-15"
     },
     {
       "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
@@ -155,11 +160,23 @@
     },
     {
       "t": "p",
-      "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard. How they apply to your alteration is settled in plan review, so design for them from the start."
+      "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard, so design for them from the start."
     },
     {
       "t": "p",
-      "x": "Manitoba also kept three amendments of its own: wider use of visual signal devices, handrails on both sides of stairs and ramps, and rules on how some requirements apply to existing buildings. Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
+      "x": "Manitoba's own amendments, in the Manitoba Building Code (M.R. 78/2023), set how far a renovation reaches. The Code “applies to the part of an existing building that is altered or repaired”, and an alteration must not decrease the level of life safety or building performance."
+    },
+    {
+      "t": "p",
+      "x": "If the authority finds the alteration will affect the life safety of parts not being altered, those parts must be improved to comply. Where it is not practical for every applicable entrance to comply, “at least one pedestrian entrance shall be barrier-free.”"
+    },
+    {
+      "t": "p",
+      "x": "Manitoba also requires visible signal devices in addition to alarm signals in all buildings, and handrails on both sides of stairways and ramps. How these apply to your space is settled with the authority in plan review."
+    },
+    {
+      "t": "p",
+      "x": "Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
     },
     {
       "t": "p",
@@ -262,7 +279,7 @@
     },
     {
       "t": "p",
-      "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote, or start with the [instant renovation estimate](/instant-quote). See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
+      "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote; commercial work is priced after that visit, not from an online estimate. See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
     }
   ]
 }

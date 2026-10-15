@@ -1,0 +1,305 @@
+{
+  "slug": "removing-a-load-bearing-wall-winnipeg",
+  "status": "published",
+  "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
+  "metaTitle": "Removing a Load-Bearing Wall in Winnipeg | Bridgeland",
+  "metaDescription": "Removing a load-bearing wall in Winnipeg: when the City wants structural or engineered drawings, why LVL beams need an engineer, and what gets inspected.",
+  "excerpt": "What the City of Winnipeg’s permit form asks for when a load-bearing wall is opened, moved or removed, why an LVL beam needs an engineer’s sealed drawing, and what happens to the wiring and plumbing inside the wall.",
+  "date": "2026-10-15",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-04-15",
+  "cats": [
+    "Permits & Planning"
+  ],
+  "services": [
+    "/services/kitchen-renovations",
+    "/services/whole-home-renovations",
+    "/services/demolition"
+  ],
+  "cluster": "winnipeg-permits",
+  "ctaService": "/services/kitchen-renovations",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Removing a load-bearing wall in Winnipeg is structural work: expect a building permit with structural drawings, and engineered drawings if the new beam is LVL, glulam or steel, per the City’s alterations permit form. Where a structural element goes beyond Part 9 of the Manitoba Building Code, the City requires a sealed drawing from a professional engineer registered in Manitoba.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "City of Winnipeg – Home renovations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Building permit application form: alterations, single/two-family dwelling (PDF dated October 2025)",
+      "url": "https://www.winnipeg.ca/media/6970",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Information Bulletin 2026-013-B/S: Engineering requirements for housing (September 25, 2026)",
+      "url": "https://www.winnipeg.ca/media/6133",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Housing inspections",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/housing-inspections",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Electrical installations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Plumbing installations",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg – Basement/lower level development: construction information",
+      "url": "https://www.winnipeg.ca/media/6349",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Province of Manitoba – Adoption of the 2020 national model construction codes",
+      "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Natural Resources Canada – Taxonomy of wood products",
+      "url": "https://natural-resources.canada.ca/forests-forestry/forest-industry-trade/taxonomy-wood-products",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Natural Resources Canada – Laminated veneer lumber",
+      "url": "https://natural-resources.canada.ca/forests-forestry/forest-industry-trade/laminated-veneer-lumber",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Health Canada – Health risks of asbestos",
+      "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+      "accessed": "2026-10-15"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Can I widen an opening in a load-bearing wall instead of removing it?",
+      "a": "A wider opening is still structural work. The City’s alterations permit form lists creating openings in a load-bearing wall alongside relocating or removing one, so the application needs structural drawings either way. If the beam over the new opening is LVL, glulam or steel, the form asks for engineered drawings."
+    },
+    {
+      "q": "Can the new beam be hidden in the ceiling?",
+      "a": "Sometimes. A beam can hang below the ceiling, or in some houses sit up within the floor framing so the ceiling stays flat. Which one works depends on the engineer’s design, the size of the beam and how the joists run, so it’s settled in the drawings rather than promised at the first visit."
+    },
+    {
+      "q": "How long does a Winnipeg permit take for removing a wall?",
+      "a": "In September 2026, the City of Winnipeg took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against its own target of 10. That’s the City’s review time only. It doesn’t include preparing the drawings, and the City warns that incomplete applications cause delays."
+    },
+    {
+      "q": "Do I need an engineer to remove a non-load-bearing wall?",
+      "a": "Not for the wall itself. The City’s form ties structural drawings to structural work, and a partition that carries no load isn’t structural. The renovation may still need a building permit, and moving the wiring or plumbing inside the wall needs electrical or plumbing permits."
+    },
+    {
+      "q": "Can we live in the house while a load-bearing wall comes out?",
+      "a": "It depends on the scope and how the work is staged. On some projects you can stay while work moves through the house in sections; on others, moving out for part of the job is faster and simpler. Ask how the work will be staged and which rooms you can use before you decide."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Opening a kitchen to the living room usually means taking out a wall. If that wall holds up the floor or roof above it, the job becomes structural work, with drawings, a building permit and inspections."
+    },
+    {
+      "t": "p",
+      "x": "This guide explains what the City of Winnipeg asks for, using its own permit form, bulletin and web pages, checked on October 15, 2026. It’s general information, not an engineering assessment of your house, so confirm your project with the City’s Permits Direct Line at 204-986-5140."
+    },
+    {
+      "t": "h2",
+      "x": "Do you need a permit to remove a wall in Winnipeg?"
+    },
+    {
+      "t": "p",
+      "x": "Often, yes. The City’s home renovations page lists creating open concept living spaces among the projects that may need a building permit under the Winnipeg Building By-law. Kitchens, bathrooms and new bedrooms are on the same list. Cosmetic changes, such as painting, flooring and millwork, don’t need one."
+    },
+    {
+      "t": "p",
+      "x": "Whether the wall carries load is what changes the paperwork. The City’s permit application form for alterations to single- and two-family homes asks for structural drawings when a load-bearing wall is opened, moved or removed. A partition that carries no load doesn’t need them, and can come out with the rest of the [interior demolition](/services/demolition)."
+    },
+    {
+      "t": "h2",
+      "x": "How can you tell whether a wall is load-bearing?"
+    },
+    {
+      "t": "p",
+      "x": "Not with certainty from inside the room. These rules of thumb suggest a wall may be carrying load. They are reasons to look closer, not a test to rely on before cutting:"
+    },
+    { "t": "li", "x": "Floor or ceiling joists rest on top of it, usually running across the wall rather than alongside it." },
+    { "t": "li", "x": "It’s stacked over a beam or another wall on the floor below." },
+    { "t": "li", "x": "In the basement, there are posts or teleposts under its line." },
+    {
+      "t": "p",
+      "x": "Any one of these is a reason to treat the wall as structural until it’s been checked. We’ll tell you at the on-site visit which kind of wall you have. Where the framing isn’t clear from what can be seen, an engineer can confirm it, and an engineer designs the replacement wherever the City requires one."
+    },
+    {
+      "t": "p",
+      "x": "If the house has been renovated before, our guide to [checking a Winnipeg house’s permit history](/blog/check-permit-history-winnipeg-house) explains how to find out what earlier work was permitted."
+    },
+    {
+      "t": "h2",
+      "x": "When does the City want structural or engineered drawings?"
+    },
+    {
+      "t": "p",
+      "x": "The City’s building permit application form for alterations to single- and two-family dwellings, dated October 2025, sets out two levels of drawings, plus a certificate when plans are sealed. The table quotes the items that matter when a wall comes out."
+    },
+    {
+      "t": "table",
+      "caption": "What Winnipeg’s alterations permit form asks for",
+      "head": [
+        "Document",
+        "When the form asks for it (quoted)"
+      ],
+      "rows": [
+        [
+          "Structural drawings",
+          "“when structural work is being done”, including “creating openings in, relocating, or removing interior/exterior walls that are load bearing” and “altering or repairing floor structural members such as joists or beams”. The form adds: “Engineering may be required”."
+        ],
+        [
+          "Engineered structural drawings",
+          "“when major structural work is being done”, including, in the basement, “removing or altering teleposts or beams”, and “engineered wood floors or beams (LVL, glulam, steel, etc.)”"
+        ],
+        [
+          "Professional Designer’s Certificate for Housing",
+          "“if plans are sealed by an engineer or architect, or engineer’s report is required”"
+        ]
+      ],
+      "note": "Source: City of Winnipeg building permit application form, Alterations – Single/Two Family Dwelling (PDF dated October 2025), read October 15, 2026."
+    },
+    {
+      "t": "p",
+      "x": "The beam that replaces the wall matters. If it’s an engineered product, such as LVL, glulam or steel, the form puts it on the engineered-drawings list. So does any change to the basement beam or teleposts that the new load path needs."
+    },
+    {
+      "t": "h2",
+      "x": "Why do LVL beams need an engineer’s sealed drawing?"
+    },
+    {
+      "t": "p",
+      "x": "The City’s Information Bulletin 2026-013-B/S, Engineering requirements for housing, issued September 25, 2026, sets the rule. Where a structural element “is not found in Part 9 of the Manitoba Building Code”, or its standards or limits are exceeded, the City requires a sealed drawing from a professional engineer registered in Manitoba."
+    },
+    {
+      "t": "p",
+      "x": "Part 9 is the part of the Code for smaller buildings. The City’s permit data defines it as buildings of three storeys or less with a building area of no more than 600 m², in certain occupancies, and houses fall under it. Manitoba adopted the 2020 national model building code, with Manitoba amendments, effective January 1, 2024."
+    },
+    {
+      "t": "p",
+      "x": "The bulletin’s examples of elements that need an engineer include “use of structural composite lumber”. Natural Resources Canada lists laminated veneer lumber (LVL) as a structural composite lumber product, so an LVL beam falls under that example. That’s why an LVL beam comes with a sealed drawing."
+    },
+    {
+      "t": "p",
+      "x": "Natural Resources Canada also notes that LVL is a proprietary product: its engineering properties and sizes are unique to each manufacturer, and it has no common standards of production or design."
+    },
+    {
+      "t": "p",
+      "x": "The bulletin also requires a sealed Professional Designer’s Certificate for Housing for every housing project where sealed drawings are required. It works as a letter of intent from the engineer or architect, acknowledging their professional responsibilities. In some cases, the City may also require the engineer to inspect the work and certify it was built to the design."
+    },
+    {
+      "t": "p",
+      "x": "Who prepares the drawings depends on the project. At the on-site visit we talk through who will prepare them for your house, we build that step into the schedule before demolition starts, and we build to the approved drawings."
+    },
+    {
+      "t": "h2",
+      "x": "Where does the load go once the wall is gone?"
+    },
+    {
+      "t": "p",
+      "x": "A load-bearing wall passes weight from the floors or roof above down to the structure below. Take it out and that weight needs a new path. Usually that’s a beam across the opening with a post at each end. The posts bear on whatever is below them, such as a wall, a basement beam or teleposts, and finally the foundation."
+    },
+    {
+      "t": "p",
+      "x": "The engineer’s drawing follows that path all the way down. The City’s form treats changes to basement teleposts or beams as major structural work, so if the new load path changes the basement beam or teleposts, that part needs engineered drawings as well."
+    },
+    {
+      "t": "p",
+      "x": "Winnipeg basements add a local wrinkle. The City’s basement development guide notes that concrete basement floors can move upward when the soil gets wetter. If you see cracks or a heaving slab, read our guide to [clay soil and basement cracks in Winnipeg](/blog/clay-soil-basement-cracks-winnipeg) and point them out to the engineer."
+    },
+    {
+      "t": "h2",
+      "x": "What happens to the wiring, plumbing and ducts inside the wall?"
+    },
+    {
+      "t": "p",
+      "x": "They have to be moved before the wall comes out. Interior walls can carry electrical cable, plumbing lines and heating ducts, and each one needs a new route that works with the new layout and the beam."
+    },
+    {
+      "t": "p",
+      "x": "That’s trade work with its own permits. The City requires an electrical permit to alter or extend an electrical system, and a plumbing permit to alter or extend a plumbing system. Those permits go to licensed contractors, or to homeowners doing the work themselves in the single detached house that is their primary residence."
+    },
+    {
+      "t": "p",
+      "x": "The City doesn’t inspect propane or natural gas equipment or piping, so if a gas line runs through the wall, ask who will move it and who inspects that work. On our projects, trades are coordinated so each one knows what the next needs, and permits and inspections are coordinated with the City or your local municipality."
+    },
+    {
+      "t": "p",
+      "x": "In an older house, check the wall itself too. Health Canada says asbestos may still be found in older building materials, listing cement and plaster and surface treatments such as drywall, and advises hiring a professional to test before renovating. See our guide to [asbestos testing before renovating in Manitoba](/blog/asbestos-testing-before-renovating-manitoba)."
+    },
+    {
+      "t": "h2",
+      "x": "Which inspections happen before the ceiling is closed?"
+    },
+    {
+      "t": "p",
+      "x": "Permitted work is inspected before it’s covered. For a structural or interior alteration, the City’s housing inspections page lists a rough-in inspection, plus pre-boarding and final inspections where they apply. Rough-in comes “prior to covering any structural, framing, HVAC, electrical and/or plumbing work performed under the permit that will be concealed by finishing materials.”"
+    },
+    {
+      "t": "p",
+      "x": "The City expects a complete set of plans on site throughout construction, which can include City-stamped drawings and engineered repair details. Homeowners are responsible for making sure the permit is closed, and the City says a permit won’t be closed until the work has passed all required inspections."
+    },
+    {
+      "t": "p",
+      "x": "Our [Winnipeg renovation permit guide](/blog/winnipeg-renovation-permits) explains how to book inspections and what happens when work is done without a permit."
+    },
+    {
+      "t": "h2",
+      "x": "Does removing a wall change the price of a kitchen renovation?"
+    },
+    {
+      "t": "p",
+      "x": "Yes. A beam, the engineering and rerouted wiring, plumbing or ducts all add to the scope. None of it can be priced until someone has seen what’s inside the wall and under the floor. That’s why our instant estimator doesn’t price wall removal: it goes into your written quote after the on-site visit."
+    },
+    {
+      "t": "p",
+      "x": "For the rest of the kitchen, our [kitchen renovation cost guide](/services/kitchen-renovations/cost) shows the estimator’s starting ranges and what moves the price."
+    },
+    {
+      "t": "h2",
+      "x": "What should you ask before a wall comes out?"
+    },
+    {
+      "t": "p",
+      "x": "Ask every contractor the same questions, so the answers are easy to compare:"
+    },
+    { "t": "li", "x": "Which walls in the plan are load-bearing, and how was that confirmed?" },
+    { "t": "li", "x": "Who prepares the structural or engineered drawings, and is that cost in the quote?" },
+    { "t": "li", "x": "What moves with the wall: wiring, plumbing, ducts or a gas line?" },
+    { "t": "li", "x": "Will the beam sit below the ceiling or flush with it, and what does that change?" },
+    { "t": "li", "x": "Which permits and inspections are needed, and who books them?" },
+    { "t": "li", "x": "How will the work be staged, and which rooms can we use while it’s underway?" },
+    {
+      "t": "p",
+      "x": "How the work is staged depends on the whole renovation. Our guide to [full versus partial renovations](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) covers living at home while work is underway."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Planning to open up a kitchen or a main floor? [Book a free on-site visit](/book-online). We’ll tell you which kind of wall you have, talk through who will prepare the drawings, and follow up with a free written quote. See how a [kitchen renovation](/services/kitchen-renovations) or a [whole-home renovation](/services/whole-home-renovations) runs from start to finish."
+    }
+  ]
+}

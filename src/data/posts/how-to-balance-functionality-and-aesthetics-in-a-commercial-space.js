@@ -14,8 +14,8 @@ export default {
     "Commercial"
   ],
   "date": "2026-09-03",
-  "updated": "2026-10-13",
-  "readMinutes": 7,
+  "updated": "2026-10-15",
+  "readMinutes": 8,
   "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
   "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
   "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
@@ -100,11 +100,23 @@ export default {
     },
     {
       "t": "p",
-      "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard. How they apply to your alteration is settled in plan review, so design for them from the start."
+      "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard, so design for them from the start."
     },
     {
       "t": "p",
-      "x": "Manitoba also kept three amendments of its own: wider use of visual signal devices, handrails on both sides of stairs and ramps, and rules on how some requirements apply to existing buildings. Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
+      "x": "Manitoba's own amendments, in the Manitoba Building Code (M.R. 78/2023), set how far a renovation reaches. The Code “applies to the part of an existing building that is altered or repaired”, and an alteration must not decrease the level of life safety or building performance."
+    },
+    {
+      "t": "p",
+      "x": "If the authority finds the alteration will affect the life safety of parts not being altered, those parts must be improved to comply. Where it is not practical for every applicable entrance to comply, “at least one pedestrian entrance shall be barrier-free.”"
+    },
+    {
+      "t": "p",
+      "x": "Manitoba also requires visible signal devices in addition to alarm signals in all buildings, and handrails on both sides of stairways and ramps. How these apply to your space is settled with the authority in plan review."
+    },
+    {
+      "t": "p",
+      "x": "Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
     },
     {
       "t": "p",
@@ -207,7 +219,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote, or start with the [instant renovation estimate](/instant-quote). See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
+      "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote; commercial work is priced after that visit, not from an online estimate. See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
     }
   ],
   "faqsTitle": "Commercial design questions",
@@ -244,6 +256,11 @@ export default {
       "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
       "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+      "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+      "accessed": "2026-10-15"
     },
     {
       "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
@@ -310,12 +327,40 @@ export default {
       }
     },
     {
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
+      "category": "Commercial",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
+        ],
+        "avif": [
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
       "title": "Commercial Renovation Financing in Manitoba: Your Options",
       "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
       "category": "Commercial",
       "date": "2026-08-11",
-      "readMinutes": 7,
+      "readMinutes": 8,
       "image": {
         "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
         "widths": [
@@ -332,33 +377,6 @@ export default {
           "26670bc4",
           "3191a00b",
           "54f184c8"
-        ],
-        "main": 1
-      }
-    },
-    {
-      "slug": "how-to-prepare-your-business-for-a-major-renovation",
-      "title": "Commercial Renovation Planning in Winnipeg: A Business Guide",
-      "excerpt": "How to plan a major renovation around a business that needs to keep running: the stages from site visit to occupancy permit, keeping customers informed, and a checklist to start with.",
-      "category": "Commercial",
-      "date": "2026-07-29",
-      "readMinutes": 7,
-      "image": {
-        "base": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "241c3443",
-          "408891d3",
-          "09bdb970"
-        ],
-        "avif": [
-          "cd1bccab",
-          "ab626d7c",
-          "51c2dc1d"
         ],
         "main": 1
       }

@@ -1,0 +1,352 @@
+{
+  "slug": "asbestos-testing-before-renovating-manitoba",
+  "status": "published",
+  "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
+  "metaTitle": "Asbestos Testing Before Renovating in Manitoba | Bridgeland",
+  "metaDescription": "When to test for asbestos before renovating in Manitoba, what to do about vermiculite insulation, and what the Province’s 2025 asbestos rule changes mean.",
+  "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
+  "date": "2026-10-15",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-06-01",
+  "cats": [
+    "Older Homes"
+  ],
+  "services": [
+    "/services/demolition",
+    "/services/whole-home-renovations",
+    "/services/kitchen-renovations",
+    "/services/bathroom-renovations",
+    "/services/flooring"
+  ],
+  "cluster": "older-homes",
+  "ctaService": "/services/demolition",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Before 1990, Health Canada says, asbestos was mainly used to insulate buildings and homes, and it advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Since December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "Health Canada – Asbestos and your health (page dated 2023-02-10)",
+      "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Province of Manitoba, Workplace Safety and Health – New asbestos regulations FAQ",
+      "url": "https://www.gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Manitoba Laws – M.R. 108/2025, Workplace Safety and Health Regulation, amendment (registered December 4, 2025)",
+      "url": "https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Province of Manitoba – News release: Manitoba Government Improves Asbestos Safety Requirements to Protect Workers (December 4, 2025)",
+      "url": "https://news.gov.mb.ca/news/index.html?item=71777",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Province of Manitoba, Workplace Safety and Health – FAQs: Asbestos containing material",
+      "url": "https://www.gov.mb.ca/labour/safety/faq/asbestos.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Province of Manitoba, Workplace Safety and Health – Notice of Asbestos Work (online form)",
+      "url": "https://forms.gov.mb.ca/notice-of-asbestos-work/",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Manitoba Health – Vermiculite insulation and asbestos (undated page)",
+      "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/vermiculite.html",
+      "accessed": "2026-10-15"
+    }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Can I test for asbestos myself?",
+      "a": "Health Canada’s advice is to avoid disturbing materials that may contain asbestos and to hire a professional to test for asbestos before renovating or remodelling. For vermiculite insulation, Manitoba Health says you should not attempt to remove it yourself unless you have been properly trained and have the necessary specialized equipment."
+    },
+    {
+      "q": "Do old floor tiles contain asbestos?",
+      "a": "They can. Health Canada lists floor and ceiling tiles among older building materials that may contain asbestos, but age and appearance can’t confirm it. Manitoba’s workplace safety FAQ describes samples being analysed by an accredited laboratory for a definitive result, so have older tiles tested before anyone lifts them."
+    },
+    {
+      "q": "Does Bridgeland Builders remove asbestos?",
+      "a": "No. We don’t test for or remove asbestos. A qualified asbestos specialist does that work, and we schedule the renovation around it, so suspect materials are tested and any asbestos is dealt with before our crew works in that area."
+    },
+    {
+      "q": "Who has to notify the Province before asbestos work?",
+      "a": "Manitoba’s regulation says the employer or the owner must notify the Workplace Safety and Health branch not less than 5 and not more than 10 days before work that may release asbestos-containing material, and the employer can’t begin until the branch assigns a serial number. Ask your abatement company how they handle the notice on your project."
+    },
+    {
+      "q": "When will asbestos workers need certification in Manitoba?",
+      "a": "From June 1, 2027. Workers doing asbestos abatement or inventory work will need a valid asbestos certificate, and the Province’s FAQ says they must recertify every three years. Employers in the business of asbestos work will need to register each year, and the FAQ says a public registry will list them."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Asbestos is rarely a reason not to renovate an older house, but it decides the order of the work. Anything that might contain it has to be identified before walls, floors or ceilings are opened, or the job stops when it turns up."
+    },
+    {
+      "t": "p",
+      "x": "This guide covers where asbestos can be found in older Manitoba homes and who should test for it. It also covers vermiculite insulation and what Manitoba’s December 2025 rule changes mean for a renovation. It uses Health Canada and Province of Manitoba sources, checked on October 15, 2026."
+    },
+    {
+      "t": "callout",
+      "title": "General information, not legal advice",
+      "x": "This guide summarizes official sources. It isn’t legal advice and doesn’t replace a qualified asbestos professional. Manitoba’s asbestos rules are workplace safety rules; for how they apply to a specific project, call Manitoba Workplace Safety and Health at 204-957-SAFE (7233)."
+    },
+    {
+      "t": "h2",
+      "x": "Could your house contain asbestos?"
+    },
+    {
+      "t": "p",
+      "x": "Possibly, if it is older. Health Canada says “Before 1990, asbestos was mainly used for insulating buildings and homes” against cold weather and noise, and for fireproofing. Making, importing, selling and using products that contain asbestos is now prohibited in Canada, but older building materials may still contain it."
+    },
+    {
+      "t": "p",
+      "x": "Manitoba Workplace Safety and Health says asbestos-containing material was used in homes and buildings built or renovated before 1990. Health Canada lists the older materials where it may still be found:"
+    },
+    {
+      "t": "table",
+      "caption": "Older materials Health Canada says may contain asbestos",
+      "head": [
+        "Material",
+        "Renovation work that would disturb it"
+      ],
+      "rows": [
+        [
+          "House siding",
+          "Re-siding, or cutting new window and door openings"
+        ],
+        [
+          "Cement and plaster",
+          "Opening walls and ceilings, demolition"
+        ],
+        [
+          "Floor and ceiling tiles",
+          "Replacing flooring, taking down ceilings"
+        ],
+        [
+          "Roofing products: tar paper, shingles and felt",
+          "Re-roofing, or an addition that ties into the roof"
+        ],
+        [
+          "Surface treatments: paint, putty, drywall, caulking, sealants and spackling",
+          "Sanding, patching or removing drywall, replacing windows"
+        ],
+        [
+          "Insulation, including around hot water pipes and tanks",
+          "Plumbing and heating changes, basement strip-outs"
+        ],
+        [
+          "Industrial furnaces and heating systems",
+          "Replacing old heating equipment"
+        ],
+        [
+          "Vermiculite-based insulation",
+          "Attic work, opening walls, insulation upgrades"
+        ]
+      ],
+      "note": "Materials from Health Canada’s Asbestos and your health page (dated 2023-02-10). The second column is our own planning note, not part of Health Canada’s list."
+    },
+    {
+      "t": "p",
+      "x": "Vermiculite insulation was not rare here. Manitoba Health cites Natural Resources Canada’s EnerGuide for Houses evaluations from June 1, 2004 to March 22, 2005. Of the 3,184 Manitoba homes evaluated, 215 (6.6 per cent) contained vermiculite insulation, against 3.7 per cent across Canada. That is a 2004–05 survey on an undated provincial page, not a current count."
+    },
+    {
+      "t": "p",
+      "x": "Age and appearance only raise the question. Manitoba’s workplace safety FAQ describes how it is answered. A competent person collects representative bulk samples of the suspect material, and an accredited laboratory analyses them for a definitive result."
+    },
+    {
+      "t": "h2",
+      "x": "Is asbestos dangerous if you leave it alone?"
+    },
+    {
+      "t": "p",
+      "x": "Usually not. Health Canada says materials containing asbestos in your home pose no significant health risks when they are left undisturbed or isolated in an attic. The same goes for materials sealed behind walls and floorboards, or tightly bound in products that are in good condition."
+    },
+    {
+      "t": "p",
+      "x": "The risk comes when fibres get into the air. Health Canada lists renovation and demolition activities such as drilling, sawing, sanding and scraping. It says breathing in asbestos fibres can cause lung cancer, asbestosis, mesothelioma and other diseases. That is why a renovation, not the house itself, is the moment to test."
+    },
+    {
+      "t": "h2",
+      "x": "Who should test for asbestos, and when?"
+    },
+    {
+      "t": "p",
+      "x": "A professional, before the work is planned. Health Canada’s advice is to “hire a professional to test for asbestos before renovating or remodelling.” If asbestos is found, it says to hire a qualified asbestos removal specialist to remove it safely. Test before the strip-out is scheduled, not during it, so the results shape the quote and schedule."
+    },
+    {
+      "t": "p",
+      "x": "Until a qualified person rules it out, Manitoba’s regulation deems any material likely to contain asbestos to be asbestos-containing material (s. 37.2(2)). On a work site, untested suspect material is treated as asbestos. When you book testing:"
+    },
+    {
+      "t": "li",
+      "x": "Tell the tester what the renovation will disturb: which walls, ceilings, floors, pipes and attic areas."
+    },
+    {
+      "t": "li",
+      "x": "Ask which accredited laboratory will analyse the samples, and get the results in writing."
+    },
+    {
+      "t": "li",
+      "x": "From June 1, 2027, sampling and inventory work must be done by a person with a valid asbestos certificate, and the firm must be registered. The Province says a public registry will show what each firm is registered for, abatement or sampling."
+    },
+    {
+      "t": "li",
+      "x": "Share the results at your contractor’s on-site visit, before the quote is written."
+    },
+    {
+      "t": "h2",
+      "x": "What changed in Manitoba’s asbestos rules in December 2025?"
+    },
+    {
+      "t": "p",
+      "x": "Manitoba changed its asbestos rules with M.R. 108/2025, registered December 4, 2025. It rewrote the definition of asbestos-containing material and replaced Part 37 (Asbestos) of the Workplace Safety and Health Regulation. The Province’s news release that day said most amendments take effect on registration, while certification and employer registration start June 1, 2027."
+    },
+    {
+      "t": "table",
+      "caption": "Manitoba’s asbestos rule changes (M.R. 108/2025)",
+      "head": [
+        "What changed",
+        "What the rule says",
+        "In force"
+      ],
+      "rows": [
+        [
+          "What counts as asbestos-containing material",
+          "Material containing 0.1% or greater asbestos, and “vermiculite insulation that contains asbestos” (s. 1.1). The Province’s FAQ says this single threshold replaces separate ones for friable and non-friable material.",
+          "December 2025"
+        ],
+        [
+          "Notice before work",
+          "“The employer or the owner must notify the branch” not less than 5 and not more than 10 days before work that may release asbestos-containing material into the atmosphere (s. 37.9(2)). The FAQ says notices include the estimated duration and must be updated if the information changes.",
+          "December 2025"
+        ],
+        [
+          "Serial number",
+          "An employer must not begin the work until the branch has assigned a serial number to it (s. 37.9(3)).",
+          "December 2025"
+        ],
+        [
+          "Property owners",
+          "The FAQ says the changes “highlight responsibilities for asbestos to include property owners.”",
+          "December 2025"
+        ],
+        [
+          "Worker certification",
+          "Asbestos abatement and inventory work only by a person with a valid asbestos certificate (s. 37.10), which lasts no more than three years (s. 37.12(2)). The FAQ says Safe Work Manitoba offers the certification exam at no cost.",
+          "June 1, 2027 (s. 5(2))"
+        ],
+        [
+          "Employer registration",
+          "An employer in the business of asbestos work must register and have at least one certified worker (s. 37.15(1)). Registration is renewed each year (s. 37.17).",
+          "June 1, 2027 (s. 5(2))"
+        ]
+      ],
+      "note": "Sources: M.R. 108/2025 on Manitoba Laws and the Province’s New Asbestos Regulations FAQ, both read October 15, 2026."
+    },
+    {
+      "t": "p",
+      "x": "These are workplace safety rules: Part 37 “applies to every workplace where asbestos is present,” and most of its duties fall on employers and owners. If you plan to do any of the work yourself, ask Workplace Safety and Health how the rules apply before you start."
+    },
+    {
+      "t": "p",
+      "x": "The notice is filed online. The Province’s Notice of Asbestos Work form asks for the dates, the owner or prime contractor, the abatement contractor and the risk type. The confirmation number it returns serves as the serial number. Ask your abatement company who files the notice for your project."
+    },
+    {
+      "t": "h2",
+      "x": "What about vermiculite insulation in the attic?"
+    },
+    {
+      "t": "p",
+      "x": "Leave it undisturbed. Manitoba Health says some vermiculite produced at the Libby mine in Montana from the 1920s until 1990, sold mainly under the brand name Zonolite, was found to contain asbestos. It says it is “reasonable to assume” that older vermiculite-based insulation may contain some. Manitoba’s new definition of asbestos-containing material explicitly includes vermiculite insulation that contains asbestos."
+    },
+    {
+      "t": "p",
+      "x": "If you have, or think you may have, vermiculite insulation in the attic, Manitoba Health and Health Canada recommend these precautions:"
+    },
+    {
+      "t": "li",
+      "x": "Seal cracks and holes in the ceilings below, for example with caulking around light fixtures and the attic hatch."
+    },
+    {
+      "t": "li",
+      "x": "Keep children out of the attic, and restrict access to it."
+    },
+    {
+      "t": "li",
+      "x": "Don’t use the attic for storage if getting items out could disturb the insulation."
+    },
+    {
+      "t": "li",
+      "x": "Make sure anyone working in the attic knows asbestos may be present."
+    },
+    {
+      "t": "p",
+      "x": "For removal, or if you are planning renovations, Manitoba Health says to speak to a professional qualified in dealing with asbestos. It says you “should not attempt to remove the insulation yourself, unless you have been properly trained” and have the necessary specialized equipment."
+    },
+    {
+      "t": "p",
+      "x": "If the attic is part of an insulation upgrade, check the timing of the [Efficiency Manitoba insulation rebate](/blog/insulation-rebates-during-a-renovation-manitoba) first. It has to be approved before old insulation is removed."
+    },
+    {
+      "t": "h2",
+      "x": "What happens to the schedule if asbestos turns up mid-job?"
+    },
+    {
+      "t": "p",
+      "x": "Work in that area stops. Before a renovation proceeds, Manitoba’s regulation requires measures that keep asbestos-containing material in the work area from being released. Before demolition, materials that could release it must be removed safely (s. 37.9(1)). From June 1, 2027, that removal must be done by someone certified for abatement work."
+    },
+    {
+      "t": "p",
+      "x": "That is specialist work. Bridgeland Builders doesn’t test for or remove asbestos: a qualified specialist does, and we schedule the rest of the renovation around their work."
+    },
+    {
+      "t": "p",
+      "x": "Planned asbestos work also needs the 5- to 10-day notice and a serial number before it starts. That is one more reason to find asbestos before the schedule is set. On our [interior strip-outs](/services/demolition), testing of older materials happens before demolition is scheduled."
+    },
+    {
+      "t": "h2",
+      "x": "How do you plan around asbestos in a kitchen, bathroom or flooring job?"
+    },
+    {
+      "t": "p",
+      "x": "Start from what the renovation will disturb, and have those materials tested before the design is final. By type of project:"
+    },
+    {
+      "t": "li",
+      "x": "**Kitchens:** original plaster, drywall and floor tiles are on Health Canada’s list, so on a [kitchen renovation](/services/kitchen-renovations) have them tested before the cabinets come out."
+    },
+    {
+      "t": "li",
+      "x": "**Bathrooms:** floor tiles, plaster and insulation around hot water pipes can all be disturbed in a [bathroom renovation](/services/bathroom-renovations), so test them before demolition."
+    },
+    {
+      "t": "li",
+      "x": "**Flooring:** older floor tiles are on the list too, so test them before [flooring removal](/services/flooring) starts, not once the first tile is up."
+    },
+    {
+      "t": "li",
+      "x": "**Several rooms:** a [whole-home renovation](/services/whole-home-renovations) opens much of the house at once. Test everything the plan will disturb in one round, so the results come back before the design is final."
+    },
+    {
+      "t": "p",
+      "x": "Asbestos is one of several checks in an older house. Our guide to [renovating a character home in Winnipeg](/blog/renovating-a-character-home-in-winnipeg) covers lead paint and wiring. The [home renovation planning guide](/blog/home-renovation-planning-guide-canada) shows where testing fits in the order of a project."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Bring any test results to a [free on-site visit](/book-online). We’ll walk the space with you, note the older materials your plan would disturb, and schedule the renovation around a qualified specialist’s testing and any removal. You then get a free written quote. We reply within one business day."
+    }
+  ]
+}

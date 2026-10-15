@@ -15,7 +15,7 @@ export default {
   ],
   "date": "2026-10-13",
   "updated": "2026-10-15",
-  "readMinutes": 7,
+  "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
   "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
@@ -140,6 +140,34 @@ export default {
     },
     {
       "t": "h2",
+      "x": "Does home insurance cover a flooded basement in Manitoba?"
+    },
+    {
+      "t": "p",
+      "x": "It depends on where the water came from. For sewer backup or overland flooding, only if your policy includes the right optional coverage. In a June 11, 2026 release, the Insurance Bureau of Canada (IBC), the insurers’ national association, said basement water damage from sewer backup “is only covered if you have purchased specific, optional sewer backup coverage.”"
+    },
+    {
+      "t": "p",
+      "x": "IBC calls overland flood coverage, for water such as a river overflowing onto dry land, optional and “widely available in Manitoba,” but says it often has coverage limits and may be unavailable in a known flood plain or high-risk area. Coverage varies by insurer and policy, so read your own policy wording and ask your insurance representative."
+    },
+    {
+      "t": "p",
+      "x": "If water does get in, IBC suggests photographing and documenting the damage, keeping detailed notes and every cleanup receipt, and keeping damaged items unless they pose a health hazard. We’d add one step of our own: ask your insurer before tearing out drywall, flooring or other finishes."
+    },
+    {
+      "t": "h3",
+      "x": "Can Disaster Financial Assistance help?"
+    },
+    {
+      "t": "p",
+      "x": "Usually not for sewer backup. Manitoba’s Disaster Financial Assistance (DFA) FAQ, verified October 15, 2026, says insurable losses are ineligible and lists sewer backup among the risks insurance is available for in Manitoba. Overland or river flooding where a property owner could not buy adequate insurance “is generally the only natural hazard that qualifies for DFA.”"
+    },
+    {
+      "t": "p",
+      "x": "Only damage to a primary residence is eligible, and a deductible of $2,500 or 20%, whichever is greater, applies to all claims. Not every disaster leads to a DFA program: the Province decides event by event and announces programs in its news releases."
+    },
+    {
+      "t": "h2",
       "x": "Where should the sump pump discharge?"
     },
     {
@@ -206,6 +234,10 @@ export default {
       "a": "No. The City’s Basement Flooding Protection Subsidy Program didn’t receive funding for the 2017 program year and was cancelled by City Council, and applications received after December 30, 2016 weren’t processed. The City’s current flooding page lists no replacement, so plan the cost of a valve or sump pit into your budget."
     },
     {
+      "q": "Is sewer backup covered by home insurance in Manitoba?",
+      "a": "Only with the right add-on. The Insurance Bureau of Canada says basement water damage from sewer backup is covered only if you have bought specific, optional sewer backup coverage, and that coverage varies by insurer and policy. Read your policy wording and ask your insurance representative what you have before a flood, not after one."
+    },
+    {
       "q": "Who do I call if my basement floods?",
       "a": "Report flooding to 311 and call your home insurance company. The City notes that if you have a claim for injury or property damage, you can file it with the City. Once the water is out, find the cause, whether sewer backup, groundwater or surface water, before you replace any finishes."
     }
@@ -246,6 +278,16 @@ export default {
       "label": "City of Winnipeg – Basement Flooding Protection Subsidy Program (cancelled)",
       "url": "https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Insurance Bureau of Canada – Manitoba flooding: key insurance guidance for affected residents (June 11, 2026)",
+      "url": "https://www.ibc.ca/news-insights/news/manitoba-flooding-insurance-bureau-of-canada-shares-key-insurance-guidance-for-affected-residents",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Manitoba Emergency Management Organization – Disaster Financial Assistance: frequently asked questions",
+      "url": "https://gov.mb.ca/emo/funding/dfa/faq.html",
+      "accessed": "2026-10-15"
     }
   ],
   "related": [

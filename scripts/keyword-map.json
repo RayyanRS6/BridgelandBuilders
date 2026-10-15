@@ -511,7 +511,7 @@
         "dental office construction Winnipeg",
         "healthcare renovation contractor Winnipeg"
       ],
-      "supporting": ["physiotherapy clinic renovation Winnipeg"],
+      "supporting": ["physiotherapy clinic renovation Winnipeg", "clinic renovation timeline Winnipeg"],
       "note": "Canadian accessibility wording (Manitoba Building Code), never \"ADA\""
     },
     "/services/flooring": {
@@ -525,7 +525,7 @@
       "status": "live",
       "primary": ["renovation permit Winnipeg"],
       "secondary": [],
-      "supporting": [],
+      "supporting": ["how long is a building permit valid Winnipeg"],
       "note": "primary is a plan addition (validate volume)"
     },
     "/blog/basement-development-permits-winnipeg": {
@@ -539,7 +539,11 @@
       "status": "live",
       "primary": ["basement flooding Winnipeg"],
       "secondary": [],
-      "supporting": [],
+      "supporting": [
+        "does home insurance cover basement flooding Manitoba",
+        "sewer backup insurance Manitoba",
+        "disaster financial assistance Manitoba flooding"
+      ],
       "note": "never cite the City flood subsidy (cancelled 2017) as live"
     },
     "/blog/how-to-choose-the-right-contractor-for-your-renovation-project": {
@@ -549,7 +553,11 @@
         "how to choose a renovation contractor Canada",
         "renovation contractor selection Canada"
       ],
-      "supporting": ["best renovation contractor Winnipeg"],
+      "supporting": [
+        "best renovation contractor Winnipeg",
+        "contractor didn’t finish job Manitoba",
+        "renovation warranty Manitoba"
+      ],
       "note": "post #12, rewritten in place (slug kept); best renovation contractor Winnipeg is a criteria H2 with no self-praise; primary is a plan addition"
     },
     "/blog/essential-design-strategies-for-small-kitchen-renovations": {
@@ -587,7 +595,11 @@
         "renovation tax credits Manitoba"
       ],
       "secondary": [],
-      "supporting": [],
+      "supporting": [
+        "seniors home modification grant Manitoba",
+        "Safe and Healthy Home for Seniors Program",
+        "Energy Efficiency Assistance Program Manitoba"
+      ],
       "note": "replaces post #7 (published 2026-10-13; /blog/tax-incentives-for-commercial-renovations-what-you-should-know now 308s here); accountant review pending (reviewedBy empty); closed programs shown as closed; primaries are plan additions (validate)"
     },
     "/blog/home-renovation-planning-guide-canada": {
@@ -793,6 +805,87 @@
       ],
       "supporting": [],
       "note": "post #13, rewritten in place 2026-10-13 (#6 and #9 redirect here); writer pick (validate volume). Secondaries moved here 2026-10-15 from the blocked /services/commercial-renovations/cost: cost drivers only, never a number (the estimator has no commercial data)"
+    },
+    "/blog/window-condensation-winnipeg-winter": {
+      "status": "live",
+      "primary": ["window condensation in winter"],
+      "secondary": [
+        "window frost inside Winnipeg",
+        "what humidity should my house be in winter",
+        "condensation between window panes",
+        "do triple pane windows stop condensation"
+      ],
+      "supporting": ["ice on inside of windows", "storm window condensation", "low-e window condensation outside"],
+      "note": "wave 5 guide (2026-10-15); plan additions, validate volume (O-16)"
+    },
+    "/blog/removing-a-load-bearing-wall-winnipeg": {
+      "status": "live",
+      "primary": ["removing a load bearing wall Winnipeg"],
+      "secondary": [
+        "remove load bearing wall Winnipeg",
+        "permit to remove a wall Winnipeg",
+        "do I need an engineer to remove a load bearing wall",
+        "how to tell if a wall is load bearing",
+        "beam for load bearing wall removal"
+      ],
+      "supporting": [],
+      "note": "wave 5 guide (2026-10-15); plan additions, validate volume (O-16)"
+    },
+    "/blog/asbestos-testing-before-renovating-manitoba": {
+      "status": "live",
+      "primary": ["asbestos testing before renovating Manitoba"],
+      "secondary": [
+        "asbestos testing before renovation Manitoba",
+        "does my house have asbestos",
+        "vermiculite insulation Manitoba",
+        "Manitoba asbestos regulation 2025"
+      ],
+      "supporting": ["asbestos testing Winnipeg"],
+      "note": "wave 5 guide (2026-10-15); plan additions, validate volume (O-16)"
+    },
+    "/blog/occupancy-permit-change-of-use-winnipeg": {
+      "status": "live",
+      "primary": ["occupancy permit Winnipeg"],
+      "secondary": [
+        "change of use permit Winnipeg",
+        "do I need an occupancy permit Winnipeg",
+        "occupancy permit search Winnipeg",
+        "change of tenant occupancy permit Winnipeg"
+      ],
+      "supporting": ["interim occupancy permit Winnipeg", "occupancy permit Manitoba"],
+      "note": "wave 5 guide (2026-10-15); plan additions, validate volume (O-16)"
+    },
+    "/blog/check-permit-history-winnipeg-house": {
+      "status": "live",
+      "primary": ["permit history Winnipeg"],
+      "secondary": [
+        "permit amnesty Winnipeg",
+        "open permits Winnipeg house",
+        "unpermitted basement Winnipeg",
+        "centralized property file search Winnipeg"
+      ],
+      "supporting": [
+        "Winnipeg permit search by address",
+        "check permits before buying a house Winnipeg",
+        "permits issued before 2000 Winnipeg"
+      ],
+      "note": "wave 5 guide (2026-10-15); plan additions, validate volume (O-16)"
+    },
+    "/blog/builders-lien-holdback-manitoba": {
+      "status": "live",
+      "primary": ["builders lien holdback Manitoba"],
+      "secondary": [
+        "holdback on renovation Manitoba",
+        "contractor lien on house Manitoba",
+        "substantial performance Manitoba",
+        "statutory declaration renovation"
+      ],
+      "supporting": [
+        "builders lien act Manitoba 60 days",
+        "holdback account Manitoba",
+        "prompt payment Manitoba construction"
+      ],
+      "note": "wave 5 guide (2026-10-15); plan additions, validate volume (O-16)"
     }
   },
   "gbpOnly": [

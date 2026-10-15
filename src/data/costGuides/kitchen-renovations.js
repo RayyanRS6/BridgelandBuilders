@@ -168,7 +168,11 @@ export default {
         },
         {
           t: 'p',
-          x: 'We will tell you at the visit whether a wall is load-bearing. Structural work needs the right permits, which we coordinate with the City of Winnipeg or your local municipality. Our [Winnipeg renovation permit guide](/blog/winnipeg-renovation-permits) covers which projects need one, and our [kitchen renovation](/services/kitchen-renovations) page shows how a project runs from layout to handover.',
+          x: 'We will tell you at the visit whether a wall is load-bearing. Our guide to [removing a load-bearing wall in Winnipeg](/blog/removing-a-load-bearing-wall-winnipeg) explains the permits, drawings and beams involved.',
+        },
+        {
+          t: 'p',
+          x: 'Structural work needs the right permits, which we coordinate with the City of Winnipeg or your local municipality. Our [Winnipeg renovation permit guide](/blog/winnipeg-renovation-permits) covers which projects need one, and our [kitchen renovation](/services/kitchen-renovations) page shows how a project runs from layout to handover.',
         },
       ],
     },

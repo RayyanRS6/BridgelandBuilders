@@ -274,6 +274,21 @@ export const MEDIA = {
     "width": 880,
     "height": 503
   },
+  "card:asbestos-testing-before-renovating-manitoba": {
+    "src": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.e82e0b35.webp",
+    "srcSet": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-480.647701ea.webp 480w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.e82e0b35.webp 880w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1320.d62a9906.webp 1320w",
+    "avifSrcSet": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-480.a81bb4f7.avif 480w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.a3e4bb73.avif 880w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1320.4b20838b.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x630.85e7027f.jpg",
+    "schemaImages": [
+      "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x675.4717b319.jpg",
+      "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x900.d42d09b8.jpg",
+      "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x1200.30ab2e6b.jpg"
+    ],
+    "alt": "Title card: Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules"
+  },
   "card:basement-development-permits-winnipeg": {
     "src": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
     "srcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
@@ -303,6 +318,36 @@ export const MEDIA = {
       "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x1200.b9459ece.jpg"
     ],
     "alt": "Title card: Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits"
+  },
+  "card:builders-lien-holdback-manitoba": {
+    "src": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp",
+    "srcSet": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-480.1b473aa7.webp 480w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp 880w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1320.4cc70a86.webp 1320w",
+    "avifSrcSet": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-480.ee61434d.avif 480w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.20180f2d.avif 880w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1320.7a91bd95.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x630.9da2ce8b.jpg",
+    "schemaImages": [
+      "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x675.b1669626.jpg",
+      "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x900.72613086.jpg",
+      "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x1200.f9e1dffa.jpg"
+    ],
+    "alt": "Title card: Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor"
+  },
+  "card:check-permit-history-winnipeg-house": {
+    "src": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.1189cd90.webp",
+    "srcSet": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-480.dfc78763.webp 480w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.1189cd90.webp 880w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1320.d00db2e5.webp 1320w",
+    "avifSrcSet": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-480.e09156f1.avif 480w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.a5b2e756.avif 880w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1320.574fa93a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x630.8eb4b6d0.jpg",
+    "schemaImages": [
+      "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x675.c5056e3d.jpg",
+      "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x900.d43a7614.jpg",
+      "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x1200.17e5f12f.jpg"
+    ],
+    "alt": "Title card: Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty"
   },
   "card:clay-soil-basement-cracks-winnipeg": {
     "src": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-880.69af52dd.webp",
@@ -469,6 +514,21 @@ export const MEDIA = {
     ],
     "alt": "Title card: Home Renovation Grants and Tax Credits in Manitoba"
   },
+  "card:occupancy-permit-change-of-use-winnipeg": {
+    "src": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-880.ef758048.webp",
+    "srcSet": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-480.1d8c089e.webp 480w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-880.ef758048.webp 880w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1320.68fdd292.webp 1320w",
+    "avifSrcSet": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-480.c4d497a2.avif 480w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-880.ba38b8d1.avif 880w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1320.3c392686.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x630.d6f1bcd2.jpg",
+    "schemaImages": [
+      "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x675.438fd787.jpg",
+      "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x900.9ca8e87a.jpg",
+      "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x1200.ebb4b56f.jpg"
+    ],
+    "alt": "Title card: Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease"
+  },
   "card:office-fit-up-lease-planning-winnipeg": {
     "src": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
     "srcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
@@ -513,6 +573,21 @@ export const MEDIA = {
       "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x1200.b24a502c.jpg"
     ],
     "alt": "Title card: Radon Testing Before Finishing a Basement in Manitoba"
+  },
+  "card:removing-a-load-bearing-wall-winnipeg": {
+    "src": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-880.46195eef.webp",
+    "srcSet": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-480.0aee3eb7.webp 480w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-880.46195eef.webp 880w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1320.69190335.webp 1320w",
+    "avifSrcSet": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-480.bd0be13d.avif 480w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-880.00fb01ad.avif 880w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1320.d432225b.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x630.1bd584b1.jpg",
+    "schemaImages": [
+      "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x675.8276ecef.jpg",
+      "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x900.31648cec.jpg",
+      "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x1200.351cf29f.jpg"
+    ],
+    "alt": "Title card: Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams"
   },
   "card:renovating-a-character-home-in-winnipeg": {
     "src": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp",
@@ -603,6 +678,21 @@ export const MEDIA = {
       "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x1200.3ef99a95.jpg"
     ],
     "alt": "Title card: Window and Door Replacement in Winnipeg: Permits, Glass and Rebates"
+  },
+  "card:window-condensation-winnipeg-winter": {
+    "src": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-880.96a34dae.webp",
+    "srcSet": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-480.94567594.webp 480w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-880.96a34dae.webp 880w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1320.6c520be8.webp 1320w",
+    "avifSrcSet": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-480.939ce55c.avif 480w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-880.6a8c29ad.avif 880w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1320.8433cb61.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x630.a5ce35d5.jpg",
+    "schemaImages": [
+      "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x675.88e68036.jpg",
+      "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x900.6f625ff1.jpg",
+      "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x1200.91118175.jpg"
+    ],
+    "alt": "Title card: Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg"
   },
   "card:winnipeg-renovation-permits": {
     "src": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",

@@ -15,7 +15,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-07-29",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
   "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "t": "oli",
-      "x": "In an older building, get the asbestos inventory before demolition is scheduled; where asbestos may be present, Manitoba requires one before work begins."
+      "x": "In an older building, get the asbestos inventory before demolition is scheduled. Manitoba requires employers and owners to have asbestos-containing material inventoried, and to notify Workplace Safety and Health 5 to 10 days before work that may release it."
     },
     {
       "t": "oli",
@@ -222,7 +222,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. You can also start with the [instant renovation estimate](/instant-quote) or see our [commercial renovation services](/services/commercial-renovations)."
+      "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. Commercial work is priced after that visit, not from an online estimate. You can also see our [commercial renovation services](/services/commercial-renovations)."
     }
   ],
   "faqsTitle": "Questions about renovating a business",
@@ -276,9 +276,14 @@ export default {
       "accessed": "2026-10-13"
     },
     {
-      "label": "Manitoba Workplace Safety and Health: Asbestos containing material FAQ",
-      "url": "https://www.gov.mb.ca/labour/safety/wsh_faqs_asbestos.html",
-      "accessed": "2026-10-13"
+      "label": "Manitoba Workplace Safety and Health: New asbestos regulations FAQ",
+      "url": "https://gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Manitoba Laws: Workplace Safety and Health Regulation, amendment, M.R. 108/2025 (Part 37, Asbestos)",
+      "url": "https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en",
+      "accessed": "2026-10-15"
     },
     {
       "label": "BDC: Leasehold improvements, the 8 steps to follow",
@@ -288,12 +293,40 @@ export default {
   ],
   "related": [
     {
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
+      "category": "Commercial",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
+        ],
+        "avif": [
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "clinic-renovation-permits-winnipeg",
       "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
       "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
       "category": "Commercial",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
         "widths": [
@@ -338,33 +371,6 @@ export default {
           "7be4d1c9",
           "5a9d610c",
           "537414ab"
-        ],
-        "main": 1
-      }
-    },
-    {
-      "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
-      "title": "Commercial Interior Design: Balancing Function and Looks",
-      "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
-      "category": "Commercial",
-      "date": "2026-09-03",
-      "readMinutes": 7,
-      "image": {
-        "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "413203b1",
-          "4e31fe2d",
-          "34a27d10"
-        ],
-        "avif": [
-          "0f59d06c",
-          "12dcb183",
-          "43da1cb9"
         ],
         "main": 1
       }
