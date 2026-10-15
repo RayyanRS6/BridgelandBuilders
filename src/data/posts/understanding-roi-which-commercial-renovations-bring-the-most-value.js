@@ -36,6 +36,7 @@ export default {
     "/services/restaurant-renovations",
     "/services/office-renovations"
   ],
+  "ctaService": "/services/commercial-renovations",
   "cluster": "commercial-costs",
   "memberOnly": false,
   "blocks": [
@@ -271,10 +272,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-04",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
-      "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
-      "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.b0fa83b7.avif 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.e36c2cee.avif 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.6642e0d8.avif 1320w"
+      "image": {
+        "base": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "f2db0b8c",
+          "eaf95e2d",
+          "afcff434"
+        ],
+        "avif": [
+          "b0fa83b7",
+          "e36c2cee",
+          "6642e0d8"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
@@ -283,10 +299,25 @@ export default {
       "category": "Commercial",
       "date": "2026-09-03",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-      "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
-      "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "413203b1",
+          "4e31fe2d",
+          "34a27d10"
+        ],
+        "avif": [
+          "0f59d06c",
+          "12dcb183",
+          "43da1cb9"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
@@ -295,10 +326,25 @@ export default {
       "category": "Commercial",
       "date": "2026-08-11",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
-      "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
-      "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "76344da3",
+          "dbbc5f1b",
+          "b9481b87"
+        ],
+        "avif": [
+          "26670bc4",
+          "3191a00b",
+          "54f184c8"
+        ],
+        "main": 1
+      }
     }
   ]
 };

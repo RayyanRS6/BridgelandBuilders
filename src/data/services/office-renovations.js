@@ -10,6 +10,7 @@
 // sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'office-renovations',
@@ -37,9 +38,9 @@ export default {
     floatingText: 'The schedule starts from your move-in date and works backwards.',
     paragraphs: [
       'An office renovation reworks a workspace around how your team works now: private offices, meeting rooms, open work areas, a staff kitchen, washrooms, lighting, power and data. In a leased unit it’s usually called a fit-up or tenant improvement, and work regulated by the building code needs a City of Winnipeg building permit.',
-      'The lease drives the schedule. Your move-in date, any free-rent period and, in many leases, the landlord’s approval of your plans all set how much time there is to build. Bring the lease to the site visit and we’ll plan from those dates.',
+      '[The lease drives the schedule](/blog/office-fit-up-lease-planning-winnipeg). Your move-in date, any free-rent period and, in many leases, the landlord’s approval of your plans all set how much time there is to build. Bring the lease to the site visit and we’ll plan from those dates.',
       'If your team stays in the space during the work, we split it into phases and schedule the loud work, such as demolition and cutting, for evenings and weekends where the City’s noise rules allow. You get a progress update every week, so you can tell everyone in the company what’s happening next.',
-      'Already have drawings from an architect or interior designer? We build to supplied drawings. If you don’t, start with the site visit: we’ll talk through the layout and tell you whether the City is likely to ask for professional drawings for your scope.',
+      'Already have drawings from an architect or interior designer? [We build to supplied drawings](/services/general-contracting). If you don’t, start with the site visit: we’ll talk through the layout and tell you whether the City is likely to ask for professional drawings for your scope.',
     ],
     checklist: ['Tenant Fit-Ups', 'Meeting Rooms & Offices', 'Partitions & Ceilings', 'Lighting, Power & Data'],
   },
@@ -49,12 +50,12 @@ export default {
     title: 'What an Office Renovation Covers',
     desc: 'The full fit-up. Only need part of it, like new finishes or two more meeting rooms? Say so and we’ll scope just that.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you and your lease, counting desks and rooms, and writing a scope you can check against your plans.' },
-      { num: '02', title: 'Demolition & Partitions', text: 'Taking out old walls and building new office partitions, doors and demising walls, with fire separations kept intact.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you and your lease, counting desks and rooms, and [writing a scope you can check against your plans](/our-process).' },
+      { num: '02', title: 'Demolition & Partitions', text: '[Taking out old walls](/services/demolition) and building new office partitions, doors and demising walls, with fire separations kept intact.' },
       { num: '03', title: 'Ceilings & Lighting', text: 'T-bar or drywall ceilings, with lighting and controls laid out for the new desks and meeting tables rather than the old floor plan.' },
       { num: '04', title: 'Power, Data & HVAC', text: 'Outlets and data runs where people actually sit, plus HVAC changes so new rooms aren’t too hot or too cold.' },
       { num: '05', title: 'Kitchens & Washrooms', text: 'Staff kitchens and washrooms rebuilt with durable finishes and accessible layouts that meet the Manitoba Building Code.' },
-      { num: '06', title: 'Finishes & Millwork', text: 'Flooring, paint, reception desks and built-in storage that carry your brand and stand up to daily office use.' },
+      { num: '06', title: 'Finishes & Millwork', text: '[Flooring](/services/flooring), paint, reception desks and built-in storage that carry your brand and stand up to daily office use.' },
     ],
   },
 
@@ -75,10 +76,12 @@ export default {
   testimonial: null,
 
   faqsTitle: 'Office Renovation FAQs',
+  // The fit-up guide keeps "Do I need an architect for an office fit-up?";
+  // this page asks it about the visitor's own office renovation.
   faqs: [
     { q: 'How long does an office renovation take?', a: 'It depends on the scope and on the permit. A refresh of finishes in the same layout moves quickly, while a full fit-up with new walls, ceilings and services takes longer and waits on the City’s plan review. You get a schedule with your written quote, built backwards from your move-in date, and an update every week.' },
     { q: 'Can my staff keep working during the renovation?', a: 'Often, yes. We split the space into phases so part of the office stays usable, keep the work area closed off, and schedule the loudest work for evenings and weekends where the City’s noise rules allow. Some steps, like new flooring under desks, may need a weekend or a short move, and we’ll name those at the site visit.' },
-    { q: 'Do I need an architect for an office fit-up?', a: 'Not always. The City of Winnipeg’s guide says structural changes need a professional engineer, and significant changes to fire alarms, sprinklers, exits or public corridors need an architect and/or engineer. A simple layout change inside one unit may not. Bring your plans to the site visit and we’ll tell you what the City is likely to ask for.' },
+    { q: 'Will my office renovation need an architect?', a: 'Not always. The City of Winnipeg’s guide says structural changes need a professional engineer, and significant changes to fire alarms, sprinklers, exits or public corridors need an architect and/or engineer. A simple layout change inside one unit may not. Bring your plans to the site visit and we’ll tell you what the City is likely to ask for.' },
     { q: 'Who pays for an office fit-up, the landlord or the tenant?', a: 'Your lease decides. Some landlords offer a tenant improvement allowance or build part of the space before you move in; others hand over a bare unit. Read the improvement clause or work letter before you collect quotes, and bring it to the site visit so the scope matches what you’re responsible for.' },
     { q: 'Can you add meeting rooms or private offices?', a: 'Yes. New partitions, doors and ceilings for meeting rooms and private offices are a common part of an office renovation. Each new room also needs light, power, data, air flow and enough sound control for how it’s used, so we plan those with the walls rather than after them.' },
     { q: 'Do you handle the permit and inspections?', a: 'Yes. We coordinate the building permit and inspections with the City of Winnipeg or your local municipality, and flag anything that will need attention early, such as a demising wall, an exit change or an accessibility upgrade. If the City needs professional drawings, we build to the architect’s or engineer’s set.' },
@@ -95,13 +98,13 @@ export default {
     serviceType: 'Office renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'office renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTitle: 'Types of Office Renovations',
   typesDesc: 'From a light refresh to a full remodel of your current office or a fit-up of a new unit.',
   types: [
-    { title: 'Tenant Fit-Up', text: 'Turning a bare or previous-tenant unit into your office, usually against a fixed move-in date in your lease.' },
+    { title: 'Tenant Fit-Up', text: 'A tenant fit-up (often called a fit-out) turns a bare or previous-tenant unit into your office, usually against a fixed move-in date in your lease.' },
     { title: 'Office Refresh', text: 'New flooring, paint, lighting and finishes in the layout you already have, with much of the work possible after hours.' },
     { title: 'Layout Reconfiguration', text: 'Moving walls to trade private offices for open space, or the reverse, and adding meeting rooms or quiet rooms.' },
     { title: 'Office Expansion', text: 'Taking over the next suite and joining the two, including the demising wall, doors and services between them.' },
@@ -119,12 +122,11 @@ export default {
       { title: 'Occupancy Permit', text: 'A new tenant establishing a use without a valid occupancy permit, or a tenant expanding into more space, generally needs an occupancy permit before moving in. Ask your landlord what permit the unit already has.' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with accessibility requirements aligned with CSA B651. Entrances, washrooms and door clearances are planned into the layout from the start.' },
       { title: 'After-Hours Noise', text: 'Loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays. Your building may set its own work-hour rules too, so check the lease.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Permits Online', url: 'https://www.winnipeg.ca/building-development/permits-applications/permits-online', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025', url: 'https://www.winnipeg.ca/media/6330', accessed: '2026-10-13' },
-      { label: 'City of Winnipeg: Permits Online', url: 'https://www.winnipeg.ca/building-development/permits-applications/permits-online', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Occupancy permits', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects/occupancy-permits', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Construction in your neighbourhood', url: 'https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood', accessed: '2026-10-13' },
       { label: 'Province of Manitoba: Manitoba Building Code updates, accessibility', url: 'https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf', accessed: '2026-10-13' },

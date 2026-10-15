@@ -10,7 +10,24 @@ export default {
   "category": "Basements & Suites",
   "date": "2026-10-13",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
-  "heroSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.cbfdceb0.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.ca5409d1.avif 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.dbe13731.avif 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.05e224cb.avif 1320w"
+  "image": {
+    "base": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "78d24270",
+      "75d2d894",
+      "cbfdceb0"
+    ],
+    "avif": [
+      "ca5409d1",
+      "dbe13731",
+      "05e224cb"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

@@ -52,8 +52,9 @@ export default async function handler(req, res) {
       },
     });
 
+    // Never for the team's own test bookings (attribution.internal, see index.html).
     const eventId = cleanEventId(body.eventId);
-    if (eventId) afterResponse(() => sendMetaEvent({ eventName: 'Schedule', eventId, lead, attribution, req }));
+    if (eventId && !attribution?.internal) afterResponse(() => sendMetaEvent({ eventName: 'Schedule', eventId, lead, attribution, req }));
   } catch (error) {
     sendError(res, error);
   }

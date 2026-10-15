@@ -3,7 +3,8 @@
  *   public/robots.txt    — one rule group for every crawler (AI crawlers welcome)
  *   public/sitemap.xml   — every indexable route and published post, with lastmod
  *   public/llms.txt      — concise site map for AI answer engines
- *   public/llms-full.txt — fuller context (services, service area, FAQs, articles)
+ *   public/llms-full.txt — fuller context (services, service area, FAQs, posts'
+ *                          quick answers, articles)
  *   index.html           — sitewide JSON-LD injected between markers
  *   prerender-routes.json
  *
@@ -16,7 +17,7 @@
  * posts. Draft pages are never prerendered or listed.
  */
 import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
-import { EXPERIENCE_YEARS, PROJECT_COUNT } from '../src/data/facts.js';
+import { EXPERIENCE_YEARS, OFFICE_HOURS_TEXT, PROJECT_COUNT, REPLY_TIME } from '../src/data/facts.js';
 import { SITE_FAQS } from '../src/data/faqs.js';
 import { LIVE_COST_GUIDES, PUBLISHED_POSTS, SITE_ROUTES } from '../src/data/head.js';
 import { LIVE_SERVICE_PAGES, PROJECTS } from '../src/data/projects.js';
@@ -32,6 +33,7 @@ import {
   GBP,
 } from '../src/data/siteConfig.js';
 import { COST_HUB_PATH, NOINDEX_ROUTES, buildOrganizationGraph } from '../src/data/seo.js';
+import { stripInline } from '../src/lib/inlineText.js';
 
 const PUBLIC = new URL('../public/', import.meta.url);
 const out = (name, body) => writeFileSync(new URL(name, PUBLIC), body);
@@ -98,9 +100,11 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `);
 
 /* ---------------------------------------------------- shared llms content */
+// Page copy may carry inline markup ([label](/path), **bold**): the llms files
+// take its plain text (stripInline), as the JSON-LD does.
 // Live service pages only (registry order), with each page's own description.
 const serviceLines = LIVE_SERVICE_PAGES.map(
-  ({ service, content }) => `- [${service.navLabel}](${SITE_URL}${service.path}): ${content.seo.description || ''}`
+  ({ service, content }) => `- [${service.navLabel}](${SITE_URL}${service.path}): ${stripInline(content.seo.description)}`
 ).join('\n');
 
 // Indexable pages only; a page that is not live (e.g. the cost hub before its
@@ -108,30 +112,34 @@ const serviceLines = LIVE_SERVICE_PAGES.map(
 const keyPage = (label, path, description) => {
   const route = routeOf.get(path);
   return route && !route.noindex
-    ? `- [${label}](${SITE_URL}${path}): ${description || route.head.description}`
+    ? `- [${label}](${SITE_URL}${path}): ${stripInline(description || route.head.description)}`
     : null;
 };
 
 const keyPages = [
   keyPage('Home', '/'),
+  keyPage('About us', '/about-us'),
   keyPage('All services', '/services'),
   keyPage('Renovation costs in Winnipeg', COST_HUB_PATH),
   keyPage('Service areas', '/service-areas'),
   keyPage('Our process', '/our-process'),
-  keyPage('Projects', '/projects', 'Renovation project categories, each linking to its service page with details and booking.'),
+  // The /projects photos are design ideas, not Bridgeland jobs: say so, so no
+  // answer engine presents them as the company's own work.
+  keyPage('Projects', '/projects', 'Design-idea (inspiration) photos for each type of renovation; not photos of Bridgeland jobs.'),
   keyPage('FAQs', '/faqs'),
   keyPage('Contact', '/contact-us'),
   keyPage('Instant quote', '/instant-quote'),
   keyPage('Book online', '/book-online'),
   keyPage('Blog', '/blog'),
+  keyPage('Editorial policy', '/editorial-policy'),
 ].filter(Boolean).join('\n');
 
 // Live cost guides other than the hub (the hub is a key page).
 const costLines = LIVE_COST_GUIDES.filter((guide) => guide.path !== COST_HUB_PATH && routeOf.has(guide.path))
-  .map((guide) => `- [${(guide.seo && guide.seo.title ? guide.seo.title.split(' | ')[0] : guide.path)}](${SITE_URL}${guide.path}): ${(guide.seo && guide.seo.description) || ''}`)
+  .map((guide) => `- [${(guide.seo && guide.seo.title ? guide.seo.title.split(' | ')[0] : guide.path)}](${SITE_URL}${guide.path}): ${stripInline(guide.seo && guide.seo.description)}`)
   .join('\n');
 
-const articleLines = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.excerpt}`).join('\n');
+const articleLines = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${stripInline(p.excerpt)}`).join('\n');
 
 const PROFILE_LABELS = {
   facebook: 'Facebook',
@@ -182,8 +190,10 @@ with the City of Winnipeg or the local municipality when a project requires them
 
 /* --------------------------------------------------------- llms-full.txt */
 // The site's own question-and-answer set: the FAQ page plus every service
-// page's FAQs, word for word as they appear on the site.
-const qa = (faqs) => faqs.map((f) => `**Q: ${f.q}**\nA: ${f.a}`).join('\n\n');
+// page's FAQs, word for word as they appear on the site. An answer's
+// paragraphs (a blank line in `a`) are joined into one line.
+const qa = (faqs) =>
+  faqs.map((f) => `**Q: ${stripInline(f.q)}**\nA: ${stripInline(f.a).replace(/\s*\n\s*/g, ' ')}`).join('\n\n');
 
 // PROJECTS = live service pages' content, each with its `path`.
 const navLabelFor = new Map(LIVE_SERVICE_PAGES.map(({ service }) => [service.path, service.navLabel]));
@@ -205,11 +215,28 @@ const faqBlocks = [
   ),
 ].filter(Boolean);
 
+// Inline markup in post text (src/components/RichBody.jsx renderInline) as
+// plain text: [label](/path) -> "label (https://site/path)", external links
+// keep their own URL, **bold** loses its asterisks.
+const plainText = (text) =>
+  String(text || '')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (all, label, href) => `${label} (${href.startsWith('/') ? `${SITE_URL}${href}` : href})`)
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .trim();
+
+// Each published post's hand-written "Quick answer" (blog-raw `answer`, shown
+// above the article body), word for word. Posts without one are left out.
+const answeredPosts = POSTS.filter((post) => String(post.answer || '').trim());
+const quickAnswers = answeredPosts
+  .map((post) => `### ${post.title}\n${SITE_URL}/blog/${post.slug}\n${plainText(post.answer)}`)
+  .join('\n\n');
+
 out('llms-full.txt', doc(
   `# ${SITE_NAME} — full reference`,
   `> ${BUSINESS.shortDescription || BUSINESS.description}`,
   BUSINESS.disambiguatingDescription,
-  `Phone: ${SITE_PHONE} · Email: ${BUSINESS.email} · Winnipeg, Manitoba, Canada · Free written quotes`,
+  // Office hours, reply time, experience and project count: src/data/facts.js.
+  `Phone: ${SITE_PHONE} · Email: ${BUSINESS.email} · Winnipeg, Manitoba, Canada · Free written quotes · Office hours: ${OFFICE_HOURS_TEXT} · Replies within ${REPLY_TIME} · Over ${EXPERIENCE_YEARS} years combined experience · More than ${PROJECT_COUNT} projects completed`,
   `## Services offered\n${serviceLines}`,
   `## Service area\n${SERVICE_AREA_STATEMENT}\n\nCommunities: ${SERVICE_AREA_NAMES.join(', ')}`,
   BUSINESS.knowsAbout && BUSINESS.knowsAbout.length &&
@@ -217,6 +244,7 @@ out('llms-full.txt', doc(
   profileLines && `## Profiles\n${profileLines}`,
   fullCostLines && `## Renovation cost guides\n${fullCostLines}`,
   faqBlocks.length && `## Frequently asked questions\n\n${faqBlocks.join('\n\n')}`,
+  quickAnswers && `## Quick answers\n\n${quickAnswers}`,
   articleLines && `## Articles\n${articleLines}`,
 ));
 
@@ -243,5 +271,5 @@ console.log(`sitemap: ${urls.length} urls (${PAGES.length} pages, ${POSTS.length
 console.log(`noindex (prerendered, not in sitemap): ${NOINDEX_PAGES.join(', ') || 'none'}`);
 console.log(`prerender-routes.json: ${prerenderRoutes.length} routes`);
 console.log('robots: one group for all crawlers (Disallow: /api/)');
-console.log(`llms.txt + llms-full.txt written (${faqBlocks.length} FAQ blocks)`);
+console.log(`llms.txt + llms-full.txt written (${faqBlocks.length} FAQ blocks, ${answeredPosts.length} quick answers)`);
 console.log('sitewide JSON-LD injected into index.html');

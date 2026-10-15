@@ -1,10 +1,9 @@
 // Commercial renovations — content for /services/commercial-renovations (rendered by src/pages/ProjectPage.jsx).
 // Registry entry (path, labels, status, estimator, form type): src/data/services.js.
 //
-// The intro and gallery images are stock inspiration photos, not Bridgeland
-// jobs. Keep their alts and captions to what is visible in the photo (no
-// "Winnipeg", no "our", no finished-job outcomes) until real job photos with
-// client consent replace them.
+// The intro image is a stock inspiration photo, not a Bridgeland job. Keep
+// its alt to what is visible in the photo (no "Winnipeg", no "our", no
+// finished-job outcomes) until real job photos with client consent replace it.
 //
 // Truth rules (plan Guardrails): no per-vertical job counts, no named past
 // projects or clients, no licence/insurance/WCB/warranty claims, no commercial
@@ -15,6 +14,7 @@
 // list on 2026-10-13. Re-check them before changing the wording.
 
 import { EXPERIENCE_YEARS, OFFICE_HOURS_TEXT, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
+import { NEARBY_AREAS_TEXT } from '../areas.js';
 
 export default {
   slug: 'commercial-renovation',
@@ -41,10 +41,10 @@ export default {
     floatingTitle: 'Planned Around Your Date',
     floatingText: 'The schedule starts from your opening date and works backwards.',
     paragraphs: [
-      'A commercial renovation rebuilds a working space, such as an office, store, restaurant, hotel or clinic, around a lease, an opening date and the hours you need to stay open. It usually covers demolition, new walls and ceilings, electrical and mechanical changes, washrooms, finishes, a City building permit and the inspections that follow.',
-      'A commercial remodel runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. So we build the plan backwards from your date and tell you honestly at the site visit whether it’s realistic.',
+      'A commercial renovation rebuilds a working space, such as an office, store, restaurant, hotel or clinic, around a lease, an opening date and the hours you need to stay open. It usually covers [demolition](/services/demolition), new walls and ceilings, electrical and mechanical changes, washrooms, finishes, a City building permit and the inspections that follow.',
+      'A commercial remodel runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. So we build the plan backwards from your date and tell you honestly at [the site visit](/our-process) whether it’s realistic.',
       'Where it helps, we schedule work in the evenings and on weekends so you can keep trading, and we phase the job so only part of the space is closed at a time. You get a progress update every week, so you’re never chasing us for news.',
-      'We work across Winnipeg and nearby communities, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach, and we coordinate permits and inspections with the City of Winnipeg or the local municipality.',
+      `We work across Winnipeg and nearby communities, including ${NEARBY_AREAS_TEXT}, and we coordinate permits and inspections with the City of Winnipeg or the local municipality.`,
     ],
     checklist: ['Offices & Workspaces', 'Retail & Showrooms', 'Restaurants, Cafés & Hotels', 'Medical & Dental Clinics'],
   },
@@ -54,25 +54,20 @@ export default {
     title: 'What a Commercial Renovation Covers',
     desc: 'Scoped around your lease, your opening date, and the hours you need to keep trading.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you, your lease dates and your opening plan, then putting the scope in a free written quote.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the space with you, [your lease dates](/blog/office-fit-up-lease-planning-winnipeg) and your opening plan, then putting the scope in a free written quote.' },
       { num: '02', title: 'Demolition & Fit-Out', text: 'Stripping out the old layout and building the new one: partitions, ceilings, storefronts, and service areas.' },
       { num: '03', title: 'Electrical & Mechanical', text: 'Lighting, power, data runs and HVAC changes to suit the new floor plan, with the trade permits that work needs.' },
       { num: '04', title: 'Washrooms & Accessibility', text: 'Commercial washroom renovation, accessible entrances and clearances, built to the Manitoba Building Code and ready for inspection.' },
-      { num: '05', title: 'Finishes & Branding', text: 'Flooring, wall finishes, millwork, and the details that carry your brand through the space.' },
+      { num: '05', title: 'Finishes & Branding', text: '[Flooring](/services/flooring), wall finishes, millwork, and the details that carry your brand through the space.' },
       { num: '06', title: 'Phased & After-Hours Work', text: 'Evening and weekend scheduling so you can keep trading through as much of the project as possible.' },
     ],
   },
 
-  gallery: {
-    tag: 'Design Ideas',
-    title: 'Commercial Renovation Ideas',
-    desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
-    items: [
-      { img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80', alt: 'Open office with glass-walled rooms, a dark kitchenette, and teal bench seating', title: 'Open Office Layout', text: 'Glass-walled rooms, a kitchenette, and open shelving' },
-      { img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80', alt: 'Room with light grey walls, a black loveseat, a white dresser, and a floor lamp', title: 'Clean, Neutral Room', text: 'Pale grey walls, light floors, and simple furniture' },
-      { img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80', alt: 'Living room with a grey sofa, wood coffee table, wood floors, and floor-to-ceiling windows', title: 'Lounge Seating Area', text: 'Sofa, leather ottomans, and floor-to-ceiling windows' },
-    ],
-  },
+  // No gallery: only one of its three stock photos showed a commercial space
+  // (an open office); the other two were residential rooms. A gallery returns
+  // with at least three commercial photos, labelled as inspiration until they
+  // are our own jobs.
+  gallery: null,
 
   process: {
     tag: 'How It Works',
@@ -103,7 +98,7 @@ export default {
     { q: 'Can you work with our architect or designer?', a: 'Yes. We build to supplied drawings and specifications, and we walk the space against them before work starts. If something on the drawings won’t work on site, such as a duct that clashes with a beam, we raise it with you and your designer before it turns into a costly change.' },
     { q: 'Can you take on work for property managers?', a: 'Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners. Each job starts with a free site visit and a written quote, and the weekly progress update gives you something to pass on to owners and tenants.' },
     { q: 'How firm is the schedule?', a: 'The schedule comes with your written quote, and we build to it. If something outside our control moves, like a permit review, a supplier delay or an inspection date, you hear about it in that week’s update along with what we’re doing about it, rather than at the end of the job.' },
-    { q: 'Which areas do you serve for commercial work?', a: 'We work in Winnipeg and nearby communities within about an hour of the city, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach. Outside Winnipeg, permits and inspections go through the local municipality or planning district, and we coordinate with them the same way.' },
+    { q: 'Which areas do you serve for commercial work?', a: `We work in Winnipeg and nearby communities within about an hour of the city, including ${NEARBY_AREAS_TEXT}. Outside Winnipeg, permits and inspections go through the local municipality or planning district, and we coordinate with them the same way.` },
     { q: 'How quickly will you get back to us?', a: `Within ${REPLY_TIME}. Our office hours are ${OFFICE_HOURS_TEXT}, and you can reach us at ${SITE_PHONE} or ${SITE_EMAIL}. From there we book a free on-site visit, walk the space with you, and follow up with a written quote.` },
   ],
 
@@ -119,7 +114,7 @@ export default {
     // the people who run commercial property.
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'commercial renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Optional sections (plan §7), rendered by ProjectPage only when filled in:
@@ -157,7 +152,7 @@ export default {
     items: [
       { title: 'Building Permit & CADS', text: 'Commercial alteration and change-of-use applications go in with the City’s Commercial Alteration Design Summary (CADS). The City says incomplete applications result in delays, so the details are checked before it’s filed.' },
       { title: 'Architects & Engineers', text: 'The City’s CADS form says drawings must be sealed by an architect or engineer for any change to a building’s structural systems, and for significant changes to fire alarms, sprinklers, exits or public corridors in larger (Part 3) buildings. We build to their sealed drawings.' },
-      { title: 'Change of Use', text: 'Turning a store into a restaurant is a change of use: it needs a building permit even with little construction, and a change of major occupancy may need an architect or engineer. Confirm the new use is allowed under zoning before you pay for plans.' },
+      { title: 'Change of Use', text: '[Turning a store into a restaurant](/blog/restaurant-renovation-permits-winnipeg) is a change of use: it needs a building permit even with little construction, and a change of major occupancy may need an architect or engineer. Confirm the new use is allowed under zoning before you pay for plans.' },
       { title: 'Occupancy Permit', text: 'Substantial alterations and changes of use need an occupancy permit before the space is used. A new tenant moving into a space with a valid occupancy permit and no alterations generally doesn’t need a new one.' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with updated accessibility requirements aligned with CSA B651. Accessible entrances, washrooms and clearances are planned at the layout stage, not added after.' },
       { title: 'Noise Rules for After-Hours Work', text: 'In Winnipeg, loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so the loudest tasks are scheduled inside those hours.' },

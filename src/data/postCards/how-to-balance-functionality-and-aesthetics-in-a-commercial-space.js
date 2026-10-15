@@ -10,8 +10,23 @@ export default {
   "category": "Commercial",
   "date": "2026-09-03",
   "readMinutes": 7,
-  "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
-  "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
-  "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.0f59d06c.avif 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.12dcb183.avif 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.43da1cb9.avif 1320w"
+  "image": {
+    "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "413203b1",
+      "4e31fe2d",
+      "34a27d10"
+    ],
+    "avif": [
+      "0f59d06c",
+      "12dcb183",
+      "43da1cb9"
+    ],
+    "main": 1
+  }
 };

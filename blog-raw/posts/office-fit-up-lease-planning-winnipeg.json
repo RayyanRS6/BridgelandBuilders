@@ -2,11 +2,12 @@
   "slug": "office-fit-up-lease-planning-winnipeg",
   "status": "published",
   "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
-  "metaTitle": "Office Fit-Up Planning in Winnipeg | Bridgeland Builders",
+  "metaTitle": "Office Fit-Up Lease Planning in Winnipeg | Bridgeland",
   "metaDescription": "Plan a Winnipeg office fit-up around your lease: landlord consent, tenant allowances, City permits, inspections and the occupancy permit before move-in.",
   "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-01-15",
   "cats": [
     "Commercial",
     "Permits & Planning"
@@ -51,6 +52,11 @@
       "label": "City of Winnipeg: Commercial inspections",
       "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
@@ -163,6 +169,14 @@
     {
       "t": "p",
       "x": "For simpler fit-ups, the architectural drawings do not have to come from an architect. The City asks for someone who can show the scope clearly and professionally: a key plan of where your unit sits, and a scaled floor plan with dimensions, labelled rooms and walls marked existing, new or demolished."
+    },
+    {
+      "t": "p",
+      "x": "In September 2026, the City took an average of 5.3 business days to review minor alterations in Part 3 buildings (no change of use, no professionals required and no impact on life safety), against its own target of 5, and 6.9 business days for a change of use in existing tenant space, against a target of 15."
+    },
+    {
+      "t": "p",
+      "x": "In a small commercial Part 9 building, three storeys or less with a building area under 600 m², the average that month was 6.2 business days against a target of 15. That's review time, not the total time until a permit is issued."
     },
     {
       "t": "h2",

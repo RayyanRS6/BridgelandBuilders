@@ -10,7 +10,13 @@
  * `sizes` is the width the photo is drawn at, which is not always the width of
  * its box: the photos fill fixed-height boxes with object-fit: cover, so a
  * narrow box can still show a 3:2 photo wider than itself.
+ *
+ * Photos listed in scripts/build-images.mjs STOCK are served from this site
+ * instead (stockImage() below): same photo and aspect, AVIF + WebP, hashed
+ * names with a year-long cache, and no connection to images.unsplash.com.
  */
+import { STOCK_BY_PHOTO, STOCK_IMAGES } from '../data/stockImages.generated.js';
+
 export const UNSPLASH_WIDTHS = [480, 800, 1200, 1600];
 
 const UNSPLASH = /^https:\/\/images\.unsplash\.com\//;
@@ -41,4 +47,20 @@ export function unsplashSrcSet(url, maxWidth = 1600) {
 export function unsplashImage(url, { sizes, maxWidth = 1600 } = {}) {
   const srcSet = unsplashSrcSet(url, maxWidth);
   return srcSet ? { src: url, srcSet, sizes } : { src: url };
+}
+
+const PHOTO_ID = /\/(photo-[0-9a-f]+-[0-9a-f]+)/;
+
+/**
+ * Props for <Picture> (src/components/Picture.jsx): the self-hosted copy of a
+ * stock photo when scripts/build-images.mjs has one for its Unsplash photo id,
+ * otherwise the Unsplash props above (Picture then renders a plain <img>).
+ *
+ *   <Picture {...stockImage(url, { sizes })} alt="…" width="800" height="600" loading="lazy" />
+ */
+export function stockImage(url, options = {}) {
+  const key = STOCK_BY_PHOTO[(PHOTO_ID.exec(url || '') || [])[1]];
+  const stock = key && STOCK_IMAGES[key];
+  if (!stock) return unsplashImage(url, options);
+  return { src: stock.src, srcSet: stock.srcSet, avifSrcSet: stock.avifSrcSet, sizes: options.sizes };
 }

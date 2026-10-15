@@ -14,7 +14,7 @@ export default {
     "Kitchens & Baths"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp",
@@ -256,7 +256,7 @@ export default {
       "a": "Our bathroom renovation cost guide lists the starting ranges our instant estimator uses for bathrooms, by size and option, and an ensuite falls within those ranges. The instant estimate gives a range for your own room, and the free written quote after an on-site visit gives you a price you can sign."
     }
   ],
-  "answer": "An ensuite should cost about the same as a full bathroom of the same size and finish level, so start with our [bathroom renovation cost guide](/services/bathroom-renovations/cost) for current Winnipeg price ranges. Where your ensuite lands in that range depends mostly on plumbing moves, the type of shower, how much tile and glass it has, and whether the room is enlarged.",
+  "answer": "Priced like any bathroom of the same size and finish, an ensuite starts in our instant estimator at $16,000–$20,000 for up to 50 sq ft, $20,000–$24,000 for 51–100 sq ft and $24,000–$36,000 for 101–150+ sq ft; a new shower runs $10,000–$15,000. Plumbing moves, the shower, tile, glass and any enlargement decide where yours lands; see our [bathroom renovation cost guide](/services/bathroom-renovations/cost).",
   "sources": [
     {
       "label": "City of Winnipeg: Home renovations (building permits)",
@@ -282,10 +282,25 @@ export default {
       "category": "Kitchens & Baths",
       "date": "2026-07-17",
       "readMinutes": 7,
-      "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
-      "heroSrc": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp",
-      "heroSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.f562c9d4.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.38be59c3.avif 1320w"
+      "image": {
+        "base": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "234dec8b",
+          "d44977c5",
+          "f562c9d4"
+        ],
+        "avif": [
+          "f2ea16c2",
+          "d0b4cb6c",
+          "38be59c3"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "manitoba-renovation-tax-credits-rebates",
@@ -294,9 +309,26 @@ export default {
       "category": "Money & Rebates",
       "date": "2026-10-13",
       "readMinutes": 10,
-      "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
-      "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.6094b92a.avif 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.e8f9c620.avif 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.a075d7e8.avif 1320w"
+      "image": {
+        "base": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "61d350fa",
+          "c91918d2",
+          "4d58ff60"
+        ],
+        "avif": [
+          "6094b92a",
+          "e8f9c620",
+          "a075d7e8"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-permits",
@@ -305,9 +337,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

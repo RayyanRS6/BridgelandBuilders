@@ -7,5 +7,89 @@ export const STOCK_IMAGES = {
     "avifSrcSet": "/images/stock/bright-living-room-480.98f74e81.avif 480w, /images/stock/bright-living-room-880.b76c97f5.avif 880w, /images/stock/bright-living-room-1320.7631c215.avif 1320w",
     "width": 880,
     "height": 660
+  },
+  "house-at-dusk": {
+    "src": "/images/stock/modern-house-dusk-880.20c92a32.webp",
+    "srcSet": "/images/stock/modern-house-dusk-480.496f5f6b.webp 480w, /images/stock/modern-house-dusk-880.20c92a32.webp 880w, /images/stock/modern-house-dusk-1320.bc464742.webp 1320w",
+    "avifSrcSet": "/images/stock/modern-house-dusk-480.d272035d.avif 480w, /images/stock/modern-house-dusk-880.1ffa491f.avif 880w, /images/stock/modern-house-dusk-1320.b702c2b1.avif 1320w",
+    "width": 880,
+    "height": 587
+  },
+  "checkered-bathroom": {
+    "src": "/images/stock/white-bathroom-880.6ce99481.webp",
+    "srcSet": "/images/stock/white-bathroom-480.aed5eea1.webp 480w, /images/stock/white-bathroom-880.6ce99481.webp 880w, /images/stock/white-bathroom-1320.5d6e7fff.webp 1320w",
+    "avifSrcSet": "/images/stock/white-bathroom-480.ed36c120.avif 480w, /images/stock/white-bathroom-880.4f99608e.avif 880w, /images/stock/white-bathroom-1320.afbac5e9.avif 1320w",
+    "width": 880,
+    "height": 1319
+  },
+  "kitchen-island": {
+    "src": "/images/stock/white-kitchen-island-880.d34feb65.webp",
+    "srcSet": "/images/stock/white-kitchen-island-480.5ca78cd6.webp 480w, /images/stock/white-kitchen-island-880.d34feb65.webp 880w, /images/stock/white-kitchen-island-1320.664f7674.webp 1320w",
+    "avifSrcSet": "/images/stock/white-kitchen-island-480.e6123379.avif 480w, /images/stock/white-kitchen-island-880.82e2ab03.avif 880w, /images/stock/white-kitchen-island-1320.2c65fcef.avif 1320w",
+    "width": 880,
+    "height": 583
+  },
+  "loveseat-room": {
+    "src": "/images/stock/loveseat-and-lamp-880.79b98abf.webp",
+    "srcSet": "/images/stock/loveseat-and-lamp-480.9e9a612a.webp 480w, /images/stock/loveseat-and-lamp-880.79b98abf.webp 880w, /images/stock/loveseat-and-lamp-1320.0c46e0f2.webp 1320w",
+    "avifSrcSet": "/images/stock/loveseat-and-lamp-480.9ca0c770.avif 480w, /images/stock/loveseat-and-lamp-880.7b3dd960.avif 880w, /images/stock/loveseat-and-lamp-1320.768c7da4.avif 1320w",
+    "width": 880,
+    "height": 587
+  },
+  "open-plan-living": {
+    "src": "/images/stock/open-plan-living-880.9716b61e.webp",
+    "srcSet": "/images/stock/open-plan-living-480.9a85c577.webp 480w, /images/stock/open-plan-living-880.9716b61e.webp 880w, /images/stock/open-plan-living-1320.7bd48706.webp 1320w",
+    "avifSrcSet": "/images/stock/open-plan-living-480.64ea10d5.avif 480w, /images/stock/open-plan-living-880.e9e2d798.avif 880w, /images/stock/open-plan-living-1320.71a78ce7.avif 1320w",
+    "width": 880,
+    "height": 598
+  },
+  "office-meeting": {
+    "src": "/images/stock/office-meeting-table-880.2870111c.webp",
+    "srcSet": "/images/stock/office-meeting-table-480.0f3ad1b2.webp 480w, /images/stock/office-meeting-table-880.2870111c.webp 880w, /images/stock/office-meeting-table-1320.ca1db4ef.webp 1320w, /images/stock/office-meeting-table-1600.a79211b2.webp 1600w",
+    "avifSrcSet": "/images/stock/office-meeting-table-480.f42f6faa.avif 480w, /images/stock/office-meeting-table-880.0d9eb8f8.avif 880w, /images/stock/office-meeting-table-1320.b6b898aa.avif 1320w, /images/stock/office-meeting-table-1600.c276b1ec.avif 1600w",
+    "width": 880,
+    "height": 587
+  },
+  "office-kitchenette": {
+    "src": "/images/stock/office-kitchenette-880.f2412423.webp",
+    "srcSet": "/images/stock/office-kitchenette-480.68f3a074.webp 480w, /images/stock/office-kitchenette-880.f2412423.webp 880w, /images/stock/office-kitchenette-1320.dddc89e2.webp 1320w",
+    "avifSrcSet": "/images/stock/office-kitchenette-480.52daae39.avif 480w, /images/stock/office-kitchenette-880.610c8b09.avif 880w, /images/stock/office-kitchenette-1320.c589c05e.avif 1320w",
+    "width": 880,
+    "height": 587
+  },
+  "kitchen-cooking": {
+    "src": "/images/stock/white-kitchen-cooking-880.96eba4bd.webp",
+    "srcSet": "/images/stock/white-kitchen-cooking-480.032658a9.webp 480w, /images/stock/white-kitchen-cooking-880.96eba4bd.webp 880w, /images/stock/white-kitchen-cooking-1320.49127022.webp 1320w",
+    "avifSrcSet": "/images/stock/white-kitchen-cooking-480.e3a9fd92.avif 480w, /images/stock/white-kitchen-cooking-880.702f5601.avif 880w, /images/stock/white-kitchen-cooking-1320.ca784fbd.avif 1320w",
+    "width": 880,
+    "height": 587
+  },
+  "grey-sofa-room": {
+    "src": "/images/stock/grey-sofa-living-room-880.c861138c.webp",
+    "srcSet": "/images/stock/grey-sofa-living-room-480.9b24a9ea.webp 480w, /images/stock/grey-sofa-living-room-880.c861138c.webp 880w, /images/stock/grey-sofa-living-room-1320.8162955d.webp 1320w",
+    "avifSrcSet": "/images/stock/grey-sofa-living-room-480.b01a6536.avif 480w, /images/stock/grey-sofa-living-room-880.f7623c17.avif 880w, /images/stock/grey-sofa-living-room-1320.b1df38db.avif 1320w",
+    "width": 880,
+    "height": 464
+  },
+  "wood-clad-house": {
+    "src": "/images/stock/wood-clad-house-880.427265d4.webp",
+    "srcSet": "/images/stock/wood-clad-house-480.283c96b5.webp 480w, /images/stock/wood-clad-house-880.427265d4.webp 880w, /images/stock/wood-clad-house-1320.08449520.webp 1320w",
+    "avifSrcSet": "/images/stock/wood-clad-house-480.551a3d01.avif 480w, /images/stock/wood-clad-house-880.8246d5b9.avif 880w, /images/stock/wood-clad-house-1320.c5501c5b.avif 1320w",
+    "width": 880,
+    "height": 587
   }
+};
+// Unsplash photo id -> STOCK_IMAGES key (src/lib/unsplash.js stockImage()).
+export const STOCK_BY_PHOTO = {
+  "photo-1600210492486-724fe5c67fb0": "home-hero",
+  "photo-1600585154340-be6161a56a0c": "house-at-dusk",
+  "photo-1552321554-5fefe8c9ef14": "checkered-bathroom",
+  "photo-1507089947368-19c1da9775ae": "kitchen-island",
+  "photo-1513694203232-719a280e022f": "loveseat-room",
+  "photo-1600607687939-ce8a6c25118c": "open-plan-living",
+  "photo-1497366811353-6870744d04b2": "office-meeting",
+  "photo-1497366216548-37526070297c": "office-kitchenette",
+  "photo-1556911220-e15b29be8c8f": "kitchen-cooking",
+  "photo-1618221195710-dd6b41faaea6": "grey-sofa-room",
+  "photo-1600566753190-17f0baa2a6c3": "wood-clad-house"
 };

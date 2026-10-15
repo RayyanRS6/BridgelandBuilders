@@ -1,4 +1,4 @@
-import { useId, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from './icons.jsx';
 
@@ -8,6 +8,15 @@ const HEADING_TAGS = { 2: 'h2', 3: 'h3', 4: 'h4', 5: 'h5', 6: 'h6' };
 // looks the same everywhere — inside .blog-article-body an h3 would otherwise
 // pick up the article's heading margins. (The button sets its own font.)
 const HEADING_RESET = { margin: 0 };
+
+// Layout effects run before paint in the browser; on the server (prerender)
+// neither kind runs, and useEffect avoids React's server warning.
+const useBrowserLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
+
+// True while React hydrates the prerendered HTML (the server snapshot), false
+// in a fresh client render (a client-side navigation).
+const subscribeNever = () => () => {};
+const useHydrating = () => useSyncExternalStore(subscribeNever, () => false, () => true);
 
 /** Optional "read more" link under an answer: { label, to }. */
 function MoreLink({ more }) {
@@ -31,11 +40,38 @@ function MoreLink({ more }) {
 }
 
 /**
- * Every answer is always in the HTML (closed ones carry `hidden`), so search
- * engines and the FAQPage structured data see the full text; the accordion
- * only toggles which one is shown.
+ * A text answer's paragraphs: a blank line ("\n\n") in `a` starts a new one
+ * (readability: no paragraph over 60 words). The FAQPage schema and the llms
+ * files join them with a space (seo.js buildFaqPage, build-seo-files.mjs).
+ * Null for a one-paragraph answer or a React node (blog posts), which render
+ * exactly as before.
+ */
+function answerParagraphs(answer) {
+  if (typeof answer !== 'string' || !answer.includes('\n')) return null;
+  const parts = answer.split(/\n\s*\n/).map((part) => part.trim()).filter(Boolean);
+  return parts.length > 1 ? parts : null;
+}
+
+/**
+ * Every answer is always in the HTML, so search engines and the FAQPage
+ * structured data see the full text; the accordion only toggles which one is
+ * shown.
  *
- * @param {Array}  items          [{ q, a, more? }] — `more` = { label, to } adds a link under the answer
+ * Closed answers carry hidden="until-found" rather than plain `hidden`, so the
+ * browser's find-in-page and Google's #:~:text= links can reach text in a
+ * closed answer: the browser fires `beforematch` on it, which opens it here.
+ * React 18 would turn a hidden="until-found" prop into plain hidden="", so the
+ * attribute is set by the effect below, not rendered; scripts/prerender.mjs
+ * adds it to the closed answers in the static HTML (identified by their
+ * question's aria-expanded="false"). Browsers without until-found support
+ * treat it as plain `hidden`. pages.css takes the padding off a closed answer,
+ * which Chrome keeps as an empty box. The element that is hidden is the
+ * answer's container: its <p class="faq-answer">, or for a multi-paragraph
+ * answer the <div class="faq-answer-group"> around its paragraphs (no
+ * padding of its own, so a closed group takes no space either).
+ *
+ * @param {Array}  items          [{ q, a, more? }] — `more` = { label, to } adds a link under the answer;
+ *                                a blank line in `a` splits it into paragraphs
  * @param {number} [headingLevel] 2–6: wraps each question in that heading (default: no heading)
  * @param {number} [defaultOpen]  index open on first render (default 0; -1 = all closed)
  */
@@ -43,12 +79,62 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
   const [openIndex, setOpenIndex] = useState(defaultOpen);
   const baseId = useId();
   const Heading = HEADING_TAGS[headingLevel];
+  const answers = useRef([]);
+  const hydrating = useHydrating();
+  const firstRun = useRef(true);
+  const answerRef = (index) => (el) => {
+    answers.current[index] = el;
+  };
+
+  useBrowserLayoutEffect(() => {
+    const elements = answers.current.slice(0, items.length);
+    if (firstRun.current) {
+      firstRun.current = false;
+      // A text-fragment link or find-in-page can reveal a closed answer in the
+      // static HTML before hydration (the browser removes its `hidden`): keep
+      // that answer open instead of hiding it again.
+      if (hydrating) {
+        const revealed = elements.findIndex((el, index) => el && index !== openIndex && !el.hasAttribute('hidden'));
+        if (revealed !== -1) {
+          setOpenIndex(revealed);
+          return;
+        }
+      }
+    }
+    elements.forEach((el, index) => {
+      if (!el) return;
+      if (index === openIndex) el.removeAttribute('hidden');
+      else if (el.getAttribute('hidden') !== 'until-found') el.setAttribute('hidden', 'until-found');
+    });
+    // `items`, not just its length: answers are keyed by their question, so a
+    // new list of the same length (one post to another) renders new elements
+    // that need hiding too.
+  }, [openIndex, items]);
+
+  // The browser fires `beforematch` on a closed answer just before it reveals
+  // it for a find-in-page or #:~:text= match.
+  useBrowserLayoutEffect(() => {
+    const listeners = answers.current.slice(0, items.length).map((el, index) => {
+      if (!el) return null;
+      const open = () => setOpenIndex(index);
+      el.addEventListener('beforematch', open);
+      return () => el.removeEventListener('beforematch', open);
+    });
+    return () => listeners.forEach((remove) => remove && remove());
+  }, [items]);
 
   return (
     <div className="faq-list">
       {items.map((item, index) => {
         const isOpen = index === openIndex;
         const answerId = `${baseId}-answer-${index}`;
+        const parts = answerParagraphs(item.a);
+        const more = item.more && item.more.to && (
+          <>
+            <br />
+            <MoreLink more={item.more} />
+          </>
+        );
         const question = (
           <button
             type="button"
@@ -72,15 +158,22 @@ export default function FaqAccordion({ items, headingLevel, defaultOpen = 0 }) {
             ) : (
               question
             )}
-            <p className="faq-answer" id={answerId} hidden={!isOpen}>
-              {item.a}
-              {item.more && item.more.to && (
-                <>
-                  <br />
-                  <MoreLink more={item.more} />
-                </>
-              )}
-            </p>
+            {parts ? (
+              // Same .faq-answer paragraphs; its bottom padding spaces them.
+              <div className="faq-answer-group" id={answerId} ref={answerRef(index)}>
+                {parts.map((text, partIndex) => (
+                  <p className="faq-answer" key={text.slice(0, 40)}>
+                    {text}
+                    {partIndex === parts.length - 1 && more}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="faq-answer" id={answerId} ref={answerRef(index)}>
+                {item.a}
+                {more}
+              </p>
+            )}
           </div>
         );
       })}

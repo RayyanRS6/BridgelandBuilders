@@ -244,9 +244,26 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
-      "heroSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.270da013.webp 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.ff3bbe5d.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-480.f7c418f1.avif 480w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e88bc988.avif 880w, /images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1320.e94c26ca.avif 1320w"
+      "image": {
+        "base": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "270da013",
+          "e059f48d",
+          "ff3bbe5d"
+        ],
+        "avif": [
+          "f7c418f1",
+          "e88bc988",
+          "e94c26ca"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
@@ -255,10 +272,25 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-08-05",
       "readMinutes": 10,
-      "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-      "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-      "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "c1d3b9fa",
+          "3b993117",
+          "3dde30a7"
+        ],
+        "avif": [
+          "c03d571e",
+          "8eb20a2f",
+          "504b262f"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "clinic-renovation-permits-winnipeg",
@@ -266,10 +298,27 @@ export default {
       "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
       "category": "Commercial",
       "date": "2026-10-13",
-      "readMinutes": 8,
-      "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
-      "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.18450584.avif 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.e03ed2b1.avif 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.75e30f7c.avif 1320w"
+      "readMinutes": 9,
+      "image": {
+        "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "3fb04080",
+          "6b2a1b51",
+          "0e8b8a5a"
+        ],
+        "avif": [
+          "18450584",
+          "e03ed2b1",
+          "75e30f7c"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

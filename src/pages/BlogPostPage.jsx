@@ -8,7 +8,7 @@ import BlogCard, { formatPostDate, hasPost, loadPost } from '../components/BlogC
 import { ArrowRightIcon, CalendarIcon, ClockIcon } from '../components/icons.jsx';
 import { personById, personPath } from '../data/people.js';
 import { serviceByPath } from '../data/services.js';
-import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { BBB_PROFILE_URL, INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { buildPostHead } from '../data/postContent.js';
 import useSeo from '../hooks/useSeo.js';
 import { keepServerHtml, lazyWithRetry, retryLoad } from '../lib/lazyRetry.js';
@@ -25,16 +25,19 @@ const ARTICLE_IMAGE_SIZES = '(max-width: 920px) 100vw, 880px';
 const GENERAL_CLUSTERS = ['winnipeg-permits', 'renovation-money', 'renovation-planning', 'hiring-a-contractor', 'energy-rebates'];
 
 /**
- * The post's secondary CTA: its service page when the post is about one
- * service, else the services hub. A post is general when it names four or
- * more services, or several in a general cluster; a single-service post
- * (e.g. basement permits) keeps its service. A service whose page is not live
- * yet also falls back to the hub.
+ * The post's secondary CTA: its `ctaService` (blog-raw) when that page is
+ * live; else its service page when the post is about one service, else the
+ * services hub. A post is general when it names four or more services, or
+ * several in a general cluster; a single-service post (e.g. basement permits)
+ * keeps its service. A service whose page is not live yet also falls back to
+ * the hub.
  */
 function serviceCta(post) {
+  const chosen = post.ctaService ? serviceByPath(post.ctaService) : null;
   const services = post.services || [];
   const general = services.length >= 4 || (services.length > 1 && GENERAL_CLUSTERS.includes(post.cluster));
-  const service = !general && services[0] ? serviceByPath(services[0]) : null;
+  const service =
+    chosen && chosen.status === 'live' ? chosen : !general && services[0] ? serviceByPath(services[0]) : null;
   return service && service.status === 'live'
     ? { to: service.path, label: `See our ${service.label || service.navLabel}` }
     : { to: '/services', label: 'See all our services' };
@@ -237,6 +240,12 @@ function PostPage({ post }) {
                 <p className="blog-post-cta-call">
                   or call <a href={SITE_PHONE_TEL} data-cta="blog-post-call">{SITE_PHONE}</a>
                 </p>
+                {/* Trust line (plan §19): the BBB profile link only, no rating. */}
+                {BBB_PROFILE_URL && (
+                  <p className="blog-post-cta-call">
+                    or check us on <a href={BBB_PROFILE_URL} rel="noopener" target="_blank" data-cta="blog-post-bbb">the Better Business Bureau</a>
+                  </p>
+                )}
               </div>
             </div>
 

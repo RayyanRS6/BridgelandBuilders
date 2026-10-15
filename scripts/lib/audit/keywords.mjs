@@ -125,6 +125,12 @@ export function checkKeywords({ list, map, pages, report }) {
     const isLive = pages.has(page.path);
     if (page.status === 'live' && !isLive) report.warn('keywords.status-mismatch', page.path, 'status "live" but the page is not prerendered');
     else if (page.status && page.status !== 'live' && isLive) report.warn('keywords.status-mismatch', page.path, `status "${page.status}" but the page is prerendered — flip it to "live"`);
+    // A blocked URL can never exist (keyword-map.json _meta.status.blocked), so
+    // a keyword left on it is targeted nowhere: move it to a real page.
+    if (page.status === 'blocked') {
+      const held = [...page.primary, ...page.secondary, ...page.supporting];
+      if (held.length) report.warn('keywords.blocked-holds-keywords', page.path, `status "blocked" but still lists ${held.length} keyword(s): ${held.join('; ')} — move them to the page named in keywordsMovedTo`);
+    }
   }
 
   if (list) {
@@ -138,7 +144,8 @@ export function checkKeywords({ list, map, pages, report }) {
   }
 
   for (const page of map.pages) {
-    if (!page.primary.length) continue;
+    // Blocked URLs are never built, so "not live yet" would be noise.
+    if (!page.primary.length || page.status === 'blocked') continue;
     const live = pages.get(page.path);
     if (!live) {
       report.info('keywords.page-not-live', page.path, `primary "${page.primary.join(' + ')}" — page not prerendered yet`);

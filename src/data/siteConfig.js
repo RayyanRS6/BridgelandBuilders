@@ -1,3 +1,4 @@
+import { NEARBY_AREAS_TEXT, SERVICE_AREA_NAMES } from './areas.js';
 import { liveServices } from './services.js';
 
 // Single source of truth for everything URL- and identity-related.
@@ -41,146 +42,21 @@ export const SITE_ADDRESS = MAILING_ADDRESS;
 export const SITE_ADDRESS_LINE = MAILING_ADDRESS_LINE;
 export const SITE_LOCALE = 'en_CA';
 
-// Service area: Winnipeg plus nearby communities within about an hour. One
-// list feeds schema areaServed, llms files, the service-area page and the quote
-// form. `confirmed: true` = already claimed on the site; `confirmed: false` =
-// candidate awaiting owner confirmation (never published until confirmed).
-// `type` is the schema.org type (City covers cities and towns; Place = an
-// unincorporated community inside a rural municipality). `wikipedia` URLs were
-// checked against the Wikipedia API (canonical article titles) on 2026-10-13.
-// `permitAuthority: 'verify'` = not yet confirmed; never publish it as-is.
-export const SERVICE_AREAS = [
-  {
-    name: 'Winnipeg',
-    slug: 'winnipeg',
-    type: 'City',
-    municipality: 'City of Winnipeg',
-    wikipedia: 'https://en.wikipedia.org/wiki/Winnipeg',
-    permitAuthority: 'City of Winnipeg',
-    confirmed: true,
-  },
-  {
-    name: 'Headingley',
-    slug: 'headingley',
-    type: 'AdministrativeArea',
-    municipality: 'RM of Headingley',
-    wikipedia: 'https://en.wikipedia.org/wiki/Rural_Municipality_of_Headingley',
-    permitAuthority: 'RM of Headingley',
-    confirmed: true,
-  },
-  {
-    name: 'East St. Paul',
-    slug: 'east-st-paul',
-    type: 'AdministrativeArea',
-    municipality: 'RM of East St. Paul',
-    wikipedia: 'https://en.wikipedia.org/wiki/Rural_Municipality_of_East_St._Paul',
-    permitAuthority: 'Red River Planning District',
-    confirmed: true,
-  },
-  {
-    name: 'West St. Paul',
-    slug: 'west-st-paul',
-    type: 'AdministrativeArea',
-    municipality: 'RM of West St. Paul',
-    wikipedia: 'https://en.wikipedia.org/wiki/Rural_Municipality_of_West_St._Paul',
-    permitAuthority: 'Red River Planning District',
-    confirmed: true,
-  },
-  {
-    name: 'Oak Bluff',
-    slug: 'oak-bluff',
-    type: 'Place',
-    municipality: 'RM of Macdonald',
-    wikipedia: 'https://en.wikipedia.org/wiki/Oak_Bluff,_Manitoba',
-    permitAuthority: 'RM of Macdonald',
-    confirmed: true,
-  },
-  {
-    name: 'Selkirk',
-    slug: 'selkirk',
-    type: 'City',
-    municipality: 'City of Selkirk',
-    wikipedia: 'https://en.wikipedia.org/wiki/Selkirk,_Manitoba',
-    // Confirmed through search results from the city's own domain only (its
-    // site blocked automated access on 2026-10-13): re-check in a browser.
-    permitAuthority: 'City of Selkirk',
-    confirmed: true,
-  },
-  {
-    name: 'Steinbach',
-    slug: 'steinbach',
-    type: 'City',
-    municipality: 'City of Steinbach',
-    wikipedia: 'https://en.wikipedia.org/wiki/Steinbach,_Manitoba',
-    permitAuthority: 'City of Steinbach',
-    confirmed: true,
-  },
-  {
-    name: 'Stonewall',
-    slug: 'stonewall',
-    type: 'City',
-    municipality: 'Town of Stonewall',
-    wikipedia: 'https://en.wikipedia.org/wiki/Stonewall,_Manitoba',
-    permitAuthority: 'verify',
-    confirmed: false,
-  },
-  {
-    name: 'Niverville',
-    slug: 'niverville',
-    type: 'City',
-    municipality: 'Town of Niverville',
-    wikipedia: 'https://en.wikipedia.org/wiki/Niverville,_Manitoba',
-    permitAuthority: 'verify',
-    confirmed: false,
-  },
-  {
-    name: 'La Salle',
-    slug: 'la-salle',
-    type: 'Place',
-    municipality: 'RM of Macdonald',
-    wikipedia: 'https://en.wikipedia.org/wiki/La_Salle,_Manitoba',
-    permitAuthority: 'verify',
-    confirmed: false,
-  },
-  {
-    name: 'Lorette',
-    slug: 'lorette',
-    type: 'Place',
-    municipality: 'RM of Taché',
-    wikipedia: 'https://en.wikipedia.org/wiki/Lorette,_Manitoba',
-    permitAuthority: 'verify',
-    confirmed: false,
-  },
-  {
-    name: 'Île-des-Chênes',
-    slug: 'ile-des-chenes',
-    type: 'Place',
-    municipality: 'RM of Ritchot',
-    wikipedia: 'https://en.wikipedia.org/wiki/%C3%8Ele-des-Ch%C3%AAnes',
-    permitAuthority: 'verify',
-    confirmed: false,
-  },
-  {
-    name: 'Oakbank',
-    slug: 'oakbank',
-    type: 'Place',
-    municipality: 'RM of Springfield',
-    wikipedia: 'https://en.wikipedia.org/wiki/Oakbank,_Manitoba',
-    permitAuthority: 'verify',
-    confirmed: false,
-  },
-];
-
-/** Confirmed service-area names, Winnipeg first. */
-export const SERVICE_AREA_NAMES = SERVICE_AREAS.filter((area) => area.confirmed).map((area) => area.name);
-
-const listJoin = (items) =>
-  items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('');
+// Service area: Winnipeg plus nearby communities within about an hour. The
+// list and its helpers live in areas.js (import-free, so the service content
+// modules can read it too); re-exported here under the existing names.
+export {
+  NEARBY_AREA_NAMES,
+  NEARBY_AREAS_TEXT,
+  NEARBY_AREAS_TEXT_OR,
+  NEARBY_AREAS_TEXT_SHORT,
+  SERVICE_AREAS,
+  SERVICE_AREA_NAMES,
+  listJoin,
+} from './areas.js';
 
 /** The one sentence used wherever the service area is described. */
-export const SERVICE_AREA_STATEMENT = `${SITE_NAME} serves Winnipeg and nearby communities within about an hour of the city, including ${listJoin(
-  SERVICE_AREA_NAMES.filter((name) => name !== 'Winnipeg')
-)}.`;
+export const SERVICE_AREA_STATEMENT = `${SITE_NAME} serves Winnipeg and nearby communities within about an hour of the city, including ${NEARBY_AREAS_TEXT}.`;
 
 // The business's own profiles (found in the SEO audit; each carries the same
 // phone number and website). Used as Organization sameAs and for footer links.
@@ -198,12 +74,15 @@ export const BBB_PROFILE_URL =
   'https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638';
 
 // Google Business Profile, confirmed by the owner 2026-10-13 (same listing:
-// ludocid 6390477049138999065). reviewUrl stays null until the owner supplies
-// the "Ask for reviews" link from the profile.
+// ludocid 6390477049138999065). reviewUrl is Google's write-a-review form for
+// placeId; the Place ID embeds that same CID (its last 8 bytes, little-endian,
+// checked 2026-10-15). Not shown on the site: /review and /reviews redirect
+// here (EXTERNAL_REDIRECTS in src/data/redirects.js) for QR codes, texts and
+// email signatures.
 export const GBP = {
   mapsUrl: 'https://maps.google.com/?cid=6390477049138999065',
   placeId: 'ChIJx06HPnAAgmoRGW83mwSJr1g',
-  reviewUrl: null,
+  reviewUrl: 'https://search.google.com/local/writereview?placeid=ChIJx06HPnAAgmoRGW83mwSJr1g',
 };
 
 // Google review summary, read from the live profile (update monthly, plan §20).

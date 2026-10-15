@@ -10,8 +10,23 @@ export default {
   "category": "Hiring a Contractor",
   "date": "2026-08-05",
   "readMinutes": 10,
-  "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-  "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-  "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w"
+  "image": {
+    "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "c1d3b9fa",
+      "3b993117",
+      "3dde30a7"
+    ],
+    "avif": [
+      "c03d571e",
+      "8eb20a2f",
+      "504b262f"
+    ],
+    "main": 1
+  }
 };

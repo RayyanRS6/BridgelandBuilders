@@ -122,8 +122,9 @@ function viewFor(path) {
  * The guide is chosen by the URL (data: src/data/costGuides/); an unknown or
  * draft guide is a 404.
  *
- * Layout: breadcrumb → PageHero → quick answer → price tables → what moves the
- * price → budget/question sections → the matching estimator → FAQs → sources
+ * Layout: breadcrumb → PageHero → quick answer (heading: guide.answerHeading)
+ * → price tables → what moves the price (driver cards; their text takes inline
+ * links) → budget/question sections → the matching estimator → FAQs → sources
  * → related pages (guide.related) → CTA → how the numbers were built
  * (methodology + sign-off).
  */
@@ -225,7 +226,7 @@ function CostGuideView({ guide }) {
 
             {guide.answer && (
               <aside className="blog-takeaways blog-answer">
-                <h2>Quick answer</h2>
+                <h2>{guide.answerHeading || 'Quick answer'}</h2>
                 <p>{renderInline(guide.answer, 'answer')}</p>
               </aside>
             )}
@@ -253,7 +254,7 @@ function CostGuideView({ guide }) {
                 >
                   <div className="include-num">{pad(index)}</div>
                   <h3>{driver.title}</h3>
-                  <p>{driver.text}</p>
+                  <p>{renderInline(driver.text, `driver-${index}`)}</p>
                 </div>
               ))}
             </div>

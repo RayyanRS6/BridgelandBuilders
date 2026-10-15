@@ -46,8 +46,8 @@ export default {
     floatingText: 'Zoning, exits and separation settled before the first stud goes up.',
     paragraphs: [
       'A basement suite has to work as its own home. The City of Winnipeg treats an attached secondary suite as an independent dwelling unit with a separate entrance, and the Manitoba Building Code adds requirements for exits, egress windows, ceiling height, fire protection, smoke and carbon monoxide alarms, and sound control.',
-      'Most of those decisions are fixed before framing, so that’s where we start. At the on-site visit we look at ceiling height, window openings, where an entrance could go, and where the furnace, water heater and panel sit. Then we confirm the zoning and permit route for your lot before you commit to a layout.',
-      'Once the plan is approved, the build follows the same order as any basement we develop: moisture checked first, walls insulated for winter, then mechanical, drywall and finishes, with inspections at each stage and a progress update every week.',
+      'Most of those decisions are fixed before framing, so that’s where we start. At [the on-site visit](/our-process) we look at ceiling height, window openings, where an entrance could go, and where the furnace, water heater and panel sit. Then we confirm the zoning and permit route for your lot before you commit to a layout.',
+      'Once the plan is approved, the build follows the same order as [any basement we develop](/services/basement-renovations): moisture checked first, walls insulated for winter, then mechanical, drywall and finishes, with inspections at each stage and a progress update every week.',
     ],
     checklist: ['Separate Entrances', 'Egress Windows', 'Suite Kitchens & Baths', 'Fire Protection & Sound Control'],
   },
@@ -74,8 +74,8 @@ export default {
     { title: 'Suite in an unfinished basement', text: 'The cleanest start: layout, exits, separation and plumbing are all planned from bare concrete, with nothing to remove first.' },
     { title: 'Converting a finished basement', text: 'An existing rec room or bedroom turned into a suite. Walls and ceilings often need opening to add fire protection, sound control and new plumbing.' },
     { title: 'Basement rental suite', text: 'A suite built for a tenant, with its own entrance and its own kitchen and bathroom. Landlord and tenant matters fall under the Province’s Residential Tenancies Branch.' },
-    { title: 'In-law or family suite', text: 'A suite for a parent, adult child or relative who wants independence under the same roof. A federal tax credit may apply; see the questions below.' },
-    { title: 'One-bedroom basement apartment', text: 'A typical layout: an open kitchen and living area, one bedroom with an egress window, a bathroom and laundry, sized to the floor area zoning allows.' },
+    { title: 'In-law or family suite', text: 'A suite for a parent, adult child or relative who wants independence under the same roof. [A federal tax credit](/blog/manitoba-renovation-tax-credits-rebates) may apply; see the questions below.' },
+    { title: 'One-bedroom basement apartment', text: 'A typical layout: an open kitchen and living area, one bedroom with [an egress window](/blog/basement-development-permits-winnipeg), a bathroom and laundry, sized to the floor area zoning allows.' },
     { title: 'Planning a suite for later', text: 'Not ready to build it yet? A basement can be developed with a future suite’s entrance, plumbing and separation in mind, so converting later means less rework.' },
   ],
 
@@ -83,7 +83,7 @@ export default {
     tag: 'In Winnipeg',
     title: 'What does Winnipeg require for a secondary suite?',
     intro:
-      'Two permits, at minimum. The City of Winnipeg says homeowners need a development permit and a building permit before building a secondary suite, plus separate electrical and plumbing permits. Zoning rules set limits such as the suite’s floor area, and the Zoning By-law was amended in June 2025, so we confirm the current rules for your lot first.',
+      'Two permits, at minimum. The City of Winnipeg says homeowners need [a development permit and a building permit](/blog/secondary-suite-rules-winnipeg) before building a secondary suite, plus separate electrical and plumbing permits. Zoning rules set limits such as the suite’s floor area, and the Zoning By-law was amended in June 2025, so we confirm the current rules for your lot first.',
     items: [
       { title: 'Development permit, then building permit', text: 'The building permit application can go in once the development permit application is complete (concurrent review) or after it is approved (sequential review). Electrical and plumbing permits are separate again.' },
       { title: 'One suite per property', text: 'The City’s secondary suites page says only one attached or detached secondary suite is permitted on a single-family property, and an attached suite is an independent dwelling unit with a separate entrance. We confirm how that applies to your lot before the layout is set.' },
@@ -140,7 +140,7 @@ export default {
       'Basement suite renovations in Winnipeg: zoning and permits confirmed first, then entrance, egress, kitchen, bath and separation. Free on-site visit.',
     serviceType: 'Basement suite renovation',
     primaryKeyword: 'basement suite renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // No costTeaser: the estimator prices suites with the basement ranges and has

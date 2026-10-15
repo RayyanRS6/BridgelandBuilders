@@ -11,7 +11,9 @@ import { ESTIMATOR_URLS, PROJECT_ESTIMATORS } from '../data/estimators.js';
 import { serviceByPath } from '../data/services.js';
 import { COST_HUB_PATH, INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { serviceTrail } from '../data/trails.js';
-import { unsplashImage } from '../lib/unsplash.js';
+import { renderInline } from '../lib/inline.jsx';
+import { stockImage } from '../lib/unsplash.js';
+import Picture from '../components/Picture.jsx';
 
 const FORM_ID = 'service-quote-form';
 const ESTIMATOR_ID = 'service-price-guide';
@@ -50,8 +52,9 @@ const delay = (index, seconds) => (index > 0 ? { transitionDelay: `${seconds}s` 
  *
  * Section order (plan §7): hero → ticker → stats → intro → includes → types →
  * local → gallery → process → cost teaser → testimonial → lead → FAQs →
- * related services → guides → CTA → sign-off. Every section after the hero
- * renders only when its content exists, using the page's existing classes.
+ * related services → guides → CTA → updated date and sign-off. Every section
+ * after the hero renders only when its content exists, using the page's
+ * existing classes.
  */
 export default function ProjectPage({ project, service, guidePosts = [] }) {
   const name = project.breadcrumb || (service && service.label) || '';
@@ -75,6 +78,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
     .map((path) => serviceByPath(path))
     .filter((item) => item && item.status === 'live' && (!service || item.path !== service.path));
   const signoff = project.ownerSignoff || null;
+  // The date that drives this page's dateModified (services.js serviceSeo → meta.updated).
+  const updated = (project.seo && project.seo.updated) || null;
   // "your kitchen renovation" / "your flooring project": reads right with every
   // page name (the price guide card and the CTA banner below).
   const projectName = name.toLowerCase();
@@ -177,7 +182,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="why-grid">
               <div className="why-visual-stack reveal" style={{ position: 'relative' }}>
                 <div className="why-main-img">
-                  <img {...unsplashImage(project.intro.image, INTRO_IMAGE)} alt={project.intro.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
+                  <Picture {...stockImage(project.intro.image, INTRO_IMAGE)} alt={project.intro.imageAlt} width="1000" height="750" loading="lazy" decoding="async" />
                 </div>
                 <div className="why-floating-card">
                   <div className="why-floating-title">{project.intro.floatingTitle}</div>
@@ -189,8 +194,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 <span className="section-tag">{project.intro.tag}</span>
                 <h2 className="section-title">{project.intro.title}</h2>
                 <div className="why-paragraphs">
-                  {(project.intro.paragraphs || []).map((paragraph) => (
-                    <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                  {(project.intro.paragraphs || []).map((paragraph, index) => (
+                    <p key={paragraph.slice(0, 40)}>{renderInline(paragraph, `intro-${index}`)}</p>
                   ))}
                 </div>
 
@@ -222,7 +227,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">{project.includes.tag}</span>
               <h2 className="section-title">{project.includes.title}</h2>
-              <p className="section-desc">{project.includes.desc}</p>
+              <p className="section-desc">{renderInline(project.includes.desc, 'includes')}</p>
             </div>
 
             <div className="includes-grid">
@@ -235,7 +240,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   <div className="include-num">{item.num}</div>
                   <h3>{item.title}</h3>
                   {paragraphs(item.text).map((text) => (
-                    <p key={text.slice(0, 40)}>{text}</p>
+                    <p key={text.slice(0, 40)}>{renderInline(text, `include-${item.num}`)}</p>
                   ))}
                 </div>
               ))}
@@ -251,7 +256,9 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">{project.typesTag || 'Project Types'}</span>
               <h2 className="section-title">{project.typesTitle || `Types of ${(service && service.label) || name}`}</h2>
-              {project.typesDesc && <p className="section-desc">{project.typesDesc}</p>}
+              {paragraphs(project.typesDesc).map((text, index) => (
+                <p className="section-desc" key={text.slice(0, 40)}>{renderInline(text, `types-${index}`)}</p>
+              ))}
             </div>
 
             <div className="includes-grid">
@@ -268,7 +275,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                     {/* Same linked-title pattern as the /service-areas cards. */}
                     <h3>{to ? <Link to={to}>{item.title}</Link> : item.title}</h3>
                     {paragraphs(item.text).map((text) => (
-                      <p key={text.slice(0, 40)}>{text}</p>
+                      <p key={text.slice(0, 40)}>{renderInline(text, `type-${index}`)}</p>
                     ))}
                   </div>
                 );
@@ -285,7 +292,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
             <div className="section-header center reveal">
               <span className="section-tag">{local.tag || 'In Winnipeg'}</span>
               <h2 className="section-title">{local.title}</h2>
-              {local.intro && <p className="section-desc">{local.intro}</p>}
+              {local.intro && <p className="section-desc">{renderInline(local.intro, 'local')}</p>}
               {/* The page's one link to the service-area hub, which lists who
                   issues permits in each community. */}
               <p className="section-desc">
@@ -295,18 +302,16 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 </Link>
                 .
               </p>
-              {localSources.length > 0 && (
-                <p className="section-desc">
-                  Sources:{' '}
-                  {localSources.map((source, index) => (
-                    <Fragment key={source.url}>
-                      {index > 0 && '; '}
-                      <a href={source.url} rel="noopener" target="_blank">{source.label}</a>
-                      {source.accessed && ` (verified ${source.accessed})`}
-                    </Fragment>
-                  ))}
+              {/* One source per line rather than one long run-on paragraph
+                  (readability: no paragraph over 60 words). */}
+              {localSources.map((source, index) => (
+                <p className="section-desc" key={source.url}>
+                  {index === 0 && 'Sources: '}
+                  <a href={source.url} rel="noopener" target="_blank">{source.label}</a>
+                  {source.accessed && ` (verified ${source.accessed})`}
+                  {index < localSources.length - 1 && ';'}
                 </p>
-              )}
+              ))}
             </div>
 
             <div className="includes-grid">
@@ -319,7 +324,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   <div className="include-num">{item.num || pad(index + 1)}</div>
                   <h3>{item.title}</h3>
                   {paragraphs(item.text).map((text) => (
-                    <p key={text.slice(0, 40)}>{text}</p>
+                    <p key={text.slice(0, 40)}>{renderInline(text, `local-${index}`)}</p>
                   ))}
                 </div>
               ))}
@@ -345,7 +350,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                   key={item.title}
                   style={delay(index, index * 0.1)}
                 >
-                  <img {...unsplashImage(item.img, GALLERY_IMAGE)} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
+                  <Picture {...stockImage(item.img, GALLERY_IMAGE)} alt={item.alt} width="800" height="600" loading="lazy" decoding="async" />
                   <div className="gallery-overlay">
                     <div className="gallery-overlay-title">{item.title}</div>
                     <p>{item.text}</p>
@@ -472,7 +477,7 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
               </Link>
             </div>
             <div className="reveal">
-              <FaqAccordion items={project.faqs} />
+              <FaqAccordion items={project.faqs} headingLevel={3} />
             </div>
           </div>
         </section>
@@ -560,19 +565,28 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
         </div>
       </section>
 
-      {/* OWNER SIGN-OFF */}
-      {signoff && signoff.name && (
+      {/* LAST UPDATED + OWNER SIGN-OFF. The date is the page's seo.updated,
+          the same date as its WebPage dateModified and sitemap lastmod, in the
+          cost guides' "Updated" format. */}
+      {(updated || (signoff && signoff.name)) && (
         <div className="container">
           <div className="section-header center">
-            <p className="section-desc">
-              Reviewed by {signoff.name}{signoff.role ? `, ${signoff.role}` : ''}
-              {signoff.date && (
-                <>
-                  {' '}on <time dateTime={signoff.date}>{formatPostDate(signoff.date)}</time>
-                </>
-              )}
-              .
-            </p>
+            {updated && (
+              <p className="policy-updated">
+                Updated <time dateTime={updated}>{formatPostDate(updated)}</time>
+              </p>
+            )}
+            {signoff && signoff.name && (
+              <p className="section-desc">
+                Reviewed by {signoff.name}{signoff.role ? `, ${signoff.role}` : ''}
+                {signoff.date && (
+                  <>
+                    {' '}on <time dateTime={signoff.date}>{formatPostDate(signoff.date)}</time>
+                  </>
+                )}
+                .
+              </p>
+            )}
           </div>
         </div>
       )}

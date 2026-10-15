@@ -15,6 +15,7 @@
 // "priced after a visit" section and carries no numbers.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   // Project slug kept from before the rename to "home additions" (plan D6): it
@@ -43,9 +44,9 @@ export default {
     floatingTitle: 'Built as One Home',
     floatingText: 'Rooflines, floors, trim, and finishes planned to connect naturally.',
     paragraphs: [
-      'Sometimes the location is right but the house has stopped fitting. A larger kitchen, a family room, a main-floor bedroom, or a proper mudroom can give you the space you need without the cost and disruption of moving.',
+      'Sometimes the location is right but the house has stopped fitting. [A larger kitchen](/services/kitchen-renovations), a family room, a main-floor bedroom, or a proper mudroom can give you the space you need without the cost and disruption of moving.',
       'A good addition should not feel attached as an afterthought. We look at the existing roofline, foundation, floor heights, mechanical systems, and exterior materials before the plans are finalized. That early work is what makes the new space feel like part of the original home.',
-      'We coordinate the build from excavation and structure through insulation, utilities, drywall, flooring, and final paint. The trades and the schedule are managed for you instead of by you, and you get a progress update every week.',
+      'We coordinate the build from excavation and structure through insulation, utilities, drywall, flooring, and final paint. [The trades and the schedule are managed for you](/services/general-contracting) instead of by you, and you get a progress update every week.',
     ],
     checklist: ['Kitchen Extensions', 'Family Rooms', 'Main-Floor Bedrooms', 'Mudrooms & Entry Additions'],
   },
@@ -60,14 +61,14 @@ export default {
       { num: '03', title: 'Foundation & Structure', text: 'Excavation, foundation work, framing, roofing, windows, and exterior closure completed in the correct sequence.' },
       { num: '04', title: 'Electrical, Plumbing & HVAC', text: 'Extending the home systems safely so the new room has the lighting, outlets, plumbing, heating, and cooling it needs.' },
       { num: '05', title: 'Interior Connection', text: 'Opening the existing house and carefully matching floor heights, openings, trim, and transitions between old and new.' },
-      { num: '06', title: 'Exterior & Final Finishes', text: 'Siding or masonry, insulation, drywall, flooring, paint, fixtures, inspections, and a complete cleanup before handover.' },
+      { num: '06', title: 'Exterior & Final Finishes', text: 'Siding or [masonry](/services/masonry-stucco), insulation, drywall, flooring, paint, fixtures, inspections, and a complete cleanup before handover.' },
     ],
   },
 
   typesTag: 'Project Types',
   typesTitle: 'What kind of room addition do you need?',
   typesDesc:
-    'Most home additions create one of a handful of rooms: a family room, a larger kitchen, a main-floor bedroom, a mudroom or a home office. Which one you need, and where it joins the existing house, shapes the size, the foundation and the permits, so that is where the conversation starts at the on-site visit.',
+    'Most home additions create one of a handful of rooms: a family room, a larger kitchen, a main-floor bedroom, a mudroom or a home office. Which one you need, and where it joins the existing house, shapes the size, the foundation and the permits, so that is where the conversation starts at [the on-site visit](/our-process).',
   types: [
     { title: 'Family room addition', text: 'Extra living space at the back or side of the house, with windows, insulation and heating planned so the room stays comfortable through winter.' },
     { title: 'Kitchen extension', text: 'Pushing the kitchen out to fit an island, a pantry or an eating area, with plumbing, venting and electrical planned alongside the structure.' },
@@ -78,16 +79,18 @@ export default {
 
   local: {
     tag: 'In Winnipeg',
-    title: 'What permits does a home addition need in Winnipeg?',
+    // Worded for this page's intent; the zoning guide (linked in the first
+    // item) keeps the question "What permits does a home addition need in Winnipeg?".
+    title: 'Permits for your addition: what we coordinate',
     intro:
-      'Two at minimum. The City of Winnipeg requires a development permit and a building permit for every house addition, plus electrical and plumbing permits where that work is involved. The development permit is issued under the Winnipeg Zoning By-law and should be confirmed before the building permit application. We coordinate both with the City or your local municipality.',
+      'The City of Winnipeg requires a development permit and a building permit for every house addition, plus electrical and plumbing permits where that work is involved. The development permit is issued under the Winnipeg Zoning By-law and should be confirmed before the building permit application. We coordinate both with the City or your local municipality.',
     items: [
-      { title: 'Development permit', text: 'Every house addition needs one under the Winnipeg Zoning By-law. The City advises confirming it, and any other supporting approvals, before applying for the building permit, since zoning can affect the size and position of the addition.' },
+      { title: 'Development permit', text: 'Every house addition needs one under the Winnipeg Zoning By-law. The City advises confirming it, and any other supporting approvals, before applying for the building permit, since [zoning can affect the size and position of the addition](/blog/home-additions-and-zoning-winnipeg).' },
       { title: 'Building permit', text: 'Every house addition also needs a building permit under the Winnipeg Building By-law. The City’s application form lists the documents it needs, and incomplete applications result in delays.' },
       { title: 'Engineered foundations', text: 'Where a structural element goes beyond Part 9 of the Manitoba Building Code, such as concrete grade beams supported on piles, the City requires a sealed drawing from a professional engineer registered in Manitoba and a Professional Designer’s Certificate for Housing.' },
       { title: 'Electrical and plumbing', text: 'If the addition includes electrical or plumbing work, the City requires separate trade permits for it, on top of the development and building permits.' },
       { title: 'Inspections', text: 'Rough-in inspections happen before framing, HVAC, electrical or plumbing work is covered. The final inspection confirms all work under every permit is complete and the addition is ready for occupancy.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the local municipality or planning district issues the permits and applies its own zoning rules. We confirm them for your property before plans are finalized.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the local municipality or planning district issues the permits and applies its own zoning rules. We confirm them for your property before plans are finalized.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Additions & attached garages', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/additions-attached-garages', accessed: '2026-10-13' },
@@ -147,7 +150,7 @@ export default {
       'Home additions in Winnipeg that match the existing house, with permits, foundation, structure and finishes coordinated. Free on-site visit and quote.',
     serviceType: 'Home addition',
     primaryKeyword: 'home addition Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // No additions cost page (the estimator has no additions data), so the

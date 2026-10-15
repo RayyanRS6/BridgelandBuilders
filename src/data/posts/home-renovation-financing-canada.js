@@ -15,7 +15,7 @@ export default {
     "Costs & Budgets"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
@@ -202,7 +202,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Our free written quote sets out the scope and the taxes, which is the document to take to your lender. Winnipeg price ranges are in our [renovation cost guide](/renovation-cost-winnipeg), and our guide to [home renovation costs in Canada](/blog/home-renovation-cost-canada) explains what national figures can and can't tell you."
+      "x": "Our free written quote sets out the scope and the taxes, which is the document to take to your lender. [Winnipeg price ranges](/renovation-cost-winnipeg) are in our cost guide, and our guide to [home renovation costs in Canada](/blog/home-renovation-cost-canada) explains what national figures can and can't tell you."
     },
     {
       "t": "h2",
@@ -307,9 +307,26 @@ export default {
       "category": "Money & Rebates",
       "date": "2026-10-13",
       "readMinutes": 10,
-      "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
-      "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.6094b92a.avif 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.e8f9c620.avif 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.a075d7e8.avif 1320w"
+      "image": {
+        "base": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "61d350fa",
+          "c91918d2",
+          "4d58ff60"
+        ],
+        "avif": [
+          "6094b92a",
+          "e8f9c620",
+          "a075d7e8"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-permits",
@@ -318,9 +335,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "home-renovation-cost-canada",
@@ -329,9 +363,26 @@ export default {
       "category": "Costs & Budgets",
       "date": "2026-10-14",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
-      "heroSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "9ad93e01",
+          "5517d108",
+          "6f8cec70"
+        ],
+        "avif": [
+          "02b9c202",
+          "1ff31c44",
+          "f7242463"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

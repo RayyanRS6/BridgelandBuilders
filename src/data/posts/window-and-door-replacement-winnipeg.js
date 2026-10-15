@@ -6,7 +6,7 @@
 export default {
   "slug": "window-and-door-replacement-winnipeg",
   "title": "Window and Door Replacement in Winnipeg: Permits, Glass and Rebates",
-  "metaTitle": "Window and Door Replacement in Winnipeg: What to Know",
+  "metaTitle": "Window Replacement Permits in Winnipeg: What to Know",
   "metaDescription": "When replacing windows and doors in Winnipeg needs a permit, what ENERGY STAR and triple-pane mean, and how the Efficiency Manitoba rebate works in 2026.",
   "excerpt": "Replacing windows and doors is one of the more straightforward upgrades for a Winnipeg home, as long as you know when the City needs a permit, what the labels mean and how the rebate works. Here is the short version, checked against official sources.",
   "category": "Permits & Planning",
@@ -14,7 +14,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp",
@@ -86,7 +86,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "If a new window serves a bedroom, especially in a basement, ask how the building code's bedroom window requirements apply before you choose a size. Our guides to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) and [basement development permits](/blog/basement-development-permits-winnipeg) go into more detail."
+      "x": "If a new window serves a bedroom, especially in a basement, ask how the building code's bedroom window requirements apply before you choose a size. Our guides to [when a renovation needs a permit](/blog/winnipeg-renovation-permits) and [basement development permits](/blog/basement-development-permits-winnipeg) go into more detail."
     },
     {
       "t": "h2",
@@ -315,9 +315,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp",
-      "heroSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.acff5638.webp 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.5f986ef8.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-480.0b02a5a2.avif 480w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.17af2839.avif 880w, /images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1320.bb4a7cd2.avif 1320w"
+      "image": {
+        "base": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "acff5638",
+          "f29111e2",
+          "5f986ef8"
+        ],
+        "avif": [
+          "0b02a5a2",
+          "17af2839",
+          "bb4a7cd2"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "home-renovation-planning-guide-canada",
@@ -326,9 +343,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-      "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "22bd57cd",
+          "26e707ed",
+          "e008916e"
+        ],
+        "avif": [
+          "7c9f9167",
+          "e0167740",
+          "c81697cc"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-permits",
@@ -337,9 +371,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

@@ -10,7 +10,24 @@ export default {
   "category": "Costs & Budgets",
   "date": "2026-10-14",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
-  "heroSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w"
+  "image": {
+    "base": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "9ad93e01",
+      "5517d108",
+      "6f8cec70"
+    ],
+    "avif": [
+      "02b9c202",
+      "1ff31c44",
+      "f7242463"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

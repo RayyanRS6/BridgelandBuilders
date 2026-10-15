@@ -19,7 +19,7 @@
 const ACCESSED = '2026-10-13';
 
 export const EDITORIAL_POLICY = {
-  lastUpdated: '2026-10-14',
+  lastUpdated: '2026-10-15',
   hero: {
     eyebrow: 'Editorial Policy',
     title: 'HOW WE WRITE',
@@ -32,7 +32,7 @@ export const EDITORIAL_POLICY = {
     'Our pages are written for Bridgeland Builders from the company’s own information and from official sources.',
     'Facts about permits, programs and rules come from official sources, linked with the date we checked them.',
     'Any price ranges we publish are based on our own figures, never on other contractors’ prices.',
-    'If AI tools help draft a page, a person checks every fact before it is published.',
+    'If AI tools help draft a page, every fact, figure and link is checked against its original source before the page is published.',
     'Found a mistake? Email us and we will look into it.',
   ],
   sections: [
@@ -105,7 +105,7 @@ export const EDITORIAL_POLICY = {
       blocks: [
         {
           t: 'p',
-          x: 'We sometimes use AI writing tools to help draft, organise or edit our pages. A person on our team checks every fact, figure and link against the original source before the page is published, and we don’t publish AI-written text without that review.',
+          x: 'We sometimes use AI writing tools to help draft, organise or edit our pages. Every fact, figure and link is checked against the original source before a page is published, and the page links that source with the date it was checked. A named reviewer is shown on a page once one is recorded.',
         },
       ],
     },

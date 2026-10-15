@@ -14,9 +14,16 @@
  *                             reviewedBy } and `related` (three ranked cards).
  *   src/data/postCards/<slug>.js  CLIENT. One post's card, for the guides on
  *                             service pages (content.guides).
- *   src/data/blogList.js      CLIENT. Everything /blog needs in one module:
+ *   src/data/blogList.js      CLIENT. Everything /blog renders in one module:
  *                             BLOG_CATEGORIES and BLOG_LIST (cards plus
- *                             categories, metaDescription and ogImage).
+ *                             categories). Cards carry a self-hosted hero as
+ *                             a compact record (src/lib/cardImage.js), not
+ *                             as srcset strings.
+ *   src/data/blogListSeo.js   CLIENT, lazy. BLOG_NODE_POSTS: what the /blog
+ *                             Blog node lists per post (title, metaDescription,
+ *                             date, ogImage). BlogPage loads it only when the
+ *                             head has to be written (a client-side
+ *                             navigation), never on the prerendered page.
  *   src/data/homeGuides.js    CLIENT. The three guide cards on the home page
  *                             (GUIDE_SLUGS below).
  *   src/data/blogIndex.js     CLIENT. BLOG_CARDS: every published post's card
@@ -46,7 +53,14 @@
  *                   the first is the post's service CTA unless the post is
  *                   general: 4+ services, or 2+ in a general cluster, see
  *                   BlogPostPage.jsx serviceCta)
+ *   ctaService?     a service path (src/data/services.js) for the post's
+ *                   service CTA, used first whenever that page is live
+ *                   (overrides the services[] rule above)
  *   cluster         topic id shared by posts on one subject ('' = none)
+ *   reviewBy?       YYYY-MM-DD: the post carries facts tied to a date (an
+ *                   event, a season, a program year, a monthly figure);
+ *                   audit-seo warns "content.review-due" once it has passed.
+ *                   Only blogPosts.js (build-only) carries it.
  *   author?, reviewedBy?  ids in src/data/people.js ('' = the business)
  *   answer?         40–60 word quick answer shown above the body
  *   sources[]       { label, url, accessed: 'YYYY-MM-DD' } official sources
@@ -80,12 +94,15 @@
 import { existsSync, readFileSync, readdirSync, unlinkSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { cardImage } from '../src/lib/cardImage.js';
+import { stripInline } from '../src/lib/inlineText.js';
 
 const VERIFY = process.argv.includes('--verify');
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const POSTS_DIR = join(ROOT, 'blog-raw', 'posts');
 const OUT_INDEX = join(ROOT, 'src', 'data', 'blogIndex.js');
 const OUT_LIST = join(ROOT, 'src', 'data', 'blogList.js');
+const OUT_LIST_SEO = join(ROOT, 'src', 'data', 'blogListSeo.js');
 const OUT_HOME = join(ROOT, 'src', 'data', 'homeGuides.js');
 const OUT_FULL = join(ROOT, 'src', 'data', 'blogPosts.js');
 const OUT_BODIES = join(ROOT, 'src', 'data', 'posts');
@@ -294,8 +311,8 @@ function bodyImage(block, fallbackName) {
 
 /* -------------------------------------------------------------- text */
 const INLINE_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
-/** Plain text of inline markup ([label](url) → label, **x** → x). */
-const plain = (text) => String(text || '').replace(INLINE_LINK, '$1').replace(/\*\*([^*]+)\*\*/g, '$1');
+/** Plain text of inline markup ([label](url) → label, **x** → x): the shared src/lib/inlineText.js helper. */
+const plain = stripInline;
 const countWords = (text) => {
   const value = plain(text).trim();
   return value ? value.split(/\s+/).length : 0;
@@ -394,6 +411,15 @@ for (const p of published) {
       if (!SERVICES.some((s) => s.path === path)) fail(`${p.slug}: services entry ${path} is not in src/data/services.js`);
     }
   }
+  if (p.ctaService !== undefined) {
+    const service = SERVICES && SERVICES.find((s) => s.path === p.ctaService);
+    if (typeof p.ctaService !== 'string' || !p.ctaService.startsWith('/services/')) fail(`${p.slug}: ctaService must be a /services/ path`);
+    else if (SERVICES && !service) fail(`${p.slug}: ctaService ${p.ctaService} is not in src/data/services.js`);
+    else if (service && service.status !== 'live') warn(`${p.slug}: ctaService ${p.ctaService} is not live yet — the CTA falls back to the services[] rule`);
+  }
+  if (p.reviewBy !== undefined && !(/^\d{4}-\d{2}-\d{2}$/.test(p.reviewBy || '') && !Number.isNaN(Date.parse(p.reviewBy)))) {
+    fail(`${p.slug}: reviewBy must be a YYYY-MM-DD date`);
+  }
 }
 
 const bodies = new Map();
@@ -429,10 +455,13 @@ let posts = published.map((p) => {
     author: p.author || '',
     reviewedBy: p.reviewedBy || '',
     services: p.services || [],
+    ...(p.ctaService ? { ctaService: p.ctaService } : {}),
     cluster: p.cluster || '',
     memberOnly: !!p.memberOnly,
   };
 });
+// Build-only (blogPosts.js, for audit-seo): not part of any client module.
+const reviewByOf = new Map(published.filter((p) => p.reviewBy).map((p) => [p.slug, p.reviewBy]));
 
 posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.slug.localeCompare(b.slug)));
 
@@ -610,9 +639,59 @@ const pick = (post, fields) =>
     fields.filter((key) => post[key] !== undefined && post[key] !== null && post[key] !== '' && post[key] !== false).map((key) => [key, post[key]])
   );
 
-// What a blog card shows (src/components/BlogCard.jsx).
-const CARD_FIELDS = ['slug', 'title', 'excerpt', 'category', 'date', 'readMinutes', 'hero', 'heroSrc', 'heroSrcSet', 'heroAvifSrcSet'];
-const cardOf = (post) => pick(post, CARD_FIELDS);
+// What a blog card shows (src/components/BlogCard.jsx): its text, and its
+// hero image as a compact record (src/lib/cardImage.js) when it is self-hosted.
+const CARD_TEXT_FIELDS = ['slug', 'title', 'excerpt', 'category', 'date', 'readMinutes'];
+const SELF_HOSTED_FILE = /^(.+)-(\d+)\.([0-9a-f]+)\.(webp|avif)$/;
+
+/** A self-hosted srcset's entries as { base, width, hash, ext }, or null if any entry isn't one. */
+function parseSrcSet(srcSet) {
+  const entries = String(srcSet || '')
+    .split(', ')
+    .map((entry) => {
+      const [url, descriptor, ...rest] = entry.split(' ');
+      const m = SELF_HOSTED_FILE.exec(url || '');
+      return m && !rest.length && descriptor === `${m[2]}w` ? { base: m[1], width: Number(m[2]), hash: m[3], ext: m[4] } : null;
+    });
+  return entries.every(Boolean) ? entries : null;
+}
+
+/**
+ * A card's hero: { image } when the self-hosted files rebuild exactly (same
+ * src, srcset and AVIF srcset) through cardImage, which BlogCard renders
+ * with; otherwise the strings as before (an original or a Wix transform).
+ */
+function cardHero(post) {
+  const webp = post.heroSrcSet ? parseSrcSet(post.heroSrcSet) : null;
+  const avif = post.heroAvifSrcSet ? parseSrcSet(post.heroAvifSrcSet) : [];
+  if (webp && avif && (!avif.length || avif.length === webp.length)) {
+    const base = webp[0].base;
+    const image = {
+      base,
+      widths: webp.map((e) => e.width),
+      webp: webp.map((e) => e.hash),
+      ...(avif.length ? { avif: avif.map((e) => e.hash) } : {}),
+      main: webp.findIndex((e) => `${e.base}-${e.width}.${e.hash}.${e.ext}` === post.heroSrc),
+    };
+    const sameFiles =
+      image.main >= 0 &&
+      webp.every((e) => e.base === base && e.ext === 'webp') &&
+      avif.every((e, i) => e.base === base && e.ext === 'avif' && e.width === image.widths[i]);
+    const back = sameFiles ? cardImage({ image }) : null;
+    if (back && back.src === post.heroSrc && back.srcSet === post.heroSrcSet && back.avifSrcSet === post.heroAvifSrcSet) {
+      return { image };
+    }
+  }
+  return pick(post, ['hero', 'heroSrc', 'heroSrcSet', 'heroAvifSrcSet']);
+}
+
+// A compact card drops the original `hero` URL, so `titleCard: true` says the
+// image is the post's branded title card (no hero photo). Cards with strings
+// keep `hero`, and BlogCard tells the two apart as it always has.
+function cardOf(post) {
+  const hero = cardHero(post);
+  return { ...pick(post, CARD_TEXT_FIELDS), ...hero, ...(hero.image && !post.hero ? { titleCard: true } : {}) };
+}
 
 const indexOut = `${HEADER}
 //
@@ -623,20 +702,40 @@ const indexOut = `${HEADER}
 // src/data/postCards/<slug>.js, /blog blogList.js and the home page homeGuides.js.
 
 /** Published posts only (blog-raw status "published"), newest first, card and ranking fields. */
-export const BLOG_CARDS = ${json(posts.map((post) => pick(post, [...CARD_FIELDS, 'categories', 'services', 'cluster'])))};
+export const BLOG_CARDS = ${json(posts.map((post) => ({ ...cardOf(post), ...pick(post, ['categories', 'services', 'cluster']) })))};
 ${helpers('BLOG_CARDS')}`;
 
 const listOut = `${HEADER}
 //
-// Everything /blog (src/pages/BlogPage.jsx) needs, in one module: the filter
-// categories and every published post's card, categories, meta description
-// and 1200x630 image (its Blog node, seo.js buildBlogNode).
+// Everything /blog (src/pages/BlogPage.jsx) renders, in one module: the filter
+// categories and every published post's card and categories. What only its
+// Blog node needs (meta descriptions, 1200x630 images) is in blogListSeo.js,
+// loaded only when the head has to be written.
 
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = ${json(categories)};
 
 /** Published posts only (blog-raw status "published"), newest first. */
-export const BLOG_LIST = ${json(posts.map((post) => pick(post, [...CARD_FIELDS, 'categories', 'metaDescription', 'ogImage'])))};
+export const BLOG_LIST = ${json(posts.map((post) => ({ ...cardOf(post), ...pick(post, ['categories']) })))};
+`;
+
+// The /blog Blog node (seo.js buildBlogNode) per post: the same fields, in the
+// same order, as head.js builds it from blogPosts.js for the prerender. The
+// original hero is only its fallback image, so it is left out when there is
+// an ogImage.
+const blogNodePost = (post) => ({
+  ...pick(post, ['slug', 'title', 'metaDescription', 'date', 'ogImage']),
+  ...(post.ogImage ? {} : pick(post, ['hero'])),
+});
+const listSeoOut = `${HEADER}
+//
+// The /blog Blog node's per-post fields (src/data/seo.js buildBlogNode) and
+// the latest post's 1200x630 image. BlogPage.jsx imports this lazily, only when
+// the head has to be written (a client-side navigation to /blog): the
+// prerendered page already has the same head (src/data/head.js).
+
+/** Published posts only (blog-raw status "published"), newest first. */
+export const BLOG_NODE_POSTS = ${json(posts.map(blogNodePost))};
 `;
 
 for (const slug of GUIDE_SLUGS) {
@@ -652,7 +751,12 @@ const homeOut = `${HEADER}
 export const HOME_GUIDES = ${json(homeGuides.map(cardOf))};
 `;
 
-const fullPosts = posts.map((post) => ({ ...post, status: 'published', ...bodies.get(post.slug) }));
+const fullPosts = posts.map((post) => ({
+  ...post,
+  status: 'published',
+  ...bodies.get(post.slug),
+  ...(reviewByOf.has(post.slug) ? { reviewBy: reviewByOf.get(post.slug) } : {}),
+}));
 const fullOut = `${HEADER}
 //
 // BUILD ONLY (head.js, build-seo-files, sync-redirects, audit-seo): every
@@ -692,6 +796,7 @@ for (const post of posts) {
 }
 writeFileSync(OUT_INDEX, indexOut);
 writeFileSync(OUT_LIST, listOut);
+writeFileSync(OUT_LIST_SEO, listSeoOut);
 writeFileSync(OUT_HOME, homeOut);
 writeFileSync(OUT_FULL, fullOut);
 
@@ -707,8 +812,11 @@ console.log(
   'images:',
   MEDIA ? 'self-hosted map (media.generated.js);' : 'Wix transforms;',
   `${posts.filter((p) => p.heroSrcSet).length}/${posts.length} heroes and`,
-  `${bodyImages.filter((b) => b.srcSet).length}/${bodyImages.length} body images have a srcset`
+  `${bodyImages.filter((b) => b.srcSet).length}/${bodyImages.length} body images have a srcset;`,
+  `${posts.filter((p) => cardOf(p).image).length}/${posts.length} cards carry a compact image record`
 );
+const reviewDue = posts.filter((p) => reviewByOf.has(p.slug)).map((p) => `${p.slug} ${reviewByOf.get(p.slug)}`);
+if (reviewDue.length) console.log(`review-by dates (${reviewDue.length}): ${reviewDue.join(', ')}`);
 if (!SERVICES) console.log('note: src/data/services.js not loaded — services[] paths were not checked');
 if (warnings.length) console.warn(`warnings (${warnings.length}):\n  ${warnings.join('\n  ')}`);
 

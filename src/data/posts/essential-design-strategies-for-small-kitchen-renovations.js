@@ -14,7 +14,7 @@ export default {
     "Kitchens & Baths"
   ],
   "date": "2026-07-12",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 7,
   "hero": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png",
   "heroSrc": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp",
@@ -199,7 +199,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains how the permit process works."
+      "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our permit guide explains [how the City's permit process works](/blog/winnipeg-renovation-permits)."
     },
     {
       "t": "h2",
@@ -215,7 +215,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** see how we plan and build a [kitchen renovation](/services/kitchen-renovations), then [book a free on-site visit](/book-online). We look at your room, talk through the layout and send a free written quote. Want a number first? Try the [instant estimate](/instant-quote)."
+      "x": "**Next step:** see [how we plan and build kitchens](/services/kitchen-renovations), then [book a free on-site visit](/book-online). We look at your room, talk through the layout and send a free written quote. Want a number first? Try the [instant estimate](/instant-quote)."
     }
   ],
   "faqsTitle": "Common questions",
@@ -263,10 +263,25 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-08-05",
       "readMinutes": 10,
-      "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-      "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-      "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "c1d3b9fa",
+          "3b993117",
+          "3dde30a7"
+        ],
+        "avif": [
+          "c03d571e",
+          "8eb20a2f",
+          "504b262f"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "home-renovation-planning-guide-canada",
@@ -275,9 +290,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-      "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "22bd57cd",
+          "26e707ed",
+          "e008916e"
+        ],
+        "avif": [
+          "7c9f9167",
+          "e0167740",
+          "c81697cc"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-permits",
@@ -286,9 +318,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

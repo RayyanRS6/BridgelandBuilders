@@ -10,6 +10,7 @@
 // sources list on 2026-10-13.
 
 import { EXPERIENCE_YEARS, OFFICE_DAYS_TEXT, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'retail-renovations',
@@ -36,10 +37,10 @@ export default {
     floatingTitle: 'Opening Day First',
     floatingText: 'The schedule starts from your opening date and works backwards.',
     paragraphs: [
-      'A retail renovation reshapes how customers move through a store: the entrance and storefront, the sales floor, fitting rooms, the cash area, the stockroom and staff spaces, plus the lighting, power and finishes that tie them together. In a new lease it’s usually called a fit-out, and work regulated by the building code needs a City of Winnipeg building permit.',
+      'A retail renovation reshapes [how customers move through a store](/blog/how-to-balance-functionality-and-aesthetics-in-a-commercial-space): the entrance and storefront, the sales floor, fitting rooms, the cash area, the stockroom and staff spaces, plus the lighting, power and finishes that tie them together. In a new lease it’s usually called a fit-out, and work regulated by the building code needs a City of Winnipeg building permit.',
       'In retail, the opening date is usually fixed before the build starts: a lease commencement, a season or a launch you’ve already advertised. We plan backwards from that date and tell you at the site visit whether it’s realistic, and what would need to change if it isn’t.',
       'If you’re renovating a store that’s already trading, we phase the sales floor and schedule the loud work outside your hours, within the City’s noise limits near homes. Weekly progress updates let you plan stock, staffing and promotions around what’s finished.',
-      'Brand standards and head-office fit-out packages are welcome. We build to supplied drawings and specifications from your designer, your landlord or your head office, and flag anything on site that conflicts with them before it turns into a change order.',
+      'Brand standards and head-office fit-out packages are welcome. [We build to supplied drawings and specifications](/services/general-contracting) from your designer, your landlord or your head office, and flag anything on site that conflicts with them before it turns into a change order.',
     ],
     checklist: ['Store Layouts', 'Storefronts & Entrances', 'Fitting Rooms & Cash Areas', 'Lighting & Displays'],
   },
@@ -49,12 +50,12 @@ export default {
     title: 'What a Retail Renovation Covers',
     desc: 'Scoped around your opening date, your brand, and the hours you need to keep trading.',
     items: [
-      { num: '01', title: 'Site Visit & Scope', text: 'Walking the unit with you and your lease or brand drawings, then writing the scope and schedule into a free written quote.' },
-      { num: '02', title: 'Demolition & Layout', text: 'Clearing out the previous tenant’s fit-out and building the new floor plan: walls, bulkheads, stockroom and staff areas.' },
+      { num: '01', title: 'Site Visit & Scope', text: 'Walking the unit with you and your lease or brand drawings, then [writing the scope and schedule into a free written quote](/our-process).' },
+      { num: '02', title: 'Demolition & Layout', text: '[Clearing out the previous tenant’s fit-out](/services/demolition) and building the new floor plan: walls, bulkheads, stockroom and staff areas.' },
       { num: '03', title: 'Storefronts & Entrances', text: 'Entrance doors, storefront framing and finishes, with an accessible entrance planned in. Signs need their own City permit.' },
       { num: '04', title: 'Lighting & Power', text: 'Track and display lighting, power for cash desks and displays, and data where your point-of-sale and security systems need it.' },
       { num: '05', title: 'Fitting Rooms, Cash & Washrooms', text: 'Fitting rooms, cash counters and customer or staff washrooms built to the Manitoba Building Code, including accessible clearances.' },
-      { num: '06', title: 'Finishes & Fixtures', text: 'Flooring, wall finishes, slatwall and millwork installed to take daily foot traffic and frequent re-merchandising.' },
+      { num: '06', title: 'Finishes & Fixtures', text: '[Flooring](/services/flooring), wall finishes, slatwall and millwork installed to take daily foot traffic and frequent re-merchandising.' },
     ],
   },
 
@@ -78,7 +79,7 @@ export default {
   faqs: [
     { q: 'Can you renovate while the store stays open?', a: 'Often. We phase the sales floor, keep the work area closed off from customers, and schedule loud work outside your trading hours, within the City’s noise limits near homes. Some steps, like flooring at the entrance or a storefront change, may need a short closure; we’ll show those in the schedule so you can plan around them.' },
     { q: 'How long does a retail fit-out take?', a: 'It depends on the scope and the permit. A refresh of finishes in the same layout moves faster than a full fit-out with new walls, washrooms and services, which also waits on the City’s plan review. You get a schedule with your written quote, built backwards from your opening date, and an update every week.' },
-    { q: 'Do I need a permit for a new store sign?', a: 'Yes. The City of Winnipeg says to get a permit before starting any construction or alteration to any part of a sign, and new internally lit signs need a separate electrical sign permit. If a sign company is supplying your sign, confirm at the site visit who is applying for the permit so the storefront work and sign installation line up.' },
+    { q: 'Do I need a permit for a new store sign?', a: 'Yes. The City of Winnipeg says to get a permit before starting any construction or alteration to any part of a sign, and new internally lit signs need a separate electrical sign permit.\n\nIf a sign company is supplying your sign, confirm at the site visit who is applying for the permit so the storefront work and sign installation line up.' },
     { q: 'Can you work to our brand or head-office drawings?', a: 'Yes. We build to supplied drawings and specifications, whether they come from your designer, your landlord’s design criteria or a head-office fit-out package. We walk the unit against them before work starts and raise anything that won’t work on site before it becomes a change order or a delay.' },
     { q: 'Does a retail renovation need an occupancy permit?', a: 'Often. In Winnipeg, a new tenant establishing a use without a valid occupancy permit, or a tenant expanding into more space, generally needs one before opening. A new tenant moving into a space that already has a valid occupancy permit, with no alterations or change of use, generally does not. Ask your landlord what permit the unit has.' },
     { q: 'Do you renovate showrooms?', a: 'Yes. A commercial showroom renovation follows the same process as a store: a free site visit, a written quote and a schedule around your hours. Showrooms usually need more attention on lighting, power at display locations and flooring that can take heavy products, so bring your display plan to the site visit.' },
@@ -95,7 +96,7 @@ export default {
     serviceType: 'Retail renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Retailers and commercial property owners' },
     primaryKeyword: 'retail renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   typesTitle: 'Types of Retail Renovations',
@@ -119,7 +120,7 @@ export default {
       { title: 'Signs', text: 'The City says to get a permit before starting any construction or alteration to any part of a sign. New internally lit signs, or electrical changes to an existing sign, also need a separate electrical sign permit.' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with accessibility requirements aligned with CSA B651. Separately, Manitoba’s Accessible Customer Service Standard applies to every business with at least one employee.' },
       { title: 'Noise Near Homes', text: 'Loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so late-evening work near homes is limited to quieter tasks.' },
-      { title: 'Outside Winnipeg', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.' },
+      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, the permit comes from the local municipality or planning district instead, and we coordinate with them the same way.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025', url: 'https://www.winnipeg.ca/media/6330', accessed: '2026-10-13' },

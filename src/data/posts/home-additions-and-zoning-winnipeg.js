@@ -14,7 +14,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
@@ -228,7 +228,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and for current price ranges by project type, our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
+      "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and our cost guide for [current price ranges by project type](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
     },
     {
       "t": "p",
@@ -299,9 +299,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "renovating-a-character-home-in-winnipeg",
@@ -310,9 +327,26 @@ export default {
       "category": "Older Homes",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp",
-      "heroSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.2997bc1a.webp 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.e90ea283.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.b3c11039.avif 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.1baeecae.avif 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.dbf07dd3.avif 1320w"
+      "image": {
+        "base": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "2997bc1a",
+          "8c8b9b42",
+          "e90ea283"
+        ],
+        "avif": [
+          "b3c11039",
+          "1baeecae",
+          "dbf07dd3"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "basement-development-permits-winnipeg",
@@ -321,9 +355,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
-      "heroSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.86f7cdfe.webp 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.eb1b2d54.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-480.3e79a34c.avif 480w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.4c88fdfd.avif 880w, /images/blog/basement-development-permits-winnipeg/title-card-basement-development-1320.d2a97ce0.avif 1320w"
+      "image": {
+        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "86f7cdfe",
+          "d1925dff",
+          "eb1b2d54"
+        ],
+        "avif": [
+          "3e79a34c",
+          "4c88fdfd",
+          "d2a97ce0"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

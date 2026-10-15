@@ -32,7 +32,11 @@
  *
  * Sources: SEO plan §1 and §9 (legacy-URL inventory from the Wayback URL index
  * and google.ca results, 2026-10-13).
+ *
+ * EXTERNAL_REDIRECTS (below) holds the short links to Google; HOST_REDIRECTS
+ * the whole-host rules.
  */
+import { GBP } from './siteConfig.js';
 
 const W = 'W';
 const S = 'S';
@@ -449,6 +453,22 @@ export const REDIRECTS = [
   { from: '/portfolio-collections/:path*', to: '/projects', evidence: W, note: 'Wix portfolio collections (my-portfolio, project-title-1..6)' },
   { from: '/post/:path*', to: '/blog', evidence: W, note: 'Any other Wix blog post URL (must stay the very last rule)' },
 ];
+
+/**
+ * Short links to pages off this site (Google Business Profile, from GBP in
+ * src/data/siteConfig.js). sync-redirects writes them verbatim, always as
+ * temporary 307s so they can be repointed, after the explicit legacy rules and
+ * before the wildcard and whole-host rules. The site itself never links to
+ * them. Each `to` must be an absolute https URL on an allowed Google host
+ * (sync-redirects EXTERNAL_HOSTS). A rule whose GBP URL is unset is left out.
+ *   from   short path on this site
+ *   to     absolute destination URL
+ *   note   why the rule exists
+ */
+export const EXTERNAL_REDIRECTS = [
+  { from: '/review', to: GBP.reviewUrl, note: 'Google "write a review" form for the Business Profile' },
+  { from: '/reviews', to: GBP.mapsUrl, note: 'Business Profile on Google Maps, where the reviews are read' },
+].filter((rule) => typeof rule.to === 'string' && rule.to);
 
 /**
  * Whole-host redirects (plan §3.10): every path on these hosts answers a

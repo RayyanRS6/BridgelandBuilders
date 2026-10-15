@@ -6,7 +6,8 @@
   "metaDescription": "Renovating a restaurant, café or bar in Winnipeg? City permits, health plan review, kitchen hoods, LGCA notice, patios and after-hours work explained.",
   "excerpt": "The City, health and liquor approvals a restaurant, café or bar renovation in Winnipeg usually needs, and the order to tackle them in.",
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-01-15",
   "cats": [
     "Commercial",
     "Permits & Planning"
@@ -31,6 +32,11 @@
       "label": "City of Winnipeg: Commercial projects",
       "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
@@ -150,6 +156,14 @@
         ]
       ],
       "note": "Requirements depend on your space and scope. Outside Winnipeg, your municipality's permit authority takes the City's role."
+    },
+    {
+      "t": "p",
+      "x": "For Part 3 buildings, the City's open data shows it took an average of 5.3 business days in September 2026 to review minor alterations with no change of use, no professionals required and no impact on life safety, against its own target of 5."
+    },
+    {
+      "t": "p",
+      "x": "A change of use in existing tenant space with multiple professionals involved averaged 6.9 business days that month, against a target of 15. That's review time, not the total time until a permit is issued."
     },
     {
       "t": "h2",

@@ -1,4 +1,5 @@
-import { SERVICE_AREAS, SERVICE_AREA_NAMES, SITE_PHONE } from './siteConfig.js';
+import { caseStudiesForArea } from './caseStudyData.js';
+import { NEARBY_AREAS_TEXT, SERVICE_AREAS, SITE_PHONE, listJoin } from './siteConfig.js';
 
 /**
  * Content for /service-areas (plan §14.5) and the gated community pages
@@ -22,7 +23,11 @@ import { SERVICE_AREAS, SERVICE_AREA_NAMES, SITE_PHONE } from './siteConfig.js';
  *     published: false,                         // true only when the D9 gate is met:
  *                                               // ≥3 documented jobs here, ≥600 unique
  *                                               // words, sourced local facts, GBP area,
- *                                               // owner sign-off
+ *                                               // owner sign-off. The page goes live only
+ *                                               // with ≥3 published case studies for the
+ *                                               // area and ownerSignoff as well
+ *                                               // (passesAreaGate); the build audit checks
+ *                                               // the words and sources (areas.page-gate).
  *     // Needed only when published (AreaPage):
  *     seo?: { title, description, updated: 'YYYY-MM-DD', serviceType? },   // usePageSeo `meta`
  *     h1?: { title: 'RENOVATIONS IN', highlight: 'HEADINGLEY' },
@@ -108,11 +113,6 @@ const AREAS = {
   },
 };
 
-const listJoin = (items) =>
-  items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('');
-
-const NEARBY_NAMES = SERVICE_AREA_NAMES.filter((name) => name !== 'Winnipeg');
-
 /** The issuing authority for a community, or null when it is not verified. */
 function authorityFor(area, content) {
   if (content && content.permitAuthority) return content.permitAuthority;
@@ -144,11 +144,13 @@ export const SERVICE_AREAS_CONTENT = {
   faqs: [
     {
       q: 'Do you work outside Winnipeg?',
-      a: `Yes. Along with Winnipeg, we work in nearby communities within about an hour of the city: ${listJoin(NEARBY_NAMES)}.`,
+      a: `Yes. Along with Winnipeg, we work in nearby communities within about an hour of the city: ${NEARBY_AREAS_TEXT}.`,
     },
     {
       q: 'Who issues building permits in the communities around Winnipeg?',
-      a: `It depends on the community. For the ones we serve, permits are issued by ${authoritySentence()}. Where your project needs a permit, we look after the application and the inspections.`,
+      // Two paragraphs on the page (the blank line, FaqAccordion.jsx): the list
+      // of authorities grows as communities are confirmed.
+      a: `It depends on the community. For the ones we serve, permits are issued by ${authoritySentence()}.\n\nWhere your project needs a permit, we look after the application and the inspections.`,
     },
     {
       q: 'Do you work in all Winnipeg neighbourhoods?',
@@ -164,15 +166,37 @@ export const SERVICE_AREAS_CONTENT = {
 
 export default SERVICE_AREAS_CONTENT;
 
+/** Published case studies a community needs before its page can go live (plan D9). */
+export const AREA_PAGE_MIN_CASE_STUDIES = 3;
+
+/**
+ * The D9 gate in code: a community page is routed, prerendered, listed and
+ * linked only when its entry says `published: true`, at least three published
+ * case studies are set in that community (caseStudyData.js) and the owner has
+ * signed it off. The build audit (scripts/audit-seo.mjs, areas.page-gate) also
+ * checks the built page for 600+ words of its own and its sources.
+ */
+export function passesAreaGate(slug, content) {
+  const signoff = content && content.ownerSignoff;
+  return Boolean(
+    content &&
+      content.published &&
+      signoff &&
+      signoff.name &&
+      signoff.date &&
+      caseStudiesForArea(slug).length >= AREA_PAGE_MIN_CASE_STUDIES
+  );
+}
+
 /**
  * Confirmed communities (siteConfig order, Winnipeg first) merged with their
  * content: { ...siteConfigEntry, ...content, permitAuthority, path }.
- * `path` is set only for published community pages.
+ * `published` and `path` are set only for community pages that pass the gate.
  */
 export function confirmedServiceAreas() {
   return SERVICE_AREAS.filter((area) => area.confirmed).map((area) => {
     const content = AREAS[area.slug] || {};
-    const published = Boolean(content.published);
+    const published = passesAreaGate(area.slug, content);
     return {
       ...area,
       ...content,
@@ -183,7 +207,11 @@ export function confirmedServiceAreas() {
   });
 }
 
-/** A published community page's data by slug, or null (unconfirmed, unknown or unpublished). */
+/**
+ * A published community page's data by slug, or null (unconfirmed, unknown,
+ * unpublished, or short of the gate: three published case studies there and
+ * the owner's sign-off).
+ */
 export function publishedServiceArea(slug) {
   return confirmedServiceAreas().find((area) => area.slug === slug && area.published) || null;
 }

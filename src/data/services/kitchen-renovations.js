@@ -1,10 +1,9 @@
 // Kitchen renovations — content for /services/kitchen-renovations (rendered by src/pages/ProjectPage.jsx).
 // Registry entry (path, labels, status, estimator, form type): src/data/services.js.
 //
-// The intro and gallery images are stock inspiration photos, not Bridgeland
-// jobs. Keep their alts and captions to what is visible in the photo (no
-// "Winnipeg", no "our", no finished-job outcomes) until real job photos with
-// client consent replace them.
+// The intro image is a stock inspiration photo, not a Bridgeland job. Keep
+// its alt to what is visible in the photo (no "Winnipeg", no "our", no
+// finished-job outcomes) until real job photos with client consent replace it.
 //
 // Facts: the 4–6 week timeline, free on-site visit and written quote, and
 // permit coordination are owner-confirmed. Every City of Winnipeg / Health
@@ -13,6 +12,7 @@
 // instant estimator's starting range (costTeaser, estimator data 2026-10-13).
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
+import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
 
 export default {
   slug: 'kitchen-renovation',
@@ -62,29 +62,32 @@ export default {
 
   typesTag: 'Project Types',
   typesTitle: 'Which kind of kitchen remodel do you need?',
-  typesDesc:
-    'Most kitchen projects fall into one of six types, from a complete renovation with a new layout to a targeted update of cabinets, countertops or backsplash. The right one depends on whether your layout works today. If it does, keep it and put the budget into finishes. If it doesn’t, start with the plan.',
+  // Two short paragraphs (readability: none over 60 words).
+  typesDesc: [
+    'Most kitchen projects fall into one of six types, from a complete renovation with a new layout to a targeted update of cabinets, countertops or backsplash.',
+    'The right one depends on whether your layout works today. If it does, keep it and put the budget into finishes, since [moving the sink or removing a wall adds to the cost](/services/kitchen-renovations/cost). If it doesn’t, start with the plan.',
+  ],
   types: [
     { title: 'Full kitchen renovation', text: 'A new layout, cabinets, countertops, backsplash, lighting and flooring, with plumbing and electrical moved to suit. This is the scope behind the four-to-six-week timeline.' },
     { title: 'Cabinet & countertop replacement', text: 'Keep the layout and replace the boxes, doors and tops. Countertops are templated after the cabinets are set so the fit is exact. Stock, semi-custom and fully custom cabinets are all options.' },
-    { title: 'Small kitchen renovation', text: 'In a galley or compact kitchen every centimetre counts: taller uppers, deep drawers, corner storage, and lighting that makes the room feel larger than it is.' },
+    { title: 'Small kitchen renovation', text: '[In a galley or compact kitchen](/blog/essential-design-strategies-for-small-kitchen-renovations) every centimetre counts: taller uppers, deep drawers, corner storage, and lighting that makes the room feel larger than it is.' },
     { title: 'Open-concept kitchen', text: 'Opening the wall to the living or dining room. A load-bearing wall needs a properly sized beam, a building permit and, in some cases, an engineer’s sealed drawing.' },
     { title: 'Kitchen island installation', text: 'Adding or enlarging an island for prep, seating and storage. We plan walkway clearances first, then the power and any sink or dishwasher plumbing the island needs.' },
-    { title: 'Backsplash, lighting & flooring', text: 'A lighter update for a kitchen whose layout already works: new backsplash tile, under-cabinet and ceiling lighting, or new flooring laid to suit the cabinets.' },
+    { title: 'Backsplash, lighting & flooring', text: 'A lighter update for a kitchen whose layout already works: new backsplash tile, under-cabinet and ceiling lighting, or [new flooring](/services/flooring) laid to suit the cabinets.' },
   ],
 
   local: {
     tag: 'In Winnipeg',
     title: 'Do you need a permit for a kitchen renovation in Winnipeg?',
     intro:
-      'Often, yes. The City of Winnipeg lists kitchens among the home renovations that may need a building permit, and new wiring or plumbing may need separate trade permits. Cosmetic work such as painting, flooring and millwork does not need a building permit. We coordinate the permits and inspections with the City or your local municipality.',
+      'Often, yes. The City of Winnipeg lists kitchens among the [home renovations that may need a building permit](/blog/winnipeg-renovation-permits), and new wiring or plumbing may need separate trade permits. Cosmetic work such as painting, flooring and millwork does not need a building permit. We coordinate the permits and inspections with the City or your local municipality.',
     items: [
       { title: 'When a building permit applies', text: 'Kitchens, open-concept layouts, and new or larger exterior door and window openings are the City’s examples of renovations that may need a building permit. Painting, flooring and millwork, its examples of cosmetic changes, do not.' },
       { title: 'Removing a load-bearing wall', text: 'When a structural element goes beyond what Part 9 of the Manitoba Building Code covers, the City requires a sealed drawing from a professional engineer registered in Manitoba, with a Professional Designer’s Certificate for Housing.' },
       { title: 'Electrical and plumbing permits', text: 'Moving the sink, adding circuits for new appliances, or wiring an island is trade work. The City notes that renovations may need electrical and plumbing permits, depending on the scope, on top of a building permit.' },
       { title: 'Inspections before walls close', text: 'The City requires a rough-in inspection before framing, HVAC, electrical or plumbing work under a permit is covered, and a final inspection to close the permit. We schedule them as the work reaches each stage.' },
-      { title: 'Older kitchens and asbestos', text: 'Health Canada says that before 1990, asbestos was mainly used for insulating buildings and homes, and lists older plaster, drywall and floor tiles among materials that may contain it. If your kitchen still has original materials, have them tested by a professional before demolition.' },
-      { title: 'Outside Winnipeg and in condos', text: 'In Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk or Steinbach, permits come from your local municipality or planning district. In a condo, ask your condominium corporation which approvals and work hours apply before dates are set.' },
+      { title: 'Older kitchens and asbestos', text: 'Health Canada says that before 1990, asbestos was mainly used for insulating buildings and homes, and lists older plaster, drywall and floor tiles among materials that may contain it. If your kitchen still has original materials, have them tested by a professional before [demolition](/services/demolition).' },
+      { title: 'Outside Winnipeg and in condos', text: `In ${NEARBY_AREAS_TEXT_OR}, permits come from your local municipality or planning district. In a condo, ask your condominium corporation which approvals and work hours apply before dates are set.` },
     ],
     sources: [
       { label: 'City of Winnipeg: Home renovations', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations', accessed: '2026-10-13' },
@@ -94,16 +97,11 @@ export default {
     ],
   },
 
-  gallery: {
-    tag: 'Design Ideas',
-    title: 'Kitchen Renovation Ideas',
-    desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
-    items: [
-      { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Person cooking at a gas cooktop in a white kitchen with a stone island and built-in wall oven', title: 'White Kitchen with Island Cooktop', text: 'Flat-panel cabinets, stone counters, and a built-in wall oven' },
-      { img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', alt: 'Modern two-storey house at dusk with dark wood cladding and large glass walls', title: 'Glass Walls to the Yard', text: 'Floor-to-ceiling glass around a lit dining area' },
-      { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Bright Living Room', text: 'Large windows, light wood floors, and a wall of framed photos' },
-    ],
-  },
+  // No gallery: only one of its three stock photos showed a kitchen; the
+  // other two were a house exterior and a living room. A gallery returns with
+  // at least three kitchen photos, labelled as inspiration until they are our
+  // own jobs.
+  gallery: null,
 
   process: {
     tag: 'How It Works',
@@ -139,7 +137,7 @@ export default {
     { q: 'Can you remove the wall between the kitchen and living room?', a: 'Usually. A non-structural wall is straightforward. A load-bearing wall needs a beam sized for the load and a building permit, and the City requires an engineer’s sealed drawing when the structure goes beyond what Part 9 of the Manitoba Building Code covers. We’ll tell you at the on-site visit which kind of wall you have.' },
     { q: 'Should I choose stock, semi-custom or custom cabinets?', a: 'Stock cabinets are quicker and cost less, and they suit most standard layouts. Semi-custom adds more sizes, finishes and interior options. Fully custom makes sense when the room is an odd shape or you want storage built around specific things. We can price more than one option in the written quote so you can compare.' },
     { q: 'Can I keep my existing appliances?', a: 'Yes. Tell us early so the cabinet openings are built to fit them. If you plan to replace appliances later, send us the model numbers of the ones you have in mind and we’ll size the openings for those now, so nobody is cutting into new cabinets in two years.' },
-    { q: 'Who arranges the permits and inspections?', a: 'We do. When your kitchen needs a building permit or trade permits, we coordinate them with the City of Winnipeg or your local municipality and schedule each inspection as the work reaches that stage. The City says the homeowner and the permit applicant share responsibility for inspections, so we keep you informed at every step.' },
+    { q: 'Who arranges the permits and inspections?', a: 'We do. When your kitchen needs a building permit or trade permits, we coordinate them with the City of Winnipeg or your local municipality and schedule each inspection as the work reaches that stage.\n\nThe City says the homeowner and the permit applicant share responsibility for inspections, so we keep you informed at every step.', more: { label: 'How we handle permits and inspections', to: '/our-process' } },
     { q: 'What happens at the free on-site visit?', a: 'We measure the kitchen, look at the plumbing, wiring and walls, and talk through how you cook and what frustrates you about the current layout. After the visit you receive a written quote that lists what’s included, so you can read it line by line, and compare it with another company’s quote, before deciding anything.' },
   ],
 
@@ -152,7 +150,7 @@ export default {
       `Kitchen renovations in Winnipeg: layout, cabinets, countertops and lighting, most done in ${TIMELINES.kitchen.short}. Start with a free on-site visit and written quote.`,
     serviceType: 'Kitchen renovation',
     primaryKeyword: 'kitchen renovation Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Live pages only are shown; drafts appear when they launch.

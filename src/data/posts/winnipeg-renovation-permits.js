@@ -14,7 +14,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
@@ -214,7 +214,15 @@ export default {
     },
     {
       "t": "p",
-      "x": "There’s no single number. The City publishes building permit processing times, measured in average business days to confirm a complete application and to reach a decision. Incomplete applications are delayed, so complete, dimensioned drawings are the part of the timeline you control."
+      "x": "In September 2026, the City of Winnipeg took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against the City’s own target of 10 business days."
+    },
+    {
+      "t": "p",
+      "x": "Housing permits where one dwelling is stacked above another, such as a house over a basement suite, averaged 13 business days that month, against a target of 15."
+    },
+    {
+      "t": "p",
+      "x": "That’s review time, the time the City takes to reach a decision on an application, not the total time until a permit is issued. The City separately tracks how long it takes to confirm that an application is complete, and incomplete applications are delayed, so complete, dimensioned drawings are the part of the timeline you control."
     },
     {
       "t": "h2",
@@ -258,7 +266,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Permit questions are easier to answer with the space in front of you, whether you’re planning a [kitchen renovation](/services/kitchen-renovations), a [bathroom renovation](/services/bathroom-renovations) or an [addition](/services/home-additions). Every project starts with a free on-site visit and a free written quote, so [book your visit](/book-online), or get a starting range first with our [instant estimate](/instant-quote). For budgets, see the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+      "x": "Permit questions are easier to answer with the space in front of you, whether you’re planning a [kitchen remodel](/services/kitchen-renovations), a [bathroom renovation](/services/bathroom-renovations) or an [addition](/services/home-additions). Every project starts with a free on-site visit and a free written quote, so [book your visit](/book-online), or get a starting range first with our [instant estimate](/instant-quote). For budgets, see [typical Winnipeg price ranges](/renovation-cost-winnipeg)."
     }
   ],
   "faqsTitle": "Frequently Asked Questions",
@@ -342,6 +350,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "City of Winnipeg – Permits Online",
       "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
       "accessed": "2026-10-13"
@@ -375,9 +388,26 @@ export default {
       "category": "Costs & Budgets",
       "date": "2026-10-14",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
-      "heroSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.9ad93e01.webp 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.6f8cec70.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-480.02b9c202.avif 480w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.1ff31c44.avif 880w, /images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1320.f7242463.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "9ad93e01",
+          "5517d108",
+          "6f8cec70"
+        ],
+        "avif": [
+          "02b9c202",
+          "1ff31c44",
+          "f7242463"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
@@ -386,10 +416,25 @@ export default {
       "category": "Hiring a Contractor",
       "date": "2026-08-05",
       "readMinutes": 10,
-      "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-      "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-      "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w"
+      "image": {
+        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "c1d3b9fa",
+          "3b993117",
+          "3dde30a7"
+        ],
+        "avif": [
+          "c03d571e",
+          "8eb20a2f",
+          "504b262f"
+        ],
+        "main": 1
+      }
     },
     {
       "slug": "home-renovation-planning-guide-canada",
@@ -398,9 +443,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-      "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "22bd57cd",
+          "26e707ed",
+          "e008916e"
+        ],
+        "avif": [
+          "7c9f9167",
+          "e0167740",
+          "c81697cc"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

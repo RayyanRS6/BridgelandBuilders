@@ -372,9 +372,26 @@ export default {
       "category": "Money & Rebates",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
-      "heroSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.807f2406.webp 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.1e034cbf.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-480.c61c929a.avif 480w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.72c40423.avif 880w, /images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1320.a983957b.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "807f2406",
+          "311eab5d",
+          "1e034cbf"
+        ],
+        "avif": [
+          "c61c929a",
+          "72c40423",
+          "a983957b"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "home-renovation-planning-guide-canada",
@@ -383,9 +400,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 8,
-      "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
-      "heroSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.22bd57cd.webp 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.e008916e.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-480.7c9f9167.avif 480w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.e0167740.avif 880w, /images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1320.c81697cc.avif 1320w"
+      "image": {
+        "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "22bd57cd",
+          "26e707ed",
+          "e008916e"
+        ],
+        "avif": [
+          "7c9f9167",
+          "e0167740",
+          "c81697cc"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-permits",
@@ -394,9 +428,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

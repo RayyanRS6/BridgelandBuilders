@@ -10,7 +10,24 @@ export default {
   "category": "Older Homes",
   "date": "2026-10-13",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp",
-  "heroSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.2997bc1a.webp 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.e90ea283.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-480.b3c11039.avif 480w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.1baeecae.avif 880w, /images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1320.dbf07dd3.avif 1320w"
+  "image": {
+    "base": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "2997bc1a",
+      "8c8b9b42",
+      "e90ea283"
+    ],
+    "avif": [
+      "b3c11039",
+      "1baeecae",
+      "dbf07dd3"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

@@ -845,6 +845,15 @@
   max-width: 92%;
 }
 
+/* A closed answer is hidden="until-found" (FaqAccordion.jsx), which Chrome
+   draws as an empty box rather than display: none: take its padding and any
+   inherited paragraph margin off, so it takes no space, exactly as before. */
+.faq-answer[hidden='until-found'] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 /* -------------------------------------------------------------
    P7. RESPONSIVE
    ------------------------------------------------------------- */
@@ -2742,6 +2751,20 @@
 
 .blog-inline-link:hover {
   color: var(--accent-red);
+}
+
+/* On the dark intro panels links are white (.why-paragraphs, index.css); red
+   would be about 2.4:1 on that dark, so they hover to the light sea green the
+   dark panels already use for their tags. */
+.why-paragraphs .blog-inline-link:hover {
+  color: #8ed2dc;
+}
+
+/* The home service cards link each service they name. At the paragraph's own
+   weight (not the bold inline-link weight) so five links in a card keep the
+   signed-off look of the text; colour and underline still mark them. */
+.service-body .blog-inline-link {
+  font-weight: inherit;
 }
 
 /* Quick answer: the takeaways box with a paragraph instead of a list. */

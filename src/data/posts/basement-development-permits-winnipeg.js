@@ -15,7 +15,7 @@ export default {
     "Basements & Suites"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
@@ -200,6 +200,10 @@ export default {
       "x": "Book each inspection before the work it covers is closed in."
     },
     {
+      "t": "p",
+      "x": "In September 2026, the City took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against its own target of 10 business days; that’s review time, not the total time until a permit is issued."
+    },
+    {
       "t": "h2",
       "x": "Which inspections will a basement need?"
     },
@@ -305,6 +309,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+      "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "City of Winnipeg – Basement & overland flooding",
       "url": "https://www.winnipeg.ca/services-programs/water-wastewater/flooding/basement-overland-flooding",
       "accessed": "2026-10-13"
@@ -323,9 +332,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
-      "heroSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.83211b35.webp 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.61116791.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-480.63392085.avif 480w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.3a9abc2b.avif 880w, /images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1320.fc70213a.avif 1320w"
+      "image": {
+        "base": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "83211b35",
+          "cc7d6942",
+          "61116791"
+        ],
+        "avif": [
+          "63392085",
+          "3a9abc2b",
+          "fc70213a"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "winnipeg-renovation-permits",
@@ -334,9 +360,26 @@ export default {
       "category": "Permits & Planning",
       "date": "2026-10-13",
       "readMinutes": 9,
-      "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
-      "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.6bd25ab0.avif 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.eac9efdc.avif 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.53975749.avif 1320w"
+      "image": {
+        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0f487983",
+          "55b461dd",
+          "5c78c717"
+        ],
+        "avif": [
+          "6bd25ab0",
+          "eac9efdc",
+          "53975749"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     },
     {
       "slug": "planning-a-winter-basement-development-winnipeg",
@@ -345,9 +388,26 @@ export default {
       "category": "Basements & Suites",
       "date": "2026-10-13",
       "readMinutes": 7,
-      "heroSrc": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp",
-      "heroSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.565cba54.webp 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.3669a5da.webp 1320w",
-      "heroAvifSrcSet": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-480.59e02b43.avif 480w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.b83b3c92.avif 880w, /images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1320.c31bba81.avif 1320w"
+      "image": {
+        "base": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "565cba54",
+          "2d7fc4b5",
+          "3669a5da"
+        ],
+        "avif": [
+          "59e02b43",
+          "b83b3c92",
+          "c31bba81"
+        ],
+        "main": 1
+      },
+      "titleCard": true
     }
   ]
 };

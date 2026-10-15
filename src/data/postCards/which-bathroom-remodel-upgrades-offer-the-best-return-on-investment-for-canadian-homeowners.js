@@ -10,8 +10,23 @@ export default {
   "category": "Kitchens & Baths",
   "date": "2026-07-17",
   "readMinutes": 7,
-  "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
-  "heroSrc": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp",
-  "heroSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.234dec8b.webp 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.f562c9d4.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-480.f2ea16c2.avif 480w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d0b4cb6c.avif 880w, /images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1320.38be59c3.avif 1320w"
+  "image": {
+    "base": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "234dec8b",
+      "d44977c5",
+      "f562c9d4"
+    ],
+    "avif": [
+      "f2ea16c2",
+      "d0b4cb6c",
+      "38be59c3"
+    ],
+    "main": 1
+  }
 };

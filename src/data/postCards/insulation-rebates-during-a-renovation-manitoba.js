@@ -10,7 +10,24 @@ export default {
   "category": "Money & Rebates",
   "date": "2026-10-13",
   "readMinutes": 9,
-  "heroSrc": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp",
-  "heroSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5b8e56ec.webp 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.707c702f.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-480.5478c4c1.avif 480w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.80688f99.avif 880w, /images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1320.70228dd9.avif 1320w"
+  "image": {
+    "base": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "5b8e56ec",
+      "b1620437",
+      "707c702f"
+    ],
+    "avif": [
+      "5478c4c1",
+      "80688f99",
+      "70228dd9"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

@@ -10,7 +10,24 @@ export default {
   "category": "Hiring a Contractor",
   "date": "2026-10-13",
   "readMinutes": 7,
-  "heroSrc": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp",
-  "heroSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.a1fe8363.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.85adbc4a.avif 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.20db4422.avif 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.b0d9c3f3.avif 1320w"
+  "image": {
+    "base": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "c37939a9",
+      "abd27f5e",
+      "a1fe8363"
+    ],
+    "avif": [
+      "85adbc4a",
+      "20db4422",
+      "b0d9c3f3"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

@@ -21,6 +21,7 @@
  *   - <link rel="preconnect"> to the estimator's origin on pages that embed it.
  * Developer comments in index.html are removed from every page (the template
  * only, never the app HTML: React's comment markers are needed to hydrate).
+ * Closed FAQ accordion answers get hidden="until-found" (hideClosedFaqAnswers).
  */
 import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, posix } from 'node:path';
@@ -381,6 +382,38 @@ function estimatorPreconnect(appHtml) {
   }
 }
 
+/**
+ * Closed FAQ answers (src/components/FaqAccordion.jsx) get hidden="until-found",
+ * so before hydration the static page shows the same closed accordion and the
+ * browser's find-in-page and #:~:text= links can still open them. The
+ * component sets that attribute in an effect (React 18 renders the `hidden`
+ * prop only as hidden=""), so the server HTML has none: a closed answer is the
+ * one whose question button says aria-expanded="false" and points at it with
+ * aria-controls. A plain hidden="" on an answer becomes until-found as well.
+ * The answer is a <p class="faq-answer">, or for a multi-paragraph answer the
+ * <div class="faq-answer-group"> around them (its inner paragraphs have no
+ * id, so they are never matched on their own). Returns { html, count }.
+ */
+function hideClosedFaqAnswers(appHtml) {
+  const closed = new Set();
+  for (const [tag] of appHtml.matchAll(/<button\b[^>]*>/g)) {
+    if (!/\bclass="[^"]*\bfaq-question\b/.test(tag) || attrOf(tag, 'aria-expanded') !== 'false') continue;
+    const id = attrOf(tag, 'aria-controls');
+    if (id) closed.add(id);
+  }
+  let count = 0;
+  const html = appHtml.replace(/<(?:p|div)\b[^>]*\bclass="faq-answer(?:-group)?"[^>]*>/g, (tag) => {
+    if (/\shidden=""/.test(tag)) {
+      count += 1;
+      return tag.replace(/\shidden=""/, ' hidden="until-found"');
+    }
+    if (/\shidden[\s=>]/.test(tag) || !closed.has(attrOf(tag, 'id'))) return tag;
+    count += 1;
+    return tag.replace(/\s*>$/, ' hidden="until-found">');
+  });
+  return { html, count };
+}
+
 // Where the extra tags go: the LCP image and the estimator preconnect right
 // after the SEO tags (early, so they start first), route chunks right after
 // the entry script, and any route stylesheet at the end of <head> (after the
@@ -414,13 +447,15 @@ if (!UNSPLASH_PRECONNECT.test(pageTemplate)) {
 
 let written = 0;
 let withPreloads = 0;
+let faqAnswersHidden = 0;
 for (const route of routes) {
   const head = headFor(route);
   if (!head) {
     console.warn(`[prerender] no head model for ${route} — skipped`);
     continue;
   }
-  const appHtml = await render(route);
+  const { html: appHtml, count } = hideClosedFaqAnswers(await render(route));
+  faqAnswersHidden += count;
   const outPath = route === '/' ? join(DIST, 'index.html') : join(DIST, route, 'index.html');
   mkdirSync(dirname(outPath), { recursive: true });
   if (routePreloads(route).modules) withPreloads += 1;
@@ -430,10 +465,11 @@ for (const route of routes) {
 
 // A URL that matches no route renders the 404 page; hosts serve this file with
 // a real 404 status.
-const notFoundHtml = await render('/__not-found__');
+const notFoundHtml = hideClosedFaqAnswers(await render('/__not-found__')).html;
 writeFileSync(join(DIST, '404.html'), pageHtml(NOT_FOUND_HEAD, notFoundHtml, '/__not-found__'));
 
 console.log(
   `prerendered ${written} routes + 404.html` +
-    (manifest ? `; route chunk modulepreloads on ${withPreloads} (${routeTable.length} route patterns in AppShell.jsx)` : '')
+    (manifest ? `; route chunk modulepreloads on ${withPreloads} (${routeTable.length} route patterns in AppShell.jsx)` : '') +
+    `; ${faqAnswersHidden} closed FAQ answers hidden="until-found"`
 );

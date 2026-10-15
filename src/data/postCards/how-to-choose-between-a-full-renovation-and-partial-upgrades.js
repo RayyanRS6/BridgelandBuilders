@@ -10,8 +10,23 @@ export default {
   "category": "Permits & Planning",
   "date": "2026-09-01",
   "readMinutes": 7,
-  "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
-  "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
-  "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w"
+  "image": {
+    "base": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "73b0c74a",
+      "25c16ad6",
+      "a3d281b8"
+    ],
+    "avif": [
+      "66feb4f2",
+      "62be2807",
+      "1e9a351d"
+    ],
+    "main": 1
+  }
 };

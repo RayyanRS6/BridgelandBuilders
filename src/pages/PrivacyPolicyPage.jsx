@@ -44,7 +44,9 @@ const GA_ON = Boolean(gaMeasurementId());
 // optional marketing-email box on the quote form (CASL, section 16), the
 // LeadConnector chat widget and contact form (their own browser storage,
 // whatever Do Not Track says: section 12), the Price Calculator price guide,
-// and the images loaded from Unsplash (fonts are self-hosted).
+// (images and fonts are self-hosted: no third party serves them, so none is
+// listed; a photo hotlinked again would be flagged by the build audit,
+// img.unsplash-host).
 // If any of those change, update this page.
 //
 // The text-messaging clauses (section 1, and the SMS lines in sections 8 and 9)
@@ -357,10 +359,6 @@ export default function PrivacyPolicyPage() {
               <li>
                 <strong>Price Calculator by AutomateX360:</strong> powers our online price guide and passes estimate
                 requests to our customer management system.
-              </li>
-              <li>
-                <strong>Unsplash:</strong> delivers some of the images on our site. It receives your IP address when
-                your browser loads them. Our fonts are served from our own website.
               </li>
             </ul>
             <p>

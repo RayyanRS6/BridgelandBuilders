@@ -55,20 +55,20 @@ export default {
     { title: 'Stucco Refinishing', text: 'A new finish coat over sound stucco, or new stucco where the old has failed, for an even, clean exterior.' },
     { title: 'Brick Repointing', text: 'Mortar joints raked and refilled, with extra care on older brick, where too hard a mortar can damage the brick.' },
     { title: 'Stone & Brick Veneer', text: 'Repairs to existing veneer, and new veneer accents on entries, columns and feature walls.' },
-    { title: 'Commercial Exteriors', text: 'Repairs on storefronts and commercial buildings, scheduled after hours or on weekends when the business stays open.' },
+    { title: 'Commercial Exteriors', text: 'Repairs on [storefronts and commercial buildings](/services/commercial-renovations), scheduled after hours or on weekends when the business stays open.' },
   ],
 
   local: {
     tag: 'In Winnipeg',
     title: 'Do you need a permit for stucco or masonry repair in Winnipeg?',
     intro:
-      'Usually not for like-for-like repairs. The City of Winnipeg lists replacing stucco or siding with the same material among projects that don’t need a building permit, although the work still has to meet the building code. Structural foundation repairs do need a permit, and heritage properties may need a heritage permit.',
+      'Usually not for like-for-like repairs. The City of Winnipeg lists replacing stucco or siding with the same material among [projects that don’t need a building permit](/blog/winnipeg-renovation-permits), although the work still has to meet the building code. Structural foundation repairs do need a permit, and heritage properties may need a heritage permit.',
     items: [
       { title: 'Same-Material Replacement', text: 'Replacing stucco with stucco doesn’t need a building permit. Replacing stucco with vinyl siding does need one: the City treats it as a change to the building envelope.' },
-      { title: 'Foundation Repairs', text: 'Structural foundation repairs need a building permit in Winnipeg. A widening, leaking or offset crack needs a structural engineer’s assessment first.' },
+      { title: 'Foundation Repairs', text: 'Structural foundation repairs need a building permit in Winnipeg. [A widening, leaking or offset crack](/blog/clay-soil-basement-cracks-winnipeg) needs a structural engineer’s assessment first.' },
       { title: 'Softer Mortar for Older Brick', text: 'National Research Council guidance says repointing mortar should be weaker than the brick or stone and no stronger than the existing mortar, or the masonry can spall.' },
       { title: 'Asbestos in Older Materials', text: 'Health Canada lists older siding, cement and plaster among materials that may contain asbestos, so in pre-1990 buildings suspect material is tested first.' },
-      { title: 'Heritage Properties', text: 'In Armstrong’s Point and Crescentwood-Enderton Park, and for buildings on the City’s heritage list, changes to character-defining elements can need a heritage permit.' },
+      { title: 'Heritage Properties', text: 'In Armstrong’s Point and Crescentwood-Enderton Park, and for buildings on the City’s heritage list, [changes to character-defining elements](/blog/renovating-a-character-home-in-winnipeg) can need a heritage permit.' },
       { title: 'Cold-Weather Curing', text: 'Mortar and stucco need protection from freezing while they cure, so exterior work is planned for warmer weather, or enclosed and heated when it can’t wait.' },
     ],
     sources: [
@@ -104,7 +104,7 @@ export default {
     { q: 'What is repointing, and when is it needed?', a: 'Repointing means raking out worn mortar between bricks or stones and packing in new mortar. It is due when joints are crumbling, recessed or cracked, or when water is getting into the wall. On older brick, the new mortar should be weaker than the brick, or the brick takes the damage.' },
     { q: 'Is a crack in my foundation a masonry repair?', a: 'Not always. A foundation crack that is widening, leaking or offset is a structural question, and the City of Winnipeg requires a building permit for structural foundation repairs. Get a structural engineer’s assessment first; once that repair is settled, we can handle finishing work around it, such as stucco above grade.' },
     { q: 'Can masonry or stucco work be done in winter?', a: 'Mostly it waits for warmer weather. Mortar and stucco need protection from freezing while they cure, so winter work means enclosing and heating the area, which adds cost. Otherwise, book the on-site visit in winter and the work for early in the season.' },
-    { q: 'How much does stucco or masonry repair cost?', a: 'It depends on the size of the damage, what caused it, access to the wall, and how much finishing the repair needs to blend in. The on-site visit and written quote are free, and the quote spells out what gets removed and rebuilt.' },
+    { q: 'How much does stucco or masonry repair cost?', a: 'It depends on the size of the damage, what caused it, access to the wall, and how much finishing the repair needs to blend in. The on-site visit and written quote are free, and the quote spells out what gets removed and rebuilt.', more: { label: 'What moves the price of a renovation', to: '/renovation-cost-winnipeg#cost-drivers' } },
   ],
 
   // Title, meta description and Service schema for this page. `updated`
@@ -117,7 +117,7 @@ export default {
     serviceType: 'Masonry and stucco repair',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'masonry and stucco Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.

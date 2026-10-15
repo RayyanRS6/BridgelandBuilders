@@ -5,6 +5,7 @@ import {
   BUSINESS_HOURS,
   COST_HUB_PATH,
   GBP,
+  NEARBY_AREAS_TEXT_SHORT,
   SERVICE_AREAS,
   SERVICE_CATALOG,
   SITE_EMAIL,
@@ -80,19 +81,19 @@ export const PAGE_SEO = {
     description:
       'Winnipeg renovation contractor for kitchens, bathrooms, basement development, additions and commercial spaces. Free on-site visit and free written quote.',
     image: DEFAULT_IMAGE,
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/services': {
     title: 'Renovation Services in Winnipeg | Bridgeland Builders',
     description:
       'Renovation services in Winnipeg for homes and businesses: kitchens, bathrooms, basements, whole homes, additions, commercial fit-ups, flooring and more.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/about-us': {
     title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
       `Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over ${EXPERIENCE_YEARS} years of combined experience and ${PROJECT_COUNT}+ projects.`,
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/our-process': {
     title: 'Our Renovation Process | Bridgeland Builders Winnipeg',
@@ -110,13 +111,13 @@ export const PAGE_SEO = {
     title: 'Winnipeg Renovation FAQs | Bridgeland Builders',
     description:
       'Answers to common Winnipeg renovation questions: costs and written quotes, permits, timelines, living through the work, where we work and how to start.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/instant-quote': {
     title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',
     description:
       'Get a free instant renovation quote in Winnipeg. Answer a few questions for a starting price range, then book a free on-site visit for a written quote.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/book-online': {
     title: 'Book a Free On-Site Renovation Visit | Bridgeland Builders',
@@ -131,13 +132,13 @@ export const PAGE_SEO = {
     updated: '2026-10-14',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
-  // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in siteConfig.js.
+  // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in areas.js.
   // The page passes the content module's seo (same values) to usePageSeo.
   '/service-areas': {
     title: 'Service Areas: Winnipeg & Nearby | Bridgeland Builders',
     description:
-      'Renovation contractor serving Winnipeg and communities within about an hour: Headingley, East and West St. Paul, Oak Bluff, Selkirk and Steinbach.',
-    updated: '2026-10-14',
+      `Renovation contractor serving Winnipeg and communities within about an hour: ${NEARBY_AREAS_TEXT_SHORT}.`,
+    updated: '2026-10-15',
   },
   // How guides, cost pages and service pages are written, sourced and reviewed
   // (plan §11.3). Page content: src/data/editorialPolicy.js.
@@ -145,7 +146,7 @@ export const PAGE_SEO = {
     title: 'Editorial Policy | Bridgeland Builders',
     description:
       'How Bridgeland Builders writes, sources, reviews and updates the renovation guides, cost information and service pages published on this website.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/blog': {
     title: 'Winnipeg Renovation Guides | Bridgeland Builders',
@@ -168,7 +169,7 @@ export const PAGE_SEO = {
     title: 'Privacy Policy | Bridgeland Builders',
     description:
       'How Bridgeland Builders collects, uses and protects personal information from our website, forms, booking calendar, price guide, chat and texts.',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   '/terms-of-service': {
     title: 'Terms of Service | Bridgeland Builders',
@@ -538,7 +539,10 @@ export function buildArticle({ path, headline, description, image, datePublished
   };
 }
 
-/** FAQPage schema from [{ q, a }] items. */
+/**
+ * FAQPage schema from [{ q, a }] items. A blank line in `a` (a paragraph
+ * break on the page, FaqAccordion.jsx) becomes a space: one plain-text answer.
+ */
 export function buildFaqPage(path, faqs) {
   if (!faqs || !faqs.length) return null;
   return {
@@ -547,7 +551,7 @@ export function buildFaqPage(path, faqs) {
     mainEntity: faqs.map((item) => ({
       '@type': 'Question',
       name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
+      acceptedAnswer: { '@type': 'Answer', text: typeof item.a === 'string' ? item.a.replace(/\s*\n\s*/g, ' ') : item.a },
     })),
   };
 }

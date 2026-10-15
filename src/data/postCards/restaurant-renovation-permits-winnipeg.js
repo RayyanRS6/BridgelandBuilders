@@ -10,7 +10,24 @@ export default {
   "category": "Commercial",
   "date": "2026-10-13",
   "readMinutes": 8,
-  "heroSrc": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
-  "heroSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.7231ee98.webp 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.9713d7f1.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.0a935fa4.avif 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.6b028ea6.avif 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.4c3faba8.avif 1320w"
+  "image": {
+    "base": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation",
+    "widths": [
+      480,
+      880,
+      1320
+    ],
+    "webp": [
+      "7231ee98",
+      "9892209c",
+      "9713d7f1"
+    ],
+    "avif": [
+      "0a935fa4",
+      "6b028ea6",
+      "4c3faba8"
+    ],
+    "main": 1
+  },
+  "titleCard": true
 };

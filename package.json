@@ -15,11 +15,15 @@
     "redirects": "node scripts/sync-redirects.mjs",
     "check:redirects": "node scripts/check-redirects.mjs",
     "check:history": "node scripts/check-history.mjs",
+    "check:prices": "node scripts/check-estimator-prices.mjs",
     "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
     "images": "node scripts/build-images.mjs",
     "images:fetch": "node scripts/fetch-legacy-images.mjs",
     "indexnow": "node scripts/indexnow.mjs",
-    "gsc:cannibal": "node scripts/gsc-cannibalisation.mjs"
+    "gsc:cannibal": "node scripts/gsc-cannibalisation.mjs",
+    "gsc:cannibal:sample": "node scripts/gsc-cannibalisation.mjs scripts/fixtures/gsc-query-page-sample.csv --months=3",
+    "competitors:sitemaps": "node scripts/competitor-sitemaps.mjs",
+    "competitors:dry-run": "node scripts/competitor-sitemaps.mjs --dry-run"
   },
   "dependencies": {
     "@vercel/functions": "^3.9.11",

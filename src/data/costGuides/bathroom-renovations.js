@@ -26,7 +26,7 @@ export default {
       'Bathroom renovation costs in Winnipeg: starting ranges from $16,000 to $36,000 by size in our estimator, plus what a new shower, tub, tile and vanity add.',
     primaryKeyword: 'bathroom renovation cost Winnipeg',
     published: '2026-10-13',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   eyebrow: 'Bathroom Renovation Cost',
@@ -34,6 +34,7 @@ export default {
   intro:
     'Starting ranges from our own instant estimator, what a new shower or tub adds, and how to get a written quote for your bathroom.',
 
+  answerHeading: 'How much does a bathroom renovation cost in Winnipeg?',
   answer:
     'Our instant estimator starts a small bathroom renovation in Winnipeg (up to 50 sq ft) at $16,000–$20,000. Medium bathrooms of 51–100 sq ft start at $20,000–$24,000 and large ones of 101–150+ sq ft at $24,000–$36,000. A new shower or tub and your finishes move the number, and the written quote after a free on-site visit is final.',
 
@@ -111,7 +112,11 @@ export default {
       blocks: [
         {
           t: 'p',
-          x: 'Not as a full renovation in our estimator: the smallest bathroom range, for rooms up to 50 sq ft, starts at $16,000–$20,000, before a new tub or shower. Smaller refreshes are welcome, though, and not every bathroom needs a full remodel. Share your budget at the on-site visit so the written quote focuses on what matters most, such as the shower, the floor or the vanity.',
+          x: 'Not as a full renovation in our estimator: the smallest bathroom range, for rooms up to 50 sq ft, starts at $16,000–$20,000, before a new tub or shower.',
+        },
+        {
+          t: 'p',
+          x: 'Smaller refreshes are welcome, though, and not every bathroom needs a full remodel. Share your budget at the on-site visit so the written quote focuses on what matters most, such as the shower, the floor or the vanity.',
         },
         {
           t: 'p',
@@ -175,7 +180,7 @@ export default {
   faqs: [
     {
       q: 'How long does a bathroom renovation take?',
-      a: `${TIMELINES.bathroom.wordsCapitalized} for a typical full bathroom, from demolition to the final bead of silicone. If it is your only bathroom, tell us at the on-site visit: we plan those tighter and get the toilet back in service as early as we can. While the work is on, we protect the hallway, keep the room sealed off and clean up every day.`,
+      a: `${TIMELINES.bathroom.wordsCapitalized} for a typical full bathroom, from demolition to the final bead of silicone. If it’s your only bathroom, tell us at the on-site visit: we plan those tighter and get the toilet back in service as early as we can. During the work, we protect the hallway, seal off the room and clean up every day.`,
     },
     {
       q: 'Do I need a permit to renovate a bathroom in Winnipeg?',

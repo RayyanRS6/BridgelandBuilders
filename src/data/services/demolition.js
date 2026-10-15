@@ -51,11 +51,11 @@ export default {
   typesTag: 'Project Types',
   typesTitle: 'What kind of demolition do we do?',
   typesDesc:
-    'Interior and selective demolition: strip-outs ahead of a renovation in homes and commercial spaces. That covers kitchens, bathrooms, basements, non-structural walls and full commercial interiors. We don’t take on whole-building demolition, which in Winnipeg needs a demolition permit and an applicant who holds a City demolition contractor licence.',
+    'Interior and selective demolition: strip-outs ahead of a renovation in homes and commercial spaces. That covers kitchens, bathrooms, basements, non-structural walls and [full commercial interiors](/services/commercial-renovations). We don’t take on whole-building demolition, which in Winnipeg needs a demolition permit and an applicant who holds a City demolition contractor licence.',
   types: [
     { title: 'Kitchen & Bathroom Strip-Outs', text: 'Cabinets, counters, fixtures, tile and drywall removed down to the studs, or just the parts being replaced.' },
     { title: 'Basement Strip-Outs', text: 'Old panelling, framing, ceilings and flooring removed, so the walls and floor can be checked before rebuilding.' },
-    { title: 'Non-Structural Walls', text: 'Partition walls taken out to open up a layout. Load-bearing walls need a beam and a permit, so they belong to the renovation plan.' },
+    { title: 'Non-Structural Walls', text: 'Partition walls taken out to [open up a layout](/services/whole-home-renovations). Load-bearing walls need a beam and a permit, so they belong to the renovation plan.' },
     { title: 'Commercial Strip-Outs', text: 'A previous tenant’s walls, ceilings, flooring and fixtures removed for the new layout, with evenings and weekends available.' },
     { title: 'Flooring & Tile Removal', text: 'Old tile, hardwood, vinyl and adhesive taken up, with older materials tested first.' },
     { title: 'Selective Removal', text: 'Only what has to go comes out; the finishes and fixtures you keep are protected.' },
@@ -65,13 +65,13 @@ export default {
     tag: 'In Winnipeg',
     title: 'Do you need a permit for interior demolition in Winnipeg?',
     intro:
-      'Not a demolition permit, if you are only removing interior components. The City of Winnipeg says applications that only remove interior building components, such as walls and partitions, are not demolitions. The renovation itself may still need a building permit, and older materials must be assessed before anything is disturbed.',
+      'Not a demolition permit, if you are only removing interior components. The City of Winnipeg says applications that only remove interior building components, such as walls and partitions, are not demolitions. [The renovation itself may still need a building permit](/blog/winnipeg-renovation-permits), and older materials must be assessed before anything is disturbed.',
     items: [
       { title: 'Interior Removal Isn’t Demolition', text: 'According to the City, removing interior components such as walls and partitions needs no demolition permit or licensed demolition contractor.' },
-      { title: 'The Renovation May Need a Permit', text: 'Kitchens, bathrooms and open-concept changes can need a building permit, and commercial alterations need one before work starts. We coordinate permits and inspections.' },
+      { title: 'The Renovation May Need a Permit', text: 'Kitchens, bathrooms and open-concept changes can need a building permit, and commercial alterations need one before work starts. [We coordinate permits and inspections](/our-process).' },
       { title: 'Asbestos Comes First', text: 'Under Manitoba’s workplace safety rules, where asbestos is suspected, a competent person inspects the area, and asbestos that will be disturbed is removed before demolition starts.' },
       { title: 'Buildings From Before 1990', text: 'The Province says asbestos was used in buildings built or renovated before 1990. Health Canada lists tiles, plaster, drywall and insulation among materials that may contain it.' },
-      { title: 'Lead Paint', text: 'Health Canada says homes built before 1960 probably contain lead-based paint, and advises against sanders, heat guns and blowlamps on it.' },
+      { title: 'Lead Paint', text: 'Health Canada says [homes built before 1960](/blog/renovating-a-character-home-in-winnipeg) probably contain lead-based paint, and advises against sanders, heat guns and blowlamps on it.' },
       { title: 'Notice for Asbestos Work', text: 'Work that may release asbestos fibres has to be reported to Manitoba Workplace Safety and Health before it starts.' },
     ],
     sources: [
@@ -107,7 +107,7 @@ export default {
     { q: 'What happens if asbestos is found?', a: 'Work in that area stops until it is dealt with. Manitoba’s rules require asbestos that will be disturbed to be removed before demolition or alteration starts, and that removal is specialist work. Testing older materials before the strip-out is scheduled avoids a stop in the middle of the job.' },
     { q: 'How do you keep dust out of the rest of the building?', a: 'The work area is sealed off with plastic barriers, floors and paths to the door are covered, and debris goes out by the shortest route. In occupied homes and businesses that stay open, the messiest work is planned for the times that disturb you least.' },
     { q: 'Can you strip out a commercial space while we stay open?', a: 'Often, yes. Strip-outs can be scheduled after hours or on weekends, with the work area sealed off from the rest of the space and debris taken out on an agreed route. On longer jobs you get a progress update every week, so you know what is coming next.' },
-    { q: 'How much does interior demolition cost?', a: 'It depends on how much is coming out, how it was built, access for hauling debris, and whether older materials need testing. The on-site visit and written quote are free. When demolition is the first stage of a larger renovation with us, it is part of that project’s quote.' },
+    { q: 'How much does interior demolition cost?', a: 'It depends on how much is coming out, how it was built, access for hauling debris, and whether older materials need testing. The on-site visit and written quote are free. When demolition is the first stage of a larger renovation with us, it is part of that project’s quote.', more: { label: 'What changes the cost of a renovation', to: '/renovation-cost-winnipeg#cost-drivers' } },
   ],
 
   // Title, meta description and Service schema for this page. `updated`
@@ -120,7 +120,7 @@ export default {
     serviceType: 'Interior demolition',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'interior demolition Winnipeg',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.

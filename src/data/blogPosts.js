@@ -31,7 +31,7 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-10-14",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": null,
     "heroSrc": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-880.5517d108.webp",
@@ -260,7 +260,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Renovating in Winnipeg or a nearby community? [Book a free on-site visit](/book-online): we’ll look at the space, talk through what you want and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote), or see how we plan a [kitchen renovation](/services/kitchen-renovations) or a [whole-home renovation](/services/whole-home-renovations)."
+        "x": "Renovating in Winnipeg or a nearby community? [Book a free on-site visit](/book-online): we’ll look at the space, talk through what you want and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote), or see [our kitchen remodel work](/services/kitchen-renovations) and how we plan a [whole-home renovation](/services/whole-home-renovations)."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
@@ -338,7 +338,7 @@ export const BLOG_POSTS = [
       "Basements & Suites"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
@@ -524,6 +524,10 @@ export const BLOG_POSTS = [
         "x": "Book each inspection before the work it covers is closed in."
       },
       {
+        "t": "p",
+        "x": "In September 2026, the City took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against its own target of 10 business days; that’s review time, not the total time until a permit is issued."
+      },
+      {
         "t": "h2",
         "x": "Which inspections will a basement need?"
       },
@@ -629,6 +633,11 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
+        "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+        "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+        "accessed": "2026-10-15"
+      },
+      {
         "label": "City of Winnipeg – Basement & overland flooding",
         "url": "https://www.winnipeg.ca/services-programs/water-wastewater/flooding/basement-overland-flooding",
         "accessed": "2026-10-13"
@@ -638,7 +647,8 @@ export const BLOG_POSTS = [
         "url": "https://www.canada.ca/en/health-canada/services/environmental-workplace-health/reports-publications/radon-what-you-need-to-know.html",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "basement-flood-protection-winnipeg",
@@ -651,7 +661,7 @@ export const BLOG_POSTS = [
       "Basements & Suites"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": null,
     "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
@@ -766,7 +776,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Outside Winnipeg, the same devices are common, but the permit office and its rules belong to your municipality. Our [renovation permits guide](/blog/winnipeg-renovation-permits) lists the offices for nearby communities."
+        "x": "Outside Winnipeg, the same devices are common, but the permit office and its rules belong to your municipality. Our permits guide lists [the permit offices for nearby communities](/blog/winnipeg-renovation-permits)."
       },
       {
         "t": "h2",
@@ -1138,8 +1148,8 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
-    "readMinutes": 8,
+    "updated": "2026-10-15",
+    "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
     "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
@@ -1196,6 +1206,14 @@ export const BLOG_POSTS = [
       {
         "t": "p",
         "x": "Part 3 and Part 9 are parts of the Manitoba Building Code; if nobody knows which applies, the City asks you to confirm before applying. Simpler work, such as partitions that leave exits and fire separations alone, can be drawn by someone other than an architect if the drawings show the scope clearly."
+      },
+      {
+        "t": "p",
+        "x": "The Part also changes the City's review times. In September 2026, permits for commercial Part 9 buildings, three storeys or less with a building area under 600 m², took an average of 6.2 business days to review, against the City's own target of 15."
+      },
+      {
+        "t": "p",
+        "x": "In Part 3 buildings that month, minor alterations with no change of use, no professionals required and no impact on life safety averaged 5.3 business days against a target of 5, and a change of use in existing tenant space averaged 6.9 against 15. That's review time, not the total time until a permit is issued."
       },
       {
         "t": "table",
@@ -1418,6 +1436,11 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
+        "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+        "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+        "accessed": "2026-10-15"
+      },
+      {
         "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
         "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
         "accessed": "2026-10-13"
@@ -1447,7 +1470,8 @@ export const BLOG_POSTS = [
         "url": "https://web2.gov.mb.ca/laws/regs/current/341-88r.php?lang=en",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "ensuite-renovation-winnipeg",
@@ -1460,7 +1484,7 @@ export const BLOG_POSTS = [
       "Kitchens & Baths"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp",
@@ -1703,7 +1727,7 @@ export const BLOG_POSTS = [
         "a": "Our bathroom renovation cost guide lists the starting ranges our instant estimator uses for bathrooms, by size and option, and an ensuite falls within those ranges. The instant estimate gives a range for your own room, and the free written quote after an on-site visit gives you a price you can sign."
       }
     ],
-    "answer": "An ensuite should cost about the same as a full bathroom of the same size and finish level, so start with our [bathroom renovation cost guide](/services/bathroom-renovations/cost) for current Winnipeg price ranges. Where your ensuite lands in that range depends mostly on plumbing moves, the type of shower, how much tile and glass it has, and whether the room is enlarged.",
+    "answer": "Priced like any bathroom of the same size and finish, an ensuite starts in our instant estimator at $16,000–$20,000 for up to 50 sq ft, $20,000–$24,000 for 51–100 sq ft and $24,000–$36,000 for 101–150+ sq ft; a new shower runs $10,000–$15,000. Plumbing moves, the shower, tile, glass and any enlargement decide where yours lands; see our [bathroom renovation cost guide](/services/bathroom-renovations/cost).",
     "sources": [
       {
         "label": "City of Winnipeg: Home renovations (building permits)",
@@ -1733,7 +1757,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": null,
     "heroSrc": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-880.f29111e2.webp",
@@ -1892,7 +1916,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Outside Winnipeg, check with your local municipality. If your project grows into new siding materials, new window openings or an addition, permits may come into play; our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need one."
+        "x": "Outside Winnipeg, check with your local municipality. If your project grows into new siding materials, new window openings or an addition, permits may come into play; our guide explains [which projects need a permit](/blog/winnipeg-renovation-permits)."
       },
       {
         "t": "h2",
@@ -2005,7 +2029,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
@@ -2220,7 +2244,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and for current price ranges by project type, our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
+        "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and our cost guide for [current price ranges by project type](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
       },
       {
         "t": "p",
@@ -2296,7 +2320,7 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
@@ -2484,7 +2508,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Our free written quote sets out the scope and the taxes, which is the document to take to your lender. Winnipeg price ranges are in our [renovation cost guide](/renovation-cost-winnipeg), and our guide to [home renovation costs in Canada](/blog/home-renovation-cost-canada) explains what national figures can and can't tell you."
+        "x": "Our free written quote sets out the scope and the taxes, which is the document to take to your lender. [Winnipeg price ranges](/renovation-cost-winnipeg) are in our cost guide, and our guide to [home renovation costs in Canada](/blog/home-renovation-cost-canada) explains what national figures can and can't tell you."
       },
       {
         "t": "h2",
@@ -2580,7 +2604,8 @@ export const BLOG_POSTS = [
         "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "home-renovation-planning-guide-canada",
@@ -2594,7 +2619,7 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-880.26e707ed.webp",
@@ -2690,7 +2715,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For Winnipeg price ranges, see our [renovation cost guide](/renovation-cost-winnipeg); [how much a home renovation costs in Canada](/blog/home-renovation-cost-canada) explains why national averages can't set your budget. If you'll borrow for part of it, read the [home renovation financing guide](/blog/home-renovation-financing-canada) before you lock in the budget."
+        "x": "For Winnipeg price ranges, see [our cost guide](/renovation-cost-winnipeg); [how much a home renovation costs in Canada](/blog/home-renovation-cost-canada) explains why national averages can't set your budget. If you'll borrow for part of it, read the [home renovation financing guide](/blog/home-renovation-financing-canada) before you lock in the budget."
       },
       {
         "t": "h2",
@@ -2873,7 +2898,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Planning a renovation in Winnipeg or a nearby community, such as a [kitchen renovation](/services/kitchen-renovations) or [basement development](/services/basement-renovations)? [Book a free on-site visit](/book-online). We'll walk through your list, flag likely permits and hidden-condition risks, and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote)."
+        "x": "Planning a renovation in Winnipeg or a nearby community, such as [a new kitchen](/services/kitchen-renovations) or [basement development](/services/basement-renovations)? [Book a free on-site visit](/book-online). We'll walk through your list, flag likely permits and hidden-condition risks, and follow up with a free written quote. For a first number, try the [instant renovation estimate](/instant-quote)."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
@@ -3549,7 +3574,8 @@ export const BLOG_POSTS = [
         "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "manitoba-renovation-tax-credits-rebates",
@@ -3943,12 +3969,13 @@ export const BLOG_POSTS = [
         "url": "https://www.gov.mb.ca/housing/progs/repair.html",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "office-fit-up-lease-planning-winnipeg",
     "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
-    "metaTitle": "Office Fit-Up Planning in Winnipeg | Bridgeland Builders",
+    "metaTitle": "Office Fit-Up Lease Planning in Winnipeg | Bridgeland",
     "metaDescription": "Plan a Winnipeg office fit-up around your lease: landlord consent, tenant allowances, City permits, inspections and the occupancy permit before move-in.",
     "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
     "category": "Commercial",
@@ -3957,8 +3984,8 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-14",
-    "readMinutes": 7,
+    "updated": "2026-10-15",
+    "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
     "heroSrcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
@@ -4056,6 +4083,14 @@ export const BLOG_POSTS = [
       {
         "t": "p",
         "x": "For simpler fit-ups, the architectural drawings do not have to come from an architect. The City asks for someone who can show the scope clearly and professionally: a key plan of where your unit sits, and a scaled floor plan with dimensions, labelled rooms and walls marked existing, new or demolished."
+      },
+      {
+        "t": "p",
+        "x": "In September 2026, the City took an average of 5.3 business days to review minor alterations in Part 3 buildings (no change of use, no professionals required and no impact on life safety), against its own target of 5, and 6.9 business days for a change of use in existing tenant space, against a target of 15."
+      },
+      {
+        "t": "p",
+        "x": "In a small commercial Part 9 building, three storeys or less with a building area under 600 m², the average that month was 6.2 business days against a target of 15. That's review time, not the total time until a permit is issued."
       },
       {
         "t": "h2",
@@ -4219,6 +4254,11 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
+        "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+        "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+        "accessed": "2026-10-15"
+      },
+      {
         "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
         "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
         "accessed": "2026-10-13"
@@ -4228,7 +4268,8 @@ export const BLOG_POSTS = [
         "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "planning-a-winter-basement-development-winnipeg",
@@ -4725,7 +4766,7 @@ export const BLOG_POSTS = [
       "Older Homes"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": null,
     "heroSrc": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-880.8c8b9b42.webp",
@@ -4812,7 +4853,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "A heritage permit is a separate approval. Work that needs a building, electrical or plumbing permit still needs one. We coordinate the permits and inspections a project needs with the City of Winnipeg, and heritage approval is one more step to schedule at the start. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+        "x": "A heritage permit is a separate approval. Work that needs a building, electrical or plumbing permit still needs one. We coordinate the permits and inspections a project needs with the City of Winnipeg, and heritage approval is one more step to schedule at the start. Our permit guide explains [which work needs which permit](/blog/winnipeg-renovation-permits)."
       },
       {
         "t": "h2",
@@ -4891,7 +4932,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Once permits and materials are ready, most [whole home renovations](/services/whole-home-renovations) we take on run 8 to 16 weeks, and many straightforward additions take a similar time. For current price ranges by project type, see our [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+        "x": "Once permits and materials are ready, most [whole home renovations](/services/whole-home-renovations) we take on run 8 to 16 weeks, and many straightforward additions take a similar time. For current price ranges by project type, see [what renovations cost in Winnipeg](/renovation-cost-winnipeg)."
       },
       {
         "t": "p",
@@ -4981,7 +5022,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
@@ -5066,6 +5107,14 @@ export const BLOG_POSTS = [
           ]
         ],
         "note": "Requirements depend on your space and scope. Outside Winnipeg, your municipality's permit authority takes the City's role."
+      },
+      {
+        "t": "p",
+        "x": "For Part 3 buildings, the City's open data shows it took an average of 5.3 business days in September 2026 to review minor alterations with no change of use, no professionals required and no impact on life safety, against its own target of 5."
+      },
+      {
+        "t": "p",
+        "x": "A change of use in existing tenant space with multiple professionals involved averaged 6.9 business days that month, against a target of 15. That's review time, not the total time until a permit is issued."
       },
       {
         "t": "h2",
@@ -5224,6 +5273,11 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
+        "label": "City of Winnipeg Open Data: Building permit application processing times (review)",
+        "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+        "accessed": "2026-10-15"
+      },
+      {
         "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
         "url": "https://www.winnipeg.ca/media/6131",
         "accessed": "2026-10-13"
@@ -5258,7 +5312,8 @@ export const BLOG_POSTS = [
         "url": "https://lgcamb.ca/liquor/liquor-service-licences-2/how-to-apply/",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "secondary-suite-rules-winnipeg",
@@ -5272,7 +5327,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
@@ -5291,6 +5346,7 @@ export const BLOG_POSTS = [
       "/services/basement-suites",
       "/services/basement-renovations"
     ],
+    "ctaService": "/services/basement-suites",
     "cluster": "winnipeg-permits",
     "memberOnly": false,
     "status": "published",
@@ -5322,6 +5378,10 @@ export const BLOG_POSTS = [
       {
         "t": "p",
         "x": "Both a development permit and a building permit, before construction starts, plus separate electrical and plumbing permits. The City offers concurrent review, where the building permit application goes in once the development application is confirmed complete, or sequential review, after development approval. Apply through Permits Online or at the Zoning & Permits office, Unit 31-30 Fort Street."
+      },
+      {
+        "t": "p",
+        "x": "In September 2026, the City took an average of 13 business days to review housing permit applications where one dwelling is stacked above another, as in a house with a basement suite, against its own target of 15 business days; that’s review time, not the total time until a permit is issued."
       },
       {
         "t": "p",
@@ -5408,7 +5468,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "h2",
-        "x": "What changed with Winnipeg’s 2025 zoning amendments?"
+        "x": "What did the 2025 zoning changes mean for suites?"
       },
       {
         "t": "p",
@@ -5533,6 +5593,11 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
+        "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+        "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+        "accessed": "2026-10-15"
+      },
+      {
         "label": "Province of Manitoba – Adoption of the 2020 national model construction codes",
         "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
         "accessed": "2026-10-13"
@@ -5552,7 +5617,8 @@ export const BLOG_POSTS = [
         "url": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-45355-mhrtc.html",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "spring-flood-prep-winnipeg-basements",
@@ -5794,7 +5860,8 @@ export const BLOG_POSTS = [
         "url": "https://www.gov.mb.ca/floodinfo/pdf/2026/february_2026_flood_outlook_report.pdf",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-02-15"
   },
   {
     "slug": "what-does-a-general-contractor-do",
@@ -5807,7 +5874,7 @@ export const BLOG_POSTS = [
       "Hiring a Contractor"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
@@ -5827,6 +5894,7 @@ export const BLOG_POSTS = [
       "/services/commercial-renovations",
       "/services/whole-home-renovations"
     ],
+    "ctaService": "/services/general-contracting",
     "cluster": "hiring-a-contractor",
     "memberOnly": false,
     "status": "published",
@@ -5981,7 +6049,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+        "x": "At Bridgeland Builders, every project starts with a free on-site visit and a free written quote, with taxes shown. For a rough number first, try our [instant renovation estimate](/instant-quote) or [our cost guide](/renovation-cost-winnipeg)."
       },
       {
         "t": "h2",
@@ -5993,7 +6061,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City of Winnipeg or the local municipality on every project. Our guide to [Winnipeg renovation permits](/blog/winnipeg-renovation-permits) covers which projects need one."
+        "x": "Outside Winnipeg, permits come from your local municipality. We coordinate permits and inspections with the City of Winnipeg or the local municipality on every project. Our guide to [City permit rules](/blog/winnipeg-renovation-permits) covers which projects need one."
       },
       {
         "t": "h2",
@@ -6111,7 +6179,7 @@ export const BLOG_POSTS = [
   {
     "slug": "window-and-door-replacement-winnipeg",
     "title": "Window and Door Replacement in Winnipeg: Permits, Glass and Rebates",
-    "metaTitle": "Window and Door Replacement in Winnipeg: What to Know",
+    "metaTitle": "Window Replacement Permits in Winnipeg: What to Know",
     "metaDescription": "When replacing windows and doors in Winnipeg needs a permit, what ENERGY STAR and triple-pane mean, and how the Efficiency Manitoba rebate works in 2026.",
     "excerpt": "Replacing windows and doors is one of the more straightforward upgrades for a Winnipeg home, as long as you know when the City needs a permit, what the labels mean and how the rebate works. Here is the short version, checked against official sources.",
     "category": "Permits & Planning",
@@ -6119,7 +6187,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-880.6d48e5d6.webp",
@@ -6192,7 +6260,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "If a new window serves a bedroom, especially in a basement, ask how the building code's bedroom window requirements apply before you choose a size. Our guides to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) and [basement development permits](/blog/basement-development-permits-winnipeg) go into more detail."
+        "x": "If a new window serves a bedroom, especially in a basement, ask how the building code's bedroom window requirements apply before you choose a size. Our guides to [when a renovation needs a permit](/blog/winnipeg-renovation-permits) and [basement development permits](/blog/basement-development-permits-winnipeg) go into more detail."
       },
       {
         "t": "h2",
@@ -6425,7 +6493,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
@@ -6626,7 +6694,15 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "There’s no single number. The City publishes building permit processing times, measured in average business days to confirm a complete application and to reach a decision. Incomplete applications are delayed, so complete, dimensioned drawings are the part of the timeline you control."
+        "x": "In September 2026, the City of Winnipeg took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against the City’s own target of 10 business days."
+      },
+      {
+        "t": "p",
+        "x": "Housing permits where one dwelling is stacked above another, such as a house over a basement suite, averaged 13 business days that month, against a target of 15."
+      },
+      {
+        "t": "p",
+        "x": "That’s review time, the time the City takes to reach a decision on an application, not the total time until a permit is issued. The City separately tracks how long it takes to confirm that an application is complete, and incomplete applications are delayed, so complete, dimensioned drawings are the part of the timeline you control."
       },
       {
         "t": "h2",
@@ -6670,7 +6746,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Permit questions are easier to answer with the space in front of you, whether you’re planning a [kitchen renovation](/services/kitchen-renovations), a [bathroom renovation](/services/bathroom-renovations) or an [addition](/services/home-additions). Every project starts with a free on-site visit and a free written quote, so [book your visit](/book-online), or get a starting range first with our [instant estimate](/instant-quote). For budgets, see the [Winnipeg renovation cost guide](/renovation-cost-winnipeg)."
+        "x": "Permit questions are easier to answer with the space in front of you, whether you’re planning a [kitchen remodel](/services/kitchen-renovations), a [bathroom renovation](/services/bathroom-renovations) or an [addition](/services/home-additions). Every project starts with a free on-site visit and a free written quote, so [book your visit](/book-online), or get a starting range first with our [instant estimate](/instant-quote). For budgets, see [typical Winnipeg price ranges](/renovation-cost-winnipeg)."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
@@ -6754,6 +6830,11 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
+        "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+        "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+        "accessed": "2026-10-15"
+      },
+      {
         "label": "City of Winnipeg – Permits Online",
         "url": "https://www.winnipeg.ca/building-development/permits-applications/permits-online",
         "accessed": "2026-10-13"
@@ -6778,7 +6859,8 @@ export const BLOG_POSTS = [
         "url": "https://www.winnipeg.ca/media/6116",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-15"
   },
   {
     "slug": "winnipeg-renovation-show-questions-to-ask",
@@ -7036,7 +7118,8 @@ export const BLOG_POSTS = [
         "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
         "accessed": "2026-10-13"
       }
-    ]
+    ],
+    "reviewBy": "2027-01-18"
   },
   {
     "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
@@ -7329,7 +7412,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-09-01",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
     "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
@@ -7503,7 +7586,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For current price ranges, see our [Winnipeg renovation cost guide](/renovation-cost-winnipeg). For a full-house project, our [whole home renovation](/services/whole-home-renovations) page explains how the work is planned and staged."
+        "x": "For [current Winnipeg price ranges](/renovation-cost-winnipeg), see our cost guide. For a full-house project, our [whole home renovation](/services/whole-home-renovations) page explains how the work is planned and staged."
       },
       {
         "t": "h2",
@@ -7622,6 +7705,7 @@ export const BLOG_POSTS = [
       "/services/restaurant-renovations",
       "/services/office-renovations"
     ],
+    "ctaService": "/services/commercial-renovations",
     "cluster": "commercial-costs",
     "memberOnly": false,
     "status": "published",
@@ -8111,7 +8195,7 @@ export const BLOG_POSTS = [
       "Hiring a Contractor"
     ],
     "date": "2026-08-05",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 10,
     "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
     "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
@@ -8250,7 +8334,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "li",
-        "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on a [kitchen renovation](/services/kitchen-renovations), where cabinets and counters drive the price."
+        "x": "A detailed description of the work and a list of materials, with brands or dollar allowances where finishes aren't chosen yet. Allowances matter most on [kitchen remodels](/services/kitchen-renovations), where cabinets and counters drive the price."
       },
       {
         "t": "li",
@@ -8290,7 +8374,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains which projects need which permits."
+        "x": "Cosmetic work such as painting, flooring and millwork doesn't need a building permit in Winnipeg, while kitchens, bathrooms, new bedrooms, open-concept changes and new or larger exterior openings may. Our permit guide explains [which projects need which permits](/blog/winnipeg-renovation-permits)."
       },
       {
         "t": "p",
@@ -8382,7 +8466,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and the [Winnipeg renovation cost guide](/renovation-cost-winnipeg) explains what drives the price."
+        "x": "If you'd like Bridgeland Builders on your shortlist, [book a free on-site visit](/book-online). We'll walk the space with you and follow up with a free written quote, with taxes shown. Prefer a number first? Our [instant renovation estimate](/instant-quote) gives you a ballpark in minutes, and our cost guide explains [what drives the price of a Winnipeg renovation](/renovation-cost-winnipeg)."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
@@ -9024,7 +9108,7 @@ export const BLOG_POSTS = [
       "Kitchens & Baths"
     ],
     "date": "2026-07-17",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_d9a77fbe24d14f5aa0b0615dbc22920a~mv2.png",
     "heroSrc": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-880.d44977c5.webp",
@@ -9212,7 +9296,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "h2",
-        "x": "How should you plan the budget and schedule?"
+        "x": "How should you plan a bathroom budget and schedule?"
       },
       {
         "t": "p",
@@ -9276,7 +9360,7 @@ export const BLOG_POSTS = [
       "Kitchens & Baths"
     ],
     "date": "2026-07-12",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png",
     "heroSrc": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-880.c18d81b6.webp",
@@ -9462,7 +9546,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our guide to [renovation permits in Winnipeg](/blog/winnipeg-renovation-permits) explains how the permit process works."
+        "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our permit guide explains [how the City's permit process works](/blog/winnipeg-renovation-permits)."
       },
       {
         "t": "h2",
@@ -9478,7 +9562,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** see how we plan and build a [kitchen renovation](/services/kitchen-renovations), then [book a free on-site visit](/book-online). We look at your room, talk through the layout and send a free written quote. Want a number first? Try the [instant estimate](/instant-quote)."
+        "x": "**Next step:** see [how we plan and build kitchens](/services/kitchen-renovations), then [book a free on-site visit](/book-online). We look at your room, talk through the layout and send a free written quote. Want a number first? Try the [instant estimate](/instant-quote)."
       }
     ],
     "faqsTitle": "Common questions",

@@ -14,8 +14,10 @@
 // counted twice, and remove the old Event Setup Tool "Lead" rule.
 //
 // Only runs when the browser sent an event id, which it only does when the
-// pixel itself is running, so Do Not Track visitors and localhost are never
-// sent. Never for a request from Quebec, the EEA, the UK or Switzerland
+// pixel itself is running, so Do Not Track visitors, localhost and the
+// team's own devices (index.html, ?bb_internal=1) are never sent; the
+// endpoints also skip any lead whose attribution is marked internal. Never
+// for a request from Quebec, the EEA, the UK or Switzerland
 // either (CONSENT_REGIONS, read from Vercel's IP-location headers on the
 // request itself, so it holds even if the browser's own check hadn't
 // finished). Contact details are SHA-256 hashed, as Meta requires. Never
