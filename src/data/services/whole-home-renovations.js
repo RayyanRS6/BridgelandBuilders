@@ -69,7 +69,7 @@ export default {
     'Whole home work tends to follow one of a few patterns: a complete home renovation of every room, a main-floor renovation, an interior renovation of selected rooms, or bringing an older house up to date while the walls are open. The right one depends on what the house needs and how long you can live with work underway.',
   types: [
     { title: 'Complete home renovation', text: 'Every room planned together and built in stages or all at once, so floors, trim and finishes match from the front door to the back bedroom.' },
-    { title: 'Main-floor & open-concept', text: 'Opening the kitchen, dining and living rooms into one space. A load-bearing wall needs a beam and a building permit, and both are planned before demolition.' },
+    { title: 'Main-floor & open-concept', text: 'Opening the kitchen, dining and living rooms into one space. A load-bearing wall needs a beam and a building permit, and both are planned before demolition: see [removing a load-bearing wall in Winnipeg](/blog/removing-a-load-bearing-wall-winnipeg).' },
     { title: 'Interior renovation', text: 'Selected rooms brought to one standard: living room, bedrooms, laundry room or mudroom, with new flooring, lighting, doors and paint.' },
     { title: 'Older home updates', text: 'With the walls open on [an older house](/blog/renovating-a-character-home-in-winnipeg), it’s the right moment to replace outdated wiring and plumbing, add insulation, and have suspect materials tested for asbestos.' },
     { title: 'Renovating before you move in', text: 'Just bought a house? Work goes faster through empty rooms, so renovating before move-in can shorten the job. We plan the scope around your possession date.' },
