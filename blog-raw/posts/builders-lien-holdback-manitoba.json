@@ -1,0 +1,243 @@
+{
+  "slug": "builders-lien-holdback-manitoba",
+  "status": "published",
+  "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+  "metaTitle": "Builders' Lien Holdback in Manitoba: Homeowner Guide",
+  "metaDescription": "How Manitoba's 7.5% builders' lien holdback works on a renovation: the 60-day period, substantial performance, liens, holdback accounts and prompt payment.",
+  "excerpt": "A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.",
+  "date": "2026-10-15",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-06-01",
+  "cats": [
+    "Hiring a Contractor"
+  ],
+  "services": [
+    "/services/general-contracting",
+    "/services/whole-home-renovations",
+    "/services/kitchen-renovations",
+    "/services/basement-renovations"
+  ],
+  "cluster": "hiring-a-contractor",
+  "ctaService": "/services/general-contracting",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "Manitoba's Builders' Liens Act requires whoever pays for construction work to hold back 7.5% of each payment and keep it for at least 60 days after substantial performance is certified, or the work is completed or abandoned, whichever comes first. Contractors, subcontractors and suppliers generally have 60 days to register a lien, and claims under $300 create no lien.",
+  "hero": "",
+  "heroAlt": "",
+  "sources": [
+    { "label": "Manitoba Laws: The Builders' Liens Act, C.C.S.M. c. B91 (current to October 12, 2026)", "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php?lang=en", "accessed": "2026-10-15" },
+    { "label": "Manitoba Laws: The Builders' Liens Act, version in effect November 15, 2024 to March 31, 2025 (40-day periods)", "url": "https://web2.gov.mb.ca/laws/statutes/archive/b091(2025-03-31).php?df=2024-11-15", "accessed": "2026-10-15" },
+    { "label": "Manitoba Laws: The Builders' Liens Amendment Act (Prompt Payment), S.M. 2023, c. 30", "url": "https://web2.gov.mb.ca/laws/statutes/2023/c03023.php?lang=en", "accessed": "2026-10-15" },
+    { "label": "Manitoba Laws: Proclamation naming April 1, 2025 for the remaining provisions of S.M. 2023, c. 30", "url": "https://web2.gov.mb.ca/laws/statutes/proclamations/2023c30(2025-04-01).php?lang=en", "accessed": "2026-10-15" },
+    { "label": "Manitoba Laws: Builders' Liens Regulation, M.R. 127/89 (ss. 2 and 3, prescribed amounts)", "url": "https://web2.gov.mb.ca/laws/regs/current/127-89.php?lang=en", "accessed": "2026-10-15" },
+    { "label": "Manitoba Laws: Builders' Liens (Prompt Payment) Regulation, M.R. 113/2024", "url": "https://web2.gov.mb.ca/laws/regs/current/113-2024.php?lang=en", "accessed": "2026-10-15" },
+    { "label": "Manitoba Consumer Protection Office: Hiring a contractor", "url": "https://www.gov.mb.ca/consumerinfo/initiatives/building-or-renovating/hiring-a-contractor.html", "accessed": "2026-10-15" },
+    { "label": "Manitoba Consumer Protection Office: Home improvements sold by direct sellers", "url": "https://www.gov.mb.ca/cp/cpo/info/home_improvements.html", "accessed": "2026-10-15" }
+  ],
+  "faqsTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "q": "Is the holdback 7.5% or 10% in Manitoba?",
+      "a": "7.5%. Section 24(1) of The Builders' Liens Act sets the holdback at 7.5% of each payment, so a 10% figure isn't the Manitoba holdback. Don't confuse it with the Consumer Protection Office's advice that a 10% down payment is reasonable. That advice is about deposits, not the holdback."
+    },
+    {
+      "q": "Does the holdback mean I pay less for the renovation?",
+      "a": "No. The holdback is paid later, not taken off the price. The total held back equals 7.5% of the contract price (s. 24(1)), and it goes to the contractor after the holdback period, once you've checked that no liens are registered against your property."
+    },
+    {
+      "q": "What if a lien is registered on my home?",
+      "a": "Talk to a Manitoba lawyer before you pay anyone. A lien can't make you liable for more than you owe the contractor, unless you didn't keep the holdback (ss. 22(1) and 27(2)). The Act also lets a judge order money or security paid into court and the lien's registration vacated (s. 55(2))."
+    },
+    {
+      "q": "Can a contract say the Builders' Liens Act doesn't apply?",
+      "a": "No. Section 11 says any agreement, oral or written, that provides the Act doesn't apply to a person, or that waives a right of lien, a trust right or a prompt payment requirement, \"is against public policy and void.\" If a clause seems to switch the Act off, ask a lawyer before you sign."
+    },
+    {
+      "q": "Can I use the holdback to finish the job if my contractor walks away?",
+      "a": "Not at the expense of lien claimants. Section 27(6) says that when a contractor defaults, the holdback can't be applied, as against a lien claimant with a charge on it, to complete the contract, pay damages for non-completion or satisfy other claims against the contractor. Talk to a lawyer before you spend it."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "If you're paying a contractor to renovate your home in Manitoba, [The Builders' Liens Act](https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php?lang=en) sets a payment rule that's easy to miss: the holdback. This guide explains how much to keep back, for how long, when a lien can be registered against your home, and what changed on April 1, 2025."
+    },
+    {
+      "t": "callout",
+      "title": "General information, not legal advice",
+      "x": "This guide summarizes The Builders' Liens Act and its regulations as published on Manitoba Laws and checked on October 15, 2026. It isn't legal advice. Your contract and circumstances matter, so talk to a Manitoba lawyer before you hold back, release or dispute a payment."
+    },
+    {
+      "t": "h2",
+      "x": "What is the builders' lien holdback, and how much is it in Manitoba?"
+    },
+    {
+      "t": "p",
+      "x": "The holdback is part of each payment that you keep back for a set time. Section 24(1) says the person primarily liable for payment shall deduct 7.5% of each payment as the work is done, so the total holdback equals 7.5% of the contract price. On a $10,000 progress payment, you pay $9,250 and keep $750."
+    },
+    {
+      "t": "p",
+      "x": "It isn't a discount. The contractor is still owed the holdback and is paid it later, once the holdback period has passed and no liens are registered. Until then, lien holders under the contract, such as unpaid subcontractors, suppliers and workers, have a charge on it (s. 26)."
+    },
+    {
+      "t": "table",
+      "caption": "Manitoba's builders' lien rules at a glance",
+      "head": ["Rule", "What the Act says", "Where"],
+      "rows": [
+        ["Holdback", "Deduct 7.5% of each payment as the work is done", "s. 24(1)"],
+        ["How long to keep it", "At least 60 days after substantial performance is certified, the work is completed or it's abandoned, whichever comes first", "s. 24(1)"],
+        ["Contractor's lien deadline", "During the work, or within 60 days after substantial performance or abandonment", "s. 43(1)"],
+        ["Small claims", "No lien exists for a claim of less than $300", "s. 14"],
+        ["Holdback account", "Required when the contract price is over $200,000", "s. 24(3); M.R. 127/89, s. 2"],
+        ["Prompt payment", "Contracts entered into on or after April 1, 2025: a proper invoice each month unless the contract says otherwise; the owner pays within 28 days or disputes within 14", "ss. 80, 86 and 90"]
+      ],
+      "note": "Checked on Manitoba Laws on October 15, 2026. The Act's consolidation is current to October 12, 2026, and M.R. 127/89 to October 14, 2026."
+    },
+    {
+      "t": "h2",
+      "x": "How long do you keep the holdback: 40 or 60 days?"
+    },
+    {
+      "t": "p",
+      "x": "Sixty days. The Act in force today says the holdback is kept for at least 60 days after a certificate of substantial performance is given, the work is completed or the work is abandoned, whichever comes first (s. 24(1))."
+    },
+    {
+      "t": "p",
+      "x": "If work continues after substantial performance, you also hold back 7.5% of the payments for that remaining work, and keep it for 60 days after the work is completed or abandoned (s. 24(2))."
+    },
+    {
+      "t": "p",
+      "x": "So why do two Consumer Protection Office pages still say 40? Its hiring-a-contractor page says you can hold back 7.5% for 40 days after the contractor has finished the job, and its home improvements page suggests checking with the Land Titles Office on the 40th day. Both still read that way on October 15, 2026."
+    },
+    {
+      "t": "p",
+      "x": "They reflect the Act as it read before April 1, 2025. The Builders' Liens Amendment Act (Prompt Payment), S.M. 2023, c. 30, changed the holdback and lien-registration periods from 40 days to 60, and the Province proclaimed those changes in force on April 1, 2025. Go by the Act, not the older pages."
+    },
+    {
+      "t": "h2",
+      "x": "What is substantial performance, and who certifies it?"
+    },
+    {
+      "t": "p",
+      "x": "Under section 2(1), a contract is substantially performed when what's being built, or a substantial part of it, is ready for use or being used as intended, and the remaining work can be finished or corrected for no more than 3% of the first $250,000 of the contract price, 2% of the next $250,000 and 1% of the balance."
+    },
+    {
+      "t": "p",
+      "x": "If your contract doesn't make payments depend on a payment certifier, such as an architect or engineer who certifies payments, the certificate comes from you. Under section 46(2), the contractor may apply to you for one, and must apply if one of its subcontractors asks."
+    },
+    {
+      "t": "p",
+      "x": "You then give the certificate, in Form 8, within seven days after receiving the application or after the contract is substantially performed in your opinion, whichever is later. If the person responsible fails or refuses, the owner, the contractor, a subcontractor or a lien claimant can ask a judge to declare the contract substantially performed (s. 46(3))."
+    },
+    {
+      "t": "p",
+      "x": "Once a certificate of substantial performance is given to the owner, section 59(1) requires the owner to give a true copy within 10 days to anyone working on or supplying the job who has asked for one in writing by personal service. An owner who doesn't can be liable for the requester's loss (s. 59(2))."
+    },
+    {
+      "t": "p",
+      "x": "Section 59(3) sets an exemption: the copy rule doesn't apply to an individual ordering work, services or materials for a home that they or their spouse or common-law partner own and occupy for single-family residential purposes, where the contract price is no more than $75,000, the amount set by M.R. 127/89, s. 3."
+    },
+    {
+      "t": "h2",
+      "x": "Can a contractor or supplier put a lien on your house?"
+    },
+    {
+      "t": "p",
+      "x": "Yes. Under section 13, anyone who does work, provides services or supplies materials under a contract or subcontract has a lien for its value on the owner's interest in the property. That includes subcontractors and suppliers you never hired directly. A claim for lien is registered at the land titles office as an encumbrance against the land (s. 37(1))."
+    },
+    {
+      "t": "p",
+      "x": "Under section 43, a contractor can register a claim during the work or within 60 days after the contract's substantial performance or abandonment. Subcontractors, suppliers and workers get 60 days from the main contract's substantial performance or abandonment or, broadly, from the end of their own work, whichever comes first."
+    },
+    {
+      "t": "p",
+      "x": "For these deadlines, substantial performance means the date a certificate of substantial performance is given to the owner (s. 43(6)). Liens for work done after that point to finish the job have their own 60-day windows (s. 44). No lien exists for a claim of less than $300 (s. 14)."
+    },
+    {
+      "t": "p",
+      "x": "A lien can't make you liable for more than you owe the contractor (s. 22(1)). If you kept the holdback, good-faith payments beyond it, made before a lien was registered, count toward discharging the lien (s. 27(1)). If you didn't, you stay liable to lien claimants for the amount you should have held back (s. 27(2))."
+    },
+    {
+      "t": "h2",
+      "x": "Do you need a separate holdback account?"
+    },
+    {
+      "t": "p",
+      "x": "Only on larger contracts. Section 24(3) requires the owner to pay the holdback into a holdback account when the contract price, or the actual value of the work if there's no set price, is more than the amount set by regulation. The Builders' Liens Regulation, M.R. 127/89, sets that amount at $200,000 (s. 2)."
+    },
+    {
+      "t": "p",
+      "x": "A holdback account is an interest-bearing account at a bank, trust company or credit union in the joint names of the owner and the contractor (s. 1). At $200,000 or less, no account is required, but a judge can order one on the application of the contractor or a lien claimant (s. 24(4))."
+    },
+    {
+      "t": "p",
+      "x": "Where an account was required and the owner didn't open one, a judge must order the holdback paid in, with interest, when the contractor or a lien claimant applies (s. 24(5))."
+    },
+    {
+      "t": "h2",
+      "x": "What is a statutory declaration, and when should you ask for one?"
+    },
+    {
+      "t": "p",
+      "x": "It's a declaration, signed by the contractor, that creditors and workers have been paid to date for the materials and work on your project. Manitoba's Consumer Protection Office suggests one with each progress payment, paying only for work that's done and never prepaying in full. It says the forms are available at business stationery stores."
+    },
+    {
+      "t": "p",
+      "x": "The reason is the Act's trust rule. Money a contractor receives on account of the contract price is a trust fund for the subcontractors, suppliers and workers on that job and WCB Manitoba, among others (s. 4(1)). Paying the subtrades is part of [what a general contractor does](/blog/what-does-a-general-contractor-do), and the declaration is your record that it happened."
+    },
+    {
+      "t": "p",
+      "x": "Before the final payment, also ask for a fresh WCB clearance letter; our guide to [checking a contractor's WCB clearance](/blog/how-to-check-a-contractors-wcb-clearance-manitoba) shows how. For how large a deposit should be, see the deposit question in our [renovation contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project)."
+    },
+    {
+      "t": "h2",
+      "x": "When can you release the holdback?"
+    },
+    {
+      "t": "p",
+      "x": "Once at least 60 days have passed since substantial performance was certified or the work was completed or abandoned, whichever came first. Section 27(3) says paying the holdback after that period is valid if no liens are then registered against the land. Section 25(1) also stops a holdback reduction while a registered lien remains in effect."
+    },
+    {
+      "t": "p",
+      "x": "So check the title first. The Consumer Protection Office suggests making the final payment only when you and the contractor agree the job is finished and you've checked with the Land Titles Office that no liens are registered. Ask your lawyer how to run that check, and talk to them before paying anything if a lien appears."
+    },
+    {
+      "t": "h2",
+      "x": "Does Manitoba's prompt payment law apply to your renovation invoices?"
+    },
+    {
+      "t": "p",
+      "x": "Manitoba added prompt payment rules to the Act, in force April 1, 2025. Under section 80(1), they apply to owners, contractors, subcontractors and construction projects subject to the Act's lien and trust remedies, for contracts and subcontracts entered into on or after that date. Architects and engineers are excluded (s. 80(2)), and the holdback rules still apply (s. 82)."
+    },
+    {
+      "t": "p",
+      "x": "Under these rules, the contractor gives the owner a proper invoice each month unless the contract says otherwise (s. 86), and the owner must pay within 28 days after the invoice is given (s. 90(1))."
+    },
+    {
+      "t": "p",
+      "x": "To dispute an invoice, the owner gives a notice of non-payment within 14 days, in the form set by regulation, stating the amount in dispute and every reason for not paying it (s. 90(2) and (3)). Any amount not disputed in the notice is still due within the 28 days (s. 90(4))."
+    },
+    {
+      "t": "p",
+      "x": "A proper invoice must meet the contract's requirements and include the following (s. 85), plus anything the regulations add:"
+    },
+    { "t": "li", "x": "The contractor's name and address." },
+    { "t": "li", "x": "The invoice date and the period when the work, services or materials were provided." },
+    { "t": "li", "x": "The contract or other authority the work was done under." },
+    { "t": "li", "x": "A description of what the contractor and its subcontractors provided, with quantities where appropriate." },
+    { "t": "li", "x": "The amount invoiced and the payment terms." },
+    { "t": "li", "x": "The name, title, phone number and mailing address of the person payment should be sent to." },
+    {
+      "t": "p",
+      "x": "If you're not sure whether these rules cover your home renovation contract, or how they would work with your payment schedule, ask a lawyer before you sign."
+    },
+    {
+      "t": "h2",
+      "x": "Next step"
+    },
+    {
+      "t": "p",
+      "x": "Planning a renovation in Winnipeg or a nearby community? [Book a free on-site visit](/book-online), and raise the holdback with us when we go through your free written quote. Our [general contracting](/services/general-contracting) page explains how we coordinate the trades, permits and inspections on a multi-trade project."
+    }
+  ]
+}
