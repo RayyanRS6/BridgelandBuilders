@@ -1,0 +1,306 @@
+{
+  "slug": "window-condensation-winnipeg-winter",
+  "status": "published",
+  "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
+  "metaTitle": "Window Condensation in Winter: Winnipeg Guide | Bridgeland",
+  "metaDescription": "Why windows frost up in a Winnipeg winter, NRCan's humidity limits from 0°C to −40°C, what fog between the panes means, and when to replace windows.",
+  "excerpt": "Frost and water on the inside of your windows are usually a humidity problem first. Using Natural Resources Canada's humidity table and Health Canada's moisture advice, this guide explains how humid a Winnipeg house can be in a cold snap, what fog between the panes means and when replacement makes sense.",
+  "date": "2026-10-15",
+  "updated": "2026-10-15",
+  "reviewBy": "2027-09-15",
+  "cats": [
+    "Older Homes"
+  ],
+  "services": [
+    "/services/windows-and-doors"
+  ],
+  "cluster": "windows-doors",
+  "ctaService": "/services/windows-and-doors",
+  "author": "",
+  "reviewedBy": "",
+  "answer": "At −30°C outside and 21°C inside, Natural Resources Canada's table shows a standard double-glazed window stays free of condensation up to 25% indoor relative humidity, and a triple-glazed low-E window up to 60%. Frost or water on the inside glass usually means the air is too humid for that window. Moisture inside a sealed unit means a failed seal.",
+  "hero": null,
+  "heroAlt": "",
+  "sources": [
+    {
+      "label": "Natural Resources Canada: Condensation (windows, doors and skylights)",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/product-energy-ratings/condensation",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Natural Resources Canada: Keeping The Heat In, Section 9: Operating your house (Table 9-1, maximum indoor relative humidity)",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/keeping-heat-section-9-operating-your-house-thermostats-water-heaters-furnaces-other-heatingcooling-systems",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Natural Resources Canada: Keeping The Heat In, Section 8: Upgrading windows and exterior doors",
+      "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/keeping-heat-section-8-upgrading-windows-exterior-doors",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Health Canada: Guide to addressing moisture and mould indoors",
+      "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/addressing-moisture-mould-your-home.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Health Canada: Factsheet: Ventilation and the indoor environment",
+      "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/factsheet-ventilation-indoor-environment.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Efficiency Manitoba: Windows and Doors Rebate",
+      "url": "https://efficiencymb.ca/my-home/windows-and-doors-rebate/",
+      "accessed": "2026-10-15"
+    }
+  ],
+  "faqsTitle": "Common questions",
+  "faqs": [
+    {
+      "q": "Why do my windows only frost up on the coldest days?",
+      "a": "Because the colder it is outside, the less humidity the glass can handle. In NRCan's Table 9-1, at 21°C indoors, a standard double-glazed window stays clear up to 34% relative humidity at −20°C, but only up to 25% at −30°C. Indoor air that was fine last week can frost the same glass in a cold snap."
+    },
+    {
+      "q": "Should I turn off my humidifier in winter?",
+      "a": "If your windows are condensing, yes. NRCan's solutions for high humidity or condensation include disconnecting any humidifiers, and Health Canada's window checklist says to unplug and remove them. Health Canada's general range is 30% to 50% relative humidity, but in deep cold, standard and older double-glazed windows may only stay clear below that range."
+    },
+    {
+      "q": "Does running the bathroom fan help with window condensation?",
+      "a": "Yes, if it exhausts outdoors. NRCan lists running kitchen and bathroom fans during use among its solutions to moisture problems and suggests a timer or humidity control on the bathroom fan. Health Canada says to keep the fan running at least 30 minutes after a shower or bath, and to check it isn't vented into the attic."
+    },
+    {
+      "q": "Is ice on the inside of windows a problem?",
+      "a": "Occasional condensation isn't, according to NRCan, but excessive condensation or frosting is a sign to reduce moisture or increase ventilation. When the ice melts, the water ends up on the frames and sills. Health Canada advises drying window frames and sills daily to keep water from dripping and causing mould to grow."
+    },
+    {
+      "q": "Will an HRV stop window condensation?",
+      "a": "It can help if it is running and set up properly. NRCan says to make sure your heat recovery ventilator is on if you have one, and that HRVs must be installed, balanced and commissioned properly by a certified technician, then serviced regularly. Routine maintenance typically means cleaning the filters and the core."
+    }
+  ],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "When a Winnipeg cold snap arrives, many homes wake up to frost on the inside of the glass or water on the window sills. It looks like a window problem, but it usually starts with the air inside the house."
+    },
+    {
+      "t": "p",
+      "x": "This guide explains why it happens, how much humidity your windows can handle at −20°C or −30°C, what fog between the panes means, and when replacement makes sense. Everything below was checked against Natural Resources Canada (NRCan) and Health Canada pages on October 15, 2026."
+    },
+    {
+      "t": "h2",
+      "x": "Why do windows frost or sweat on the inside in a Winnipeg winter?"
+    },
+    {
+      "t": "p",
+      "x": "NRCan explains that condensation often forms in cold weather when moist indoor air meets cooler surfaces, and that the moisture can condense into water droplets or even frost. In its words, “The risk of condensation increases as the weather gets colder and/or the inside humidity rises.” That is why frost tends to show up on the coldest mornings."
+    },
+    {
+      "t": "p",
+      "x": "Condensation can form on the glass, the frames and sashes, and near the weather seals. NRCan says deep sills, closed drapes and blinds, and even furniture can block air movement and let cool air pool near a window. In more extreme climates, it adds, the edges of the glass are more prone to fogging up and freezing."
+    },
+    {
+      "t": "h2",
+      "x": "What indoor humidity should you keep at −20°C or −30°C?"
+    },
+    {
+      "t": "p",
+      "x": "NRCan's Keeping The Heat In guide answers this in Table 9-1: the highest indoor relative humidity, at 21°C indoors, at which there will be no condensation on four kinds of windows. The colder it is outside, the lower the limit. These are the published values, verified on October 15, 2026."
+    },
+    {
+      "t": "table",
+      "caption": "Maximum indoor relative humidity with no window condensation, at 21°C indoors (NRCan Table 9-1)",
+      "head": [
+        "Outdoor temperature",
+        "Older generation double-glazed low-E",
+        "Double-glazed",
+        "Double-glazed low-E",
+        "Triple-glazed low-E"
+      ],
+      "rows": [
+        [
+          "0°C",
+          "50%",
+          "58%",
+          "70%",
+          "81%"
+        ],
+        [
+          "−10°C",
+          "34%",
+          "44%",
+          "59%",
+          "74%"
+        ],
+        [
+          "−20°C",
+          "24%",
+          "34%",
+          "50%",
+          "67%"
+        ],
+        [
+          "−30°C",
+          "15%",
+          "25%",
+          "42%",
+          "60%"
+        ],
+        [
+          "−40°C",
+          "10%",
+          "18%",
+          "35%",
+          "54%"
+        ]
+      ],
+      "note": "Source: Natural Resources Canada, Keeping The Heat In, Section 9 (page modified September 29, 2025), checked October 15, 2026. All values assume an indoor temperature of 21°C."
+    },
+    {
+      "t": "p",
+      "x": "Health Canada's guide to moisture and mould says to maintain relative humidity between 30% and 50%. In deep cold, the window can set a lower ceiling. At −30°C, a standard double-glazed window's 25% limit sits below Health Canada's 30% floor, so on those days the window, not the 30–50% range, decides how humid the house can be without condensation."
+    },
+    {
+      "t": "p",
+      "x": "Triple-glazed low-E windows are the exception in the table: their limit stays above 50% even at −40°C (54%), so by the table, Health Canada's full range works for them even in a deep cold snap."
+    },
+    {
+      "t": "h3",
+      "x": "Why is the older low-E column the lowest?"
+    },
+    {
+      "t": "p",
+      "x": "NRCan gives older generation double-glazed low-E windows their own column, and their limits are the lowest in the table at every temperature: 15% at −30°C, below the 25% for plain double-glazed. The table doesn't give a reason. The practical lesson is that a low-E label alone doesn't tell you how a window handles humidity; its age matters too."
+    },
+    {
+      "t": "p",
+      "x": "If you don't know which column your windows belong in, NRCan suggests letting your windows become your indicator: excessive condensation on the inside of double-glazed windows, apart from those in the kitchen and bathroom, means there is too much moisture in the air. A hygrometer, which measures relative humidity, gives you a number to compare with the table."
+    },
+    {
+      "t": "h2",
+      "x": "Is condensation between the panes a failed seal?"
+    },
+    {
+      "t": "p",
+      "x": "In a sealed double- or triple-glazed unit, yes. NRCan lists condensation “between the glass panes if the seal is broken” and says to replace the insulating glass unit. It also suggests checking whether the window is still under warranty, and calls refurbishing a failed sealed unit a temporary fix that won't restore the original energy efficiency."
+    },
+    {
+      "t": "p",
+      "x": "Storm windows are different. NRCan explains that condensation between a window and its storm, or between non-sealed panes, comes from moist house air leaking past the inner pane. Even dry houses get it, and it is common on second storeys. The fix is to weatherstrip the inner sash and keep the storm window's weep holes open to the outside."
+    },
+    {
+      "t": "h2",
+      "x": "How can you cut window condensation without new windows?"
+    },
+    {
+      "t": "p",
+      "x": "Start with the moisture. NRCan's first step for high humidity or condensation is to reduce the amount of water vapour in the air. Between NRCan's advice and Health Canada's moisture guide, these are the steps that matter most for windows:"
+    },
+    {
+      "t": "li",
+      "x": "“Disconnect any humidifiers,” NRCan says. Health Canada's window checklist says to unplug and remove them."
+    },
+    {
+      "t": "li",
+      "x": "Run kitchen and bathroom fans when the rooms are in use, and make sure they exhaust outdoors. NRCan suggests a timer or humidity control on the bathroom fan; Health Canada says to keep it running for at least 30 minutes after a shower or bath."
+    },
+    {
+      "t": "li",
+      "x": "Avoid kitchen range hoods that recirculate air back into the room, NRCan advises."
+    },
+    {
+      "t": "li",
+      "x": "Keep your heat recovery ventilator (HRV) on, if you have one."
+    },
+    {
+      "t": "li",
+      "x": "Vent the clothes dryer outdoors and avoid drying laundry inside the house."
+    },
+    {
+      "t": "li",
+      "x": "“Keep window coverings open to allow warm air to reach the windows,” Health Canada says, and keep heating vents and baseboards clear of furniture."
+    },
+    {
+      "t": "li",
+      "x": "“Dry your window frames and sills daily to keep water from dripping and causing mould to grow,” Health Canada adds."
+    },
+    {
+      "t": "li",
+      "x": "Run a dehumidifier “if moisture is condensing on cold surfaces such as window panes or relative humidity is > 50%,” in Health Canada's words."
+    },
+    {
+      "t": "p",
+      "x": "Health Canada's checklist also says each bathroom should have an exhaust fan, vented to the outside and not into the attic. If yours has no fan, or one that dumps moist air into the attic, a [bathroom renovation](/services/bathroom-renovations) is a good time to put that right."
+    },
+    {
+      "t": "p",
+      "x": "If condensation continues after you've cut moisture, NRCan says the next step is more ventilation, and Health Canada lists condensation on windows in winter as a sign that ventilation may need to be increased. NRCan says central ventilation systems should be designed, specified and installed by a professional, and HRVs installed, balanced and commissioned by a certified technician."
+    },
+    {
+      "t": "h2",
+      "x": "Will new or triple-pane windows stop condensation?"
+    },
+    {
+      "t": "p",
+      "x": "They raise the limit, but they don't guarantee clear glass. In NRCan's table, a triple-glazed low-E window stays clear up to 60% humidity at −30°C, against 25% for standard double-glazed. NRCan says ENERGY STAR certified windows have less condensation than ordinary models, and that triple glazing helps where the edges of the glass fog up and freeze."
+    },
+    {
+      "t": "p",
+      "x": "New windows can also make condensation worse. NRCan notes that many homeowners replace windows only to find the problem grows, because the old, leaky windows were helping to keep humidity down and the new ones seal the house more tightly. Its answer is to reduce humidity levels in the house and improve ventilation."
+    },
+    {
+      "t": "p",
+      "x": "NRCan's Keeping The Heat In guide is direct: if a house already shows signs of excessive condensation, find and reduce the moisture sources; if that can't be done, “any retrofit that makes the house more airtight will have to include a mechanical ventilation system.” If condensation is part of why you're replacing windows, plan ventilation at the same time."
+    },
+    {
+      "t": "h2",
+      "x": "Can energy-efficient windows fog up on the outside?"
+    },
+    {
+      "t": "p",
+      "x": "Yes, sometimes. NRCan explains that low-e coatings make glass more energy efficient by reducing heat loss, and that if the night has been cool and calm and the air is humid, condensation may form on the outside surface of the glass around sunrise. Because it sits on the outdoor face, it isn't moisture trapped inside a sealed unit."
+    },
+    {
+      "t": "p",
+      "x": "NRCan also notes a higher risk of condensation when the low-e coating is on the room-side surface of the glass, so it is worth asking which surface is coated when you compare window quotes."
+    },
+    {
+      "t": "h2",
+      "x": "When is condensation a sign it's time to replace windows?"
+    },
+    {
+      "t": "p",
+      "x": "Condensation on its own doesn't mean a window has failed: NRCan says occasional condensation does not pose a problem. These signs point to the window itself, and most of them come from NRCan's own checklist for inspecting windows:"
+    },
+    {
+      "t": "li",
+      "x": "Fog or water inside a sealed double- or triple-glazed unit, which means the seal has failed"
+    },
+    {
+      "t": "li",
+      "x": "Rot, mould or staining on or around the frame and sill"
+    },
+    {
+      "t": "li",
+      "x": "Drafts, or air leaking around the frame and at the joints that open and close"
+    },
+    {
+      "t": "li",
+      "x": "Hardware that no longer opens, closes or locks the window properly"
+    },
+    {
+      "t": "li",
+      "x": "A frame in poor condition, which NRCan says is when it may be time to replace the unit"
+    },
+    {
+      "t": "p",
+      "x": "Health Canada says indoor mould growth may pose a health hazard and should be removed, with the moisture problem behind it fixed first, including repairs to windows if water is getting in from outside. Its moisture and mould guide also explains how to clean up small areas safely."
+    },
+    {
+      "t": "p",
+      "x": "For when a window replacement needs a City permit, and how Efficiency Manitoba's rebate on ENERGY STAR certified triple-pane windows works, see our [window and door replacement guide](/blog/window-and-door-replacement-winnipeg)."
+    },
+    {
+      "t": "p",
+      "x": "**Next step:** see what our [window and door installation](/services/windows-and-doors) work includes, then [book a free on-site visit](/book-online). Tell us which windows frost up, fog between the panes or let in drafts, and we'll look at each one with you and follow up with a free written quote. We reply within one business day."
+    }
+  ]
+}
