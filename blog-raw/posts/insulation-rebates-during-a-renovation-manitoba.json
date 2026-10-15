@@ -33,6 +33,11 @@
       "accessed": "2026-10-13"
     },
     {
+      "label": "Efficiency Manitoba: Energy Efficiency Assistance Program",
+      "url": "https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "Manitoba Hydro: Home Energy Efficiency Loan",
       "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
       "accessed": "2026-10-13"
@@ -268,6 +273,12 @@
           "Manitoba Hydro",
           "Current offer",
           "On-bill financing; approval before work starts"
+        ],
+        [
+          "Energy Efficiency Assistance Program",
+          "Efficiency Manitoba",
+          "Current offer (checked October 15, 2026)",
+          "Free insulation for income-qualified households, installed by Efficiency Manitoba's registered program contractors"
         ],
         [
           "Canada Greener Homes Grant",

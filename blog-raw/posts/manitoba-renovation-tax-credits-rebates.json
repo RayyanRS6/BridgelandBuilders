@@ -6,6 +6,7 @@
   "metaDescription": "Which renovation tax credits, rebates and loans Manitoba homeowners can still use, which programs have closed, and how to avoid losing a rebate.",
   "excerpt": "A status check of the renovation tax credits, rebates and loans Manitoba homeowners can still use, the programs that have closed, and the steps that keep a claim valid.",
   "date": "2026-10-13",
+  "updated": "2026-10-15",
   "reviewBy": "2027-01-15",
   "cats": [
     "Money & Rebates"
@@ -18,7 +19,7 @@
   "cluster": "renovation-money",
   "author": "",
   "reviewedBy": "",
-  "answer": "Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates for insulation, windows and doors, Manitoba Hydro's on-bill Home Energy Efficiency Loan, and CMHC-insured refinancing to build a suite. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.",
+  "answer": "Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates and its free upgrades for income-qualified homes, Manitoba Hydro's on-bill loan, CMHC-insured suite refinancing and the Province's seniors home-adaptation grant. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.",
   "hero": null,
   "heroAlt": "",
   "sources": [
@@ -73,9 +74,24 @@
       "accessed": "2026-10-13"
     },
     {
+      "label": "Efficiency Manitoba: Energy Efficiency Assistance Program",
+      "url": "https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Efficiency Manitoba: Canada launches Greener Homes Affordability Program in Manitoba (September 12, 2025)",
+      "url": "https://efficiencymb.ca/articles/canada-greener-homes-affordability-program/",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "Manitoba Hydro: Home Energy Efficiency Loan",
       "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Province of Manitoba: Housing options and care planning for seniors (Manitoba Safe and Healthy Home for Seniors Program)",
+      "url": "https://gov.mb.ca/seniors/resources/housing-options-and-care-planning.html",
+      "accessed": "2026-10-15"
     },
     {
       "label": "Manitoba Finance: Green Energy Equipment Tax Credit",
@@ -85,12 +101,12 @@
     {
       "label": "Natural Resources Canada: Closed — Canada Greener Homes Grant",
       "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
-      "accessed": "2026-10-13"
+      "accessed": "2026-10-15"
     },
     {
       "label": "Natural Resources Canada: Canada Greener Homes Loan (closed)",
       "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan",
-      "accessed": "2026-10-13"
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg: Basement Flooding Protection Subsidy Program (cancelled)",
@@ -105,18 +121,22 @@
     {
       "label": "Manitoba Housing: Repair and renovation programs",
       "url": "https://www.gov.mb.ca/housing/progs/repair.html",
-      "accessed": "2026-10-13"
+      "accessed": "2026-10-15"
     }
   ],
   "faqsTitle": "Frequently Asked Questions",
   "faqs": [
     {
       "q": "Is there a home renovation grant in Manitoba?",
-      "a": "There's no general renovation grant for Manitoba homeowners. The help that exists is targeted: Efficiency Manitoba rebates for energy upgrades, federal tax credits for multigenerational suites and accessibility work, and Manitoba Hydro's on-bill loan. Manitoba Housing says its renovation and repair programs are no longer available. Check each program's own page, because offers and amounts change."
+      "a": "There's no general renovation grant, but targeted programs exist: Efficiency Manitoba rebates, free Efficiency Manitoba upgrades for income-qualified households, the Province's Safe and Healthy Home for Seniors Program, federal tax credits for multigenerational suites and accessibility work, and Manitoba Hydro's on-bill loan. Manitoba Housing says its repair programs are no longer available. Check each program's page, because offers change."
     },
     {
       "q": "Can I still get the Canada Greener Homes Grant?",
-      "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Canada Greener Homes Loan is closed too because its funding is fully committed. For energy upgrades in Manitoba today, look at Efficiency Manitoba's rebates and Manitoba Hydro's Home Energy Efficiency Loan, both of which need approval before any work starts."
+      "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Loan is closed because its funding is fully committed. Income-qualified households can look at Efficiency Manitoba's Energy Efficiency Assistance Program, which the federal Canada Greener Homes Affordability Program now helps fund. Others can use Efficiency Manitoba's rebates and Manitoba Hydro's loan, approved before work starts."
+    },
+    {
+      "q": "Is there a grant for seniors' home modifications in Manitoba?",
+      "a": "Yes. The Province's Manitoba Safe and Healthy Home for Seniors Program offers up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations essential for daily living. Seniors 65 or older, or family living with them, can apply if combined household income is $60,000 or less. Total funding is up to $1.5 million, so it may run out."
     },
     {
       "q": "Does the City of Winnipeg still pay for backwater valves?",
@@ -135,7 +155,7 @@
     {
       "t": "callout",
       "title": "General information, not tax advice",
-      "x": "Program details were checked on official government and utility websites on October 13, 2026. Rules and amounts change, and eligibility depends on your situation, so confirm with the program and with an accountant before you rely on a credit or rebate."
+      "x": "Program details were checked on official government and utility websites on October 13 and 15, 2026. Rules and amounts change, and eligibility depends on your situation, so confirm with the program and with an accountant before you rely on a credit or rebate."
     },
     {
       "t": "p",
@@ -151,7 +171,7 @@
     },
     {
       "t": "table",
-      "caption": "Open or listed as available (checked October 13, 2026)",
+      "caption": "Open or listed as available (checked October 13, 2026, unless noted)",
       "head": [
         "Program",
         "Who it helps",
@@ -202,6 +222,12 @@
           "Listed; apply and complete an EnerGuide evaluation before work"
         ],
         [
+          "[Efficiency Manitoba Energy Efficiency Assistance Program](https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/)",
+          "Homeowners, renters and landlords whose household income is at or below Efficiency Manitoba's published limits (or First Nation band members with status), in a single-detached or semi-detached home lived in year-round",
+          "Free insulation for eligible attics, walls and basements, free air-sealing products and, in qualifying homes with electric heat, a free heat pump",
+          "Listed (verified October 15, 2026); Efficiency Manitoba connects you with its registered program contractors"
+        ],
+        [
           "[Manitoba Hydro Home Energy Efficiency Loan](https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/)",
           "Homeowners making qualifying energy upgrades through a participating contractor or retailer",
           "Up to $12,500 per residence; ground source heat pumps and solar PV can be financed up to $20,000, with all loans combined capped at $20,000. Repaid on your energy bill",
@@ -212,6 +238,12 @@
           "Owners installing a geothermal heat pump system",
           "15% of the system's capital cost other than the heat pump when the installer is certified by the Manitoba Geothermal Energy Alliance, plus 7.5% on heat pumps made in Manitoba",
           "Listed by Manitoba Finance (no date shown); confirm current availability with Manitoba Finance"
+        ],
+        [
+          "[Manitoba Safe and Healthy Home for Seniors Program](https://gov.mb.ca/seniors/resources/housing-options-and-care-planning.html)",
+          "Seniors aged 65 and older, and family members who have seniors living with them, with a combined household income of $60,000 or less",
+          "Up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations that are essential for daily living",
+          "Listed by the Province (verified October 15, 2026); up to $1.5 million in total, so funds may run out. Administered by March of Dimes Canada (1-866-906-6006); confirm intake with them"
         ]
       ],
       "note": "Status as published on each official page on the checked date. Interest rates are not shown; ask Manitoba Hydro for current loan terms."
@@ -304,7 +336,7 @@
     },
     {
       "t": "p",
-      "x": "If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
+      "x": "Seniors with lower household incomes can also look at the Province's Manitoba Safe and Healthy Home for Seniors Program, listed in the table above. For either one, keep invoices that list the eligible items separately, and confirm what qualifies with your accountant or the program before the work starts."
     },
     {
       "t": "h2",
@@ -317,6 +349,14 @@
     {
       "t": "p",
       "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application."
+    },
+    {
+      "t": "p",
+      "x": "Households with lower incomes should check the Energy Efficiency Assistance Program in the table first. Efficiency Manitoba lists free insulation, air-sealing products and, in qualifying electrically heated homes, free heat pumps, installed by its registered program contractors. You apply to Efficiency Manitoba, which connects you with those contractors."
+    },
+    {
+      "t": "p",
+      "x": "In September 2025, Efficiency Manitoba announced it would deliver the federal [Canada Greener Homes Affordability Program](https://efficiencymb.ca/articles/canada-greener-homes-affordability-program/) by building on its existing programs for low- to median-income households, including this one. It's a different program from the closed Canada Greener Homes Grant."
     },
     {
       "t": "p",
@@ -376,7 +416,7 @@
     },
     {
       "t": "p",
-      "x": "Planning a suite, an accessible bathroom or an energy upgrade? Bring your rebate questions to a [free on-site visit](/book-online) so any pre-approval steps can be timed before work starts; you'll get a free written quote afterwards. For a first number, try our [instant renovation estimate](/instant-quote)."
+      "x": "Planning a suite, a basement or an energy upgrade? Bring your rebate questions to a [free on-site visit](/book-online) so any pre-approval steps can be timed before work starts; you'll get a free written quote afterwards. For kitchens, bathrooms and basements, the [instant estimate](/instant-quote) gives a first range; everything else is priced after the visit."
     }
   ]
 }
