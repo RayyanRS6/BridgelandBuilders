@@ -9,7 +9,7 @@ export default {
   "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
   "category": "Commercial",
   "date": "2026-08-11",
-  "readMinutes": 7,
+  "readMinutes": 8,
   "image": {
     "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
     "widths": [

@@ -108,7 +108,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Older houses can hide lead paint, materials that may contain asbestos, outdated wiring and plumbing, and framing changed by earlier renovations. None of these is a reason to avoid renovating, but each should be identified before demolition so it can be priced and handled safely instead of being discovered halfway through the job."
+      "x": "Older houses can hide lead paint, [materials that may contain asbestos](/blog/asbestos-testing-before-renovating-manitoba), outdated wiring and plumbing, and framing changed by earlier renovations. None of these is a reason to avoid renovating, but each should be identified before demolition so it can be priced and handled safely instead of being discovered halfway through the job."
     },
     {
       "t": "table",
@@ -187,7 +187,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, note what looks original and what has been changed, and flag what should be tested or checked with the City before design. You then receive a free written quote. Prefer to start with a number? Try the [instant estimate](/instant-quote)."
+      "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, note what looks original and what has been changed, and flag what should be tested or checked with the City before design. You then receive a free written quote. For a kitchen, bathroom or basement, try the [instant estimate](/instant-quote); everything else is priced after the visit."
     }
   ],
   "faqsTitle": "Common questions",
@@ -263,7 +263,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [
@@ -286,56 +286,56 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "exterior-painting-winnipeg-when-to-paint",
-      "title": "When to Paint Your House Exterior in Winnipeg",
-      "excerpt": "Winnipeg's painting season is short, and the weather decides more than the calendar does. Here is how to time an exterior paint job, prepare the surfaces properly and avoid the mistakes that make paint fail early.",
-      "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 7,
+      "slug": "asbestos-testing-before-renovating-manitoba",
+      "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
+      "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
+      "category": "Older Homes",
+      "date": "2026-10-15",
+      "readMinutes": 10,
       "image": {
-        "base": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house",
+        "base": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "acff5638",
-          "f29111e2",
-          "5f986ef8"
+          "647701ea",
+          "e82e0b35",
+          "d62a9906"
         ],
         "avif": [
-          "0b02a5a2",
-          "17af2839",
-          "bb4a7cd2"
+          "a81bb4f7",
+          "a3e4bb73",
+          "4b20838b"
         ],
         "main": 1
       },
       "titleCard": true
     },
     {
-      "slug": "home-additions-and-zoning-winnipeg",
-      "title": "Home Addition Zoning in Winnipeg: Permits and Variances",
-      "excerpt": "Before an addition is designed, it has to fit two sets of rules: zoning, which decides where and how big you can build, and the building code, which decides how it is built. Here is how both work in Winnipeg, and what changed in 2025.",
+      "slug": "check-permit-history-winnipeg-house",
+      "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+      "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
       "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 8,
+      "date": "2026-10-15",
+      "readMinutes": 11,
       "image": {
-        "base": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning",
+        "base": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "33ab98c6",
-          "b9f76c7b",
-          "b7b5971a"
+          "dfc78763",
+          "1189cd90",
+          "d00db2e5"
         ],
         "avif": [
-          "d6c3ff1f",
-          "7d7c2664",
-          "4c809500"
+          "e09156f1",
+          "a5b2e756",
+          "574fa93a"
         ],
         "main": 1
       },

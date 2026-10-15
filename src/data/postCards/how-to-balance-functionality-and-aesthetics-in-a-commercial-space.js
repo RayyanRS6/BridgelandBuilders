@@ -9,7 +9,7 @@ export default {
   "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
   "category": "Commercial",
   "date": "2026-09-03",
-  "readMinutes": 7,
+  "readMinutes": 8,
   "image": {
     "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
     "widths": [

@@ -266,6 +266,34 @@ export default {
       "titleCard": true
     },
     {
+      "slug": "builders-lien-holdback-manitoba",
+      "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+      "excerpt": "A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.",
+      "category": "Hiring a Contractor",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1b473aa7",
+          "73253ecf",
+          "4cc70a86"
+        ],
+        "avif": [
+          "ee61434d",
+          "20180f2d",
+          "7a91bd95"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
       "title": "How to Choose a Renovation Contractor in Winnipeg",
       "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
@@ -291,34 +319,6 @@ export default {
         ],
         "main": 1
       }
-    },
-    {
-      "slug": "clinic-renovation-permits-winnipeg",
-      "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
-      "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
-      "category": "Commercial",
-      "date": "2026-10-13",
-      "readMinutes": 9,
-      "image": {
-        "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "3fb04080",
-          "6b2a1b51",
-          "0e8b8a5a"
-        ],
-        "avif": [
-          "18450584",
-          "e03ed2b1",
-          "75e30f7c"
-        ],
-        "main": 1
-      },
-      "titleCard": true
     }
   ]
 };

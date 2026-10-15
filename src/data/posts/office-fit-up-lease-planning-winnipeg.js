@@ -128,7 +128,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space."
+      "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space. Our guide to [occupancy permits and change of use](/blog/occupancy-permit-change-of-use-winnipeg) explains when one is needed."
     },
     {
       "t": "p",
@@ -201,7 +201,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "If you need to borrow, our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) compares term loans, leasehold improvement loans and landlord allowances. For a first number, try the [instant renovation estimate](/instant-quote); the free written quote after an on-site visit is the figure to plan around."
+      "x": "If you need to borrow, our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) compares term loans, leasehold improvement loans and landlord allowances. Office fit-ups are priced in a free written quote after an on-site visit, not from an online estimate; see what moves that price in [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects)."
     },
     {
       "t": "h2",
@@ -301,12 +301,40 @@ export default {
   ],
   "related": [
     {
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
+      "category": "Commercial",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
+        ],
+        "avif": [
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
       "title": "Commercial Interior Design: Balancing Function and Looks",
       "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
       "category": "Commercial",
       "date": "2026-09-03",
-      "readMinutes": 7,
+      "readMinutes": 8,
       "image": {
         "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
         "widths": [
@@ -350,33 +378,6 @@ export default {
           "7be4d1c9",
           "5a9d610c",
           "537414ab"
-        ],
-        "main": 1
-      }
-    },
-    {
-      "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
-      "title": "Commercial Renovation Financing in Manitoba: Your Options",
-      "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
-      "category": "Commercial",
-      "date": "2026-08-11",
-      "readMinutes": 7,
-      "image": {
-        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "76344da3",
-          "dbbc5f1b",
-          "b9481b87"
-        ],
-        "avif": [
-          "26670bc4",
-          "3191a00b",
-          "54f184c8"
         ],
         "main": 1
       }

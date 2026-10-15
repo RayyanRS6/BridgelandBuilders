@@ -15,7 +15,7 @@ export default {
   ],
   "date": "2026-10-13",
   "updated": "2026-10-15",
-  "readMinutes": 9,
+  "readMinutes": 10,
   "hero": null,
   "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
   "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
@@ -233,12 +233,20 @@ export default {
       "x": "Permitted work is inspected before it’s covered. Request inspections through the City’s housing inspection request form at winnipeg.ca/housinginspection, or by phone at 204-986-5300 on weekdays. Insulated walls and ceilings get a rough-in inspection and then a preboard inspection of insulation and vapour barrier before drywall. Wiring and plumbing are inspected before they’re covered too."
     },
     {
+      "t": "p",
+      "x": "Timing matters as well. The City’s housing inspections page, verified October 15, 2026, says a defect an inspector finds must be corrected and re-inspected within one month or a fee applies, and a permit isn’t closed until the work has passed every required inspection. The FAQ below covers how long a permit stays valid."
+    },
+    {
       "t": "h2",
       "x": "What happens if you renovate without a permit?"
     },
     {
       "t": "p",
-      "x": "The City’s Permit Amnesty page says renovations done without permits must be brought up to current codes through permits and inspections, that post-construction penalty fees are waived only where amnesty is approved, and that undeclared work can lead to notices or orders, with fines or penalties. Amnesty covers a homeowner’s primary residence, not rental properties."
+      "x": "The City’s Permit Amnesty page says renovations done without permits must be brought up to current codes through permits and inspections, and that undeclared work can lead to notices or orders, with fines or penalties."
+    },
+    {
+      "t": "p",
+      "x": "Post-construction penalty fees are waived only where amnesty is approved, and amnesty covers a homeowner’s primary residence, not rental properties. Our guide to [checking a Winnipeg home’s permit history](/blog/check-permit-history-winnipeg-house) covers open permits, unpermitted work and how Permit Amnesty applies."
     },
     {
       "t": "p",
@@ -286,6 +294,10 @@ export default {
     {
       "q": "Can a homeowner get their own building permit in Winnipeg?",
       "a": "Yes. The City makes homeowners responsible for permits, and you can apply through Permits Online or at the Zoning & Permits office at Unit 31-30 Fort Street. Electrical and plumbing permits are narrower: a homeowner can take them out only for work they do personally in the single detached house that is their primary residence."
+    },
+    {
+      "q": "How long is a Winnipeg building permit valid?",
+      "a": "The City says a permit expires if work hasn’t started within six months of issue, and charges a fee unless you confirm the start, book an inspection or request an extension before then. A permit not closed by a final inspection within three years is charged a non-compliance fee. Extensions may be requested but aren’t guaranteed."
     },
     {
       "q": "How much does a renovation permit cost in Winnipeg?",
@@ -370,6 +382,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "City of Winnipeg – Housing inspections (permit expiry, defects and closing)",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/housing-inspections",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "City of Winnipeg – Permit Amnesty program",
       "url": "https://www.winnipeg.ca/building-development/permits-applications/programs-incentives/permit-amnesty-program",
       "accessed": "2026-10-13"
@@ -410,6 +427,34 @@ export default {
       "titleCard": true
     },
     {
+      "slug": "check-permit-history-winnipeg-house",
+      "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+      "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
+      "category": "Permits & Planning",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "dfc78763",
+          "1189cd90",
+          "d00db2e5"
+        ],
+        "avif": [
+          "e09156f1",
+          "a5b2e756",
+          "574fa93a"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
       "title": "How to Choose a Renovation Contractor in Winnipeg",
       "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
@@ -435,34 +480,6 @@ export default {
         ],
         "main": 1
       }
-    },
-    {
-      "slug": "home-renovation-planning-guide-canada",
-      "title": "Home Renovation Planning in Canada: Guide and Checklist",
-      "excerpt": "A step-by-step plan for Canadian homeowners: set goals and a budget, understand permits and codes, build a realistic timeline, and run the safety checks that belong before demolition.",
-      "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 8,
-      "image": {
-        "base": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "22bd57cd",
-          "26e707ed",
-          "e008916e"
-        ],
-        "avif": [
-          "7c9f9167",
-          "e0167740",
-          "c81697cc"
-        ],
-        "main": 1
-      },
-      "titleCard": true
     }
   ]
 };

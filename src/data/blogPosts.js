@@ -21,6 +21,2150 @@ export const BLOG_CATEGORIES = [
 /** Published posts only (blog-raw status "published"), newest first, with bodies. */
 export const BLOG_POSTS = [
   {
+    "slug": "asbestos-testing-before-renovating-manitoba",
+    "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
+    "metaTitle": "Asbestos Testing Before Renovating in Manitoba | Bridgeland",
+    "metaDescription": "When to test for asbestos before renovating in Manitoba, what to do about vermiculite insulation, and what the Province’s 2025 asbestos rule changes mean.",
+    "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
+    "category": "Older Homes",
+    "categories": [
+      "Older Homes"
+    ],
+    "date": "2026-10-15",
+    "updated": "2026-10-15",
+    "readMinutes": 10,
+    "hero": null,
+    "heroSrc": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.e82e0b35.webp",
+    "heroSrcSet": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-480.647701ea.webp 480w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.e82e0b35.webp 880w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1320.d62a9906.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-480.a81bb4f7.avif 480w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.a3e4bb73.avif 880w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1320.4b20838b.avif 1320w",
+    "ogImage": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x630.85e7027f.jpg",
+    "schemaImages": [
+      "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x675.4717b319.jpg",
+      "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x900.d42d09b8.jpg",
+      "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x1200.30ab2e6b.jpg"
+    ],
+    "heroAlt": "Title card: Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/demolition",
+      "/services/whole-home-renovations",
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations",
+      "/services/flooring"
+    ],
+    "ctaService": "/services/demolition",
+    "cluster": "older-homes",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Asbestos is rarely a reason not to renovate an older house, but it decides the order of the work. Anything that might contain it has to be identified before walls, floors or ceilings are opened, or the job stops when it turns up."
+      },
+      {
+        "t": "p",
+        "x": "This guide covers where asbestos can be found in older Manitoba homes and who should test for it. It also covers vermiculite insulation and what Manitoba’s December 2025 rule changes mean for a renovation. It uses Health Canada and Province of Manitoba sources, checked on October 15, 2026."
+      },
+      {
+        "t": "callout",
+        "title": "General information, not legal advice",
+        "x": "This guide summarizes official sources. It isn’t legal advice and doesn’t replace a qualified asbestos professional. Manitoba’s asbestos rules are workplace safety rules; for how they apply to a specific project, call Manitoba Workplace Safety and Health at 204-957-SAFE (7233)."
+      },
+      {
+        "t": "h2",
+        "x": "Could your house contain asbestos?"
+      },
+      {
+        "t": "p",
+        "x": "Possibly, if it is older. Health Canada says “Before 1990, asbestos was mainly used for insulating buildings and homes” against cold weather and noise, and for fireproofing. Making, importing, selling and using products that contain asbestos is now prohibited in Canada, but older building materials may still contain it."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba Workplace Safety and Health says asbestos-containing material was used in homes and buildings built or renovated before 1990. Health Canada lists the older materials where it may still be found:"
+      },
+      {
+        "t": "table",
+        "caption": "Older materials Health Canada says may contain asbestos",
+        "head": [
+          "Material",
+          "Renovation work that would disturb it"
+        ],
+        "rows": [
+          [
+            "House siding",
+            "Re-siding, or cutting new window and door openings"
+          ],
+          [
+            "Cement and plaster",
+            "Opening walls and ceilings, demolition"
+          ],
+          [
+            "Floor and ceiling tiles",
+            "Replacing flooring, taking down ceilings"
+          ],
+          [
+            "Roofing products: tar paper, shingles and felt",
+            "Re-roofing, or an addition that ties into the roof"
+          ],
+          [
+            "Surface treatments: paint, putty, drywall, caulking, sealants and spackling",
+            "Sanding, patching or removing drywall, replacing windows"
+          ],
+          [
+            "Insulation, including around hot water pipes and tanks",
+            "Plumbing and heating changes, basement strip-outs"
+          ],
+          [
+            "Industrial furnaces and heating systems",
+            "Replacing old heating equipment"
+          ],
+          [
+            "Vermiculite-based insulation",
+            "Attic work, opening walls, insulation upgrades"
+          ]
+        ],
+        "note": "Materials from Health Canada’s Asbestos and your health page (dated 2023-02-10). The second column is our own planning note, not part of Health Canada’s list."
+      },
+      {
+        "t": "p",
+        "x": "Vermiculite insulation was not rare here. Manitoba Health cites Natural Resources Canada’s EnerGuide for Houses evaluations from June 1, 2004 to March 22, 2005. Of the 3,184 Manitoba homes evaluated, 215 (6.6 per cent) contained vermiculite insulation, against 3.7 per cent across Canada. That is a 2004–05 survey on an undated provincial page, not a current count."
+      },
+      {
+        "t": "p",
+        "x": "Age and appearance only raise the question. Manitoba’s workplace safety FAQ describes how it is answered. A competent person collects representative bulk samples of the suspect material, and an accredited laboratory analyses them for a definitive result."
+      },
+      {
+        "t": "h2",
+        "x": "Is asbestos dangerous if you leave it alone?"
+      },
+      {
+        "t": "p",
+        "x": "Usually not. Health Canada says materials containing asbestos in your home pose no significant health risks when they are left undisturbed or isolated in an attic. The same goes for materials sealed behind walls and floorboards, or tightly bound in products that are in good condition."
+      },
+      {
+        "t": "p",
+        "x": "The risk comes when fibres get into the air. Health Canada lists renovation and demolition activities such as drilling, sawing, sanding and scraping. It says breathing in asbestos fibres can cause lung cancer, asbestosis, mesothelioma and other diseases. That is why a renovation, not the house itself, is the moment to test."
+      },
+      {
+        "t": "h2",
+        "x": "Who should test for asbestos, and when?"
+      },
+      {
+        "t": "p",
+        "x": "A professional, before the work is planned. Health Canada’s advice is to “hire a professional to test for asbestos before renovating or remodelling.” If asbestos is found, it says to hire a qualified asbestos removal specialist to remove it safely. Test before the strip-out is scheduled, not during it, so the results shape the quote and schedule."
+      },
+      {
+        "t": "p",
+        "x": "Until a qualified person rules it out, Manitoba’s regulation deems any material likely to contain asbestos to be asbestos-containing material (s. 37.2(2)). On a work site, untested suspect material is treated as asbestos. When you book testing:"
+      },
+      {
+        "t": "li",
+        "x": "Tell the tester what the renovation will disturb: which walls, ceilings, floors, pipes and attic areas."
+      },
+      {
+        "t": "li",
+        "x": "Ask which accredited laboratory will analyse the samples, and get the results in writing."
+      },
+      {
+        "t": "li",
+        "x": "From June 1, 2027, sampling and inventory work must be done by a person with a valid asbestos certificate, and the firm must be registered. The Province says a public registry will show what each firm is registered for, abatement or sampling."
+      },
+      {
+        "t": "li",
+        "x": "Share the results at your contractor’s on-site visit, before the quote is written."
+      },
+      {
+        "t": "h2",
+        "x": "What changed in Manitoba’s asbestos rules in December 2025?"
+      },
+      {
+        "t": "p",
+        "x": "Manitoba changed its asbestos rules with M.R. 108/2025, registered December 4, 2025. It rewrote the definition of asbestos-containing material and replaced Part 37 (Asbestos) of the Workplace Safety and Health Regulation. The Province’s news release that day said most amendments take effect on registration, while certification and employer registration start June 1, 2027."
+      },
+      {
+        "t": "table",
+        "caption": "Manitoba’s asbestos rule changes (M.R. 108/2025)",
+        "head": [
+          "What changed",
+          "What the rule says",
+          "In force"
+        ],
+        "rows": [
+          [
+            "What counts as asbestos-containing material",
+            "Material containing 0.1% or greater asbestos, and “vermiculite insulation that contains asbestos” (s. 1.1). The Province’s FAQ says this single threshold replaces separate ones for friable and non-friable material.",
+            "December 2025"
+          ],
+          [
+            "Notice before work",
+            "“The employer or the owner must notify the branch” not less than 5 and not more than 10 days before work that may release asbestos-containing material into the atmosphere (s. 37.9(2)). The FAQ says notices include the estimated duration and must be updated if the information changes.",
+            "December 2025"
+          ],
+          [
+            "Serial number",
+            "An employer must not begin the work until the branch has assigned a serial number to it (s. 37.9(3)).",
+            "December 2025"
+          ],
+          [
+            "Property owners",
+            "The FAQ says the changes “highlight responsibilities for asbestos to include property owners.”",
+            "December 2025"
+          ],
+          [
+            "Worker certification",
+            "Asbestos abatement and inventory work only by a person with a valid asbestos certificate (s. 37.10), which lasts no more than three years (s. 37.12(2)). The FAQ says Safe Work Manitoba offers the certification exam at no cost.",
+            "June 1, 2027 (s. 5(2))"
+          ],
+          [
+            "Employer registration",
+            "An employer in the business of asbestos work must register and have at least one certified worker (s. 37.15(1)). Registration is renewed each year (s. 37.17).",
+            "June 1, 2027 (s. 5(2))"
+          ]
+        ],
+        "note": "Sources: M.R. 108/2025 on Manitoba Laws and the Province’s New Asbestos Regulations FAQ, both read October 15, 2026."
+      },
+      {
+        "t": "p",
+        "x": "These are workplace safety rules: Part 37 “applies to every workplace where asbestos is present,” and most of its duties fall on employers and owners. If you plan to do any of the work yourself, ask Workplace Safety and Health how the rules apply before you start."
+      },
+      {
+        "t": "p",
+        "x": "The notice is filed online. The Province’s Notice of Asbestos Work form asks for the dates, the owner or prime contractor, the abatement contractor and the risk type. The confirmation number it returns serves as the serial number. Ask your abatement company who files the notice for your project."
+      },
+      {
+        "t": "h2",
+        "x": "What about vermiculite insulation in the attic?"
+      },
+      {
+        "t": "p",
+        "x": "Leave it undisturbed. Manitoba Health says some vermiculite from the Libby mine in Montana, sold mainly as Zonolite from the 1920s until 1990, was found to contain asbestos. It says it is “reasonable to assume” that older vermiculite-based insulation may contain some. Manitoba’s new definition of asbestos-containing material explicitly includes vermiculite insulation that contains asbestos."
+      },
+      {
+        "t": "p",
+        "x": "If you have, or think you may have, vermiculite insulation in the attic, Manitoba Health and Health Canada recommend these precautions:"
+      },
+      {
+        "t": "li",
+        "x": "Seal cracks and holes in the ceilings below, for example with caulking around light fixtures and the attic hatch."
+      },
+      {
+        "t": "li",
+        "x": "Keep children out of the attic, and restrict access to it."
+      },
+      {
+        "t": "li",
+        "x": "Don’t use the attic for storage if getting items out could disturb the insulation."
+      },
+      {
+        "t": "li",
+        "x": "Make sure anyone working in the attic knows asbestos may be present."
+      },
+      {
+        "t": "p",
+        "x": "For removal, or if you are planning renovations, Manitoba Health says to speak to a professional qualified in dealing with asbestos. It says you “should not attempt to remove the insulation yourself, unless you have been properly trained” and have the necessary specialized equipment."
+      },
+      {
+        "t": "p",
+        "x": "If the attic is part of an insulation upgrade, check the timing of the [Efficiency Manitoba insulation rebate](/blog/insulation-rebates-during-a-renovation-manitoba) first. It has to be approved before old insulation is removed."
+      },
+      {
+        "t": "h2",
+        "x": "What happens to the schedule if asbestos turns up mid-job?"
+      },
+      {
+        "t": "p",
+        "x": "Work in that area stops. Before a renovation proceeds, Manitoba’s regulation requires measures that keep asbestos-containing material in the work area from being released. Before demolition, materials that could release it must be removed safely (s. 37.9(1)). From June 1, 2027, that removal must be done by someone certified for abatement work."
+      },
+      {
+        "t": "p",
+        "x": "That is specialist work. Bridgeland Builders doesn’t test for or remove asbestos: a qualified specialist does, and we schedule the rest of the renovation around their work."
+      },
+      {
+        "t": "p",
+        "x": "Planned asbestos work also needs the 5- to 10-day notice and a serial number before it starts. That is one more reason to find asbestos before the schedule is set. On our [interior strip-outs](/services/demolition), testing of older materials happens before demolition is scheduled."
+      },
+      {
+        "t": "h2",
+        "x": "How do you plan around asbestos in a kitchen, bathroom or flooring job?"
+      },
+      {
+        "t": "p",
+        "x": "Start from what the renovation will disturb, and have those materials tested before the design is final. By type of project:"
+      },
+      {
+        "t": "li",
+        "x": "**Kitchens:** original plaster, drywall and floor tiles are on Health Canada’s list, so on a [kitchen renovation](/services/kitchen-renovations) have them tested before the cabinets come out."
+      },
+      {
+        "t": "li",
+        "x": "**Bathrooms:** floor tiles, plaster and insulation around hot water pipes can all be disturbed in a [bathroom renovation](/services/bathroom-renovations), so test them before demolition."
+      },
+      {
+        "t": "li",
+        "x": "**Flooring:** older floor tiles are on the list too, so test them before [flooring removal](/services/flooring) starts, not once the first tile is up."
+      },
+      {
+        "t": "li",
+        "x": "**Several rooms:** a [whole-home renovation](/services/whole-home-renovations) opens much of the house at once. Test everything the plan will disturb in one round, so the results come back before the design is final."
+      },
+      {
+        "t": "p",
+        "x": "Asbestos is one of several checks in an older house. Our guide to [renovating a character home in Winnipeg](/blog/renovating-a-character-home-in-winnipeg) covers lead paint and wiring. The [home renovation planning guide](/blog/home-renovation-planning-guide-canada) shows where testing fits in the order of a project."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Bring any test results to a [free on-site visit](/book-online). We’ll walk the space with you, note the older materials your plan would disturb, and schedule the renovation around a qualified specialist’s testing and any removal. You then get a free written quote. We reply within one business day."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Can I test for asbestos myself?",
+        "a": "Health Canada’s advice is to avoid disturbing materials that may contain asbestos and to hire a professional to test for asbestos before renovating or remodelling. For vermiculite insulation, Manitoba Health says you should not attempt to remove it yourself unless you have been properly trained and have the necessary specialized equipment."
+      },
+      {
+        "q": "Do old floor tiles contain asbestos?",
+        "a": "They can. Health Canada lists floor and ceiling tiles among older building materials that may contain asbestos, but age and appearance can’t confirm it. Manitoba’s workplace safety FAQ describes samples being analysed by an accredited laboratory for a definitive result, so have older tiles tested before anyone lifts them."
+      },
+      {
+        "q": "Does Bridgeland Builders remove asbestos?",
+        "a": "No. We don’t test for or remove asbestos. A qualified asbestos specialist does that work, and we schedule the renovation around it, so suspect materials are tested and any asbestos is dealt with before our crew works in that area."
+      },
+      {
+        "q": "Who has to notify the Province before asbestos work?",
+        "a": "Manitoba’s regulation says the employer or the owner must notify the Workplace Safety and Health branch not less than 5 and not more than 10 days before work that may release asbestos-containing material, and the employer can’t begin until the branch assigns a serial number. Ask your abatement company how they handle the notice on your project."
+      },
+      {
+        "q": "When will asbestos workers need certification in Manitoba?",
+        "a": "From June 1, 2027. Workers doing asbestos abatement or inventory work will need a valid asbestos certificate, and the Province’s FAQ says they must recertify every three years. Employers in the business of asbestos work will need to register each year, and the FAQ says a public registry will list them."
+      }
+    ],
+    "answer": "Health Canada says asbestos was mainly used before 1990 and advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Under rules changed in December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.",
+    "sources": [
+      {
+        "label": "Health Canada – Asbestos and your health (page dated 2023-02-10)",
+        "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Province of Manitoba, Workplace Safety and Health – New asbestos regulations FAQ",
+        "url": "https://www.gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws – M.R. 108/2025, Workplace Safety and Health Regulation, amendment (registered December 4, 2025)",
+        "url": "https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Province of Manitoba – News release: Manitoba Government Improves Asbestos Safety Requirements to Protect Workers (December 4, 2025)",
+        "url": "https://news.gov.mb.ca/news/index.html?item=71777",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Province of Manitoba, Workplace Safety and Health – FAQs: Asbestos containing material",
+        "url": "https://www.gov.mb.ca/labour/safety/faq/asbestos.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Province of Manitoba, Workplace Safety and Health – Notice of Asbestos Work (online form)",
+        "url": "https://forms.gov.mb.ca/notice-of-asbestos-work/",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Health – Vermiculite insulation and asbestos (undated page)",
+        "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/vermiculite.html",
+        "accessed": "2026-10-15"
+      }
+    ],
+    "reviewBy": "2027-06-01"
+  },
+  {
+    "slug": "builders-lien-holdback-manitoba",
+    "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+    "metaTitle": "Builders' Lien Holdback in Manitoba: Homeowner Guide",
+    "metaDescription": "How Manitoba's 7.5% builders' lien holdback works on a renovation: the 60-day period, substantial performance, liens, holdback accounts and prompt payment.",
+    "excerpt": "A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.",
+    "category": "Hiring a Contractor",
+    "categories": [
+      "Hiring a Contractor"
+    ],
+    "date": "2026-10-15",
+    "updated": "2026-10-15",
+    "readMinutes": 11,
+    "hero": "",
+    "heroSrc": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp",
+    "heroSrcSet": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-480.1b473aa7.webp 480w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp 880w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1320.4cc70a86.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-480.ee61434d.avif 480w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.20180f2d.avif 880w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1320.7a91bd95.avif 1320w",
+    "ogImage": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x630.9da2ce8b.jpg",
+    "schemaImages": [
+      "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x675.b1669626.jpg",
+      "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x900.72613086.jpg",
+      "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x1200.f9e1dffa.jpg"
+    ],
+    "heroAlt": "Title card: Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/general-contracting",
+      "/services/whole-home-renovations",
+      "/services/kitchen-renovations",
+      "/services/basement-renovations"
+    ],
+    "ctaService": "/services/general-contracting",
+    "cluster": "hiring-a-contractor",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "If you're paying a contractor to renovate your home in Manitoba, [The Builders' Liens Act](https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php?lang=en) sets a payment rule that's easy to miss: the holdback. This guide explains how much to keep back, for how long, when a lien can be registered against your home, and what changed on April 1, 2025."
+      },
+      {
+        "t": "callout",
+        "title": "General information, not legal advice",
+        "x": "This guide summarizes The Builders' Liens Act and its regulations as published on Manitoba Laws and checked on October 15, 2026. It isn't legal advice. Your contract and circumstances matter, so talk to a Manitoba lawyer before you hold back, release or dispute a payment."
+      },
+      {
+        "t": "h2",
+        "x": "What is the builders' lien holdback, and how much is it in Manitoba?"
+      },
+      {
+        "t": "p",
+        "x": "The holdback is part of each payment that you keep back for a set time. Section 24(1) says the person primarily liable for payment shall deduct 7.5% of each payment as the work is done, so the total holdback equals 7.5% of the contract price. On a $10,000 progress payment, you pay $9,250 and keep $750."
+      },
+      {
+        "t": "p",
+        "x": "It isn't a discount. The contractor is still owed the holdback and is paid it later, once the holdback period has passed and no liens are registered. Until then, lien holders under the contract, such as unpaid subcontractors, suppliers and workers, have a charge on it (s. 26)."
+      },
+      {
+        "t": "table",
+        "caption": "Manitoba's builders' lien rules at a glance",
+        "head": [
+          "Rule",
+          "What the Act says",
+          "Where"
+        ],
+        "rows": [
+          [
+            "Holdback",
+            "Deduct 7.5% of each payment as the work is done",
+            "s. 24(1)"
+          ],
+          [
+            "How long to keep it",
+            "At least 60 days after substantial performance is certified, the work is completed or it's abandoned, whichever comes first",
+            "s. 24(1)"
+          ],
+          [
+            "Contractor's lien deadline",
+            "During the work, or within 60 days after substantial performance or abandonment",
+            "s. 43(1)"
+          ],
+          [
+            "Small claims",
+            "No lien exists for a claim of less than $300",
+            "s. 14"
+          ],
+          [
+            "Holdback account",
+            "Required when the contract price is over $200,000",
+            "s. 24(3); M.R. 127/89, s. 2"
+          ],
+          [
+            "Prompt payment",
+            "Contracts entered into on or after April 1, 2025: a proper invoice each month unless the contract says otherwise; the owner pays within 28 days or disputes within 14",
+            "ss. 80, 86 and 90"
+          ]
+        ],
+        "note": "Checked on Manitoba Laws on October 15, 2026. The Act's consolidation is current to October 12, 2026, and M.R. 127/89 to October 14, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "How long do you keep the holdback: 40 or 60 days?"
+      },
+      {
+        "t": "p",
+        "x": "Sixty days. The Act in force today says the holdback is kept for at least 60 days after a certificate of substantial performance is given, the work is completed or the work is abandoned, whichever comes first (s. 24(1))."
+      },
+      {
+        "t": "p",
+        "x": "If work continues after substantial performance, you also hold back 7.5% of the payments for that remaining work, and keep it for 60 days after the work is completed or abandoned (s. 24(2))."
+      },
+      {
+        "t": "p",
+        "x": "So why do two Consumer Protection Office pages still say 40? Its hiring-a-contractor page says you can hold back 7.5% for 40 days after the contractor has finished the job, and its home improvements page suggests checking with the Land Titles Office on the 40th day. Both still read that way on October 15, 2026."
+      },
+      {
+        "t": "p",
+        "x": "They reflect the Act as it read before April 1, 2025. The Builders' Liens Amendment Act (Prompt Payment), S.M. 2023, c. 30, changed the holdback and lien-registration periods from 40 days to 60, and the Province proclaimed those changes in force on April 1, 2025. Go by the Act, not the older pages."
+      },
+      {
+        "t": "h2",
+        "x": "What is substantial performance, and who certifies it?"
+      },
+      {
+        "t": "p",
+        "x": "Under section 2(1), a contract is substantially performed when what's being built, or a substantial part of it, is ready for use or being used as intended, and the remaining work can be finished or corrected for no more than 3% of the first $250,000 of the contract price, 2% of the next $250,000 and 1% of the balance."
+      },
+      {
+        "t": "p",
+        "x": "If your contract doesn't make payments depend on a payment certifier, such as an architect or engineer who certifies payments, the certificate comes from you. Under section 46(2), the contractor may apply to you for one, and must apply if one of its subcontractors asks."
+      },
+      {
+        "t": "p",
+        "x": "You then give the certificate, in Form 8, within seven days after receiving the application or after the contract is substantially performed in your opinion, whichever is later. If the person responsible fails or refuses, the owner, the contractor, a subcontractor or a lien claimant can ask a judge to declare the contract substantially performed (s. 46(3))."
+      },
+      {
+        "t": "p",
+        "x": "Once a certificate of substantial performance is given to the owner, section 59(1) requires the owner to give a true copy within 10 days to anyone working on or supplying the job who has asked for one in writing by personal service. An owner who doesn't can be liable for the requester's loss (s. 59(2))."
+      },
+      {
+        "t": "p",
+        "x": "Section 59(3) sets an exemption: the copy rule doesn't apply to an individual ordering work, services or materials for a home that they or their spouse or common-law partner own and occupy for single-family residential purposes, where the contract price is no more than $75,000, the amount set by M.R. 127/89, s. 3."
+      },
+      {
+        "t": "h2",
+        "x": "Can a contractor or supplier put a lien on your house?"
+      },
+      {
+        "t": "p",
+        "x": "Yes. Under section 13, anyone who does work, provides services or supplies materials under a contract or subcontract has a lien for its value on the owner's interest in the property. That includes subcontractors and suppliers you never hired directly. A claim for lien is registered at the land titles office as an encumbrance against the land (s. 37(1))."
+      },
+      {
+        "t": "p",
+        "x": "Under section 43, a contractor can register a claim during the work or within 60 days after the contract's substantial performance or abandonment. Subcontractors, suppliers and workers get 60 days from the main contract's substantial performance or abandonment or, broadly, from the end of their own work, whichever comes first."
+      },
+      {
+        "t": "p",
+        "x": "For these deadlines, substantial performance means the date a certificate of substantial performance is given to the owner (s. 43(6)). Liens for work done after that point to finish the job have their own 60-day windows (s. 44). No lien exists for a claim of less than $300 (s. 14)."
+      },
+      {
+        "t": "p",
+        "x": "A lien can't make you liable for more than you owe the contractor (s. 22(1)). If you kept the holdback, good-faith payments beyond it, made before a lien was registered, count toward discharging the lien (s. 27(1)). If you didn't, you stay liable to lien claimants for the amount you should have held back (s. 27(2))."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a separate holdback account?"
+      },
+      {
+        "t": "p",
+        "x": "Only on larger contracts. Section 24(3) requires the owner to pay the holdback into a holdback account when the contract price, or the actual value of the work if there's no set price, is more than the amount set by regulation. The Builders' Liens Regulation, M.R. 127/89, sets that amount at $200,000 (s. 2)."
+      },
+      {
+        "t": "p",
+        "x": "A holdback account is an interest-bearing account at a bank, trust company or credit union in the joint names of the owner and the contractor (s. 1). At $200,000 or less, no account is required, but a judge can order one on the application of the contractor or a lien claimant (s. 24(4))."
+      },
+      {
+        "t": "p",
+        "x": "Where an account was required and the owner didn't open one, a judge must order the holdback paid in, with interest, when the contractor or a lien claimant applies (s. 24(5))."
+      },
+      {
+        "t": "h2",
+        "x": "What is a statutory declaration, and when should you ask for one?"
+      },
+      {
+        "t": "p",
+        "x": "It's a declaration, signed by the contractor, that creditors and workers have been paid to date for the materials and work on your project. Manitoba's Consumer Protection Office suggests one with each progress payment, paying only for work that's done and never prepaying in full. It says the forms are available at business stationery stores."
+      },
+      {
+        "t": "p",
+        "x": "The reason is the Act's trust rule. Money a contractor receives on account of the contract price is a trust fund for the subcontractors, suppliers and workers on that job and WCB Manitoba, among others (s. 4(1)). Paying the subtrades is part of [what a general contractor does](/blog/what-does-a-general-contractor-do), and the declaration is your record that it happened."
+      },
+      {
+        "t": "p",
+        "x": "Before the final payment, also ask for a fresh WCB clearance letter; our guide to [checking a contractor's WCB clearance](/blog/how-to-check-a-contractors-wcb-clearance-manitoba) shows how. For how large a deposit should be, see the deposit question in our [renovation contractor checklist](/blog/how-to-choose-the-right-contractor-for-your-renovation-project)."
+      },
+      {
+        "t": "h2",
+        "x": "When can you release the holdback?"
+      },
+      {
+        "t": "p",
+        "x": "Once at least 60 days have passed since substantial performance was certified or the work was completed or abandoned, whichever came first. Section 27(3) says paying the holdback after that period is valid if no liens are then registered against the land. Section 25(1) also stops a holdback reduction while a registered lien remains in effect."
+      },
+      {
+        "t": "p",
+        "x": "So check the title first. The Consumer Protection Office suggests making the final payment only when you and the contractor agree the job is finished and you've checked with the Land Titles Office that no liens are registered. Ask your lawyer how to run that check, and talk to them before paying anything if a lien appears."
+      },
+      {
+        "t": "h2",
+        "x": "Does Manitoba's prompt payment law apply to your renovation invoices?"
+      },
+      {
+        "t": "p",
+        "x": "Manitoba added prompt payment rules to the Act, in force April 1, 2025. Under section 80(1), they apply to owners, contractors, subcontractors and construction projects subject to the Act's lien and trust remedies, for contracts and subcontracts entered into on or after that date. Architects and engineers are excluded (s. 80(2)), and the holdback rules still apply (s. 82)."
+      },
+      {
+        "t": "p",
+        "x": "Under these rules, the contractor gives the owner a proper invoice each month unless the contract says otherwise (s. 86), and the owner must pay within 28 days after the invoice is given (s. 90(1))."
+      },
+      {
+        "t": "p",
+        "x": "To dispute an invoice, the owner gives a notice of non-payment within 14 days, in the form set by regulation, stating the amount in dispute and every reason for not paying it (s. 90(2) and (3)). Any amount not disputed in the notice is still due within the 28 days (s. 90(4))."
+      },
+      {
+        "t": "p",
+        "x": "A proper invoice must meet the contract's requirements and include the following (s. 85), plus anything the regulations add:"
+      },
+      {
+        "t": "li",
+        "x": "The contractor's name and address."
+      },
+      {
+        "t": "li",
+        "x": "The invoice date and the period when the work, services or materials were provided."
+      },
+      {
+        "t": "li",
+        "x": "The contract or other authority the work was done under."
+      },
+      {
+        "t": "li",
+        "x": "A description of what the contractor and its subcontractors provided, with quantities where appropriate."
+      },
+      {
+        "t": "li",
+        "x": "The amount invoiced and the payment terms."
+      },
+      {
+        "t": "li",
+        "x": "The name, title, phone number and mailing address of the person payment should be sent to."
+      },
+      {
+        "t": "p",
+        "x": "If you're not sure whether these rules cover your home renovation contract, or how they would work with your payment schedule, ask a lawyer before you sign."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Planning a renovation in Winnipeg or a nearby community? [Book a free on-site visit](/book-online), and raise the holdback with us when we go through your free written quote. Our [general contracting](/services/general-contracting) page explains how we coordinate the trades, permits and inspections on a multi-trade project."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Is the holdback 7.5% or 10% in Manitoba?",
+        "a": "7.5%. Section 24(1) of The Builders' Liens Act sets the holdback at 7.5% of each payment, so a 10% figure isn't the Manitoba holdback. Don't confuse it with the Consumer Protection Office's advice that a 10% down payment is reasonable. That advice is about deposits, not the holdback."
+      },
+      {
+        "q": "Does the holdback mean I pay less for the renovation?",
+        "a": "No. The holdback is paid later, not taken off the price. The total held back equals 7.5% of the contract price (s. 24(1)), and it goes to the contractor after the holdback period, once you've checked that no liens are registered against your property."
+      },
+      {
+        "q": "What if a lien is registered on my home?",
+        "a": "Talk to a Manitoba lawyer before you pay anyone. A lien can't make you liable for more than you owe the contractor, unless you didn't keep the holdback (ss. 22(1) and 27(2)). The Act also lets a judge order money or security paid into court and the lien's registration vacated (s. 55(2))."
+      },
+      {
+        "q": "Can a contract say the Builders' Liens Act doesn't apply?",
+        "a": "No. Section 11 says any agreement, oral or written, that provides the Act doesn't apply to a person, or that waives a right of lien, a trust right or a prompt payment requirement, \"is against public policy and void.\" If a clause seems to switch the Act off, ask a lawyer before you sign."
+      },
+      {
+        "q": "Can I use the holdback to finish the job if my contractor walks away?",
+        "a": "Not at the expense of lien claimants. Section 27(6) says that when a contractor defaults, the holdback can't be applied, as against a lien claimant with a charge on it, to complete the contract, pay damages for non-completion or satisfy other claims against the contractor. Talk to a lawyer before you spend it."
+      }
+    ],
+    "answer": "Manitoba's Builders' Liens Act requires whoever pays for construction work to hold back 7.5% of each payment and keep it for at least 60 days after substantial performance is certified, or the work is completed or abandoned, whichever comes first. Contractors, subcontractors and suppliers generally have 60 days to register a lien, and claims under $300 create no lien.",
+    "sources": [
+      {
+        "label": "Manitoba Laws: The Builders' Liens Act, C.C.S.M. c. B91 (current to October 12, 2026)",
+        "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php?lang=en",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: The Builders' Liens Act, version in effect November 15, 2024 to March 31, 2025 (40-day periods)",
+        "url": "https://web2.gov.mb.ca/laws/statutes/archive/b091(2025-03-31).php?df=2024-11-15",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: The Builders' Liens Amendment Act (Prompt Payment), S.M. 2023, c. 30",
+        "url": "https://web2.gov.mb.ca/laws/statutes/2023/c03023.php?lang=en",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: Proclamation naming April 1, 2025 for the remaining provisions of S.M. 2023, c. 30",
+        "url": "https://web2.gov.mb.ca/laws/statutes/proclamations/2023c30(2025-04-01).php?lang=en",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: Builders' Liens Regulation, M.R. 127/89 (ss. 2 and 3, prescribed amounts)",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/127-89.php?lang=en",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: Builders' Liens (Prompt Payment) Regulation, M.R. 113/2024",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/113-2024.php?lang=en",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Consumer Protection Office: Hiring a contractor",
+        "url": "https://www.gov.mb.ca/consumerinfo/initiatives/building-or-renovating/hiring-a-contractor.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Consumer Protection Office: Home improvements sold by direct sellers",
+        "url": "https://www.gov.mb.ca/cp/cpo/info/home_improvements.html",
+        "accessed": "2026-10-15"
+      }
+    ],
+    "reviewBy": "2027-06-01"
+  },
+  {
+    "slug": "check-permit-history-winnipeg-house",
+    "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+    "metaTitle": "Permit History & Permit Amnesty in Winnipeg | Bridgeland",
+    "metaDescription": "Check a Winnipeg home’s permit history: the City’s free permit search, open permits and orders, what each status means, and how Permit Amnesty works.",
+    "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning",
+      "Basements & Suites",
+      "Older Homes"
+    ],
+    "date": "2026-10-15",
+    "updated": "2026-10-15",
+    "readMinutes": 11,
+    "hero": "",
+    "heroSrc": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.1189cd90.webp",
+    "heroSrcSet": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-480.dfc78763.webp 480w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.1189cd90.webp 880w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1320.d00db2e5.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-480.e09156f1.avif 480w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.a5b2e756.avif 880w, /images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1320.574fa93a.avif 1320w",
+    "ogImage": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x630.8eb4b6d0.jpg",
+    "schemaImages": [
+      "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x675.c5056e3d.jpg",
+      "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x900.d43a7614.jpg",
+      "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x1200.17e5f12f.jpg"
+    ],
+    "heroAlt": "Title card: Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-renovations",
+      "/services/basement-suites",
+      "/services/whole-home-renovations"
+    ],
+    "ctaService": "/services/basement-renovations",
+    "cluster": "winnipeg-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Before you buy a house, sell one, or renovate a basement someone else finished, it helps to know which work was done with permits. In Winnipeg, the City’s own records answer most of that question, and the main search is free."
+      },
+      {
+        "t": "p",
+        "x": "This guide walks through the permit search, the Centralized Property File Search and the Permit Amnesty program, using City of Winnipeg pages checked on October 15, 2026 (archived copies where the sources say so). It covers properties in the City of Winnipeg only. It’s general information, not legal advice."
+      },
+      {
+        "t": "h2",
+        "x": "How do you check a Winnipeg house’s permit history?"
+      },
+      {
+        "t": "p",
+        "x": "Start with the City’s free [permit search by address](https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp). Enter the house number and street name to see building and trade permits (electrical, mechanical and plumbing) issued after January 1, 2000, and development permits issued after November 14, 2022, each with its status."
+      },
+      {
+        "t": "p",
+        "x": "The search doesn’t show everything. The City says results leave out permits that were cancelled or are still in the application process, and permits to demolish an entire house, which stay with the previous property record. Occupancy and sign permits aren’t included either, and personal information isn’t displayed."
+      },
+      {
+        "t": "p",
+        "x": "Occupancy permits, which most commercial buildings need, have their own City search. If you’re buying or leasing commercial space, our guide to [occupancy permits and change of use](/blog/occupancy-permit-change-of-use-winnipeg) covers them."
+      },
+      {
+        "t": "h2",
+        "x": "How do you find permits issued before 2000?"
+      },
+      {
+        "t": "p",
+        "x": "Older records come from the City’s Central Files Office. Email ppd-centralfiles@winnipeg.ca with the address, whether you’re the owner, and the records you want. The City says its team will tell you what’s on file and, if you ask, provide a copy for a fee, which may be edited to remove personal information."
+      },
+      {
+        "t": "p",
+        "x": "Not every property has old records. The City notes that its database doesn’t cover every building in Winnipeg and that very old buildings may have no plans on file. If you aren’t the registered owner, copies of building plans need a letter of authorization signed by the owner."
+      },
+      {
+        "t": "h2",
+        "x": "What do the statuses in Winnipeg’s permit search mean?"
+      },
+      {
+        "t": "p",
+        "x": "Each building or trade permit in the results carries a status. The City’s search FAQ defines them like this:"
+      },
+      {
+        "t": "table",
+        "caption": "Building and trade permit statuses in the City of Winnipeg permit search",
+        "head": [
+          "Status",
+          "What the City says it means"
+        ],
+        "rows": [
+          [
+            "Issued",
+            "Plan review is complete. Construction may have begun and inspections may have been done, and there may or may not be identified defects."
+          ],
+          [
+            "Closed",
+            "Construction and required inspections are complete and any outstanding defects have been addressed. Permits in the City’s audit program are included and may not have had every standard inspection."
+          ],
+          [
+            "Closed No Final Inspection Required",
+            "Closed. A final inspection wasn’t required and the permit wasn’t selected for audit; no further action is required."
+          ],
+          [
+            "Closed with an incomplete inspection",
+            "A subcategory of closed permits: closed through a ‘bulk’ closing process and/or with no final inspections."
+          ],
+          [
+            "Expired",
+            "No work proceeded within a specific timeframe."
+          ]
+        ],
+        "note": "Source: City of Winnipeg construction-related permit search FAQ, as published in June 2026. Development permits show only Issued or Expired."
+      },
+      {
+        "t": "p",
+        "x": "An issued permit stays open until the work passes all its required inspections; our [Winnipeg renovation permits guide](/blog/winnipeg-renovation-permits) explains how long a permit stays valid and how to close one."
+      },
+      {
+        "t": "h2",
+        "x": "What does “closed with an incomplete inspection” mean?"
+      },
+      {
+        "t": "p",
+        "x": "The City says that where owners hadn’t requested inspections, or City resources weren’t enough to follow up, it grouped certain permits and closed them despite incomplete inspections. It warns that construction under this status “does not represent the standard inspection protocol.”"
+      },
+      {
+        "t": "p",
+        "x": "Does that make the house unsafe? The City’s answer: “Not necessarily. However, the work was not audited by the City through the inspections process.”"
+      },
+      {
+        "t": "p",
+        "x": "The City doesn’t advise on whether to buy. It does recommend that the current owner arrange inspections for these permits before selling, so the permit can be closed before the sale."
+      },
+      {
+        "t": "p",
+        "x": "For a housing permit, note the permit number from the results and call 204-986-5300. If only one inspection is needed, the City says there’s no further cost, because it’s included in the original permit fee; extra inspections because of defects may be charged."
+      },
+      {
+        "t": "h2",
+        "x": "How do you find open permits, orders or violations?"
+      },
+      {
+        "t": "p",
+        "x": "The permit search lists permits, not orders. For a file-based check, the City offers a Centralized Property File Search (CPFS), which it describes as a search of City records on a building. A CPFS may include:"
+      },
+      {
+        "t": "li",
+        "x": "Notice of active permits from the City’s housing and commercial inspections (building, plumbing, mechanical and electrical) and occupancy"
+      },
+      {
+        "t": "li",
+        "x": "Records of compliance with the Residential Buildings Fire Safety By-law"
+      },
+      {
+        "t": "li",
+        "x": "Orders and violations from the City’s planning, property and development enforcement services, fire prevention, licensing and by-law enforcement, and zoning"
+      },
+      {
+        "t": "li",
+        "x": "Zoning information, including whether a proposed use is permissible"
+      },
+      {
+        "t": "p",
+        "x": "What it leaves out matters too. The City says: “Inspections are not included in this search.” A CPFS is a records search, not a visit to the house; a fire prevention inspection is a separate application with extra fees."
+      },
+      {
+        "t": "h2",
+        "x": "How do you apply for a Centralized Property File Search?"
+      },
+      {
+        "t": "oli",
+        "x": "Set up a [Permits Online](https://www.winnipeg.ca/building-development/permits-applications/permits-online) account; the City needs one for a CPFS application."
+      },
+      {
+        "t": "oli",
+        "x": "Get a letter of owner authorization signed by the registered owner. The City is specific: “Owner signature cannot be electronically generated.”"
+      },
+      {
+        "t": "oli",
+        "x": "Use the authorization wording the City sets out, naming the applicant; the applicant’s name and company must match the CPFS application."
+      },
+      {
+        "t": "oli",
+        "x": "Pay the fee set in the City’s Planning, Development & Building Fees and Charges schedule, plus GST, through Permits Online."
+      },
+      {
+        "t": "oli",
+        "x": "Expect results within 15 business days after the City confirms the application is complete and accepts payment."
+      },
+      {
+        "t": "p",
+        "x": "The City won’t accept letters that miss its requirements, so compare yours with the sample letter on the [City’s CPFS page](https://www.winnipeg.ca/building-development/property-records/centralized-property-file-search). Questions go to centralizedpropertyfilesearch@winnipeg.ca or 204-986-5189."
+      },
+      {
+        "t": "p",
+        "x": "Because the registered owner has to sign, a buyer can’t order a CPFS alone. Ask the seller to authorize one or share the results, and ask your lawyer how to handle anything it turns up before you commit."
+      },
+      {
+        "t": "h2",
+        "x": "What if a basement or suite was finished without a permit?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s [Permit Amnesty program](https://www.winnipeg.ca/building-development/permits-applications/programs-incentives/permit-amnesty-program) lets homeowners bring past renovations or upgrades done without permits into compliance with codes, standards and by-laws. The City launched it on June 1, 2021; when we checked the program page on October 15, 2026, it gave no end date."
+      },
+      {
+        "t": "p",
+        "x": "To qualify, the work must have been started or completed without permits at the homeowner’s primary residence. Two groups aren’t eligible:"
+      },
+      {
+        "t": "li",
+        "x": "Rental properties"
+      },
+      {
+        "t": "li",
+        "x": "Homeowners who receive a notice or order for work done without permits following a City investigation"
+      },
+      {
+        "t": "p",
+        "x": "Apply through the standard building permit process, using the application for that kind of project, and include the word “amnesty” in the description of work. The City waives post-construction penalty fees where amnesty is approved and all other regular permit fees have been paid, so the regular fees still apply."
+      },
+      {
+        "t": "p",
+        "x": "Work under the program must be completed and inspected within three years of the permit being issued. Once you declare work and apply, the City says it has an obligation to follow up and inspect, and its inspectors must report any safety concerns or hazards they see."
+      },
+      {
+        "t": "p",
+        "x": "Leaving work undeclared carries its own risk: the City says it may issue notices or orders, and fines or penalties may apply. It also says to confirm development permit and other approval requirements before applying. If the basement has a kitchen or a separate unit, our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes."
+      },
+      {
+        "t": "h2",
+        "x": "Will finished walls have to be opened for an amnesty inspection?"
+      },
+      {
+        "t": "p",
+        "x": "Sometimes. The City says that once permits are issued, walls, ceilings or finishes may in some cases need to be opened so the work can be inspected. Homeowners can do the work themselves at their primary residence if they know the codes, which may mean opening finishes so inspectors can see how it was done."
+      },
+      {
+        "t": "p",
+        "x": "Licensed contractors can take out the plumbing or electrical permits instead, and can submit the City’s “Maintenance Certification Program” form declaring the work complies. A City inspection is still required to close the permit, and the City leaves opening walls to the contractor’s discretion."
+      },
+      {
+        "t": "p",
+        "x": "Structural changes, such as added rooms or removed walls, need an engineer’s approval and as-built drawings showing the work meets code, or what has to change. The engineer must certify they’ve seen the work; otherwise it has to be uncovered for a City inspection. Our guide to [removing a load-bearing wall](/blog/removing-a-load-bearing-wall-winnipeg) explains the drawings involved."
+      },
+      {
+        "t": "p",
+        "x": "If the finished basement includes a bedroom, check its window early. Our guide to [basement development permits](/blog/basement-development-permits-winnipeg) sets out the City’s rules for basement bedrooms, ceilings and insulation."
+      },
+      {
+        "t": "h2",
+        "x": "Can you ask the City whether past work had a permit?"
+      },
+      {
+        "t": "p",
+        "x": "Not by booking an inspection. The City’s Permit Amnesty page is direct: “You cannot request an inspection to determine if past work was done without permits.” It says homeowners are responsible for finding out by discussing the work with qualified contractors and/or design professionals."
+      },
+      {
+        "t": "p",
+        "x": "For permits a previous owner may have taken out, the City points to the permit search by address, and to Central Files for anything before 2000. A finished basement, added bathroom or deck with no matching permit is the place to start asking."
+      },
+      {
+        "t": "h2",
+        "x": "What should buyers check before making an offer on a Winnipeg house?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s tips for buyers say that knowing whether recent upgrades, renovations or accessory structures had proper permits and inspections “can prevent unexpected and expensive surprises.” They also say that if a previous owner did the work, “the current owner has to bring this work into compliance with codes, standards, and bylaws.”"
+      },
+      {
+        "t": "li",
+        "x": "Run the permit search for the address and note each permit’s status."
+      },
+      {
+        "t": "li",
+        "x": "Compare the list with the house. A finished basement, added bathroom, deck, garage or suite with no matching permit is worth asking the seller about."
+      },
+      {
+        "t": "li",
+        "x": "Ask the seller for a CPFS, or for a signed authorization so one can be ordered, to see active permits, orders and violations."
+      },
+      {
+        "t": "li",
+        "x": "Look for permits that are still issued or were closed with an incomplete inspection, and ask whether inspections will be done before the sale."
+      },
+      {
+        "t": "li",
+        "x": "If you plan to rent the house out, remember that Permit Amnesty covers a homeowner’s primary residence, not rental properties."
+      },
+      {
+        "t": "li",
+        "x": "Talk to your lawyer about how any of this should be handled in your offer."
+      },
+      {
+        "t": "p",
+        "x": "Buying a house you plan to renovate? Our guide to [home renovation financing in Canada](/blog/home-renovation-financing-canada) compares the ways to pay for the work."
+      },
+      {
+        "t": "h2",
+        "x": "Why close open permits before you sell?"
+      },
+      {
+        "t": "p",
+        "x": "If a buyer asks for a CPFS, it can show the active permits on the City’s file. For permits closed with an incomplete inspection, the City recommends that the owner arrange inspections before selling, which it says “would ensure the permit can be closed before any real estate transaction takes place.”"
+      },
+      {
+        "t": "p",
+        "x": "The City makes homeowners responsible for making sure each permit’s inspections are done and the permit is closed, which takes a final inspection with no outstanding defects. The permits guide linked above explains the timing rules and how to book that final inspection."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Planning a [basement renovation](/services/basement-renovations), a [basement suite](/services/basement-suites) or a [whole-home renovation](/services/whole-home-renovations) in a house with some history? Every project starts with a free on-site visit and a free written quote, and permits and inspections are coordinated with the City of Winnipeg or your local municipality. [Book your visit](/book-online) when you’re ready."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Can a buyer order a Centralized Property File Search in Winnipeg?",
+        "a": "Not without the seller. The City needs a letter of authorization signed by the registered owner, and says the owner’s signature cannot be electronically generated. The applicant named in the letter must match the application. Ask the seller to authorize the search or share the results, and ask your lawyer how to handle it in an offer."
+      },
+      {
+        "q": "Are rental properties eligible for Winnipeg’s Permit Amnesty program?",
+        "a": "No. The City’s Permit Amnesty program covers work at the homeowner’s primary residence, and its page lists rental properties as not eligible. Homeowners who receive a notice or order for work done without permits following a City investigation aren’t eligible either."
+      },
+      {
+        "q": "Can I ask the City to inspect old work to see if it had a permit?",
+        "a": "No. The City’s Permit Amnesty page says: “You cannot request an inspection to determine if past work was done without permits.” It makes homeowners responsible for finding out, by discussing the work with qualified contractors or design professionals. Start with the permit search by address, and ask Central Files about anything before 2000."
+      },
+      {
+        "q": "Is a house unsafe if a permit was closed with an incomplete inspection?",
+        "a": "Not necessarily, according to the City, but the work wasn’t audited by the City through the inspection process. The City recommends that the current owner arrange inspections for these permits before selling. For a housing permit, note the permit number and call 204-986-5300."
+      },
+      {
+        "q": "How long do I have to finish work under an amnesty permit?",
+        "a": "The City says work under building and trade permits issued through Permit Amnesty must be completed and inspected within three years of the permit being issued. Non-compliance fees may be added if a project isn’t completed and no extension is requested, or if you don’t comply with requirements ordered by a City inspector."
+      }
+    ],
+    "answer": "Start with the City of Winnipeg’s free permit search by address, which lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. For open permits, orders and violations, a Centralized Property File Search needs the registered owner’s signed authorization. Unpermitted work in an owner’s primary residence can go through Permit Amnesty.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Search for issued construction-related permits (archived copy, June 2026)",
+        "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Construction-related permit search: frequently asked questions (archived copy, June 2026)",
+        "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/SearchFAQ.jsp",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Request copies of building records",
+        "url": "https://www.winnipeg.ca/building-development/property-information-records/request-copies-building-records",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Centralized property file search",
+        "url": "https://www.winnipeg.ca/building-development/property-records/centralized-property-file-search",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Permit Amnesty program",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/programs-incentives/permit-amnesty-program",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Amnesty offered from post-construction fees for bringing unpermitted work up to code (June 1, 2021)",
+        "url": "https://www.winnipeg.ca/people-culture/our-city-our-stories/amnesty-offered-post-construction-fees-bringing-unpermitted",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Housing inspections",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/housing-inspections",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Tips for buying a home or property (archived copy, January 2026)",
+        "url": "https://legacy.winnipeg.ca/ppd/permits/Tips-for-buying-a-home-or-property.stm",
+        "accessed": "2026-10-15"
+      }
+    ],
+    "reviewBy": "2027-04-15"
+  },
+  {
+    "slug": "occupancy-permit-change-of-use-winnipeg",
+    "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+    "metaTitle": "Occupancy Permits & Change of Use in Winnipeg | Bridgeland",
+    "metaDescription": "When a Winnipeg commercial space needs an occupancy permit, when a new tenant doesn't, what counts as a change of use, and what to check before you lease.",
+    "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
+    "category": "Commercial",
+    "categories": [
+      "Commercial",
+      "Permits & Planning"
+    ],
+    "date": "2026-10-15",
+    "updated": "2026-10-15",
+    "readMinutes": 11,
+    "hero": null,
+    "heroSrc": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-880.ef758048.webp",
+    "heroSrcSet": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-480.1d8c089e.webp 480w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-880.ef758048.webp 880w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1320.68fdd292.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-480.c4d497a2.avif 480w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-880.ba38b8d1.avif 880w, /images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1320.3c392686.avif 1320w",
+    "ogImage": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x630.d6f1bcd2.jpg",
+    "schemaImages": [
+      "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x675.438fd787.jpg",
+      "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x900.9ca8e87a.jpg",
+      "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x1200.ebb4b56f.jpg"
+    ],
+    "heroAlt": "Title card: Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/commercial-renovations",
+      "/services/retail-renovations",
+      "/services/office-renovations",
+      "/services/restaurant-renovations",
+      "/services/medical-dental-office-renovations"
+    ],
+    "ctaService": "/services/commercial-renovations",
+    "cluster": "commercial-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "In Winnipeg, a building occupancy permit identifies how a commercial space can be used. You need one before you open after a substantial renovation or a change of use. Whether a new tenant needs one often depends on the permit the last tenant left behind, so it's worth checking before you sign a lease."
+      },
+      {
+        "t": "p",
+        "x": "This guide is for tenants and landlords of stores, offices, restaurants and clinics. It's based on City of Winnipeg documents checked on October 15, 2026. It's general information, not legal advice: the City interprets the code for your space, so confirm your plans with its Occupancy Permit Branch."
+      },
+      {
+        "t": "h2",
+        "x": "When does a commercial space need an occupancy permit in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "The City's occupancy bulletin (2023-005-A/B, July 19, 2023) says a building occupancy permit is required for “the construction, substantial alteration or change of use of portions of most buildings, with the exception of single-family dwellings, two-family dwellings and multi-family dwellings without shared exits.”"
+      },
+      {
+        "t": "p",
+        "x": "Under the Winnipeg Building By-law No. 4555/87, the bulletin says it is “your responsibility to obtain a final or interim building occupancy permit prior to occupying a space.” The City's occupancy page lists who needs one:"
+      },
+      {
+        "t": "li",
+        "x": "A building owner constructing a new building or addition"
+      },
+      {
+        "t": "li",
+        "x": "An existing tenant who has to vacate the building, floor, wing or unit for alterations, or whose alterations the City decides are significant enough to need one"
+      },
+      {
+        "t": "li",
+        "x": "A tenant expanding their unit within a building"
+      },
+      {
+        "t": "li",
+        "x": "A tenant who wants to increase the occupant load of the space"
+      },
+      {
+        "t": "li",
+        "x": "A new tenant establishing a use that doesn't have a valid occupancy permit in place"
+      },
+      {
+        "t": "li",
+        "x": "A new tenant making alterations that the City decides warrant one"
+      },
+      {
+        "t": "p",
+        "x": "Occupying starts before opening day. The bulletin allows construction and the delivery of fixed equipment and furnishings before the permit. It prohibits stocking shelves, installing computers, training staff, meeting clients and conducting business until the permit is issued. Our guides cover [moving furniture and computers into an office](/blog/office-fit-up-lease-planning-winnipeg) and [who is responsible for site safety before the permit](/blog/restaurant-renovation-permits-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "Does a new tenant need a new occupancy permit?"
+      },
+      {
+        "t": "p",
+        "x": "Not always. Since April 4, 2022, the City no longer requires a building occupancy permit “for a change in tenant/occupant only,” according to its Change in Occupancy Requirements sheet (updated March 2023). The change aligned occupancy permits with the Manitoba Building Code. The sheet says a new permit is not required if:"
+      },
+      {
+        "t": "li",
+        "x": "No change in use is planned under the Manitoba Building Code"
+      },
+      {
+        "t": "li",
+        "x": "No construction work is planned that would otherwise trigger the need for an occupancy permit"
+      },
+      {
+        "t": "li",
+        "x": "No increase in size, or change in dimensions, of the tenant space is planned"
+      },
+      {
+        "t": "li",
+        "x": "No increase in the occupant load (the number of people using the space) from the previous use is planned"
+      },
+      {
+        "t": "p",
+        "x": "Administrative changes, such as a new business name or owner, don't need one either. The catch is the previous tenant: the City's occupancy page says a new tenant establishing a use without a valid occupancy permit still needs one. The unit's existing permit matters as much as your own plans."
+      },
+      {
+        "t": "h2",
+        "x": "What counts as a change of use?"
+      },
+      {
+        "t": "p",
+        "x": "For occupancy permits, the City looks at use as the Manitoba Building Code defines it, not as zoning does. Its examples are a retail space becoming a restaurant, and a manufacturing facility changing from low to high hazard. Its March 2023 sheet says a change of use needs an occupancy permit and “may or may not include alterations.”"
+      },
+      {
+        "t": "p",
+        "x": "Even with no construction, a change of use starts with a building permit application. The City says that to get an occupancy permit, you must first apply for a building permit, and its commercial permit form (CADS, October 2025) has a box for a change of use with “no work proposed or limited to cosmetic upgrades.”"
+      },
+      {
+        "t": "p",
+        "x": "The same form says a change from one major occupancy classification to another “may require the involvement of an architect and/or engineer(s).” In a Part 3 building, a change in major occupancy classification is listed as complex work, which needs drawings sealed by an architect or engineer."
+      },
+      {
+        "t": "table",
+        "caption": "Some of the Manitoba Building Code's major occupancy groups",
+        "head": [
+          "Group",
+          "Description"
+        ],
+        "rows": [
+          [
+            "A1",
+            "Assembly occupancies intended for the production and viewing of the performing arts"
+          ],
+          [
+            "A2",
+            "Assembly occupancies not elsewhere classified in Group A"
+          ],
+          [
+            "B2",
+            "Treatment occupancies"
+          ],
+          [
+            "C",
+            "Residential occupancies"
+          ],
+          [
+            "D",
+            "Business and personal services occupancies"
+          ],
+          [
+            "E",
+            "Mercantile occupancies"
+          ],
+          [
+            "F1",
+            "High-hazard industrial occupancies"
+          ],
+          [
+            "F2",
+            "Medium-hazard industrial occupancies"
+          ],
+          [
+            "F3",
+            "Low-hazard industrial occupancies"
+          ]
+        ],
+        "note": "Selected groups, as listed on the City of Winnipeg's occupancy permit definitions page, which lists all 18. The City decides which group your use falls into."
+      },
+      {
+        "t": "p",
+        "x": "Zoning is a separate approval. The same March 2023 sheet notes that “a zoning use is different than a building code use and must be established or changed through a development permit application.” Confirm the zoning before you pay for plans."
+      },
+      {
+        "t": "p",
+        "x": "Restaurants and clinics add their own approvals on top of the City's, such as a public health plan review or X-ray approvals. The restaurant guide above covers food premises, and our [guide to clinic renovation permits](/blog/clinic-renovation-permits-winnipeg) covers medical and dental spaces."
+      },
+      {
+        "t": "h2",
+        "x": "How can you check a unit's occupancy history before you sign?"
+      },
+      {
+        "t": "p",
+        "x": "Start with the City's free online searches, then ask the landlord for a centralized property file search before you commit. Together they show what the unit is approved for and whether anything is outstanding."
+      },
+      {
+        "t": "table",
+        "caption": "City records to check before leasing a Winnipeg commercial unit",
+        "head": [
+          "Record",
+          "What it shows",
+          "How to get it"
+        ],
+        "rows": [
+          [
+            "[Occupancy permit search](https://ppdportal.winnipeg.ca/Permits/OccupancyPermitSearch/Start.jsp)",
+            "Occupancy permits issued after December 1998, with the use (the zoning use on records before November 14, 2022), major occupancy group, occupant load and, for an interim permit, its expiry date. Cancelled, expired and in-process permits aren't listed.",
+            "Free online, by address; for older permits, contact the Occupancy Permit Branch"
+          ],
+          [
+            "[Construction-related permit search](https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp)",
+            "Building and trade permits issued after January 1, 2000, and development permits issued after November 14, 2022, with each permit's status. Occupancy and sign permits aren't included.",
+            "Free online, by address; older records come from the City's Central Files office"
+          ],
+          [
+            "[Centralized property file search](https://www.winnipeg.ca/building-development/property-records/centralized-property-file-search) (CPFS)",
+            "Active permits, including occupancy; orders and violations from City enforcement, fire prevention and by-law enforcement; and zoning, including whether a proposed use is permissible. Inspections aren't included.",
+            "Permits Online account, the registered owner's signed authorization letter and, for multi-tenant buildings, a tenant list; fee plus GST; results within 15 business days"
+          ],
+          [
+            "Zoning Verification of Use Letter",
+            "The property's zoning district and its existing or proposed land use",
+            "The City's Request for Zoning Letters form; fee per the City's schedule"
+          ]
+        ],
+        "note": "Sources: City of Winnipeg permit search pages, centralized property file search page and zoning letters form (updated May 2026), checked October 15, 2026."
+      },
+      {
+        "t": "p",
+        "x": "A tenant can't order a CPFS alone. The authorization letter must come from the registered owner, on company letterhead for a commercial property, with a signature that “cannot be electronically generated.” Ask the landlord to provide the letter or order the search, and build the 15 business days into your lease timeline."
+      },
+      {
+        "t": "p",
+        "x": "In the construction permit search, a status of “closed with an incomplete inspection” means the City closed the permit without its standard inspections. The City says that work “was not audited by the City through the inspections process,” so ask the landlord about any permit with that status."
+      },
+      {
+        "t": "p",
+        "x": "Why check at all? The City's occupancy page says by-law changes aren't retroactive, but if a space or use “was not legally established through the building permit process,” the current tenant “could be ordered to obtain an occupancy permit as per current bylaw requirements.” An unpermitted past use can become the new tenant's problem."
+      },
+      {
+        "t": "p",
+        "x": "Checking a house rather than a commercial unit? Our guide to [checking a Winnipeg home's permit history](/blog/check-permit-history-winnipeg-house) covers the residential side."
+      },
+      {
+        "t": "h2",
+        "x": "Do occupancy permits work the same way outside Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Not exactly. The Province says building, plumbing and occupancy permits in Manitoba are issued by one of three authorities: the municipality, a planning district or the Province's Inspection and Technical Services. Which one depends on where the building is and whether it falls under Part 9 or Part 3 of the Manitoba Building Code."
+      },
+      {
+        "t": "p",
+        "x": "The Province requires an occupancy permit before occupying any newly constructed, renovated or repaired building where a building permit was issued, but not for the construction, renovation or repair of a one- or two-family dwelling. Winnipeg's 2022 change-of-tenant rule is the City's own, so ask the local authority how it treats a new tenant."
+      },
+      {
+        "t": "h2",
+        "x": "Which occupancy questions should you settle with the landlord?"
+      },
+      {
+        "t": "p",
+        "x": "Put these questions to the landlord, and get the answers in writing, before the lease is final:"
+      },
+      {
+        "t": "li",
+        "x": "What occupancy permit does the unit have, for what use and occupant load, and is it final or interim?"
+      },
+      {
+        "t": "li",
+        "x": "Is our use allowed under the zoning, or will it need a development permit?"
+      },
+      {
+        "t": "li",
+        "x": "Does our plan change the use, the unit's size or the occupant load, or include work that needs a permit?"
+      },
+      {
+        "t": "li",
+        "x": "Will you authorize a centralized property file search, and are there open permits, orders or violations?"
+      },
+      {
+        "t": "li",
+        "x": "Who applies for the building and occupancy permits, and who signs the letter of authorization the City asks for?"
+      },
+      {
+        "t": "li",
+        "x": "Who pays for any code upgrades the City requires because of our work?"
+      },
+      {
+        "t": "li",
+        "x": "Does the lease start date leave time for permits, inspections and the occupancy permit?"
+      },
+      {
+        "t": "p",
+        "x": "The City says an occupancy permit application can be made by the building owner or an authorized agent: the property manager, the intended tenant, the general contractor or a designer. Its commercial permit form also needs the owner's or property manager's letter of authorization for the intended use. Have a lawyer review the lease itself."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "An on-site visit before you sign shows whether your layout fits the space and which approvals it is likely to need. Bridgeland Builders handles [retail store renovations](/services/retail-renovations), [office renovations](/services/office-renovations), restaurants and clinics in Winnipeg and nearby communities, and coordinates permits and inspections with the City or the local municipality."
+      },
+      {
+        "t": "p",
+        "x": "[Book a free on-site visit](/book-online) for a free written quote; we reply within one business day. You can also see all our [commercial renovation services](/services/commercial-renovations)."
+      }
+    ],
+    "faqsTitle": "Occupancy permit questions",
+    "faqs": [
+      {
+        "q": "How far back does the City's occupancy permit search go?",
+        "a": "The online search lists occupancy permits issued after December 1998. It leaves out permits that were cancelled, expired or are still in the application process. For a permit issued before December 1998, the search page says to email occupancy@winnipeg.ca or call 204-986-5136."
+      },
+      {
+        "q": "Does a new business name or owner need a new occupancy permit?",
+        "a": "Not on its own. The City's Change in Occupancy Requirements sheet (March 2023) treats a new business name or owner as an administrative change that doesn't need a new permit. That holds only if the use and unit size stay the same, occupant load doesn't rise and no permit-triggering work is planned."
+      },
+      {
+        "q": "Is zoning approval the same as an occupancy permit?",
+        "a": "No. The City says a zoning use is different from a building code use and must be established or changed through a development permit application. A Verification of Use Letter from the City confirms a property's zoning district and its existing or proposed use. For zoning questions, call the Permits Direct Line at 204-986-5140 or email ppd-zdo@winnipeg.ca."
+      },
+      {
+        "q": "What happens if a business occupies a space without an occupancy permit?",
+        "a": "The City says occupying a space without a valid building occupancy permit is an offence under the Winnipeg Building By-law. Where a permit is required but missing, it may issue penalty notices until the space complies, and enforcement can be taken against both the occupant and the building owner."
+      },
+      {
+        "q": "What is the difference between an interim and a final occupancy permit?",
+        "a": "A final permit means that, to the best of the City's knowledge, the work under permit is complete and meets the building by-law. An interim permit is issued while minor defects are outstanding. It lists the conditions or work left to finish and has an expiry date, and occupying on an expired interim permit is a violation."
+      },
+      {
+        "q": "Who do I contact about occupancy permits in Winnipeg?",
+        "a": "The City's Occupancy Permit Branch, at occupancy@winnipeg.ca or 204-986-5136. Those are the contacts in its July 2023 occupancy bulletin, and the occupancy permit search page lists the same ones. For building permit and zoning questions, call the Permits Direct Line at 204-986-5140."
+      }
+    ],
+    "answer": "A Winnipeg commercial space needs a building occupancy permit after construction, a substantial alteration or a change of use, and you need an interim or final permit before occupying. Since April 4, 2022, a new tenant alone doesn't need one if the use and unit size stay the same, occupant load doesn't rise and no permit-triggering work is planned.",
+    "sources": [
+      {
+        "label": "City of Winnipeg: Information Bulletin 2023-005-A/B, Defining Occupancy (July 19, 2023)",
+        "url": "https://www.winnipeg.ca/media/6131",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Change in Occupancy Requirements, discontinuation of occupy only permits (updated March 2023)",
+        "url": "https://legacy.winnipeg.ca/ppd/Documents/Permits/Commercial/Change-in-Occupancy-Requirements.pdf",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Building occupancy permits",
+        "url": "https://www.winnipeg.ca/occupancypermits/",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Permits: Building Occupancy (video transcript)",
+        "url": "https://www.winnipeg.ca/media/6472",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Search for issued occupancy permits",
+        "url": "https://ppdportal.winnipeg.ca/Permits/OccupancyPermitSearch/Start.jsp",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Occupancy permit definitions",
+        "url": "https://ppdportal.winnipeg.ca/Permits/OccupancyPermitSearch/SearchFAQ.jsp",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Construction-related permit search, frequently asked questions",
+        "url": "https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/SearchFAQ.jsp",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Centralized property file search",
+        "url": "https://www.winnipeg.ca/building-development/property-records/centralized-property-file-search",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Request for Zoning Letters application form (updated May 2026)",
+        "url": "https://www.winnipeg.ca/media/5729",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
+        "url": "https://www.winnipeg.ca/media/6330",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Commercial projects",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Province of Manitoba: Building permits and inspections (Inspection and Technical Services)",
+        "url": "https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html",
+        "accessed": "2026-10-15"
+      }
+    ],
+    "reviewBy": "2027-04-15"
+  },
+  {
+    "slug": "removing-a-load-bearing-wall-winnipeg",
+    "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
+    "metaTitle": "Removing a Load-Bearing Wall in Winnipeg | Bridgeland",
+    "metaDescription": "Removing a load-bearing wall in Winnipeg: when the City wants structural or engineered drawings, why LVL beams need an engineer, and what gets inspected.",
+    "excerpt": "What the City of Winnipeg’s permit form asks for when a load-bearing wall is opened, moved or removed, why an LVL beam needs an engineer’s sealed drawing, and what happens to the wiring and plumbing inside the wall.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning"
+    ],
+    "date": "2026-10-15",
+    "updated": "2026-10-15",
+    "readMinutes": 10,
+    "hero": null,
+    "heroSrc": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-880.46195eef.webp",
+    "heroSrcSet": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-480.0aee3eb7.webp 480w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-880.46195eef.webp 880w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1320.69190335.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-480.bd0be13d.avif 480w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-880.00fb01ad.avif 880w, /images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1320.d432225b.avif 1320w",
+    "ogImage": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x630.1bd584b1.jpg",
+    "schemaImages": [
+      "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x675.8276ecef.jpg",
+      "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x900.31648cec.jpg",
+      "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x1200.351cf29f.jpg"
+    ],
+    "heroAlt": "Title card: Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/kitchen-renovations",
+      "/services/whole-home-renovations",
+      "/services/demolition"
+    ],
+    "ctaService": "/services/kitchen-renovations",
+    "cluster": "winnipeg-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Opening a kitchen to the living room usually means taking out a wall. If that wall holds up the floor or roof above it, the job becomes structural work, with drawings, a building permit and inspections."
+      },
+      {
+        "t": "p",
+        "x": "This guide explains what the City of Winnipeg asks for, using its own permit form, bulletin and web pages, checked on October 15, 2026. It’s general information, not an engineering assessment of your house, so confirm your project with the City’s Permits Direct Line at 204-986-5140."
+      },
+      {
+        "t": "h2",
+        "x": "Do you need a permit to remove a wall in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Often, yes. The City’s home renovations page lists creating open concept living spaces among the projects that may need a building permit under the Winnipeg Building By-law. Kitchens, bathrooms and new bedrooms are on the same list. Cosmetic changes, such as painting, flooring and millwork, don’t need one."
+      },
+      {
+        "t": "p",
+        "x": "Whether the wall carries load is what changes the paperwork. The City’s permit application form for alterations to single- and two-family homes asks for structural drawings when a load-bearing wall is opened, moved or removed. A partition that carries no load doesn’t need them, and can come out with the rest of the [interior demolition](/services/demolition)."
+      },
+      {
+        "t": "h2",
+        "x": "How can you tell whether a wall is load-bearing?"
+      },
+      {
+        "t": "p",
+        "x": "Not with certainty from inside the room. These rules of thumb suggest a wall may be carrying load. They are reasons to look closer, not a test to rely on before cutting:"
+      },
+      {
+        "t": "li",
+        "x": "Floor or ceiling joists rest on top of it, usually running across the wall rather than alongside it."
+      },
+      {
+        "t": "li",
+        "x": "It’s stacked over a beam or another wall on the floor below."
+      },
+      {
+        "t": "li",
+        "x": "In the basement, there are posts or teleposts under its line."
+      },
+      {
+        "t": "p",
+        "x": "Any one of these is a reason to treat the wall as structural until it’s been checked. We’ll tell you at the on-site visit which kind of wall you have. Where the framing isn’t clear from what can be seen, an engineer can confirm it, and an engineer designs the replacement wherever the City requires one."
+      },
+      {
+        "t": "p",
+        "x": "If the house has been renovated before, our guide to [checking a Winnipeg house’s permit history](/blog/check-permit-history-winnipeg-house) explains how to find out what earlier work was permitted."
+      },
+      {
+        "t": "h2",
+        "x": "When does the City want structural or engineered drawings?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s building permit application form for alterations to single- and two-family dwellings, dated October 2025, sets out two levels of drawings, plus a certificate when plans are sealed. The table quotes the items that matter when a wall comes out."
+      },
+      {
+        "t": "table",
+        "caption": "What Winnipeg’s alterations permit form asks for",
+        "head": [
+          "Document",
+          "When the form asks for it (quoted)"
+        ],
+        "rows": [
+          [
+            "Structural drawings",
+            "“when structural work is being done”, including “creating openings in, relocating, or removing interior/exterior walls that are load bearing” and “altering or repairing floor structural members such as joists or beams”. The form adds: “Engineering may be required”."
+          ],
+          [
+            "Engineered structural drawings",
+            "“when major structural work is being done”, including, in the basement, “removing or altering teleposts or beams”, and “engineered wood floors or beams (LVL, glulam, steel, etc.)”"
+          ],
+          [
+            "Professional Designer’s Certificate for Housing",
+            "“if plans are sealed by an engineer or architect, or engineer’s report is required”"
+          ]
+        ],
+        "note": "Source: City of Winnipeg building permit application form, Alterations – Single/Two Family Dwelling (PDF dated October 2025), read October 15, 2026."
+      },
+      {
+        "t": "p",
+        "x": "The beam that replaces the wall matters. If it’s an engineered product, such as LVL, glulam or steel, the form puts it on the engineered-drawings list. So does any change to the basement beam or teleposts that the new load path needs."
+      },
+      {
+        "t": "h2",
+        "x": "Why do LVL beams need an engineer’s sealed drawing?"
+      },
+      {
+        "t": "p",
+        "x": "The City’s Information Bulletin 2026-013-B/S, Engineering requirements for housing, issued September 25, 2026, sets the rule. Where a structural element “is not found in Part 9 of the Manitoba Building Code”, or its standards or limits are exceeded, the City requires a sealed drawing from a professional engineer registered in Manitoba."
+      },
+      {
+        "t": "p",
+        "x": "Part 9 is the part of the Code for smaller buildings. The City’s permit data defines it as buildings of three storeys or less with a building area of no more than 600 m², in certain occupancies, and houses fall under it. Manitoba adopted the 2020 national model building code, with Manitoba amendments, effective January 1, 2024."
+      },
+      {
+        "t": "p",
+        "x": "The bulletin’s examples of elements that need an engineer include “use of structural composite lumber”. Natural Resources Canada lists laminated veneer lumber (LVL) as a structural composite lumber product, so an LVL beam falls under that example. That’s why an LVL beam comes with a sealed drawing."
+      },
+      {
+        "t": "p",
+        "x": "Natural Resources Canada also notes that LVL is a proprietary product: its engineering properties and sizes are unique to each manufacturer, and it has no common standards of production or design."
+      },
+      {
+        "t": "p",
+        "x": "The bulletin also requires a sealed Professional Designer’s Certificate for Housing for every housing project where sealed drawings are required. It works as a letter of intent from the engineer or architect, acknowledging their professional responsibilities. In some cases, the City may also require the engineer to inspect the work and certify it was built to the design."
+      },
+      {
+        "t": "p",
+        "x": "Who prepares the drawings depends on the project. At the on-site visit we talk through who will prepare them for your house, we build that step into the schedule before demolition starts, and we build to the approved drawings."
+      },
+      {
+        "t": "h2",
+        "x": "Where does the load go once the wall is gone?"
+      },
+      {
+        "t": "p",
+        "x": "A load-bearing wall passes weight from the floors or roof above down to the structure below. Take it out and that weight needs a new path. Usually that’s a beam across the opening with a post at each end. The posts bear on whatever is below them, such as a wall, a basement beam or teleposts, and finally the foundation."
+      },
+      {
+        "t": "p",
+        "x": "The engineer’s drawing follows that path all the way down. The City’s form treats changes to basement teleposts or beams as major structural work, so if the new load path changes the basement beam or teleposts, that part needs engineered drawings as well."
+      },
+      {
+        "t": "p",
+        "x": "Winnipeg basements add a local wrinkle. The City’s basement development guide notes that concrete basement floors can move upward when the soil gets wetter. If you see cracks or a heaving slab, read our guide to [clay soil and basement cracks in Winnipeg](/blog/clay-soil-basement-cracks-winnipeg) and point them out to the engineer."
+      },
+      {
+        "t": "h2",
+        "x": "What happens to the wiring, plumbing and ducts inside the wall?"
+      },
+      {
+        "t": "p",
+        "x": "They have to be moved before the wall comes out. Interior walls can carry electrical cable, plumbing lines and heating ducts, and each one needs a new route that works with the new layout and the beam."
+      },
+      {
+        "t": "p",
+        "x": "That’s trade work with its own permits. The City requires an electrical permit to alter or extend an electrical system, and a plumbing permit to alter or extend a plumbing system. Those permits go to licensed contractors, or to homeowners doing the work themselves in the single detached house that is their primary residence."
+      },
+      {
+        "t": "p",
+        "x": "The City doesn’t inspect propane or natural gas equipment or piping, so if a gas line runs through the wall, ask who will move it and who inspects that work. On our projects, trades are coordinated so each one knows what the next needs, and permits and inspections are coordinated with the City or your local municipality."
+      },
+      {
+        "t": "p",
+        "x": "In an older house, check the wall itself too. Health Canada says asbestos may still be found in older building materials, listing cement and plaster and surface treatments such as drywall, and advises hiring a professional to test before renovating. See our guide to [asbestos testing before renovating in Manitoba](/blog/asbestos-testing-before-renovating-manitoba)."
+      },
+      {
+        "t": "h2",
+        "x": "Which inspections happen before the ceiling is closed?"
+      },
+      {
+        "t": "p",
+        "x": "Permitted work is inspected before it’s covered. For a structural or interior alteration, the City’s housing inspections page lists a rough-in inspection, plus pre-boarding and final inspections where they apply. Rough-in comes “prior to covering any structural, framing, HVAC, electrical and/or plumbing work performed under the permit that will be concealed by finishing materials.”"
+      },
+      {
+        "t": "p",
+        "x": "The City expects a complete set of plans on site throughout construction, which can include City-stamped drawings and engineered repair details. Homeowners are responsible for making sure the permit is closed, and the City says a permit won’t be closed until the work has passed all required inspections."
+      },
+      {
+        "t": "p",
+        "x": "Our [Winnipeg renovation permit guide](/blog/winnipeg-renovation-permits) explains how to book inspections and what happens when work is done without a permit."
+      },
+      {
+        "t": "h2",
+        "x": "Does removing a wall change the price of a kitchen renovation?"
+      },
+      {
+        "t": "p",
+        "x": "Yes. A beam, the engineering and rerouted wiring, plumbing or ducts all add to the scope. None of it can be priced until someone has seen what’s inside the wall and under the floor. That’s why our instant estimator doesn’t price wall removal: it goes into your written quote after the on-site visit."
+      },
+      {
+        "t": "p",
+        "x": "For the rest of the kitchen, our [kitchen renovation cost guide](/services/kitchen-renovations/cost) shows the estimator’s starting ranges and what moves the price."
+      },
+      {
+        "t": "h2",
+        "x": "What should you ask before a wall comes out?"
+      },
+      {
+        "t": "p",
+        "x": "Ask every contractor the same questions, so the answers are easy to compare:"
+      },
+      {
+        "t": "li",
+        "x": "Which walls in the plan are load-bearing, and how was that confirmed?"
+      },
+      {
+        "t": "li",
+        "x": "Who prepares the structural or engineered drawings, and is that cost in the quote?"
+      },
+      {
+        "t": "li",
+        "x": "What moves with the wall: wiring, plumbing, ducts or a gas line?"
+      },
+      {
+        "t": "li",
+        "x": "Will the beam sit below the ceiling or flush with it, and what does that change?"
+      },
+      {
+        "t": "li",
+        "x": "Which permits and inspections are needed, and who books them?"
+      },
+      {
+        "t": "li",
+        "x": "How will the work be staged, and which rooms can we use while it’s underway?"
+      },
+      {
+        "t": "p",
+        "x": "How the work is staged depends on the whole renovation. Our guide to [full versus partial renovations](/blog/how-to-choose-between-a-full-renovation-and-partial-upgrades) covers living at home while work is underway."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "Planning to open up a kitchen or a main floor? [Book a free on-site visit](/book-online). We’ll tell you which kind of wall you have, talk through who will prepare the drawings, and follow up with a free written quote. See how a [kitchen renovation](/services/kitchen-renovations) or a [whole-home renovation](/services/whole-home-renovations) runs from start to finish."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Can I widen an opening in a load-bearing wall instead of removing it?",
+        "a": "A wider opening is still structural work. The City’s alterations permit form lists creating openings in a load-bearing wall alongside relocating or removing one, so the application needs structural drawings either way. If the beam over the new opening is LVL, glulam or steel, the form asks for engineered drawings."
+      },
+      {
+        "q": "Can the new beam be hidden in the ceiling?",
+        "a": "Sometimes. A beam can hang below the ceiling, or in some houses sit up within the floor framing so the ceiling stays flat. Which one works depends on the engineer’s design, the size of the beam and how the joists run, so it’s settled in the drawings rather than promised at the first visit."
+      },
+      {
+        "q": "How long does a Winnipeg permit take for removing a wall?",
+        "a": "In September 2026, the City of Winnipeg took an average of 8.4 business days to review housing permit applications for new construction, additions and alterations, against its own target of 10. That’s the City’s review time only. It doesn’t include preparing the drawings, and the City warns that incomplete applications cause delays."
+      },
+      {
+        "q": "Do I need an engineer to remove a non-load-bearing wall?",
+        "a": "Not for the wall itself. The City’s form ties structural drawings to structural work, and a partition that carries no load isn’t structural. The renovation may still need a building permit, and moving the wiring or plumbing inside the wall needs electrical or plumbing permits."
+      },
+      {
+        "q": "Can we live in the house while a load-bearing wall comes out?",
+        "a": "It depends on the scope and how the work is staged. On some projects you can stay while work moves through the house in sections; on others, moving out for part of the job is faster and simpler. Ask how the work will be staged and which rooms you can use before you decide."
+      }
+    ],
+    "answer": "Removing a load-bearing wall in Winnipeg is structural work: expect a building permit with structural drawings, and engineered drawings if the new beam is LVL, glulam or steel, per the City’s alterations permit form. Where a structural element goes beyond Part 9 of the Manitoba Building Code, the City requires a sealed drawing from a professional engineer registered in Manitoba.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Home renovations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application form: alterations, single/two-family dwelling (PDF dated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6970",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2026-013-B/S: Engineering requirements for housing (September 25, 2026)",
+        "url": "https://www.winnipeg.ca/media/6133",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Housing inspections",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/housing-inspections",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Electrical installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Plumbing installations",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg – Basement/lower level development: construction information",
+        "url": "https://www.winnipeg.ca/media/6349",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg Open Data – Building permit application processing times (review)",
+        "url": "https://data.winnipeg.ca/d/7azm-hfsm",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Province of Manitoba – Adoption of the 2020 national model construction codes",
+        "url": "https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Natural Resources Canada – Taxonomy of wood products",
+        "url": "https://natural-resources.canada.ca/forests-forestry/forest-industry-trade/taxonomy-wood-products",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Natural Resources Canada – Laminated veneer lumber",
+        "url": "https://natural-resources.canada.ca/forests-forestry/forest-industry-trade/laminated-veneer-lumber",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Health Canada – Health risks of asbestos",
+        "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+        "accessed": "2026-10-15"
+      }
+    ],
+    "reviewBy": "2027-04-15"
+  },
+  {
+    "slug": "window-condensation-winnipeg-winter",
+    "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
+    "metaTitle": "Window Condensation in Winter: Winnipeg Guide | Bridgeland",
+    "metaDescription": "Why windows frost up in a Winnipeg winter, NRCan's humidity limits from 0°C to −40°C, what fog between the panes means, and when to replace windows.",
+    "excerpt": "Frost and water on the inside of your windows are usually a humidity problem first. Using Natural Resources Canada's humidity table and Health Canada's moisture advice, this guide explains how humid a Winnipeg house can be in a cold snap, what fog between the panes means and when replacement makes sense.",
+    "category": "Older Homes",
+    "categories": [
+      "Older Homes"
+    ],
+    "date": "2026-10-15",
+    "updated": "2026-10-15",
+    "readMinutes": 10,
+    "hero": null,
+    "heroSrc": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-880.96a34dae.webp",
+    "heroSrcSet": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-480.94567594.webp 480w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-880.96a34dae.webp 880w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1320.6c520be8.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-480.939ce55c.avif 480w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-880.6a8c29ad.avif 880w, /images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1320.8433cb61.avif 1320w",
+    "ogImage": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x630.a5ce35d5.jpg",
+    "schemaImages": [
+      "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x675.88e68036.jpg",
+      "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x900.6f625ff1.jpg",
+      "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x1200.91118175.jpg"
+    ],
+    "heroAlt": "Title card: Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/windows-and-doors"
+    ],
+    "ctaService": "/services/windows-and-doors",
+    "cluster": "windows-doors",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "When a Winnipeg cold snap arrives, many homes wake up to frost on the inside of the glass or water on the window sills. It looks like a window problem, but it usually starts with the air inside the house."
+      },
+      {
+        "t": "p",
+        "x": "This guide explains why it happens, how much humidity your windows can handle at −20°C or −30°C, what fog between the panes means, and when replacement makes sense. Everything below was checked against Natural Resources Canada (NRCan) and Health Canada pages on October 15, 2026."
+      },
+      {
+        "t": "h2",
+        "x": "Why do windows frost or sweat on the inside in a Winnipeg winter?"
+      },
+      {
+        "t": "p",
+        "x": "NRCan explains that condensation often forms in cold weather when moist indoor air meets cooler surfaces, and that the moisture can condense into water droplets or even frost. In its words, “The risk of condensation increases as the weather gets colder and/or the inside humidity rises.” That is why frost tends to show up on the coldest mornings."
+      },
+      {
+        "t": "p",
+        "x": "Condensation can form on the glass, the frames and sashes, and near the weather seals. NRCan says deep sills, closed drapes and blinds, and even furniture can block air movement and let cool air pool near a window. In more extreme climates, it adds, the edges of the glass are more prone to fogging up and freezing."
+      },
+      {
+        "t": "h2",
+        "x": "What indoor humidity should you keep at −20°C or −30°C?"
+      },
+      {
+        "t": "p",
+        "x": "NRCan's Keeping The Heat In guide answers this in Table 9-1: the highest indoor relative humidity, at 21°C indoors, at which there will be no condensation on four kinds of windows. The colder it is outside, the lower the limit. These are the published values, verified on October 15, 2026."
+      },
+      {
+        "t": "table",
+        "caption": "Maximum indoor relative humidity with no window condensation, at 21°C indoors (NRCan Table 9-1)",
+        "head": [
+          "Outdoor temperature",
+          "Older generation double-glazed low-E",
+          "Double-glazed",
+          "Double-glazed low-E",
+          "Triple-glazed low-E"
+        ],
+        "rows": [
+          [
+            "0°C",
+            "50%",
+            "58%",
+            "70%",
+            "81%"
+          ],
+          [
+            "−10°C",
+            "34%",
+            "44%",
+            "59%",
+            "74%"
+          ],
+          [
+            "−20°C",
+            "24%",
+            "34%",
+            "50%",
+            "67%"
+          ],
+          [
+            "−30°C",
+            "15%",
+            "25%",
+            "42%",
+            "60%"
+          ],
+          [
+            "−40°C",
+            "10%",
+            "18%",
+            "35%",
+            "54%"
+          ]
+        ],
+        "note": "Source: Natural Resources Canada, Keeping The Heat In, Section 9 (page modified September 29, 2025), checked October 15, 2026. All values assume an indoor temperature of 21°C."
+      },
+      {
+        "t": "p",
+        "x": "Health Canada's guide to moisture and mould says to maintain relative humidity between 30% and 50%. In deep cold, the window can set a lower ceiling. At −30°C, a standard double-glazed window's 25% limit sits below Health Canada's 30% floor, so on those days the window, not the 30–50% range, decides how humid the house can be without condensation."
+      },
+      {
+        "t": "p",
+        "x": "Triple-glazed low-E windows are the exception in the table: their limit stays above 50% even at −40°C (54%), so by the table, Health Canada's full range works for them even in a deep cold snap."
+      },
+      {
+        "t": "h3",
+        "x": "Why is the older low-E column the lowest?"
+      },
+      {
+        "t": "p",
+        "x": "NRCan gives older generation double-glazed low-E windows their own column, and their limits are the lowest in the table at every temperature: 15% at −30°C, below the 25% for plain double-glazed. The table doesn't give a reason. The practical lesson is that a low-E label alone doesn't tell you how a window handles humidity; its age matters too."
+      },
+      {
+        "t": "p",
+        "x": "If you don't know which column your windows belong in, NRCan suggests letting your windows become your indicator: excessive condensation on the inside of double-glazed windows, apart from those in the kitchen and bathroom, means there is too much moisture in the air. A hygrometer, which measures relative humidity, gives you a number to compare with the table."
+      },
+      {
+        "t": "h2",
+        "x": "Is condensation between the panes a failed seal?"
+      },
+      {
+        "t": "p",
+        "x": "In a sealed double- or triple-glazed unit, yes. NRCan lists condensation “between the glass panes if the seal is broken” and says to replace the insulating glass unit. It also suggests checking whether the window is still under warranty, and calls refurbishing a failed sealed unit a temporary fix that won't restore the original energy efficiency."
+      },
+      {
+        "t": "p",
+        "x": "Storm windows are different. NRCan explains that condensation between a window and its storm, or between non-sealed panes, comes from moist house air leaking past the inner pane. Even dry houses get it, and it is common on second storeys. The fix is to weatherstrip the inner sash and keep the storm window's weep holes open to the outside."
+      },
+      {
+        "t": "h2",
+        "x": "How can you cut window condensation without new windows?"
+      },
+      {
+        "t": "p",
+        "x": "Start with the moisture. NRCan's first step for high humidity or condensation is to reduce the amount of water vapour in the air. Between NRCan's advice and Health Canada's moisture guide, these are the steps that matter most for windows:"
+      },
+      {
+        "t": "li",
+        "x": "“Disconnect any humidifiers,” NRCan says. Health Canada's window checklist says to unplug and remove them."
+      },
+      {
+        "t": "li",
+        "x": "Run kitchen and bathroom fans when the rooms are in use, and make sure they exhaust outdoors. NRCan suggests a timer or humidity control on the bathroom fan; Health Canada says to keep it running for at least 30 minutes after a shower or bath."
+      },
+      {
+        "t": "li",
+        "x": "Avoid kitchen range hoods that recirculate air back into the room, NRCan advises."
+      },
+      {
+        "t": "li",
+        "x": "Keep your heat recovery ventilator (HRV) on, if you have one."
+      },
+      {
+        "t": "li",
+        "x": "Vent the clothes dryer outdoors and avoid drying laundry inside the house."
+      },
+      {
+        "t": "li",
+        "x": "“Keep window coverings open to allow warm air to reach the windows,” Health Canada says, and keep heating vents and baseboards clear of furniture."
+      },
+      {
+        "t": "li",
+        "x": "“Dry your window frames and sills daily to keep water from dripping and causing mould to grow,” Health Canada adds."
+      },
+      {
+        "t": "li",
+        "x": "Run a dehumidifier “if moisture is condensing on cold surfaces such as window panes or relative humidity is > 50%,” in Health Canada's words."
+      },
+      {
+        "t": "p",
+        "x": "Health Canada's checklist also says each bathroom should have an exhaust fan, vented to the outside and not into the attic. If yours has no fan, or one that dumps moist air into the attic, a [bathroom renovation](/services/bathroom-renovations) is a good time to put that right."
+      },
+      {
+        "t": "p",
+        "x": "If condensation continues after you've cut moisture, NRCan says the next step is more ventilation, and Health Canada lists condensation on windows in winter as a sign that ventilation may need to be increased. NRCan says central ventilation systems should be designed, specified and installed by a professional, and HRVs installed, balanced and commissioned by a certified technician."
+      },
+      {
+        "t": "h2",
+        "x": "Will new or triple-pane windows stop condensation?"
+      },
+      {
+        "t": "p",
+        "x": "They raise the limit, but they don't guarantee clear glass. In NRCan's table, a triple-glazed low-E window stays clear up to 60% humidity at −30°C, against 25% for standard double-glazed. NRCan says ENERGY STAR certified windows have less condensation than ordinary models, and that triple glazing helps where the edges of the glass fog up and freeze."
+      },
+      {
+        "t": "p",
+        "x": "New windows can also make condensation worse. NRCan notes that many homeowners replace windows only to find the problem grows, because the old, leaky windows were helping to keep humidity down and the new ones seal the house more tightly. Its answer is to reduce humidity levels in the house and improve ventilation."
+      },
+      {
+        "t": "p",
+        "x": "NRCan's Keeping The Heat In guide is direct: if a house already shows signs of excessive condensation, find and reduce the moisture sources; if that can't be done, “any retrofit that makes the house more airtight will have to include a mechanical ventilation system.” If condensation is part of why you're replacing windows, plan ventilation at the same time."
+      },
+      {
+        "t": "h2",
+        "x": "Can energy-efficient windows fog up on the outside?"
+      },
+      {
+        "t": "p",
+        "x": "Yes, sometimes. NRCan explains that low-e coatings make glass more energy efficient by reducing heat loss, and that if the night has been cool and calm and the air is humid, condensation may form on the outside surface of the glass around sunrise. Because it sits on the outdoor face, it isn't moisture trapped inside a sealed unit."
+      },
+      {
+        "t": "p",
+        "x": "NRCan also notes a higher risk of condensation when the low-e coating is on the room-side surface of the glass, so it is worth asking which surface is coated when you compare window quotes."
+      },
+      {
+        "t": "h2",
+        "x": "When is condensation a sign it's time to replace windows?"
+      },
+      {
+        "t": "p",
+        "x": "Condensation on its own doesn't mean a window has failed: NRCan says occasional condensation does not pose a problem. These signs point to the window itself, and most of them come from NRCan's own checklist for inspecting windows:"
+      },
+      {
+        "t": "li",
+        "x": "Fog or water inside a sealed double- or triple-glazed unit, which means the seal has failed"
+      },
+      {
+        "t": "li",
+        "x": "Rot, mould or staining on or around the frame and sill"
+      },
+      {
+        "t": "li",
+        "x": "Drafts, or air leaking around the frame and at the joints that open and close"
+      },
+      {
+        "t": "li",
+        "x": "Hardware that no longer opens, closes or locks the window properly"
+      },
+      {
+        "t": "li",
+        "x": "A frame in poor condition, which NRCan says is when it may be time to replace the unit"
+      },
+      {
+        "t": "p",
+        "x": "Health Canada says indoor mould growth may pose a health hazard and should be removed, with the moisture problem behind it fixed first, including repairs to windows if water is getting in from outside. Its moisture and mould guide also explains how to clean up small areas safely."
+      },
+      {
+        "t": "p",
+        "x": "For when a window replacement needs a City permit, and how Efficiency Manitoba's rebate on ENERGY STAR certified triple-pane windows works, see our [window and door replacement guide](/blog/window-and-door-replacement-winnipeg)."
+      },
+      {
+        "t": "p",
+        "x": "**Next step:** see what our [window and door installation](/services/windows-and-doors) work includes, then [book a free on-site visit](/book-online). Tell us which windows frost up, fog between the panes or let in drafts, and we'll look at each one with you and follow up with a free written quote. We reply within one business day."
+      }
+    ],
+    "faqsTitle": "Common questions",
+    "faqs": [
+      {
+        "q": "Why do my windows only frost up on the coldest days?",
+        "a": "Because the colder it is outside, the less humidity the glass can handle. In NRCan's Table 9-1, at 21°C indoors, a standard double-glazed window stays clear up to 34% relative humidity at −20°C, but only up to 25% at −30°C. Indoor air that was fine last week can frost the same glass in a cold snap."
+      },
+      {
+        "q": "Should I turn off my humidifier in winter?",
+        "a": "If your windows are condensing, yes. NRCan's solutions for high humidity or condensation include disconnecting any humidifiers, and Health Canada's window checklist says to unplug and remove them. Health Canada's general range is 30% to 50% relative humidity, but in deep cold, standard and older double-glazed windows may only stay clear below that range."
+      },
+      {
+        "q": "Does running the bathroom fan help with window condensation?",
+        "a": "Yes, if it exhausts outdoors. NRCan lists running kitchen and bathroom fans during use among its solutions to moisture problems and suggests a timer or humidity control on the bathroom fan. Health Canada says to keep the fan running at least 30 minutes after a shower or bath, and to check it isn't vented into the attic."
+      },
+      {
+        "q": "Is ice on the inside of windows a problem?",
+        "a": "Occasional condensation isn't, according to NRCan, but excessive condensation or frosting is a sign to reduce moisture or increase ventilation. When the ice melts, the water ends up on the frames and sills. Health Canada advises drying window frames and sills daily to keep water from dripping and causing mould to grow."
+      },
+      {
+        "q": "Will an HRV stop window condensation?",
+        "a": "It can help if it is running and set up properly. NRCan says to make sure your heat recovery ventilator is on if you have one, and that HRVs must be installed, balanced and commissioned properly by a certified technician, then serviced regularly. Routine maintenance typically means cleaning the filters and the core."
+      }
+    ],
+    "answer": "At −30°C outside and 21°C inside, Natural Resources Canada's table shows a standard double-glazed window stays free of condensation up to 25% indoor relative humidity, and a triple-glazed low-E window up to 60%. Frost or water on the inside glass usually means the air is too humid for that window. Moisture inside a sealed unit means a failed seal.",
+    "sources": [
+      {
+        "label": "Natural Resources Canada: Condensation (windows, doors and skylights)",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/product-energy-ratings/condensation",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Natural Resources Canada: Keeping The Heat In, Section 9: Operating your house (Table 9-1, maximum indoor relative humidity)",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/keeping-heat-section-9-operating-your-house-thermostats-water-heaters-furnaces-other-heatingcooling-systems",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Natural Resources Canada: Keeping The Heat In, Section 8: Upgrading windows and exterior doors",
+        "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/keeping-heat-section-8-upgrading-windows-exterior-doors",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Health Canada: Guide to addressing moisture and mould indoors",
+        "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/addressing-moisture-mould-your-home.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Health Canada: Factsheet: Ventilation and the indoor environment",
+        "url": "https://www.canada.ca/en/health-canada/services/publications/healthy-living/factsheet-ventilation-indoor-environment.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Efficiency Manitoba: Windows and Doors Rebate",
+        "url": "https://efficiencymb.ca/my-home/windows-and-doors-rebate/",
+        "accessed": "2026-10-15"
+      }
+    ],
+    "reviewBy": "2027-09-15"
+  },
+  {
     "slug": "home-renovation-cost-canada",
     "title": "How Much Does a Home Renovation Cost in Canada?",
     "metaTitle": "How Much Does a Home Renovation Cost in Canada?",
@@ -564,6 +2708,10 @@ export const BLOG_POSTS = [
         "x": "Bedroom windows: measure the clear opening of each existing window against the 0.35 m² and 380 mm minimums."
       },
       {
+        "t": "li",
+        "x": "Earlier work: if part of the basement was finished before you owned the house, [check the home’s permit history](/blog/check-permit-history-winnipeg-house) before you plan around it."
+      },
+      {
         "t": "h2",
         "x": "Next step"
       },
@@ -662,7 +2810,7 @@ export const BLOG_POSTS = [
     ],
     "date": "2026-10-13",
     "updated": "2026-10-15",
-    "readMinutes": 7,
+    "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp",
     "heroSrcSet": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-480.30133d83.webp 480w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-880.9f921e14.webp 880w, /images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1320.89704a8b.webp 1320w",
@@ -788,6 +2936,34 @@ export const BLOG_POSTS = [
       },
       {
         "t": "h2",
+        "x": "Does home insurance cover a flooded basement in Manitoba?"
+      },
+      {
+        "t": "p",
+        "x": "Only if your policy includes the right optional coverage. In a June 11, 2026 release, the Insurance Bureau of Canada (IBC), the national association of home, auto and business insurers, said basement water damage from sewer backup “is only covered if you have purchased specific, optional sewer backup coverage.”"
+      },
+      {
+        "t": "p",
+        "x": "IBC calls overland flood coverage, for water such as a river overflowing onto dry land, optional and “widely available in Manitoba,” but says it often has coverage limits and may be unavailable in a known flood plain or high-risk area. Coverage varies by insurer and policy, so read your own policy wording and ask your insurance representative."
+      },
+      {
+        "t": "p",
+        "x": "If water does get in, IBC suggests photographing and documenting the damage, keeping detailed notes and every cleanup receipt, and keeping damaged items unless they pose a health hazard. We’d add one step of our own: ask your insurer before tearing out drywall, flooring or other finishes."
+      },
+      {
+        "t": "h3",
+        "x": "Can Disaster Financial Assistance help?"
+      },
+      {
+        "t": "p",
+        "x": "Usually not for sewer backup. Manitoba’s Disaster Financial Assistance (DFA) FAQ, verified October 15, 2026, says insurable losses are ineligible and lists sewer backup among the risks insurance is available for in Manitoba. Overland or river flooding where a property owner could not buy adequate insurance “is generally the only natural hazard that qualifies for DFA.”"
+      },
+      {
+        "t": "p",
+        "x": "Only damage to a primary residence is eligible, and a deductible of $2,500 or 20%, whichever is greater, applies to all claims. Not every disaster leads to a DFA program: the Province decides event by event and announces programs in its news releases."
+      },
+      {
+        "t": "h2",
         "x": "Where should the sump pump discharge?"
       },
       {
@@ -854,6 +3030,10 @@ export const BLOG_POSTS = [
         "a": "No. The City’s Basement Flooding Protection Subsidy Program didn’t receive funding for the 2017 program year and was cancelled by City Council, and applications received after December 30, 2016 weren’t processed. The City’s current flooding page lists no replacement, so plan the cost of a valve or sump pit into your budget."
       },
       {
+        "q": "Is sewer backup covered by home insurance in Manitoba?",
+        "a": "Only with the right add-on. The Insurance Bureau of Canada says basement water damage from sewer backup is covered only if you have bought specific, optional sewer backup coverage, and that coverage varies by insurer and policy. Read your policy wording and ask your insurance representative what you have before a flood, not after one."
+      },
+      {
         "q": "Who do I call if my basement floods?",
         "a": "Report flooding to 311 and call your home insurance company. The City notes that if you have a claim for injury or property damage, you can file it with the City. Once the water is out, find the cause, whether sewer backup, groundwater or surface water, before you replace any finishes."
       }
@@ -894,8 +3074,19 @@ export const BLOG_POSTS = [
         "label": "City of Winnipeg – Basement Flooding Protection Subsidy Program (cancelled)",
         "url": "https://legacy.winnipeg.ca/waterandwaste/drainageFlooding/basementFloodingProtectionSubsidyProgram.stm",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "Insurance Bureau of Canada – Manitoba flooding: key insurance guidance for affected residents (June 11, 2026)",
+        "url": "https://www.ibc.ca/news-insights/news/manitoba-flooding-insurance-bureau-of-canada-shares-key-insurance-guidance-for-affected-residents",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Emergency Management Organization – Disaster Financial Assistance: frequently asked questions",
+        "url": "https://gov.mb.ca/emo/funding/dfa/faq.html",
+        "accessed": "2026-10-15"
       }
-    ]
+    ],
+    "reviewBy": "2027-03-15"
   },
   {
     "slug": "clay-soil-basement-cracks-winnipeg",
@@ -1149,7 +3340,7 @@ export const BLOG_POSTS = [
     ],
     "date": "2026-10-13",
     "updated": "2026-10-15",
-    "readMinutes": 9,
+    "readMinutes": 10,
     "hero": null,
     "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
     "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
@@ -1280,11 +3471,23 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings."
+        "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard."
       },
       {
         "t": "p",
-        "x": "How much of your space must be upgraded is settled in plan review."
+        "x": "For an existing building, Manitoba's own amendments to that code, in the Manitoba Building Code (M.R. 78/2023), set how far a renovation reaches. The Code “applies to the part of an existing building that is altered or repaired”, and “the level of life safety and building performance shall not be decreased.”"
+      },
+      {
+        "t": "p",
+        "x": "If, in the opinion of the authority having jurisdiction, the alteration will affect the level of life safety of parts that are not being altered, those parts “shall be improved to comply”. A change to the major occupancy of a building, or part of it, brings the affected parts under the Code as well."
+      },
+      {
+        "t": "p",
+        "x": "Manitoba's amendments also cover entrances, stairs and alarms. Where an alteration makes it impractical, in the authority's opinion, for every applicable entrance to comply, “at least one pedestrian entrance shall be barrier-free.” Stairways and ramps “shall have handrails on both sides”, and visible signal devices are required in addition to alarm signals “in all buildings.”"
+      },
+      {
+        "t": "p",
+        "x": "How these rules apply to your space is settled with the authority in plan review."
       },
       {
         "t": "p",
@@ -1300,7 +3503,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits."
+        "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits. Our guide to [occupancy permits and change of use in Winnipeg](/blog/occupancy-permit-change-of-use-winnipeg) covers what to check before you lease a unit."
       },
       {
         "t": "p",
@@ -1386,7 +3589,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "[Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
+        "x": "[Book your free on-site visit](/book-online) or read about our [medical and dental office renovations](/services/medical-dental-office-renovations). Clinic renovations are priced in the written quote that follows the visit, not from an online estimate."
       }
     ],
     "faqsTitle": "Clinic renovation permit questions",
@@ -1406,6 +3609,10 @@ export const BLOG_POSTS = [
       {
         "q": "Can we open on an interim occupancy permit?",
         "a": "The City issues both interim and final building occupancy permits, and its occupancy bulletin says you need one or the other before occupying a space. Progress inspections must be completed to the final stage before you can request occupancy, so plan your opening date around finished inspections rather than counting on an interim permit."
+      },
+      {
+        "q": "Does renovating part of our clinic mean the whole building must meet current accessibility rules?",
+        "a": "Not automatically. The Manitoba Building Code applies to the part being altered, and the work must not decrease life safety or building performance. If the authority finds it affects life safety elsewhere, those parts must be improved too. Where not every entrance can practically comply, at least one pedestrian entrance must be barrier-free. Plan review settles the details."
       }
     ],
     "answer": "Most clinic renovations in Winnipeg need a commercial building permit, applied for with the City's Commercial Alteration Design Summary, and many need a building occupancy permit before patients return. Clinics add their own steps: an electrical declaration for patient care areas, provincial approval and a shielding specification for X-ray rooms, and accessible design under the Manitoba Building Code.",
@@ -1459,6 +3666,11 @@ export const BLOG_POSTS = [
         "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
         "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+        "accessed": "2026-10-15"
       },
       {
         "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
@@ -1972,7 +4184,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For a first range on a larger renovation, try the [instant estimate](/instant-quote), or call [431-866-5644](tel:+14318665644), Monday to Friday, 8:30 to 4:30."
+        "x": "For kitchens, bathrooms and basements, try the [instant estimate](/instant-quote); for exterior painting and everything else, start with the free on-site visit above, or call [431-866-5644](tel:+14318665644), Monday to Friday, 8:30 to 4:30."
       }
     ],
     "faqsTitle": "Common questions",
@@ -2244,11 +4456,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and our cost guide for [current price ranges by project type](/renovation-cost-winnipeg). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
+        "x": "For more on how an addition is planned and built, see our [home additions](/services/home-additions) page, and our cost guide for [what drives the cost of a home addition](/renovation-cost-winnipeg#priced-after-a-visit). If you are comparing who should run the project, [what a general contractor does](/blog/what-does-a-general-contractor-do) is a useful read."
       },
       {
         "t": "p",
-        "x": "**Next step:** [book a free on-site visit](/book-online). We look at the lot, the existing house and where an addition could connect, and you receive a free written quote for the work. For a first range, try the [instant estimate](/instant-quote)."
+        "x": "**Next step:** [book a free on-site visit](/book-online). We look at the lot, the existing house and where an addition could connect, and you receive a free written quote for the work. For kitchens, bathrooms and basements, try the [instant estimate](/instant-quote); additions and everything else are priced after the visit."
       }
     ],
     "faqsTitle": "Common questions",
@@ -2795,7 +5007,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "li",
-        "x": "**Asbestos:** Health Canada lists older plaster, drywall and spackling, floor and ceiling tiles, roofing, pipe insulation and vermiculite insulation among possible sources. Don't disturb vermiculite yourself, and if asbestos is found, hire a qualified removal specialist."
+        "x": "**Asbestos:** Health Canada lists older plaster, drywall and spackling, floor and ceiling tiles, roofing, pipe insulation and vermiculite insulation among possible sources. Don't disturb vermiculite yourself, and if asbestos is found, hire a qualified removal specialist. In Manitoba, see [asbestos testing before renovating](/blog/asbestos-testing-before-renovating-manitoba) for the rules that changed in 2025."
       },
       {
         "t": "li",
@@ -3224,7 +5436,7 @@ export const BLOG_POSTS = [
       "Money & Rebates"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp",
@@ -3435,6 +5647,12 @@ export const BLOG_POSTS = [
             "On-bill financing; approval before work starts"
           ],
           [
+            "Energy Efficiency Assistance Program",
+            "Efficiency Manitoba",
+            "Current offer (checked October 15, 2026)",
+            "Free insulation for income-qualified households, installed by Efficiency Manitoba's registered program contractors"
+          ],
+          [
             "Canada Greener Homes Grant",
             "Natural Resources Canada",
             "Closed",
@@ -3511,7 +5729,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
+        "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For kitchens, bathrooms and basements, try the [instant estimate](/instant-quote) for a first range; for everything else, the on-site visit comes first."
       }
     ],
     "faqsTitle": "Common questions",
@@ -3548,6 +5766,11 @@ export const BLOG_POSTS = [
         "label": "Efficiency Manitoba: EnerGuide Home Evaluation Rebate",
         "url": "https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "Efficiency Manitoba: Energy Efficiency Assistance Program",
+        "url": "https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/",
+        "accessed": "2026-10-15"
       },
       {
         "label": "Manitoba Hydro: Home Energy Efficiency Loan",
@@ -3588,8 +5811,8 @@ export const BLOG_POSTS = [
       "Money & Rebates"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
-    "readMinutes": 10,
+    "updated": "2026-10-15",
+    "readMinutes": 11,
     "hero": null,
     "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
     "heroSrcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
@@ -3615,7 +5838,7 @@ export const BLOG_POSTS = [
       {
         "t": "callout",
         "title": "General information, not tax advice",
-        "x": "Program details were checked on official government and utility websites on October 13, 2026. Rules and amounts change, and eligibility depends on your situation, so confirm with the program and with an accountant before you rely on a credit or rebate."
+        "x": "Program details were checked on official government and utility websites on October 13 and 15, 2026. Rules and amounts change, and eligibility depends on your situation, so confirm with the program and with an accountant before you rely on a credit or rebate."
       },
       {
         "t": "p",
@@ -3631,7 +5854,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "table",
-        "caption": "Open or listed as available (checked October 13, 2026)",
+        "caption": "Open or listed as available (checked October 13, 2026, unless noted)",
         "head": [
           "Program",
           "Who it helps",
@@ -3682,6 +5905,12 @@ export const BLOG_POSTS = [
             "Listed; apply and complete an EnerGuide evaluation before work"
           ],
           [
+            "[Efficiency Manitoba Energy Efficiency Assistance Program](https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/)",
+            "Homeowners, renters and landlords whose household income is at or below Efficiency Manitoba's published limits (or First Nation band members with status), in a single-detached or semi-detached home lived in year-round",
+            "Free insulation for eligible attics, walls and basements, free air-sealing products and, in qualifying homes with electric heat, a free heat pump",
+            "Listed (verified October 15, 2026); Efficiency Manitoba connects you with its registered program contractors"
+          ],
+          [
             "[Manitoba Hydro Home Energy Efficiency Loan](https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/)",
             "Homeowners making qualifying energy upgrades through a participating contractor or retailer",
             "Up to $12,500 per residence; ground source heat pumps and solar PV can be financed up to $20,000, with all loans combined capped at $20,000. Repaid on your energy bill",
@@ -3692,6 +5921,12 @@ export const BLOG_POSTS = [
             "Owners installing a geothermal heat pump system",
             "15% of the system's capital cost other than the heat pump when the installer is certified by the Manitoba Geothermal Energy Alliance, plus 7.5% on heat pumps made in Manitoba",
             "Listed by Manitoba Finance (no date shown); confirm current availability with Manitoba Finance"
+          ],
+          [
+            "[Manitoba Safe and Healthy Home for Seniors Program](https://gov.mb.ca/seniors/resources/housing-options-and-care-planning.html)",
+            "Seniors aged 65 and older, and family members who have seniors living with them, with a combined household income of $60,000 or less",
+            "Up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations that are essential for daily living",
+            "Listed by the Province (verified October 15, 2026); up to $1.5 million in total, so funds may run out. Administered by March of Dimes Canada (1-866-906-6006); confirm intake with them"
           ]
         ],
         "note": "Status as published on each official page on the checked date. Interest rates are not shown; ask Manitoba Hydro for current loan terms."
@@ -3784,7 +6019,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "If you're planning a bathroom for aging in place, talk the layout through at the on-site visit for your [bathroom renovation](/services/bathroom-renovations)."
+        "x": "Seniors with lower household incomes can also look at the Province's Manitoba Safe and Healthy Home for Seniors Program, listed in the table above. For either one, keep invoices that list the eligible items separately, and confirm what qualifies with your accountant or the program before the work starts."
       },
       {
         "t": "h2",
@@ -3797,6 +6032,14 @@ export const BLOG_POSTS = [
       {
         "t": "p",
         "x": "A pre-retrofit EnerGuide evaluation, which has its own $400 rebate, is recommended for planning and required for the Home Energy Retrofits offer and the insulation air-sealing bonus. Insulation must be bought through a registered contractor or retailer, who starts the application."
+      },
+      {
+        "t": "p",
+        "x": "Households with lower incomes should check the Energy Efficiency Assistance Program in the table first. Efficiency Manitoba lists free insulation, air-sealing products and, in qualifying electrically heated homes, free heat pumps, installed by its registered program contractors. You apply to Efficiency Manitoba, which connects you with those contractors."
+      },
+      {
+        "t": "p",
+        "x": "In September 2025, Efficiency Manitoba announced it would deliver the federal [Canada Greener Homes Affordability Program](https://efficiencymb.ca/articles/canada-greener-homes-affordability-program/) by building on its existing programs for low- to median-income households, including this one. It's a different program from the closed Canada Greener Homes Grant."
       },
       {
         "t": "p",
@@ -3856,18 +6099,22 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Planning a suite, an accessible bathroom or an energy upgrade? Bring your rebate questions to a [free on-site visit](/book-online) so any pre-approval steps can be timed before work starts; you'll get a free written quote afterwards. For a first number, try our [instant renovation estimate](/instant-quote)."
+        "x": "Planning a suite, a basement or an energy upgrade? Bring your rebate questions to a [free on-site visit](/book-online) so any pre-approval steps can be timed before work starts; you'll get a free written quote afterwards. For kitchens, bathrooms and basements, the [instant estimate](/instant-quote) gives a first range; everything else is priced after the visit."
       }
     ],
     "faqsTitle": "Frequently Asked Questions",
     "faqs": [
       {
         "q": "Is there a home renovation grant in Manitoba?",
-        "a": "There's no general renovation grant for Manitoba homeowners. The help that exists is targeted: Efficiency Manitoba rebates for energy upgrades, federal tax credits for multigenerational suites and accessibility work, and Manitoba Hydro's on-bill loan. Manitoba Housing says its renovation and repair programs are no longer available. Check each program's own page, because offers and amounts change."
+        "a": "There's no general renovation grant, but targeted programs exist: Efficiency Manitoba rebates, free Efficiency Manitoba upgrades for income-qualified households, the Province's Safe and Healthy Home for Seniors Program, federal tax credits for multigenerational suites and accessibility work, and Manitoba Hydro's on-bill loan. Manitoba Housing says its repair programs are no longer available. Check each program's page, because offers change."
       },
       {
         "q": "Can I still get the Canada Greener Homes Grant?",
-        "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Canada Greener Homes Loan is closed too because its funding is fully committed. For energy upgrades in Manitoba today, look at Efficiency Manitoba's rebates and Manitoba Hydro's Home Energy Efficiency Loan, both of which need approval before any work starts."
+        "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Loan is closed because its funding is fully committed. Income-qualified households can look at Efficiency Manitoba's Energy Efficiency Assistance Program, which the federal Canada Greener Homes Affordability Program now helps fund. Others can use Efficiency Manitoba's rebates and Manitoba Hydro's loan, approved before work starts."
+      },
+      {
+        "q": "Is there a grant for seniors' home modifications in Manitoba?",
+        "a": "Yes. The Province's Manitoba Safe and Healthy Home for Seniors Program offers up to $5,000 ($6,500 in rural and remote areas) for basic home adaptations essential for daily living. Seniors 65 or older, or family living with them, can apply if combined household income is $60,000 or less. Total funding is up to $1.5 million, so it may run out."
       },
       {
         "q": "Does the City of Winnipeg still pay for backwater valves?",
@@ -3882,7 +6129,7 @@ export const BLOG_POSTS = [
         "a": "No. It was announced in 2024, but Budget 2025 states that the program, which was not yet operational, will not be implemented. The federal option for financing a suite is CMHC-insured refinancing, which lets approved lenders refinance up to 90% of the home's value, including the value the new suite adds, subject to the program's conditions."
       }
     ],
-    "answer": "Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates for insulation, windows and doors, Manitoba Hydro's on-bill Home Energy Efficiency Loan, and CMHC-insured refinancing to build a suite. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.",
+    "answer": "Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates and its free upgrades for income-qualified homes, Manitoba Hydro's on-bill loan, CMHC-insured suite refinancing and the Province's seniors home-adaptation grant. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.",
     "sources": [
       {
         "label": "Canada Revenue Agency: Multigenerational home renovation tax credit (line 45355)",
@@ -3935,9 +6182,24 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
+        "label": "Efficiency Manitoba: Energy Efficiency Assistance Program",
+        "url": "https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Efficiency Manitoba: Canada launches Greener Homes Affordability Program in Manitoba (September 12, 2025)",
+        "url": "https://efficiencymb.ca/articles/canada-greener-homes-affordability-program/",
+        "accessed": "2026-10-15"
+      },
+      {
         "label": "Manitoba Hydro: Home Energy Efficiency Loan",
         "url": "https://www.hydro.mb.ca/account/loans/home-energy-efficiency-loan/",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba: Housing options and care planning for seniors (Manitoba Safe and Healthy Home for Seniors Program)",
+        "url": "https://gov.mb.ca/seniors/resources/housing-options-and-care-planning.html",
+        "accessed": "2026-10-15"
       },
       {
         "label": "Manitoba Finance: Green Energy Equipment Tax Credit",
@@ -3947,12 +6209,12 @@ export const BLOG_POSTS = [
       {
         "label": "Natural Resources Canada: Closed — Canada Greener Homes Grant",
         "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/closed-canada-greener-homes-grant",
-        "accessed": "2026-10-13"
+        "accessed": "2026-10-15"
       },
       {
         "label": "Natural Resources Canada: Canada Greener Homes Loan (closed)",
         "url": "https://natural-resources.canada.ca/energy-efficiency/home-energy-efficiency/canada-greener-homes-initiative/canada-greener-homes-loan",
-        "accessed": "2026-10-13"
+        "accessed": "2026-10-15"
       },
       {
         "label": "City of Winnipeg: Basement Flooding Protection Subsidy Program (cancelled)",
@@ -3967,7 +6229,7 @@ export const BLOG_POSTS = [
       {
         "label": "Manitoba Housing: Repair and renovation programs",
         "url": "https://www.gov.mb.ca/housing/progs/repair.html",
-        "accessed": "2026-10-13"
+        "accessed": "2026-10-15"
       }
     ],
     "reviewBy": "2027-01-15"
@@ -4098,7 +6360,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space."
+        "x": "Only once the City issues an interim or final occupancy permit, where one is required. The City's occupancy bulletin lists installing loose equipment such as computers, printers and copiers, training staff and meeting clients as occupying a space. Our guide to [occupancy permits and change of use](/blog/occupancy-permit-change-of-use-winnipeg) explains when one is needed."
       },
       {
         "t": "p",
@@ -4171,7 +6433,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "If you need to borrow, our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) compares term loans, leasehold improvement loans and landlord allowances. For a first number, try the [instant renovation estimate](/instant-quote); the free written quote after an on-site visit is the figure to plan around."
+        "x": "If you need to borrow, our guide to [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) compares term loans, leasehold improvement loans and landlord allowances. Office fit-ups are priced in a free written quote after an on-site visit, not from an online estimate; see what moves that price in [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects)."
       },
       {
         "t": "h2",
@@ -4861,7 +7123,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Older houses can hide lead paint, materials that may contain asbestos, outdated wiring and plumbing, and framing changed by earlier renovations. None of these is a reason to avoid renovating, but each should be identified before demolition so it can be priced and handled safely instead of being discovered halfway through the job."
+        "x": "Older houses can hide lead paint, [materials that may contain asbestos](/blog/asbestos-testing-before-renovating-manitoba), outdated wiring and plumbing, and framing changed by earlier renovations. None of these is a reason to avoid renovating, but each should be identified before demolition so it can be priced and handled safely instead of being discovered halfway through the job."
       },
       {
         "t": "table",
@@ -4940,7 +7202,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, note what looks original and what has been changed, and flag what should be tested or checked with the City before design. You then receive a free written quote. Prefer to start with a number? Try the [instant estimate](/instant-quote)."
+        "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, note what looks original and what has been changed, and flag what should be tested or checked with the City before design. You then receive a free written quote. For a kitchen, bathroom or basement, try the [instant estimate](/instant-quote); everything else is priced after the visit."
       }
     ],
     "faqsTitle": "Common questions",
@@ -5122,7 +7384,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "When the work is construction, a substantial alteration or a change of use. The City gives a retail space becoming a restaurant as an example of a change of use."
+        "x": "When the work is construction, a substantial alteration or a change of use. The City gives a retail space becoming a restaurant as an example of a change of use. Our guide to [occupancy permits and change of use in Winnipeg](/blog/occupancy-permit-change-of-use-winnipeg) covers what to check before you lease a unit."
       },
       {
         "t": "p",
@@ -5238,7 +7500,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "[Book a free on-site visit](/book-online) for a free written quote, or start with the [instant renovation estimate](/instant-quote). For budgeting, read [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects), or see all our [commercial renovation services](/services/commercial-renovations)."
+        "x": "[Book a free on-site visit](/book-online) for a free written quote; restaurant work is priced after that visit, not from an online estimate. For budgeting, read [the biggest cost factors in commercial renovation projects](/blog/the-biggest-cost-factors-in-commercial-renovation-projects), or see all our [commercial renovation services](/services/commercial-renovations)."
       }
     ],
     "faqsTitle": "Restaurant renovation permit questions",
@@ -5386,6 +7648,10 @@ export const BLOG_POSTS = [
       {
         "t": "p",
         "x": "A detached suite that doesn’t meet the zoning standards may also need a conditional use application. The basement rules still apply to an attached suite, too: bedroom windows, ceiling heights, alarms and insulation are covered in our guide to [basement development permits](/blog/basement-development-permits-winnipeg)."
+      },
+      {
+        "t": "p",
+        "x": "If the house already has a finished basement or a suite, find out what was permitted before you build on it. Our guide explains [how to check a Winnipeg home’s permit history](/blog/check-permit-history-winnipeg-house)."
       },
       {
         "t": "h2",
@@ -5631,7 +7897,7 @@ export const BLOG_POSTS = [
       "Basements & Suites"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": null,
     "heroSrc": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
@@ -5738,10 +8004,6 @@ export const BLOG_POSTS = [
         "x": "Check and clean it regularly, and remove anything that could stop it closing. Homes built after 1979 were required to have one, and homes built since 1990 a sump pit as well. If you’re unsure what your house has, or whether it works, the City suggests asking a licensed plumber."
       },
       {
-        "t": "p",
-        "x": "Our [basement flood protection guide](/blog/basement-flood-protection-winnipeg) explains how a backwater valve and sump pit work together, and which permits apply if you add either one."
-      },
-      {
         "t": "h2",
         "x": "How do you keep surface water away from the house?"
       },
@@ -5796,6 +8058,10 @@ export const BLOG_POSTS = [
       {
         "t": "p",
         "x": "Report flooding to 311 and contact your home insurance company; the City also notes you can file a claim with it for injury or property damage. Photograph everything and ask your insurer before tearing out finishes. When you rebuild, fix what let the water in first, whether that’s a missing backwater valve, a sump problem or grading."
+      },
+      {
+        "t": "p",
+        "x": "Our basement flooding guide explains [whether home insurance covers a flooded basement in Manitoba](/blog/basement-flood-protection-winnipeg), along with how a backwater valve and sump pit work together and the permits for adding either one."
       },
       {
         "t": "p",
@@ -6212,7 +8478,7 @@ export const BLOG_POSTS = [
     "blocks": [
       {
         "t": "p",
-        "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, frost on the inside of the glass, and doors that stick or let in cold air at the sill."
+        "x": "Old windows and doors are among the most noticeable problems in a Winnipeg winter: drafts, [frost on the inside of the glass](/blog/window-condensation-winnipeg-winter), and doors that stick or let in cold air at the sill."
       },
       {
         "t": "p",
@@ -6407,7 +8673,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** see what our [window and door installation](/services/windows-and-doors) work includes, then [book a free on-site visit](/book-online) so we can look at each window and door with you and send a free written quote. For a first range on a larger renovation, try the [instant estimate](/instant-quote)."
+        "x": "**Next step:** see what our [window and door installation](/services/windows-and-doors) work includes, then [book a free on-site visit](/book-online) so we can look at each window and door with you and send a free written quote. For kitchens, bathrooms and basements, you can try the [instant estimate](/instant-quote) first; windows, doors and everything else start with that visit."
       }
     ],
     "faqsTitle": "Common questions",
@@ -6494,7 +8760,7 @@ export const BLOG_POSTS = [
     ],
     "date": "2026-10-13",
     "updated": "2026-10-15",
-    "readMinutes": 9,
+    "readMinutes": 10,
     "hero": null,
     "heroSrc": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
     "heroSrcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
@@ -6713,12 +8979,20 @@ export const BLOG_POSTS = [
         "x": "Permitted work is inspected before it’s covered. Request inspections through the City’s housing inspection request form at winnipeg.ca/housinginspection, or by phone at 204-986-5300 on weekdays. Insulated walls and ceilings get a rough-in inspection and then a preboard inspection of insulation and vapour barrier before drywall. Wiring and plumbing are inspected before they’re covered too."
       },
       {
+        "t": "p",
+        "x": "Timing matters as well. The City’s housing inspections page, verified October 15, 2026, says a defect an inspector finds must be corrected and re-inspected within one month or a fee applies, and a permit isn’t closed until the work has passed every required inspection. The FAQ below covers how long a permit stays valid."
+      },
+      {
         "t": "h2",
         "x": "What happens if you renovate without a permit?"
       },
       {
         "t": "p",
-        "x": "The City’s Permit Amnesty page says renovations done without permits must be brought up to current codes through permits and inspections, that post-construction penalty fees are waived only where amnesty is approved, and that undeclared work can lead to notices or orders, with fines or penalties. Amnesty covers a homeowner’s primary residence, not rental properties."
+        "x": "The City’s Permit Amnesty page says renovations done without permits must be brought up to current codes through permits and inspections, and that undeclared work can lead to notices or orders, with fines or penalties."
+      },
+      {
+        "t": "p",
+        "x": "Post-construction penalty fees are waived only where amnesty is approved, and amnesty covers a homeowner’s primary residence, not rental properties. Our guide to [checking a Winnipeg home’s permit history](/blog/check-permit-history-winnipeg-house) covers open permits, unpermitted work and how Permit Amnesty applies."
       },
       {
         "t": "p",
@@ -6766,6 +9040,10 @@ export const BLOG_POSTS = [
       {
         "q": "Can a homeowner get their own building permit in Winnipeg?",
         "a": "Yes. The City makes homeowners responsible for permits, and you can apply through Permits Online or at the Zoning & Permits office at Unit 31-30 Fort Street. Electrical and plumbing permits are narrower: a homeowner can take them out only for work they do personally in the single detached house that is their primary residence."
+      },
+      {
+        "q": "How long is a Winnipeg building permit valid?",
+        "a": "The City says a permit expires if work hasn’t started within six months of issue, and charges a fee unless you confirm the start, book an inspection or request an extension before then. A permit not closed by a final inspection within three years is charged a non-compliance fee. Extensions may be requested but aren’t guaranteed."
       },
       {
         "q": "How much does a renovation permit cost in Winnipeg?",
@@ -6848,6 +9126,11 @@ export const BLOG_POSTS = [
         "label": "Red River Planning District",
         "url": "https://www.redriverplanning.com",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Housing inspections (permit expiry, defects and closing)",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/housing-inspections",
+        "accessed": "2026-10-15"
       },
       {
         "label": "City of Winnipeg – Permit Amnesty program",
@@ -7132,8 +9415,8 @@ export const BLOG_POSTS = [
       "Commercial"
     ],
     "date": "2026-09-03",
-    "updated": "2026-10-13",
-    "readMinutes": 7,
+    "updated": "2026-10-15",
+    "readMinutes": 8,
     "hero": "https://static.wixstatic.com/media/48172a_8577271c235a4ec9958bfde1335920bf~mv2.png",
     "heroSrc": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp",
     "heroSrcSet": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-480.413203b1.webp 480w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-880.4e31fe2d.webp 880w, /images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1320.34a27d10.webp 1320w",
@@ -7219,11 +9502,23 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard. How they apply to your alteration is settled in plan review, so design for them from the start."
+        "x": "They set minimums for entrances, routes and washrooms. Since January 1, 2024, Manitoba has enforced a building code based on the 2020 National Building Code, which substantially updated accessibility requirements and aligned them with the CSA B651 standard, so design for them from the start."
       },
       {
         "t": "p",
-        "x": "Manitoba also kept three amendments of its own: wider use of visual signal devices, handrails on both sides of stairs and ramps, and rules on how some requirements apply to existing buildings. Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
+        "x": "Manitoba's own amendments, in the Manitoba Building Code (M.R. 78/2023), set how far a renovation reaches. The Code “applies to the part of an existing building that is altered or repaired”, and an alteration must not decrease the level of life safety or building performance."
+      },
+      {
+        "t": "p",
+        "x": "If the authority finds the alteration will affect the life safety of parts not being altered, those parts must be improved to comply. Where it is not practical for every applicable entrance to comply, “at least one pedestrian entrance shall be barrier-free.”"
+      },
+      {
+        "t": "p",
+        "x": "Manitoba also requires visible signal devices in addition to alarm signals in all buildings, and handrails on both sides of stairways and ramps. How these apply to your space is settled with the authority in plan review."
+      },
+      {
+        "t": "p",
+        "x": "Design guides written for the United States cite American law that does not apply here; in Manitoba, work from the Manitoba Building Code."
       },
       {
         "t": "p",
@@ -7326,7 +9621,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote, or start with the [instant renovation estimate](/instant-quote). See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
+        "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote; commercial work is priced after that visit, not from an online estimate. See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
       }
     ],
     "faqsTitle": "Commercial design questions",
@@ -7363,6 +9658,11 @@ export const BLOG_POSTS = [
         "label": "Province of Manitoba: Manitoba Building Code Updates, Accessibility",
         "url": "https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+        "accessed": "2026-10-15"
       },
       {
         "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
@@ -7622,7 +9922,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, sort what needs doing now from what can wait, and send a free written quote for the scope you choose. For a first range, try the [instant estimate](/instant-quote)."
+        "x": "**Next step:** [book a free on-site visit](/book-online). We walk the house with you, sort what needs doing now from what can wait, and send a free written quote for the scope you choose. For a kitchen, bathroom or basement, try the [instant estimate](/instant-quote) for a first range; for everything else, the visit comes first."
       }
     ],
     "faqsTitle": "Common questions",
@@ -7684,7 +9984,7 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-08-12",
-    "updated": "2026-10-14",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_65a7f9910aae4697b8e89217e0e801bf~mv2.png",
     "heroSrc": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-880.52b03fa5.webp",
@@ -7880,7 +10180,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** For a first number to test your ROI, try the [instant renovation estimate](/instant-quote). For a figure you can plan around, [book a free on-site visit](/book-online) and get a free written quote. Bridgeland Builders renovates [retail stores](/services/retail-renovations) and other [commercial spaces](/services/commercial-renovations) in Winnipeg and nearby communities."
+        "x": "**Next step:** For a figure to test your ROI against, [book a free on-site visit](/book-online) and get a free written quote; commercial work is priced after that visit, not from an online estimate. Bridgeland Builders renovates [retail stores](/services/retail-renovations) and other [commercial spaces](/services/commercial-renovations) in Winnipeg and nearby communities."
       }
     ],
     "faqsTitle": "Renovation ROI questions",
@@ -7947,8 +10247,8 @@ export const BLOG_POSTS = [
       "Money & Rebates"
     ],
     "date": "2026-08-11",
-    "updated": "2026-10-13",
-    "readMinutes": 7,
+    "updated": "2026-10-15",
+    "readMinutes": 8,
     "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
     "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
     "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
@@ -8119,7 +10419,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** Lenders and landlords both want a defined scope and price. [Book a free on-site visit](/book-online) for a free written quote you can take to them, or start with the [instant renovation estimate](/instant-quote) for a ballpark. Learn about our [office renovations](/services/office-renovations) and other [commercial renovation services](/services/commercial-renovations), and weigh the payback with our guide to [commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)."
+        "x": "**Next step:** Lenders and landlords want a defined scope and price. [Book a free on-site visit](/book-online) for a free written quote you can take to them; commercial work is priced after a site visit, not from an online estimate. Learn about our [office renovations](/services/office-renovations) and other [commercial renovation services](/services/commercial-renovations), and weigh the payback with our guide to [commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)."
       }
     ],
     "faqsTitle": "Commercial renovation financing questions",
@@ -8130,7 +10430,15 @@ export const BLOG_POSTS = [
       },
       {
         "q": "Are there government grants for commercial renovations in Manitoba?",
-        "a": "Program availability changes, so check before you budget. For energy upgrades, Efficiency Manitoba offers business incentives for lighting, building envelope, HVAC and other work, and some programs require approval before you buy anything. For borrowing, the federal Canada Small Business Financing Program helps eligible small businesses get term loans through their own lender."
+        "a": "Program availability changes, so check before you budget. Downtown Winnipeg businesses can look at the Storefront Success grant, below. Efficiency Manitoba offers business incentives for lighting, building envelope, HVAC and other work, and some programs require approval before you buy anything. The federal Canada Small Business Financing Program helps eligible small businesses get term loans through their own lender."
+      },
+      {
+        "q": "What is the Storefront Success grant in downtown Winnipeg?",
+        "a": "A grant the Manitoba government announced on August 11, 2026 with the City of Winnipeg and CentreVenture, with $1.4 million in funding; the Province's release says it “offers up to $200,000”. Small and medium-sized retailers, restaurants, cafés, specialty retailers and select non-profits in the designated downtown program area can apply for storefront, façade, lighting, signage, entrance and accessibility work."
+      },
+      {
+        "q": "When can I apply for Storefront Success?",
+        "a": "The remaining deadlines are December 31, 2026 and March 31, 2027, and applications are accepted only until the funding is fully allocated, so it may run out sooner. The release says businesses can review eligibility requirements and apply at centreventure.com; confirm there that your address is in the program area. Bridgeland Builders has no role in the program."
       },
       {
         "q": "What is an SBA loan, and can I get one in Canada?",
@@ -8181,8 +10489,14 @@ export const BLOG_POSTS = [
         "label": "Efficiency Manitoba: Business programs",
         "url": "https://efficiencymb.ca/business/",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba news release, August 11, 2026: Manitoba Government and City of Winnipeg Invest $1.4 Million to Support Downtown Businesses (Storefront Success)",
+        "url": "https://news.gov.mb.ca/news/index.html?item=74757&posted=2026-08-11",
+        "accessed": "2026-10-15"
       }
-    ]
+    ],
+    "reviewBy": "2026-12-15"
   },
   {
     "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
@@ -8358,11 +10672,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment."
-      },
-      {
-        "t": "p",
-        "x": "The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
+        "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment; our [guide to the builders' lien holdback](/blog/builders-lien-holdback-manitoba) explains how long to keep it."
       },
       {
         "t": "h2",
@@ -8490,6 +10800,14 @@ export const BLOG_POSTS = [
       {
         "q": "Can I cancel a renovation contract after signing?",
         "a": "It depends on the contract and how it was sold. If you signed with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel without giving a reason. Otherwise, the cancellation terms in your contract apply, so read them before signing and call the Consumer Protection Office if you're unsure."
+      },
+      {
+        "q": "Is there a mandatory warranty for renovations in Manitoba?",
+        "a": "Manitoba has no mandatory warranty program for renovations; a 2013 new-home warranty law was never brought into force and was repealed in 2021. Get the warranty, what it covers and for how long, in writing."
+      },
+      {
+        "q": "What can I do if a contractor doesn't finish the job?",
+        "a": "Keep the contract, invoices and correspondence. You can file a complaint with Manitoba's Consumer Protection Office, which asks for a description of the problem and copies of those documents. Since January 1, 2025, Small Claims at the Court of King's Bench takes claims up to $20,000. This is general information, not legal advice: see a lawyer before withholding payment."
       }
     ],
     "answer": "Verify before you compare prices: a current WCB Manitoba clearance, a liability insurance certificate, a registered business name, recent reviews and references, and a written contract that names who pulls permits, sets the deposit and payment schedule, and puts every change in writing. Then compare detailed written quotes for the same scope.",
@@ -8527,7 +10845,7 @@ export const BLOG_POSTS = [
       {
         "label": "The Builders' Liens Act, C.C.S.M. c. B91 (s. 24, holdback)",
         "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
-        "accessed": "2026-10-13"
+        "accessed": "2026-10-15"
       },
       {
         "label": "City of Winnipeg: Home improvement projects (permits)",
@@ -8553,6 +10871,26 @@ export const BLOG_POSTS = [
         "label": "City of Winnipeg: List of licensed contractors",
         "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
         "accessed": "2026-10-13"
+      },
+      {
+        "label": "Manitoba Consumer Protection Office: How to file a complaint",
+        "url": "https://www.gov.mb.ca/consumerinfo/file-complaint.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Court of King's Bench of Manitoba: Notice and practice direction, small claims limit increase (December 9, 2024)",
+        "url": "https://www.manitobacourts.mb.ca/site/assets/files/2044/small_claims_limit_increase_and_limit_on_filing_material_2024_dec_9.pdf",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "S.M. 2021, c. 30, s. 18: The New Home Warranty Act (unproclaimed) repealed",
+        "url": "https://web2.gov.mb.ca/laws/statutes/2021/c03021e.php",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "The New Home Warranty Act, S.M. 2013, c. 23 (never proclaimed)",
+        "url": "https://web2.gov.mb.ca/laws/statutes/2013/c02313e.php",
+        "accessed": "2026-10-15"
       }
     ]
   },
@@ -8568,8 +10906,8 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-08-04",
-    "updated": "2026-10-13",
-    "readMinutes": 7,
+    "updated": "2026-10-15",
+    "readMinutes": 9,
     "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
     "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
     "heroSrcSet": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-480.f2db0b8c.webp 480w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp 880w, /images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1320.afcff434.webp 1320w",
@@ -8672,7 +11010,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Asbestos has its own rules. Where asbestos is suspected, Manitoba's workplace safety rules require the work area to be inspected and an asbestos inventory prepared by a person competent in identifying asbestos-containing material before renovation or demolition, and suspected material is treated as asbestos unless it is found to be asbestos-free."
+        "x": "Asbestos has its own rules. Manitoba's workplace safety regulation requires employers and owners to have asbestos-containing material inventoried by a person competent in identifying it, and treats material likely to contain asbestos as asbestos-containing until a qualified person finds otherwise. The employer or owner must notify Workplace Safety and Health 5 to 10 days before work that may release it."
       },
       {
         "t": "p",
@@ -8688,7 +11026,63 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "The City's commercial permit form is a useful reality check: its declared construction value includes design fees, project management fees, every sub-trade, building equipment, finishes, millwork and fixed cabinetry. In restaurants, Manitoba's food premises guideline adds items such as an approved kitchen hood, grease interceptors and washable finishes. See our guides to [restaurant renovation permits](/blog/restaurant-renovation-permits-winnipeg) and [clinic renovation permits](/blog/clinic-renovation-permits-winnipeg)."
+        "x": "The City's commercial permit form is a useful reality check: its declared construction value includes design fees, project management fees, every sub-trade, building equipment, finishes, millwork and fixed cabinetry. See our guides to [restaurant renovation permits](/blog/restaurant-renovation-permits-winnipeg) and [clinic renovation permits](/blog/clinic-renovation-permits-winnipeg)."
+      },
+      {
+        "t": "h2",
+        "x": "What drives the cost of an office, restaurant or retail renovation in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "Each type of space has its own expensive parts. In an office it is usually the walls, exits and building services; in a restaurant, the kitchen the health inspector reviews; in a store, the entrance, signs and lighting. These are cost drivers, not prices: each one is priced in the written quote after an on-site visit."
+      },
+      {
+        "t": "h3",
+        "x": "Office renovation costs"
+      },
+      {
+        "t": "p",
+        "x": "Office costs follow the walls and the services behind them. Demising walls between tenants affect fire separations, and the City's CADS form asks for your neighbouring tenants because those requirements depend on their uses. Significant work on exits, public corridors or fire separations in a Part 3 building needs drawings sealed by an architect or engineer."
+      },
+      {
+        "t": "p",
+        "x": "Every new room also needs power, data, lighting and heating and cooling that suit it, and work in an occupied office often moves to evenings and weekends. Your team can move in only once the City issues an interim or final occupancy permit, where one is required, so rent paid before then belongs in the budget too."
+      },
+      {
+        "t": "p",
+        "x": "For the lease side of those dates, see [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg)."
+      },
+      {
+        "t": "h3",
+        "x": "Restaurant renovation costs"
+      },
+      {
+        "t": "p",
+        "x": "Most of the extra requirements sit in the kitchen. Manitoba's food premises guideline requires a public health inspector to review the plans before construction, and every new or renovated food premises to have an approved Type I or Type II hood suited to the menu."
+      },
+      {
+        "t": "p",
+        "x": "The ventilation and fire suppression system is settled with the local permit authority and the inspector, and the health permit waits for the authority's written confirmation. In an existing restaurant with a Type II hood, the guideline warns that a change of owner or menu may mean upgrading the kitchen ventilation."
+      },
+      {
+        "t": "p",
+        "x": "The guideline also calls for properly sized grease traps or interceptors serving the utensil washing sinks, built to the Manitoba Plumbing Code and easy to reach for cleaning, plus smooth, impervious floors coved and sealed 10 cm (4 inches) up the wall and easily cleaned, non-absorbent walls and ceilings in food preparation and dishwashing areas."
+      },
+      {
+        "t": "p",
+        "x": "Licensed premises must also tell the LGCA when major renovations are made."
+      },
+      {
+        "t": "h3",
+        "x": "Retail renovation costs"
+      },
+      {
+        "t": "p",
+        "x": "Retail budgets go where customers look first: the storefront, entrance, signs and lighting. When an existing building is altered and the authority finds it isn't practical for every applicable entrance to comply with the barrier-free rules, Manitoba's amendment to the 2020 National Building Code says “at least one pedestrian entrance shall be barrier-free.”"
+      },
+      {
+        "t": "p",
+        "x": "Signs are their own line item: the City says to get a permit before starting any construction or alteration to any part of a sign, and new internally illuminated signs need a separate electrical sign permit. If the unit was last used for something other than retail, a change of use can add drawings and an occupancy permit."
       },
       {
         "t": "h2",
@@ -8748,11 +11142,11 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Start with a ballpark, then get a written quote based on the actual space. Bridgeland Builders' instant estimate gives a quick first figure, and every project starts with a free on-site visit and a free written quote that sets out the scope, inclusions and exclusions. Taxes are shown on your written quote."
+        "x": "From a written quote based on the actual space. Commercial work isn't priced online: every commercial project with Bridgeland Builders starts with a free on-site visit and a free written quote that sets out the scope, inclusions and exclusions. Taxes are shown on your written quote."
       },
       {
         "t": "p",
-        "x": "**Next step:** Try the [instant renovation estimate](/instant-quote), then [book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, retail stores and clinics across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
+        "x": "**Next step:** [Book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, retail stores and clinics across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
       }
     ],
     "faqsTitle": "Commercial renovation cost questions",
@@ -8775,7 +11169,7 @@ export const BLOG_POSTS = [
       },
       {
         "q": "Who is responsible for asbestos checks before a renovation?",
-        "a": "Where asbestos is suspected, Manitoba's workplace safety rules say the property owner, contractor or employer must make sure the work area is inspected and an asbestos inventory prepared before work begins. Who pays is set by your lease and contract, so tenants should ask the landlord for any existing inventory before signing."
+        "a": "Manitoba's workplace safety regulation puts the duties on the employer and the owner: an inventory of asbestos-containing material by a person competent in identifying it, and notice to Workplace Safety and Health 5 to 10 days before work that may release it. Your lease and contract decide who pays, so ask the landlord for any existing inventory before signing."
       }
     ],
     "answer": "The biggest cost drivers in a commercial renovation are usually behind the walls, not the finishes: mechanical, electrical, plumbing and fire protection changes; code requirements triggered by a change of use; hidden conditions such as asbestos; after-hours or phased work; and scope changes once construction starts. Complete drawings and a contingency keep them in check.",
@@ -8783,7 +11177,7 @@ export const BLOG_POSTS = [
       {
         "label": "City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025",
         "url": "https://www.winnipeg.ca/media/6330",
-        "accessed": "2026-10-13"
+        "accessed": "2026-10-15"
       },
       {
         "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
@@ -8791,14 +11185,39 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
-        "label": "Manitoba Workplace Safety and Health: Asbestos containing material FAQ",
-        "url": "https://www.gov.mb.ca/labour/safety/wsh_faqs_asbestos.html",
-        "accessed": "2026-10-13"
+        "label": "Manitoba Workplace Safety and Health: New asbestos regulations FAQ",
+        "url": "https://gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: Workplace Safety and Health Regulation, amendment, M.R. 108/2025 (Part 37, Asbestos)",
+        "url": "https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en",
+        "accessed": "2026-10-15"
       },
       {
         "label": "Manitoba Health: Guideline for the Design, Construction and Reconstruction of a Food Handling Establishment",
         "url": "https://www.gov.mb.ca/health/publichealth/environmentalhealth/protection/docs/construction.pdf",
-        "accessed": "2026-10-13"
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Commercial sign inspections",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial/sign",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "City of Winnipeg: Information Bulletin 2023-005, Defining Occupancy",
+        "url": "https://www.winnipeg.ca/media/6131",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Liquor, Gaming and Cannabis Authority of Manitoba: How to Apply for a Liquor Service Licence",
+        "url": "https://lgcamb.ca/liquor/liquor-service-licences-2/how-to-apply/",
+        "accessed": "2026-10-15"
       },
       {
         "label": "BDC: Leasehold improvements, the 8 steps to follow",
@@ -8808,7 +11227,7 @@ export const BLOG_POSTS = [
       {
         "label": "Efficiency Manitoba: Business Lighting Program",
         "url": "https://efficiencymb.ca/business/business-lighting/",
-        "accessed": "2026-10-13"
+        "accessed": "2026-10-15"
       }
     ]
   },
@@ -8824,7 +11243,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-07-29",
-    "updated": "2026-10-13",
+    "updated": "2026-10-15",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
     "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
@@ -9012,7 +11431,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "oli",
-        "x": "In an older building, get the asbestos inventory before demolition is scheduled; where asbestos may be present, Manitoba requires one before work begins."
+        "x": "In an older building, get the asbestos inventory before demolition is scheduled. Manitoba requires employers and owners to have asbestos-containing material inventoried, and to notify Workplace Safety and Health 5 to 10 days before work that may release it."
       },
       {
         "t": "oli",
@@ -9032,7 +11451,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. You can also start with the [instant renovation estimate](/instant-quote) or see our [commercial renovation services](/services/commercial-renovations)."
+        "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. Commercial work is priced after that visit, not from an online estimate. You can also see our [commercial renovation services](/services/commercial-renovations)."
       }
     ],
     "faqsTitle": "Questions about renovating a business",
@@ -9086,9 +11505,14 @@ export const BLOG_POSTS = [
         "accessed": "2026-10-13"
       },
       {
-        "label": "Manitoba Workplace Safety and Health: Asbestos containing material FAQ",
-        "url": "https://www.gov.mb.ca/labour/safety/wsh_faqs_asbestos.html",
-        "accessed": "2026-10-13"
+        "label": "Manitoba Workplace Safety and Health: New asbestos regulations FAQ",
+        "url": "https://gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html",
+        "accessed": "2026-10-15"
+      },
+      {
+        "label": "Manitoba Laws: Workplace Safety and Health Regulation, amendment, M.R. 108/2025 (Part 37, Asbestos)",
+        "url": "https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en",
+        "accessed": "2026-10-15"
       },
       {
         "label": "BDC: Leasehold improvements, the 8 steps to follow",
@@ -9546,7 +11970,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our permit guide explains [how the City's permit process works](/blog/winnipeg-renovation-permits)."
+        "x": "We check which kind of wall you have during the on-site visit, and we coordinate the permits and inspections the work needs. Our guides explain [what removing a load-bearing wall involves](/blog/removing-a-load-bearing-wall-winnipeg) and [how the City's permit process works](/blog/winnipeg-renovation-permits)."
       },
       {
         "t": "h2",

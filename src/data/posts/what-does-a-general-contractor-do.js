@@ -344,6 +344,34 @@ export default {
       "titleCard": true
     },
     {
+      "slug": "builders-lien-holdback-manitoba",
+      "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
+      "excerpt": "A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.",
+      "category": "Hiring a Contractor",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1b473aa7",
+          "73253ecf",
+          "4cc70a86"
+        ],
+        "avif": [
+          "ee61434d",
+          "20180f2d",
+          "7a91bd95"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
       "title": "Full vs Partial Renovation: How to Choose for Your Winnipeg Home",
       "excerpt": "A full renovation fixes everything at once; partial upgrades spread the work and the cost over time. The right choice depends on the condition of your house, your plans and how much disruption you can live with. Here is a practical way to decide.",
@@ -366,33 +394,6 @@ export default {
           "66feb4f2",
           "62be2807",
           "1e9a351d"
-        ],
-        "main": 1
-      }
-    },
-    {
-      "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
-      "title": "How to Choose a Renovation Contractor in Winnipeg",
-      "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
-      "category": "Hiring a Contractor",
-      "date": "2026-08-05",
-      "readMinutes": 10,
-      "image": {
-        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "c1d3b9fa",
-          "3b993117",
-          "3dde30a7"
-        ],
-        "avif": [
-          "c03d571e",
-          "8eb20a2f",
-          "504b262f"
         ],
         "main": 1
       }

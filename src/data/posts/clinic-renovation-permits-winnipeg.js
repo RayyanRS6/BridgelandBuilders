@@ -16,7 +16,7 @@ export default {
   ],
   "date": "2026-10-13",
   "updated": "2026-10-15",
-  "readMinutes": 9,
+  "readMinutes": 10,
   "hero": null,
   "heroSrc": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp",
   "heroSrcSet": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-480.3fb04080.webp 480w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-880.6b2a1b51.webp 880w, /images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1320.0e8b8a5a.webp 1320w",
@@ -146,11 +146,23 @@ export default {
     },
     {
       "t": "p",
-      "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard, and Manitoba kept amendments that expand visual signal devices, require handrails on both sides of stairs and ramps, and address how some requirements apply to existing buildings."
+      "x": "Manitoba began enforcing the 2020 national model codes on January 1, 2024. The province notes the 2020 National Building Code substantially updated accessibility requirements and aligned them with the CSA B651 standard."
     },
     {
       "t": "p",
-      "x": "How much of your space must be upgraded is settled in plan review."
+      "x": "For an existing building, Manitoba's own amendments to that code, in the Manitoba Building Code (M.R. 78/2023), set how far a renovation reaches. The Code “applies to the part of an existing building that is altered or repaired”, and “the level of life safety and building performance shall not be decreased.”"
+    },
+    {
+      "t": "p",
+      "x": "If, in the opinion of the authority having jurisdiction, the alteration will affect the level of life safety of parts that are not being altered, those parts “shall be improved to comply”. A change to the major occupancy of a building, or part of it, brings the affected parts under the Code as well."
+    },
+    {
+      "t": "p",
+      "x": "Manitoba's amendments also cover entrances, stairs and alarms. Where an alteration makes it impractical, in the authority's opinion, for every applicable entrance to comply, “at least one pedestrian entrance shall be barrier-free.” Stairways and ramps “shall have handrails on both sides”, and visible signal devices are required in addition to alarm signals “in all buildings.”"
+    },
+    {
+      "t": "p",
+      "x": "How these rules apply to your space is settled with the authority in plan review."
     },
     {
       "t": "p",
@@ -166,7 +178,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits."
+      "x": "An occupancy permit is required for the construction, substantial alteration or change of use of most buildings other than single-family homes, two-family homes and multi-family dwellings without shared exits. Our guide to [occupancy permits and change of use in Winnipeg](/blog/occupancy-permit-change-of-use-winnipeg) covers what to check before you lease a unit."
     },
     {
       "t": "p",
@@ -252,7 +264,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "[Book your free on-site visit](/book-online), read about our [medical and dental office renovations](/services/medical-dental-office-renovations), or get a ballpark first with the [instant renovation estimate](/instant-quote)."
+      "x": "[Book your free on-site visit](/book-online) or read about our [medical and dental office renovations](/services/medical-dental-office-renovations). Clinic renovations are priced in the written quote that follows the visit, not from an online estimate."
     }
   ],
   "faqsTitle": "Clinic renovation permit questions",
@@ -272,6 +284,10 @@ export default {
     {
       "q": "Can we open on an interim occupancy permit?",
       "a": "The City issues both interim and final building occupancy permits, and its occupancy bulletin says you need one or the other before occupying a space. Progress inspections must be completed to the final stage before you can request occupancy, so plan your opening date around finished inspections rather than counting on an interim permit."
+    },
+    {
+      "q": "Does renovating part of our clinic mean the whole building must meet current accessibility rules?",
+      "a": "Not automatically. The Manitoba Building Code applies to the part being altered, and the work must not decrease life safety or building performance. If the authority finds it affects life safety elsewhere, those parts must be improved too. Where not every entrance can practically comply, at least one pedestrian entrance must be barrier-free. Plan review settles the details."
     }
   ],
   "answer": "Most clinic renovations in Winnipeg need a commercial building permit, applied for with the City's Commercial Alteration Design Summary, and many need a building occupancy permit before patients return. Clinics add their own steps: an electrical declaration for patient care areas, provincial approval and a shielding specification for X-ray rooms, and accessible design under the Manitoba Building Code.",
@@ -327,6 +343,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "Manitoba Laws: Manitoba Building Code, M.R. 78/2023",
+      "url": "https://web2.gov.mb.ca/laws/regs/current/078-2023.php?lang=en",
+      "accessed": "2026-10-15"
+    },
+    {
       "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation",
       "url": "https://accessibilitymb.ca/accessibility/act-standards/the-accessibility-standard-for-customer-service.html",
       "accessed": "2026-10-13"
@@ -338,6 +359,34 @@ export default {
     }
   ],
   "related": [
+    {
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
+      "category": "Commercial",
+      "date": "2026-10-15",
+      "readMinutes": 11,
+      "image": {
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
+        ],
+        "avif": [
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
     {
       "slug": "how-to-prepare-your-business-for-a-major-renovation",
       "title": "Commercial Renovation Planning in Winnipeg: A Business Guide",
@@ -388,34 +437,6 @@ export default {
           "0a935fa4",
           "6b028ea6",
           "4c3faba8"
-        ],
-        "main": 1
-      },
-      "titleCard": true
-    },
-    {
-      "slug": "office-fit-up-lease-planning-winnipeg",
-      "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
-      "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
-      "category": "Commercial",
-      "date": "2026-10-13",
-      "readMinutes": 8,
-      "image": {
-        "base": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "09eabf05",
-          "9079ee23",
-          "1977b93b"
-        ],
-        "avif": [
-          "d81177bd",
-          "432a5aed",
-          "b33e68fe"
         ],
         "main": 1
       },

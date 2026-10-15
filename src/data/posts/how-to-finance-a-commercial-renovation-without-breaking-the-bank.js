@@ -15,8 +15,8 @@ export default {
     "Money & Rebates"
   ],
   "date": "2026-08-11",
-  "updated": "2026-10-13",
-  "readMinutes": 7,
+  "updated": "2026-10-15",
+  "readMinutes": 8,
   "hero": "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png",
   "heroSrc": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
   "heroSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
@@ -186,7 +186,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** Lenders and landlords both want a defined scope and price. [Book a free on-site visit](/book-online) for a free written quote you can take to them, or start with the [instant renovation estimate](/instant-quote) for a ballpark. Learn about our [office renovations](/services/office-renovations) and other [commercial renovation services](/services/commercial-renovations), and weigh the payback with our guide to [commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)."
+      "x": "**Next step:** Lenders and landlords want a defined scope and price. [Book a free on-site visit](/book-online) for a free written quote you can take to them; commercial work is priced after a site visit, not from an online estimate. Learn about our [office renovations](/services/office-renovations) and other [commercial renovation services](/services/commercial-renovations), and weigh the payback with our guide to [commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)."
     }
   ],
   "faqsTitle": "Commercial renovation financing questions",
@@ -197,7 +197,15 @@ export default {
     },
     {
       "q": "Are there government grants for commercial renovations in Manitoba?",
-      "a": "Program availability changes, so check before you budget. For energy upgrades, Efficiency Manitoba offers business incentives for lighting, building envelope, HVAC and other work, and some programs require approval before you buy anything. For borrowing, the federal Canada Small Business Financing Program helps eligible small businesses get term loans through their own lender."
+      "a": "Program availability changes, so check before you budget. Downtown Winnipeg businesses can look at the Storefront Success grant, below. Efficiency Manitoba offers business incentives for lighting, building envelope, HVAC and other work, and some programs require approval before you buy anything. The federal Canada Small Business Financing Program helps eligible small businesses get term loans through their own lender."
+    },
+    {
+      "q": "What is the Storefront Success grant in downtown Winnipeg?",
+      "a": "A grant the Manitoba government announced on August 11, 2026 with the City of Winnipeg and CentreVenture, with $1.4 million in funding; the Province's release says it “offers up to $200,000”. Small and medium-sized retailers, restaurants, cafés, specialty retailers and select non-profits in the designated downtown program area can apply for storefront, façade, lighting, signage, entrance and accessibility work."
+    },
+    {
+      "q": "When can I apply for Storefront Success?",
+      "a": "The remaining deadlines are December 31, 2026 and March 31, 2027, and applications are accepted only until the funding is fully allocated, so it may run out sooner. The release says businesses can review eligibility requirements and apply at centreventure.com; confirm there that your address is in the program area. Bridgeland Builders has no role in the program."
     },
     {
       "q": "What is an SBA loan, and can I get one in Canada?",
@@ -248,6 +256,11 @@ export default {
       "label": "Efficiency Manitoba: Business programs",
       "url": "https://efficiencymb.ca/business/",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Province of Manitoba news release, August 11, 2026: Manitoba Government and City of Winnipeg Invest $1.4 Million to Support Downtown Businesses (Storefront Success)",
+      "url": "https://news.gov.mb.ca/news/index.html?item=74757&posted=2026-08-11",
+      "accessed": "2026-10-15"
     }
   ],
   "related": [
@@ -284,7 +297,7 @@ export default {
       "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
       "category": "Commercial",
       "date": "2026-09-03",
-      "readMinutes": 7,
+      "readMinutes": 8,
       "image": {
         "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
         "widths": [

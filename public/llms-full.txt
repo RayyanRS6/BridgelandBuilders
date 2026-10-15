@@ -307,7 +307,7 @@ A: Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit u
 A: The schedule comes with your written quote, and we build to it. If something outside our control moves, like a permit review, a supplier delay or an inspection date, you hear about it in that week’s update along with what we’re doing about it, rather than at the end of the job.
 
 **Q: Which areas do you serve for commercial work?**
-A: We work in Winnipeg and nearby communities within about an hour of the city, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach. Outside Winnipeg, permits and inspections go through the local municipality or planning district, and we coordinate with them the same way.
+A: We work in Winnipeg and nearby communities within about an hour of the city, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach. Outside Winnipeg, the Province says building, plumbing and occupancy permits are issued by one of three authorities: the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. We coordinate with whichever one applies. The Province also requires an occupancy permit before a renovated building is occupied where a building permit was issued; one- and two-family dwellings are the exception.
 
 **Q: How quickly will you get back to us?**
 A: Within one business day. Our office hours are Monday to Friday, 8:30 a.m. to 4:30 p.m., and you can reach us at 431-866-5644 or info@bridgelandbuilders.com. From there we book a free on-site visit, walk the space with you, and follow up with a written quote.
@@ -366,6 +366,9 @@ https://bridgelandbuilders.com/services/restaurant-renovations
 **Q: Can you renovate while we stay open?**
 A: Often, yes. We work after close, on your closed days and on weekends, and phase the job so part of the room keeps serving. In Winnipeg, loud work within 150 m of a home must stop at 9 p.m., so noisy tasks go into daytime closures. Kitchen work that touches plumbing or ventilation may need a short full closure, and we’ll say when.
 
+**Q: How long does a restaurant renovation take?**
+A: It depends on the scope and the approvals. A dining-room refresh moves faster than kitchen work, which starts with the public health plan review before construction and then waits on the City’s building permit, the hood and fire suppression sign-off, equipment deliveries and inspections. The occupancy permit, where one is needed, comes before reopening, and licensed premises should check the change with the LGCA. You get a schedule with your written quote, built backwards from your opening date, and an update every week.
+
 **Q: Do restaurant plans need health approval in Manitoba?**
 A: Yes. Manitoba’s guideline requires the owner to submit a registration form and a scaled plan showing equipment, plumbing fixtures and finishes to the local public health inspector for approval before construction, renovation or conversion begins. The health permit is issued only after an inspection once construction is complete, so the schedule allows for both steps.
 
@@ -385,13 +388,16 @@ A: It can. The Liquor, Gaming and Cannabis Authority of Manitoba says it is the 
 A: Yes. We build to supplied drawings and specifications for dining rooms, bars and kitchens, and walk the space against them before work starts. If a detail won’t work on site, such as a drain that can’t reach the planned sink location, we raise it with you and your designer before it becomes a costly change.
 
 **Q: Do you work outside Winnipeg?**
-A: Yes, within about an hour of the city, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach. The building permit then comes from the local municipality or planning district, and the health plan review still goes to your area public health inspector before construction starts.
+A: Yes, within about an hour of the city, including Headingley, East St. Paul, West St. Paul, Oak Bluff, Selkirk and Steinbach. Building, plumbing and occupancy permits then come from the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. The health plan review still goes to your area public health inspector before construction starts.
 
 ### Medical & dental offices
 https://bridgelandbuilders.com/services/medical-dental-office-renovations
 
 **Q: Can our clinic stay open during the renovation?**
 A: Often, yes. We phase the work so some operatories or exam rooms keep seeing patients while others are rebuilt, keep the work area closed off, and move the loudest tasks to evenings and weekends where the City’s noise rules allow. Some steps, like tying in new plumbing, may need a short closure, and we’ll name those in the schedule.
+
+**Q: How long does a clinic renovation take?**
+A: It depends on the scope and the approvals. A refresh of finishes moves faster than new operatories or exam rooms, which go through the City’s plan review with an electrical declaration for patient care areas. An X-ray room also waits on the Province’s prior approval and the shielding specification. Phasing around patients and the occupancy permit before patients return set the pace too. You get a schedule with your written quote, built backwards from your reopening date, and an update every week.
 
 **Q: Do you build dental operatories and sterilization rooms?**
 A: Yes. Dental office construction covers the walls, cabinetry and finishes as well as the plumbing, power and data rough-ins each chair needs. We build to your equipment supplier’s installation drawings and your designer’s layout, so ask your supplier for those early: they decide where every rough-in goes.
@@ -511,7 +517,7 @@ A: Pick a product rated for below-grade concrete, such as luxury vinyl plank or 
 A: It depends on the area, how much old flooring has to come up, how much subfloor repair and levelling the rooms need, and whether the product has to acclimatize first. Removal and prep can take as long as laying the new floor. Ask us at the on-site visit about the schedule for your rooms.
 
 **Q: Should I worry about asbestos in old floor tiles?**
-A: If the tiles or adhesive went down before 1990, test before removing them. Health Canada lists older floor tiles among materials that may contain asbestos, and the risk comes from disturbing them. Manitoba’s workplace rules treat suspect material as asbestos until testing shows otherwise, and asbestos has to be removed before other work disturbs it.
+A: If the tiles or adhesive went down before 1990, test before removing them. Health Canada lists older floor tiles among materials that may contain asbestos, and the risk comes from disturbing them. Manitoba’s workplace rules treat suspect material as asbestos until tested, and before a renovation they require measures that keep it from being released.
 
 **Q: How much does flooring installation cost?**
 A: Price depends on the area, the flooring you choose, how much old flooring has to come up, and how much subfloor repair or levelling the rooms need. The on-site visit and written quote are free, and the quote separates removal, preparation and installation so you can compare it with others.
@@ -526,7 +532,7 @@ A: No. We do interior and selective demolition ahead of a renovation. In Winnipe
 A: Yes, as part of a renovation. A non-structural partition can come out with the rest of the demolition. A load-bearing wall needs a beam and a building permit, so it is planned with the renovation rather than treated as stand-alone demolition. We tell you at the on-site visit which kind of wall you have.
 
 **Q: What happens if asbestos is found?**
-A: Work in that area stops until it is dealt with. Manitoba’s rules require asbestos that will be disturbed to be removed before demolition or alteration starts, and that removal is specialist work. Testing older materials before the strip-out is scheduled avoids a stop in the middle of the job.
+A: Work in that area stops until it is dealt with. Before an alteration or renovation, Manitoba’s rules require measures that keep asbestos-containing material in the work area from being released, and that is specialist work. Testing older materials before the strip-out is scheduled avoids a stop in the middle of the job.
 
 **Q: How do you keep dust out of the rest of the building?**
 A: The work area is sealed off with plastic barriers, floors and paths to the door are covered, and debris goes out by the shortest route. In occupied homes and businesses that stay open, the messiest work is planned for the times that disturb you least.
@@ -611,6 +617,30 @@ A: Book a free on-site visit, or call 431-866-5644, Monday to Friday from 8:30 t
 
 ## Quick answers
 
+### Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules
+https://bridgelandbuilders.com/blog/asbestos-testing-before-renovating-manitoba
+Health Canada says asbestos was mainly used before 1990 and advises a professional test before renovating. Manitoba Workplace Safety and Health says it was used in homes built or renovated before 1990. Under rules changed in December 2025, an employer or owner must notify the Province 5 to 10 days before work that may release asbestos-containing material.
+
+### Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor
+https://bridgelandbuilders.com/blog/builders-lien-holdback-manitoba
+Manitoba's Builders' Liens Act requires whoever pays for construction work to hold back 7.5% of each payment and keep it for at least 60 days after substantial performance is certified, or the work is completed or abandoned, whichever comes first. Contractors, subcontractors and suppliers generally have 60 days to register a lien, and claims under $300 create no lien.
+
+### Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty
+https://bridgelandbuilders.com/blog/check-permit-history-winnipeg-house
+Start with the City of Winnipeg’s free permit search by address, which lists building and trade permits issued after January 1, 2000 and development permits after November 14, 2022. For open permits, orders and violations, a Centralized Property File Search needs the registered owner’s signed authorization. Unpermitted work in an owner’s primary residence can go through Permit Amnesty.
+
+### Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease
+https://bridgelandbuilders.com/blog/occupancy-permit-change-of-use-winnipeg
+A Winnipeg commercial space needs a building occupancy permit after construction, a substantial alteration or a change of use, and you need an interim or final permit before occupying. Since April 4, 2022, a new tenant alone doesn't need one if the use and unit size stay the same, occupant load doesn't rise and no permit-triggering work is planned.
+
+### Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams
+https://bridgelandbuilders.com/blog/removing-a-load-bearing-wall-winnipeg
+Removing a load-bearing wall in Winnipeg is structural work: expect a building permit with structural drawings, and engineered drawings if the new beam is LVL, glulam or steel, per the City’s alterations permit form. Where a structural element goes beyond Part 9 of the Manitoba Building Code, the City requires a sealed drawing from a professional engineer registered in Manitoba.
+
+### Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg
+https://bridgelandbuilders.com/blog/window-condensation-winnipeg-winter
+At −30°C outside and 21°C inside, Natural Resources Canada's table shows a standard double-glazed window stays free of condensation up to 25% indoor relative humidity, and a triple-glazed low-E window up to 60%. Frost or water on the inside glass usually means the air is too humid for that window. Moisture inside a sealed unit means a failed seal.
+
 ### How Much Does a Home Renovation Cost in Canada?
 https://bridgelandbuilders.com/blog/home-renovation-cost-canada
 There’s no current official average for what a home renovation costs in Canada. Statistics Canada tracks how prices change instead, with price indexes for renovations and for new buildings; new residential building prices rose 2.3% in the year to the second quarter of 2026. In Winnipeg, our instant estimator starts bathrooms at $16,000, basements at $25,000 and kitchens at $40,000.
@@ -661,7 +691,7 @@ Yes, you can claim Efficiency Manitoba's Home Insulation Rebate during a renovat
 
 ### Home Renovation Grants and Tax Credits in Manitoba
 https://bridgelandbuilders.com/blog/manitoba-renovation-tax-credits-rebates
-Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates for insulation, windows and doors, Manitoba Hydro's on-bill Home Energy Efficiency Loan, and CMHC-insured refinancing to build a suite. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.
+Manitoba homeowners can still use two federal tax credits, the Multigenerational Home Renovation and Home Accessibility credits, Efficiency Manitoba rebates and its free upgrades for income-qualified homes, Manitoba Hydro's on-bill loan, CMHC-insured suite refinancing and the Province's seniors home-adaptation grant. The Greener Homes grant and loan and the City of Winnipeg's flood-protection subsidy are closed.
 
 ### Office Fit-Up in Winnipeg: Planning Around Your Lease
 https://bridgelandbuilders.com/blog/office-fit-up-lease-planning-winnipeg
@@ -744,6 +774,12 @@ https://bridgelandbuilders.com/blog/essential-design-strategies-for-small-kitche
 Good small kitchen renovation ideas start with the layout, not the finishes. Choose the layout your room can actually hold, whether galley, L-shaped, U-shaped or peninsula, then add storage that reaches the ceiling, lighting under the upper cabinets and appliances sized for the space. Spend first on what changes how the kitchen works.
 
 ## Articles
+- [Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules](https://bridgelandbuilders.com/blog/asbestos-testing-before-renovating-manitoba): Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.
+- [Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor](https://bridgelandbuilders.com/blog/builders-lien-holdback-manitoba): A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.
+- [Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty](https://bridgelandbuilders.com/blog/check-permit-history-winnipeg-house): How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.
+- [Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease](https://bridgelandbuilders.com/blog/occupancy-permit-change-of-use-winnipeg): A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.
+- [Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams](https://bridgelandbuilders.com/blog/removing-a-load-bearing-wall-winnipeg): What the City of Winnipeg’s permit form asks for when a load-bearing wall is opened, moved or removed, why an LVL beam needs an engineer’s sealed drawing, and what happens to the wiring and plumbing inside the wall.
+- [Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg](https://bridgelandbuilders.com/blog/window-condensation-winnipeg-winter): Frost and water on the inside of your windows are usually a humidity problem first. Using Natural Resources Canada's humidity table and Health Canada's moisture advice, this guide explains how humid a Winnipeg house can be in a cold snap, what fog between the panes means and when replacement makes sense.
 - [How Much Does a Home Renovation Cost in Canada?](https://bridgelandbuilders.com/blog/home-renovation-cost-canada): Why there’s no reliable national average for what a renovation costs, what Statistics Canada’s construction price data does show, why per-square-foot figures mislead, and how to get a real number for your project.
 - [Basement Development Permits in Winnipeg: How to Apply](https://bridgelandbuilders.com/blog/basement-development-permits-winnipeg): What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.
 - [Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits](https://bridgelandbuilders.com/blog/basement-flood-protection-winnipeg): Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.

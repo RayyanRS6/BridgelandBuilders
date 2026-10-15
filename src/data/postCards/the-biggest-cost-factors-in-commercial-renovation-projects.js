@@ -9,7 +9,7 @@ export default {
   "excerpt": "The parts of a commercial renovation that move the price most, why older buildings and changes of use cost more, and the steps that keep a project from running over budget.",
   "category": "Commercial",
   "date": "2026-08-04",
-  "readMinutes": 7,
+  "readMinutes": 9,
   "image": {
     "base": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest",
     "widths": [

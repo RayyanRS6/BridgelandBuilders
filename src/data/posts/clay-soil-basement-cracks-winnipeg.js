@@ -247,7 +247,7 @@ export default {
       "excerpt": "Sewer backup, groundwater and surface water reach a basement in different ways. Here’s how Winnipeg homes are protected, and what to sort out before you finish one.",
       "category": "Basements & Suites",
       "date": "2026-10-13",
-      "readMinutes": 7,
+      "readMinutes": 9,
       "image": {
         "base": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding",
         "widths": [
@@ -298,28 +298,28 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "basement-development-permits-winnipeg",
-      "title": "Basement Development Permits in Winnipeg: How to Apply",
-      "excerpt": "What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.",
+      "slug": "check-permit-history-winnipeg-house",
+      "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+      "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
       "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 9,
+      "date": "2026-10-15",
+      "readMinutes": 11,
       "image": {
-        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+        "base": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "86f7cdfe",
-          "d1925dff",
-          "eb1b2d54"
+          "dfc78763",
+          "1189cd90",
+          "d00db2e5"
         ],
         "avif": [
-          "3e79a34c",
-          "4c88fdfd",
-          "d2a97ce0"
+          "e09156f1",
+          "a5b2e756",
+          "574fa93a"
         ],
         "main": 1
       },

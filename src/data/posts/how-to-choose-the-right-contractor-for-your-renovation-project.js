@@ -176,11 +176,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment."
-    },
-    {
-      "t": "p",
-      "x": "The Act currently in force keeps that holdback for at least 60 days after substantial performance is certified or the work is completed, whichever comes first; some older Province pages still say 40 days, so confirm the period before your final payment."
+      "x": "With each progress payment, the Consumer Protection Office suggests asking the contractor to sign a statutory declaration that workers and suppliers have been paid to date. Manitoba's Builders' Liens Act also requires the person paying to hold back 7.5% of each payment; our [guide to the builders' lien holdback](/blog/builders-lien-holdback-manitoba) explains how long to keep it."
     },
     {
       "t": "h2",
@@ -308,6 +304,14 @@ export default {
     {
       "q": "Can I cancel a renovation contract after signing?",
       "a": "It depends on the contract and how it was sold. If you signed with a door-to-door or other direct seller, Manitoba gives you 10 days, not counting the day you sign, to cancel without giving a reason. Otherwise, the cancellation terms in your contract apply, so read them before signing and call the Consumer Protection Office if you're unsure."
+    },
+    {
+      "q": "Is there a mandatory warranty for renovations in Manitoba?",
+      "a": "Manitoba has no mandatory warranty program for renovations; a 2013 new-home warranty law was never brought into force and was repealed in 2021. Get the warranty, what it covers and for how long, in writing."
+    },
+    {
+      "q": "What can I do if a contractor doesn't finish the job?",
+      "a": "Keep the contract, invoices and correspondence. You can file a complaint with Manitoba's Consumer Protection Office, which asks for a description of the problem and copies of those documents. Since January 1, 2025, Small Claims at the Court of King's Bench takes claims up to $20,000. This is general information, not legal advice: see a lawyer before withholding payment."
     }
   ],
   "answer": "Verify before you compare prices: a current WCB Manitoba clearance, a liability insurance certificate, a registered business name, recent reviews and references, and a written contract that names who pulls permits, sets the deposit and payment schedule, and puts every change in writing. Then compare detailed written quotes for the same scope.",
@@ -345,7 +349,7 @@ export default {
     {
       "label": "The Builders' Liens Act, C.C.S.M. c. B91 (s. 24, holdback)",
       "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
-      "accessed": "2026-10-13"
+      "accessed": "2026-10-15"
     },
     {
       "label": "City of Winnipeg: Home improvement projects (permits)",
@@ -371,6 +375,26 @@ export default {
       "label": "City of Winnipeg: List of licensed contractors",
       "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Manitoba Consumer Protection Office: How to file a complaint",
+      "url": "https://www.gov.mb.ca/consumerinfo/file-complaint.html",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "Court of King's Bench of Manitoba: Notice and practice direction, small claims limit increase (December 9, 2024)",
+      "url": "https://www.manitobacourts.mb.ca/site/assets/files/2044/small_claims_limit_increase_and_limit_on_filing_material_2024_dec_9.pdf",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "S.M. 2021, c. 30, s. 18: The New Home Warranty Act (unproclaimed) repealed",
+      "url": "https://web2.gov.mb.ca/laws/statutes/2021/c03021e.php",
+      "accessed": "2026-10-15"
+    },
+    {
+      "label": "The New Home Warranty Act, S.M. 2013, c. 23 (never proclaimed)",
+      "url": "https://web2.gov.mb.ca/laws/statutes/2013/c02313e.php",
+      "accessed": "2026-10-15"
     }
   ],
   "related": [
@@ -380,7 +404,7 @@ export default {
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
       "category": "Permits & Planning",
       "date": "2026-10-13",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "image": {
         "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
         "widths": [
