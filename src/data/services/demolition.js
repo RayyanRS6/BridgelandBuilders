@@ -8,7 +8,9 @@
 // No intro, gallery or testimonial: there are no real job photos or reviews
 // for this service yet, and stock photos are never shown as our work.
 // Every rule in `local` and `faqs` was checked against the page listed in
-// local.sources on 2026-10-13. Owner sign-off (ownerSignoff) is still to be added.
+// local.sources on 2026-10-13. The "Notice for Asbestos Work" item was updated on
+// 2026-10-15 to M.R. 108/2025 s. 37.9(2)-(3) (5 to 10 days' notice, serial number)
+// and the Province's new-asbestos-regulations FAQ. Owner sign-off (ownerSignoff) is still to be added.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME } from '../facts.js';
 
@@ -72,13 +74,15 @@ export default {
       { title: 'Asbestos Comes First', text: 'Under Manitoba’s workplace safety rules, where asbestos is suspected, a competent person inspects the area, and asbestos that will be disturbed is removed before demolition starts.' },
       { title: 'Buildings From Before 1990', text: 'The Province says asbestos was used in buildings built or renovated before 1990. Health Canada lists tiles, plaster, drywall and insulation among materials that may contain it.' },
       { title: 'Lead Paint', text: 'Health Canada says [homes built before 1960](/blog/renovating-a-character-home-in-winnipeg) probably contain lead-based paint, and advises against sanders, heat guns and blowlamps on it.' },
-      { title: 'Notice for Asbestos Work', text: 'Work that may release asbestos fibres has to be reported to Manitoba Workplace Safety and Health before it starts.' },
+      { title: 'Notice for Asbestos Work', text: 'The employer or the owner must notify Manitoba Workplace Safety and Health 5 to 10 days before work that may release asbestos-containing material, and an employer can’t start until the work has a serial number. Our guide covers [asbestos testing before you renovate](/blog/asbestos-testing-before-renovating-manitoba).' },
     ],
     sources: [
       { label: 'City of Winnipeg: demolition contractor information', url: 'https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information', accessed: ACCESSED },
       { label: 'City of Winnipeg: home renovations', url: 'https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/home-renovations', accessed: ACCESSED },
       { label: 'City of Winnipeg: commercial building inspections', url: 'https://www.winnipeg.ca/building-development/building-renovating/inspections/commercial/building', accessed: ACCESSED },
       { label: 'Manitoba Workplace Safety and Health: asbestos FAQs', url: 'https://www.gov.mb.ca/labour/safety/faq/asbestos.html', accessed: ACCESSED },
+      { label: 'Manitoba Workplace Safety and Health: new asbestos regulations FAQ', url: 'https://gov.mb.ca/labour/safety/faq/new-asbestos-regulations.html', accessed: '2026-10-15' },
+      { label: 'Manitoba Laws: Workplace Safety and Health Regulation, amendment, M.R. 108/2025 (s. 37.9, notice before asbestos work)', url: 'https://web2.gov.mb.ca/laws/regs/annual/2025/108.php?lang=en', accessed: '2026-10-15' },
       { label: 'Health Canada: health risks of asbestos', url: 'https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html', accessed: ACCESSED },
       { label: 'Health Canada: lead-based paint', url: 'https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html', accessed: ACCESSED },
     ],

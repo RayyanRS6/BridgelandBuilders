@@ -6,6 +6,7 @@
   "metaDescription": "Efficiency Manitoba's insulation rebate needs approval before drywall comes down. Rates by area, the steps, and which programs are open or closed in 2026.",
   "excerpt": "Planning to finish a basement, open up walls or re-side the house? Efficiency Manitoba's Home Insulation Rebate can help with the insulation, but only if the paperwork happens before the demolition does.",
   "date": "2026-10-13",
+  "updated": "2026-10-15",
   "reviewBy": "2027-01-15",
   "cats": [
     "Money & Rebates"
@@ -30,6 +31,11 @@
       "label": "Efficiency Manitoba: EnerGuide Home Evaluation Rebate",
       "url": "https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "Efficiency Manitoba: Energy Efficiency Assistance Program",
+      "url": "https://efficiencymb.ca/my-home/energy-efficiency-assistance-program/",
+      "accessed": "2026-10-15"
     },
     {
       "label": "Manitoba Hydro: Home Energy Efficiency Loan",
@@ -269,6 +275,12 @@
           "On-bill financing; approval before work starts"
         ],
         [
+          "Energy Efficiency Assistance Program",
+          "Efficiency Manitoba",
+          "Current offer (checked October 15, 2026)",
+          "Free insulation for income-qualified households, installed by Efficiency Manitoba's registered program contractors"
+        ],
+        [
           "Canada Greener Homes Grant",
           "Natural Resources Canada",
           "Closed",
@@ -345,7 +357,7 @@
     },
     {
       "t": "p",
-      "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For a first range, try the [instant estimate](/instant-quote)."
+      "x": "We look at the areas you want insulated, and your free written quote spells out the insulation scope so the rebate application can be lined up before anything is removed. For kitchens, bathrooms and basements, try the [instant estimate](/instant-quote) for a first range; for everything else, the on-site visit comes first."
     }
   ]
 }

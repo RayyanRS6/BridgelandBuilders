@@ -11,7 +11,10 @@
 // the owner 2026-10-13); add new ones only from real clients, with consent.
 //
 // Every rule in `local` was checked against the official page in its sources
-// list on 2026-10-13. Re-check them before changing the wording.
+// list on 2026-10-13. Re-check them before changing the wording. The
+// outside-Winnipeg permit authorities (intro and FAQ) were checked against the
+// Province's ITS permits page on 2026-10-15; name no community's Part 3
+// authority until the Province's Part 3/Part 9 community list is read.
 
 import { EXPERIENCE_YEARS, OFFICE_HOURS_TEXT, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
 import { NEARBY_AREAS_TEXT } from '../areas.js';
@@ -44,7 +47,7 @@ export default {
       'A commercial renovation rebuilds a working space, such as an office, store, restaurant, hotel or clinic, around a lease, an opening date and the hours you need to stay open. It usually covers [demolition](/services/demolition), new walls and ceilings, electrical and mechanical changes, washrooms, finishes, a City building permit and the inspections that follow.',
       'A commercial remodel runs on a different clock than a house. There’s a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut. So we build the plan backwards from your date and tell you honestly at [the site visit](/our-process) whether it’s realistic.',
       'Where it helps, we schedule work in the evenings and on weekends so you can keep trading, and we phase the job so only part of the space is closed at a time. You get a progress update every week, so you’re never chasing us for news.',
-      `We work across Winnipeg and nearby communities, including ${NEARBY_AREAS_TEXT}, and we coordinate permits and inspections with the City of Winnipeg or the local municipality.`,
+      `We work across Winnipeg and nearby communities, including ${NEARBY_AREAS_TEXT}, and we coordinate permits and inspections with the City of Winnipeg or, outside the city, the municipality, planning district or provincial office that issues them.`,
     ],
     checklist: ['Offices & Workspaces', 'Retail & Showrooms', 'Restaurants, Cafés & Hotels', 'Medical & Dental Clinics'],
   },
@@ -98,7 +101,7 @@ export default {
     { q: 'Can you work with our architect or designer?', a: 'Yes. We build to supplied drawings and specifications, and we walk the space against them before work starts. If something on the drawings won’t work on site, such as a duct that clashes with a beam, we raise it with you and your designer before it turns into a costly change.' },
     { q: 'Can you take on work for property managers?', a: 'Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners. Each job starts with a free site visit and a written quote, and the weekly progress update gives you something to pass on to owners and tenants.' },
     { q: 'How firm is the schedule?', a: 'The schedule comes with your written quote, and we build to it. If something outside our control moves, like a permit review, a supplier delay or an inspection date, you hear about it in that week’s update along with what we’re doing about it, rather than at the end of the job.' },
-    { q: 'Which areas do you serve for commercial work?', a: `We work in Winnipeg and nearby communities within about an hour of the city, including ${NEARBY_AREAS_TEXT}. Outside Winnipeg, permits and inspections go through the local municipality or planning district, and we coordinate with them the same way.` },
+    { q: 'Which areas do you serve for commercial work?', a: `We work in Winnipeg and nearby communities within about an hour of the city, including ${NEARBY_AREAS_TEXT}.\n\nOutside Winnipeg, the Province says building, plumbing and occupancy permits are issued by one of three authorities: the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. We coordinate with whichever one applies.\n\nThe Province also requires an occupancy permit before a renovated building is occupied where a building permit was issued; one- and two-family dwellings are the exception.` },
     { q: 'How quickly will you get back to us?', a: `Within ${REPLY_TIME}. Our office hours are ${OFFICE_HOURS_TEXT}, and you can reach us at ${SITE_PHONE} or ${SITE_EMAIL}. From there we book a free on-site visit, walk the space with you, and follow up with a written quote.` },
   ],
 
@@ -153,7 +156,7 @@ export default {
       { title: 'Building Permit & CADS', text: 'Commercial alteration and change-of-use applications go in with the City’s Commercial Alteration Design Summary (CADS). The City says incomplete applications result in delays, so the details are checked before it’s filed.' },
       { title: 'Architects & Engineers', text: 'The City’s CADS form says drawings must be sealed by an architect or engineer for any change to a building’s structural systems, and for significant changes to fire alarms, sprinklers, exits or public corridors in larger (Part 3) buildings. We build to their sealed drawings.' },
       { title: 'Change of Use', text: '[Turning a store into a restaurant](/blog/restaurant-renovation-permits-winnipeg) is a change of use: it needs a building permit even with little construction, and a change of major occupancy may need an architect or engineer. Confirm the new use is allowed under zoning before you pay for plans.' },
-      { title: 'Occupancy Permit', text: 'Substantial alterations and changes of use need an occupancy permit before the space is used. A new tenant moving into a space with a valid occupancy permit and no alterations generally doesn’t need a new one.' },
+      { title: 'Occupancy Permit', text: 'Substantial alterations and [changes of use need an occupancy permit](/blog/occupancy-permit-change-of-use-winnipeg) before the space is used. A new tenant moving into a space with a valid occupancy permit and no alterations generally doesn’t need a new one.' },
       { title: 'Accessibility', text: 'Manitoba adopted the 2020 National Building Code on January 1, 2024, with updated accessibility requirements aligned with CSA B651. Accessible entrances, washrooms and clearances are planned at the layout stage, not added after.' },
       { title: 'Noise Rules for After-Hours Work', text: 'In Winnipeg, loud work within 150 m of a home is allowed 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends and holidays, so the loudest tasks are scheduled inside those hours.' },
     ],
@@ -164,6 +167,7 @@ export default {
       { label: 'City of Winnipeg: Occupancy permits', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects/occupancy-permits', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Construction in your neighbourhood', url: 'https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood', accessed: '2026-10-13' },
       { label: 'Province of Manitoba: 2020 construction codes adoption', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html', accessed: '2026-10-13' },
+      { label: 'Province of Manitoba: Building permits and inspections (Inspection and Technical Services)', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html', accessed: '2026-10-15' },
       { label: 'Province of Manitoba: Manitoba Building Code updates, accessibility', url: 'https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf', accessed: '2026-10-13' },
     ],
   },
