@@ -10,7 +10,8 @@
 // drawings or engineering, no pricing method or numbers stated as ours, no
 // licence/insurance/WCB/warranty claims, no job counts or named past projects.
 // Every rule in `local` and the FAQs was checked against the official page in
-// its sources list on 2026-10-13.
+// its sources list on 2026-10-13; the "Outside Winnipeg" authorities against
+// the Province's ITS permits page on 2026-10-15.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
 import { NEARBY_AREAS_TEXT_OR } from '../areas.js';
@@ -87,7 +88,7 @@ export default {
     { q: 'Do I need a general contractor, or can I hire the trades myself?', a: 'You can hire trades yourself, but then you take on the scheduling, permits, inspections and the gaps between trades, such as who patches the drywall the electrician opened up. A general contractor takes that coordination on and prices the whole job in one written quote. It usually makes sense once more than two or three trades are involved.' },
     { q: 'Can you build from our architect’s or designer’s drawings?', a: 'Yes. We build to supplied drawings and specifications for residential and commercial projects. Before work starts we walk the site against the drawings, ask questions, and raise anything that won’t work as drawn, so it’s resolved with your architect or designer before it becomes a change order or holds up an inspection.' },
     { q: 'Do you handle permits and inspections?', a: 'Yes. We coordinate building permits and inspections with the City of Winnipeg or your local municipality and book inspections before work is closed up. On commercial projects in Winnipeg, electrical, mechanical, plumbing and demolition permits are applied for by City-licensed contractors, so those trades are lined up as part of the plan.' },
-    { q: 'What is the holdback on a construction contract in Manitoba?', a: 'Under Manitoba’s Builders’ Liens Act, the person paying for the work must hold back 7.5% of each payment and keep it for at least 60 days after substantial performance is certified, the work is completed or it is abandoned. Ask your lawyer how it applies to your contract, and raise it with us when we go through your quote.' },
+    { q: 'What is the holdback on a construction contract in Manitoba?', a: 'Under Manitoba’s Builders’ Liens Act, the person paying for the work must hold back 7.5% of each payment and keep it for at least 60 days after substantial performance is certified, the work is completed or it is abandoned.\n\nAsk your lawyer how it applies to your contract, and raise it with us when we go through your quote.', more: { label: 'Builders’ liens and the holdback in Manitoba', to: '/blog/builders-lien-holdback-manitoba' } },
     { q: 'Do you take on residential and commercial projects?', a: 'Both. On the residential side we manage kitchens, bathrooms, basements, whole-home renovations and additions; on the commercial side, offices, stores, restaurants, hotels and clinics. Commercial work can be scheduled after hours and on weekends, and every project, of either kind, starts with a free on-site visit and a written quote.' },
     { q: 'How do you keep clients updated?', a: `With a progress update every week: what was done, what’s next, and anything that has changed, such as a delivery date or an inspection result. If something moves that affects your schedule, you hear about it that week, not at the end. You can also reach us at ${SITE_PHONE} or ${SITE_EMAIL}.` },
   ],
@@ -128,13 +129,17 @@ export default {
       { title: 'Professional Drawings', text: 'The City’s CADS form says commercial drawings must be sealed by an architect or engineer for any structural change, and for significant changes to fire safety systems, exits or public corridors in Part 3 buildings. We build to their sealed drawings.' },
       { title: 'Inspections', text: 'Once a permit is issued, the City carries out mandatory audit inspections to check the work follows codes, by-laws and the accepted plans, so inspections are booked before walls and ceilings close.' },
       { title: 'Holdback', text: 'Manitoba’s Builders’ Liens Act requires the person paying for the work to hold back 7.5% of each payment for at least 60 days after substantial performance, completion or abandonment.' },
-      { title: 'Outside Winnipeg', text: `In ${NEARBY_AREAS_TEXT_OR}, permits and inspections go through the local municipality or planning district instead.` },
+      { title: 'Outside Winnipeg', text: [
+        `In ${NEARBY_AREAS_TEXT_OR}, building, plumbing and occupancy permits come from the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code.`,
+        'Occupancy permits aren’t required for one- and two-family dwellings.',
+      ] },
     ],
     sources: [
       { label: 'City of Winnipeg: Commercial projects', url: 'https://www.winnipeg.ca/building-development/building-renovating/commercial-projects', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Commercial Alteration Design Summary (CADS) application, October 2025', url: 'https://www.winnipeg.ca/media/6330', accessed: '2026-10-13' },
       { label: 'City of Winnipeg: Permits Online', url: 'https://www.winnipeg.ca/building-development/permits-applications/permits-online', accessed: '2026-10-13' },
       { label: 'Manitoba Laws: The Builders’ Liens Act, s. 24', url: 'https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php', accessed: '2026-10-13' },
+      { label: 'Province of Manitoba: Building permits and inspections (Inspection and Technical Services)', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html', accessed: '2026-10-15' },
     ],
   },
 
