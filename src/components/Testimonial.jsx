@@ -5,11 +5,11 @@ import { ArrowRightIcon } from './icons.jsx';
 // Real client testimonials from src/data/testimonials.js (the rules for adding
 // one are there). One renders as the original spotlight card (a service page's
 // own); two or more as a grid: three across on desktop, two on tablets,
-// stacked on phones, so new ones drop straight in. No star glyphs: a rating
-// needs a source (plan §19). The Google link opens the Business Profile, where
-// the reviews themselves are read (they are not copied onto the site). These
-// are testimonials, not those Google reviews (their source is not recorded
-// yet), so the grid is tagged "Client Testimonials" and its Google link sits
+// stacked on phones, so new ones drop straight in. Stars only on a review
+// whose source shows them (a Google review's `rating`; plan §19), and never as
+// review schema. Google reviews say so on their own card ("Google review",
+// linked to the profile); the others are testimonials with no recorded source,
+// so the grid is tagged "Reviews & Testimonials" and its Google link sits
 // under the cards as a next step, not under the heading as their source.
 
 const HEADLINE = 'What Our Clients Say';
@@ -25,14 +25,21 @@ function GoogleReviewsLink({ cta }) {
 
 /** The quote and its attribution, inside a <figure>. */
 function Quote({ item }) {
+  const role = testimonialRole(item);
   return (
     <>
+      {item.rating > 0 && (
+        <p className="testimonial-stars">
+          <span aria-hidden="true">{'★'.repeat(item.rating)}</span>
+          <span className="visually-hidden">{`${item.rating} out of 5 stars`}</span>
+        </p>
+      )}
       <blockquote className="testimonial-quote">“{item.quote}”</blockquote>
       <figcaption className="testimonial-author">
         <div className="author-initial" aria-hidden="true">{item.name.charAt(0)}</div>
         <div className="author-info">
           <div className="author-name">{item.name}</div>
-          <p>{testimonialRole(item)}</p>
+          {role && <p>{role}</p>}
           {/* The public original (e.g. the review on Google), once recorded. */}
           {item.url && (
             <a className="testimonial-source" href={item.url} target="_blank" rel="noopener noreferrer">
@@ -78,7 +85,7 @@ export default function Testimonial({ items = TESTIMONIALS, cta = 'testimonials-
     <section className="testimonial-section" id="testimonials">
       <div className="container">
         <div className="section-header center reveal">
-          <span className="section-tag">Client Testimonials</span>
+          <span className="section-tag">Reviews &amp; Testimonials</span>
           <h2 className="section-title">{HEADLINE}</h2>
           <p className="section-desc">{SUB}</p>
         </div>

@@ -1,3 +1,5 @@
+import { GBP } from './siteConfig.js';
+
 // Client testimonials: the one list every page reads (the home page, /about-us
 // and /our-process show them all; a service page shows the ones its content
 // module names in `testimonial`). Rendered by src/components/Testimonial.jsx.
@@ -7,31 +9,79 @@
 //    their first name and initial (and area, if given). Never written or
 //    improved by us: trim for length only, and mark any cut with "…".
 //  - Record where it came from (`source`, and `url` when it is public, e.g. the
-//    review on Google) and when (`date`). Google review texts are not copied
-//    here without the reviewer's consent; the page links to the profile instead.
+//    review on Google) and when (`date`). A Google review is copied here only
+//    once the owner has cleared it for the site, word for word.
 //  - `area` (neighbourhood or community) and `project` only when known.
-//  - No star ratings unless the source itself has one (plan §19).
+//  - No star ratings unless the source itself has one (plan §19): `rating` is
+//    the stars the review shows on its source.
 //
-// The six below are real client reviews, confirmed by the owner on 2026-10-13.
-// Where and when each was given was not recorded, so source, url and date are
-// empty until the owner supplies them.
+// The first three are Google reviews of the Business Profile, cleared for the
+// site by the owner on 2026-10-23. Google showed them as "a year ago" (two) and
+// "10 months ago" on that day, so no exact date is recorded. Each is 5 stars:
+// the profile's 5.0 average over 4 reviews allows nothing lower. `url` opens
+// the profile, where the reviews are listed.
+// The six after them are real client reviews, confirmed by the owner on
+// 2026-10-13. Where and when each was given was not recorded, so source, url
+// and date are empty until the owner supplies them.
 
 /**
  * @typedef {object} Testimonial
  * @property {string} id       stable key; a service module's `testimonial` names it
  * @property {string} quote    the client's words, without quotation marks
  * @property {string} name     first name and last initial, e.g. 'Sandra K.'
- * @property {string} client   'Homeowner' | 'Business owner' | …
- * @property {string} project  project type, e.g. 'Kitchen Renovation'
+ * @property {string|null} client   'Homeowner' | 'Business owner' | …, when known
+ * @property {string|null} project  project type, e.g. 'Kitchen Renovation', when known
  * @property {string|null} area    neighbourhood or community, when known
  * @property {string|null} source  e.g. 'Google review', when known
  * @property {string|null} url     link to the public source, when there is one
  * @property {string|null} date    'YYYY-MM-DD' the client gave it, when known
+ * @property {number} [rating]     stars shown on the source (1-5), when it has them
  * @property {string} confirmed    'YYYY-MM-DD' the owner confirmed it is real
  */
 
 /** @type {Testimonial[]} */
 export const TESTIMONIALS = [
+  {
+    id: 'roger-b',
+    quote:
+      'Greame delivered for me and my client. Quick response with on site detailed estimate. Completed job promptly, daily clean work site. Very knowledgeable, approachable and great follow up.',
+    name: 'Roger B.',
+    client: null,
+    project: null,
+    area: null,
+    source: 'Google review',
+    url: GBP.mapsUrl,
+    date: null,
+    rating: 5,
+    confirmed: '2026-10-23',
+  },
+  {
+    id: 'neil-j',
+    quote:
+      'Great experience and results working with the Bridgeland Builders team. Good coms from quotation to finish. Excellent quality work from demo to carpentry and tiling.',
+    name: 'Neil J.',
+    client: null,
+    project: null,
+    area: null,
+    source: 'Google review',
+    url: GBP.mapsUrl,
+    date: null,
+    rating: 5,
+    confirmed: '2026-10-23',
+  },
+  {
+    id: 'b-whitney',
+    quote: 'Professionals who do it the right way',
+    name: 'B Whitney',
+    client: null,
+    project: null,
+    area: null,
+    source: 'Google review',
+    url: GBP.mapsUrl,
+    date: null,
+    rating: 5,
+    confirmed: '2026-10-23',
+  },
   {
     id: 'sandra-k',
     quote:
