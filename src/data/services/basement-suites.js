@@ -109,8 +109,9 @@ export default {
     ],
   },
 
-  // Rental income (ProjectPage, after the process steps): the CMHC rent
-  // benchmark, the rental income guide and the payback calculator.
+  // Rental income (ProjectPage, after the lead section): the CMHC rent
+  // benchmark, the rental income guide and the payback calculator. The source
+  // is CMHC's spreadsheet itself, so its label says it downloads a file.
   rental: {
     tag: 'Rental Income',
     title: 'Will a basement suite pay for itself?',
@@ -120,7 +121,7 @@ export default {
     ],
     calculator: 'suite-payback',
     sources: [
-      { label: 'CMHC: Rental Market Survey data tables, Winnipeg (October 2025)', url: 'https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-winnipeg-2025-en.xlsx', accessed: '2026-10-23' },
+      { label: 'CMHC: Rental Market Survey data tables, Winnipeg, October 2025 (Excel file)', url: 'https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-winnipeg-2025-en.xlsx', accessed: '2026-10-23' },
     ],
   },
 

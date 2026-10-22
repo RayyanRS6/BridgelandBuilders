@@ -2887,7 +2887,7 @@
 /* Calculators (src/components/Calculator.jsx), first the suite payback one:
    the site's form fields (.form-row, .form-group, index.css) with the booking
    form's warm fill, on a card like the table wrapper above. The results use
-   the quick-answer tint. A form, so never .reveal. */
+   the quick-answer tint. Form fields, so never .reveal. */
 .suite-calc {
   display: flex;
   flex-direction: column;
@@ -2995,13 +2995,24 @@
   margin: 0;
 }
 
-/* Holds the calculator's place while its chunk loads (client navigation only). */
+/* Holds the calculator's place while its chunk loads (client navigation
+   only), at about the suite calculator's height: one column of fields from
+   768px down, so it roughly doubles on a phone. */
 .calc-loading {
-  min-height: 560px;
+  min-height: 700px;
   margin: 28px 0;
 }
 
+@media (max-width: 768px) {
+  .calc-loading {
+    min-height: 1100px;
+  }
+}
+
 @media (max-width: 640px) {
+  .calc-loading {
+    min-height: 1220px;
+  }
   .suite-calc {
     padding: 18px 16px;
   }

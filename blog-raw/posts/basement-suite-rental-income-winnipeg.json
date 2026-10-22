@@ -21,7 +21,7 @@
   "ctaService": "/services/basement-suites",
   "author": "",
   "reviewedBy": "",
-  "answer": "You can rent out a Winnipeg basement suite once zoning allows it, it has development, building, electrical and plumbing permits, and it passes final inspection. CMHC’s rental survey doesn’t cover basement suites, but its October 2025 average for a one-bedroom Winnipeg apartment was $1,232 a month. Payback is your quoted build cost divided by a year of net rent.",
+  "answer": "You can rent out a Winnipeg basement suite once zoning allows it, it has development, building, electrical and plumbing permits, and it passes final inspection. CMHC’s rental survey doesn’t cover basement suites, but its October 2025 average for a one-bedroom purpose-built Winnipeg apartment was $1,232 a month. Payback is your quoted build cost divided by a year of net rent.",
   "hero": null,
   "heroAlt": "",
   "sources": [
@@ -110,7 +110,7 @@
   "faqs": [
     {
       "q": "How much rent can I charge for a basement suite in Winnipeg?",
-      "a": "There’s no official average for basement suites. CMHC’s October 2025 survey put the average Winnipeg rent for a one-bedroom purpose-built apartment at $1,232 a month, and a bachelor at $915. A suite’s rent depends on its size, light, entrance and what’s included, so compare current listings for similar suites before you set yours."
+      "a": "CMHC doesn’t publish an average for basement suites. Its October 2025 survey put the average Winnipeg rent for a one-bedroom purpose-built apartment at $1,232 a month, and a bachelor at $915. A suite’s rent depends on its size, light, entrance and what’s included, so compare current listings for similar suites before you set yours."
     },
     {
       "q": "What is the minimum ceiling height for a basement suite?",
@@ -126,7 +126,7 @@
     },
     {
       "q": "How long does a basement suite take to pay for itself?",
-      "a": "It depends on your quote and your rent. Divide the build cost by a year of net rent, which is rent less vacancy and the costs you pay. At CMHC’s one-bedroom average and 2.8% vacancy, each $10,000 of build cost takes about eight months of rent to recover, before utilities, insurance, maintenance, financing and tax."
+      "a": "It depends on your quote and your rent. Divide the build cost by a year of net rent, which is rent less vacancy and the costs you pay. At CMHC’s one-bedroom average and its 2.8% overall vacancy rate, each $10,000 of build cost takes about eight months of rent to recover, before utilities, insurance, maintenance, financing and tax."
     }
   ],
   "blocks": [
@@ -144,7 +144,7 @@
     },
     {
       "t": "p",
-      "x": "When zoning allows it, the permits are in place and the work has passed final inspection. The City says attached suites, such as a basement suite, may be permitted in every zoning district that allows single-family homes: A, RR5, RR2, R1, R2, RMF, RMU and C1. Only one suite, attached or detached, is allowed per lot."
+      "x": "When zoning allows it, the permits are in place and the work has passed final inspection. The City says attached suites, such as a basement suite, may be permitted in every zoning district that allows single-family homes, and only one suite, attached or detached, is allowed per lot."
     },
     {
       "t": "p",
@@ -156,7 +156,7 @@
     },
     {
       "t": "p",
-      "x": "Size limits, parking and the rules for garden and garage suites are covered in our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg)."
+      "x": "The zoning districts, size limits, parking and the rules for garden and garage suites are covered in our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg). The Zoning By-law was amended in June 2025 and the City’s page doesn’t say whether it reflects that, so confirm the rules for your address with the City before you design."
     },
     {
       "t": "h2",
@@ -164,7 +164,11 @@
     },
     {
       "t": "p",
-      "x": "Get it approved first. If an existing attached suite doesn’t meet the use-specific standards, the City’s form calls for a conditional use application to maintain it. The fee is $660 plus GST ($693.00), and if the application is refused, the same conditional use can’t be applied for again for one year."
+      "x": "Get it approved first. If an existing attached suite doesn’t meet the use-specific standards, the City’s form calls for a conditional use application to maintain it. The fee is $660 plus GST ($693.00)."
+    },
+    {
+      "t": "p",
+      "x": "If the conditional use is rejected on appeal, the form says no building or development permit can be issued for the work, and the same conditional use can’t be applied for again within one year of the Appeal Order."
     },
     {
       "t": "p",
@@ -245,8 +249,8 @@
         ],
         [
           "Carbon monoxide alarms",
-          "Where CO alarms are installed, wired so one sounds all of them in the house, common spaces included",
-          "9.32.3.9.(7)"
+          "Required where the house has a fuel-burning appliance, such as a gas furnace or water heater, or an attached garage. Wired so one sounds every CO alarm in both units and common spaces, and, under Manitoba’s amendment, interconnected with the smoke alarms",
+          "9.32.3.9.(1), (2)(e) (Manitoba), (7)"
         ],
         [
           "Sound control",
@@ -264,11 +268,15 @@
           "9.1.2.1.(1)"
         ]
       ],
-      "note": "Summary of Part 9 of the National Building Code of Canada 2020, which Manitoba adopted with amendments (Manitoba Regulation 78/2023). The code and the City’s plan examiners govern."
+      "note": "Summary of Part 9 of the National Building Code of Canada 2020, which Manitoba adopted with amendments (Manitoba Regulation 78/2023); the carbon monoxide row includes Manitoba’s amendment to Article 9.32.3.9. The code and the City’s plan examiners govern."
     },
     {
       "t": "p",
-      "x": "Plan the entrance with the exits. The City describes an attached suite as having a separate entrance, and each household must reach its own services, such as the panel, without passing through the other unit. The code lets the units in a house with a suite share an exit stair without the second, separate exit it would otherwise require."
+      "x": "Plan the entrance with the exits. The City describes an attached suite as having a separate entrance, and each household must reach its own services, such as the panel, without passing through the other unit."
+    },
+    {
+      "t": "p",
+      "x": "In a house with a suite, the units can share an exit stair without each needing a second, separate exit. The exception: an upper unit whose door opens onto an exterior passageway more than 1.5 m above the ground, served by one stair and with a floor rated under 45 minutes, needs a second exit (Article 9.9.9.3.)."
     },
     {
       "t": "h2",
@@ -276,7 +284,7 @@
     },
     {
       "t": "p",
-      "x": "No one publishes an official basement-suite rent, so the closest benchmark is CMHC’s Rental Market Survey. Run every October, it covers privately initiated rental buildings with at least three units, so its figures show what Winnipeg tenants pay for an apartment, not for a suite."
+      "x": "CMHC doesn’t publish basement-suite rents for Winnipeg, so the closest benchmark is its Rental Market Survey. Run every October, it covers privately initiated rental buildings with at least three units, so its figures show what Winnipeg tenants pay for an apartment, not for a suite."
     },
     {
       "t": "table",
@@ -317,7 +325,11 @@
     },
     {
       "t": "p",
-      "x": "Rents rose over the year, and so did vacancy. The average one-bedroom rent went from $1,179 in October 2024 to $1,232, and the overall vacancy rate from 1.7% to 2.8%. CMHC reports that conditions softened across the Winnipeg area in 2025, with vacancy rising in suburban neighbourhoods."
+      "x": "Vacancy rose over the year, and rent growth slowed. The overall vacancy rate went from 1.7% to 2.8%, and CMHC reports that conditions softened across the Winnipeg area in 2025, with vacancy rising in suburban neighbourhoods."
+    },
+    {
+      "t": "p",
+      "x": "The average one-bedroom rent was $1,232, up from $1,179 in October 2024, but those averages cover different sets of buildings. For buildings surveyed in both years, CMHC estimates one-bedroom rents rose about 1.8%, and it says increases for existing tenants stayed below Manitoba’s rent increase guideline of 1.7%."
     },
     {
       "t": "p",
@@ -329,7 +341,7 @@
     },
     {
       "t": "p",
-      "x": "With your own numbers. Use the total from a written quote for the suite and a rent you’ve checked against local listings. We don’t publish suite prices, because each one depends on the basement it starts from. The calculator works out three figures:"
+      "x": "With your own numbers. Use the total from a written quote for the suite and a rent you’ve checked against local listings. Our instant price guide shows basement-development ranges, not suite prices. The calculator works out three figures:"
     },
     {
       "t": "li",
@@ -345,7 +357,7 @@
     },
     {
       "t": "p",
-      "x": "As an example, take CMHC’s one-bedroom average of $1,232 a month and its 2.8% vacancy rate. That’s about $14,370 of rent a year, so each $10,000 of build cost takes about eight months of rent to recover, before any costs you pay."
+      "x": "As an example, take CMHC’s one-bedroom average of $1,232 a month and the 2.8% vacancy rate for all units. That’s about $14,370 of rent a year, so each $10,000 of build cost takes about eight months of rent to recover, before any costs you pay."
     },
     {
       "t": "calculator",
@@ -353,7 +365,7 @@
     },
     {
       "t": "p",
-      "x": "Simple payback leaves out financing, interest, tax, rent increases and any change in your home’s value. It’s a planning estimate, not financial advice, so check the numbers with your lender and a tax professional before you commit."
+      "x": "Before you commit, check the numbers with your lender and a tax professional."
     },
     {
       "t": "h2",
@@ -384,7 +396,7 @@
         ],
         [
           "Manitoba Secondary Suites Program",
-          "Not accepting applications",
+          "Not accepting applications as of August 2025",
           "The Province’s program page said in August 2025 that applications weren’t being accepted; the page is no longer online"
         ]
       ],
@@ -396,7 +408,7 @@
     },
     {
       "t": "p",
-      "x": "Building the suite for a family member instead? A federal tax credit may apply; see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [home renovation financing in Canada](/blog/home-renovation-financing-canada)."
+      "x": "Building the suite so a senior, or an adult eligible for the disability tax credit, can live with a relative? The federal Multigenerational Home Renovation Tax Credit may apply; see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [home renovation financing in Canada](/blog/home-renovation-financing-canada)."
     },
     {
       "t": "h2",
@@ -421,6 +433,10 @@
     {
       "t": "p",
       "x": "The heating layout is worth settling early too. The code’s rules on separate ducts and controls decide where ducts run, and that affects the ceiling heights you can keep."
+    },
+    {
+      "t": "p",
+      "x": "Apart from radiant heating, a heating or air-conditioning system that serves both units has to meet Part 6 of the code rather than the house rules in Part 9 (Article 9.33.1.1.), so ask the City what it needs to see for your layout."
     },
     {
       "t": "h2",
