@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import BlogCard, { formatPostDate } from '../components/BlogCard.jsx';
 import BookingAside from '../components/BookingAside.jsx';
+import Calculator from '../components/Calculator.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
 import Guarantees from '../components/Guarantees.jsx';
@@ -56,9 +57,10 @@ const delay = (index, seconds) => (index > 0 ? { transitionDelay: `${seconds}s` 
  *
  * Section order (plan §7): hero → ticker → stats and trust strip → intro →
  * includes → types → local → gallery → process → guarantees → cost teaser →
- * testimonial → lead → FAQs → related services → guides → CTA → updated date
- * and sign-off. Every section after the hero renders only when its content
- * exists (the trust strip always has some), using the page's existing classes.
+ * testimonial → lead → rental income → FAQs → related services → guides →
+ * CTA → updated date and sign-off. Every section after the hero renders only
+ * when its content exists (the trust strip always has some), using the page's
+ * existing classes.
  */
 export default function ProjectPage({ project, service, guidePosts = [] }) {
   const name = project.breadcrumb || (service && service.label) || '';
@@ -77,6 +79,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
   const local = project.local && has(project.local.items) ? project.local : null;
   const localSources = local && has(local.sources) ? local.sources : [];
   const costTeaser = project.costTeaser && project.costTeaser.text && project.costTeaser.to ? project.costTeaser : null;
+  const rental = project.rental && project.rental.title ? project.rental : null;
+  const rentalSources = rental && has(rental.sources) ? rental.sources : [];
   // Only live pages are linked; a draft related service is left out.
   const related = (project.related || [])
     .map((path) => serviceByPath(path))
@@ -453,6 +457,38 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
           </div>
         </div>
       </section>
+
+      {/* RENTAL INCOME (optional): a sourced rent benchmark, a link to the
+          guide and a calculator (src/components/Calculator.jsx). After the
+          lead section, so the calculator never pushes the booking form down
+          on a phone. The calculator holds form fields, so it sits outside the
+          .reveal header. */}
+      {rental && (
+        <section className="process-section includes-section" id="rental-income">
+          <div className="container">
+            <div className="section-header center reveal">
+              <span className="section-tag">{rental.tag}</span>
+              <h2 className="section-title">{rental.title}</h2>
+              {paragraphs(rental.desc).map((text, index) => (
+                <p className="section-desc" key={text.slice(0, 40)}>{renderInline(text, `rental-${index}`)}</p>
+              ))}
+              {rentalSources.map((source, index) => (
+                <p className="section-desc" key={source.url}>
+                  {index === 0 && (rentalSources.length > 1 ? 'Sources: ' : 'Source: ')}
+                  <a href={source.url} rel="noopener" target="_blank">{source.label}</a>
+                  {source.accessed && ` (verified ${source.accessed})`}
+                  {index < rentalSources.length - 1 && ';'}
+                </p>
+              ))}
+            </div>
+            {rental.calculator && (
+              <div className="suite-calc-wrap">
+                <Calculator id={rental.calculator} />
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* FAQs */}
       {has(project.faqs) && (

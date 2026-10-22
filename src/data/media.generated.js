@@ -319,6 +319,21 @@ export const MEDIA = {
     ],
     "alt": "Title card: Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits"
   },
+  "card:basement-suite-rental-income-winnipeg": {
+    "src": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-880.17834f28.webp",
+    "srcSet": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-480.17ebf9b4.webp 480w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-880.17834f28.webp 880w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1320.0b66c85d.webp 1320w",
+    "avifSrcSet": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-480.29c56e33.avif 480w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-880.e7d88156.avif 880w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1320.999be742.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x630.89b9628c.jpg",
+    "schemaImages": [
+      "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x675.a7af88f4.jpg",
+      "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x900.0267e8b0.jpg",
+      "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x1200.b8188fd6.jpg"
+    ],
+    "alt": "Title card: Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback"
+  },
   "card:builders-lien-holdback-manitoba": {
     "src": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp",
     "srcSet": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-480.1b473aa7.webp 480w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp 880w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1320.4cc70a86.webp 1320w",

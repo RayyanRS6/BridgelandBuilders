@@ -71,7 +71,8 @@
  *   blocks[]        body, rendered by src/components/RichBody.jsx:
  *                   p, h2, h3, h4, li, oli, quote, img { src, alt, w, h,
  *                   variant? }, table { caption, head, rows, note }, callout
- *                   { title, x }, takeaways { title, items }. A block with
+ *                   { title, x }, takeaways { title, items }, calculator { id }
+ *                   (an id in CALCULATOR_IDS below). A block with
  *                   "hidden": true stays in the file but is not rendered.
  *   legacyBlocks    raw Wix import (lead paragraph and hero duplicate still in
  *                   blocks, FAQ as plain paragraphs) — normalise to the fields
@@ -116,6 +117,10 @@ const GUIDE_SLUGS = [
   'basement-development-permits-winnipeg',
 ];
 const GUIDE_COUNT = 3;
+
+// Calculators a post body can embed ({"t": "calculator", "id": …}): the ids
+// src/components/Calculator.jsx knows. An unknown id would render nothing.
+const CALCULATOR_IDS = ['suite-payback'];
 
 const errors = [];
 const warnings = [];
@@ -323,6 +328,7 @@ function blockTexts(block) {
   if (block.hidden) return [];
   switch (block.t) {
     case 'img':
+    case 'calculator':
       return [];
     case 'takeaways':
       return [block.title, ...(block.items || [])];
@@ -393,6 +399,11 @@ for (const p of published) {
     if (p[key] && !Object.prototype.hasOwnProperty.call(PEOPLE, p[key])) fail(`${p.slug}: ${key} "${p[key]}" is not in src/data/people.js`);
   }
   if (!Array.isArray(p.blocks) || !p.blocks.length) fail(`${p.slug}: no body blocks`);
+  for (const [index, b] of (Array.isArray(p.blocks) ? p.blocks : []).entries()) {
+    if (b && b.t === 'calculator' && !b.hidden && !CALCULATOR_IDS.includes(b.id)) {
+      fail(`${p.slug}: blocks[${index}] calculator "${b.id}" is not one of ${CALCULATOR_IDS.join(', ')} (src/components/Calculator.jsx)`);
+    }
+  }
   for (const [index, f] of (p.faqs || []).entries()) {
     if (!f || !String(f.q || '').trim() || !String(f.a || '').trim()) fail(`${p.slug}: faqs[${index}] needs both q and a`);
   }

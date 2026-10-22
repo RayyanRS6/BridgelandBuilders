@@ -152,7 +152,7 @@ export const PAGE_SEO = {
     title: 'Winnipeg Renovation Guides | Bridgeland Builders',
     description:
       'Renovation guides for Winnipeg homes and businesses: costs, permits, basements, kitchens and bathrooms, hiring a contractor, commercial work and money.',
-    updated: '2026-10-14',
+    updated: '2026-10-23',
   },
   // Second contact page, holding the GoHighLevel form with the SMS consent
   // checkbox that the Privacy Policy and Terms of Service point to (A2P). Kept
