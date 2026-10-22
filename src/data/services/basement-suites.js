@@ -167,6 +167,12 @@ export default {
   // No costTeaser: the estimator prices suites with the basement ranges and has
   // no suite-specific data; the basement cost guide is linked from that page.
   costTeaser: null,
+  // The price-guide card names the ranges the estimator really shows (basement
+  // development), not a suite price, which it doesn't have.
+  priceGuide: {
+    label: 'Basement',
+    text: 'Answer a few quick questions for an instant basement development price range. It doesn’t cover suite items such as a kitchen, a separate entrance or fire separation: those are priced in the free written quote that follows an on-site visit.',
+  },
   // Live pages only are shown; drafts appear when they launch.
   related: ['/services/basement-renovations', '/services/home-additions', '/services/bathroom-renovations'],
   guides: ['basement-suite-rental-income-winnipeg', 'secondary-suite-rules-winnipeg', 'basement-development-permits-winnipeg'],

@@ -79,6 +79,9 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
   const local = project.local && has(project.local.items) ? project.local : null;
   const localSources = local && has(local.sources) ? local.sources : [];
   const costTeaser = project.costTeaser && project.costTeaser.text && project.costTeaser.to ? project.costTeaser : null;
+  // `priceGuide`: { label, text } when the page is priced with another
+  // service's ranges (basement suites use the basement ones).
+  const priceGuide = project.priceGuide && project.priceGuide.label ? project.priceGuide : null;
   const rental = project.rental && project.rental.title ? project.rental : null;
   const rentalSources = rental && has(rental.sources) ? rental.sources : [];
   // Only live pages are linked; a draft related service is left out.
@@ -436,8 +439,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 <div className="lead-card-head">
                   {hasPriceData ? (
                     <>
-                      <h3>Get Your Free {name} Price Guide</h3>
-                      <p>Answer a few quick questions for an instant estimate: a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.</p>
+                      <h3>Get Your Free {priceGuide ? priceGuide.label : name} Price Guide</h3>
+                      <p>{priceGuide ? priceGuide.text : 'Answer a few quick questions for an instant estimate: a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.'}</p>
                     </>
                   ) : (
                     <>
