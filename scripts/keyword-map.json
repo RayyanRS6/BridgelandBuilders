@@ -284,10 +284,11 @@
         "basement renovation timeline Winnipeg",
         "basement finishing ideas Winnipeg",
         "basement renovation",
+        "basement renovations",
         "basement remodeling",
         "basement finishing contractor"
       ],
-      "note": "moisture remediation is worded \"moisture control before finishing\"; waterproofing is a section (what we check + when to call a specialist), not a service; links to the basement permit guide with no permit H2 of its own"
+      "note": "moisture remediation is worded \"moisture control before finishing\"; waterproofing is a section (what we check + when to call a specialist), not a service; links to the basement permit guide with no permit H2 of its own. 2026-10-23: \"basement renovations\" (Search Console, 28 days to 2026-10-19) is in the intro H2, with a finished-basement FAQ"
     },
     "/services/basement-suites": {
       "status": "live",
@@ -416,9 +417,13 @@
         "commercial property renovation Winnipeg",
         "commercial leasehold improvement Winnipeg",
         "commercial renovation project management Winnipeg",
-        "commercial washroom renovation Winnipeg"
+        "commercial washroom renovation Winnipeg",
+        "commercial renovations",
+        "commercial renovation contractor",
+        "commercial renovation companies",
+        "business renovation"
       ],
-      "note": "commercial construction Winnipeg is interior work only; commercial property renovation Winnipeg goes under a property-managers H2"
+      "note": "commercial construction Winnipeg is interior work only; commercial property renovation Winnipeg goes under a property-managers H2. 2026-10-23: the four broad terms are Search Console queries (28 days to 2026-10-19), served through the Winnipeg page: contractor in the title and subtitle, business renovation in the intro, companies in an FAQ. The process section is the lease-date block (#steps) the verticals link to"
     },
     "/services/commercial-renovations/cost": {
       "status": "blocked",
@@ -454,7 +459,8 @@
         "corporate office renovation Winnipeg",
         "office redesign contractor Winnipeg",
         "office partition installation Winnipeg",
-        "office expansion contractor Winnipeg"
+        "office expansion contractor Winnipeg",
+        "office renovations"
       ]
     },
     "/services/restaurant-renovations": {
@@ -477,7 +483,8 @@
         "bar renovation contractor Winnipeg",
         "hotel renovation Winnipeg",
         "hotel interior renovation Winnipeg",
-        "restaurant renovation timeline Winnipeg"
+        "restaurant renovation timeline Winnipeg",
+        "restaurant renovation contractor"
       ],
       "note": "hotels are a section of this page (hotel work confirmed by the owner 2026-10-13)"
     },
@@ -650,9 +657,9 @@
     "/services/demolition": {
       "status": "live",
       "primary": ["interior demolition Winnipeg"],
-      "secondary": [],
-      "supporting": [],
-      "note": "service page (launched 2026-10-13), interior demolition only; primary is a plan addition (validate volume)"
+      "secondary": ["interior demolition contractor Winnipeg"],
+      "supporting": ["demolition contractor"],
+      "note": "service page (launched 2026-10-13), interior demolition only; primary is a plan addition (validate volume). 2026-10-23: \"demolition contractor\" (Search Console, 28 days to 2026-10-19) is served as interior demolition contractor (title, subtitle) plus an FAQ on when a licensed demolition contractor is needed; never a whole-building claim"
     },
     "/blog/secondary-suite-rules-winnipeg": {
       "status": "live",

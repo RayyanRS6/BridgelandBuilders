@@ -24,7 +24,7 @@ export default {
   title: 'INTERIOR DEMOLITION',
   titleHighlight: 'IN WINNIPEG',
   subtitle:
-    'We strip out kitchens, bathrooms, basements and commercial interiors so the next stage of your renovation starts clean, with dust control, haul-away, and older materials checked before anything comes down. Every job starts with a free on-site visit and a free written quote.',
+    'As an interior demolition contractor, we strip out kitchens, bathrooms, basements and commercial interiors so the next stage of your renovation starts clean, with dust control, haul-away, and older materials checked before anything comes down. Every job starts with a free on-site visit and a free written quote.',
   heroPoints: ['Free on-site visit', 'Older materials checked first', 'Debris hauled away'],
 
   stats: [
@@ -107,6 +107,9 @@ export default {
   faqsTitle: 'Demolition Questions',
   faqs: [
     { q: 'Do you demolish whole buildings?', a: 'No. We do interior and selective demolition ahead of a renovation. In Winnipeg, demolishing a building or part of one needs a demolition permit, and the City requires the applicant to hold a demolition contractor licence. For a whole building, hire a licensed demolition contractor.' },
+    // Answers the "demolition contractor" searches (Search Console, October
+    // 2026) with the City's rule, never a whole-building claim.
+    { q: 'Do I need a licensed demolition contractor for interior work?', a: 'No. The City of Winnipeg says applications that only remove interior building components, such as walls and partitions, are not demolitions, so they need no demolition permit or licensed demolition contractor. The renovation may still need a building permit, and older materials should be checked before anything comes down.' },
     { q: 'Can you remove a wall to open up my kitchen?', a: 'Yes, as part of a renovation. A non-structural partition can come out with the rest of the demolition. A load-bearing wall needs a beam and a building permit, so it is planned with the renovation rather than treated as stand-alone demolition. We tell you at the on-site visit which kind of wall you have.' },
     { q: 'What happens if asbestos is found?', a: 'Work in that area stops until it is dealt with. Before an alteration or renovation, Manitoba’s rules require measures that keep asbestos-containing material in the work area from being released, and that is specialist work. Testing older materials before the strip-out is scheduled avoids a stop in the middle of the job.' },
     { q: 'How do you keep dust out of the rest of the building?', a: 'The work area is sealed off with plastic barriers, floors and paths to the door are covered, and debris goes out by the shortest route. In occupied homes and businesses that stay open, the messiest work is planned for the times that disturb you least.' },
@@ -118,13 +121,12 @@ export default {
   // feeds the sitemap lastmod and WebPage dateModified: bump it only when the
   // page content really changes.
   seo: {
-    title: 'Interior Demolition Winnipeg | Bridgeland Builders',
+    title: 'Interior Demolition Contractor Winnipeg | Bridgeland',
     description:
-      'Interior demolition in Winnipeg: kitchen, bathroom, basement and commercial strip-outs with dust control and haul-away. Free on-site visit and quote.',
+      'Interior demolition contractor in Winnipeg for kitchen, bathroom, basement and commercial strip-outs, with dust control and haul-away. Free on-site visit.',
     serviceType: 'Interior demolition',
-    // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'interior demolition Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.

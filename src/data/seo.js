@@ -87,7 +87,7 @@ export const PAGE_SEO = {
     title: 'Renovation Services in Winnipeg | Bridgeland Builders',
     description:
       'Renovation services in Winnipeg for homes and businesses: kitchens, bathrooms, basements, whole homes, additions, commercial fit-ups, flooring and more.',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   '/about-us': {
     title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',

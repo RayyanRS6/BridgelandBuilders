@@ -102,7 +102,7 @@ export default {
     serviceType: 'Medical and dental office renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Dental, medical and physiotherapy clinics' },
     primaryKeyword: 'dental office renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   typesTitle: 'Clinics We Renovate',
@@ -112,7 +112,7 @@ export default {
     { title: 'Medical Clinics', text: 'Exam rooms, procedure rooms, nursing stations and waiting areas for family practices and walk-in clinics.' },
     { title: 'Physiotherapy Clinics', text: 'Open treatment floors, private treatment rooms, exercise areas and change rooms, with flooring suited to equipment.' },
     { title: 'Other Health Practices', text: 'Chiropractic, massage, counselling and other practices that need private rooms and a calm waiting area.' },
-    { title: 'Moving Into a New Unit', text: '[A medical office fit-out in a leased unit](/blog/office-fit-up-lease-planning-winnipeg), including the building permit and the occupancy permit needed before you open.' },
+    { title: 'Moving Into a New Unit', text: '[A medical office fit-out in a leased unit](/blog/office-fit-up-lease-planning-winnipeg), including the building permit and the occupancy permit needed before you open, [planned back from your lease and opening dates](/services/commercial-renovations#steps).' },
     { title: 'Upgrades in an Operating Clinic', text: 'Adding operatories or exam rooms, refreshing finishes or reworking reception while the rest of the clinic stays open.' },
   ],
 
