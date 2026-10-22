@@ -15,7 +15,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-07-29",
-  "updated": "2026-10-15",
+  "updated": "2026-10-23",
   "readMinutes": 7,
   "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
   "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
@@ -222,7 +222,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. Commercial work is priced after that visit, not from an online estimate. You can also see our [commercial renovation services](/services/commercial-renovations)."
+      "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. Commercial work is priced after that visit, not from an online estimate. See [how we plan commercial work around your dates](/services/commercial-renovations#steps)."
     }
   ],
   "faqsTitle": "Questions about renovating a business",

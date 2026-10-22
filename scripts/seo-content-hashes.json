@@ -1,35 +1,39 @@
 {
   "/": {
-    "hash": "7d6dd8108d533832",
-    "updated": "2026-10-15"
+    "hash": "fa02869e3b2bee75",
+    "updated": "2026-10-23"
   },
   "/about-us": {
-    "hash": "e6fddb2dc2fa5ba4",
-    "updated": "2026-10-15"
+    "hash": "1ed5150b1af4c7c5",
+    "updated": "2026-10-23"
   },
   "/blog": {
-    "hash": "b6c5b7eee9bad1e6",
-    "updated": "2026-10-14"
+    "hash": "fc349748204562d4",
+    "updated": "2026-10-23"
   },
   "/blog/asbestos-testing-before-renovating-manitoba": {
     "hash": "a70e26c50e4564a8",
     "updated": "2026-10-15"
   },
   "/blog/basement-development-permits-winnipeg": {
-    "hash": "5c73dfd5800132bd",
-    "updated": "2026-10-15"
+    "hash": "78e3b1523c0d2143",
+    "updated": "2026-10-23"
   },
   "/blog/basement-flood-protection-winnipeg": {
     "hash": "88eb922205b94fd2",
     "updated": "2026-10-15"
+  },
+  "/blog/basement-suite-rental-income-winnipeg": {
+    "hash": "f136b1f1de6fa51c",
+    "updated": "2026-10-23"
   },
   "/blog/builders-lien-holdback-manitoba": {
     "hash": "d0cf315d12ccc481",
     "updated": "2026-10-15"
   },
   "/blog/check-permit-history-winnipeg-house": {
-    "hash": "8e40d7b1d43c7ea7",
-    "updated": "2026-10-15"
+    "hash": "e60a95a2b7eff3fe",
+    "updated": "2026-10-23"
   },
   "/blog/clay-soil-basement-cracks-winnipeg": {
     "hash": "b1a2823ee5974e0b",
@@ -88,8 +92,8 @@
     "updated": "2026-10-15"
   },
   "/blog/how-to-prepare-your-business-for-a-major-renovation": {
-    "hash": "7bdb85ba289465c2",
-    "updated": "2026-10-15"
+    "hash": "aec2e0a7fa78cb7b",
+    "updated": "2026-10-23"
   },
   "/blog/insulation-rebates-during-a-renovation-manitoba": {
     "hash": "85646f9dc63c83b4",
@@ -104,8 +108,8 @@
     "updated": "2026-10-15"
   },
   "/blog/office-fit-up-lease-planning-winnipeg": {
-    "hash": "d935af3e16a6854f",
-    "updated": "2026-10-15"
+    "hash": "d924e802ef911cef",
+    "updated": "2026-10-23"
   },
   "/blog/planning-a-winter-basement-development-winnipeg": {
     "hash": "fedef3e81b616291",
@@ -128,16 +132,16 @@
     "updated": "2026-10-15"
   },
   "/blog/secondary-suite-rules-winnipeg": {
-    "hash": "9eacf1d8670f4af2",
-    "updated": "2026-10-15"
+    "hash": "0bd26667190daa4d",
+    "updated": "2026-10-23"
   },
   "/blog/spring-flood-prep-winnipeg-basements": {
     "hash": "0a411348203c68be",
     "updated": "2026-10-15"
   },
   "/blog/the-biggest-cost-factors-in-commercial-renovation-projects": {
-    "hash": "7e6781f17c85cafb",
-    "updated": "2026-10-15"
+    "hash": "b40aca01eb678646",
+    "updated": "2026-10-23"
   },
   "/blog/understanding-roi-which-commercial-renovations-bring-the-most-value": {
     "hash": "4f5a74218664e7c7",
@@ -168,12 +172,12 @@
     "updated": "2026-10-13"
   },
   "/book-online": {
-    "hash": "ccb6d4a464d1f204",
-    "updated": "2026-10-14"
+    "hash": "ab15176de9bffaab",
+    "updated": "2026-10-23"
   },
   "/contact-us": {
-    "hash": "09c96a20e92a65e6",
-    "updated": "2026-10-15"
+    "hash": "3b780ce2a992f5f0",
+    "updated": "2026-10-23"
   },
   "/editorial-policy": {
     "hash": "44ba2047b6051ed7",
@@ -184,20 +188,20 @@
     "updated": "2026-10-15"
   },
   "/instant-quote": {
-    "hash": "5f22abf06d1088e4",
-    "updated": "2026-10-15"
+    "hash": "bf67bbb12d22586d",
+    "updated": "2026-10-23"
   },
   "/our-process": {
-    "hash": "b56ba4d73fda755a",
-    "updated": "2026-10-14"
+    "hash": "e1fc10802c40e48e",
+    "updated": "2026-10-23"
   },
   "/privacy-policy": {
     "hash": "23dc432608acf6c5",
     "updated": "2026-10-15"
   },
   "/projects": {
-    "hash": "e130cd6b855af87d",
-    "updated": "2026-10-13"
+    "hash": "8c0e490b826e86d9",
+    "updated": "2026-10-23"
   },
   "/renovation-cost-winnipeg": {
     "hash": "3ffdbf1ef039ff15",
@@ -208,88 +212,88 @@
     "updated": "2026-10-15"
   },
   "/services": {
-    "hash": "926b62733de36151",
-    "updated": "2026-10-15"
+    "hash": "5b07f9f12df7bde0",
+    "updated": "2026-10-23"
   },
   "/services/basement-renovations": {
-    "hash": "c863f25af9770568",
-    "updated": "2026-10-15"
+    "hash": "cfb1e77e786950ee",
+    "updated": "2026-10-23"
   },
   "/services/basement-renovations/cost": {
     "hash": "fae7227fc94ffa62",
     "updated": "2026-10-15"
   },
   "/services/basement-suites": {
-    "hash": "ea9c60d14dbdd714",
-    "updated": "2026-10-15"
+    "hash": "5385aead9e633250",
+    "updated": "2026-10-23"
   },
   "/services/bathroom-renovations": {
-    "hash": "813d568ce46bae71",
-    "updated": "2026-10-15"
+    "hash": "2585f9851c628ba0",
+    "updated": "2026-10-23"
   },
   "/services/bathroom-renovations/cost": {
     "hash": "ab548d04bced0cf0",
     "updated": "2026-10-15"
   },
   "/services/commercial-renovations": {
-    "hash": "70f8436afd97b42c",
-    "updated": "2026-10-15"
+    "hash": "1a4e0bdc6c1787a0",
+    "updated": "2026-10-23"
   },
   "/services/demolition": {
-    "hash": "1cd321a18e6172a5",
-    "updated": "2026-10-15"
+    "hash": "d4176288c466188d",
+    "updated": "2026-10-23"
   },
   "/services/exterior-painting": {
-    "hash": "0988741a4a1fc030",
-    "updated": "2026-10-15"
+    "hash": "f174b0475e8e8d54",
+    "updated": "2026-10-23"
   },
   "/services/flooring": {
-    "hash": "5814d57499091bd8",
-    "updated": "2026-10-15"
+    "hash": "0ec5d9379ac6fe9f",
+    "updated": "2026-10-23"
   },
   "/services/general-contracting": {
-    "hash": "8458bb91c371e584",
-    "updated": "2026-10-15"
+    "hash": "f42b6b6d785fc563",
+    "updated": "2026-10-23"
   },
   "/services/home-additions": {
-    "hash": "291817e836c93f03",
-    "updated": "2026-10-15"
+    "hash": "ae248a6d061dc773",
+    "updated": "2026-10-23"
   },
   "/services/kitchen-renovations": {
-    "hash": "84ee3e05480dbcc8",
-    "updated": "2026-10-15"
+    "hash": "09cf62907742c006",
+    "updated": "2026-10-23"
   },
   "/services/kitchen-renovations/cost": {
     "hash": "ed83543f562e251a",
     "updated": "2026-10-15"
   },
   "/services/masonry-stucco": {
-    "hash": "2ece711ac27b0371",
-    "updated": "2026-10-15"
+    "hash": "bd094cee9f3514c1",
+    "updated": "2026-10-23"
   },
   "/services/medical-dental-office-renovations": {
-    "hash": "3f74dc80600c6a19",
-    "updated": "2026-10-15"
+    "hash": "6b22565674b52e39",
+    "updated": "2026-10-23"
   },
   "/services/office-renovations": {
-    "hash": "68967f42f3ff4325",
-    "updated": "2026-10-15"
+    "hash": "a4910152d6751fc2",
+    "updated": "2026-10-23"
   },
   "/services/restaurant-renovations": {
-    "hash": "0978477b6ad5c749",
-    "updated": "2026-10-15"
+    "hash": "d68d48f9d3a2a0d5",
+    "updated": "2026-10-23"
   },
   "/services/retail-renovations": {
-    "hash": "6db45fc2241917f2",
-    "updated": "2026-10-15"
+    "hash": "1035de0c05dac740",
+    "updated": "2026-10-23"
   },
   "/services/whole-home-renovations": {
-    "hash": "746dcdbd5990a878",
-    "updated": "2026-10-15"
+    "hash": "333a049cfdb2d4b5",
+    "updated": "2026-10-23"
   },
   "/services/windows-and-doors": {
-    "hash": "f69b4a245e413f15",
-    "updated": "2026-10-15"
+    "hash": "1929108776f665de",
+    "updated": "2026-10-23"
   },
   "/terms-of-service": {
     "hash": "e2d11e676e7a49f4",

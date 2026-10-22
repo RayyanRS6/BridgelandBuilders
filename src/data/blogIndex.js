@@ -10,6 +10,44 @@
 /** Published posts only (blog-raw status "published"), newest first, card and ranking fields. */
 export const BLOG_CARDS = [
   {
+    "slug": "basement-suite-rental-income-winnipeg",
+    "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+    "excerpt": "When a Winnipeg basement suite can legally be rented, the building code numbers that shape it, what CMHC’s rent survey shows, and a payback calculator that uses your own quote.",
+    "category": "Basements & Suites",
+    "date": "2026-10-23",
+    "readMinutes": 13,
+    "image": {
+      "base": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "17ebf9b4",
+        "17834f28",
+        "0b66c85d"
+      ],
+      "avif": [
+        "29c56e33",
+        "e7d88156",
+        "999be742"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
+    "categories": [
+      "Basements & Suites",
+      "Money & Rebates",
+      "Permits & Planning"
+    ],
+    "services": [
+      "/services/basement-suites",
+      "/services/basement-renovations"
+    ],
+    "cluster": "winnipeg-permits"
+  },
+  {
     "slug": "asbestos-testing-before-renovating-manitoba",
     "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
     "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
