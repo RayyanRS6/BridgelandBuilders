@@ -36,15 +36,13 @@ export default {
 
   intro: {
     tag: 'Why Bridgeland for your basement?',
-    // A question the first paragraph answers (answer-first), worded for the
-    // "basement renovations" searches in Search Console (October 2026).
-    title: 'Why do basement renovations in Winnipeg start with moisture and insulation?',
+    title: 'Get the moisture and insulation right, and the rest is easy',
     image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80',
     imageAlt: 'Room with light grey walls, a black loveseat, a white dresser, and a floor lamp',
     floatingTitle: 'Dry First, Finish Second',
     floatingText: 'We check moisture and insulation before any framing goes up.',
     paragraphs: [
-      'Because basements are the easiest room to finish badly. Frame straight onto a cold foundation wall, skip the vapour control, and two winters later you’ve got a musty smell and mould behind brand new drywall.',
+      'Basements are the easiest room to finish badly. Frame straight onto a cold foundation wall, skip the vapour control, and two winters later you’ve got a musty smell and mould behind brand new drywall.',
       'So we start underground, not with paint chips. We check for signs of moisture, look at how water moves around your foundation, and make sure any drainage or leak problem is fixed — by a specialist where it needs one — before we frame anything.',
       'Then we insulate properly for a Winnipeg winter so the room is actually warm in February.',
       'Once that’s handled, the fun part is easy. Family room, home office, guest room, gym, a bathroom down there, a wet bar — whatever you’re after. And if you’re thinking about a rental suite, we’ll walk you through the egress window and ceiling height rules before you commit to anything.',
@@ -148,7 +146,7 @@ export default {
   faqsTitle: 'Basement Renovation FAQs',
   faqs: [
     { q: 'How long does basement development take?', a: `A typical basement takes ${TIMELINES.basement.words} of work, depending on its size, the number of rooms, and whether a bathroom is added. Permit review and inspections are part of the schedule, so we build them into the timeline we give you with the written quote instead of leaving them as a surprise.` },
-    { q: 'Do you renovate basements that are already finished?', a: 'Yes. Renovating a finished basement can mean replacing dated finishes, opening up the layout, or adding a bedroom or bathroom. New flooring, trim and paint alone need no building permit; a new bedroom does, and it needs a window or a door straight outside that meets the City’s exit rules.' },
+    { q: 'Do you renovate basements that are already finished?', a: 'Yes. A finished basement is renovated in the same order as an unfinished one, on a smaller scope. When old panelling, framing or ceilings come out, the walls and floor are checked for moisture before anything new goes up, so a damp patch isn’t sealed in again.', more: { label: 'Basement strip-outs before a renovation', to: '/services/demolition' } },
     { q: 'Do I need a permit to finish my basement in Winnipeg?', a: 'Yes, if you are finishing a previously undeveloped basement or creating a new bedroom: the Winnipeg Building By-law requires a building permit for both. Updating finishes in a basement that is already developed does not need one. Electrical and plumbing work often need separate permits. We coordinate them as part of the job.' },
     { q: 'My basement smells damp. Can it still be finished?', a: 'Usually, but not until the cause is known. Sometimes it’s grading or a downspout outside; sometimes it’s a foundation crack or a failing sump pump. Outside drainage gets fixed first, and active leaks or cracks go to a waterproofing or foundation repair company before we frame. Finishing over a damp wall only hides the problem.' },
     { q: 'What is an egress window, and do I need one?', a: 'It’s a window large enough to climb out of in an emergency. The City’s basement guide says a new basement bedroom needs one that opens from inside without tools, with at least 0.35 m² of clear opening and no dimension under 380 mm, unless the bedroom has a door straight outside.\n\nWe cut the opening, install the window, and set the window well.' },

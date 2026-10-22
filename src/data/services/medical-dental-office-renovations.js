@@ -111,7 +111,7 @@ export default {
     { title: 'Dental Offices', text: 'Operatories, sterilization rooms, X-ray rooms, labs and reception for general and specialty dental practices.' },
     { title: 'Medical Clinics', text: 'Exam rooms, procedure rooms, nursing stations and waiting areas for family practices and walk-in clinics.' },
     { title: 'Physiotherapy Clinics', text: 'Open treatment floors, private treatment rooms, exercise areas and change rooms, with flooring suited to equipment.' },
-    { title: 'Other Health Practices', text: 'Chiropractic, massage, counselling and other practices that need private rooms and a calm waiting area.' },
+    { title: 'Other Health Practices', text: 'Chiropractic, massage, counselling and other practices that need private rooms and a calm waiting area. A counselling practice with no clinical plumbing is closer to an [office renovation](/services/office-renovations).' },
     { title: 'Moving Into a New Unit', text: '[A medical office fit-out in a leased unit](/blog/office-fit-up-lease-planning-winnipeg), including the building permit and the occupancy permit needed before you open, [planned back from your lease and opening dates](/services/commercial-renovations#steps).' },
     { title: 'Upgrades in an Operating Clinic', text: 'Adding operatories or exam rooms, refreshing finishes or reworking reception while the rest of the clinic stays open.' },
   ],

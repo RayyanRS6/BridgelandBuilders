@@ -46,7 +46,7 @@ export default {
     paragraphs: [
       'A restaurant renovation covers the front of house guests see, such as the dining room, bar and washrooms, and the back of house that makes service work: kitchen walls, floors and ceilings, sinks, and the plumbing and ventilation rough-ins. In Manitoba, the plans also go to a public health inspector for review before construction starts.',
       'Every closed night is lost revenue, so the schedule is built around service. We can work after close, on the days you’re closed and on weekends. In Winnipeg, loud work within 150 m of a home has to stop at 9 p.m., so [demolition](/services/demolition) and cutting are planned for daytime closures and quieter tasks run later.',
-      'The kitchen is where most of a restaurant renovation contractor’s coordination happens. Hoods, fire suppression, the grease interceptor and your equipment each involve a different supplier, trade or approval, so we set the order early: rough-ins before finishes, finishes before equipment, and inspections before your opening date.',
+      'The kitchen is where most of the coordination happens. Hoods, fire suppression, the grease interceptor and your equipment each involve a different supplier, trade or approval, so we set the order early: rough-ins before finishes, finishes before equipment, and inspections before your opening date.',
       'Hotels work the same way on a larger scale. We phase guest-room floors, corridors, lobbies and meeting rooms so the rest of the property keeps welcoming guests, with a weekly update you can share with your general manager or ownership group.',
     ],
     checklist: ['Dining Rooms & Bars', 'Commercial Kitchens', 'Cafés & Coffee Shops', 'Hotel Rooms & Lobbies'],
@@ -101,7 +101,7 @@ export default {
   seo: {
     title: 'Restaurant & Hospitality Renovations Winnipeg | Bridgeland',
     description:
-      'Restaurant renovation contractor in Winnipeg: dining rooms, kitchens, cafés, bars and hotels, scheduled around service and planned for health review.',
+      'Restaurant renovation contractor in Winnipeg: kitchens, dining rooms, cafés, bars and hotels, planned around service and health review. Free site visit.',
     serviceType: 'Restaurant and hospitality renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Restaurants, cafés, bars and hotels' },
     primaryKeyword: 'restaurant renovation Winnipeg',

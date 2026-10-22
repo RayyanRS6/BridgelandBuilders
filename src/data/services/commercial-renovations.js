@@ -20,9 +20,8 @@
 // Date", #steps); the verticals and some guides link to it. It reuses claims
 // the site already makes (free-rent period and landlord approval from the
 // office page, occupancy rules from the occupancy guide) and states no
-// duration of ours. The fit-up FAQ's review times are the City's open data
-// (7azm-hfsm) for September 2026, checked 2026-10-23: refresh the month and
-// figures when the data moves on.
+// duration of ours. The fit-up FAQ quotes no review times: the office fit-up
+// guide carries the City's figures with their full category wording.
 
 import { EXPERIENCE_YEARS, OFFICE_HOURS_TEXT, PROJECT_COUNT, REPLY_TIME, SITE_EMAIL, SITE_PHONE } from '../facts.js';
 import { NEARBY_AREAS_TEXT } from '../areas.js';
@@ -34,7 +33,7 @@ export default {
   title: 'COMMERCIAL RENOVATIONS',
   titleHighlight: 'IN WINNIPEG',
   subtitle:
-    'We’re a commercial renovation contractor for offices, stores, restaurants, cafés, bars, hotels and clinics in Winnipeg and nearby communities. We plan from your lease and opening dates, with after-hours and weekend work so you can keep trading.',
+    'We’re a commercial renovation contractor for offices, stores, restaurants, cafés, bars, hotels and clinics in Winnipeg and nearby communities, with lease-date planning and after-hours work.',
   heroPoints: ['Free site visit & written quote', 'Planned around your lease date', 'After-hours & weekend scheduling'],
 
   stats: [
@@ -53,7 +52,7 @@ export default {
     floatingText: 'The schedule starts from your opening date and works backwards.',
     paragraphs: [
       'A commercial renovation rebuilds a working space, such as an office, store, restaurant, hotel or clinic, around a lease, an opening date and the hours you need to stay open. It usually covers [demolition](/services/demolition), new walls and ceilings, electrical and mechanical changes, washrooms, finishes, a City building permit and the inspections that follow.',
-      'A commercial remodel runs on a different clock than a house, and we renovate both. A business renovation has a lease starting, an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut.',
+      'A commercial remodel runs on a different clock than a home renovation, and we do both. Most business renovations come with a lease starting or an opening date booked, staff who need somewhere to work, and customers who’ll go elsewhere if the doors stay shut.',
       // #steps: the lease-date block (process section) further down this page.
       'So we [plan backwards from your date](#steps) and tell you honestly at [the site visit](/our-process) whether it’s realistic. Where it helps, we schedule work in the evenings and on weekends so you can keep trading, and phase the job so only part of the space is closed at a time. You get a progress update every week.',
       `We work across Winnipeg and nearby communities, including ${NEARBY_AREAS_TEXT}, and we coordinate permits and inspections with the City of Winnipeg or, outside the city, the municipality, planning district or provincial office that issues them.`,
@@ -86,7 +85,7 @@ export default {
   process: {
     tag: 'Lease-Date Planning',
     title: 'How We Plan Around Your Lease Date',
-    desc: 'Your lease start, any free-rent period and your opening date set the schedule. We work back from them, then send an update every week.',
+    desc: 'Your lease start, any free-rent period and your opening date set the schedule, and we work back from them. No lease? The same plan works back from your reopening or turnover date.',
     steps: [
       { num: '01', title: 'Your Dates First', text: 'At the free site visit we note your lease start, any free-rent period, the landlord’s approval of your plans, your opening date and the hours you can’t afford to lose.' },
       { num: '02', title: 'A Schedule Built Backwards', text: 'Your written quote comes with a schedule worked back from opening day: drawings, permit review, ordering, construction, inspections and the occupancy permit. If your date isn’t realistic, we say so up front.' },
@@ -107,14 +106,14 @@ export default {
   faqsTitle: 'Commercial Renovation FAQs',
   faqs: [
     { q: 'Can you work after hours so we stay open?', a: 'Yes. Evening and weekend scheduling is available for commercial work, and for stores and restaurants it’s often the plan from the start. In Winnipeg, loud work within 150 m of a home is limited to 7 a.m. to 9 p.m. on weekdays and 9 a.m. to 9 p.m. on weekends, so noisy tasks are scheduled inside those hours.' },
-    { q: 'How long does a tenant fit-up take?', a: 'It depends on the scope and the approvals, so your schedule comes with the written quote, worked back from your lease and opening dates. A refresh of finishes moves faster than new walls, washrooms and services, which wait on the City’s plan review.\n\nIn September 2026, the City’s open data shows an average of 5.3 business days to review minor alterations in larger (Part 3) buildings, and 6.9 for a change of use in existing tenant space with multiple professionals involved. That’s review time, not the total time until a permit is issued.', more: { label: 'Office fit-up planning around your lease', to: '/blog/office-fit-up-lease-planning-winnipeg' } },
+    { q: 'How long does a tenant fit-up take?', a: 'It depends on the scope and the approvals. A refresh of finishes moves faster than new walls, washrooms and services, which wait on the City’s plan review, and the occupancy permit, where one is needed, comes before you open.\n\nYour schedule comes with the written quote, worked back from your lease and opening dates, and the fit-up guide below covers the City’s recent review times.', more: { label: 'Office fit-up planning around your lease', to: '/blog/office-fit-up-lease-planning-winnipeg' } },
     { q: 'Should we call you before or after signing the lease?', a: 'Before, if you can. A site visit while you’re still deciding shows whether your layout fits the space, what the building needs and which approvals apply. That lets you ask for lease dates that leave room for permits, inspections and the occupancy permit. The visit and the written quote are free.' },
     { q: 'Do you handle permits and inspections?', a: 'Yes. We coordinate building permits and inspections with the City of Winnipeg or your local municipality, and we flag anything in your space that will need attention early, such as a change of use, a fire separation or an accessibility upgrade. If the City requires an architect’s or engineer’s drawings, we build to theirs.' },
     { q: 'What is a tenant improvement?', a: 'A tenant improvement, also called a fit-up, fit-out or leasehold improvement, is the work that turns a leased commercial unit into a space one business can use: walls, ceilings, lighting, washrooms, finishes and services. Your lease usually says who pays for what, so bring it to the site visit and we’ll scope the work against it.' },
     { q: 'Can you work with our architect or designer?', a: 'Yes. We build to supplied drawings and specifications, and we walk the space against them before work starts. If something on the drawings won’t work on site, such as a duct that clashes with a beam, we raise it with you and your designer before it turns into a costly change.' },
     { q: 'Can you take on work for property managers?', a: 'Yes. We quote vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners. Each job starts with a free site visit and a written quote, and the weekly progress update gives you something to pass on to owners and tenants.' },
     { q: 'How firm is the schedule?', a: 'The schedule comes with your written quote, and we build to it. If something outside our control moves, like a permit review, a supplier delay or an inspection date, you hear about it in that week’s update along with what we’re doing about it, rather than at the end of the job.' },
-    { q: 'What should we look for in a commercial renovation company?', a: 'Commercial work similar to yours, a written scope and price after a site visit, and a schedule built around your dates and trading hours. Ask each company how after-hours work, permits, inspections and progress updates are handled, and compare quotes for the same scope.', more: { label: 'How to choose a renovation contractor', to: '/blog/how-to-choose-the-right-contractor-for-your-renovation-project' } },
+    { q: 'What should we look for when comparing commercial renovation companies?', a: 'Commercial work similar to yours, a written scope and price after a site visit, and a schedule built around your dates and trading hours. Ask each company how after-hours work, permits, inspections and progress updates are handled, and compare quotes for the same scope.', more: { label: 'How to choose a renovation contractor', to: '/blog/how-to-choose-the-right-contractor-for-your-renovation-project' } },
     { q: 'Which areas do you serve for commercial work?', a: `We work in Winnipeg and nearby communities within about an hour of the city, including ${NEARBY_AREAS_TEXT}.\n\nOutside Winnipeg, the Province says building, plumbing and occupancy permits are issued by one of three authorities: the municipality, a planning district or the Province’s Inspection and Technical Services, depending on the location and whether the building falls under Part 3 or Part 9 of the Manitoba Building Code. We coordinate with whichever one applies.\n\nThe Province also requires an occupancy permit before a renovated building is occupied where a building permit was issued; one- and two-family dwellings are the exception.` },
     { q: 'How quickly will you get back to us?', a: `Within ${REPLY_TIME}. Our office hours are ${OFFICE_HOURS_TEXT}, and you can reach us at ${SITE_PHONE} or ${SITE_EMAIL}. From there we book a free on-site visit, walk the space with you, and follow up with a written quote.` },
   ],
@@ -125,7 +124,7 @@ export default {
   seo: {
     title: 'Commercial Renovation Contractor in Winnipeg | Bridgeland',
     description:
-      'Commercial renovations in Winnipeg for offices, stores, restaurants, hotels and clinics: fit-ups planned around your lease date, with after-hours work.',
+      'Commercial renovations in Winnipeg for offices, stores, restaurants and clinics, planned around your lease date with after-hours work. Free site visit.',
     serviceType: 'Commercial renovation',
     // Service schema audience (plan §3.5): written for business owners and
     // the people who run commercial property.
@@ -183,8 +182,6 @@ export default {
       { label: 'Province of Manitoba: 2020 construction codes adoption', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/2020_construction_codes_adoption.html', accessed: '2026-10-13' },
       { label: 'Province of Manitoba: Building permits and inspections (Inspection and Technical Services)', url: 'https://www.gov.mb.ca/labour/its/bldg_codes/permits_and_inspections.html', accessed: '2026-10-15' },
       { label: 'Province of Manitoba: Manitoba Building Code updates, accessibility', url: 'https://www.gov.mb.ca/asset_library/en/labour/docs/its/accessibiity_requirement_updates.pdf', accessed: '2026-10-13' },
-      // The fit-up FAQ's review times (September 2026).
-      { label: 'City of Winnipeg Open Data: Building permit application processing times (review)', url: 'https://data.winnipeg.ca/d/7azm-hfsm', accessed: '2026-10-23' },
     ],
   },
 
