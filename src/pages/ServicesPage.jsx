@@ -11,11 +11,14 @@ import { usePageSeo } from '../hooks/useSeo.js';
 // vite.config.js sets __HAS_CASE_STUDIES__ from publishedCaseStudies().
 const PROJECTS_LINK_LABEL = __HAS_CASE_STUDIES__ ? 'VIEW OUR PROJECTS' : 'VIEW DESIGN IDEAS';
 
-// "Not sure where to start?" — the three usual first steps.
+// "Not sure where to start?" — the three usual first steps, plus the
+// commercial hub's lease-date block for business owners (always visible,
+// unlike the commercial tab's panel).
 const START_LINKS = [
   { to: COST_HUB_PATH, label: 'Renovation cost ranges' },
   { to: '/our-process', label: 'How our renovation process works' },
   { to: '/book-online', label: 'Book a free on-site visit' },
+  { to: '/services/commercial-renovations#steps', label: 'Commercial fit-ups around your lease' },
 ];
 
 export default function ServicesPage() {
@@ -42,7 +45,7 @@ export default function ServicesPage() {
             <p>
               Most people begin in one of three places: checking the starting price ranges for similar projects, reading how a
               renovation with us runs, or booking a free on-site visit so we can see the space and talk it through
-              with you.
+              with you. Business owners can start with how we plan a commercial renovation around a lease date.
             </p>
             <div className="blog-filter-pills tpl-pill-row">
               {START_LINKS.map((link) => (

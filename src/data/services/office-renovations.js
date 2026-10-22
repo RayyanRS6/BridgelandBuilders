@@ -105,11 +105,11 @@ export default {
   typesTitle: 'Types of Office Renovations',
   typesDesc: 'From a light refresh to a full remodel of your current office or a fit-up of a new unit.',
   types: [
-    { title: 'Tenant Fit-Up', text: 'A tenant fit-up (often called a fit-out) turns a bare or previous-tenant unit into your office, usually against a fixed move-in date in your lease.' },
+    { title: 'Tenant Fit-Up', text: 'A tenant fit-up (often called a fit-out) turns a bare or previous-tenant unit into your office, usually against a fixed move-in date in your lease. Here’s [how we plan a fit-up around your lease date](/services/commercial-renovations#steps).' },
     { title: 'Office Refresh', text: 'New flooring, paint, lighting and finishes in the layout you already have, with much of the work possible after hours.' },
     { title: 'Layout Reconfiguration', text: 'Moving walls to trade private offices for open space, or the reverse, and adding meeting rooms or quiet rooms.' },
     { title: 'Office Expansion', text: 'Taking over the next suite and joining the two, including the demising wall, doors and services between them.' },
-    { title: 'Professional Offices', text: 'Law, accounting and consulting offices with reception, private offices, file storage and meeting rooms where conversations stay private.' },
+    { title: 'Professional Offices', text: 'Law, accounting and consulting offices with reception, private offices, file storage and meeting rooms where conversations stay private. Clinics have their own page: [medical and dental office renovations](/services/medical-dental-office-renovations).' },
     { title: 'Kitchens, Washrooms & Common Areas', text: 'Staff rooms, washrooms and shared corridors upgraded on their own or as part of a larger renovation.' },
   ],
 

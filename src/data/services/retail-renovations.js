@@ -39,7 +39,7 @@ export default {
     floatingText: 'The schedule starts from your opening date and works backwards.',
     paragraphs: [
       'A retail renovation reshapes [how customers move through a store](/blog/how-to-balance-functionality-and-aesthetics-in-a-commercial-space): the entrance and storefront, the sales floor, fitting rooms, the cash area, the stockroom and staff spaces, plus the lighting, power and finishes that tie them together. In a new lease it’s usually called a fit-out, and work regulated by the building code needs a City of Winnipeg building permit.',
-      'In retail, the opening date is usually fixed before the build starts: a lease commencement, a season or a launch you’ve already advertised. We plan backwards from that date and tell you at the site visit whether it’s realistic, and what would need to change if it isn’t.',
+      'In retail, the opening date is usually fixed before the build starts: a lease commencement, a season or a launch you’ve already advertised. We [plan backwards from that date](/services/commercial-renovations#steps) and tell you at the site visit whether it’s realistic, and what would need to change if it isn’t.',
       'If you’re renovating a store that’s already trading, we phase the sales floor and schedule the loud work outside your hours, within the City’s noise limits near homes. Weekly progress updates let you plan stock, staffing and promotions around what’s finished.',
       'Brand standards and head-office fit-out packages are welcome. [We build to supplied drawings and specifications](/services/general-contracting) from your designer, your landlord or your head office, and flag anything on site that conflicts with them before it turns into a change order.',
     ],
@@ -103,7 +103,7 @@ export default {
   typesTitle: 'Types of Retail Renovations',
   typesDesc: 'New stores, refreshes and everything in between.',
   types: [
-    { title: 'New Store Fit-Out', text: 'A retail fit-out that turns an empty unit into your store, usually against a lease date, with the permits and occupancy permit before opening.' },
+    { title: 'New Store Fit-Out', text: 'A retail fit-out that turns an empty unit into your store, usually against a lease date, with the permits and occupancy permit before opening. Opening a café instead? The health plan review applies too, as our [restaurant and café renovations](/services/restaurant-renovations) page explains.' },
     { title: 'Store Refresh', text: 'New flooring, paint, lighting and fixtures in the layout you have, with much of the work possible after close so you keep trading.' },
     { title: 'Layout Changes', text: 'Moving the cash area, adding fitting rooms or opening up the sales floor to change how customers move through the store.' },
     { title: 'Storefront Renovation', text: 'Entrances, storefront framing, doors and exterior finishes that change how the store looks from the street. Downtown? Our [commercial renovation financing guide](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) explains the Storefront Success grant.' },

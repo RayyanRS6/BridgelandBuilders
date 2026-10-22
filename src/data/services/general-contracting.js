@@ -45,7 +45,7 @@ export default {
     floatingText: 'We build to supplied plans and raise site conflicts early.',
     paragraphs: [
       'A general contractor [takes responsibility for building a project](/blog/what-does-a-general-contractor-do): pricing it, scheduling and supervising the trades, ordering materials, coordinating permits and inspections, keeping the site safe and tidy, and handing over a finished space. You deal with one contractor instead of separately managing a framer, electrician, plumber, drywaller, painter and flooring installer.',
-      'We work as the general contractor on residential renovations, such as kitchens, bathrooms, basements, whole homes and additions, and on commercial projects for offices, stores, restaurants, hotels and clinics. The difference between a smooth job and a stressful one is usually sequencing: the right trade, in the right order, with inspections booked before walls close.',
+      'We work as the general contractor on residential renovations, such as kitchens, bathrooms, basements, whole homes and additions, and on [commercial projects](/services/commercial-renovations) for offices, stores, restaurants, hotels and clinics. The difference between a smooth job and a stressful one is usually sequencing: the right trade, in the right order, with inspections booked before walls close.',
       'Architects, interior designers and engineers can hand us their drawings and specifications, and we build to them. We walk the site against the drawings before work starts, ask questions early, and raise conflicts, such as a duct that clashes with a beam, before they turn into change orders.',
       'When the City requires sealed drawings, they come from a registered architect or professional engineer. If you don’t have one yet, ask us at [the site visit](/our-process) what your scope is likely to need before you spend money on plans.',
     ],
@@ -112,7 +112,7 @@ export default {
   typesDesc: 'For homeowners, businesses, property owners and design professionals.',
   types: [
     { title: 'Residential Renovations', text: 'Kitchens, bathrooms, basements, [whole-home renovations](/services/whole-home-renovations) and home additions, with the trades, permits and inspections run for you.' },
-    { title: 'Commercial Fit-Ups', text: 'Offices, stores, restaurants, hotels and clinics, including [tenant improvements in leased units](/services/commercial-renovations) and work after hours.' },
+    { title: 'Commercial Fit-Ups', text: 'Offices, stores, restaurants, hotels and clinics, including tenant improvements in leased units [planned around your lease date](/services/commercial-renovations#steps), and work after hours.' },
     { title: 'Building to Supplied Drawings', text: 'Projects designed by an architect, engineer or interior designer, built to their drawings and specifications.' },
     { title: 'Property Owners & Managers', text: 'Unit turnovers, common areas and multi-unit upgrades for landlords, property managers and building owners.' },
     { title: 'Developers & Realtors', text: 'Work that gets a property ready to sell, lease or occupy, scoped and quoted in writing after a free site visit.' },
