@@ -298,7 +298,7 @@
         "secondary suite Winnipeg"
       ],
       "supporting": [],
-      "note": "no secondary-suite rule numbers until re-verified on winnipeg.ca after the June 2025 zoning changes"
+      "note": "no secondary-suite rule numbers until re-verified on winnipeg.ca after the June 2025 zoning changes; rental-income section (2026-10-23): CMHC one-bedroom benchmark, payback calculator, links the rental income guide"
     },
     "/services/basement-renovations/cost": {
       "status": "live",
@@ -660,6 +660,17 @@
       "secondary": [],
       "supporting": [],
       "note": "new post 2026-10-13; parking figure from the City page may predate the 2025 zoning changes; writer pick (validate volume)"
+    },
+    "/blog/basement-suite-rental-income-winnipeg": {
+      "status": "live",
+      "primary": ["basement suite rental income Winnipeg"],
+      "secondary": [
+        "basement suite rent Winnipeg",
+        "basement suite ceiling height",
+        "basement suite payback"
+      ],
+      "supporting": ["basement suite fire separation"],
+      "note": "new guide 2026-10-23 (competitor review: rental-income side of suites); NBC 2020 suite articles, CMHC October 2025 purpose-built rents labelled as a benchmark (no suite rents exist), payback calculator on the visitor's own quote (no suite prices); zoning detail stays with the rules post; plan additions, validate volume"
     },
     "/blog/spring-flood-prep-winnipeg-basements": {
       "status": "live",

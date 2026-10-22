@@ -2884,6 +2884,134 @@
   font-size: 0.9rem;
 }
 
+/* Calculators (src/components/Calculator.jsx), first the suite payback one:
+   the site's form fields (.form-row, .form-group, index.css) with the booking
+   form's warm fill, on a card like the table wrapper above. The results use
+   the quick-answer tint. A form, so never .reveal. */
+.suite-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 28px 0;
+  padding: 24px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-soft);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.suite-calc .form-group input,
+.suite-calc .form-group select {
+  min-height: 46px;
+  border-color: rgba(31, 27, 24, 0.14);
+  background: var(--bg-warm);
+}
+
+.suite-calc .form-group input:focus,
+.suite-calc .form-group select:focus {
+  background: #fff;
+}
+
+.suite-calc .suite-calc-hint {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.suite-calc-optional {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.suite-calc-optional legend {
+  margin-bottom: 2px;
+  padding: 0;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.suite-calc-results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-seagreen-light);
+}
+
+.suite-calc-result {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+/* The darker sea green: small text on the tint needs 4.5:1. */
+.suite-calc-label {
+  color: var(--accent-seagreen-hover);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.suite-calc-value {
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.suite-calc-value.is-empty {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.suite-calc .suite-calc-note {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+/* On a service page the calculator sits under a centred section header. */
+.suite-calc-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.suite-calc-wrap .suite-calc {
+  margin: 0;
+}
+
+/* Holds the calculator's place while its chunk loads (client navigation only). */
+.calc-loading {
+  min-height: 560px;
+  margin: 28px 0;
+}
+
+@media (max-width: 640px) {
+  .suite-calc {
+    padding: 18px 16px;
+  }
+  .suite-calc-results {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
+  }
+}
+
 .blog-callout {
   margin: 28px 0;
   padding: 20px 24px;

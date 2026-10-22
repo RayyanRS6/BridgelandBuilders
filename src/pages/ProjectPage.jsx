@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import BlogCard, { formatPostDate } from '../components/BlogCard.jsx';
 import BookingAside from '../components/BookingAside.jsx';
+import Calculator from '../components/Calculator.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
@@ -51,8 +52,9 @@ const delay = (index, seconds) => (index > 0 ? { transitionDelay: `${seconds}s` 
  * project.guides (loaded with the module by ServiceRoute.jsx).
  *
  * Section order (plan §7): hero → ticker → stats → intro → includes → types →
- * local → gallery → process → cost teaser → testimonial → lead → FAQs →
- * related services → guides → CTA → updated date and sign-off. Every section
+ * local → gallery → process → cost teaser → rental income → testimonial →
+ * lead → FAQs → related services → guides → CTA → updated date and sign-off.
+ * Every section
  * after the hero renders only when its content exists, using the page's
  * existing classes.
  */
@@ -73,6 +75,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
   const local = project.local && has(project.local.items) ? project.local : null;
   const localSources = local && has(local.sources) ? local.sources : [];
   const costTeaser = project.costTeaser && project.costTeaser.text && project.costTeaser.to ? project.costTeaser : null;
+  const rental = project.rental && project.rental.title ? project.rental : null;
+  const rentalSources = rental && has(rental.sources) ? rental.sources : [];
   // Only live pages are linked; a draft related service is left out.
   const related = (project.related || [])
     .map((path) => serviceByPath(path))
@@ -399,6 +403,36 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 {(costTeaser.label || 'See the cost guide').toUpperCase()} <ArrowRightIcon size={13} />
               </Link>
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* RENTAL INCOME (optional): a sourced rent benchmark, a link to the
+          guide and a calculator (src/components/Calculator.jsx). The
+          calculator is a form, so it sits outside the .reveal header. */}
+      {rental && (
+        <section className="process-section includes-section" id="rental-income">
+          <div className="container">
+            <div className="section-header center reveal">
+              <span className="section-tag">{rental.tag}</span>
+              <h2 className="section-title">{rental.title}</h2>
+              {paragraphs(rental.desc).map((text, index) => (
+                <p className="section-desc" key={text.slice(0, 40)}>{renderInline(text, `rental-${index}`)}</p>
+              ))}
+              {rentalSources.map((source, index) => (
+                <p className="section-desc" key={source.url}>
+                  {index === 0 && (rentalSources.length > 1 ? 'Sources: ' : 'Source: ')}
+                  <a href={source.url} rel="noopener" target="_blank">{source.label}</a>
+                  {source.accessed && ` (verified ${source.accessed})`}
+                  {index < rentalSources.length - 1 && ';'}
+                </p>
+              ))}
+            </div>
+            {rental.calculator && (
+              <div className="suite-calc-wrap">
+                <Calculator id={rental.calculator} />
+              </div>
+            )}
           </div>
         </section>
       )}

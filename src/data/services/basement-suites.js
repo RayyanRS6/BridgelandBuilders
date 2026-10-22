@@ -17,6 +17,11 @@
 // states. Program status (verified 2026-10-13): CMHC-insured refinance for
 // suites available since 2025-01-15; Canada Secondary Suite Loan Program will
 // not be implemented (Budget 2025, Annex 3); MHRTC described without rates.
+// Rental income (2026-10-23): the only rent figure is CMHC's October 2025
+// average for a one-bedroom purpose-built apartment in the Winnipeg CMA
+// (Rental Market Survey, Table 1.1.2), always labelled as such: CMHC does not
+// survey basement suites. The calculator takes the visitor's own quoted build
+// cost; there is no suite price on this page.
 
 import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, TIMELINES } from '../facts.js';
 
@@ -104,6 +109,21 @@ export default {
     ],
   },
 
+  // Rental income (ProjectPage, after the process steps): the CMHC rent
+  // benchmark, the rental income guide and the payback calculator.
+  rental: {
+    tag: 'Rental Income',
+    title: 'Will a basement suite pay for itself?',
+    desc: [
+      'Start with the rent. CMHC’s October 2025 survey put the average rent for a one-bedroom purpose-built apartment in Winnipeg at $1,232 a month. CMHC doesn’t survey basement suites, so compare local listings for suites like yours as well.',
+      'Then add the total from your written quote. The calculator below shows gross yield, net monthly income and simple payback. Our guide to [basement suite rental income in Winnipeg](/blog/basement-suite-rental-income-winnipeg) covers the code requirements, rents and financing behind those numbers.',
+    ],
+    calculator: 'suite-payback',
+    sources: [
+      { label: 'CMHC: Rental Market Survey data tables, Winnipeg (October 2025)', url: 'https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-winnipeg-2025-en.xlsx', accessed: '2026-10-23' },
+    ],
+  },
+
   // No gallery or testimonial until real suite jobs are documented.
   gallery: null,
 
@@ -140,7 +160,7 @@ export default {
       'Basement suite renovations in Winnipeg: zoning and permits confirmed first, then entrance, egress, kitchen, bath and separation. Free on-site visit.',
     serviceType: 'Basement suite renovation',
     primaryKeyword: 'basement suite renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // No costTeaser: the estimator prices suites with the basement ranges and has
@@ -148,6 +168,6 @@ export default {
   costTeaser: null,
   // Live pages only are shown; drafts appear when they launch.
   related: ['/services/basement-renovations', '/services/home-additions', '/services/bathroom-renovations'],
-  guides: ['secondary-suite-rules-winnipeg', 'basement-development-permits-winnipeg', 'home-renovation-financing-canada'],
+  guides: ['basement-suite-rental-income-winnipeg', 'secondary-suite-rules-winnipeg', 'basement-development-permits-winnipeg'],
   ownerSignoff: null,
 };
