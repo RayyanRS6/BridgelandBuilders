@@ -6,7 +6,11 @@
  *   node scripts/build-images.mjs --only=cards   title cards only (legacy files kept)
  *   node scripts/build-images.mjs --only=brand   default OG image, app icons and WebP logos
  *   node scripts/build-images.mjs --only=logos   WebP logos only
- *   node scripts/build-images.mjs --only=stock   self-hosted stock photos (home hero)
+ *   node scripts/build-images.mjs --only=stock   self-hosted stock photos
+ *   node scripts/build-images.mjs --only=video --src="<path>/Welcome Video.mp4"
+ *                                                the home hero's welcome video and its
+ *                                                poster (never part of a plain run: it
+ *                                                needs the original and ffmpeg; see below)
  *
  * Blog: reads media-src/manifest.json (from scripts/fetch-legacy-images.mjs)
  * and writes, per image, to public/images/blog/<post-slug>/:
@@ -52,8 +56,10 @@
  * PNGs next to them. Navbar.jsx and Footer.jsx serve them through <picture>
  * with the PNG as the fallback; logo-on-light.png stays the schema logo.
  */
+import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import sharp from 'sharp';
@@ -886,7 +892,8 @@ const STOCK = [
   {
     key: 'home-hero',
     photo: 'photo-1600210492486-724fe5c67fb0',
-    // The home page hero (LCP). Width 2000 is plenty for the 1320w variant.
+    // Was the home page hero (now the welcome video's poster); still shown on
+    // the whole-home and additions pages. Width 2000 is plenty for the 1320w variant.
     url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85&fm=jpg',
     base: 'bright-living-room',
   },
@@ -956,8 +963,119 @@ async function buildStock() {
   console.log(`[images] stock: ${Object.keys(images).length} photo(s) in public/images/stock/; src/data/stockImages.generated.js written`);
 }
 
+/* ======================================================= welcome video */
+
+// The home hero's welcome video (src/components/HeroVideo.jsx), made from
+// the client's original (1920x1080, 30 fps, 30 s; not kept in the repo):
+//
+//   $env:FFMPEG = "<path>\ffmpeg.exe"   (else ffmpeg on the PATH; it needs
+//                                        libx264, libaom-av1, aac and libopus)
+//   node scripts/build-images.mjs --only=video --src="<path>\Welcome Video.mp4"
+//
+// Every version is the same square cut around the speaker: the arch frame is
+// close to square at every width (about 0.8:1 to 1.3:1), and one cut keeps
+// the poster and the video lined up, so the video fades in over its poster
+// without a jump. AV1 (WebM, Opus) first, H.264 (MP4, AAC) for browsers
+// without AV1; keyframes every 2 s; MP4s with +faststart. The phone versions
+// are for screens up to 1024px wide (the frame is at most 400px there).
+// public/videos/ and public/images/video/ are regenerated whole; the names
+// carry a content hash, so vercel.json serves them as immutable.
+//
+// Sizes for the 30 s original (2026-10-23): desktop 1.8 MB AV1 / 2.8 MB
+// H.264, phone 1.25 MB / 1.5 MB. The CRFs were picked by SSIM against the
+// original cut: each AV1 file is smaller than its H.264 one and closer to the
+// original (the patterned shirt is what costs the bits).
+const VIDEO_CROP = 'crop=1080:1080:490:0'; // the speaker's head sits a little right of centre
+const VIDEO_ENCODES = [
+  { group: 'desktop', size: 960, codec: 'av1', crf: 50 },
+  { group: 'desktop', size: 960, codec: 'h264', crf: 30 },
+  { group: 'phone', size: 720, codec: 'av1', crf: 52 },
+  { group: 'phone', size: 640, codec: 'h264', crf: 31 },
+];
+const VIDEO_CODEC_ARGS = {
+  h264: (crf) => ['-c:v', 'libx264', '-profile:v', 'high', '-preset', 'slow', '-crf', String(crf), '-sc_threshold', '0',
+    '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', '-f', 'mp4'],
+  // Cues (the seek index) up front, like +faststart: restarting from 0 for
+  // "Play with sound" then needs no extra request to the end of the file.
+  av1: (crf) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-cpu-used', '5', '-row-mt', '1', '-tiles', '2x2',
+    '-c:a', 'libopus', '-b:a', '64k', '-cues_to_front', '1', '-f', 'webm'],
+};
+// The poster is the first frame, a smile with the eyes open, which is also
+// where the video starts. Shown at up to 460 CSS px (desktop).
+const POSTER_WIDTHS = [480, 720, 960];
+const VIDEO_OUT = join(PUBLIC, 'videos');
+const POSTER_OUT = join(PUBLIC, 'images', 'video');
+const VIDEO_GENERATED = join(ROOT, 'src', 'data', 'welcomeVideo.generated.js');
+
+const ffmpeg = (args, options = {}) =>
+  execFileSync(process.env.FFMPEG || 'ffmpeg', ['-hide_banner', '-loglevel', 'error', ...args], { maxBuffer: 64 * 1024 * 1024, ...options });
+
+/** The `codecs` parameter for a <source type>, read from the file's avcC or av1C record. */
+function videoCodecs(buffer, codec) {
+  if (codec === 'h264') {
+    const at = buffer.indexOf('avcC');
+    const hex = [...buffer.subarray(at + 5, at + 8)].map((b) => b.toString(16).padStart(2, '0')).join('');
+    return `avc1.${hex}, mp4a.40.2`;
+  }
+  // WebM CodecPrivate (EBML id 0x63A2, one-byte size) holding the av1C record (0x81 …).
+  for (let i = 0; i < Math.min(buffer.length, 8192); i += 1) {
+    if (buffer[i] === 0x63 && buffer[i + 1] === 0xa2 && (buffer[i + 2] & 0x80) && buffer[i + 3] === 0x81) {
+      const profile = buffer[i + 4] >> 5;
+      const level = String(buffer[i + 4] & 0x1f).padStart(2, '0');
+      const tier = buffer[i + 5] >> 7 ? 'H' : 'M';
+      return `av01.${profile}.${level}${tier}.08, opus`;
+    }
+  }
+  throw new Error('no av1C record in the WebM output');
+}
+
+async function buildVideo() {
+  const src = (process.argv.find((a) => a.startsWith('--src=')) || '').slice('--src='.length);
+  if (!src || !existsSync(src)) throw new Error('--only=video needs --src="<path to the original welcome video>"');
+  rmSync(VIDEO_OUT, { recursive: true, force: true });
+  rmSync(POSTER_OUT, { recursive: true, force: true });
+  mkdirSync(VIDEO_OUT, { recursive: true });
+  mkdirSync(POSTER_OUT, { recursive: true });
+
+  const frame = ffmpeg(['-i', src, '-vf', VIDEO_CROP, '-frames:v', '1', '-f', 'image2pipe', '-c:v', 'png', 'pipe:1']);
+  const { set: poster, mainKb } = await variantSet(frame, {
+    dir: POSTER_OUT,
+    urlDir: '/images/video',
+    base: 'welcome-video-poster',
+    ratio: 1,
+    originalWidth: 1080,
+    label: 'welcome video poster',
+    sizes: POSTER_WIDTHS,
+  });
+  if (mainKb.avifKb > LCP_BUDGET_KB) warnings.push(`welcome video poster AVIF is ${mainKb.avifKb} KB (> ${LCP_BUDGET_KB} KB LCP budget)`);
+
+  const video = { poster, desktop: [], phone: [] };
+  const sizes = [];
+  for (const { group, size, codec, crf } of VIDEO_ENCODES) {
+    const ext = codec === 'av1' ? 'webm' : 'mp4';
+    const temp = join(tmpdir(), `bb-welcome-${size}-${codec}.${ext}`);
+    ffmpeg(['-y', '-i', src, '-vf', `${VIDEO_CROP},scale=${size}:${size}:flags=lanczos`, '-pix_fmt', 'yuv420p',
+      '-g', '60', '-keyint_min', '60', '-map_metadata', '-1', ...VIDEO_CODEC_ARGS[codec](crf), temp]);
+    const buffer = readFileSync(temp);
+    rmSync(temp, { force: true });
+    const name = writeOnce(VIDEO_OUT, `welcome-${size}`, ext, buffer);
+    video[group].push({ src: `/videos/${name}`, type: `video/${ext}; codecs="${videoCodecs(buffer, codec)}"` });
+    sizes.push(`${name} ${kb(buffer)} KB`);
+  }
+  writeFileSync(
+    VIDEO_GENERATED,
+    `// Generated by scripts/build-images.mjs (--only=video) — do not edit by hand.\n` +
+      `// The home hero's welcome video: poster (AVIF/WebP, first frame) and, per\n` +
+      `// screen group, its sources in order of preference (AV1 WebM, then H.264 MP4).\n` +
+      `// "phone" is for screens up to 1024px wide. All are the same square cut.\n` +
+      `export const WELCOME_VIDEO = ${JSON.stringify(video, null, 2)};\n`
+  );
+  console.log(`[images] video: ${sizes.join(', ')}; poster in public/images/video/; src/data/welcomeVideo.generated.js written`);
+}
+
 /* ================================================================= run */
 
+if (only === 'video') await buildVideo();
 if (!only || only === 'blog') await buildBlog();
 if (!only || only === 'stock') await buildStock();
 if (only === 'cards') await buildBlog({ cardsOnly: true });
