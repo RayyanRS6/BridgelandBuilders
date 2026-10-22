@@ -12,7 +12,7 @@ export const WELCOME_VIDEO = {
   },
   "desktop": [
     {
-      "src": "/videos/welcome-960.23def916.webm",
+      "src": "/videos/welcome-960.18f718cf.webm",
       "type": "video/webm; codecs=\"av01.0.05M.08, opus\""
     },
     {
@@ -22,7 +22,7 @@ export const WELCOME_VIDEO = {
   ],
   "phone": [
     {
-      "src": "/videos/welcome-720.de5aeab0.webm",
+      "src": "/videos/welcome-720.392738ef.webm",
       "type": "video/webm; codecs=\"av01.0.04M.08, opus\""
     },
     {

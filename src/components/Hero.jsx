@@ -21,10 +21,13 @@ export default function Hero() {
               WINNIPEG RENOVATION <span>CONTRACTOR</span>
             </h1>
             {/* Leads with the price tool (owner's competitor review). The
-                estimator prices kitchens, bathrooms and basements only, and
-                shows the range before asking for any contact details: five
-                one-tap questions, about 40 seconds in a test run on
-                2026-10-23 (bathroom). */}
+                estimator prices kitchens, bathrooms and basements only. After
+                picking the service it asks bathroom 5, basement 6 and kitchen
+                7 multiple-choice questions, shows the estimated range from
+                question 1, and asks for contact details only after the last
+                one, under the final range (checked 2026-10-23, nothing typed
+                or sent). Automated test runs, with screenshots and waits
+                between taps: bathroom about 40 s, kitchen about 80 s. */}
             <p className="hero-subtitle">
               See your kitchen, bathroom or basement price range in about a minute. No call needed. We also do whole homes, additions and commercial spaces in Winnipeg and nearby communities. On-site visits and written quotes are free.
             </p>

@@ -995,8 +995,10 @@ const VIDEO_ENCODES = [
 const VIDEO_CODEC_ARGS = {
   h264: (crf) => ['-c:v', 'libx264', '-profile:v', 'high', '-preset', 'slow', '-crf', String(crf), '-sc_threshold', '0',
     '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', '-f', 'mp4'],
+  // Cues (the seek index) up front, like +faststart: restarting from 0 for
+  // "Play with sound" then needs no extra request to the end of the file.
   av1: (crf) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-cpu-used', '5', '-row-mt', '1', '-tiles', '2x2',
-    '-c:a', 'libopus', '-b:a', '64k', '-f', 'webm'],
+    '-c:a', 'libopus', '-b:a', '64k', '-cues_to_front', '1', '-f', 'webm'],
 };
 // The poster is the first frame, a smile with the eyes open, which is also
 // where the video starts. Shown at up to 460 CSS px (desktop).

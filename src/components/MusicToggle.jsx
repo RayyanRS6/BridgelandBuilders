@@ -54,10 +54,11 @@ function rememberPaused(paused) {
  * plays on a page that has no button to turn it off.
  *
  * The hero's welcome video can play with sound (HeroVideo.jsx). The two never
- * play together (src/lib/audioFocus.js): when the video's voice starts, the
- * music pauses, stops waiting for a first gesture, and comes back when the
- * voice stops if it was playing before; starting the music mutes the video.
- * Taps on the video's own buttons never start the music.
+ * play together (src/lib/audioFocus.js): while the video's voice plays, the
+ * music is paused and no gesture starts it; when the voice stops, the music
+ * comes back if it was playing, or waits for the next gesture again if it was
+ * waiting. Starting the music mutes the video. Taps on the video's own
+ * buttons never start the music.
  *
  * Deliberately no data-cta: that reports the click to analytics as a lead CTA.
  */
@@ -133,6 +134,10 @@ export default function MusicToggle() {
 
     let active = true;
     let starting = false;
+    // Whether the first-gesture listeners are on, and whether the video's
+    // voice took them off (they come back when it stops).
+    let waiting = false;
+    let waitingAfterVoice = false;
 
     const onGesture = (event) => {
       // The music button handles its own taps, and the video's buttons control
@@ -144,7 +149,13 @@ export default function MusicToggle() {
         starting = false;
       });
     };
+    const startWaiting = () => {
+      waiting = true;
+      GESTURE_EVENTS.forEach((type) => document.addEventListener(type, onGesture, true));
+    };
     const stopWaiting = () => {
+      waiting = false;
+      waitingAfterVoice = false;
       GESTURE_EVENTS.forEach((type) => document.removeEventListener(type, onGesture, true));
     };
     stopWaitingRef.current = stopWaiting;
@@ -152,7 +163,9 @@ export default function MusicToggle() {
     const stopListening = onAudioAnnounced(({ source, playing }) => {
       if (source !== 'voice') return;
       if (playing) {
+        const rearm = waiting || waitingAfterVoice;
         stopWaiting();
+        waitingAfterVoice = rearm;
         if (!audio.paused) {
           resumeAfterVoiceRef.current = true;
           audio.pause();
@@ -160,6 +173,9 @@ export default function MusicToggle() {
       } else if (resumeAfterVoiceRef.current) {
         resumeAfterVoiceRef.current = false;
         startMusic();
+      } else if (waitingAfterVoice) {
+        waitingAfterVoice = false;
+        startWaiting();
       }
     });
 
@@ -167,14 +183,14 @@ export default function MusicToggle() {
       // Try straight away, at the starting volume, before any AudioContext
       // exists (creating one now would only log a warning where it is blocked).
       audio.volume = START_VOLUME;
+      // An AbortError means a pause() came first (the visitor, or the video's
+      // voice): nothing to wait for then.
       audio.play().then(
         () => {
           if (active) fadeIn();
         },
-        () => {
-          if (active) {
-            GESTURE_EVENTS.forEach((type) => document.addEventListener(type, onGesture, true));
-          }
+        (error) => {
+          if (active && !(error && error.name === 'AbortError')) startWaiting();
         }
       );
     }
