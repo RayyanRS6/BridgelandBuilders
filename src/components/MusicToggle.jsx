@@ -201,6 +201,12 @@ export default function MusicToggle() {
       stopListening();
       window.clearInterval(fadeTimerRef.current);
       audio.pause();
+      // Once the player has left the page, stop the download as well: a
+      // removed <audio> otherwise keeps buffering the file on the next page.
+      if (!audio.isConnected) {
+        audio.removeAttribute('src');
+        audio.load();
+      }
       if (graphRef.current) graphRef.current.ctx.close().catch(() => {});
     };
     // Runs once per visit to the home page.

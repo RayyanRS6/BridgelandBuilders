@@ -50,9 +50,10 @@ export default function Hero() {
             <div className="hero-floating-badge">
               <div className="avatar-group">★</div>
               <div className="badge-text">
-                {/* No Google rating next to the main CTA until the profile has
-                    10+ reviews (SEO plan §19). Free written quotes are stated
-                    across the site (FAQs, booking aside, /free-quote).
+                {/* The Google rating sits in the trust strip under the stats
+                    (TrustStrip.jsx), not next to the main CTA. Free written
+                    quotes are stated across the site (FAQs, booking aside,
+                    /free-quote).
                     A badge label, not a heading: it would sit out of order
                     in the page's heading outline. */}
                 <div className="badge-title">Free Written Quotes</div>
