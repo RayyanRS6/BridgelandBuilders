@@ -3,6 +3,7 @@ import BookingAside from '../components/BookingAside.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import RichBody from '../components/RichBody.jsx';
+import TrustStrip from '../components/TrustStrip.jsx';
 import { SERVICE_AREA_STATEMENT, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
@@ -65,6 +66,9 @@ export default function BookingPage() {
               <QuoteBookingForm id="booking-form" title="Book Your Free On-Site Visit" />
             </div>
           </div>
+          {/* Proof under the form: the Google rating. The aside beside the
+              form already has the BBB link and the free visit and quote. */}
+          <TrustStrip items={['google']} cta="book-online" />
         </div>
       </section>
 

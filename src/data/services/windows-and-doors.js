@@ -123,7 +123,7 @@ export default {
     serviceType: 'Window and door installation',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'window and door installation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Optional sections (plan §7), rendered by ProjectPage only when filled in:

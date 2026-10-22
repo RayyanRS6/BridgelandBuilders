@@ -1,6 +1,6 @@
 import { REPLY_TIME, officeHoursText } from '../data/facts.js';
-import { BBB_PROFILE_URL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
-import { CalendarIcon, CheckIcon, ClockIcon, PhoneIcon, ShieldIcon } from './icons.jsx';
+import { BBB_PROFILE_URL, PHOTOS_MAILTO, SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { CalendarIcon, CheckIcon, ClockIcon, MailIcon, PhoneIcon, ShieldIcon } from './icons.jsx';
 
 /**
  * "Monday to Friday, 8:30 a.m. to 4:30 p.m." from BUSINESS_HOURS (the schema's
@@ -61,9 +61,22 @@ export default function BookingAside({ serviceName, title, showHours = false }) 
             {showHours && HOURS_TEXT && <p>Office hours: {HOURS_TEXT}</p>}
           </div>
         </li>
+        {/* Photos by email until the form can take uploads (what uploads
+            would need: the "Photo uploads" note in src/data/quoteForm.js). */}
+        <li className="lead-aside-item">
+          <span className="lead-aside-icon"><MailIcon size={16} /></span>
+          <div>
+            <h3>Have photos or a floor plan?</h3>
+            <p>
+              Email them to <a href={PHOTOS_MAILTO} className="lead-aside-email">{SITE_EMAIL}</a> with your name.
+            </p>
+          </div>
+        </li>
       </ul>
-      {/* Trust line near the form (plan §19): the BBB profile link only. No
-          rating, and no Google rating until the profile has 10+ reviews. */}
+      {/* Trust line near the form (plan §19): the BBB profile link only, no
+          rating. The Google rating shows in the trust strip (TrustStrip.jsx)
+          on the pages around this panel; it stays out of here because
+          /contact-us is at its JavaScript budget. */}
       {BBB_PROFILE_URL && (
         <p className="lead-aside-trust">
           <a href={BBB_PROFILE_URL} rel="noopener" target="_blank" data-cta="booking-aside-bbb">

@@ -3094,3 +3094,249 @@
   margin-bottom: 16px;
   border-radius: var(--radius-sm);
 }
+
+/* =============================================================
+   PROOF & TRUST (competitor review, owner request 2026-10-22)
+   The trust strip (TrustStrip.jsx), the testimonial grid
+   (Testimonial.jsx), the named guarantees (Guarantees.jsx, shown
+   only once the owner switches one on) and the photos-by-email
+   links (BookingAside.jsx, QuoteBookingForm.jsx). New classes only,
+   from the existing tokens; nothing here restyles an existing
+   element. Every link is at least 44px tall.
+   ============================================================= */
+
+/* ---- Trust strip: white badges like .badge-soft, centred under the stats
+   (home, /about-us, service pages), the instant quote's next steps and the
+   /book-online form. The linked badges (Google, BBB) are underlined so they
+   read as links; the offers are plain labels. ---- */
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trust-strip > li {
+  display: flex;
+  min-width: 0;
+}
+
+/* A strip of one badge (/book-online) stays centred at its own width. */
+.trust-strip > li:only-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 18px;
+  border: 1px solid var(--border-subtle);
+  /* Half the 44px height: a pill on one line, a rounded box if it wraps. */
+  border-radius: 22px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.trust-badge-icon {
+  display: inline-flex;
+  flex: none;
+  color: var(--accent-seagreen);
+}
+
+a.trust-badge > span:last-child {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a.trust-badge:hover,
+a.trust-badge:focus-visible {
+  border-color: var(--accent-seagreen);
+  color: var(--accent-seagreen-hover);
+}
+
+/* ---- Testimonials: two or more as a grid of cream cards (the spotlight
+   card's colours), three across on desktop, two on tablets, stacked on
+   phones. One testimonial keeps the original .testimonial-card. ---- */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.testimonial-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-lg);
+  background: var(--bg-cream);
+  box-shadow: var(--shadow-soft);
+}
+
+.testimonial-item .testimonial-quote {
+  font-size: 1rem;
+}
+
+/* The Google link under the testimonials heading: the .blog-card-link look,
+   44px tall. */
+.blog-card-link.testimonial-google-link {
+  min-height: 44px;
+  margin-top: 8px;
+}
+
+/* A testimonial's public source (e.g. the review on Google), once recorded.
+   The darker sea green keeps 4.5:1 on the cream card. */
+.testimonial-source {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent-seagreen-hover);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---- Named guarantees: .include-card cards with a shield, one to three
+   across; one card stays at a readable width. ---- */
+.guarantee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.guarantee-grid-1 {
+  grid-template-columns: minmax(0, 620px);
+  justify-content: center;
+}
+
+.guarantee-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.guarantee-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: var(--accent-seagreen-light);
+  color: var(--accent-seagreen);
+}
+
+.include-card .guarantee-terms {
+  margin-top: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+/* ---- Photos by email: the booking aside's address in white like its phone
+   number, and the confirmation's address; both 44px tall to tap. ---- */
+.lead-aside-item a.lead-aside-email {
+  display: inline-block;
+  padding: 12px 0;
+  color: #fff;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.lead-aside-item a.lead-aside-email:hover {
+  color: #8ed2dc;
+}
+
+.qf-fineprint a.qf-photos-link {
+  display: inline-block;
+  padding: 12px 0;
+  line-height: 20px;
+  overflow-wrap: anywhere;
+}
+
+/* Tablets: two by two, equal widths. */
+@media (max-width: 1024px) {
+  .trust-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 260px));
+    justify-content: center;
+  }
+  .trust-badge {
+    width: 100%;
+  }
+  .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .guarantee-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Phones: two by two across the full width, a badge's text on up to two
+   lines. */
+@media (max-width: 640px) {
+  .trust-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .trust-badge {
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+  }
+  .testimonial-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .testimonial-item {
+    padding: 24px 20px;
+    border-radius: var(--radius-md);
+  }
+  .testimonial-item .testimonial-quote {
+    font-size: 0.97rem;
+  }
+  .guarantee-grid,
+  .guarantee-grid-1,
+  .guarantee-grid-2,
+  .guarantee-grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .testimonial-item {
+    padding: 22px 16px;
+  }
+}
+
+/* One badge per row on the narrowest phones, as the stats are there. */
+@media (max-width: 340px) {
+  .trust-strip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

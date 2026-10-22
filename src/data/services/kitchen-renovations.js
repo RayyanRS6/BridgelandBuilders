@@ -121,14 +121,9 @@ export default {
     label: 'Kitchen renovation costs in Winnipeg',
   },
 
-  // Real client testimonial (confirmed by the owner 2026-10-13).
-  testimonial: {
-    quote:
-      '“They caught something our last quote missed — the fridge door would have blocked the pantry. Small thing, but we’d have lived with it for years. They redrew the layout, built it, and the kitchen actually works now. Cooking in it every day is a pleasure.”',
-    initial: 'M',
-    name: 'Marvin V.',
-    role: 'Homeowner, Kitchen Renovation',
-  },
+  // Real client testimonial (confirmed by the owner 2026-10-13): its id in
+  // src/data/testimonials.js, where the words live.
+  testimonial: 'marvin-v',
 
   // No cost questions here: those live on /services/kitchen-renovations/cost.
   faqs: [
@@ -150,7 +145,7 @@ export default {
       `Kitchen renovations in Winnipeg: layout, cabinets, countertops and lighting, most done in ${TIMELINES.kitchen.short}. Start with a free on-site visit and written quote.`,
     serviceType: 'Kitchen renovation',
     primaryKeyword: 'kitchen renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Live pages only are shown; drafts appear when they launch.

@@ -6,6 +6,7 @@ import Services from '../components/Services.jsx';
 import WhyUs from '../components/WhyUs.jsx';
 import Process from '../components/Process.jsx';
 import Testimonial from '../components/Testimonial.jsx';
+import Guarantees from '../components/Guarantees.jsx';
 import Gallery from '../components/Gallery.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import BlogCard from '../components/BlogCard.jsx';
@@ -73,6 +74,10 @@ export default function Home() {
         }
       />
 
+      {/* NAMED GUARANTEES: left out until the owner switches one on
+          (src/data/guarantees.js; __HAS_GUARANTEES__ in vite.config.js). */}
+      {__HAS_GUARANTEES__ && <Guarantees page="home" />}
+
       {/* 9. SERVICE AREA (same dark overview box as /service-areas) */}
       <section className="process-section" id="service-area">
         <div className="container">
@@ -103,8 +108,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. TESTIMONIAL SPOTLIGHT */}
-      <Testimonial />
+      {/* 10. TESTIMONIALS (every one in src/data/testimonials.js) */}
+      <Testimonial cta="home-google-reviews" />
 
       {/* 11. INSPIRATION GALLERY */}
       <Gallery />

@@ -105,7 +105,7 @@ export default {
     // BusinessAudience the commercial verticals carry.
     audience: { '@type': 'Audience', audienceType: 'Homeowners, businesses, property managers, architects and designers' },
     primaryKeyword: 'general contractor Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   typesTitle: 'Projects We Manage as General Contractor',

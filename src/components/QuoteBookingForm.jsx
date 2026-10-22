@@ -8,7 +8,7 @@ import {
   SERVICE_AREA,
 } from '../data/quoteForm.js';
 import { REPLY_TIME } from '../data/facts.js';
-import { SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { PHOTOS_MAILTO, SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { newEventId, track } from '../lib/analytics.js';
 import { getAttribution } from '../lib/attribution.js';
 import { bookSlot, saveLead, trackConversion, utmSource } from '../lib/bookingApi.js';
@@ -490,6 +490,13 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
           </p>
           <p>
             We’ll meet you at <strong>{values.address}</strong> to walk through the space and talk about your project.
+          </p>
+          {/* Shown only once the lead and the booking are saved. Photos go by
+              email until the form can take uploads ("Photo uploads" note in
+              src/data/quoteForm.js). */}
+          <p className="qf-fineprint">
+            Have photos or a floor plan of the space? Email them to{' '}
+            <a href={PHOTOS_MAILTO} className="qf-photos-link">{SITE_EMAIL}</a> with your name.
           </p>
           <p className="qf-fineprint">
             Need to change the time? Call us on <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>.

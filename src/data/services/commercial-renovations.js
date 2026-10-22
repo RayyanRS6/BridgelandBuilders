@@ -7,8 +7,9 @@
 //
 // Truth rules (plan Guardrails): no per-vertical job counts, no named past
 // projects or clients, no licence/insurance/WCB/warranty claims, no commercial
-// timelines or prices. The testimonial below is a real client's (confirmed by
-// the owner 2026-10-13); add new ones only from real clients, with consent.
+// timelines or prices. The testimonial is a real client's (confirmed by the
+// owner 2026-10-13, text in src/data/testimonials.js); add new ones only from
+// real clients, with consent.
 //
 // Every rule in `local` was checked against the official page in its sources
 // list on 2026-10-13. Re-check them before changing the wording. The
@@ -84,14 +85,9 @@ export default {
     ],
   },
 
-  // Real client testimonial (confirmed by the owner 2026-10-13).
-  testimonial: {
-    quote:
-      '“We had six weeks between the lease starting and our opening date, and everyone told us it was tight. Bridgeland scoped it, worked two weekends to keep us on track, and we opened on the day we’d advertised. We’ve used them for two more locations since.”',
-    initial: 'A',
-    name: 'Amrit S.',
-    role: 'Business owner, Retail Fit-Out',
-  },
+  // Real client testimonial (confirmed by the owner 2026-10-13): its id in
+  // src/data/testimonials.js, where the words live.
+  testimonial: 'amrit-s',
 
   faqsTitle: 'Commercial Renovation FAQs',
   faqs: [
@@ -117,7 +113,7 @@ export default {
     // the people who run commercial property.
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'commercial renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Optional sections (plan §7), rendered by ProjectPage only when filled in:
@@ -128,7 +124,8 @@ export default {
   //   guides     [blogSlug]                               related guides (blog posts)
   //   faqsTitle  string                                   heading over the FAQs
   //   ownerSignoff { name, role, date }                   owner sign-off line
-  // gallery and testimonial are optional too.
+  // gallery and testimonial are optional too (testimonial: an id, or a list
+  // of ids, from src/data/testimonials.js).
   //
   // `to` on a types card is the vertical's page (with an optional #anchor:
   // Hotels goes to the hotel cards on the restaurant page). ProjectPage links

@@ -102,7 +102,7 @@ export default {
   gallery: {
     tag: 'Design Ideas',
     title: 'Home Extension Ideas',
-    desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
+    desc: 'Design ideas for exteriors and new living space, to bring to your on-site visit.',
     items: [
       { img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80', alt: 'Modern house with wood-slat cladding, dark metal siding, and a tall glass entry', title: 'Mixed Exterior Cladding', text: 'Wood slats, dark metal siding, and a tall glass entry' },
       { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Bright Living Room', text: 'Large windows, light wood floors, and a wall of framed photos' },
@@ -122,14 +122,9 @@ export default {
     ],
   },
 
-  // Real client testimonial (confirmed by the owner 2026-10-13).
-  testimonial: {
-    quote:
-      'We loved our street but had completely run out of room. Bridgeland helped us add a family room that looks like it was part of the original house. The transitions are clean, the room stays comfortable in winter, and we always knew what was happening next.',
-    initial: 'J',
-    name: 'Jordan R.',
-    role: 'Homeowner, Home Extension',
-  },
+  // Real client testimonial (confirmed by the owner 2026-10-13): its id in
+  // src/data/testimonials.js, where the words live.
+  testimonial: 'jordan-r',
 
   faqs: [
     { q: 'How long does a home addition take?', a: `Many straightforward additions take ${TIMELINES.addition.words} once permits and materials are ready. Size, soil and foundation conditions, structural changes, and custom finishes all affect the schedule. You get a timeline with your written quote, and a progress update every week once construction starts, so changes never come as a surprise.` },
@@ -150,7 +145,7 @@ export default {
       'Home additions in Winnipeg that match the existing house, with permits, foundation, structure and finishes coordinated. Free on-site visit and quote.',
     serviceType: 'Home addition',
     primaryKeyword: 'home addition Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // No additions cost page (the estimator has no additions data), so the
