@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { announceAudio, onAudioAnnounced, OWN_AUDIO_ATTR } from '../lib/audioFocus.js';
 import { MusicIcon, PauseIcon } from './icons.jsx';
 
 // Compressed from the client's 320 kbps original to 128 kbps (3.5 MB).
@@ -52,6 +53,12 @@ function rememberPaused(paused) {
  * Leaving the page unmounts the player, which stops the music, so it never
  * plays on a page that has no button to turn it off.
  *
+ * The hero's welcome video can play with sound (HeroVideo.jsx). The two never
+ * play together (src/lib/audioFocus.js): when the video's voice starts, the
+ * music pauses, stops waiting for a first gesture, and comes back when the
+ * voice stops if it was playing before; starting the music mutes the video.
+ * Taps on the video's own buttons never start the music.
+ *
  * Deliberately no data-cta: that reports the click to analytics as a lead CTA.
  */
 export default function MusicToggle() {
@@ -63,6 +70,8 @@ export default function MusicToggle() {
   const fadeTimerRef = useRef(0);
   // Removes the first-gesture listeners once the music is playing.
   const stopWaitingRef = useRef(() => {});
+  // Set when the video's voice paused the music, which resumes after it.
+  const resumeAfterVoiceRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
   // iPhones ignore audio.volume, so the fade runs through a Web Audio gain
@@ -126,8 +135,10 @@ export default function MusicToggle() {
     let starting = false;
 
     const onGesture = (event) => {
-      // The music button handles its own taps.
+      // The music button handles its own taps, and the video's buttons control
+      // a sound of their own.
       if (starting || !allowsSound(event) || buttonRef.current?.contains(event.target)) return;
+      if (event.target instanceof Element && event.target.closest(`[${OWN_AUDIO_ATTR}]`)) return;
       starting = true;
       startMusic().then(() => {
         starting = false;
@@ -137,6 +148,20 @@ export default function MusicToggle() {
       GESTURE_EVENTS.forEach((type) => document.removeEventListener(type, onGesture, true));
     };
     stopWaitingRef.current = stopWaiting;
+
+    const stopListening = onAudioAnnounced(({ source, playing }) => {
+      if (source !== 'voice') return;
+      if (playing) {
+        stopWaiting();
+        if (!audio.paused) {
+          resumeAfterVoiceRef.current = true;
+          audio.pause();
+        }
+      } else if (resumeAfterVoiceRef.current) {
+        resumeAfterVoiceRef.current = false;
+        startMusic();
+      }
+    });
 
     if (!visitorPaused()) {
       // Try straight away, at the starting volume, before any AudioContext
@@ -157,6 +182,7 @@ export default function MusicToggle() {
     return () => {
       active = false;
       stopWaiting();
+      stopListening();
       window.clearInterval(fadeTimerRef.current);
       audio.pause();
       if (graphRef.current) graphRef.current.ctx.close().catch(() => {});
@@ -168,6 +194,8 @@ export default function MusicToggle() {
   const toggleMusic = () => {
     const audio = audioRef.current;
     if (!audio) return;
+    // The visitor's choice wins over a pending resume after the video's voice.
+    resumeAfterVoiceRef.current = false;
     if (audio.paused) {
       rememberPaused(false);
       startMusic();
@@ -187,6 +215,8 @@ export default function MusicToggle() {
         onPlay={() => {
           stopWaitingRef.current();
           setIsPlaying(true);
+          // Mutes the welcome video if it is playing with sound.
+          announceAudio('music', true);
         }}
         onPause={() => setIsPlaying(false)}
       />

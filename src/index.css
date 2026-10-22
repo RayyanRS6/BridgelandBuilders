@@ -752,6 +752,91 @@ button {
   transform: scale(1.03);
 }
 
+/* The welcome video (HeroVideo.jsx) fades in over its poster once it is
+   playing. Both are the same square cut, pinned to the top so the speaker's
+   head is never cropped; the hover zoom grows from the top for the same
+   reason. */
+.hero-arch-frame .hero-video-poster,
+.hero-video {
+  object-position: 50% 0;
+  transform-origin: 50% 0;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+.hero-video.is-visible {
+  opacity: 1;
+}
+
+.hero-arch-frame:hover .hero-video {
+  transform: scale(1.03);
+}
+
+/* Sound and pause buttons: bottom right, clear of the floating badge (which
+   is bottom left here, up to about 104px high while it floats). */
+.hero-video-controls {
+  position: absolute;
+  right: 14px;
+  bottom: 116px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Dark translucent pills like the music button, 44px tall. */
+.hero-video-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--border-dark-subtle);
+  border-radius: var(--radius-full);
+  background: var(--bg-dark);
+  background: color-mix(in srgb, var(--bg-dark) 80%, transparent);
+  color: var(--text-light);
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-lift);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.hero-video-btn:hover,
+.hero-video-btn:focus-visible {
+  background: var(--bg-dark-card);
+}
+
+.hero-video-btn:focus-visible {
+  outline: 2px solid var(--text-light);
+  outline-offset: 2px;
+}
+
+.hero-video-btn svg {
+  flex: none;
+  color: var(--accent-red);
+}
+
+.hero-video-btn-icon {
+  padding: 0;
+}
+
+.hero-video-btn-icon svg {
+  color: var(--text-light);
+}
+
 .hero-floating-badge {
   position: absolute;
   bottom: 24px;
@@ -2057,6 +2142,13 @@ button {
     margin: 0 auto;
     bottom: -20px;
   }
+  /* Centred above the badge, which now hangs over the bottom of the frame. */
+  .hero-video-controls {
+    left: 0;
+    right: 0;
+    bottom: 74px;
+    justify-content: center;
+  }
   .stats-grid,
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2313,6 +2405,16 @@ button {
   .hero-floating-badge .badge-text p {
     font-size: 0.74rem;
     line-height: 1.35;
+  }
+  .hero-video-controls {
+    bottom: 60px;
+  }
+  .hero-video-btn {
+    padding: 0 14px;
+    font-size: 0.8rem;
+  }
+  .hero-video-btn-icon {
+    padding: 0;
   }
 
   /* ---- Ticker ---- */
@@ -2669,6 +2771,15 @@ button {
   .testimonial-card,
   .cta-banner-card {
     padding: 26px 16px;
+  }
+}
+
+/* Below about 363px the floating badge wraps onto a second line and grows
+   taller, so the welcome video's buttons sit higher to stay clear of it
+   (still below the speaker's chin). */
+@media (max-width: 365px) {
+  .hero-video-controls {
+    bottom: 70px;
   }
 }
 

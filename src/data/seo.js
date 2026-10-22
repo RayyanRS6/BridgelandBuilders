@@ -81,7 +81,7 @@ export const PAGE_SEO = {
     description:
       'Winnipeg renovation contractor for kitchens, bathrooms, basement development, additions and commercial spaces. Free on-site visit and free written quote.',
     image: DEFAULT_IMAGE,
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   '/services': {
     title: 'Renovation Services in Winnipeg | Bridgeland Builders',
