@@ -496,7 +496,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
               src/data/quoteForm.js). */}
           <p className="qf-fineprint">
             Have photos or a floor plan of the space? Email them to{' '}
-            <a href={PHOTOS_MAILTO} className="qf-photos-link">{SITE_EMAIL}</a> with your name.
+            <a href={PHOTOS_MAILTO} className="qf-photos-link" data-cta="booking-done-photos-email">{SITE_EMAIL}</a> with your name.
           </p>
           <p className="qf-fineprint">
             Need to change the time? Call us on <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a>.

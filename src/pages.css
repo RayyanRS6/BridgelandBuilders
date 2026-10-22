@@ -3108,7 +3108,8 @@
 /* ---- Trust strip: white badges like .badge-soft, centred under the stats
    (home, /about-us, service pages), the instant quote's next steps and the
    /book-online form. The linked badges (Google, BBB) are underlined so they
-   read as links; the offers are plain labels. ---- */
+   read as links (the BBB one with a trailing arrow, not a seal-like icon);
+   the offers are plain labels. ---- */
 .trust-strip {
   display: flex;
   flex-wrap: wrap;
@@ -3153,7 +3154,7 @@
   color: var(--accent-seagreen);
 }
 
-a.trust-badge > span:last-child {
+a.trust-badge > .trust-badge-text {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -3196,11 +3197,22 @@ a.trust-badge:focus-visible {
   font-size: 1rem;
 }
 
-/* The Google link under the testimonials heading: the .blog-card-link look,
-   44px tall. */
+/* The initial circle keeps its 44px round shape in the narrower grid columns
+   (index.css only sets flex: none at 640px and below). */
+.testimonial-item .author-initial {
+  flex: none;
+}
+
+/* The Google link: the .blog-card-link look, 44px tall. Beside the heading on
+   the single spotlight card, centred under the cards in the grid. */
 .blog-card-link.testimonial-google-link {
   min-height: 44px;
   margin-top: 8px;
+}
+
+.testimonial-more {
+  margin: 20px 0 0;
+  text-align: center;
 }
 
 /* A testimonial's public source (e.g. the review on Google), once recorded.
@@ -3318,6 +3330,9 @@ a.trust-badge:focus-visible {
   }
   .testimonial-item .testimonial-quote {
     font-size: 0.97rem;
+  }
+  .testimonial-more {
+    margin-top: 10px;
   }
   .guarantee-grid,
   .guarantee-grid-1,

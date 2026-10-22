@@ -2,11 +2,12 @@
 // guarantee is a binding public promise, so every one is OFF until the owner
 // has picked it and confirmed in writing each point listed for it in
 // GUARANTEE_CONDITIONS below, and the exact `promise` and `terms` wording.
-// Then set enabled: true and rebuild: src/components/Guarantees.jsx shows the
-// enabled ones. Never enable one to fill a gap, and no guarantee or warranty
-// schema.
+// Then record that confirmation in `confirmed` ({ by: 'Graeme Barker', date:
+// 'YYYY-MM-DD' }), set enabled: true and rebuild: src/components/Guarantees.jsx
+// shows only the ones with both (isLive). Never enable one to fill a gap, and
+// no guarantee or warranty schema.
 //
-// While none is enabled, vite.config.js sets __HAS_GUARANTEES__ to false and
+// While none is live, vite.config.js sets __HAS_GUARANTEES__ to false and
 // the pages leave the section out entirely, so no page downloads this text.
 // Plain data, no imports (vite.config.js reads it).
 //
@@ -27,6 +28,7 @@ export const GUARANTEES = [
     terms: 'Covers the scope in your signed quote, with taxes shown.',
     pages: ['home', 'process', 'residential'],
     enabled: false,
+    confirmed: null,
   },
   {
     id: 'friday-photo-report',
@@ -35,6 +37,7 @@ export const GUARANTEES = [
     terms: 'Sent by email or text, from the first week on site to handover.',
     pages: ['home', 'process', 'residential', 'commercial'],
     enabled: false,
+    confirmed: null,
   },
   {
     id: 'open-on-your-date',
@@ -43,6 +46,7 @@ export const GUARANTEES = [
     terms: 'Dates moved by permit reviews, inspections, landlord work or changes you request are agreed with you in writing.',
     pages: ['commercial'],
     enabled: false,
+    confirmed: null,
   },
 ];
 
@@ -69,5 +73,12 @@ export const GUARANTEE_CONDITIONS = {
   ],
 };
 
-/** Whether any guarantee is switched on (read by vite.config.js). */
-export const hasEnabledGuarantees = () => GUARANTEES.some((item) => item.enabled);
+/**
+ * Whether a guarantee may be shown: switched on, and the owner's written
+ * confirmation recorded (who and when). `enabled` alone is never enough.
+ */
+export const isLive = (item) =>
+  item.enabled === true && Boolean(item.confirmed && item.confirmed.by && /^\d{4}-\d{2}-\d{2}$/.test(item.confirmed.date || ''));
+
+/** Whether any guarantee can be shown (read by vite.config.js). */
+export const hasEnabledGuarantees = () => GUARANTEES.some(isLive);

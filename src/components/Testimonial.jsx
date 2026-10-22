@@ -7,7 +7,10 @@ import { ArrowRightIcon } from './icons.jsx';
 // own); two or more as a grid: three across on desktop, two on tablets,
 // stacked on phones, so new ones drop straight in. No star glyphs: a rating
 // needs a source (plan §19). The Google link opens the Business Profile, where
-// the reviews themselves are read (they are not copied onto the site).
+// the reviews themselves are read (they are not copied onto the site). These
+// are testimonials, not those Google reviews (their source is not recorded
+// yet), so the grid is tagged "Client Testimonials" and its Google link sits
+// under the cards as a next step, not under the heading as their source.
 
 const HEADLINE = 'What Our Clients Say';
 const SUB = 'In their own words: what it’s like working with Bridgeland Builders.';
@@ -75,10 +78,9 @@ export default function Testimonial({ items = TESTIMONIALS, cta = 'testimonials-
     <section className="testimonial-section" id="testimonials">
       <div className="container">
         <div className="section-header center reveal">
-          <span className="section-tag">Client Reviews</span>
+          <span className="section-tag">Client Testimonials</span>
           <h2 className="section-title">{HEADLINE}</h2>
           <p className="section-desc">{SUB}</p>
-          {GBP.mapsUrl && <GoogleReviewsLink cta={cta} />}
         </div>
         <div className={`testimonial-grid testimonial-grid-${columns}`}>
           {items.map((item, index) => (
@@ -91,6 +93,11 @@ export default function Testimonial({ items = TESTIMONIALS, cta = 'testimonials-
             </figure>
           ))}
         </div>
+        {GBP.mapsUrl && (
+          <p className="testimonial-more">
+            <GoogleReviewsLink cta={cta} />
+          </p>
+        )}
       </div>
     </section>
   );

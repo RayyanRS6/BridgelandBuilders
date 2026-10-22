@@ -1,15 +1,16 @@
-import { GUARANTEES } from '../data/guarantees.js';
+import { GUARANTEES, isLive } from '../data/guarantees.js';
 import { ShieldIcon } from './icons.jsx';
 
 /**
  * The named guarantees switched on for `page` ('home', 'process',
  * 'residential', 'commercial' or 'additional'; see src/data/guarantees.js).
- * Each one waits for the owner's written confirmation of its terms. Pages
- * render this only when __HAS_GUARANTEES__ is true (vite.config.js), so while
- * none is enabled neither this component nor the text is downloaded.
+ * Each one shows only once it is enabled and the owner's written
+ * confirmation of its terms is recorded (isLive). Pages render this only when
+ * __HAS_GUARANTEES__ is true (vite.config.js), so while none is live neither
+ * this component nor the text is downloaded.
  */
 export default function Guarantees({ page }) {
-  const items = GUARANTEES.filter((item) => item.enabled && item.pages.includes(page));
+  const items = GUARANTEES.filter((item) => isLive(item) && item.pages.includes(page));
   if (!items.length) return null;
 
   return (

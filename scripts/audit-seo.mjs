@@ -20,9 +20,10 @@
  *   WARN   quality: title/description lengths, duplicates, image hygiene,
  *          internal-link coverage, lastmod uniformity, <main> text changed
  *          without an `updated` bump (content-hash guard), stale cost guides
- *          and source dates, posts past their review-by date, keyword map,
- *          readability (paragraphs over 60 words), JS budgets, service
- *          timelines that disagree with src/data/facts.js (fact drift),
+ *          and source dates, posts past their review-by date, a Google rating
+ *          and review count (REVIEW_STATS) not re-checked for over a month,
+ *          keyword map, readability (paragraphs over 60 words), JS budgets,
+ *          service timelines that disagree with src/data/facts.js (fact drift),
  *          partial lists of the nearby communities (src/data/areas.js),
  *          stock photos still hotlinked from Unsplash.
  *   INFO   accepted interim states (Wix-hosted images until the migration,
@@ -130,6 +131,9 @@ const BANNED_CLAIMS = [
 // Yearly refresh guard (plan §8/§9): cost-guide data and source "verified" dates.
 const COST_GUIDE_STALE_MONTHS = 13;
 const SOURCE_STALE_DAYS = 365;
+// The Google rating and review count the trust strip shows (REVIEW_STATS in
+// src/data/siteConfig.js) are typed in from the profile, monthly (plan §20).
+const REVIEW_STATS_STALE_DAYS = 35;
 // Brotli KB of JS loaded before interaction (plan §4 budgets).
 const jsBudgetKb = (route) => {
   if (route === '/') return 80;
@@ -968,6 +972,17 @@ for (const post of BLOG_POSTS) {
   const reviewBy = String(post.reviewBy || '').slice(0, 10);
   if (/^\d{4}-\d{2}-\d{2}$/.test(reviewBy) && todayIso > reviewBy) {
     report.warn('content.review-due', `/blog/${post.slug}`, `review-by date ${reviewBy} has passed — re-check its dated facts, then set a new "reviewBy" in blog-raw/posts/${post.slug}.json`);
+  }
+}
+// The Google rating and review count on the trust strip (TrustStrip.jsx) are
+// not live: with a handful of reviews, one new review changes them, and the
+// site would misstate them until REVIEW_STATS is updated by hand.
+const reviewStats = siteConfig.REVIEW_STATS || {};
+if (Number(reviewStats.count) > 0) {
+  const asOf = String(reviewStats.asOf || '').slice(0, 10);
+  const statsCutoff = isoDay(new Date(NOW.getTime() - REVIEW_STATS_STALE_DAYS * 86400000));
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(asOf) || asOf < statsCutoff) {
+    report.warn('content.stale-review-stats', '/', `Google rating ${Number(reviewStats.rating).toFixed(1)} from ${reviewStats.count} reviews (REVIEW_STATS) last checked ${asOf || 'never'}, over ${REVIEW_STATS_STALE_DAYS} days ago — re-read the Google Business Profile, then update rating, count and asOf in src/data/siteConfig.js`);
   }
 }
 

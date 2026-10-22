@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero.jsx';
 import Ticker from '../components/Ticker.jsx';
@@ -5,7 +6,6 @@ import Stats from '../components/Stats.jsx';
 import Services from '../components/Services.jsx';
 import WhyUs from '../components/WhyUs.jsx';
 import Process from '../components/Process.jsx';
-import Testimonial from '../components/Testimonial.jsx';
 import Guarantees from '../components/Guarantees.jsx';
 import Gallery from '../components/Gallery.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
@@ -18,6 +18,17 @@ import { HOME_GUIDES as GUIDES } from '../data/homeGuides.js';
 import { REPLY_TIME } from '../data/facts.js';
 import { COST_HUB_PATH, SERVICE_AREA_NAMES } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
+import { lazyWithRetry } from '../lib/lazyRetry.js';
+
+// The testimonials (all six, the page's largest block of text) are far below
+// the fold, so their chunk is not modulepreloaded: it loads while the page
+// hydrates, keeping '/' inside its JS budget (plan §4). The prerender waits
+// for it (entry-server.jsx), so the static HTML has every testimonial, and
+// hydration keeps that HTML until the chunk has loaded (lib/lazyRetry.js).
+// This page keeps no state of its own: a re-render of it before that chunk
+// arrives would make React drop the section's HTML and render it again. If
+// state is ever added here, hoist this section's element to a module constant.
+const Testimonial = lazyWithRetry(() => import('../components/Testimonial.jsx'));
 
 // The home page's short version of /our-process (the full seven steps live there).
 const HOME_STEPS = [
@@ -108,8 +119,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. TESTIMONIALS (every one in src/data/testimonials.js) */}
-      <Testimonial cta="home-google-reviews" />
+      {/* 10. TESTIMONIALS (every one in src/data/testimonials.js; lazy, above) */}
+      <Suspense fallback={null}>
+        <Testimonial cta="home-google-reviews" />
+      </Suspense>
 
       {/* 11. INSPIRATION GALLERY */}
       <Gallery />

@@ -62,13 +62,17 @@ export default function BookingAside({ serviceName, title, showHours = false }) 
           </div>
         </li>
         {/* Photos by email until the form can take uploads (what uploads
-            would need: the "Photo uploads" note in src/data/quoteForm.js). */}
+            would need: the "Photo uploads" note in src/data/quoteForm.js).
+            Worded as a step after the form: on phones this panel sits above
+            it, and the lead must reach the CRM first. */}
         <li className="lead-aside-item">
           <span className="lead-aside-icon"><MailIcon size={16} /></span>
           <div>
             <h3>Have photos or a floor plan?</h3>
             <p>
-              Email them to <a href={PHOTOS_MAILTO} className="lead-aside-email">{SITE_EMAIL}</a> with your name.
+              After you send the form, email them to{' '}
+              <a href={PHOTOS_MAILTO} className="lead-aside-email" data-cta="booking-aside-photos-email">{SITE_EMAIL}</a> with
+              your name.
             </p>
           </div>
         </li>
