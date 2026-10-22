@@ -3332,7 +3332,10 @@ a.trust-badge:focus-visible {
   box-shadow: var(--shadow-soft);
 }
 
+/* The quote takes the spare height, so the stars stay on top of it and the
+   author at the foot of the card. */
 .testimonial-item .testimonial-quote {
+  flex-grow: 1;
   font-size: 1rem;
 }
 
@@ -3365,6 +3368,15 @@ a.trust-badge:focus-visible {
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* The stars a review shows on its source (Google reviews only). */
+.testimonial-stars {
+  margin: 0 0 12px;
+  color: var(--accent-seagreen);
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+  line-height: 1;
 }
 
 /* ---- Named guarantees: .include-card cards with a shield, one to three
