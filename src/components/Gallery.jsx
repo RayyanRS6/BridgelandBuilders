@@ -72,10 +72,12 @@ export default function Gallery() {
   return (
     <section className="gallery-section" id="inspiration">
       <div className="container">
+        {/* Stock photos, labelled as design ideas (never as our jobs): the
+            alts and captions describe what is in the picture. */}
         <div className="section-header center reveal">
-          <span className="section-tag">Explore Services</span>
+          <span className="section-tag">Design Ideas</span>
           <h2 className="section-title">Get Inspired: Transform Your Space with Bridgeland Builders</h2>
-          <p className="section-desc">Ideas for the spaces we build. Inspiration photos for now, until our own project photos are added.</p>
+          <p className="section-desc">Design ideas for the spaces we build. Pick one to see what the work involves and how we run it.</p>
         </div>
 
         <div className="gallery-grid">

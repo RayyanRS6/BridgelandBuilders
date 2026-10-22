@@ -87,25 +87,25 @@ export const PAGE_SEO = {
     title: 'Renovation Services in Winnipeg | Bridgeland Builders',
     description:
       'Renovation services in Winnipeg for homes and businesses: kitchens, bathrooms, basements, whole homes, additions, commercial fit-ups, flooring and more.',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   '/about-us': {
     title: 'About Bridgeland Builders | Winnipeg Renovation Contractor',
     description:
       `Bridgeland Builders renovates homes and businesses in Winnipeg and nearby communities, with over ${EXPERIENCE_YEARS} years of combined experience and ${PROJECT_COUNT}+ projects.`,
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   '/our-process': {
     title: 'Our Renovation Process | Bridgeland Builders Winnipeg',
     description:
       'How a Bridgeland Builders renovation runs, from a free on-site visit and written quote to permits, weekly updates, inspections and handover.',
-    updated: '2026-10-14',
+    updated: '2026-10-23',
   },
   '/projects': {
     title: 'Renovation Projects & Ideas | Bridgeland Builders Winnipeg',
     description:
-      'Design ideas for kitchen, bathroom, basement, whole-home and commercial renovations, with links to each service. Case studies of our own work to follow.',
-    updated: '2026-10-13',
+      'Design ideas for kitchen, bathroom, basement, whole-home and commercial renovations, with links to each service and how to book a free on-site visit.',
+    updated: '2026-10-23',
   },
   '/faqs': {
     title: 'Winnipeg Renovation FAQs | Bridgeland Builders',
@@ -117,19 +117,19 @@ export const PAGE_SEO = {
     title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',
     description:
       'Get a free instant renovation quote in Winnipeg. Answer a few questions for a starting price range, then book a free on-site visit for a written quote.',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   '/book-online': {
     title: 'Book a Free On-Site Renovation Visit | Bridgeland Builders',
     description:
       'Book a free on-site renovation visit in Winnipeg or a nearby community. We look at the space with you, then send a free written quote. No obligation.',
-    updated: '2026-10-14',
+    updated: '2026-10-23',
   },
   '/contact-us': {
     title: 'Contact Bridgeland Builders | Winnipeg Renovations',
     description:
       `Contact Bridgeland Builders about your Winnipeg renovation. Call ${SITE_PHONE}, email us or send your project details. We reply within ${REPLY_TIME}.`,
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   // Replaces /outside-winnipeg (308 in src/data/redirects.js). Page content:
   // src/data/serviceAreasContent.js; communities: SERVICE_AREAS in areas.js.

@@ -97,7 +97,7 @@ export default {
     serviceType: 'Retail renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Retailers and commercial property owners' },
     primaryKeyword: 'retail renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   typesTitle: 'Types of Retail Renovations',

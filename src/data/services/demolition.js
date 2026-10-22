@@ -124,7 +124,7 @@ export default {
     serviceType: 'Interior demolition',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'interior demolition Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.

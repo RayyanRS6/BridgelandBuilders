@@ -133,14 +133,9 @@ export default {
     label: 'Basement development costs in Winnipeg',
   },
 
-  // Real client testimonial (confirmed by the owner 2026-10-13).
-  testimonial: {
-    quote:
-      '“Two contractors quoted us to frame the basement and neither mentioned the damp patch by the back corner. Bridgeland spotted it in the first ten minutes and dealt with it before they built anything. The basement has been dry through two winters now and the kids basically live down there.”',
-    initial: 'T',
-    name: 'Trevor L.',
-    role: 'Homeowner, Basement Renovation',
-  },
+  // Real client testimonial (confirmed by the owner 2026-10-13): its id in
+  // src/data/testimonials.js, where the words live.
+  testimonial: 'trevor-l',
 
   // No cost questions here: those live on /services/basement-renovations/cost.
   faqs: [
@@ -163,7 +158,7 @@ export default {
       'Basement development and renovations in Winnipeg: moisture checked first, walls insulated for winter, permits coordinated. Free on-site visit and quote.',
     serviceType: 'Basement renovation',
     primaryKeyword: 'basement development Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Live pages only are shown; drafts appear when they launch.

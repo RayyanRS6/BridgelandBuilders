@@ -99,7 +99,7 @@ export default {
     serviceType: 'Office renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Businesses and commercial property owners' },
     primaryKeyword: 'office renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   typesTitle: 'Types of Office Renovations',

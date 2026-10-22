@@ -105,7 +105,7 @@ export default {
     serviceType: 'Restaurant and hospitality renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Restaurants, cafés, bars and hotels' },
     primaryKeyword: 'restaurant renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   typesTag: 'Hospitality Spaces',

@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero.jsx';
 import Process from '../components/Process.jsx';
 import RichBody from '../components/RichBody.jsx';
 import Testimonial from '../components/Testimonial.jsx';
+import Guarantees from '../components/Guarantees.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { REPLY_TIME, SITE_PHONE, TIMELINES } from '../data/facts.js';
 import { usePageSeo } from '../hooks/useSeo.js';
@@ -99,6 +100,10 @@ export default function ProcessPage() {
         desc="Seven steps from your first question to the day we hand the space back."
       />
 
+      {/* Left out until the owner switches a guarantee on
+          (src/data/guarantees.js; __HAS_GUARANTEES__ in vite.config.js). */}
+      {__HAS_GUARANTEES__ && <Guarantees page="process" />}
+
       {/* No .reveal on long text: it would sit at opacity 0 until the observer runs. */}
       <article className="blog-article-section" id="timelines">
         <div className="container blog-article-container">
@@ -108,7 +113,7 @@ export default function ProcessPage() {
         </div>
       </article>
 
-      <Testimonial />
+      <Testimonial cta="process-google-reviews" />
       <CtaBanner />
     </main>
   );
