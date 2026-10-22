@@ -133,18 +133,15 @@ export default {
     label: 'Basement development costs in Winnipeg',
   },
 
-  // Real client testimonial (confirmed by the owner 2026-10-13).
-  testimonial: {
-    quote:
-      '“Two contractors quoted us to frame the basement and neither mentioned the damp patch by the back corner. Bridgeland spotted it in the first ten minutes and dealt with it before they built anything. The basement has been dry through two winters now and the kids basically live down there.”',
-    initial: 'T',
-    name: 'Trevor L.',
-    role: 'Homeowner, Basement Renovation',
-  },
+  // Real client testimonial (confirmed by the owner 2026-10-13): its id in
+  // src/data/testimonials.js, where the words live.
+  testimonial: 'trevor-l',
 
   // No cost questions here: those live on /services/basement-renovations/cost.
+  faqsTitle: 'Basement Renovation FAQs',
   faqs: [
     { q: 'How long does basement development take?', a: `A typical basement takes ${TIMELINES.basement.words} of work, depending on its size, the number of rooms, and whether a bathroom is added. Permit review and inspections are part of the schedule, so we build them into the timeline we give you with the written quote instead of leaving them as a surprise.` },
+    { q: 'Do you renovate basements that are already finished?', a: 'Yes. A finished basement is renovated in the same order as an unfinished one, on a smaller scope. When old panelling, framing or ceilings come out, the walls and floor are checked for moisture before anything new goes up, so a damp patch isn’t sealed in again.', more: { label: 'Basement strip-outs before a renovation', to: '/services/demolition' } },
     { q: 'Do I need a permit to finish my basement in Winnipeg?', a: 'Yes, if you are finishing a previously undeveloped basement or creating a new bedroom: the Winnipeg Building By-law requires a building permit for both. Updating finishes in a basement that is already developed does not need one. Electrical and plumbing work often need separate permits. We coordinate them as part of the job.' },
     { q: 'My basement smells damp. Can it still be finished?', a: 'Usually, but not until the cause is known. Sometimes it’s grading or a downspout outside; sometimes it’s a foundation crack or a failing sump pump. Outside drainage gets fixed first, and active leaks or cracks go to a waterproofing or foundation repair company before we frame. Finishing over a damp wall only hides the problem.' },
     { q: 'What is an egress window, and do I need one?', a: 'It’s a window large enough to climb out of in an emergency. The City’s basement guide says a new basement bedroom needs one that opens from inside without tools, with at least 0.35 m² of clear opening and no dimension under 380 mm, unless the bedroom has a door straight outside.\n\nWe cut the opening, install the window, and set the window well.' },
@@ -163,7 +160,7 @@ export default {
       'Basement development and renovations in Winnipeg: moisture checked first, walls insulated for winter, permits coordinated. Free on-site visit and quote.',
     serviceType: 'Basement renovation',
     primaryKeyword: 'basement development Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Live pages only are shown; drafts appear when they launch.

@@ -100,6 +100,28 @@ export const TAG_BY_FORM_PAGE = false;
 export const WEBSITE_FORM_SOURCE = 'Website Form';
 const LEAD_TAG_PAGE = '/free-quote';
 
+// Photo uploads: not built (competitor review, 2026-10-22). The form takes no
+// files; the booking aside and the booking confirmation invite photos and
+// floor plans by email instead (PHOTOS_MAILTO in siteConfig.js). Uploading
+// them to GoHighLevel needs, from the GHL admin / owner (nothing here has it):
+//   1. A file-upload custom field on contacts, and its id. The only field ids
+//      in this code are the two survey fields above and ATTRIBUTION_FIELDS
+//      below (empty).
+//   2. GHL_API_TOKEN re-issued with the scope GoHighLevel's documentation
+//      lists for the file endpoint chosen. Its documented scopes today
+//      (api/_lib/ghl.js) are contacts.write, calendars.readonly and
+//      calendars/events.write; none covers files.
+//   3. Limits: file types (JPEG, PNG, HEIC, PDF), size and count. A Vercel
+//      function takes at most 4.5 MB per request and api/_lib/http.js caps a
+//      JSON body at 16 KB, so files need their own endpoint, resized in the
+//      browser first.
+//   4. A Privacy Policy line on photos of the property: what is kept, where
+//      and for how long.
+// Built that way, an upload is a separate request after the lead is saved,
+// so it can never cost a lead. The lead endpoint returns no contact id to the
+// browser, so that request also needs a short-lived signed reference to the
+// saved contact, and a test location to try it against first.
+
 // GoHighLevel custom-field ids for lead attribution, supplied by the GHL admin
 // (plan O-19). Empty means nothing is written; fill in only the ones that
 // exist, e.g. channel: 'AbC123…'. Values come from the cleaned attribution

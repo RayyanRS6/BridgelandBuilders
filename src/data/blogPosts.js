@@ -21,6 +21,468 @@ export const BLOG_CATEGORIES = [
 /** Published posts only (blog-raw status "published"), newest first, with bodies. */
 export const BLOG_POSTS = [
   {
+    "slug": "basement-suite-rental-income-winnipeg",
+    "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+    "metaTitle": "Basement Suite Rental Income in Winnipeg | Bridgeland",
+    "metaDescription": "Renting out a Winnipeg basement suite: permits, code ceiling heights, egress and fire separation, CMHC rent figures, and a payback calculator.",
+    "excerpt": "When a Winnipeg basement suite can legally be rented, the building code numbers that shape it, what CMHC’s rent survey shows, and a payback calculator that uses your own quote.",
+    "category": "Basements & Suites",
+    "categories": [
+      "Basements & Suites",
+      "Money & Rebates",
+      "Permits & Planning"
+    ],
+    "date": "2026-10-23",
+    "updated": "2026-10-23",
+    "readMinutes": 13,
+    "hero": null,
+    "heroSrc": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-880.17834f28.webp",
+    "heroSrcSet": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-480.17ebf9b4.webp 480w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-880.17834f28.webp 880w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1320.0b66c85d.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-480.29c56e33.avif 480w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-880.e7d88156.avif 880w, /images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1320.999be742.avif 1320w",
+    "ogImage": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x630.89b9628c.jpg",
+    "schemaImages": [
+      "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x675.a7af88f4.jpg",
+      "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x900.0267e8b0.jpg",
+      "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x1200.b8188fd6.jpg"
+    ],
+    "heroAlt": "Title card: Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/basement-suites",
+      "/services/basement-renovations"
+    ],
+    "ctaService": "/services/basement-suites",
+    "cluster": "winnipeg-permits",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "A basement suite can bring in rent every month, but only once it’s legal, and only if the numbers work for your house. That comes down to three things: whether the City allows a suite on your lot, what the building code asks of the space, and what a tenant will realistically pay."
+      },
+      {
+        "t": "p",
+        "x": "This guide uses the City of Winnipeg’s secondary suite pages and forms, the 2020 National Building Code as Manitoba adopted it, and CMHC’s October 2025 rental survey, with the date we checked each one listed under Sources. It’s general information, not legal, tax or financial advice, and the City’s documents and staff govern for your property."
+      },
+      {
+        "t": "h2",
+        "x": "When can you legally rent out a basement suite in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "When zoning allows it, the permits are in place and the work has passed final inspection. The City says attached suites, such as a basement suite, may be permitted in every zoning district that allows single-family homes, and only one suite, attached or detached, is allowed per lot."
+      },
+      {
+        "t": "p",
+        "x": "Before construction, homeowners need a development permit and a building permit, and the City requires separate electrical and plumbing permits. Its housing inspections page says the final inspection confirms that all work under all permits is complete and the project is ready for occupancy or use. Plan a tenant’s move-in date after that inspection, not before."
+      },
+      {
+        "t": "p",
+        "x": "If a suite doesn’t meet the Zoning By-law’s use-specific standards, the City’s April 2026 form says a conditional use application is required. The fee to establish an attached suite that way is $274 plus GST ($287.70). The process includes public notices and a hearing; the City says its length depends on how complex and complete the application is."
+      },
+      {
+        "t": "p",
+        "x": "The zoning districts, size limits, parking and the rules for garden and garage suites are covered in our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg). The Zoning By-law was amended in June 2025 and the City’s page doesn’t say whether it reflects that, so confirm the rules for your address with the City before you design."
+      },
+      {
+        "t": "h2",
+        "x": "Can you rent out a suite that was built without permits?"
+      },
+      {
+        "t": "p",
+        "x": "Get it approved first. If an existing attached suite doesn’t meet the use-specific standards, the City’s form calls for a conditional use application to maintain it. The fee is $660 plus GST ($693.00)."
+      },
+      {
+        "t": "p",
+        "x": "If the conditional use is rejected on appeal, the form says no building or development permit can be issued for the work, and the same conditional use can’t be applied for again within one year of the Appeal Order."
+      },
+      {
+        "t": "p",
+        "x": "Permit Amnesty may not help here. The City’s program is for work at a homeowner’s primary residence, and its page lists rental properties as not eligible, so ask the City how that applies to a house with a rented suite. Our guide to [checking a home’s permit history](/blog/check-permit-history-winnipeg-house) shows how to find out what was permitted."
+      },
+      {
+        "t": "h2",
+        "x": "What ceiling height does a basement suite need?"
+      },
+      {
+        "t": "p",
+        "x": "At least 1.95 m (about 6 ft. 5 in.), with at least 1.85 m (about 6 ft. 1 in.) of clear height under beams and ducts. Those are the secondary suite minimums in the 2020 National Building Code, which Manitoba adopted with its own amendments on January 1, 2024."
+      },
+      {
+        "t": "p",
+        "x": "Where the ceilings meet that minimum, doorways inside the suite can be sized for doors 1,890 mm (about 6 ft. 2 in.) high. The City’s guide for ordinary basement development uses 2.1 m (6 ft. 11 in.) for finished rooms, so ask its plan examiners which figure applies before you plan around a low ceiling."
+      },
+      {
+        "t": "h2",
+        "x": "What are the egress window rules for a suite bedroom?"
+      },
+      {
+        "t": "p",
+        "x": "Unless the suite is sprinklered, each bedroom needs an outside window or exterior door that opens from the inside without keys, tools or special knowledge. A bedroom window must:"
+      },
+      {
+        "t": "li",
+        "x": "give an unobstructed opening of at least 0.35 m² (3.77 sq. ft.), with no dimension under 380 mm (15 in.)"
+      },
+      {
+        "t": "li",
+        "x": "stay open on its own in an emergency, without extra support"
+      },
+      {
+        "t": "li",
+        "x": "have at least 760 mm (2 ft. 6 in.) of clear space in front of it where it opens into a window well"
+      },
+      {
+        "t": "p",
+        "x": "The City’s basement guide uses the same minimums for any basement bedroom. A new or enlarged opening in a foundation wall needs drawings stamped by an engineer, and our guide to [basement development permits](/blog/basement-development-permits-winnipeg) covers the rest of the City’s checklist."
+      },
+      {
+        "t": "h2",
+        "x": "What fire separation, alarms and sound control does a suite need?"
+      },
+      {
+        "t": "p",
+        "x": "A smoke-tight drywall barrier between the two units, smoke alarms interconnected across both, and a sound-rated separation. A house with a suite gets lighter rules than an apartment building; the table sets out the main requirements in Part 9 of the code, with the article numbers to show your designer or the City."
+      },
+      {
+        "t": "table",
+        "caption": "Code requirements for a house with a secondary suite (2020 National Building Code, as adopted in Manitoba)",
+        "head": [
+          "Item",
+          "What the code requires",
+          "Article"
+        ],
+        "rows": [
+          [
+            "Separation between the units",
+            "A continuous smoke-tight barrier of at least 12.7 mm (½ in.) gypsum board on both sides of the walls and on the underside of the floor framing, in place of a 45-minute fire separation",
+            "9.10.9.16.(4)"
+          ],
+          [
+            "Doors in that barrier",
+            "Solid-core wood, at least 45 mm (1¾ in.) thick, with a self-closing device",
+            "9.10.9.3.(2)"
+          ],
+          [
+            "Shared furnace or water-heater room",
+            "A service room whose appliances serve both units needs the same 12.7 mm smoke-tight gypsum barrier on its walls and ceiling, rather than a 1-hour fire separation",
+            "9.10.10.4.(2)"
+          ],
+          [
+            "Smoke alarms",
+            "Interconnected, wirelessly or by hard-wiring, so one alarm sounds every smoke alarm in both units",
+            "9.10.19.5.(2)"
+          ],
+          [
+            "Carbon monoxide alarms",
+            "Required where the house has a fuel-burning appliance, such as a gas furnace or water heater, or an attached garage. Wired so one sounds every CO alarm in both units and common spaces, and, under Manitoba’s amendment, interconnected with the smoke alarms",
+            "9.32.3.9.(1), (2)(e) (Manitoba), (7)"
+          ],
+          [
+            "Sound control",
+            "STC 43, ASTC 40, or the listed assembly: 150 mm of sound-absorbing material in the joists, insulated stud spaces, resilient channel on one side and 12.7 mm gypsum board",
+            "9.11.1.1.(2)"
+          ],
+          [
+            "Heating and air",
+            "Ducts serving one unit can’t connect directly to the rest of the house, and a single heating system needs a temperature control in each unit",
+            "9.33.1.1.(3), 9.33.4.3.(1)"
+          ],
+          [
+            "Floor area",
+            "No more than 80% of the other unit’s floor area or 80 m² (861 sq. ft.), whichever is less; the City’s secondary suites page lists tighter limits",
+            "9.1.2.1.(1)"
+          ]
+        ],
+        "note": "Summary of Part 9 of the National Building Code of Canada 2020, which Manitoba adopted with amendments (Manitoba Regulation 78/2023); the carbon monoxide row includes Manitoba’s amendment to Article 9.32.3.9. The code and the City’s plan examiners govern."
+      },
+      {
+        "t": "p",
+        "x": "Plan the entrance with the exits. The City describes an attached suite as having a separate entrance, and each household must reach its own services, such as the panel, without passing through the other unit."
+      },
+      {
+        "t": "p",
+        "x": "In a house with a suite, the units can share an exit stair without each needing a second, separate exit. The exception: an upper unit whose door opens onto an exterior passageway more than 1.5 m above the ground, served by one stair and with a floor rated under 45 minutes, needs a second exit (Article 9.9.9.3.)."
+      },
+      {
+        "t": "h2",
+        "x": "What can a basement suite rent for in Winnipeg?"
+      },
+      {
+        "t": "p",
+        "x": "CMHC doesn’t publish basement-suite rents for Winnipeg, so the closest benchmark is its Rental Market Survey. Run every October, it covers privately initiated rental buildings with at least three units, so its figures show what Winnipeg tenants pay for an apartment, not for a suite."
+      },
+      {
+        "t": "table",
+        "caption": "Purpose-built apartment rents and vacancy, Winnipeg CMA, October 2025",
+        "head": [
+          "Unit type",
+          "Average rent",
+          "Average rent of vacant units",
+          "Vacancy rate"
+        ],
+        "rows": [
+          [
+            "Bachelor (studio)",
+            "$915",
+            "$979",
+            "2.8%"
+          ],
+          [
+            "One bedroom",
+            "$1,232",
+            "$1,299",
+            "2.7%"
+          ],
+          [
+            "Two bedrooms",
+            "$1,571",
+            "$1,718",
+            "3.0%"
+          ],
+          [
+            "All units",
+            "$1,392",
+            "$1,516",
+            "2.8%"
+          ]
+        ],
+        "note": "Source: CMHC Rental Market Survey, Winnipeg data tables 1.1.1, 1.1.2 and 1.1.9 (October 2025). Vacant units show what landlords were asking for units that were empty at the time of the survey."
+      },
+      {
+        "t": "p",
+        "x": "Vacancy rose over the year, and rent growth slowed. The overall vacancy rate went from 1.7% to 2.8%, and CMHC reports that conditions softened across the Winnipeg area in 2025, with vacancy rising in suburban neighbourhoods."
+      },
+      {
+        "t": "p",
+        "x": "The average one-bedroom rent was $1,232, up from $1,179 in October 2024, but those averages cover different sets of buildings. For buildings surveyed in both years, CMHC estimates one-bedroom rents rose about 1.8%, and it says increases for existing tenants stayed below Manitoba’s rent increase guideline of 1.7%."
+      },
+      {
+        "t": "p",
+        "x": "A suite’s own rent depends on its size, light, ceiling height, entrance and what’s included, such as utilities or parking. Compare current listings for similar suites near you, then use the figure you expect in the calculator below."
+      },
+      {
+        "t": "h2",
+        "x": "How do you work out a basement suite’s payback?"
+      },
+      {
+        "t": "p",
+        "x": "With your own numbers. Use the total from a written quote for the suite and a rent you’ve checked against local listings. Our instant price guide shows basement-development ranges, not suite prices. The calculator works out three figures:"
+      },
+      {
+        "t": "li",
+        "x": "**Gross yield**: a year of rent divided by the build cost."
+      },
+      {
+        "t": "li",
+        "x": "**Net monthly income**: the rent, less vacancy and the monthly costs you’ll pay, such as utilities, insurance and maintenance."
+      },
+      {
+        "t": "li",
+        "x": "**Simple payback**: the build cost divided by a year of net income."
+      },
+      {
+        "t": "p",
+        "x": "As an example, take CMHC’s one-bedroom average of $1,232 a month and the 2.8% vacancy rate for all units. That’s about $14,370 of rent a year, so each $10,000 of build cost takes about eight months of rent to recover, before any costs you pay."
+      },
+      {
+        "t": "calculator",
+        "id": "suite-payback"
+      },
+      {
+        "t": "p",
+        "x": "Before you commit, check the numbers with your lender and a tax professional."
+      },
+      {
+        "t": "h2",
+        "x": "How can you pay for a suite, and what help exists?"
+      },
+      {
+        "t": "p",
+        "x": "The main federal tool is insured refinancing. Since January 15, 2025, lenders can offer CMHC-insured refinancing to homeowners adding a secondary suite, on the terms in the table. The two suite loan programs many sites still mention aren’t available."
+      },
+      {
+        "t": "table",
+        "caption": "Secondary suite financing and programs, checked October 23, 2026",
+        "head": [
+          "Program",
+          "Status",
+          "Key terms"
+        ],
+        "rows": [
+          [
+            "CMHC-insured refinance for secondary suites",
+            "Available for applications lenders submit from January 15, 2025",
+            "Up to 90% of the home’s value, including the value the suite adds; as-improved value under $2 million; up to a 30-year amortization; no more than four units; units self-contained and meeting zoning; no short-term rentals (under 90 consecutive days); you or a close relative living in one unit; extra financing no more than the project cost"
+          ],
+          [
+            "Canada Secondary Suite Loan Program",
+            "Not available",
+            "Budget 2025: not yet operational and will not be implemented"
+          ],
+          [
+            "Manitoba Secondary Suites Program",
+            "Not accepting applications as of August 2025",
+            "The Province’s program page said in August 2025 that applications weren’t being accepted; the page is no longer online"
+          ]
+        ],
+        "note": "Sources: Department of Finance Canada (October 8, 2024), CMHC refinance fact sheet (August 2025), Budget 2025 Annex 3, and an archived copy of the Province of Manitoba’s program page (August 13, 2025)."
+      },
+      {
+        "t": "p",
+        "x": "Rent from a suite is also reported for income tax. The Canada Revenue Agency says form T776, Statement of Real Estate Rentals, is used by rental property owners to report rental income and expenses. Ask a tax professional how a suite affects your return before you rely on a payback figure."
+      },
+      {
+        "t": "p",
+        "x": "Building the suite so a senior, or an adult eligible for the disability tax credit, can live with a relative? The federal Multigenerational Home Renovation Tax Credit may apply; see our guides to [Manitoba renovation tax credits and rebates](/blog/manitoba-renovation-tax-credits-rebates) and [home renovation financing in Canada](/blog/home-renovation-financing-canada)."
+      },
+      {
+        "t": "h2",
+        "x": "When do you need a designer or engineer for a suite?"
+      },
+      {
+        "t": "p",
+        "x": "Most suites start on paper. The City’s basement permit form asks for a fully dimensioned floor plan showing each room’s use, every door and window, and the electrical and plumbing layout. Some parts of a suite need a professional:"
+      },
+      {
+        "t": "li",
+        "x": "An engineer’s stamp on drawings for any window added or enlarged in a foundation wall."
+      },
+      {
+        "t": "li",
+        "x": "Engineered drawings for major structural work, such as changing beams or teleposts."
+      },
+      {
+        "t": "li",
+        "x": "For a garden or garage suite, a water and sewer site servicing plan prepared by a Manitoba land surveyor or professional civil engineer."
+      },
+      {
+        "t": "p",
+        "x": "The heating layout is worth settling early too. The code’s rules on separate ducts and controls decide where ducts run, and that affects the ceiling heights you can keep."
+      },
+      {
+        "t": "p",
+        "x": "Apart from radiant heating, a heating or air-conditioning system that serves both units has to meet Part 6 of the code rather than the house rules in Part 9 (Article 9.33.1.1.), so ask the City what it needs to see for your layout."
+      },
+      {
+        "t": "h2",
+        "x": "Next step"
+      },
+      {
+        "t": "p",
+        "x": "A payback figure is only as good as the price behind it. Our [basement suite](/services/basement-suites) projects begin with a free on-site visit, where we check ceiling heights, windows and entrance options, then a free written quote you can put into the calculator. Finishing a basement without a suite? See [basement renovations](/services/basement-renovations), or [book your visit](/book-online)."
+      }
+    ],
+    "faqsTitle": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "How much rent can I charge for a basement suite in Winnipeg?",
+        "a": "CMHC doesn’t publish an average for basement suites. Its October 2025 survey put the average Winnipeg rent for a one-bedroom purpose-built apartment at $1,232 a month, and a bachelor at $915. A suite’s rent depends on its size, light, entrance and what’s included, so compare current listings for similar suites before you set yours."
+      },
+      {
+        "q": "What is the minimum ceiling height for a basement suite?",
+        "a": "At least 1.95 m (about 6 ft. 5 in.), with 1.85 m (about 6 ft. 1 in.) under beams and ducts, under the 2020 National Building Code as Manitoba adopted it. The City’s guide for ordinary basements uses 2.1 m, so ask the City’s plan examiners which figure applies to your drawings."
+      },
+      {
+        "q": "Does a basement suite need a fire separation from the main house?",
+        "a": "It needs a separation, but not necessarily a fire-rated one. In a house with a secondary suite, the code accepts a smoke-tight barrier of at least 12.7 mm (½ in.) gypsum board on both sides of the walls between the units and under the floor framing. Doors in it are solid-core wood, at least 45 mm thick, with a self-closer."
+      },
+      {
+        "q": "Is there a government loan or grant for building a basement suite in Manitoba?",
+        "a": "Not from the programs most sites mention. Budget 2025 says the Canada Secondary Suite Loan Program will not be implemented, and the Province’s Secondary Suites Program page said in August 2025 that applications weren’t being accepted. CMHC-insured refinancing of up to 90% of the home’s value, including the value the suite adds, is available through lenders, on CMHC’s conditions."
+      },
+      {
+        "q": "How long does a basement suite take to pay for itself?",
+        "a": "It depends on your quote and your rent. Divide the build cost by a year of net rent, which is rent less vacancy and the costs you pay. At CMHC’s one-bedroom average and its 2.8% overall vacancy rate, each $10,000 of build cost takes about eight months of rent to recover, before utilities, insurance, maintenance, financing and tax."
+      }
+    ],
+    "answer": "You can rent out a Winnipeg basement suite once zoning allows it, it has development, building, electrical and plumbing permits, and it passes final inspection. CMHC’s rental survey doesn’t cover basement suites, but its October 2025 average for a one-bedroom purpose-built Winnipeg apartment was $1,232 a month. Payback is your quoted build cost divided by a year of net rent.",
+    "sources": [
+      {
+        "label": "City of Winnipeg – Secondary suites",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/secondary-suites",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "City of Winnipeg – Attached secondary suite (DCU “B”) conditional use application form (updated April 2026)",
+        "url": "https://www.winnipeg.ca/media/5712",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "City of Winnipeg – Information Bulletin 2021-006-B: Containment & separation for attached secondary suite design",
+        "url": "https://www.winnipeg.ca/media/6119",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Housing inspections",
+        "url": "https://www.winnipeg.ca/building-development/building-renovating/inspections/housing-inspections",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "City of Winnipeg – Permit Amnesty program",
+        "url": "https://www.winnipeg.ca/building-development/permits-applications/programs-incentives/permit-amnesty-program",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "City of Winnipeg – Basement/lower level development: construction information (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6349",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "City of Winnipeg – Building permit application form: basement/lower level development (updated October 2025)",
+        "url": "https://www.winnipeg.ca/media/6968",
+        "accessed": "2026-10-13"
+      },
+      {
+        "label": "Province of Manitoba – The Manitoba Building Code, Manitoba Regulation 78/2023",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/_pdf-regs.php?reg=78/2023",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "National Research Council Canada – National Building Code of Canada 2020",
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=515340b5-f4e0-4798-be69-692e4ec423e8",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "CMHC – Rental Market Survey data tables: Winnipeg, 2025",
+        "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/professional/housing-markets-data-and-research/housing-data-tables/rental-market/rental-market-report-data-tables/2025/rmr-winnipeg-2025-en.xlsx",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "CMHC – Rental Market Report, Canada and selected markets (fall 2025)",
+        "url": "https://eppd1strscr01.blob.core.windows.net/cmhcprdcontainer/sf/project/archive/housing_markets/rentalmarketreportcanadaandselectedmarkets/rental-market-report-2025-fall-en.pdf",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "Department of Finance Canada – Mortgage insurance rule changes to enable homeowners to add secondary suites (October 8, 2024)",
+        "url": "https://www.canada.ca/en/department-finance/news/2024/10/mortgage-insurance-rule-changes-to-enable-homeowners-to-add-secondary-suites.html",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "CMHC – Refinance for secondary suites (fact sheet, August 2025)",
+        "url": "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-refinance.pdf",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "Government of Canada – Budget 2025, Annex 3: Comprehensive Expenditure Review",
+        "url": "https://budget.canada.ca/2025/report-rapport/anx3-en.html",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "Province of Manitoba – Secondary Suites Program (archived copy, August 13, 2025)",
+        "url": "https://web.archive.org/web/20250813052116/https://www.gov.mb.ca/housing/progs/ssp.html",
+        "accessed": "2026-10-23"
+      },
+      {
+        "label": "Canada Revenue Agency – T776 Statement of Real Estate Rentals",
+        "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/forms/t776.html",
+        "accessed": "2026-10-23"
+      }
+    ],
+    "reviewBy": "2027-01-15"
+  },
+  {
     "slug": "asbestos-testing-before-renovating-manitoba",
     "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
     "metaTitle": "Asbestos Testing Before Renovating in Manitoba | Bridgeland",
@@ -730,7 +1192,7 @@ export const BLOG_POSTS = [
       "Older Homes"
     ],
     "date": "2026-10-15",
-    "updated": "2026-10-15",
+    "updated": "2026-10-23",
     "readMinutes": 11,
     "hero": "",
     "heroSrc": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.1189cd90.webp",
@@ -1403,7 +1865,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "An on-site visit before you sign shows whether your layout fits the space and which approvals it is likely to need. Bridgeland Builders handles [retail store renovations](/services/retail-renovations), [office renovations](/services/office-renovations), restaurants and clinics in Winnipeg and nearby communities, and coordinates permits and inspections with the City or the local municipality."
+        "x": "An on-site visit before you sign shows whether your layout fits the space and which approvals it is likely to need. Bridgeland Builders handles [retail store renovations](/services/retail-renovations), [office renovations](/services/office-renovations), [restaurants](/services/restaurant-renovations) and [clinics](/services/medical-dental-office-renovations) in Winnipeg and nearby communities, and coordinates permits and inspections with the City or the local municipality."
       },
       {
         "t": "p",
@@ -1679,7 +2141,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "The City doesn’t inspect propane or natural gas equipment or piping, so if a gas line runs through the wall, ask who will move it and who inspects that work. On our projects, trades are coordinated so each one knows what the next needs, and permits and inspections are coordinated with the City or your local municipality."
+        "x": "The City doesn’t inspect propane or natural gas equipment or piping, so if a gas line runs through the wall, ask who will move it and who inspects that work. On our projects, [trades are coordinated](/services/general-contracting) so each one knows what the next needs, and permits and inspections are coordinated with the City or your local municipality."
       },
       {
         "t": "p",
@@ -2482,7 +2944,7 @@ export const BLOG_POSTS = [
       "Basements & Suites"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-15",
+    "updated": "2026-10-23",
     "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
@@ -2526,7 +2988,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite."
+        "x": "One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite, and [basement suite rental income](/blog/basement-suite-rental-income-winnipeg) covers rents and payback."
       },
       {
         "t": "h2",
@@ -6250,7 +6712,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-15",
+    "updated": "2026-10-23",
     "readMinutes": 8,
     "hero": null,
     "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
@@ -6461,7 +6923,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** [Book a free on-site visit](/book-online). We will walk the space with you, talk through your lease dates and follow up with a free written quote. Bridgeland Builders renovates offices across Winnipeg and nearby communities; see our full range of [commercial renovation services](/services/commercial-renovations)."
+        "x": "**Next step:** [Book a free on-site visit](/book-online). We will walk the space with you, talk through your lease dates and follow up with a free written quote. Bridgeland Builders renovates offices across Winnipeg and nearby communities; see [how we plan a commercial fit-up around your lease date](/services/commercial-renovations#steps)."
       }
     ],
     "faqsTitle": "Office fit-up questions",
@@ -7593,7 +8055,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-10-13",
-    "updated": "2026-10-15",
+    "updated": "2026-10-23",
     "readMinutes": 9,
     "hero": null,
     "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
@@ -7734,7 +8196,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "That bulletin dates from December 2021, and Manitoba moved to the 2020 national model codes on January 1, 2024, so have the City’s plan examiners confirm current requirements for your drawings."
+        "x": "That bulletin dates from December 2021, and Manitoba moved to the 2020 national model codes on January 1, 2024, so have the City’s plan examiners confirm current requirements for your drawings. The code’s own suite numbers, such as ceiling heights and sound ratings, are in our guide to [renting out a basement suite in Winnipeg](/blog/basement-suite-rental-income-winnipeg)."
       },
       {
         "t": "h2",
@@ -9625,7 +10087,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** Bridgeland Builders renovates retail stores, offices, restaurants and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote; commercial work is priced after that visit, not from an online estimate. See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
+        "x": "**Next step:** Bridgeland Builders renovates retail stores, [offices](/services/office-renovations), [restaurants](/services/restaurant-renovations) and clinics in Winnipeg and nearby communities. [Book a free on-site visit](/book-online) and we will walk the space with you before preparing a free written quote; commercial work is priced after that visit, not from an online estimate. See our [retail renovation services](/services/retail-renovations) and the full range of [commercial renovations](/services/commercial-renovations)."
       }
     ],
     "faqsTitle": "Commercial design questions",
@@ -10910,7 +11372,7 @@ export const BLOG_POSTS = [
       "Costs & Budgets"
     ],
     "date": "2026-08-04",
-    "updated": "2026-10-15",
+    "updated": "2026-10-23",
     "readMinutes": 9,
     "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
     "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
@@ -11018,7 +11480,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Budget for testing, and for abatement if needed, before demolition starts."
+        "x": "Budget for testing, and for abatement if needed, before [demolition](/services/demolition) starts."
       },
       {
         "t": "h2",
@@ -11054,7 +11516,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "For the lease side of those dates, see [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg)."
+        "x": "For the lease side of those dates, see [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg), and for the build, our [office renovations](/services/office-renovations)."
       },
       {
         "t": "h3",
@@ -11150,7 +11612,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** [Book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, retail stores and clinics across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
+        "x": "**Next step:** [Book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, [retail stores](/services/retail-renovations) and [clinics](/services/medical-dental-office-renovations) across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
       }
     ],
     "faqsTitle": "Commercial renovation cost questions",
@@ -11247,7 +11709,7 @@ export const BLOG_POSTS = [
       "Permits & Planning"
     ],
     "date": "2026-07-29",
-    "updated": "2026-10-15",
+    "updated": "2026-10-23",
     "readMinutes": 7,
     "hero": "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png",
     "heroSrc": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-880.408891d3.webp",
@@ -11455,7 +11917,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. Commercial work is priced after that visit, not from an online estimate. You can also see our [commercial renovation services](/services/commercial-renovations)."
+        "x": "**Next step:** [Book a free on-site visit](/book-online) and we will walk the space with you, talk through the dates you cannot lose, and follow up with a free written quote. We reply within one business day. Commercial work is priced after that visit, not from an online estimate. See [how we plan commercial work around your dates](/services/commercial-renovations#steps)."
       }
     ],
     "faqsTitle": "Questions about renovating a business",

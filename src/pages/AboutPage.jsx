@@ -139,7 +139,7 @@ export default function AboutPage() {
       <Stats />
       <WhyUs />
       <Process steps={VALUES} tag="What We Value" title="What you can expect from us" desc={null} />
-      <Testimonial />
+      <Testimonial cta="about-google-reviews" />
       <CtaBanner />
     </main>
   );

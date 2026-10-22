@@ -2,14 +2,19 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import BlogCard, { formatPostDate } from '../components/BlogCard.jsx';
 import BookingAside from '../components/BookingAside.jsx';
+import Calculator from '../components/Calculator.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
+import Guarantees from '../components/Guarantees.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
+import Testimonial from '../components/Testimonial.jsx';
 import Ticker from '../components/Ticker.jsx';
+import TrustStrip from '../components/TrustStrip.jsx';
 import { ArrowRightIcon, CheckIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS, PROJECT_ESTIMATORS } from '../data/estimators.js';
 import { serviceByPath } from '../data/services.js';
 import { COST_HUB_PATH, INSTANT_QUOTE_LABEL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { testimonialsByIds } from '../data/testimonials.js';
 import { serviceTrail } from '../data/trails.js';
 import { renderInline } from '../lib/inline.jsx';
 import { stockImage } from '../lib/unsplash.js';
@@ -50,10 +55,11 @@ const delay = (index, seconds) => (index > 0 ? { transitionDelay: `${seconds}s` 
  * (src/data/services.js) and `guidePosts` the blog posts named in
  * project.guides (loaded with the module by ServiceRoute.jsx).
  *
- * Section order (plan §7): hero → ticker → stats → intro → includes → types →
- * local → gallery → process → cost teaser → testimonial → lead → FAQs →
- * related services → guides → CTA → updated date and sign-off. Every section
- * after the hero renders only when its content exists, using the page's
+ * Section order (plan §7): hero → ticker → stats and trust strip → intro →
+ * includes → types → local → gallery → process → guarantees → cost teaser →
+ * testimonial → lead → rental income → FAQs → related services → guides →
+ * CTA → updated date and sign-off. Every section after the hero renders only
+ * when its content exists (the trust strip always has some), using the page's
  * existing classes.
  */
 export default function ProjectPage({ project, service, guidePosts = [] }) {
@@ -73,10 +79,17 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
   const local = project.local && has(project.local.items) ? project.local : null;
   const localSources = local && has(local.sources) ? local.sources : [];
   const costTeaser = project.costTeaser && project.costTeaser.text && project.costTeaser.to ? project.costTeaser : null;
+  // `priceGuide`: { label, text } when the page is priced with another
+  // service's ranges (basement suites use the basement ones).
+  const priceGuide = project.priceGuide && project.priceGuide.label ? project.priceGuide : null;
+  const rental = project.rental && project.rental.title ? project.rental : null;
+  const rentalSources = rental && has(rental.sources) ? rental.sources : [];
   // Only live pages are linked; a draft related service is left out.
   const related = (project.related || [])
     .map((path) => serviceByPath(path))
     .filter((item) => item && item.status === 'live' && (!service || item.path !== service.path));
+  // `testimonial`: an id, or a list of ids, in src/data/testimonials.js.
+  const testimonials = testimonialsByIds(project.testimonial);
   const signoff = project.ownerSignoff || null;
   // The date that drives this page's dateModified (services.js serviceSeo → meta.updated).
   const updated = (project.seo && project.seo.updated) || null;
@@ -155,10 +168,11 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
       {/* TICKER BANNER */}
       <Ticker />
 
-      {/* STATS OVERVIEW */}
-      {has(project.stats) && (
-        <section className="stats-section">
-          <div className="container">
+      {/* STATS OVERVIEW + TRUST STRIP (the Google rating, the BBB profile
+          link and the free visit and written quote), just under the form. */}
+      <section className="stats-section">
+        <div className="container">
+          {has(project.stats) && (
             <div className="stats-grid">
               {project.stats.map((stat, index) => (
                 <div
@@ -171,9 +185,10 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-      )}
+          )}
+          <TrustStrip cta="service-stats" />
+        </div>
+      </section>
 
       {/* THE PITCH (dark section, same as home "Why Bridgeland") */}
       {project.intro && (
@@ -389,6 +404,11 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
         </section>
       )}
 
+      {/* NAMED GUARANTEES for this kind of page (residential / commercial):
+          left out until the owner switches one on (src/data/guarantees.js;
+          __HAS_GUARANTEES__ in vite.config.js). */}
+      {__HAS_GUARANTEES__ && service && <Guarantees page={service.category} />}
+
       {/* COST TEASER: one or two lines and a link to the cost page (no cost H2 here) */}
       {costTeaser && (
         <section className="includes-section" id="cost">
@@ -403,31 +423,9 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
         </section>
       )}
 
-      {/* TESTIMONIAL (optional) */}
-      {project.testimonial && project.testimonial.quote && (
-        <section className="testimonial-section">
-          <div className="container">
-            <div className="testimonial-card reveal">
-              {/* An h2 like every other section title on the page (same class and
-                  look); no star glyphs, since a rating needs a source (plan §19). */}
-              <div className="testimonial-left">
-                <h2 className="testimonial-headline">What Our Clients Say</h2>
-                <p className="testimonial-sub">In their own words: what it’s like working with Bridgeland Builders.</p>
-              </div>
-              <div className="testimonial-right">
-                <p className="testimonial-quote">{project.testimonial.quote}</p>
-                <div className="testimonial-author">
-                  <div className="author-initial">{project.testimonial.initial}</div>
-                  <div className="author-info">
-                    <div className="author-name">{project.testimonial.name}</div>
-                    <p>{project.testimonial.role}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* TESTIMONIALS (optional): the ids the content module names, text
+          from src/data/testimonials.js. No star glyphs (plan §19). */}
+      {testimonials.length > 0 && <Testimonial items={testimonials} cta="service-google-reviews" />}
 
       {/* LEAD CAPTURE / BOOKING FORM */}
       <section className="lead-section" id="book-form">
@@ -441,8 +439,8 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
                 <div className="lead-card-head">
                   {hasPriceData ? (
                     <>
-                      <h3>Get Your Free {name} Price Guide</h3>
-                      <p>Answer a few quick questions for an instant estimate: a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.</p>
+                      <h3>Get Your Free {priceGuide ? priceGuide.label : name} Price Guide</h3>
+                      <p>{priceGuide ? priceGuide.text : 'Answer a few quick questions for an instant estimate: a useful starting price range for your project. This planning guide is free and does not obligate you to proceed.'}</p>
                     </>
                   ) : (
                     <>
@@ -462,6 +460,38 @@ export default function ProjectPage({ project, service, guidePosts = [] }) {
           </div>
         </div>
       </section>
+
+      {/* RENTAL INCOME (optional): a sourced rent benchmark, a link to the
+          guide and a calculator (src/components/Calculator.jsx). After the
+          lead section, so the calculator never pushes the booking form down
+          on a phone. The calculator holds form fields, so it sits outside the
+          .reveal header. */}
+      {rental && (
+        <section className="process-section includes-section" id="rental-income">
+          <div className="container">
+            <div className="section-header center reveal">
+              <span className="section-tag">{rental.tag}</span>
+              <h2 className="section-title">{rental.title}</h2>
+              {paragraphs(rental.desc).map((text, index) => (
+                <p className="section-desc" key={text.slice(0, 40)}>{renderInline(text, `rental-${index}`)}</p>
+              ))}
+              {rentalSources.map((source, index) => (
+                <p className="section-desc" key={source.url}>
+                  {index === 0 && (rentalSources.length > 1 ? 'Sources: ' : 'Source: ')}
+                  <a href={source.url} rel="noopener" target="_blank">{source.label}</a>
+                  {source.accessed && ` (verified ${source.accessed})`}
+                  {index < rentalSources.length - 1 && ';'}
+                </p>
+              ))}
+            </div>
+            {rental.calculator && (
+              <div className="suite-calc-wrap">
+                <Calculator id={rental.calculator} />
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* FAQs */}
       {has(project.faqs) && (

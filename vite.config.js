@@ -4,6 +4,7 @@ import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { PIXEL_PRIORITY_PATHS, gaMeasurementId } from './src/data/analyticsConfig.js';
 import { publishedCaseStudies } from './src/data/caseStudyData.js';
+import { hasEnabledGuarantees } from './src/data/guarantees.js';
 
 /**
  * Writes the measurement settings from src/data/analyticsConfig.js into the
@@ -81,6 +82,11 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
     // and SSR builds read the same value; restart the dev server after
     // publishing a case study.
     __HAS_CASE_STUDIES__: JSON.stringify(publishedCaseStudies().length > 0),
+    // Whether the owner has switched on a named guarantee
+    // (src/data/guarantees.js). While false the pages leave the section out,
+    // so no page downloads the guarantee text. Restart the dev server after
+    // switching one on.
+    __HAS_GUARANTEES__: JSON.stringify(hasEnabledGuarantees()),
   },
   build: {
     // Client build only: scripts/prerender.mjs reads dist/.vite/manifest.json

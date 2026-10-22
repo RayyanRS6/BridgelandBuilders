@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import EstimatorEmbed from '../components/EstimatorEmbed.jsx';
 import RichBody from '../components/RichBody.jsx';
+import TrustStrip from '../components/TrustStrip.jsx';
 import { ArrowRightIcon } from '../components/icons.jsx';
 import { ESTIMATOR_URLS } from '../data/estimators.js';
-import { BBB_PROFILE_URL, COST_HUB_PATH, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
+import { COST_HUB_PATH, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // Crawlable guide BELOW the estimator (SEO plan §7): how it works, what moves
@@ -98,16 +99,6 @@ export default function InstantQuotePage() {
               Book a free on-site visit and we’ll look at the space with you, or browse everything we build first.
               You can also call us at <a href={SITE_PHONE_TEL}>{SITE_PHONE}</a> or{' '}
               <Link to="/contact-us">send us a message</Link>.
-              {/* Trust line (plan §19): the BBB profile link only, no rating. */}
-              {BBB_PROFILE_URL && (
-                <>
-                  {' '}You can also check us on the{' '}
-                  <a href={BBB_PROFILE_URL} target="_blank" rel="noopener" data-cta="instant-quote-bbb">
-                    Better Business Bureau
-                  </a>
-                  .
-                </>
-              )}
             </p>
             <div className="hero-cta-group">
               <Link to="/book-online" className="btn-pill-red" data-cta="instant-quote-book-visit">
@@ -118,6 +109,9 @@ export default function InstantQuotePage() {
                 <span>View All Services</span>
               </Link>
             </div>
+            {/* Proof under the next steps: the Google rating, the BBB profile
+                link (no BBB rating) and the free visit and written quote. */}
+            <TrustStrip cta="instant-quote" />
           </div>
         </div>
       </section>

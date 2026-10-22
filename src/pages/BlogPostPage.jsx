@@ -1,5 +1,6 @@
 import { lazy, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Calculator from '../components/Calculator.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import Picture from '../components/Picture.jsx';
@@ -18,6 +19,10 @@ const NotFoundPage = lazyWithRetry(() => import('./NotFoundPage.jsx'));
 
 /** The article column is at most 880px wide and full width below that. */
 const ARTICLE_IMAGE_SIZES = '(max-width: 920px) 100vw, 880px';
+
+// Post-only body blocks (RichBody `widgets`): {"t": "calculator", "id": …}.
+// Each calculator is its own lazy chunk (Calculator.jsx).
+const BODY_WIDGETS = { calculator: Calculator };
 
 // Topic clusters that span every kind of project (permits in general, paying
 // for a renovation, planning, hiring a contractor, energy rebates): a post in
@@ -188,7 +193,7 @@ function PostPage({ post }) {
               </aside>
             )}
 
-            <RichBody blocks={post.blocks} />
+            <RichBody blocks={post.blocks} widgets={BODY_WIDGETS} />
 
             {faqs.length > 0 && (
               <div className="blog-faq-block">

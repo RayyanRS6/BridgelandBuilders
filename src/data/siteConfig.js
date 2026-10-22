@@ -19,6 +19,13 @@ export const SITE_PHONE_E164 = '+1-431-866-5644';
 export const SITE_PHONE_TEL = 'tel:+14318665644';
 export const SITE_EMAIL = 'info@bridgelandbuilders.com';
 
+// The booking form can't take photo uploads yet (what uploads would need: the
+// "Photo uploads" note in src/data/quoteForm.js), so the booking aside and the
+// form's confirmation invite photos and floor plans by email instead. The
+// link carries a fixed subject only, never anything the visitor typed.
+export const PHOTOS_EMAIL_SUBJECT = 'Photos for my renovation quote';
+export const PHOTOS_MAILTO = `mailto:${SITE_EMAIL}?subject=${encodeURIComponent(PHOTOS_EMAIL_SUBJECT)}`;
+
 // Service-area business (SAB) decision: the business is presented as serving
 // Winnipeg and nearby communities with no public street address — not on the
 // site, in schema, on Google Business Profile or in citations. The schema
@@ -78,8 +85,10 @@ export const BBB_PROFILE_URL =
 // placeId; the Place ID embeds that same CID (its last 8 bytes, little-endian,
 // checked 2026-10-15). Not shown on the site: /review and /reviews redirect
 // here (EXTERNAL_REDIRECTS in src/data/redirects.js) for QR codes, texts and
-// email signatures. The listing's map embed lives in ContactPage.jsx (the only
-// page that shows it), so its long URL stays out of every page's entry chunk.
+// email signatures. mapsUrl is linked directly from the Google rating badge
+// (TrustStrip.jsx) and the "Read our reviews on Google" link (Testimonial.jsx).
+// The listing's map embed lives in ContactPage.jsx (the only page that shows
+// it), so its long URL stays out of every page's entry chunk.
 export const GBP = {
   mapsUrl: 'https://maps.google.com/?cid=6390477049138999065',
   placeId: 'ChIJx06HPnAAgmoRGW83mwSJr1g',
@@ -88,12 +97,16 @@ export const GBP = {
 
 // Google review summary, read from the live profile (update monthly, plan §20).
 // Never output as aggregateRating/review schema: rating markup on our own
-// business is not allowed (plan §3.5). Any visible display of it waits until
-// count >= 10 (plan §19).
+// business is not allowed (plan §3.5). Plan §19 held any visible display back
+// until count >= 10; on 2026-10-22 the owner asked for it to be shown now
+// (competitor review: "a live Google review count and star rating"), so the
+// trust strip (src/components/TrustStrip.jsx) shows it as text with the count
+// and a link to the profile. Re-read the profile before changing a number,
+// and update asOf with it (last checked on Google Maps 2026-10-23).
 export const REVIEW_STATS = {
   rating: 5.0,
   count: 4,
-  asOf: '2026-10-13',
+  asOf: '2026-10-23',
   source: 'Google',
   url: GBP.mapsUrl,
 };

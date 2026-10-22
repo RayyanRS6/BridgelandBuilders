@@ -1,18 +1,8 @@
 import { Link } from 'react-router-dom';
 import { EXPERIENCE_YEARS } from '../data/facts.js';
 import { INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH } from '../data/siteConfig.js';
-import { STOCK_IMAGES } from '../data/stockImages.generated.js';
-import Picture from './Picture.jsx';
+import HeroVideo from './HeroVideo.jsx';
 import { ArrowRightIcon, StarIcon } from './icons.jsx';
-
-// The LCP image, served from this site (scripts/build-images.mjs --only=stock:
-// a stock photo, AVIF with a WebP fallback) so it needs no connection to
-// images.unsplash.com. The arch frame crops it with object-fit: cover, so it
-// is drawn about 96vw wide on phones (the frame is clamp(240px, 64vw, 330px)
-// tall), 540px on tablets and 690px on desktop. scripts/prerender.mjs turns
-// the AVIF <source> into the image preload.
-const HERO_IMAGE = STOCK_IMAGES['home-hero'];
-const HERO_SIZES = '(max-width: 640px) 96vw, (max-width: 1024px) 540px, 690px';
 
 export default function Hero() {
   return (
@@ -30,8 +20,16 @@ export default function Hero() {
             <h1 className="hero-title">
               WINNIPEG RENOVATION <span>CONTRACTOR</span>
             </h1>
+            {/* Leads with the price tool (owner's competitor review). The
+                estimator prices kitchens, bathrooms and basements only. After
+                picking the service it asks bathroom 5, basement 6 and kitchen
+                7 multiple-choice questions, shows the estimated range from
+                question 1, and asks for contact details only after the last
+                one, under the final range (checked 2026-10-23, nothing typed
+                or sent). Automated test runs, with screenshots and waits
+                between taps: bathroom about 40 s, kitchen about 80 s. */}
             <p className="hero-subtitle">
-              Kitchens, bathrooms, basements, whole homes, additions and commercial spaces in Winnipeg and nearby communities. Every project starts with a free on-site visit and a free written quote.
+              See your kitchen, bathroom or basement price range in about a minute. No call needed. We also do whole homes, additions and commercial spaces in Winnipeg and nearby communities. On-site visits and written quotes are free.
             </p>
             <div className="hero-cta-group">
               {/* Main CTA in Red */}
@@ -47,23 +45,15 @@ export default function Hero() {
 
           <div className="hero-visual">
             <div className="hero-arch-frame">
-              <Picture
-                avifSrcSet={HERO_IMAGE.avifSrcSet}
-                srcSet={HERO_IMAGE.srcSet}
-                sizes={HERO_SIZES}
-                src={HERO_IMAGE.src}
-                alt="Bright living room with a sofa, armchair and large windows"
-                width={HERO_IMAGE.width}
-                height={HERO_IMAGE.height}
-                fetchpriority="high"
-              />
+              <HeroVideo />
             </div>
             <div className="hero-floating-badge">
               <div className="avatar-group">★</div>
               <div className="badge-text">
-                {/* No Google rating next to the main CTA until the profile has
-                    10+ reviews (SEO plan §19). Free written quotes are stated
-                    across the site (FAQs, booking aside, /free-quote).
+                {/* The Google rating sits in the trust strip under the stats
+                    (TrustStrip.jsx), not next to the main CTA. Free written
+                    quotes are stated across the site (FAQs, booking aside,
+                    /free-quote).
                     A badge label, not a heading: it would sit out of order
                     in the page's heading outline. */}
                 <div className="badge-title">Free Written Quotes</div>

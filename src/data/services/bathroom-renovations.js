@@ -116,14 +116,9 @@ export default {
     label: 'Bathroom renovation costs in Winnipeg',
   },
 
-  // Real client testimonial (confirmed by the owner 2026-10-13).
-  testimonial: {
-    quote:
-      '“Our main bathroom hadn’t been touched since the seventies. Bridgeland stripped it out and had us back in it in under three weeks. They showed me the waterproofing before they tiled over it, which no other contractor bothered to do. Clean work and a fair price.”',
-    initial: 'D',
-    name: 'Denise R.',
-    role: 'Homeowner, Bathroom Renovation',
-  },
+  // Real client testimonial (confirmed by the owner 2026-10-13): its id in
+  // src/data/testimonials.js, where the words live.
+  testimonial: 'denise-r',
 
   // No cost questions here: those live on /services/bathroom-renovations/cost.
   faqs: [
@@ -145,7 +140,7 @@ export default {
       `Bathroom renovations in Winnipeg with proper waterproofing under the tile. Most take ${TIMELINES.bathroom.short}. Start with a free on-site visit and a written quote.`,
     serviceType: 'Bathroom renovation',
     primaryKeyword: 'bathroom renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Live pages only are shown; drafts appear when they launch.

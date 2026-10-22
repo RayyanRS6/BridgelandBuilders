@@ -114,7 +114,7 @@ export default {
     serviceType: 'Exterior painting',
     // Add to scripts/keyword-map.json (not there yet).
     primaryKeyword: 'exterior painting Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // Optional sections (plan §7): see kitchen-renovations.js for the shapes.

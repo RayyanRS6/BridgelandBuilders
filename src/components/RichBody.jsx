@@ -18,7 +18,14 @@ export { renderInline };
  *   table                { caption, head: [], rows: [[]], note? }  scrolls inside its wrapper
  *   callout              { title?, x }     highlighted aside
  *   takeaways            { title, items: [] }  the "Key Takeaways" box
+ *   calculator           { id }            an interactive calculator, rendered by
+ *                                          the page's `widgets` (below)
  * A block with `hidden: true` is skipped. Unknown types with text render as <p>.
+ *
+ * `widgets` ({ type: Component }, optional) renders block types a page brings
+ * itself, e.g. BlogPostPage's { calculator: Calculator }, with the block's
+ * fields as props. Their code then loads only with the pages that pass them,
+ * never with every page that uses RichBody (cost guides have tight JS budgets).
  *
  * Inline markup in text: [label](/internal-path) → router <Link>,
  * [label](https://…) → external link (new tab), **bold** → <strong>
@@ -98,7 +105,10 @@ function Table({ block, id }) {
 }
 
 /** One block that is not a list item. */
-function renderBlock(block, key) {
+function renderBlock(block, key, widgets) {
+  const Widget = widgets ? widgets[block.t] : null;
+  if (Widget) return <Widget key={key} {...block} />;
+
   switch (block.t) {
     case 'h2':
       return <h2 key={key}>{renderInline(block.x, key)}</h2>;
@@ -126,7 +136,7 @@ function renderBlock(block, key) {
 }
 
 /** Flowing blocks, with consecutive list items merged into one list. */
-function renderFlow(blocks, keyPrefix) {
+function renderFlow(blocks, keyPrefix, widgets) {
   const nodes = [];
   let list = null; // { type: 'li' | 'oli', items: [] }
 
@@ -154,7 +164,7 @@ function renderFlow(blocks, keyPrefix) {
       return;
     }
     flushList();
-    const node = renderBlock(block, `${keyPrefix}-${index}`);
+    const node = renderBlock(block, `${keyPrefix}-${index}`, widgets);
     if (node) nodes.push(node);
   });
 
@@ -175,7 +185,7 @@ function Takeaways({ block, id }) {
   );
 }
 
-export default function RichBody({ blocks }) {
+export default function RichBody({ blocks, widgets }) {
   const visible = (blocks || []).filter((block) => block && !block.hidden);
   const groups = [];
   let flow = [];
@@ -208,7 +218,7 @@ export default function RichBody({ blocks }) {
         group.type === 'takeaways' ? (
           <Takeaways key={`g${index}`} id={`g${index}`} block={group.block} />
         ) : (
-          <div key={`g${index}`}>{renderFlow(group.blocks, `g${index}`)}</div>
+          <div key={`g${index}`}>{renderFlow(group.blocks, `g${index}`, widgets)}</div>
         )
       )}
     </>

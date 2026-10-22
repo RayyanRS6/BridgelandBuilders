@@ -101,7 +101,7 @@ export default {
   gallery: {
     tag: 'Design Ideas',
     title: 'Whole Home Renovation Ideas',
-    desc: 'Inspiration photos, not Bridgeland projects. Photos from our own Winnipeg jobs will replace these as each project is documented.',
+    desc: 'Design ideas for living rooms, kitchens and open layouts, to bring to your on-site visit.',
     items: [
       { img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80', alt: 'Bright living room with a tan leather sofa, white armchairs, and large windows', title: 'Bright Living Room', text: 'Large windows, light wood floors, and a wall of framed photos' },
       { img: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80', alt: 'Person cooking at a gas cooktop in a white kitchen with a stone island and built-in wall oven', title: 'White Kitchen with Island Cooktop', text: 'Flat-panel cabinets, stone counters, and a built-in wall oven' },
@@ -121,14 +121,9 @@ export default {
     ],
   },
 
-  // Real client testimonial (confirmed by the owner 2026-10-13).
-  testimonial: {
-    quote:
-      '“We had our whole main floor redone and honestly expected it to be a nightmare. It wasn’t. The crew showed up when they said they would, the site was swept every single night, and when we changed our minds about the flooring halfway through they just sorted it out. The house finally feels like ours.”',
-    initial: 'S',
-    name: 'Sandra K.',
-    role: 'Homeowner, Whole Home Renovation',
-  },
+  // Real client testimonial (confirmed by the owner 2026-10-13): its id in
+  // src/data/testimonials.js, where the words live.
+  testimonial: 'sandra-k',
 
   faqs: [
     { q: 'How long does a whole home renovation take?', a: `Most run ${TIMELINES.wholeHome.words}, depending on the size of the house and how much of it is being renovated. You get a schedule with your written quote, and if something shifts we tell you the same week in your progress update, not at the end of the job.` },
@@ -149,7 +144,7 @@ export default {
       `Whole home renovations in Winnipeg under one plan and one written scope: layout, kitchen, baths, flooring and paint. Most take ${TIMELINES.wholeHome.short}. Free visit.`,
     serviceType: 'Whole home renovation',
     primaryKeyword: 'whole home renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   // No whole-home cost page (the estimator has no whole-home data), so the

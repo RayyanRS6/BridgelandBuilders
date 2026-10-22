@@ -15,7 +15,7 @@ export default {
     "Basements & Suites"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-15",
+  "updated": "2026-10-23",
   "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
@@ -58,7 +58,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite."
+      "x": "One common trigger: if kitchen or cooking equipment will be installed, the City says a development permit for a secondary suite may be required. Our guide to [secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) explains what changes when a basement becomes a suite, and [basement suite rental income](/blog/basement-suite-rental-income-winnipeg) covers rents and payback."
     },
     {
       "t": "h2",
@@ -386,28 +386,28 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "winnipeg-renovation-permits",
-      "title": "Renovation Permits in Winnipeg: What Needs One and How to Apply",
-      "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
-      "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 10,
+      "slug": "basement-suite-rental-income-winnipeg",
+      "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+      "excerpt": "When a Winnipeg basement suite can legally be rented, the building code numbers that shape it, what CMHC’s rent survey shows, and a payback calculator that uses your own quote.",
+      "category": "Basements & Suites",
+      "date": "2026-10-23",
+      "readMinutes": 13,
       "image": {
-        "base": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits",
+        "base": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "0f487983",
-          "55b461dd",
-          "5c78c717"
+          "17ebf9b4",
+          "17834f28",
+          "0b66c85d"
         ],
         "avif": [
-          "6bd25ab0",
-          "eac9efdc",
-          "53975749"
+          "29c56e33",
+          "e7d88156",
+          "999be742"
         ],
         "main": 1
       },

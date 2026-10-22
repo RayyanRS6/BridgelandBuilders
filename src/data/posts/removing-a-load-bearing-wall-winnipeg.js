@@ -179,7 +179,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "The City doesn’t inspect propane or natural gas equipment or piping, so if a gas line runs through the wall, ask who will move it and who inspects that work. On our projects, trades are coordinated so each one knows what the next needs, and permits and inspections are coordinated with the City or your local municipality."
+      "x": "The City doesn’t inspect propane or natural gas equipment or piping, so if a gas line runs through the wall, ask who will move it and who inspects that work. On our projects, [trades are coordinated](/services/general-contracting) so each one knows what the next needs, and permits and inspections are coordinated with the City or your local municipality."
     },
     {
       "t": "p",

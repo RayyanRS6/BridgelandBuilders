@@ -101,18 +101,18 @@ export default {
   seo: {
     title: 'Restaurant & Hospitality Renovations Winnipeg | Bridgeland',
     description:
-      'Restaurant, café, bar and hotel renovations in Winnipeg, scheduled around service hours and planned for health review. Free site visit and written quote.',
+      'Restaurant renovation contractor in Winnipeg: kitchens, dining rooms, cafés, bars and hotels, planned around service and health review. Free site visit.',
     serviceType: 'Restaurant and hospitality renovation',
     audience: { '@type': 'BusinessAudience', audienceType: 'Restaurants, cafés, bars and hotels' },
     primaryKeyword: 'restaurant renovation Winnipeg',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
 
   typesTag: 'Hospitality Spaces',
   typesTitle: 'Restaurants, Cafés, Bars & Hotels',
   typesDesc: 'Hotels get the same planning around guests that restaurants get around service.',
   types: [
-    { title: 'Full-Service Restaurants', text: 'Dining rooms, kitchens, bars and washrooms, from a refresh of finishes to a full remodel, or [a fit-out for a new location](/services/commercial-renovations).' },
+    { title: 'Full-Service Restaurants', text: 'Dining rooms, kitchens, bars and washrooms, from a refresh of finishes to a full remodel, or a fit-out for a new location, [planned around your lease date](/services/commercial-renovations#steps).' },
     { title: 'Cafés & Coffee Shops', text: 'Counters, seating, display cases and compact prep areas planned for quick morning service in a small footprint. Downtown cafés can read about the Storefront Success grant in our [commercial renovation financing guide](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank).' },
     { title: 'Bars & Lounges', text: 'Bar fronts, back bars, seating and lighting. Licensed premises must tell the LGCA about major renovations, so build that into the plan.' },
     { title: 'Quick-Service & Takeout', text: 'Ordering counters, pickup areas and efficient kitchens for restaurants that do most of their business as takeout and delivery.' },

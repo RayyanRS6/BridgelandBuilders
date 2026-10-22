@@ -15,7 +15,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-15",
+  "updated": "2026-10-23",
   "readMinutes": 9,
   "hero": null,
   "heroSrc": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-880.cc7d6942.webp",
@@ -155,7 +155,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "That bulletin dates from December 2021, and Manitoba moved to the 2020 national model codes on January 1, 2024, so have the City’s plan examiners confirm current requirements for your drawings."
+      "x": "That bulletin dates from December 2021, and Manitoba moved to the 2020 national model codes on January 1, 2024, so have the City’s plan examiners confirm current requirements for your drawings. The code’s own suite numbers, such as ceiling heights and sound ratings, are in our guide to [renting out a basement suite in Winnipeg](/blog/basement-suite-rental-income-winnipeg)."
     },
     {
       "t": "h2",
@@ -339,6 +339,34 @@ export default {
       "titleCard": true
     },
     {
+      "slug": "basement-suite-rental-income-winnipeg",
+      "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+      "excerpt": "When a Winnipeg basement suite can legally be rented, the building code numbers that shape it, what CMHC’s rent survey shows, and a payback calculator that uses your own quote.",
+      "category": "Basements & Suites",
+      "date": "2026-10-23",
+      "readMinutes": 13,
+      "image": {
+        "base": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "17ebf9b4",
+          "17834f28",
+          "0b66c85d"
+        ],
+        "avif": [
+          "29c56e33",
+          "e7d88156",
+          "999be742"
+        ],
+        "main": 1
+      },
+      "titleCard": true
+    },
+    {
       "slug": "winnipeg-renovation-permits",
       "title": "Renovation Permits in Winnipeg: What Needs One and How to Apply",
       "excerpt": "A project-by-project guide to City of Winnipeg building, development, electrical and plumbing permits for home renovations, checked against the City’s own pages.",
@@ -361,34 +389,6 @@ export default {
           "6bd25ab0",
           "eac9efdc",
           "53975749"
-        ],
-        "main": 1
-      },
-      "titleCard": true
-    },
-    {
-      "slug": "basement-development-permits-winnipeg",
-      "title": "Basement Development Permits in Winnipeg: How to Apply",
-      "excerpt": "What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.",
-      "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 9,
-      "image": {
-        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "86f7cdfe",
-          "d1925dff",
-          "eb1b2d54"
-        ],
-        "avif": [
-          "3e79a34c",
-          "4c88fdfd",
-          "d2a97ce0"
         ],
         "main": 1
       },

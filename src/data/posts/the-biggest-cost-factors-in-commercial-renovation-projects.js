@@ -15,7 +15,7 @@ export default {
     "Costs & Budgets"
   ],
   "date": "2026-08-04",
-  "updated": "2026-10-15",
+  "updated": "2026-10-23",
   "readMinutes": 9,
   "hero": "https://static.wixstatic.com/media/48172a_1ba7005313864ae3a1b52184bd10a8ea~mv2.png",
   "heroSrc": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-880.eaf95e2d.webp",
@@ -122,7 +122,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Budget for testing, and for abatement if needed, before demolition starts."
+      "x": "Budget for testing, and for abatement if needed, before [demolition](/services/demolition) starts."
     },
     {
       "t": "h2",
@@ -158,7 +158,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "For the lease side of those dates, see [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg)."
+      "x": "For the lease side of those dates, see [office fit-up planning around your lease](/blog/office-fit-up-lease-planning-winnipeg), and for the build, our [office renovations](/services/office-renovations)."
     },
     {
       "t": "h3",
@@ -254,7 +254,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** [Book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, retail stores and clinics across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
+      "x": "**Next step:** [Book a free on-site visit](/book-online). We renovate [restaurants and hospitality spaces](/services/restaurant-renovations), offices, [retail stores](/services/retail-renovations) and [clinics](/services/medical-dental-office-renovations) across Winnipeg and nearby communities; see our [commercial renovation services](/services/commercial-renovations). Weighing loans or a landlord allowance? Read [commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)."
     }
   ],
   "faqsTitle": "Commercial renovation cost questions",

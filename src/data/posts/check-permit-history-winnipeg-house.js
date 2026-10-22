@@ -16,7 +16,7 @@ export default {
     "Older Homes"
   ],
   "date": "2026-10-15",
-  "updated": "2026-10-15",
+  "updated": "2026-10-23",
   "readMinutes": 11,
   "hero": "",
   "heroSrc": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.1189cd90.webp",
@@ -444,28 +444,28 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "home-renovation-financing-canada",
-      "title": "Home Renovation Financing in Canada: Your Options",
-      "excerpt": "A plain-language comparison of the main ways Canadians finance a renovation, what each one means for risk and flexibility, and which federal programs have closed.",
-      "category": "Money & Rebates",
-      "date": "2026-10-13",
-      "readMinutes": 8,
+      "slug": "basement-suite-rental-income-winnipeg",
+      "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+      "excerpt": "When a Winnipeg basement suite can legally be rented, the building code numbers that shape it, what CMHC’s rent survey shows, and a payback calculator that uses your own quote.",
+      "category": "Basements & Suites",
+      "date": "2026-10-23",
+      "readMinutes": 13,
       "image": {
-        "base": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing",
+        "base": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "807f2406",
-          "311eab5d",
-          "1e034cbf"
+          "17ebf9b4",
+          "17834f28",
+          "0b66c85d"
         ],
         "avif": [
-          "c61c929a",
-          "72c40423",
-          "a983957b"
+          "29c56e33",
+          "e7d88156",
+          "999be742"
         ],
         "main": 1
       },

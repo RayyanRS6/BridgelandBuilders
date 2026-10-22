@@ -9,6 +9,13 @@
 /** Published posts only (blog-raw status "published"), newest first. */
 export const BLOG_NODE_POSTS = [
   {
+    "slug": "basement-suite-rental-income-winnipeg",
+    "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+    "metaDescription": "Renting out a Winnipeg basement suite: permits, code ceiling heights, egress and fire separation, CMHC rent figures, and a payback calculator.",
+    "date": "2026-10-23",
+    "ogImage": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x630.89b9628c.jpg"
+  },
+  {
     "slug": "asbestos-testing-before-renovating-manitoba",
     "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
     "metaDescription": "When to test for asbestos before renovating in Manitoba, what to do about vermiculite insulation, and what the Province’s 2025 asbestos rule changes mean.",

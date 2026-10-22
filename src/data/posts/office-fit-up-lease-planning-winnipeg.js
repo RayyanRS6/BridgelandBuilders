@@ -15,7 +15,7 @@ export default {
     "Permits & Planning"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-15",
+  "updated": "2026-10-23",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
@@ -225,7 +225,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Next step:** [Book a free on-site visit](/book-online). We will walk the space with you, talk through your lease dates and follow up with a free written quote. Bridgeland Builders renovates offices across Winnipeg and nearby communities; see our full range of [commercial renovation services](/services/commercial-renovations)."
+      "x": "**Next step:** [Book a free on-site visit](/book-online). We will walk the space with you, talk through your lease dates and follow up with a free written quote. Bridgeland Builders renovates offices across Winnipeg and nearby communities; see [how we plan a commercial fit-up around your lease date](/services/commercial-renovations#steps)."
     }
   ],
   "faqsTitle": "Office fit-up questions",

@@ -67,3 +67,7 @@ export const OFFICE_DAYS_TEXT = BUSINESS_HOURS.map(({ days }) => daySpan(days)).
 /* --------------------------------------------------------------- timelines */
 // Defined in timelines.js (no imports, so services.js can use it too).
 export { TIMELINES } from './timelines.js';
+
+/* -------------------------------------------------------------- guarantees */
+// Named guarantees (all off until the owner confirms their terms) live in
+// guarantees.js: this module ships with every page, and their text should not.
