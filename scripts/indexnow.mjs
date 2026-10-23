@@ -8,13 +8,21 @@
  *   node scripts/indexnow.mjs --base=<rev> --head=<rev>
  *   node scripts/indexnow.mjs --all           every sitemap URL (e.g. first run)
  *
- * Changed URLs = sitemap entries that are new or whose <lastmod> changed,
- * sitemap entries that were removed (so engines see the 404/redirect), and
- * redirect sources in vercel.json that are new or now point somewhere else
- * (on-site destinations only: off-site short links such as /review are not
- * sent).
- * Both files are read from git, so this needs a checkout with the two commits
- * (fetch-depth: 2 in .github/workflows/post-deploy.yml).
+ * Changed URLs = sitemap entries that are new or whose <lastmod> date changed,
+ * sitemap entries whose visible text changed on a day they had already been
+ * updated (their content hash in scripts/seo-content-hashes.json moved while
+ * the lastmod date stayed the same: a second edit on the same day), sitemap
+ * entries that were removed (so engines see the 404/redirect), and redirect
+ * sources in vercel.json that are new or now point somewhere else (on-site
+ * destinations only: off-site short links such as /review are not sent).
+ * lastmod is compared by its date (YYYY-MM-DD): the sitemap switched from bare
+ * dates to date-times on 2026-10-23 with the same dates, and that format
+ * change alone is not a change to a page.
+ * The files are read from git, so this needs a checkout with both commits.
+ * .github/workflows/post-deploy.yml passes the commit of the previous
+ * successful production deployment as --base (fetched for this), else HEAD~1
+ * (fetch-depth: 2). A base that cannot be read counts as no base sitemap:
+ * every sitemap URL is sent.
  *
  * The key is public/<key>.txt (a 32-character hex name whose content is the
  * same key), served at the site root; INDEXNOW_KEY overrides it. No secrets.
@@ -45,14 +53,20 @@ function gitShow(rev, path) {
   }
 }
 
-/** Map of <loc> -> <lastmod> ('' when absent). */
+/**
+ * Map of <loc> -> the date of its <lastmod> ('' when absent): "2026-10-23"
+ * from either "2026-10-23" or "2026-10-23T00:00:00-05:00". Any other value is
+ * kept as written.
+ */
 function sitemapEntries(xml) {
   const entries = new Map();
   for (const m of String(xml || '').matchAll(/<url>([\s\S]*?)<\/url>/g)) {
     const loc = /<loc>\s*([^<\s]+)\s*<\/loc>/.exec(m[1]);
     if (!loc) continue;
     const lastmod = /<lastmod>\s*([^<\s]+)\s*<\/lastmod>/.exec(m[1]);
-    entries.set(loc[1].replace(/&amp;/g, '&'), lastmod ? lastmod[1] : '');
+    const value = lastmod ? lastmod[1] : '';
+    const date = /^\d{4}-\d{2}-\d{2}(?=$|T)/.exec(value);
+    entries.set(loc[1].replace(/&amp;/g, '&'), date ? date[0] : value);
   }
   return entries;
 }
@@ -80,6 +94,23 @@ function redirectEntries(json, siteHosts) {
     }
   } catch {
     /* unreadable vercel.json: no redirect URLs */
+  }
+  return map;
+}
+
+/**
+ * Map of route -> content hash from scripts/seo-content-hashes.json text (the
+ * SEO audit records a hash of each indexable page's visible <main> text there,
+ * with --update-hashes). Unreadable or absent: an empty map.
+ */
+function contentHashes(json) {
+  const map = new Map();
+  try {
+    for (const [route, entry] of Object.entries(JSON.parse(json || '{}') || {})) {
+      if (route.startsWith('/') && entry && typeof entry.hash === 'string') map.set(route, entry.hash);
+    }
+  } catch {
+    /* unreadable hash file: no hash changes */
   }
   return map;
 }
@@ -126,6 +157,16 @@ for (const [loc, lastmod] of headSitemap) {
 }
 if (!ALL) {
   for (const loc of baseSitemap.keys()) if (!headSitemap.has(loc)) urls.add(loc);
+  // Same-day text changes: the lastmod date can't move again, the hash does.
+  // Only routes still in the sitemap (indexable) are sent.
+  const baseHashes = contentHashes(gitShow(BASE, 'scripts/seo-content-hashes.json'));
+  if (baseHashes.size) {
+    const headHashes = contentHashes(gitShow(HEAD, 'scripts/seo-content-hashes.json'));
+    for (const [route, hash] of headHashes) {
+      const loc = `${SITE}${route}`;
+      if (headSitemap.has(loc) && baseHashes.get(route) !== hash) urls.add(loc);
+    }
+  }
   const headRedirects = redirectEntries(gitShow(HEAD, 'vercel.json'), SITE_HOSTS);
   const baseRedirects = redirectEntries(gitShow(BASE, 'vercel.json'), SITE_HOSTS);
   for (const [source, target] of headRedirects) {

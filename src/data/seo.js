@@ -111,7 +111,7 @@ export const PAGE_SEO = {
     title: 'Winnipeg Renovation FAQs | Bridgeland Builders',
     description:
       'Answers to common Winnipeg renovation questions: costs and written quotes, permits, timelines, living through the work, where we work and how to start.',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   '/instant-quote': {
     title: 'Free Renovation Quote & Estimate Winnipeg | Bridgeland',

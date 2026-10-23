@@ -6,14 +6,80 @@ import RichBody from '../components/RichBody.jsx';
 import Testimonial from '../components/Testimonial.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import { PEOPLE } from '../data/people.js';
-import { EXPERIENCE_YEARS, PROJECT_COUNT } from '../data/facts.js';
-import { BBB_PROFILE_URL, SERVICE_AREA_STATEMENT } from '../data/siteConfig.js';
+import { EXPERIENCE_YEARS, PROJECT_COUNT, REPLY_TIME, officeHoursText } from '../data/facts.js';
+import { liveServices } from '../data/services.js';
+import {
+  BBB_PROFILE_URL,
+  BUSINESS,
+  GBP,
+  NEARBY_AREAS_TEXT,
+  REVIEW_STATS,
+  SERVICE_AREA_STATEMENT,
+  SITE_EMAIL,
+  SITE_NAME,
+  SITE_PHONE,
+  SITE_PHONE_TEL,
+} from '../data/siteConfig.js';
+// The two dates below are copied from siteConfig.js at build time, so they load
+// with this page only (siteConfig.js ships in every page's entry chunk).
+import { BBB_ACCREDITED_SINCE, REVIEW_STATS_AS_OF } from '../data/entityFacts.generated.js';
 import { usePageSeo } from '../hooks/useSeo.js';
 
 // The team, from src/data/people.js (empty until the owner supplies real
 // people). Each card's id is the person's key, so post bylines and the Person
 // schema @id (/about-us#<id>) land on it.
 const TEAM = Object.entries(PEOPLE);
+
+/** '2026-10-23' -> 'October 2026' (as CaseStudyPage.jsx formats a month). */
+const monthYear = (iso) =>
+  new Date(`${String(iso).slice(0, 10)}T00:00:00`).toLocaleDateString('en-CA', { year: 'numeric', month: 'long' });
+
+/** Live service pages of one registry category, as a lowercase list. */
+const servicesIn = (category) =>
+  liveServices()
+    .filter((service) => service.category === category)
+    .map((service) => service.navLabel.toLowerCase().replace(/ & /g, ' and '))
+    .join(', ');
+
+const REVIEWS = `${REVIEW_STATS.count} ${REVIEW_STATS.count === 1 ? 'review' : 'reviews'}`;
+
+// BUSINESS.disambiguatingDescription ("<category line>, Canada. Not affiliated
+// with …") as two plain sentences that each name the business, so either one
+// still says who it is about when quoted on its own.
+const lowerFirst = (text) => text.charAt(0).toLowerCase() + text.slice(1);
+const [WHAT_WE_ARE, NOT_AFFILIATED] = BUSINESS.disambiguatingDescription.split('. ');
+
+// "At a glance" (AI-visibility work, 2026-10-23): the business's entity facts
+// in one visible, quotable list, the same values as the Organization JSON-LD
+// (description, disambiguatingDescription, areaServed, telephone, email,
+// opening hours). Every value comes from a constant; the street address is
+// never shown (service-area business). The Google rating is visible text only,
+// never rating schema (plan §3.5); the BBB line never quotes a letter grade.
+const AT_A_GLANCE = [
+  { t: 'h2', x: 'Bridgeland Builders at a glance' },
+  { t: 'li', x: `**Who we are:** ${SITE_NAME} is a ${lowerFirst(WHAT_WE_ARE)}.` },
+  { t: 'li', x: `**Not to be confused with:** ${SITE_NAME} is ${lowerFirst(NOT_AFFILIATED || '')}`, hidden: !NOT_AFFILIATED },
+  { t: 'li', x: `**Service area:** Winnipeg and nearby communities within about an hour of the city: ${NEARBY_AREAS_TEXT}.` },
+  { t: 'li', x: `**Home renovations:** ${servicesIn('residential')}.` },
+  { t: 'li', x: `**Commercial work:** ${servicesIn('commercial')}.` },
+  { t: 'li', x: `**Other services:** ${servicesIn('additional')}.` },
+  { t: 'li', x: `**Office hours:** ${officeHoursText(' ')}` },
+  { t: 'li', x: `**Phone:** [${SITE_PHONE}](${SITE_PHONE_TEL})` },
+  { t: 'li', x: `**Email:** [${SITE_EMAIL}](mailto:${SITE_EMAIL})` },
+  { t: 'li', x: `**Reply time:** within ${REPLY_TIME}.` },
+  { t: 'li', x: '**Free visit and quote:** every project starts with a free on-site visit and a free written quote, with no obligation to go ahead.' },
+  { t: 'li', x: `**Experience:** over ${EXPERIENCE_YEARS} years of combined experience and more than ${PROJECT_COUNT} completed projects.` },
+  {
+    t: 'li',
+    x: `**Google rating:** [${REVIEW_STATS.rating.toFixed(1)} out of 5 from ${REVIEWS}](${GBP.mapsUrl}), as of ${monthYear(REVIEW_STATS_AS_OF)}.`,
+    hidden: !(REVIEW_STATS.count > 0 && GBP.mapsUrl && REVIEW_STATS_AS_OF),
+  },
+  {
+    t: 'li',
+    x: `**Better Business Bureau:** [BBB Accredited Business](${BBB_PROFILE_URL}) since ${monthYear(BBB_ACCREDITED_SINCE)}.`,
+    hidden: !(BBB_PROFILE_URL && BBB_ACCREDITED_SINCE),
+  },
+];
 
 // "Who is Bridgeland Builders?" — answer first, owner-confirmed facts only. No
 // team names, credentials, licences, insurance or warranty until the owner
@@ -24,6 +90,7 @@ const ABOUT_BLOCKS = [
     t: 'p',
     x: `Bridgeland Builders is a renovation and construction contractor based in Winnipeg, Manitoba. We renovate homes and commercial spaces in Winnipeg and nearby communities within about an hour. Our team brings over ${EXPERIENCE_YEARS} years of combined experience and more than ${PROJECT_COUNT} completed projects, and every project starts with a free on-site visit and a free written quote.`,
   },
+  ...AT_A_GLANCE,
   { t: 'h2', x: 'What do we work on?' },
   {
     t: 'p',
@@ -44,12 +111,16 @@ const ABOUT_BLOCKS = [
     t: 'p',
     x: 'Our renovation guides and cost pages are written from Bridgeland Builders’ own information, such as our process, timelines and estimator price ranges. Facts about permits, programs and rules come from official sources, linked with the date we checked them. Read [how we write, source and correct our guides](/editorial-policy).',
   },
-  // Plan §19: a link only, no rating. Licence, insurance, WCB and warranty
-  // lines wait for documents from the owner.
+  // Plan §19: no BBB letter grade. The accreditation (BBB_ACCREDITED_SINCE in
+  // siteConfig.js) with a link to the profile; without it, the profile link
+  // only. Licence, insurance, WCB and warranty lines wait for documents from
+  // the owner.
   { t: 'h2', x: 'Credentials you can check', hidden: !BBB_PROFILE_URL },
   {
     t: 'p',
-    x: `Bridgeland Builders has a business profile with the Better Business Bureau. [Check us on the Better Business Bureau](${BBB_PROFILE_URL}) to see it for yourself.`,
+    x: BBB_ACCREDITED_SINCE
+      ? `Bridgeland Builders has been a BBB Accredited Business since ${monthYear(BBB_ACCREDITED_SINCE)}. [See our Better Business Bureau profile](${BBB_PROFILE_URL}) to check it for yourself.`
+      : `Bridgeland Builders has a business profile with the Better Business Bureau. [Check us on the Better Business Bureau](${BBB_PROFILE_URL}) to see it for yourself.`,
     hidden: !BBB_PROFILE_URL,
   },
 ];
@@ -96,7 +167,7 @@ export default function AboutPage() {
       />
 
       {/* No .reveal on long text: it would sit at opacity 0 until the observer runs. */}
-      <article className="blog-article-section" id="who-we-are">
+      <article className="blog-article-section about-body" id="who-we-are">
         <div className="container blog-article-container">
           <div className="blog-article-body">
             <RichBody blocks={ABOUT_BLOCKS} />

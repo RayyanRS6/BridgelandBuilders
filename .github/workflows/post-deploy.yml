@@ -1,7 +1,12 @@
 # After every successful Vercel production deployment (SEO plan §3.6, §1,
 # §3.8, §4):
 #   1. IndexNow: tell Bing and the other IndexNow engines which URLs changed
-#      (sitemap entries and redirect sources, HEAD vs the previous commit).
+#      (sitemap entries and redirect sources): this deployment's commit vs the
+#      commit of the previous successful production deployment, read from the
+#      GitHub Deployments API (Vercel reports its deployments there), so a
+#      push of several commits, or a commit that never deployed, still pings
+#      every URL that changed on the live site. No such deployment found (or
+#      its commit can't be fetched): the previous commit (HEAD~1), as before.
 #   2. Live redirect check: every legacy URL answers one 308/307 to the right
 #      page, and that page answers 200. It runs against the production apex,
 #      not the deployment URL: per-deployment *.vercel.app URLs sit behind
@@ -15,7 +20,9 @@
 # Vercel's GitHub integration reports deployments to GitHub, which triggers
 # deployment_status. No secrets are needed: the IndexNow key is the public
 # key file in public/, and the scripts use only Node built-ins (plus
-# Playwright / @lhci/cli, fetched by the jobs that use them).
+# Playwright / @lhci/cli, fetched by the jobs that use them). The workflow
+# token only reads: contents (checkout, git fetch) and deployments (the
+# previous production deployment's commit).
 name: Post-deploy checks
 
 on:
@@ -23,6 +30,7 @@ on:
 
 permissions:
   contents: read
+  deployments: read
 
 # A new run waits for the running one instead of cancelling it (a cancelled
 # run loses the IndexNow ping for its deploy's changed URLs). GitHub keeps at
@@ -51,8 +59,49 @@ jobs:
         with:
           node-version: 22
 
+      # The newest older deployment to this environment that ever reported
+      # "success" (a deployment that was live turns "inactive" once a newer one
+      # replaces it, so any success status counts). Its commit is fetched
+      # (depth 1 is enough for git show) and passed to IndexNow as the base.
+      # Never fails the job: on any problem the output stays empty and the
+      # ping falls back to HEAD~1.
+      - name: Find the previous production deployment
+        id: base
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          DEPLOY_ENV: ${{ github.event.deployment.environment }}
+          CURRENT_ID: ${{ github.event.deployment.id }}
+        run: |
+          set +e
+          base=""
+          rows=$(gh api -X GET "repos/${REPO}/deployments" -f environment="${DEPLOY_ENV}" -F per_page=30 \
+            --jq 'sort_by(.id) | reverse | .[] | "\(.id) \(.sha)"')
+          while read -r id sha; do
+            [ -n "$id" ] || continue
+            [ "$id" -lt "$CURRENT_ID" ] 2>/dev/null || continue
+            ok=$(gh api -X GET "repos/${REPO}/deployments/${id}/statuses" -F per_page=100 \
+              --jq 'any(.[]; .state == "success")' < /dev/null)
+            if [ "$ok" = "true" ]; then
+              base="$sha"
+              break
+            fi
+          done <<< "$rows"
+          if [[ "$base" =~ ^[0-9a-f]{40}$ ]] \
+            && git fetch --no-tags --depth=1 origin "$base" \
+            && git cat-file -e "${base}^{commit}"; then
+            echo "Previous successful production deployment: $base"
+            echo "sha=$base" >> "$GITHUB_OUTPUT"
+          else
+            echo "No previous successful production deployment found (or its commit could not be fetched): using HEAD~1"
+          fi
+          exit 0
+
       - name: IndexNow ping
-        run: node scripts/indexnow.mjs --head=HEAD --base=HEAD~1
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: node scripts/indexnow.mjs --head=HEAD --base="${BASE_SHA:-HEAD~1}"
 
       - name: Live redirect check
         if: ${{ always() }}

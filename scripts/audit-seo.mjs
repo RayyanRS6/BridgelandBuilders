@@ -144,7 +144,7 @@ const jsBudgetKb = (route) => {
 };
 const EXPECTED_FILES = {
   error: ['robots.txt', 'sitemap.xml', '404.html'],
-  warn: ['llms.txt', 'llms-full.txt', 'favicon.ico', 'favicon.png', 'site.webmanifest', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png'],
+  warn: ['feed.xml', 'llms.txt', 'llms-full.txt', 'favicon.ico', 'favicon.png', 'site.webmanifest', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png'],
 };
 const NETLIFY_FILES = ['_headers', '_redirects'];
 
@@ -191,6 +191,11 @@ async function importGuarded(rel, wanted = [], optional = []) {
 
 const siteConfig = await importGuarded('src/data/siteConfig.js', ['SITE_URL']);
 const SITE_URL = String(siteConfig.SITE_URL || 'https://bridgelandbuilders.com').replace(/\/+$/, '');
+// "BBB Accredited" needs BBB_ACCREDITED_SINCE (siteConfig.js). TrustStrip.jsx
+// and BookingAside.jsx write those words without reading the date (it would
+// land in the entry chunk), so once the date is cleared they become a banned
+// claim and fail the build until they are changed back.
+if (!siteConfig.BBB_ACCREDITED_SINCE) BANNED_CLAIMS.push('bbb accredited');
 // head.js first: it imports every service content module (src/data/projects.js),
 // which fills seo.js SERVICE_SEO, and it owns the full route inventory
 // (SEO_ENTRIES: static pages, live services, cost guides, published areas,
@@ -983,6 +988,16 @@ if (Number(reviewStats.count) > 0) {
   const statsCutoff = isoDay(new Date(NOW.getTime() - REVIEW_STATS_STALE_DAYS * 86400000));
   if (!/^\d{4}-\d{2}-\d{2}$/.test(asOf) || asOf < statsCutoff) {
     report.warn('content.stale-review-stats', '/', `Google rating ${Number(reviewStats.rating).toFixed(1)} from ${reviewStats.count} reviews (REVIEW_STATS) last checked ${asOf || 'never'}, over ${REVIEW_STATS_STALE_DAYS} days ago — re-read the Google Business Profile, then update rating, count and asOf in src/data/siteConfig.js`);
+  }
+}
+// "BBB Accredited Business" (the trust strip, the booking aside, /about-us,
+// the llms files) is BBB's status to give and take away, so it is re-checked
+// on the same monthly cycle: BBB_ACCREDITATION_CHECKED in siteConfig.js.
+if (siteConfig.BBB_ACCREDITED_SINCE) {
+  const checked = String(siteConfig.BBB_ACCREDITATION_CHECKED || '').slice(0, 10);
+  const bbbCutoff = isoDay(new Date(NOW.getTime() - REVIEW_STATS_STALE_DAYS * 86400000));
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(checked) || checked < bbbCutoff) {
+    report.warn('content.stale-bbb-check', '/about-us', `BBB accreditation (BBB_ACCREDITED_SINCE ${siteConfig.BBB_ACCREDITED_SINCE}) last checked ${checked || 'never'}, over ${REVIEW_STATS_STALE_DAYS} days ago — open the BBB profile (BBB_PROFILE_URL), confirm the business is still accredited, then update BBB_ACCREDITATION_CHECKED in src/data/siteConfig.js (or set BBB_ACCREDITED_SINCE to null if it is not)`);
   }
 }
 

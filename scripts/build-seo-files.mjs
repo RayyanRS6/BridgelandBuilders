@@ -2,11 +2,13 @@
  * Generates every static SEO/AEO artefact from one source of truth:
  *   public/robots.txt    — one rule group for every crawler (AI crawlers welcome)
  *   public/sitemap.xml   — every indexable route and published post, with lastmod
+ *   public/feed.xml      — RSS 2.0 feed of the published blog posts
  *   public/llms.txt      — concise site map for AI answer engines
  *   public/llms-full.txt — fuller context (services, service area, FAQs, posts'
  *                          quick answers, articles)
  *   index.html           — sitewide JSON-LD injected between markers
  *   prerender-routes.json
+ *   src/data/entityFacts.generated.js — two siteConfig.js dates for /about-us
  *
  * Headers and redirects live in vercel.json (redirects are generated from
  * src/data/redirects.js by `npm run redirects`).
@@ -16,7 +18,7 @@
  * published community pages, case studies and videos, and published blog
  * posts. Draft pages are never prerendered or listed.
  */
-import { writeFileSync, readFileSync, mkdirSync } from 'node:fs';
+import { existsSync, writeFileSync, readFileSync, mkdirSync } from 'node:fs';
 import { EXPERIENCE_YEARS, OFFICE_HOURS_TEXT, PROJECT_COUNT, REPLY_TIME } from '../src/data/facts.js';
 import { SITE_FAQS } from '../src/data/faqs.js';
 import { LIVE_COST_GUIDES, PUBLISHED_POSTS, SITE_ROUTES } from '../src/data/head.js';
@@ -29,10 +31,12 @@ import {
   SERVICE_AREA_NAMES,
   SERVICE_AREA_STATEMENT,
   SOCIAL_PROFILES,
+  BBB_ACCREDITED_SINCE,
   BBB_PROFILE_URL,
   GBP,
+  REVIEW_STATS,
 } from '../src/data/siteConfig.js';
-import { COST_HUB_PATH, NOINDEX_ROUTES, buildOrganizationGraph } from '../src/data/seo.js';
+import { COST_HUB_PATH, NOINDEX_ROUTES, PAGE_SEO, buildOrganizationGraph, isoWinnipeg } from '../src/data/seo.js';
 import { stripInline } from '../src/lib/inlineText.js';
 
 const PUBLIC = new URL('../public/', import.meta.url);
@@ -62,6 +66,10 @@ if (missingLastmod.length) {
 // plan §13 keeps the image sitemap for owned job photos used with the
 // client's consent. Stock photos and the generated blog title cards are not
 // listed, even though the blog images are now self-hosted.
+// lastmod is the page's `updated` date as an ISO 8601 date-time at midnight
+// in Winnipeg with that day's offset (2026-10-23T00:00:00-05:00), the form
+// Bing asks for. The value is still only the `updated` date: no time of day
+// is claimed, and the audit and IndexNow compare the date part.
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 out('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
@@ -69,11 +77,77 @@ out('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 ${urls
     .map((u) => `  <url>
     <loc>${esc(`${SITE_URL}${u.path}`)}</loc>
-    <lastmod>${esc(u.lastmod)}</lastmod>
+    <lastmod>${esc(isoWinnipeg(u.lastmod))}</lastmod>
   </url>`)
     .join('\n')}
 </urlset>
 `);
+
+/** The newest `updated` date in the sitemap (YYYY-MM-DD): the llms files' "Last updated". */
+const LAST_UPDATED = urls.map((u) => String(u.lastmod).slice(0, 10)).sort().pop();
+
+/* ------------------------------------------------------------------ feed */
+// RSS 2.0 feed of the published posts, newest first, for feed readers and for
+// Bing (which takes feeds for URL discovery). Linked from every page's <head>
+// (index.html). Dates are the posts' own: pubDate is each post's `date`, and
+// lastBuildDate the newest post `date` or `updated`, so the file only changes
+// when a post does. RFC 822 dates at midnight in Winnipeg.
+const FEED_TITLE = 'Bridgeland Builders renovation guides';
+const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+/** '2026-10-23' -> 'Fri, 23 Oct 2026 00:00:00 -0500'. */
+function rfc822(date) {
+  const [year, month, day] = String(date).slice(0, 10).split('-').map(Number);
+  const offset = (/([+-]\d{2}):(\d{2})$/.exec(isoWinnipeg(String(date).slice(0, 10)) || '') || []).slice(1).join('') || '+0000';
+  const weekday = DAYS[new Date(Date.UTC(year, month - 1, day)).getUTCDay()];
+  return `${weekday}, ${String(day).padStart(2, '0')} ${MONTHS[month - 1]} ${year} 00:00:00 ${offset}`;
+}
+const feedPosts = PUBLISHED_POSTS.filter((post) => routeOf.has(`/blog/${post.slug}`) && !routeOf.get(`/blog/${post.slug}`).noindex);
+const feedBuilt = feedPosts
+  .flatMap((post) => [post.date, post.updated])
+  .filter((date) => /^\d{4}-\d{2}-\d{2}/.test(String(date || '')))
+  .map((date) => String(date).slice(0, 10))
+  .sort()
+  .pop();
+const feedItems = feedPosts.map((post) => {
+  const link = `${SITE_URL}/blog/${post.slug}`;
+  const description = stripInline(post.metaDescription || post.excerpt || post.answer || '').replace(/\s+/g, ' ').trim();
+  return `    <item>
+      <title>${esc(post.title)}</title>
+      <link>${esc(link)}</link>
+      <guid isPermaLink="true">${esc(link)}</guid>
+      <pubDate>${rfc822(post.date)}</pubDate>
+${post.category ? `      <category>${esc(post.category)}</category>\n` : ''}      <description>${esc(description)}</description>
+    </item>`;
+});
+out('feed.xml', `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${esc(FEED_TITLE)}</title>
+    <link>${esc(`${SITE_URL}/blog`)}</link>
+    <atom:link href="${esc(`${SITE_URL}/feed.xml`)}" rel="self" type="application/rss+xml" />
+    <description>${esc((PAGE_SEO['/blog'] && PAGE_SEO['/blog'].description) || FEED_TITLE)}</description>
+    <language>en-CA</language>
+${feedBuilt ? `    <lastBuildDate>${rfc822(feedBuilt)}</lastBuildDate>\n` : ''}${feedItems.join('\n')}
+  </channel>
+</rss>
+`);
+
+/* ---------------------------------------------- dates for the /about-us page */
+// /about-us shows the Google rating's as-of month and the BBB accreditation
+// month. siteConfig.js ships in the entry chunk of every page, which is at its
+// JavaScript budget, and a page reading REVIEW_STATS.asOf or
+// BBB_ACCREDITED_SINCE from it would add them there. So the two values are
+// copied into a module that only /about-us imports (written only on change).
+const ENTITY_FACTS = new URL('../src/data/entityFacts.generated.js', import.meta.url);
+const entityFacts = `// Generated by scripts/build-seo-files.mjs from src/data/siteConfig.js
+// (REVIEW_STATS.asOf, BBB_ACCREDITED_SINCE): do not edit, change siteConfig.js.
+// Only /about-us imports this, so the two dates stay out of the entry chunk
+// that siteConfig.js ships in.
+export const REVIEW_STATS_AS_OF = ${JSON.stringify((REVIEW_STATS && REVIEW_STATS.asOf) || null)};
+export const BBB_ACCREDITED_SINCE = ${JSON.stringify(BBB_ACCREDITED_SINCE || null)};
+`;
+if (!existsSync(ENTITY_FACTS) || readFileSync(ENTITY_FACTS, 'utf8') !== entityFacts) writeFileSync(ENTITY_FACTS, entityFacts);
 
 /* ---------------------------------------------------------------- robots */
 // One group for every crawler. Search engines and AI search/answer engines
@@ -158,6 +232,19 @@ const profileLines = [
   .map(([label, url]) => `- ${label}: ${url}`)
   .join('\n');
 
+// The Google rating (REVIEW_STATS, read from the live profile, with the date it
+// was read) and the BBB accreditation (BBB_ACCREDITED_SINCE), as plain text:
+// never rating markup, never the BBB letter grade.
+const reviewCount = REVIEW_STATS && REVIEW_STATS.count;
+const ratingLine = reviewCount > 0 && GBP && GBP.mapsUrl
+  ? `Google rating: ${Number(REVIEW_STATS.rating).toFixed(1)} out of 5 from ${reviewCount} ${reviewCount === 1 ? 'review' : 'reviews'}, as of ${REVIEW_STATS.asOf} (${GBP.mapsUrl})`
+  : null;
+const bbbLine = BBB_ACCREDITED_SINCE && BBB_PROFILE_URL
+  ? `Better Business Bureau: BBB Accredited Business since ${BBB_ACCREDITED_SINCE} (${BBB_PROFILE_URL})`
+  : null;
+const reputationLines = [ratingLine, bbbLine].filter(Boolean).map((line) => `- ${line}`).join('\n');
+const lastUpdatedLine = LAST_UPDATED ? `Last updated: ${LAST_UPDATED}` : null;
+
 // Sections are joined with one blank line; empty sections are dropped.
 const doc = (...sections) => `${sections.filter(Boolean).join('\n\n')}\n`;
 
@@ -168,6 +255,7 @@ out('llms.txt', doc(
   `# ${SITE_NAME}`,
   `> ${BUSINESS.shortDescription || BUSINESS.description} Phone: ${SITE_PHONE}. ${SERVICE_AREA_STATEMENT}`,
   BUSINESS.disambiguatingDescription,
+  lastUpdatedLine,
   // Experience and project count confirmed by the owner 2026-10-13 (O-2).
   `${SITE_NAME} is a service-area renovation and construction contractor based in Winnipeg, Manitoba,
 with over ${EXPERIENCE_YEARS} years of combined experience and more than ${PROJECT_COUNT} completed projects. Quotes are free and
@@ -180,11 +268,14 @@ with the City of Winnipeg or the local municipality when a project requires them
   `## Contact
 - Phone: ${SITE_PHONE}
 - Email: ${BUSINESS.email}
+- Office hours: ${OFFICE_HOURS_TEXT}
+- Reply time: within ${REPLY_TIME}
 - Location: Winnipeg, Manitoba, Canada
 - Service area: ${SERVICE_AREA_STATEMENT}
 - Quote requests (instant price estimator): ${SITE_URL}/instant-quote
 - Book a free on-site visit: ${SITE_URL}/book-online
 - Contact form: ${SITE_URL}/contact-us`,
+  reputationLines && `## Ratings and accreditation\n${reputationLines}`,
   profileLines && `## Profiles\n${profileLines}`,
 ));
 
@@ -235,12 +326,14 @@ out('llms-full.txt', doc(
   `# ${SITE_NAME} — full reference`,
   `> ${BUSINESS.shortDescription || BUSINESS.description}`,
   BUSINESS.disambiguatingDescription,
+  lastUpdatedLine,
   // Office hours, reply time, experience and project count: src/data/facts.js.
   `Phone: ${SITE_PHONE} · Email: ${BUSINESS.email} · Winnipeg, Manitoba, Canada · Free written quotes · Office hours: ${OFFICE_HOURS_TEXT} · Replies within ${REPLY_TIME} · Over ${EXPERIENCE_YEARS} years combined experience · More than ${PROJECT_COUNT} projects completed`,
   `## Services offered\n${serviceLines}`,
   `## Service area\n${SERVICE_AREA_STATEMENT}\n\nCommunities: ${SERVICE_AREA_NAMES.join(', ')}`,
   BUSINESS.knowsAbout && BUSINESS.knowsAbout.length &&
     `## Expertise\n${BUSINESS.knowsAbout.map((k) => `- ${k}`).join('\n')}`,
+  reputationLines && `## Ratings and accreditation\n${reputationLines}`,
   profileLines && `## Profiles\n${profileLines}`,
   fullCostLines && `## Renovation cost guides\n${fullCostLines}`,
   faqBlocks.length && `## Frequently asked questions\n\n${faqBlocks.join('\n\n')}`,
@@ -267,7 +360,8 @@ writeFileSync(indexUrl, html);
 const prerenderRoutes = [...new Set([...urls.map((u) => u.path), ...NOINDEX_PAGES])];
 writeFileSync(new URL('../prerender-routes.json', import.meta.url), JSON.stringify(prerenderRoutes, null, 2));
 
-console.log(`sitemap: ${urls.length} urls (${PAGES.length} pages, ${POSTS.length} posts)`);
+console.log(`sitemap: ${urls.length} urls (${PAGES.length} pages, ${POSTS.length} posts), lastmod as date-times`);
+console.log(`feed.xml: ${feedItems.length} posts`);
 console.log(`noindex (prerendered, not in sitemap): ${NOINDEX_PAGES.join(', ') || 'none'}`);
 console.log(`prerender-routes.json: ${prerenderRoutes.length} routes`);
 console.log('robots: one group for all crawlers (Disallow: /api/)');

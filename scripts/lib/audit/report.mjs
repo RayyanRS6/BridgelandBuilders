@@ -48,6 +48,7 @@ export const CODE_TITLES = {
   'content.stale-cost-guide': 'Cost guide due for its yearly refresh',
   'content.stale-source': 'Sources last verified more than a year ago',
   'content.review-due': 'Post past its review-by date (blog-raw "reviewBy")',
+  'content.stale-bbb-check': 'BBB accreditation not re-checked in over 35 days',
   'claims.banned': 'Unconfirmed or removed claim in page copy',
   'facts.timeline-drift': 'Service timeline in page copy differs from facts.js TIMELINES',
   'areas.partial-list': 'Page names some nearby communities but not all (areas.js)',

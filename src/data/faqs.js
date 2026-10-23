@@ -1,7 +1,7 @@
-// Site-wide FAQs for /faqs, grouped by topic, and the three /contact-us
-// questions (CONTACT_FAQS, at the end). Lives in data so the page, the
-// build-time SEO layer (head.js: FAQPage JSON-LD) and the llms files
-// (build-seo-files.mjs) read exactly the same answers.
+// Site-wide FAQs for /faqs, grouped by topic (the three /contact-us questions,
+// CONTACT_FAQS, live in contactFaqs.js and are re-exported at the end). Lives
+// in data so the page, the build-time SEO layer (head.js: FAQPage JSON-LD) and
+// the llms files (build-seo-files.mjs) read exactly the same answers.
 //
 // Rules (SEO plan §7, §12): answers are 40–70 words and open with the direct
 // answer; only facts the owner has confirmed, or rules checked on an official
@@ -16,11 +16,11 @@
 // included. A blank line ("\n\n") in `a` splits it into paragraphs on the page
 // (FaqAccordion.jsx); the schema and llms files join them with a space.
 import {
-  NEARBY_AREAS_TEXT,
   OFFICE_HOURS_TEXT,
   REPLY_TIME,
   SERVICE_AREA_STATEMENT,
   SITE_EMAIL,
+  SITE_NAME,
   SITE_PHONE,
   TIMELINES,
 } from './facts.js';
@@ -183,29 +183,42 @@ export const FAQ_GROUPS = [
       },
     ],
   },
+  {
+    // Entity questions (AI-visibility work, 2026-10-23): assistants mix this
+    // business up with others of the same name, and have quoted a mailbox
+    // address as its location. Answers from the same facts as the
+    // Organization JSON-LD (disambiguatingDescription, locality-only address,
+    // telephone, email, opening hours); never a street address.
+    id: 'about-bridgeland-builders',
+    title: 'About Bridgeland Builders',
+    items: [
+      {
+        q: 'Where is Bridgeland Builders based?',
+        // Hours, phone and email are answered under "What are your office
+        // hours?"; this answer adds only where the business is.
+        a: `${SITE_NAME} is based in Winnipeg, Manitoba, Canada. We come to you: every project starts with a free on-site visit at your home or business in Winnipeg or a nearby community within about an hour of the city, followed by a free written quote.`,
+        more: { label: 'Contact Bridgeland Builders', to: '/contact-us' },
+      },
+      {
+        // Bridgeland is a master-planned community in Cypress, Texas, and a
+        // Calgary neighbourhood (research 2026-10-23). The answer names only
+        // what BUSINESS.disambiguatingDescription (siteConfig.js) names, so the
+        // schema, /about-us, this answer and the llms files say the same thing.
+        // A builder in Montgomery, Texas also uses the name: naming it needs
+        // the owner's OK, then a change to disambiguatingDescription first.
+        q: 'Is Bridgeland Builders related to Bridgeland in Texas or Calgary?',
+        a: `No. ${SITE_NAME} is a renovation and construction contractor based in Winnipeg, Manitoba, Canada. We are not affiliated with the Bridgeland master-planned community in Cypress, Texas, or with the Bridgeland neighbourhood of Calgary, Alberta. We renovate homes and businesses in Winnipeg and nearby communities within about an hour of the city.`,
+        more: { label: 'More about Bridgeland Builders', to: '/about-us' },
+      },
+    ],
+  },
 ];
 
 /** Every FAQ in page order, flat ([{ q, a, more? }]): the FAQPage schema and llms files. */
 export const SITE_FAQS = FAQ_GROUPS.flatMap((group) => group.items);
 
 /**
- * The three questions on /contact-us (plan §7): the free visit, how fast we
- * reply, and where we go. Worded for that page, so no question and answer
- * repeats one on /faqs. ContactPage.jsx renders them and passes them to
- * usePageSeo; head.js must pass the same list for the prerendered FAQPage.
+ * The three /contact-us questions, defined in contactFaqs.js (a module of its
+ * own, so /contact-us doesn't load this file); re-exported for existing imports.
  */
-export const CONTACT_FAQS = [
-  {
-    q: 'Is there a charge for the on-site visit?',
-    a: 'No. The on-site visit is free, and so is the written quote that follows it. We come to your home or business at a time that suits you, look at the space with you and take measurements. There is no obligation to go ahead, and nothing starts until you approve the quote.',
-  },
-  {
-    q: 'How soon will I hear back after I get in touch?',
-    a: `Within ${REPLY_TIME}. We reply by phone, text or email, whichever you prefer, ask a few questions about the project and set up a time to see the space. Our office is open ${OFFICE_HOURS_TEXT}, and you can send your details through the form on this page at any time.`,
-  },
-  {
-    q: 'Do you come out to my area?',
-    a: `Yes, anywhere in Winnipeg and in nearby communities within about an hour of the city: ${NEARBY_AREAS_TEXT}. We come to your home or business for the free on-site visit. Further out? Call ${SITE_PHONE} and we will tell you honestly whether we can help.`,
-    more: { label: 'See our service area', to: '/service-areas' },
-  },
-];
+export { CONTACT_FAQS } from './contactFaqs.js';

@@ -77,14 +77,16 @@ export default function BookingAside({ serviceName, title, showHours = false }) 
           </div>
         </li>
       </ul>
-      {/* Trust line near the form (plan §19): the BBB profile link only, no
-          rating. The Google rating shows in the trust strip (TrustStrip.jsx)
-          on the pages around this panel; it stays out of here because
-          /contact-us is at its JavaScript budget. */}
+      {/* Trust line near the form (plan §19): the BBB accreditation, linked
+          to the profile, with no letter grade (BBB_ACCREDITED_SINCE in
+          siteConfig.js; the SEO audit fails the build if these words stay
+          after it is cleared). The Google rating shows in the trust strip
+          (TrustStrip.jsx) on the pages around this panel; it stays out of
+          here because /contact-us is at its JavaScript budget. */}
       {BBB_PROFILE_URL && (
         <p className="lead-aside-trust">
           <a href={BBB_PROFILE_URL} rel="noopener" target="_blank" data-cta="booking-aside-bbb">
-            Check us on the Better Business Bureau
+            BBB Accredited Business<span className="visually-hidden"> (Better Business Bureau)</span>
           </a>
         </p>
       )}

@@ -364,10 +364,13 @@ export const REDIRECTS = [
   ...family('/book-online', { note: 'Wix "Free Consultation" page' }, [
     ['/consultation', W],
   ]),
-  ...family('/blog', { note: 'Wix blog index / feed' }, [
+  ...family('/blog', { note: 'Wix blog index' }, [
     ['/blog-1', W],
     ['/blogs-and-articles-winnipeg-manitoba', W],
-    ['/blog-feed.xml', W, 'Wix blog RSS feed'],
+  ]),
+  // Feed readers subscribed to the Wix feed follow it to the new one.
+  ...family('/feed.xml', { note: 'Wix blog RSS feed -> the RSS feed (scripts/build-seo-files.mjs)' }, [
+    ['/blog-feed.xml', W],
   ]),
   ...family('/projects', { note: 'Wix portfolio page' }, [
     ['/portfolio', W],
@@ -477,9 +480,20 @@ export const EXTERNAL_REDIRECTS = [
  * the apex instead of competing with it. sync-redirects writes these after
  * every rule above, so a legacy URL requested on the alias still reaches its
  * final page in one hop (the rules above use absolute apex destinations).
+ *
+ * `domainRedirect: true` (www): today Vercel redirects www to the apex at the
+ * domain level, before vercel.json is read, so this rule is inert and a
+ * legacy Wix-era www URL takes two or three hops (www -> apex legacy URL ->
+ * page). Once the www domain is switched in Vercel (Project -> Settings ->
+ * Domains) from "Redirect to bridgelandbuilders.com" to serving this project,
+ * this rule takes over: a legacy www URL is matched by its legacy rule above
+ * and lands on its final apex page in one hop, every other www URL gets one
+ * 308 to the same path on the apex, and no www page can ever answer 200.
+ * check-redirects accepts both states for a host flagged this way.
  */
 export const HOST_REDIRECTS = [
   { host: 'bridgeland-builders-website.vercel.app', note: 'Vercel production alias (public, unprotected)' },
+  { host: 'www.bridgelandbuilders.com', domainRedirect: true, note: 'www (legacy Wix host): one hop once Vercel serves www from this project' },
 ];
 
 /**
@@ -495,7 +509,7 @@ export const LEAVE_404 = [
   '/10',
   '/ads.txt',
   '/feed',
-  '/feed.xml',
+  // '/feed.xml' was here until 2026-10-23: it is now the blog's RSS feed.
   '/feeds/:path*',
   '/quality_auto/:path*',
   // Production answers 403 here (the Vercel firewall denies WordPress probes
