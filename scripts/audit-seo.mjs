@@ -144,7 +144,7 @@ const jsBudgetKb = (route) => {
 };
 const EXPECTED_FILES = {
   error: ['robots.txt', 'sitemap.xml', '404.html'],
-  warn: ['llms.txt', 'llms-full.txt', 'favicon.ico', 'favicon.png', 'site.webmanifest', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png'],
+  warn: ['feed.xml', 'llms.txt', 'llms-full.txt', 'favicon.ico', 'favicon.png', 'site.webmanifest', 'apple-touch-icon.png', 'logo-on-dark.png', 'logo-on-light.png'],
 };
 const NETLIFY_FILES = ['_headers', '_redirects'];
 
@@ -191,6 +191,11 @@ async function importGuarded(rel, wanted = [], optional = []) {
 
 const siteConfig = await importGuarded('src/data/siteConfig.js', ['SITE_URL']);
 const SITE_URL = String(siteConfig.SITE_URL || 'https://bridgelandbuilders.com').replace(/\/+$/, '');
+// "BBB Accredited" needs BBB_ACCREDITED_SINCE (siteConfig.js). TrustStrip.jsx
+// and BookingAside.jsx write those words without reading the date (it would
+// land in the entry chunk), so once the date is cleared they become a banned
+// claim and fail the build until they are changed back.
+if (!siteConfig.BBB_ACCREDITED_SINCE) BANNED_CLAIMS.push('bbb accredited');
 // head.js first: it imports every service content module (src/data/projects.js),
 // which fills seo.js SERVICE_SEO, and it owns the full route inventory
 // (SEO_ENTRIES: static pages, live services, cost guides, published areas,

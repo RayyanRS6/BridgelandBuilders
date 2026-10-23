@@ -8,13 +8,18 @@
  *   node scripts/indexnow.mjs --base=<rev> --head=<rev>
  *   node scripts/indexnow.mjs --all           every sitemap URL (e.g. first run)
  *
- * Changed URLs = sitemap entries that are new or whose <lastmod> changed,
+ * Changed URLs = sitemap entries that are new or whose <lastmod> date changed,
  * sitemap entries that were removed (so engines see the 404/redirect), and
  * redirect sources in vercel.json that are new or now point somewhere else
  * (on-site destinations only: off-site short links such as /review are not
- * sent).
- * Both files are read from git, so this needs a checkout with the two commits
- * (fetch-depth: 2 in .github/workflows/post-deploy.yml).
+ * sent). lastmod is compared by its date (YYYY-MM-DD): the sitemap switched
+ * from bare dates to date-times on 2026-10-23 with the same dates, and that
+ * format change alone is not a change to a page.
+ * Both files are read from git, so this needs a checkout with both commits.
+ * .github/workflows/post-deploy.yml passes the commit of the previous
+ * successful production deployment as --base (fetched for this), else HEAD~1
+ * (fetch-depth: 2). A base that cannot be read counts as no base sitemap:
+ * every sitemap URL is sent.
  *
  * The key is public/<key>.txt (a 32-character hex name whose content is the
  * same key), served at the site root; INDEXNOW_KEY overrides it. No secrets.
@@ -45,14 +50,20 @@ function gitShow(rev, path) {
   }
 }
 
-/** Map of <loc> -> <lastmod> ('' when absent). */
+/**
+ * Map of <loc> -> the date of its <lastmod> ('' when absent): "2026-10-23"
+ * from either "2026-10-23" or "2026-10-23T00:00:00-05:00". Any other value is
+ * kept as written.
+ */
 function sitemapEntries(xml) {
   const entries = new Map();
   for (const m of String(xml || '').matchAll(/<url>([\s\S]*?)<\/url>/g)) {
     const loc = /<loc>\s*([^<\s]+)\s*<\/loc>/.exec(m[1]);
     if (!loc) continue;
     const lastmod = /<lastmod>\s*([^<\s]+)\s*<\/lastmod>/.exec(m[1]);
-    entries.set(loc[1].replace(/&amp;/g, '&'), lastmod ? lastmod[1] : '');
+    const value = lastmod ? lastmod[1] : '';
+    const date = /^\d{4}-\d{2}-\d{2}(?=$|T)/.exec(value);
+    entries.set(loc[1].replace(/&amp;/g, '&'), date ? date[0] : value);
   }
   return entries;
 }

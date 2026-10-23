@@ -155,7 +155,7 @@
     { "source": "/consultation", "destination": "https://bridgelandbuilders.com/book-online", "permanent": true },
     { "source": "/blog-1", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
     { "source": "/blogs-and-articles-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
-    { "source": "/blog-feed.xml", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
+    { "source": "/blog-feed.xml", "destination": "https://bridgelandbuilders.com/feed.xml", "permanent": true },
     { "source": "/portfolio", "destination": "https://bridgelandbuilders.com/projects", "permanent": true },
     { "source": "/privacy-policy-for-free-estimate-tool", "destination": "https://bridgelandbuilders.com/privacy-policy", "permanent": true },
     { "source": "/privacy-policy-for-free-estimate-tool-winnipeg-manitoba", "destination": "https://bridgelandbuilders.com/privacy-policy", "permanent": true },
@@ -217,7 +217,8 @@
     { "source": "/blog/categories/:path*", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
     { "source": "/portfolio-collections/:path*", "destination": "https://bridgelandbuilders.com/projects", "permanent": true },
     { "source": "/post/:path*", "destination": "https://bridgelandbuilders.com/blog", "permanent": true },
-    { "source": "/:path*", "has": [{ "type": "host", "value": "bridgeland-builders-website.vercel.app" }], "destination": "https://bridgelandbuilders.com/:path*", "permanent": true }
+    { "source": "/:path*", "has": [{ "type": "host", "value": "bridgeland-builders-website.vercel.app" }], "destination": "https://bridgelandbuilders.com/:path*", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.bridgelandbuilders.com" }], "destination": "https://bridgelandbuilders.com/:path*", "permanent": true }
   ],
   "headers": [
     {
@@ -255,7 +256,7 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {
-      "source": "/(robots\\.txt|sitemap\\.xml|llms\\.txt|llms-full\\.txt)",
+      "source": "/(robots\\.txt|sitemap\\.xml|feed\\.xml|llms\\.txt|llms-full\\.txt)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
     },
     {
@@ -275,6 +276,10 @@
     {
       "source": "/sitemap.xml",
       "headers": [{ "key": "Content-Type", "value": "application/xml; charset=utf-8" }]
+    },
+    {
+      "source": "/feed.xml",
+      "headers": [{ "key": "Content-Type", "value": "application/rss+xml; charset=utf-8" }]
     },
     {
       "source": "/api/(.*)",

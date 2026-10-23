@@ -15,8 +15,10 @@
  * their Location; the Google destination itself is never requested.
  * A first hop that only changes the host (www -> apex) is followed once.
  * In production mode against the apex, each HOST_REDIRECTS host (the public
- * vercel.app alias) is also checked: a page and a legacy URL requested there
- * must 308 to their final apex page in one hop.
+ * vercel.app alias, www) is also checked: a page and a legacy URL requested
+ * there must 308 to their final apex page in one hop. For www
+ * (`domainRedirect`), Vercel's domain-level www -> apex redirect is accepted
+ * as well (two hops for a legacy URL) until the www domain serves the project.
  * The post-deploy workflow runs production mode against the apex: per-
  * deployment *.vercel.app URLs sit behind Vercel SSO (every request answers
  * 302 /sso-api). For a protected Vercel preview, set
@@ -152,18 +154,41 @@ async function check404(path) {
   return row;
 }
 
-/** A path on a HOST_REDIRECTS host: one 308 to `expectedPath` on the apex, which answers 200. */
-async function checkHostRule(host, path, expectedPath) {
+/**
+ * A path on a HOST_REDIRECTS host: one 308 to `expectedPath` on the apex, which
+ * answers 200. For a host flagged `domainRedirect` (www), Vercel may still
+ * redirect it at the domain level, before vercel.json runs: a permanent
+ * redirect (301 or 308) that keeps the path, to the apex. That state passes
+ * too, with a note: for a legacy URL the apex hop is then followed once and
+ * must reach `expectedPath` (two hops today, one once the host rule serves).
+ */
+async function checkHostRule(host, path, expectedPath, { domainRedirect = false } = {}) {
   const row = { from: `${host}${path}`, expect: `308 ${APEX.host}${expectedPath}`, got: '', ok: false };
   try {
-    const res = await get(new URL(path, `https://${host}`));
-    row.got = `${res.status} ${res.location ? `${res.location.host}${res.location.pathname}` : ''}`.trim();
+    let res = await get(new URL(path, `https://${host}`));
+    const permanent = [308];
+    let note = '';
+    if (
+      domainRedirect && [301, 308].includes(res.status) && res.location &&
+      res.location.origin === APEX.origin && res.location.pathname === path
+    ) {
+      if (path === expectedPath) {
+        // A page: the domain redirect and the host rule look the same.
+        permanent.push(301);
+      } else {
+        // A legacy URL kept its path: the domain redirect answered.
+        note = ' (Vercel domain redirect still on: 2 hops)';
+        row.got = `${res.status} ${res.location.host}${res.location.pathname} -> `;
+        res = await get(res.location);
+      }
+    }
+    row.got += `${res.status} ${res.location ? `${res.location.host}${res.location.pathname}` : ''}`.trim();
     const problems = [];
-    if (res.status !== 308) problems.push('status');
+    if (!permanent.includes(res.status)) problems.push('status');
     if (!res.location || res.location.origin !== APEX.origin || res.location.pathname !== expectedPath) problems.push('location');
     if (!problems.length) {
       const final = await destinationStatus(res.location);
-      row.got += ` -> ${final}`;
+      row.got += ` -> ${final}${note}`;
       if (final !== 200) problems.push('destination not 200');
     }
     row.ok = !problems.length;
@@ -194,10 +219,10 @@ const ordered = [...resolved.filter((r) => !isPattern(r.from)), ...resolved.filt
 // in a production run against the apex. Samples: a live page, and the first
 // explicit legacy rule (it must still reach its final page in one hop).
 const hostChecks = MODE === 'production' && BASE.origin === APEX.origin
-  ? HOST_REDIRECTS.flatMap(({ host }) => [
+  ? HOST_REDIRECTS.flatMap(({ host, domainRedirect }) => [
     ['/services', '/services'],
     ...(ordered[0] ? [[ordered[0].from, ordered[0].to.replace(/[?#].*$/, '')]] : []),
-  ].map(([path, expected]) => () => checkHostRule(host, path, expected)))
+  ].map(([path, expected]) => () => checkHostRule(host, path, expected, { domainRedirect })))
   : [];
 const rows = await runAll([
   ...ordered.map((rule) => () => checkRule(rule)),

@@ -37,10 +37,12 @@
  *     same path on the apex), and leaves every other part of vercel.json
  *     exactly as it was. Absolute destinations mean a legacy URL requested on
  *     a host that serves this deployment directly (the vercel.app alias)
- *     lands on its final apex page in one hop. They do not help www or
- *     http://: Vercel's domain-level redirect (www -> apex, http -> https)
+ *     lands on its final apex page in one hop. They do not help http://, or
+ *     www while Vercel still redirects www at the domain level: that redirect
  *     runs before vercel.json, so a legacy URL there takes one extra hop
- *     (www -> apex legacy URL -> final page).
+ *     (www -> apex legacy URL -> final page). The www host rule
+ *     (HOST_REDIRECTS, `domainRedirect: true`) is written now and takes over,
+ *     one hop, once the www domain serves this project in Vercel.
  *
  * The build runs this with --check, so a vercel.json that no longer matches
  * src/data/redirects.js (destination, 307/308 or a missing rule) fails it.
@@ -55,7 +57,7 @@ const VERCEL_JSON = new URL('vercel.json', ROOT);
 const PRERENDER_ROUTES = new URL('prerender-routes.json', ROOT);
 
 // Files served from public/ that a redirect may legitimately point at.
-const STATIC_FILES = ['/sitemap.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'];
+const STATIC_FILES = ['/sitemap.xml', '/feed.xml', '/robots.txt', '/llms.txt', '/llms-full.txt'];
 // The only hosts an EXTERNAL_REDIRECTS short link may send visitors to
 // (Google Business Profile: review form, Maps listing, g.page short links).
 export const EXTERNAL_HOSTS = new Set(['search.google.com', 'maps.google.com', 'www.google.com', 'g.page']);
@@ -413,7 +415,11 @@ export function validate(rules, effective, resolved, known, leave404, { allowLiv
   return { errors, warnings };
 }
 
-/** HOST_REDIRECTS: a plain host name each, never the apex itself (a loop). */
+/**
+ * HOST_REDIRECTS: a plain host name each, never the apex itself (a loop).
+ * `domainRedirect` (optional, boolean) only tells check-redirects that Vercel
+ * may still redirect the host at the domain level; the rule is the same.
+ */
 export function validateHostRules(hostRules) {
   const errors = [];
   const apex = new URL(CANONICAL_SITE_URL).host;
@@ -427,6 +433,9 @@ export function validateHostRules(hostRules) {
       errors.push(`${where}: the apex itself would redirect to itself`);
     } else if (seen.has(host)) {
       errors.push(`${where}: duplicate host`);
+    }
+    if (rule && rule.domainRedirect !== undefined && typeof rule.domainRedirect !== 'boolean') {
+      errors.push(`${where}: "domainRedirect" must be true or false`);
     }
     seen.add(host);
   });
