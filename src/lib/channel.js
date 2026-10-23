@@ -6,7 +6,8 @@
 // A touch is { source, medium, campaign, gclid, gbraid, wbraid, fbclid,
 // msclkid, referrer } where referrer is "host/path" without the query.
 
-const AI_ASSISTANTS = /(^|\.)(chatgpt\.com|chat\.openai\.com|openai\.com|perplexity\.ai|claude\.ai|gemini\.google\.com|bard\.google\.com|copilot\.microsoft\.com|you\.com|phind\.com|meta\.ai|grok\.com|deepseek\.com|chat\.mistral\.ai)$/;
+// copilot.com: Microsoft Copilot's consumer address (added 2026-10-23).
+const AI_ASSISTANTS = /(^|\.)(chatgpt\.com|chat\.openai\.com|openai\.com|perplexity\.ai|claude\.ai|gemini\.google\.com|bard\.google\.com|copilot\.microsoft\.com|copilot\.com|you\.com|phind\.com|meta\.ai|grok\.com|deepseek\.com|chat\.mistral\.ai)$/;
 const SEARCH_ENGINES = /(^|\.)(google\.[a-z.]+|bing\.com|duckduckgo\.com|yahoo\.com|search\.yahoo\.com|ecosia\.org|yandex\.[a-z.]+|baidu\.com|search\.brave\.com|startpage\.com|qwant\.com)$/;
 const SOCIAL = /(^|\.)(facebook\.com|fb\.com|fb\.me|m\.facebook\.com|l\.facebook\.com|lm\.facebook\.com|instagram\.com|l\.instagram\.com|linkedin\.com|lnkd\.in|tiktok\.com|youtube\.com|youtu\.be|x\.com|twitter\.com|t\.co|reddit\.com|pinterest\.[a-z.]+|threads\.net|nextdoor\.com)$/;
 const SOCIAL_SOURCES = /^(facebook|fb|instagram|ig|meta|linkedin|tiktok|youtube|twitter|x|reddit|pinterest|threads|nextdoor)$/;
