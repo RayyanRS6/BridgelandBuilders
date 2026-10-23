@@ -2784,6 +2784,20 @@
   color: var(--accent-red);
 }
 
+/* The /about-us "at a glance" list (AboutPage.jsx): its phone, email, Google
+   and BBB links stand alone as values, not in running text, so each gets a
+   44px-high tap target (6 + 32 + 6). The negative margin keeps the row's line
+   height, and the bullet's alignment, as before; the extra 6px above and below
+   reach exactly halfway into the 12px gap between list items, so neighbouring
+   targets never overlap. */
+.about-body .blog-list .blog-inline-link {
+  display: inline-block;
+  margin: -6px 0;
+  padding: 6px 0;
+  line-height: 32px;
+  overflow-wrap: anywhere;
+}
+
 /* On the dark intro panels links are white (.why-paragraphs, index.css); red
    would be about 2.4:1 on that dark, so they hover to the light sea green the
    dark panels already use for their tags. */

@@ -194,16 +194,20 @@ export const FAQ_GROUPS = [
     items: [
       {
         q: 'Where is Bridgeland Builders based?',
-        a: `${SITE_NAME} is based in Winnipeg, Manitoba, Canada. We come to you: every project starts with a free on-site visit at your home or business in Winnipeg or a nearby community within about an hour. Call ${SITE_PHONE} during office hours (${OFFICE_HOURS_TEXT}) or email ${SITE_EMAIL} at any time.`,
+        // Hours, phone and email are answered under "What are your office
+        // hours?"; this answer adds only where the business is.
+        a: `${SITE_NAME} is based in Winnipeg, Manitoba, Canada. We come to you: every project starts with a free on-site visit at your home or business in Winnipeg or a nearby community within about an hour of the city, followed by a free written quote.`,
         more: { label: 'Contact Bridgeland Builders', to: '/contact-us' },
       },
       {
-        // Bridgeland is a master-planned community in Cypress, Texas, a
-        // builder in Montgomery, Texas uses the same name, and Bridgeland is a
-        // Calgary neighbourhood (research 2026-10-23); BUSINESS.
-        // disambiguatingDescription in siteConfig.js says the same in short.
+        // Bridgeland is a master-planned community in Cypress, Texas, and a
+        // Calgary neighbourhood (research 2026-10-23). The answer names only
+        // what BUSINESS.disambiguatingDescription (siteConfig.js) names, so the
+        // schema, /about-us, this answer and the llms files say the same thing.
+        // A builder in Montgomery, Texas also uses the name: naming it needs
+        // the owner's OK, then a change to disambiguatingDescription first.
         q: 'Is Bridgeland Builders related to Bridgeland in Texas or Calgary?',
-        a: `No. ${SITE_NAME} is a renovation and construction contractor based in Winnipeg, Manitoba, Canada. We are not affiliated with Bridgeland, the master-planned community in Cypress, Texas, with Texas businesses that use the Bridgeland name, or with the Bridgeland neighbourhood of Calgary, Alberta.`,
+        a: `No. ${SITE_NAME} is a renovation and construction contractor based in Winnipeg, Manitoba, Canada. We are not affiliated with the Bridgeland master-planned community in Cypress, Texas, or with the Bridgeland neighbourhood of Calgary, Alberta. We renovate homes and businesses in Winnipeg and nearby communities within about an hour of the city.`,
         more: { label: 'More about Bridgeland Builders', to: '/about-us' },
       },
     ],

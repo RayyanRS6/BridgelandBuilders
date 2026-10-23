@@ -16,6 +16,7 @@ import {
   REVIEW_STATS,
   SERVICE_AREA_STATEMENT,
   SITE_EMAIL,
+  SITE_NAME,
   SITE_PHONE,
   SITE_PHONE_TEL,
 } from '../data/siteConfig.js';
@@ -42,6 +43,12 @@ const servicesIn = (category) =>
 
 const REVIEWS = `${REVIEW_STATS.count} ${REVIEW_STATS.count === 1 ? 'review' : 'reviews'}`;
 
+// BUSINESS.disambiguatingDescription ("<category line>, Canada. Not affiliated
+// with …") as two plain sentences that each name the business, so either one
+// still says who it is about when quoted on its own.
+const lowerFirst = (text) => text.charAt(0).toLowerCase() + text.slice(1);
+const [WHAT_WE_ARE, NOT_AFFILIATED] = BUSINESS.disambiguatingDescription.split('. ');
+
 // "At a glance" (AI-visibility work, 2026-10-23): the business's entity facts
 // in one visible, quotable list, the same values as the Organization JSON-LD
 // (description, disambiguatingDescription, areaServed, telephone, email,
@@ -50,7 +57,8 @@ const REVIEWS = `${REVIEW_STATS.count} ${REVIEW_STATS.count === 1 ? 'review' : '
 // never rating schema (plan §3.5); the BBB line never quotes a letter grade.
 const AT_A_GLANCE = [
   { t: 'h2', x: 'Bridgeland Builders at a glance' },
-  { t: 'li', x: `**Who we are:** ${BUSINESS.disambiguatingDescription}` },
+  { t: 'li', x: `**Who we are:** ${SITE_NAME} is a ${lowerFirst(WHAT_WE_ARE)}.` },
+  { t: 'li', x: `**Not to be confused with:** ${SITE_NAME} is ${lowerFirst(NOT_AFFILIATED || '')}`, hidden: !NOT_AFFILIATED },
   { t: 'li', x: `**Service area:** Winnipeg and nearby communities within about an hour of the city: ${NEARBY_AREAS_TEXT}.` },
   { t: 'li', x: `**Home renovations:** ${servicesIn('residential')}.` },
   { t: 'li', x: `**Commercial work:** ${servicesIn('commercial')}.` },
@@ -58,12 +66,12 @@ const AT_A_GLANCE = [
   { t: 'li', x: `**Office hours:** ${officeHoursText(' ')}` },
   { t: 'li', x: `**Phone:** [${SITE_PHONE}](${SITE_PHONE_TEL})` },
   { t: 'li', x: `**Email:** [${SITE_EMAIL}](mailto:${SITE_EMAIL})` },
-  { t: 'li', x: `**Reply time:** within ${REPLY_TIME}` },
+  { t: 'li', x: `**Reply time:** within ${REPLY_TIME}.` },
   { t: 'li', x: '**Free visit and quote:** every project starts with a free on-site visit and a free written quote, with no obligation to go ahead.' },
   { t: 'li', x: `**Experience:** over ${EXPERIENCE_YEARS} years of combined experience and more than ${PROJECT_COUNT} completed projects.` },
   {
     t: 'li',
-    x: `**Google rating:** [${REVIEW_STATS.rating.toFixed(1)} out of 5 from ${REVIEWS}](${GBP.mapsUrl}) on Google, as of ${monthYear(REVIEW_STATS_AS_OF)}.`,
+    x: `**Google rating:** [${REVIEW_STATS.rating.toFixed(1)} out of 5 from ${REVIEWS}](${GBP.mapsUrl}), as of ${monthYear(REVIEW_STATS_AS_OF)}.`,
     hidden: !(REVIEW_STATS.count > 0 && GBP.mapsUrl && REVIEW_STATS_AS_OF),
   },
   {
@@ -159,7 +167,7 @@ export default function AboutPage() {
       />
 
       {/* No .reveal on long text: it would sit at opacity 0 until the observer runs. */}
-      <article className="blog-article-section" id="who-we-are">
+      <article className="blog-article-section about-body" id="who-we-are">
         <div className="container blog-article-container">
           <div className="blog-article-body">
             <RichBody blocks={ABOUT_BLOCKS} />
