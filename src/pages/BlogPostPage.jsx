@@ -1,11 +1,11 @@
-import { lazy, useMemo } from 'react';
+import { lazy, Suspense, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Calculator from '../components/Calculator.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import Picture from '../components/Picture.jsx';
 import RichBody, { renderInline } from '../components/RichBody.jsx';
-import BlogCard, { formatPostDate, hasPost, loadPost } from '../components/BlogCard.jsx';
+import BlogCard, { formatPostDate } from '../components/BlogCard.jsx';
+import { hasPost, loadPost } from '../lib/postModules.js';
 import { ArrowRightIcon, CalendarIcon, ClockIcon } from '../components/icons.jsx';
 import { personById, personPath } from '../data/people.js';
 import { serviceByPath } from '../data/services.js';
@@ -21,8 +21,19 @@ const NotFoundPage = lazyWithRetry(() => import('./NotFoundPage.jsx'));
 const ARTICLE_IMAGE_SIZES = '(max-width: 920px) 100vw, 880px';
 
 // Post-only body blocks (RichBody `widgets`): {"t": "calculator", "id": …}.
-// Each calculator is its own lazy chunk (Calculator.jsx).
-const BODY_WIDGETS = { calculator: Calculator };
+// Each calculator is its own lazy chunk (Calculator.jsx), and so is
+// Calculator.jsx itself: only a post with a calculator block downloads it, so
+// the other posts don't preload it. The prerender waits for both chunks, and
+// this boundary keeps the server HTML in place until they have loaded.
+const LazyCalculator = lazyWithRetry(() => import('../components/Calculator.jsx'));
+function CalculatorWidget(props) {
+  return (
+    <Suspense fallback={<div className="calc-loading" aria-hidden="true" />}>
+      <LazyCalculator {...props} />
+    </Suspense>
+  );
+}
+const BODY_WIDGETS = { calculator: CalculatorWidget };
 
 // Topic clusters that span every kind of project (permits in general, paying
 // for a renovation, planning, hiring a contractor, energy rebates): a post in

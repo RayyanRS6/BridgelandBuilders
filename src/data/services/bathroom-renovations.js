@@ -41,6 +41,7 @@ export default {
       'A bathroom is a small room that punishes shortcuts. Water gets into anything you skip. A failed bathroom often looks fine on the surface — the problem started behind the tile two years earlier.',
       'So we do the boring parts properly. Backer board instead of drywall in the wet areas, a proper waterproofing membrane, a shower base sloped the way it should be, and the plumbing checked before anything gets closed up. Then we tile.',
       `Bathrooms are also the job people live around, so we keep it tight. We protect the hallway, we clean up daily, and we don’t leave the room torn open for a month. Most Winnipeg bathrooms we do are finished in ${TIMELINES.bathroom.words} from demo to the last bead of silicone.`,
+      'Whether it’s a full bathroom remodel or new tile and a vanity, the order is the same: waterproofing first, finishes second.',
     ],
     checklist: ['Tile & Stone Showers', 'Vanities & Counters', 'Proper Waterproofing', 'Fixtures & Lighting'],
   },

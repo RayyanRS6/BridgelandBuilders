@@ -46,6 +46,7 @@ export default {
       'So we start underground, not with paint chips. We check for signs of moisture, look at how water moves around your foundation, and make sure any drainage or leak problem is fixed — by a specialist where it needs one — before we frame anything.',
       'Then we insulate properly for a Winnipeg winter so the room is actually warm in February.',
       'Once that’s handled, the fun part is easy. Family room, home office, guest room, gym, a bathroom down there, a wet bar — whatever you’re after. And if you’re thinking about a rental suite, we’ll walk you through the egress window and ceiling height rules before you commit to anything.',
+      'Whatever you call it — basement finishing, basement development or a basement remodel — every basement renovation we take on in Winnipeg follows the same order: dry first, then warm, then finished.',
     ],
     checklist: ['Family & Rec Rooms', 'Basement Bathrooms', 'Egress Windows', 'Proper Insulation'],
   },
