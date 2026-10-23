@@ -9,13 +9,16 @@
  *   node scripts/indexnow.mjs --all           every sitemap URL (e.g. first run)
  *
  * Changed URLs = sitemap entries that are new or whose <lastmod> date changed,
- * sitemap entries that were removed (so engines see the 404/redirect), and
- * redirect sources in vercel.json that are new or now point somewhere else
- * (on-site destinations only: off-site short links such as /review are not
- * sent). lastmod is compared by its date (YYYY-MM-DD): the sitemap switched
- * from bare dates to date-times on 2026-10-23 with the same dates, and that
- * format change alone is not a change to a page.
- * Both files are read from git, so this needs a checkout with both commits.
+ * sitemap entries whose visible text changed on a day they had already been
+ * updated (their content hash in scripts/seo-content-hashes.json moved while
+ * the lastmod date stayed the same: a second edit on the same day), sitemap
+ * entries that were removed (so engines see the 404/redirect), and redirect
+ * sources in vercel.json that are new or now point somewhere else (on-site
+ * destinations only: off-site short links such as /review are not sent).
+ * lastmod is compared by its date (YYYY-MM-DD): the sitemap switched from bare
+ * dates to date-times on 2026-10-23 with the same dates, and that format
+ * change alone is not a change to a page.
+ * The files are read from git, so this needs a checkout with both commits.
  * .github/workflows/post-deploy.yml passes the commit of the previous
  * successful production deployment as --base (fetched for this), else HEAD~1
  * (fetch-depth: 2). A base that cannot be read counts as no base sitemap:
@@ -95,6 +98,23 @@ function redirectEntries(json, siteHosts) {
   return map;
 }
 
+/**
+ * Map of route -> content hash from scripts/seo-content-hashes.json text (the
+ * SEO audit records a hash of each indexable page's visible <main> text there,
+ * with --update-hashes). Unreadable or absent: an empty map.
+ */
+function contentHashes(json) {
+  const map = new Map();
+  try {
+    for (const [route, entry] of Object.entries(JSON.parse(json || '{}') || {})) {
+      if (route.startsWith('/') && entry && typeof entry.hash === 'string') map.set(route, entry.hash);
+    }
+  } catch {
+    /* unreadable hash file: no hash changes */
+  }
+  return map;
+}
+
 function findKey() {
   if (process.env.INDEXNOW_KEY && /^[A-Za-z0-9-]{8,128}$/.test(process.env.INDEXNOW_KEY)) return process.env.INDEXNOW_KEY;
   for (const file of readdirSync(join(ROOT, 'public'))) {
@@ -137,6 +157,16 @@ for (const [loc, lastmod] of headSitemap) {
 }
 if (!ALL) {
   for (const loc of baseSitemap.keys()) if (!headSitemap.has(loc)) urls.add(loc);
+  // Same-day text changes: the lastmod date can't move again, the hash does.
+  // Only routes still in the sitemap (indexable) are sent.
+  const baseHashes = contentHashes(gitShow(BASE, 'scripts/seo-content-hashes.json'));
+  if (baseHashes.size) {
+    const headHashes = contentHashes(gitShow(HEAD, 'scripts/seo-content-hashes.json'));
+    for (const [route, hash] of headHashes) {
+      const loc = `${SITE}${route}`;
+      if (headSitemap.has(loc) && baseHashes.get(route) !== hash) urls.add(loc);
+    }
+  }
   const headRedirects = redirectEntries(gitShow(HEAD, 'vercel.json'), SITE_HOSTS);
   const baseRedirects = redirectEntries(gitShow(BASE, 'vercel.json'), SITE_HOSTS);
   for (const [source, target] of headRedirects) {
