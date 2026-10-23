@@ -80,6 +80,23 @@ export const SOCIAL_PROFILES = {
 export const BBB_PROFILE_URL =
   'https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638';
 
+// BBB accreditation, read from the profile above on 2026-10-23: a research
+// check of the profile saw "Accredited since 2025-09-01", Bing's snippet of the
+// same page reads "BBB Accredited since 9/1/2025", and a fetch from outside
+// this machine (BBB blocks it: "You have been blocked") read "Bridgeland
+// Builders is BBB Accredited" and "BBB Accredited Since: 1/9/2025" (day/month).
+// Shown as the words "BBB Accredited Business", linked to the profile (the
+// trust strip, the booking aside, /about-us) and in the llms files. Text only:
+// never the BBB seal image and never the letter grade (it changes, and BBB's
+// rules govern how it may be quoted). Re-check the profile when REVIEW_STATS is
+// re-read. If the accreditation ends, set this to null: /about-us falls back
+// to the plain profile link by itself, and the SEO audit fails the build on
+// any page that still says "BBB Accredited" (TrustStrip.jsx, BookingAside.jsx).
+// Pages read this date through src/data/entityFacts.generated.js (written by
+// scripts/build-seo-files.mjs), never from here: this module ships in the
+// entry chunk of every page, which is at its JavaScript budget.
+export const BBB_ACCREDITED_SINCE = '2025-09-01';
+
 // Google Business Profile, confirmed by the owner 2026-10-13 (same listing:
 // ludocid 6390477049138999065). reviewUrl is Google's write-a-review form for
 // placeId; the Place ID embeds that same CID (its last 8 bytes, little-endian,

@@ -4,7 +4,7 @@ import BookingAside from '../components/BookingAside.jsx';
 import FaqAccordion from '../components/FaqAccordion.jsx';
 import QuoteBookingForm from '../components/QuoteBookingForm.jsx';
 import { ArrowRightIcon } from '../components/icons.jsx';
-import { CONTACT_FAQS } from '../data/faqs.js';
+import { CONTACT_FAQS } from '../data/contactFaqs.js';
 import { OFFICE_HOURS_TEXT, REPLY_TIME } from '../data/facts.js';
 import { GBP, SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
 import { usePageSeo } from '../hooks/useSeo.js';

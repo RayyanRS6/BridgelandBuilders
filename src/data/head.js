@@ -18,7 +18,8 @@
  *                   route in SITE_ROUTES (for the audit).
  */
 import { existsSync } from 'node:fs';
-import { CONTACT_FAQS, SITE_FAQS } from './faqs.js';
+import { CONTACT_FAQS } from './contactFaqs.js';
+import { SITE_FAQS } from './faqs.js';
 import { buildPostHead } from './postContent.js';
 import { LIVE_SERVICE_PAGES } from './projects.js';
 import { serviceBySlug } from './services.js';
