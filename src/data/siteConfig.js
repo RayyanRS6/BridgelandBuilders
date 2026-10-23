@@ -81,21 +81,29 @@ export const BBB_PROFILE_URL =
   'https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638';
 
 // BBB accreditation, read from the profile above on 2026-10-23: a research
-// check of the profile saw "Accredited since 2025-09-01", Bing's snippet of the
-// same page reads "BBB Accredited since 9/1/2025", and a fetch from outside
-// this machine (BBB blocks it: "You have been blocked") read "Bridgeland
-// Builders is BBB Accredited" and "BBB Accredited Since: 1/9/2025" (day/month).
+// check of the profile saw "Accredited since 2025-09-01", and Bing's snippet of
+// the same page reads "BBB Accredited since 9/1/2025" (month/day, as BBB's page
+// metadata writes it). A fetch from outside this machine (BBB blocks it: "You
+// have been blocked") read "Bridgeland Builders is BBB Accredited" and the
+// date as "1/9/2025": read day-first that is the same 1 September 2025, but on
+// its own it is ambiguous, so the date rests on the first two readings. The
+// owner can confirm it from their BBB accreditation record.
 // Shown as the words "BBB Accredited Business", linked to the profile (the
 // trust strip, the booking aside, /about-us) and in the llms files. Text only:
 // never the BBB seal image and never the letter grade (it changes, and BBB's
-// rules govern how it may be quoted). Re-check the profile when REVIEW_STATS is
-// re-read. If the accreditation ends, set this to null: /about-us falls back
-// to the plain profile link by itself, and the SEO audit fails the build on
-// any page that still says "BBB Accredited" (TrustStrip.jsx, BookingAside.jsx).
+// rules govern how it may be quoted). If the accreditation ends, set this to
+// null: /about-us falls back to the plain profile link by itself, and the SEO
+// audit fails the build on any page that still says "BBB Accredited"
+// (TrustStrip.jsx, BookingAside.jsx).
 // Pages read this date through src/data/entityFacts.generated.js (written by
 // scripts/build-seo-files.mjs), never from here: this module ships in the
 // entry chunk of every page, which is at its JavaScript budget.
 export const BBB_ACCREDITED_SINCE = '2025-09-01';
+// The day the profile above was last checked for the accreditation. BBB, not
+// us, decides whether it still holds, so re-check the profile monthly, with
+// REVIEW_STATS, and update this date: the SEO audit warns once it is over 35
+// days old (scripts/audit-seo.mjs), as it does for REVIEW_STATS.asOf.
+export const BBB_ACCREDITATION_CHECKED = '2026-10-23';
 
 // Google Business Profile, confirmed by the owner 2026-10-13 (same listing:
 // ludocid 6390477049138999065). reviewUrl is Google's write-a-review form for
