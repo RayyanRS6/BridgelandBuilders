@@ -1,0 +1,217 @@
+{
+  "slug": "commercial-renovation-cost-per-square-foot-winnipeg",
+  "status": "published",
+  "title": "Commercial Renovation Cost per Square Foot in Winnipeg",
+  "metaTitle": "Commercial Renovation Cost per Square Foot in Winnipeg",
+  "metaDescription": "What drives commercial renovation cost per square foot in Winnipeg, relative costs by project type, hidden costs and how to get an accurate quote.",
+  "excerpt": "What drives commercial renovation cost per square foot in Winnipeg, relative costs by project type, hidden costs and how to get an accurate quote.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Costs & Budgets",
+    "Commercial"
+  ],
+  "services": [
+    "/services/commercial-renovations"
+  ],
+  "ctaService": "/services/commercial-renovations",
+  "cluster": "commercial-costs",
+  "answer": "No reliable per-square-foot figure exists for a commercial renovation in Winnipeg without seeing the space. Two spaces of the same size can cost very different amounts, because use, mechanical and electrical work, change of use and existing conditions move the price more than square footage. A site visit and a detailed scope give a number you can trust.",
+  "hero": null,
+  "thumbAlt": "Tape measure and calculator on floor plans beside a hard hat",
+  "ctaPrimary": "visit",
+  "listOrder": 27,
+  "sources": [
+    {
+      "label": "BDC: Leasehold improvements, the 8 steps to follow",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "City of Winnipeg: Planning, development and building fees",
+      "url": "https://www.winnipeg.ca/building-development/fees-charges",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "\"How much will it cost?\" is the first question on most commercial projects, and the hardest to answer from a phone call. No reliable commercial renovation cost per square foot in Winnipeg exists without seeing the space, so this guide gives no dollar figure."
+    },
+    {
+      "t": "p",
+      "x": "Two spaces of the same size can cost very different amounts depending on what's behind the walls and what the space needs to do. Here's what drives the cost of a commercial renovation in Winnipeg, and how to get a number you can trust."
+    },
+    {
+      "t": "h2",
+      "x": "The biggest cost drivers"
+    },
+    {
+      "t": "table",
+      "head": [
+        "Driver",
+        "Why it matters",
+        "Impact"
+      ],
+      "rows": [
+        [
+          "Use of the space",
+          "Restaurants and clinics need far more plumbing, ventilation and specialty work than offices",
+          "High"
+        ],
+        [
+          "[Change of use](/blog/occupancy-permit-change-of-use-winnipeg)",
+          "A new occupancy type can trigger fire, exit, accessibility and washroom upgrades",
+          "High"
+        ],
+        [
+          "Mechanical, electrical, plumbing",
+          "Moving or adding HVAC, power and plumbing can be among the largest line items",
+          "High"
+        ],
+        [
+          "Existing conditions",
+          "Older buildings may hide asbestos, outdated wiring or structural issues",
+          "Medium to high"
+        ],
+        [
+          "Size and layout changes",
+          "More walls, rooms and doors mean more labour and materials",
+          "Medium"
+        ],
+        [
+          "Finish level",
+          "Standard vs. premium flooring, millwork, lighting and fixtures",
+          "Medium"
+        ],
+        [
+          "Schedule",
+          "After-hours or phased work to keep a business open can cost more",
+          "Medium"
+        ],
+        [
+          "Permits and design",
+          "Drawings, engineering and [permit fees](https://www.winnipeg.ca/building-development/fees-charges)",
+          "Low to medium"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "x": "The impact ratings are a rough general guide, not published data."
+    },
+    {
+      "t": "h2",
+      "x": "Commercial renovation cost per square foot by project type"
+    },
+    {
+      "t": "p",
+      "x": "No per-square-foot figures here, only a rough general order from lower to higher, not published data. Any one project can break it:"
+    },
+    {
+      "t": "oli",
+      "x": "**Cosmetic refresh:** paint, flooring, lighting, ceiling tiles"
+    },
+    {
+      "t": "oli",
+      "x": "**Office fit-out:** new walls, meeting rooms, finishes, some electrical and HVAC"
+    },
+    {
+      "t": "oli",
+      "x": "**Retail fit-out:** storefront, display, lighting, washroom"
+    },
+    {
+      "t": "oli",
+      "x": "**Medical or dental clinic:** exam rooms, sinks, specialized plumbing and ventilation"
+    },
+    {
+      "t": "oli",
+      "x": "**Restaurant:** commercial kitchen, grease interceptor, exhaust hood, fire suppression"
+    },
+    {
+      "t": "h2",
+      "x": "Hidden costs to plan for"
+    },
+    {
+      "t": "li",
+      "x": "**Asbestos testing and abatement** in older Winnipeg buildings before demolition"
+    },
+    {
+      "t": "li",
+      "x": "**Code upgrades** triggered by the renovation (accessibility, fire separations, exits)"
+    },
+    {
+      "t": "li",
+      "x": "**Electrical service upgrades** for equipment-heavy uses"
+    },
+    {
+      "t": "li",
+      "x": "**After-hours premiums** if you can't close during work"
+    },
+    {
+      "t": "li",
+      "x": "**Contingency:** [set aside a contingency fund](https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements) for surprises, and a larger one in older buildings"
+    },
+    {
+      "t": "h2",
+      "x": "How to get an accurate quote"
+    },
+    {
+      "t": "oli",
+      "x": "**Bring a clear brief:** how many people, what rooms, what equipment, what hours you need to stay open."
+    },
+    {
+      "t": "oli",
+      "x": "**Share any drawings or photos** of the existing space."
+    },
+    {
+      "t": "oli",
+      "x": "**Ask for a site visit,** not just a phone estimate."
+    },
+    {
+      "t": "oli",
+      "x": "**Compare line items,** not just totals. Check what's an allowance vs. a firm price."
+    },
+    {
+      "t": "oli",
+      "x": "**Ask what's excluded:** design, permits, furniture, IT and signage are often separate."
+    },
+    {
+      "t": "h2",
+      "x": "Ways to control cost"
+    },
+    {
+      "t": "li",
+      "x": "Reuse existing walls, ceilings and mechanical where possible"
+    },
+    {
+      "t": "li",
+      "x": "Choose durable mid-range finishes over premium ones"
+    },
+    {
+      "t": "li",
+      "x": "Keep plumbing fixtures near existing lines"
+    },
+    {
+      "t": "li",
+      "x": "Decide early and avoid mid-project changes"
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "The cost of a commercial renovation depends far more on use, systems and existing conditions than on square footage alone. A site visit and a detailed scope are the only way to a reliable number."
+    },
+    {
+      "t": "p",
+      "x": "**Want a real number for your space?** Commercial work isn't priced online. Every commercial project with Bridgeland Builders starts with a free on-site visit and a free written quote that sets out the scope, inclusions and exclusions. [**Book a Free On-Site Visit**](/book-online)."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Renovation costs in Winnipeg](/renovation-cost-winnipeg#priced-after-a-visit) · [The biggest cost factors in commercial renovation](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) · [Office Renovation Cost in Winnipeg: Budget by Scope](/blog/office-renovation-cost-winnipeg)"
+    }
+  ]
+}

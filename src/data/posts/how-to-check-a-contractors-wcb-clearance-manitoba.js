@@ -294,31 +294,32 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
-      "title": "How to Choose a Renovation Contractor in Winnipeg",
-      "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
+      "slug": "how-to-vet-commercial-renovation-contractors-winnipeg",
+      "title": "How to Find and Vet Commercial Renovation Contractors in Winnipeg",
+      "excerpt": "How to find, shortlist and vet commercial renovation contractors in Winnipeg: where to look, documents to request, smart questions and red flags.",
       "category": "Hiring a Contractor",
-      "date": "2026-08-05",
-      "readMinutes": 10,
+      "date": "2026-11-05",
+      "readMinutes": 3,
       "image": {
-        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+        "base": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "c1d3b9fa",
-          "3b993117",
-          "3dde30a7"
+          "f7088b6c",
+          "abfd0e4b",
+          "d0e6be5e"
         ],
         "avif": [
-          "c03d571e",
-          "8eb20a2f",
-          "504b262f"
+          "32515d10",
+          "9f12c4df",
+          "01529b80"
         ],
         "main": 1
-      }
+      },
+      "thumbnail": true
     }
   ]
 };

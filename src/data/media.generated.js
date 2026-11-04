@@ -15,6 +15,7 @@
 //
 // 'card:<post-slug>' -> the branded title card of a published post without a
 // hero: src/srcSet/avifSrcSet/width/height (16:9), crop, og, schemaImages, and alt.
+// With thumbnail: true the same files come from the client's designed thumbnail.
 export const MEDIA = {
   "https://static.wixstatic.com/media/48172a_e5c3b2ab78df499d833b48f86c1404a8~mv2.png": {
     "original": {
@@ -274,6 +275,38 @@ export const MEDIA = {
     "width": 880,
     "height": 503
   },
+  "card:agent-scripts-homes-that-need-work-winnipeg": {
+    "src": "/images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-880.41f7011b.webp",
+    "srcSet": "/images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-480.23d79ad5.webp 480w, /images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-880.41f7011b.webp 880w, /images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-1320.45825717.webp 1320w",
+    "avifSrcSet": "/images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-480.9ddbcd12.avif 480w, /images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-880.307a8e15.avif 880w, /images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-1320.a68c065b.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-1200x630.acf643c6.jpg",
+    "schemaImages": [
+      "/images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-1200x675.030b8f33.jpg",
+      "/images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-1200x900.4eefbbad.jpg",
+      "/images/blog/agent-scripts-homes-that-need-work/7-real-estate-agent-scripts-1200x1200.6b2c4cfc.jpg"
+    ],
+    "alt": "Real estate agent with a clipboard viewing a dated living room with worn carpet and wood panelling that needs work",
+    "thumbnail": true
+  },
+  "card:apartment-lobby-renovation-ideas": {
+    "src": "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-880.4645b3f6.webp",
+    "srcSet": "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-480.0a648dd8.webp 480w, /images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-880.4645b3f6.webp 880w, /images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-1320.29230850.webp 1320w",
+    "avifSrcSet": "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-480.e1ff94cf.avif 480w, /images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-880.5165ce95.avif 880w, /images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-1320.a6e7e230.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-1200x630.4179059e.jpg",
+    "schemaImages": [
+      "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-1200x675.b204febf.jpg",
+      "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-1200x900.85a678ab.jpg",
+      "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-1200x1200.d14091db.jpg"
+    ],
+    "alt": "Hotel-style apartment lobby with lounge chairs, warm lighting and a stone feature wall",
+    "thumbnail": true
+  },
   "card:asbestos-testing-before-renovating-manitoba": {
     "src": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.e82e0b35.webp",
     "srcSet": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-480.647701ea.webp 480w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-880.e82e0b35.webp 880w, /images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1320.d62a9906.webp 1320w",
@@ -288,6 +321,38 @@ export const MEDIA = {
       "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x1200.30ab2e6b.jpg"
     ],
     "alt": "Title card: Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules"
+  },
+  "card:average-rent-by-neighbourhood-winnipeg": {
+    "src": "/images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-880.fceabce5.webp",
+    "srcSet": "/images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-480.02a25c3d.webp 480w, /images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-880.fceabce5.webp 880w, /images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-1320.b38b965b.webp 1320w",
+    "avifSrcSet": "/images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-480.e0514100.avif 480w, /images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-880.efb00699.avif 880w, /images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-1320.f3590088.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-1200x630.4f10a904.jpg",
+    "schemaImages": [
+      "/images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-1200x675.b22da42c.jpg",
+      "/images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-1200x900.4c0d8449.jpg",
+      "/images/blog/average-rent-by-neighbourhood-winnipeg/average-rent-by-neighbourhood-1200x1200.9d37280b.jpg"
+    ],
+    "alt": "Tree-lined residential street with older brick apartment blocks on a sunny day",
+    "thumbnail": true
+  },
+  "card:bank-of-canada-rate-hike-renovation-budgets": {
+    "src": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-880.407886aa.webp",
+    "srcSet": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-480.3d9c756e.webp 480w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-880.407886aa.webp 880w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1320.b4e1244f.webp 1320w",
+    "avifSrcSet": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-480.872cb81c.avif 480w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-880.d1a82b3d.avif 880w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1320.1842c076.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x630.1c559f16.jpg",
+    "schemaImages": [
+      "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x675.c66ec350.jpg",
+      "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x900.adbdc712.jpg",
+      "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x1200.a838008e.jpg"
+    ],
+    "alt": "House keys, a calculator and renovation plans on a kitchen table, for budgeting after the Bank of Canada rate hike",
+    "thumbnail": true
   },
   "card:basement-development-permits-winnipeg": {
     "src": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-880.d1925dff.webp",
@@ -334,6 +399,22 @@ export const MEDIA = {
     ],
     "alt": "Title card: Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback"
   },
+  "card:brick-repointing-cost-winnipeg-walk-ups": {
+    "src": "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-880.6aad9ce7.webp",
+    "srcSet": "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-480.888b9f42.webp 480w, /images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-880.6aad9ce7.webp 880w, /images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-1320.e253799a.webp 1320w",
+    "avifSrcSet": "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-480.17f74be5.avif 480w, /images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-880.7071da39.avif 880w, /images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-1320.925d28bc.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-1200x630.26c91eba.jpg",
+    "schemaImages": [
+      "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-1200x675.4a350c3a.jpg",
+      "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-1200x900.5ffe2b65.jpg",
+      "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-1200x1200.ecf5d526.jpg"
+    ],
+    "alt": "Mason's trowel repointing mortar joints on an old red brick wall",
+    "thumbnail": true
+  },
   "card:builders-lien-holdback-manitoba": {
     "src": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp",
     "srcSet": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-480.1b473aa7.webp 480w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-880.73253ecf.webp 880w, /images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1320.4cc70a86.webp 1320w",
@@ -348,6 +429,38 @@ export const MEDIA = {
       "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x1200.f9e1dffa.jpg"
     ],
     "alt": "Title card: Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor"
+  },
+  "card:canadian-dental-care-plan-dental-office-space": {
+    "src": "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-880.1d1980f5.webp",
+    "srcSet": "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-480.fc0dc17b.webp 480w, /images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-880.1d1980f5.webp 880w, /images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-1320.01b0dc4b.webp 1320w",
+    "avifSrcSet": "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-480.4af7ddee.avif 480w, /images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-880.23edc98b.avif 880w, /images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-1320.3f177d32.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-1200x630.b376fdcf.jpg",
+    "schemaImages": [
+      "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-1200x675.fd5894c7.jpg",
+      "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-1200x900.ffcba1ad.jpg",
+      "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-1200x1200.7ea5dc66.jpg"
+    ],
+    "alt": "Modern dental operatory with a new dental chair, overhead light and white cabinetry",
+    "thumbnail": true
+  },
+  "card:capital-planning-property-managers-winnipeg": {
+    "src": "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-880.e468107e.webp",
+    "srcSet": "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-480.18b6c8b8.webp 480w, /images/blog/capital-planning-property-managers/data-driven-capital-planning-how-880.e468107e.webp 880w, /images/blog/capital-planning-property-managers/data-driven-capital-planning-how-1320.10f7cd1a.webp 1320w",
+    "avifSrcSet": "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-480.913e072c.avif 480w, /images/blog/capital-planning-property-managers/data-driven-capital-planning-how-880.4c930c9a.avif 880w, /images/blog/capital-planning-property-managers/data-driven-capital-planning-how-1320.c15f084c.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-1200x630.a89d87ff.jpg",
+    "schemaImages": [
+      "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-1200x675.b2336fce.jpg",
+      "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-1200x900.157707e9.jpg",
+      "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-1200x1200.e10f887a.jpg"
+    ],
+    "alt": "Laptop showing charts beside a building blueprint and white hard hat, for capital planning by property managers",
+    "thumbnail": true
   },
   "card:check-permit-history-winnipeg-house": {
     "src": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-880.1189cd90.webp",
@@ -394,6 +507,166 @@ export const MEDIA = {
     ],
     "alt": "Title card: Clinic Renovation Permits in Winnipeg: What to Plan For"
   },
+  "card:commercial-interior-demolition-winnipeg": {
+    "src": "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-880.c87d25f3.webp",
+    "srcSet": "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-480.3b109ed7.webp 480w, /images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-880.c87d25f3.webp 880w, /images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-1320.7228bc67.webp 1320w",
+    "avifSrcSet": "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-480.578983c8.avif 480w, /images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-880.90399ab6.avif 880w, /images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-1320.a6941ef7.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-1200x630.8d75aacc.jpg",
+    "schemaImages": [
+      "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-1200x675.19ab4099.jpg",
+      "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-1200x900.f61ca3c0.jpg",
+      "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-1200x1200.7f2ce4e8.jpg"
+    ],
+    "alt": "Commercial interior demolition with stripped walls, exposed ceiling, debris and a rolling bin",
+    "thumbnail": true
+  },
+  "card:commercial-mortgage-renewal-renovations-winnipeg": {
+    "src": "/images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-880.9d331107.webp",
+    "srcSet": "/images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-480.eea485d3.webp 480w, /images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-880.9d331107.webp 880w, /images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-1320.c6df1a2c.webp 1320w",
+    "avifSrcSet": "/images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-480.ba98b92b.avif 480w, /images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-880.27799cf9.avif 880w, /images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-1320.17c73a89.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-1200x630.c048a21c.jpg",
+    "schemaImages": [
+      "/images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-1200x675.b914cf0e.jpg",
+      "/images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-1200x900.f11401c6.jpg",
+      "/images/blog/commercial-mortgage-renewal-renovations/renovations-before-a-commercial-1200x1200.2a97aaf5.jpg"
+    ],
+    "alt": "Mid-rise commercial building with a glass lobby entrance and landscaping",
+    "thumbnail": true
+  },
+  "card:commercial-property-appraisal-capital-projects": {
+    "src": "/images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-880.fe36a86a.webp",
+    "srcSet": "/images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-480.0f0c714f.webp 480w, /images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-880.fe36a86a.webp 880w, /images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-1320.4de52c47.webp 1320w",
+    "avifSrcSet": "/images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-480.9d9e68b6.avif 480w, /images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-880.902a69ea.avif 880w, /images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-1320.621ed5c9.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-1200x630.b29f34c3.jpg",
+    "schemaImages": [
+      "/images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-1200x675.95a20b43.jpg",
+      "/images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-1200x900.035192a6.jpg",
+      "/images/blog/commercial-property-appraisal-capital/refinancing-at-higher-rates-capital-1200x1200.edad76d8.jpg"
+    ],
+    "alt": "Modern commercial building with large dark-framed windows and panel cladding against a blue sky",
+    "thumbnail": true
+  },
+  "card:commercial-renovation-cost-per-square-foot-winnipeg": {
+    "src": "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-880.6d40ef15.webp",
+    "srcSet": "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-480.fadf6a0c.webp 480w, /images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-880.6d40ef15.webp 880w, /images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1320.b802bb9e.webp 1320w",
+    "avifSrcSet": "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-480.04a91ec9.avif 480w, /images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-880.2aa5ce31.avif 880w, /images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1320.0470b210.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1200x630.bc932fa2.jpg",
+    "schemaImages": [
+      "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1200x675.a3319d71.jpg",
+      "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1200x900.bcb0c820.jpg",
+      "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1200x1200.d3d12757.jpg"
+    ],
+    "alt": "Tape measure and calculator on commercial floor plans beside a hard hat, for estimating renovation cost per square foot",
+    "thumbnail": true
+  },
+  "card:commercial-renovation-process": {
+    "src": "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9-880.dab0cf04.webp",
+    "srcSet": "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9-480.c3aca01f.webp 480w, /images/blog/commercial-renovation-process/the-commercial-renovation-process-9-880.dab0cf04.webp 880w, /images/blog/commercial-renovation-process/the-commercial-renovation-process-9-1320.851379dc.webp 1320w",
+    "avifSrcSet": "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9-480.6c9e75fe.avif 480w, /images/blog/commercial-renovation-process/the-commercial-renovation-process-9-880.975599a6.avif 880w, /images/blog/commercial-renovation-process/the-commercial-renovation-process-9-1320.47eb3618.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9-1200x630.d4aae21a.jpg",
+    "schemaImages": [
+      "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9-1200x675.80da3f84.jpg",
+      "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9-1200x900.6c369750.jpg",
+      "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9-1200x1200.95abf524.jpg"
+    ],
+    "alt": "Commercial interior renovation in progress, with a new ceiling grid, lighting and ladders on an organized job site",
+    "thumbnail": true
+  },
+  "card:contractor-payment-fraud-red-flags": {
+    "src": "/images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-880.79ff612e.webp",
+    "srcSet": "/images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-480.38a938ed.webp 480w, /images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-880.79ff612e.webp 880w, /images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-1320.77362e4c.webp 1320w",
+    "avifSrcSet": "/images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-480.bd4a64aa.avif 480w, /images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-880.79a8a426.avif 880w, /images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-1320.9911c5e8.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-1200x630.3a49e59c.jpg",
+    "schemaImages": [
+      "/images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-1200x675.eadbdc54.jpg",
+      "/images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-1200x900.d1893ae6.jpg",
+      "/images/blog/contractor-payment-fraud-red-flags/8-red-flags-of-contractor-payment-1200x1200.a6773fa0.jpg"
+    ],
+    "alt": "Laptop with a padlock icon beside a metal padlock and hard hat, illustrating protection from contractor payment fraud",
+    "thumbnail": true
+  },
+  "card:convert-house-to-duplex-winnipeg": {
+    "src": "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-880.9d20eb42.webp",
+    "srcSet": "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-480.0668316c.webp 480w, /images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-880.9d20eb42.webp 880w, /images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-1320.829c5c18.webp 1320w",
+    "avifSrcSet": "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-480.0b3338f7.avif 480w, /images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-880.3fa983a1.avif 880w, /images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-1320.84f90dc3.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-1200x630.3a99df61.jpg",
+    "schemaImages": [
+      "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-1200x675.b3a6e954.jpg",
+      "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-1200x900.ace56625.jpg",
+      "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-1200x1200.9ce71e2b.jpg"
+    ],
+    "alt": "Two-storey grey house with two matching front entrances, set up as a side-by-side duplex",
+    "thumbnail": true
+  },
+  "card:cost-of-tenant-turnover-winnipeg": {
+    "src": "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-880.77b70750.webp",
+    "srcSet": "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-480.fa4aa318.webp 480w, /images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-880.77b70750.webp 880w, /images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1320.7fadedc7.webp 1320w",
+    "avifSrcSet": "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-480.4aad2e8c.avif 480w, /images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-880.908121ef.avif 880w, /images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1320.6fb9632f.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1200x630.bae48e84.jpg",
+    "schemaImages": [
+      "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1200x675.93a32412.jpg",
+      "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1200x900.e1bff2e2.jpg",
+      "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1200x1200.f4c6f546.jpg"
+    ],
+    "alt": "Empty apartment with moving boxes, paint cans and a stepladder, showing the cost of tenant turnover",
+    "thumbnail": true
+  },
+  "card:early-contractor-involvement-architects": {
+    "src": "/images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-880.f57f3a05.webp",
+    "srcSet": "/images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-480.9351a864.webp 480w, /images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-880.f57f3a05.webp 880w, /images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-1320.c946a7d6.webp 1320w",
+    "avifSrcSet": "/images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-480.98d1c095.avif 480w, /images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-880.d403feab.avif 880w, /images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-1320.a7bd3fa7.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-1200x630.60c63907.jpg",
+    "schemaImages": [
+      "/images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-1200x675.735f6643.jpg",
+      "/images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-1200x900.0040358a.jpg",
+      "/images/blog/early-contractor-involvement-architects/cost-volatility-is-making-early-1200x1200.3a994ba8.jpg"
+    ],
+    "alt": "Architect and contractor reviewing construction drawings beside a white building model",
+    "thumbnail": true
+  },
+  "card:efficiency-manitoba-commercial-rebates": {
+    "src": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-880.1d10ae70.webp",
+    "srcSet": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-480.e945bac0.webp 480w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-880.1d10ae70.webp 880w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1320.a0b2a03d.webp 1320w",
+    "avifSrcSet": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-480.543c1373.avif 480w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-880.b2998267.avif 880w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1320.5926283d.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x630.fee273a5.jpg",
+    "schemaImages": [
+      "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x675.6393a08a.jpg",
+      "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x900.07deef97.jpg",
+      "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x1200.a16f5de0.jpg"
+    ],
+    "alt": "Commercial office with LED panel lights and a smart thermostat on the wall",
+    "thumbnail": true
+  },
   "card:ensuite-renovation-winnipeg": {
     "src": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp",
     "srcSet": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-480.8f984788.webp 480w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-880.fe4be3e4.webp 880w, /images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1320.1282306c.webp 1320w",
@@ -423,6 +696,38 @@ export const MEDIA = {
       "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x1200.d8061ed7.jpg"
     ],
     "alt": "Title card: When to Paint Your House Exterior in Winnipeg"
+  },
+  "card:flex-space-suburban-office-winnipeg": {
+    "src": "/images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-880.c5b57bfb.webp",
+    "srcSet": "/images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-480.cf6347e3.webp 480w, /images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-880.c5b57bfb.webp 880w, /images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-1320.259c755d.webp 1320w",
+    "avifSrcSet": "/images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-480.518ff736.avif 480w, /images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-880.e6eb2a31.avif 880w, /images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-1320.e1dae02a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-1200x630.ce7ebba0.jpg",
+    "schemaImages": [
+      "/images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-1200x675.f48b5f7d.jpg",
+      "/images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-1200x900.f604b0bb.jpg",
+      "/images/blog/flex-space-suburban-office-winnipeg/suburban-office-and-flex-space-1200x1200.f388f860.jpg"
+    ],
+    "alt": "Suburban flex space building with an overhead loading door and a glass office front",
+    "thumbnail": true
+  },
+  "card:flight-to-quality-office-winnipeg": {
+    "src": "/images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-880.0d3822ff.webp",
+    "srcSet": "/images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-480.cb0c2104.webp 480w, /images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-880.0d3822ff.webp 880w, /images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-1320.71da9c51.webp 1320w",
+    "avifSrcSet": "/images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-480.f0d60acd.avif 480w, /images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-880.504162d8.avif 880w, /images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-1320.98d8ea31.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-1200x630.cbaafa79.jpg",
+    "schemaImages": [
+      "/images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-1200x675.5d7677bc.jpg",
+      "/images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-1200x900.d31b8426.jpg",
+      "/images/blog/flight-to-quality-office-winnipeg/skywalk-or-sidelined-how-the-flight-1200x1200.12c21f39.jpg"
+    ],
+    "alt": "Modern office tower lobby with glass, warm wood ceiling and stone finishes",
+    "thumbnail": true
   },
   "card:home-additions-and-zoning-winnipeg": {
     "src": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-880.b9f76c7b.webp",
@@ -484,6 +789,38 @@ export const MEDIA = {
     ],
     "alt": "Title card: Home Renovation Planning in Canada: Guide and Checklist"
   },
+  "card:hospitality-renovation-winnipeg-off-season": {
+    "src": "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-880.912da68a.webp",
+    "srcSet": "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-480.dd12cc54.webp 480w, /images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-880.912da68a.webp 880w, /images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1320.b1419331.webp 1320w",
+    "avifSrcSet": "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-480.0f6049f1.avif 480w, /images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-880.f32878dd.avif 880w, /images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1320.2fdbaae7.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1200x630.d03e36db.jpg",
+    "schemaImages": [
+      "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1200x675.83ed225f.jpg",
+      "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1200x900.e7100d53.jpg",
+      "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1200x1200.0827d545.jpg"
+    ],
+    "alt": "Renovated bar and restaurant with warm lighting, a backlit bar and new bar stools, empty before opening",
+    "thumbnail": true
+  },
+  "card:hotel-renovation-winnipeg-stay-open": {
+    "src": "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-880.2c1762df.webp",
+    "srcSet": "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-480.5cf6c1db.webp 480w, /images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-880.2c1762df.webp 880w, /images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1320.e3c16bfc.webp 1320w",
+    "avifSrcSet": "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-480.bd8b3410.avif 480w, /images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-880.1bdf0945.avif 880w, /images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1320.f0d929db.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1200x630.ca487411.jpg",
+    "schemaImages": [
+      "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1200x675.417f17ac.jpg",
+      "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1200x900.85ce70cb.jpg",
+      "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1200x1200.71b94611.jpg"
+    ],
+    "alt": "Renovated hotel guest room with a tall upholstered headboard, warm lighting and crisp bedding",
+    "thumbnail": true
+  },
   "card:how-to-check-a-contractors-wcb-clearance-manitoba": {
     "src": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp",
     "srcSet": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-480.c37939a9.webp 480w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-880.abd27f5e.webp 880w, /images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1320.a1fe8363.webp 1320w",
@@ -498,6 +835,70 @@ export const MEDIA = {
       "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x1200.4510a6b5.jpg"
     ],
     "alt": "Title card: How to Check a Contractor's WCB Clearance in Manitoba"
+  },
+  "card:how-to-choose-a-commercial-construction-company-winnipeg": {
+    "src": "/images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-880.17ee54cb.webp",
+    "srcSet": "/images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-480.b7142da9.webp 480w, /images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-880.17ee54cb.webp 880w, /images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-1320.dddffeba.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-480.14c85a77.avif 480w, /images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-880.d9a11f81.avif 880w, /images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-1320.15a16cb0.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-1200x630.696dbb1e.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-1200x675.75d4e676.jpg",
+      "/images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-1200x900.694fc73c.jpg",
+      "/images/blog/how-to-choose-a-commercial-construction/how-to-choose-a-commercial-1200x1200.0c48a71c.jpg"
+    ],
+    "alt": "Project manager in a hard hat reviewing blueprints at a commercial construction site with a steel frame building",
+    "thumbnail": true
+  },
+  "card:how-to-vet-commercial-renovation-contractors-winnipeg": {
+    "src": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-880.abfd0e4b.webp",
+    "srcSet": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-480.f7088b6c.webp 480w, /images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-880.abfd0e4b.webp 880w, /images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-1320.d0e6be5e.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-480.32515d10.avif 480w, /images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-880.9f12c4df.avif 880w, /images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-1320.01529b80.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-1200x630.9ea63fbd.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-1200x675.6c3f5306.jpg",
+      "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-1200x900.af0cef92.jpg",
+      "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-1200x1200.c4758c4e.jpg"
+    ],
+    "alt": "Checklist on a clipboard and a white hard hat on a desk, for vetting a commercial contractor",
+    "thumbnail": true
+  },
+  "card:hudsons-bay-closure-winnipeg-malls": {
+    "src": "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-880.24e38647.webp",
+    "srcSet": "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-480.517e7345.webp 480w, /images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-880.24e38647.webp 880w, /images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-1320.18e76b4f.webp 1320w",
+    "avifSrcSet": "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-480.2c71ea06.avif 480w, /images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-880.e0d8279b.avif 880w, /images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-1320.644064ab.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-1200x630.92c9422d.jpg",
+    "schemaImages": [
+      "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-1200x675.9f92592a.jpg",
+      "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-1200x900.425adbbd.jpg",
+      "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures-1200x1200.87857e56.jpg"
+    ],
+    "alt": "Large empty commercial floor with a concrete slab, columns and a skylight",
+    "thumbnail": true
+  },
+  "card:infill-housing-winnipeg-small-landlords": {
+    "src": "/images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-880.ec67d837.webp",
+    "srcSet": "/images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-480.7ffd1c46.webp 480w, /images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-880.ec67d837.webp 880w, /images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-1320.451fbe27.webp 1320w",
+    "avifSrcSet": "/images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-480.52be01d5.avif 480w, /images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-880.c1f01f38.avif 880w, /images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-1320.db8c0b73.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-1200x630.2e17fd84.jpg",
+    "schemaImages": [
+      "/images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-1200x675.6b8c76b6.jpg",
+      "/images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-1200x900.5a50fedd.jpg",
+      "/images/blog/infill-housing-winnipeg-small-landlords/infill-housing-in-winnipeg-what-it-1200x1200.fcc0272c.jpg"
+    ],
+    "alt": "New narrow infill house under construction between older homes on a tree-lined street",
+    "thumbnail": true
   },
   "card:insulation-rebates-during-a-renovation-manitoba": {
     "src": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-880.b1620437.webp",
@@ -514,6 +915,38 @@ export const MEDIA = {
     ],
     "alt": "Title card: Insulation Rebates in Manitoba: How to Use Them During a Renovation"
   },
+  "card:manitoba-hydro-rate-increase-building-envelope": {
+    "src": "/images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-880.a2953323.webp",
+    "srcSet": "/images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-480.d2f9d61a.webp 480w, /images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-880.a2953323.webp 880w, /images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-1320.0a1c7080.webp 1320w",
+    "avifSrcSet": "/images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-480.d1a36912.avif 480w, /images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-880.e719db6e.avif 880w, /images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-1320.4992aad7.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-1200x630.870e49b9.jpg",
+    "schemaImages": [
+      "/images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-1200x675.afb4efa4.jpg",
+      "/images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-1200x900.0f634663.jpg",
+      "/images/blog/manitoba-hydro-rate-increase-building/manitoba-hydro-rate-increase-to-2028-1200x1200.d32974a4.jpg"
+    ],
+    "alt": "Gloved hand sealing a window frame with caulk on a brick building in winter",
+    "thumbnail": true
+  },
+  "card:manitoba-new-clinics-medical-space": {
+    "src": "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-880.7e43ad7c.webp",
+    "srcSet": "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-480.0384c6bb.webp 480w, /images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-880.7e43ad7c.webp 880w, /images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1320.79e94edd.webp 1320w",
+    "avifSrcSet": "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-480.0010dd03.avif 480w, /images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-880.92a7eedb.avif 880w, /images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1320.0d10e6e8.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1200x630.87e4b6cb.jpg",
+    "schemaImages": [
+      "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1200x675.835ed18a.jpg",
+      "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1200x900.c4b64008.jpg",
+      "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1200x1200.aa317ab5.jpg"
+    ],
+    "alt": "New medical clinic waiting room with modern seating, plants and a wood reception desk",
+    "thumbnail": true
+  },
   "card:manitoba-renovation-tax-credits-rebates": {
     "src": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
     "srcSet": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-480.61d350fa.webp 480w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp 880w, /images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1320.4d58ff60.webp 1320w",
@@ -528,6 +961,54 @@ export const MEDIA = {
       "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x1200.aec070d2.jpg"
     ],
     "alt": "Title card: Home Renovation Grants and Tax Credits in Manitoba"
+  },
+  "card:manitoba-rent-control-threshold-2000": {
+    "src": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-880.dcfebaa0.webp",
+    "srcSet": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-480.9867f566.webp 480w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-880.dcfebaa0.webp 880w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1320.8b284eea.webp 1320w",
+    "avifSrcSet": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-480.e4ee3a68.avif 480w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-880.a69ae0be.avif 880w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1320.f86dbf7a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x630.2f97c584.jpg",
+    "schemaImages": [
+      "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x675.c6e30be9.jpg",
+      "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x900.3e8adee1.jpg",
+      "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x1200.b8cd5479.jpg"
+    ],
+    "alt": "Renovated apartment with new kitchen, quartz counter and vinyl plank flooring, keys on the counter",
+    "thumbnail": true
+  },
+  "card:manitoba-rent-increase-guideline-2027": {
+    "src": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-880.00c30be1.webp",
+    "srcSet": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-480.c1b743ab.webp 480w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-880.00c30be1.webp 880w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1320.3f007b2b.webp 1320w",
+    "avifSrcSet": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-480.381d3e94.avif 480w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-880.74f6045e.avif 880w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1320.df5bb90c.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x630.cb1eed5b.jpg",
+    "schemaImages": [
+      "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x675.e63a1bdb.jpg",
+      "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x900.87936b2a.jpg",
+      "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x1200.86ab6fdb.jpg"
+    ],
+    "alt": "Three-storey brick walk-up apartment building with a concrete front stoop on a sunny summer day",
+    "thumbnail": true
+  },
+  "card:medical-clinic-design-layout-winnipeg": {
+    "src": "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-880.30069400.webp",
+    "srcSet": "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-480.e0ac83a4.webp 480w, /images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-880.30069400.webp 880w, /images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1320.930e695f.webp 1320w",
+    "avifSrcSet": "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-480.cdabb86c.avif 480w, /images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-880.2003344f.avif 880w, /images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1320.8e7c41a8.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1200x630.76cc0085.jpg",
+    "schemaImages": [
+      "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1200x675.d6c89008.jpg",
+      "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1200x900.d3893fa6.jpg",
+      "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1200x1200.68dba52a.jpg"
+    ],
+    "alt": "Medical clinic corridor with exam rooms and light wood and white finishes, showing clinic design and layout",
+    "thumbnail": true
   },
   "card:occupancy-permit-change-of-use-winnipeg": {
     "src": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-880.ef758048.webp",
@@ -544,6 +1025,22 @@ export const MEDIA = {
     ],
     "alt": "Title card: Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease"
   },
+  "card:office-building-upgrades-attract-tenants": {
+    "src": "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-880.fb0d16c1.webp",
+    "srcSet": "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-480.517ca3e6.webp 480w, /images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-880.fb0d16c1.webp 880w, /images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1320.ddbf48af.webp 1320w",
+    "avifSrcSet": "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-480.332ca838.avif 480w, /images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-880.725c1239.avif 880w, /images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1320.b4704c19.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1200x630.b786a6d0.jpg",
+    "schemaImages": [
+      "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1200x675.858b7483.jpg",
+      "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1200x900.120666c8.jpg",
+      "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1200x1200.6a53d012.jpg"
+    ],
+    "alt": "Renovated office lounge with soft seating, plants and a coffee bar, an amenity that attracts office tenants",
+    "thumbnail": true
+  },
   "card:office-fit-up-lease-planning-winnipeg": {
     "src": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp",
     "srcSet": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-480.09eabf05.webp 480w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-880.9079ee23.webp 880w, /images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1320.1977b93b.webp 1320w",
@@ -558,6 +1055,54 @@ export const MEDIA = {
       "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x1200.6b71374a.jpg"
     ],
     "alt": "Title card: Office Fit-Up in Winnipeg: Planning Around Your Lease"
+  },
+  "card:office-renovation-cost-winnipeg": {
+    "src": "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-880.227ef867.webp",
+    "srcSet": "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-480.4c7bdbbb.webp 480w, /images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-880.227ef867.webp 880w, /images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1320.86b2dc2b.webp 1320w",
+    "avifSrcSet": "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-480.1d121cfb.avif 480w, /images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-880.d0b123b2.avif 880w, /images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1320.279489db.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1200x630.ab61f1d4.jpg",
+    "schemaImages": [
+      "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1200x675.a6c39045.jpg",
+      "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1200x900.ccaa669e.jpg",
+      "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1200x1200.3343d327.jpg"
+    ],
+    "alt": "Open-plan office renovation with new workstations, carpet tile rolls and boxes of flooring",
+    "thumbnail": true
+  },
+  "card:office-to-hotel-conversion-winnipeg": {
+    "src": "/images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-880.563fadf1.webp",
+    "srcSet": "/images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-480.28432a15.webp 480w, /images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-880.563fadf1.webp 880w, /images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-1320.2323df47.webp 1320w",
+    "avifSrcSet": "/images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-480.f10a5e2a.avif 480w, /images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-880.6581dfff.avif 880w, /images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-1320.32e78e64.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-1200x630.f6e67012.jpg",
+    "schemaImages": [
+      "/images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-1200x675.2a8e3813.jpg",
+      "/images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-1200x900.e1b84d79.jpg",
+      "/images/blog/office-to-hotel-conversion-winnipeg/from-offices-to-hotel-rooms-is-1200x1200.9dc6270f.jpg"
+    ],
+    "alt": "Long hotel corridor with patterned carpet, wall sconces and dark guest room doors",
+    "thumbnail": true
+  },
+  "card:office-to-residential-conversion-winnipeg": {
+    "src": "/images/blog/office-to-residential-conversion/office-to-residential-conversions-880.802870fd.webp",
+    "srcSet": "/images/blog/office-to-residential-conversion/office-to-residential-conversions-480.f10c5e06.webp 480w, /images/blog/office-to-residential-conversion/office-to-residential-conversions-880.802870fd.webp 880w, /images/blog/office-to-residential-conversion/office-to-residential-conversions-1320.6c09305e.webp 1320w",
+    "avifSrcSet": "/images/blog/office-to-residential-conversion/office-to-residential-conversions-480.05b45c68.avif 480w, /images/blog/office-to-residential-conversion/office-to-residential-conversions-880.2dc1e639.avif 880w, /images/blog/office-to-residential-conversion/office-to-residential-conversions-1320.38b7e0a5.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/office-to-residential-conversion/office-to-residential-conversions-1200x630.183f297a.jpg",
+    "schemaImages": [
+      "/images/blog/office-to-residential-conversion/office-to-residential-conversions-1200x675.bff0295e.jpg",
+      "/images/blog/office-to-residential-conversion/office-to-residential-conversions-1200x900.c87dbcae.jpg",
+      "/images/blog/office-to-residential-conversion/office-to-residential-conversions-1200x1200.06ebceea.jpg"
+    ],
+    "alt": "Gutted office floor framed with steel studs and lined with tall windows, as in an office to residential conversion",
+    "thumbnail": true
   },
   "card:planning-a-winter-basement-development-winnipeg": {
     "src": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-880.2d7fc4b5.webp",
@@ -574,6 +1119,70 @@ export const MEDIA = {
     ],
     "alt": "Title card: Planning a Winter Basement Development in Winnipeg"
   },
+  "card:portage-place-redevelopment-downtown-buildings": {
+    "src": "/images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-880.4d2f65d7.webp",
+    "srcSet": "/images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-480.b3e1ae10.webp 480w, /images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-880.4d2f65d7.webp 880w, /images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-1320.03e5c917.webp 1320w",
+    "avifSrcSet": "/images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-480.e0e03d9f.avif 480w, /images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-880.bbe94090.avif 880w, /images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-1320.3f37ea47.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-1200x630.13f1514e.jpg",
+    "schemaImages": [
+      "/images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-1200x675.f4665ac6.jpg",
+      "/images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-1200x900.093a8878.jpg",
+      "/images/blog/portage-place-redevelopment-downtown/portage-place-redevelopment-what-it-1200x1200.278f13ab.jpg"
+    ],
+    "alt": "Large concrete building with scaffolding on its façade and pedestrians on the sidewalk",
+    "thumbnail": true
+  },
+  "card:pre-listing-renovations-winnipeg": {
+    "src": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-880.5e2f392c.webp",
+    "srcSet": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-480.6abdd2e4.webp 480w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-880.5e2f392c.webp 880w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1320.493990c1.webp 1320w",
+    "avifSrcSet": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-480.a7b725cb.avif 480w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-880.8f2a4e53.avif 880w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1320.a033abc0.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x630.80bcfc97.jpg",
+    "schemaImages": [
+      "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x675.8ce8963f.jpg",
+      "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x900.a11c9813.jpg",
+      "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x1200.abb592ef.jpg"
+    ],
+    "alt": "Freshly painted entryway with a new ceiling light, hardwood floor and a paint tray on a drop cloth",
+    "thumbnail": true
+  },
+  "card:purchase-plus-improvements-mortgage-winnipeg": {
+    "src": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-880.c739b6f5.webp",
+    "srcSet": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-480.719705a4.webp 480w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-880.c739b6f5.webp 880w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1320.4f52ddd7.webp 1320w",
+    "avifSrcSet": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-480.29d246be.avif 480w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-880.930f705f.avif 880w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1320.465534fb.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x630.6e2a7fc4.jpg",
+    "schemaImages": [
+      "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x675.30342132.jpg",
+      "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x900.73894c0e.jpg",
+      "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x1200.ca2bc3aa.jpg"
+    ],
+    "alt": "Older two-storey stucco house with a wooden front porch and a blank real estate sign in a leaf-covered yard",
+    "thumbnail": true
+  },
+  "card:questions-to-ask-a-commercial-renovation-contractor": {
+    "src": "/images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-880.e1014a68.webp",
+    "srcSet": "/images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-480.b97f170f.webp 480w, /images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-880.e1014a68.webp 880w, /images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-1320.6d77168d.webp 1320w",
+    "avifSrcSet": "/images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-480.a9035694.avif 480w, /images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-880.7b5c96b5.avif 880w, /images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-1320.51e91629.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-1200x630.2bd8a179.jpg",
+    "schemaImages": [
+      "/images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-1200x675.b2300c3b.jpg",
+      "/images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-1200x900.13237307.jpg",
+      "/images/blog/questions-to-ask-a-commercial-renovation/12-questions-to-ask-a-commercial-1200x1200.036e683f.jpg"
+    ],
+    "alt": "Business owner and contractor in a hard hat reviewing blueprints in an unfinished commercial space",
+    "thumbnail": true
+  },
   "card:radon-testing-before-finishing-a-basement": {
     "src": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp",
     "srcSet": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-480.b9878e0f.webp 480w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-880.4fd769ec.webp 880w, /images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1320.76850913.webp 1320w",
@@ -588,6 +1197,22 @@ export const MEDIA = {
       "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x1200.b24a502c.jpg"
     ],
     "alt": "Title card: Radon Testing Before Finishing a Basement in Manitoba"
+  },
+  "card:reduce-commercial-building-operating-costs": {
+    "src": "/images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-880.aeb9fc59.webp",
+    "srcSet": "/images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-480.1c461ec5.webp 480w, /images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-880.aeb9fc59.webp 880w, /images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-1320.08466f68.webp 1320w",
+    "avifSrcSet": "/images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-480.001485d3.avif 480w, /images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-880.5a9fcd2b.avif 880w, /images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-1320.9942775a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-1200x630.3d9cadcd.jpg",
+    "schemaImages": [
+      "/images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-1200x675.e57019f8.jpg",
+      "/images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-1200x900.53b52c74.jpg",
+      "/images/blog/reduce-commercial-building-operating/12-upgrades-that-reduce-commercial-1200x1200.4b7d61e5.jpg"
+    ],
+    "alt": "Mechanical room with a row of boilers and insulated pipes",
+    "thumbnail": true
   },
   "card:removing-a-load-bearing-wall-winnipeg": {
     "src": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-880.46195eef.webp",
@@ -619,6 +1244,86 @@ export const MEDIA = {
     ],
     "alt": "Title card: Heritage District Renovations: Updating a Character Home in Winnipeg"
   },
+  "card:renovating-an-office-while-working": {
+    "src": "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-880.aac2ad80.webp",
+    "srcSet": "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-480.21b5c6af.webp 480w, /images/blog/renovating-an-office-while-working/renovating-an-office-while-working-880.aac2ad80.webp 880w, /images/blog/renovating-an-office-while-working/renovating-an-office-while-working-1320.8c8849fc.webp 1320w",
+    "avifSrcSet": "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-480.8c0c7ebd.avif 480w, /images/blog/renovating-an-office-while-working/renovating-an-office-while-working-880.1e39e754.avif 880w, /images/blog/renovating-an-office-while-working/renovating-an-office-while-working-1320.dc49626a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-1200x630.c972fce0.jpg",
+    "schemaImages": [
+      "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-1200x675.367aa0d8.jpg",
+      "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-1200x900.bb40a62b.jpg",
+      "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-1200x1200.d70ff7ef.jpg"
+    ],
+    "alt": "Plastic dust barrier separating an office renovation zone from desks still in use",
+    "thumbnail": true
+  },
+  "card:renovation-capital-vs-current-expense-canada": {
+    "src": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-880.14580032.webp",
+    "srcSet": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-480.67bec0c5.webp 480w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-880.14580032.webp 880w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1320.6c4c4540.webp 1320w",
+    "avifSrcSet": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-480.3d67af64.avif 480w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-880.53605990.avif 880w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1320.617f552a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x630.6b3e21b4.jpg",
+    "schemaImages": [
+      "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x675.fb1c502d.jpg",
+      "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x900.e089a8f8.jpg",
+      "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x1200.7f0f153e.jpg"
+    ],
+    "alt": "Calculator, receipts and a small wooden house model beside renovation plans, for sorting capital vs current expenses",
+    "thumbnail": true
+  },
+  "card:renovations-lower-commercial-property-insurance": {
+    "src": "/images/blog/renovations-lower-commercial-property/renovations-that-can-lower-880.7e43f92f.webp",
+    "srcSet": "/images/blog/renovations-lower-commercial-property/renovations-that-can-lower-480.77180952.webp 480w, /images/blog/renovations-lower-commercial-property/renovations-that-can-lower-880.7e43f92f.webp 880w, /images/blog/renovations-lower-commercial-property/renovations-that-can-lower-1320.fcaed48e.webp 1320w",
+    "avifSrcSet": "/images/blog/renovations-lower-commercial-property/renovations-that-can-lower-480.2c32894e.avif 480w, /images/blog/renovations-lower-commercial-property/renovations-that-can-lower-880.3b61f360.avif 880w, /images/blog/renovations-lower-commercial-property/renovations-that-can-lower-1320.68296af7.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/renovations-lower-commercial-property/renovations-that-can-lower-1200x630.a450db9a.jpg",
+    "schemaImages": [
+      "/images/blog/renovations-lower-commercial-property/renovations-that-can-lower-1200x675.e89c5bb8.jpg",
+      "/images/blog/renovations-lower-commercial-property/renovations-that-can-lower-1200x900.ec222c2c.jpg",
+      "/images/blog/renovations-lower-commercial-property/renovations-that-can-lower-1200x1200.13708bca.jpg"
+    ],
+    "alt": "Red sprinkler piping and a grey electrical panel on a concrete wall in a commercial building",
+    "thumbnail": true
+  },
+  "card:rent-concessions-vs-renovations-winnipeg": {
+    "src": "/images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-880.54487351.webp",
+    "srcSet": "/images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-480.5b2497a0.webp 480w, /images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-880.54487351.webp 880w, /images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-1320.708827a3.webp 1320w",
+    "avifSrcSet": "/images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-480.5e7bd3ca.avif 480w, /images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-880.ed350825.avif 880w, /images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-1320.88f7b038.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-1200x630.7e46fcbc.jpg",
+    "schemaImages": [
+      "/images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-1200x675.cab3bef6.jpg",
+      "/images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-1200x900.104b7f17.jpg",
+      "/images/blog/rent-concessions-vs-renovations-winnipeg/rent-concessions-or-renovations-what-1200x1200.7ea1c949.jpg"
+    ],
+    "alt": "Renovated apartment living room ready for a new tenant, with keys on the counter",
+    "thumbnail": true
+  },
+  "card:restaurant-renovation-checklist-winnipeg": {
+    "src": "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-880.1dfdd6a5.webp",
+    "srcSet": "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-480.74b148e4.webp 480w, /images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-880.1dfdd6a5.webp 880w, /images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-1320.279a2964.webp 1320w",
+    "avifSrcSet": "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-480.93dd0af1.avif 480w, /images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-880.251cf775.avif 880w, /images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-1320.b8547bcb.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-1200x630.a37bc703.jpg",
+    "schemaImages": [
+      "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-1200x675.5d8797db.jpg",
+      "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-1200x900.2b4b9602.jpg",
+      "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-1200x1200.bcf78f4d.jpg"
+    ],
+    "alt": "Restaurant mid-renovation with new green booths and pendant lights, a ladder and tools nearby",
+    "thumbnail": true
+  },
   "card:restaurant-renovation-permits-winnipeg": {
     "src": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp",
     "srcSet": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-480.7231ee98.webp 480w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-880.9892209c.webp 880w, /images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1320.9713d7f1.webp 1320w",
@@ -649,6 +1354,54 @@ export const MEDIA = {
     ],
     "alt": "Title card: Secondary Suite Rules in Winnipeg: What the City Requires"
   },
+  "card:seller-impersonation-title-fraud-canada": {
+    "src": "/images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-880.0baf5e2b.webp",
+    "srcSet": "/images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-480.1afb6303.webp 480w, /images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-880.0baf5e2b.webp 880w, /images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-1320.b9b0604c.webp 1320w",
+    "avifSrcSet": "/images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-480.0f7ca25b.avif 480w, /images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-880.d17f8f9c.avif 880w, /images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-1320.6afc129f.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-1200x630.91a08ea8.jpg",
+    "schemaImages": [
+      "/images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-1200x675.c40f7a72.jpg",
+      "/images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-1200x900.273faab8.jpg",
+      "/images/blog/seller-impersonation-title-fraud-canada/seller-impersonation-and-title-fraud-1200x1200.aae6f1f3.jpg"
+    ],
+    "alt": "Magnifying glass over property title documents with house keys, illustrating checks against seller impersonation fraud",
+    "thumbnail": true
+  },
+  "card:small-commercial-renovation-ideas": {
+    "src": "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-880.d66e2bb5.webp",
+    "srcSet": "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-480.9a890ac5.webp 480w, /images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-880.d66e2bb5.webp 880w, /images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1320.840efabb.webp 1320w",
+    "avifSrcSet": "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-480.709e9828.avif 480w, /images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-880.e531e5fb.avif 880w, /images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1320.2a7bc8bd.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1200x630.29656878.jpg",
+    "schemaImages": [
+      "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1200x675.51d52baf.jpg",
+      "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1200x900.190b0bab.jpg",
+      "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1200x1200.d344f650.jpg"
+    ],
+    "alt": "Small office refreshed with a dark geometric feature wall, new lighting and plants",
+    "thumbnail": true
+  },
+  "card:smart-locks-rental-properties-door-first": {
+    "src": "/images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-880.b25923d6.webp",
+    "srcSet": "/images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-480.929d8dbb.webp 480w, /images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-880.b25923d6.webp 880w, /images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-1320.a5f33244.webp 1320w",
+    "avifSrcSet": "/images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-480.f06fa310.avif 480w, /images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-880.db5d1d52.avif 880w, /images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-1320.60ba0fff.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-1200x630.4dd5a24e.jpg",
+    "schemaImages": [
+      "/images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-1200x675.15c50d0b.jpg",
+      "/images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-1200x900.35fd2e69.jpg",
+      "/images/blog/smart-locks-rental-properties-door-first/smart-locks-for-rental-properties-1200x1200.6cdf2280.jpg"
+    ],
+    "alt": "Black smart lock with keypad on a solid grey apartment door",
+    "thumbnail": true
+  },
   "card:spring-flood-prep-winnipeg-basements": {
     "src": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp",
     "srcSet": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-480.78d24270.webp 480w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-880.75d2d894.webp 880w, /images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1320.cbfdceb0.webp 1320w",
@@ -663,6 +1416,70 @@ export const MEDIA = {
       "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x1200.818626f7.jpg"
     ],
     "alt": "Title card: Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist"
+  },
+  "card:tenant-improvement-allowance-winnipeg": {
+    "src": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-880.ffbce5ca.webp",
+    "srcSet": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-480.9a2f42de.webp 480w, /images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-880.ffbce5ca.webp 880w, /images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-1320.2306d93f.webp 1320w",
+    "avifSrcSet": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-480.865be3ce.avif 480w, /images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-880.2bc2458f.avif 880w, /images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-1320.5550e9c6.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-1200x630.7f726a79.jpg",
+    "schemaImages": [
+      "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-1200x675.fc594ef9.jpg",
+      "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-1200x900.2c4e9537.jpg",
+      "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-1200x1200.a9f61d72.jpg"
+    ],
+    "alt": "Empty office suite with an exposed ceiling and new drywall, part way through a fit-out",
+    "thumbnail": true
+  },
+  "card:tenant-retention-upgrades-lease-renewal": {
+    "src": "/images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-880.62d463f9.webp",
+    "srcSet": "/images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-480.1c2a5cc6.webp 480w, /images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-880.62d463f9.webp 880w, /images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-1320.278997bc.webp 1320w",
+    "avifSrcSet": "/images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-480.fb3a586a.avif 480w, /images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-880.a38bcd11.avif 880w, /images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-1320.a101fe0b.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-1200x630.58699e1f.jpg",
+    "schemaImages": [
+      "/images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-1200x675.2d8769dc.jpg",
+      "/images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-1200x900.b1b895ad.jpg",
+      "/images/blog/tenant-retention-upgrades-lease-renewal/tenant-retention-upgrades-that-pay-1200x1200.8f36a248.jpg"
+    ],
+    "alt": "Bright kitchen with light wood cabinets, stainless appliances and wood-look flooring",
+    "thumbnail": true
+  },
+  "card:trusted-trades-list-real-estate-agents": {
+    "src": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-880.4e9b342c.webp",
+    "srcSet": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-480.2b9dda80.webp 480w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-880.4e9b342c.webp 880w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1320.42030d4f.webp 1320w",
+    "avifSrcSet": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-480.cba4ba4e.avif 480w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-880.1ee31b40.avif 880w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1320.f5065ee0.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x630.731454fd.jpg",
+    "schemaImages": [
+      "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x675.5989d764.jpg",
+      "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x900.e24c8264.jpg",
+      "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x1200.f240294f.jpg"
+    ],
+    "alt": "Four tradespeople with tool belts and toolboxes standing in front of a house, seen from behind",
+    "thumbnail": true
+  },
+  "card:vacant-storefront-renovation-winnipeg": {
+    "src": "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-880.3c42ca99.webp",
+    "srcSet": "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-480.aa7f2a03.webp 480w, /images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-880.3c42ca99.webp 880w, /images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-1320.ae1bd04f.webp 1320w",
+    "avifSrcSet": "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-480.7782f88a.avif 480w, /images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-880.0c2d22a4.avif 880w, /images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-1320.bbf3c93a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-1200x630.306a1194.jpg",
+    "schemaImages": [
+      "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-1200x675.bc1c11db.jpg",
+      "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-1200x900.046a9bc9.jpg",
+      "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-1200x1200.7373556d.jpg"
+    ],
+    "alt": "Vacant storefront mid-renovation with new glass frontage and fresh drywall inside",
+    "thumbnail": true
   },
   "card:what-does-a-general-contractor-do": {
     "src": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
@@ -709,6 +1526,102 @@ export const MEDIA = {
     ],
     "alt": "Title card: Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg"
   },
+  "card:winnipeg-construction-costs-2026": {
+    "src": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-880.8398ad81.webp",
+    "srcSet": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-480.0ebb315d.webp 480w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-880.8398ad81.webp 880w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1320.686a91ea.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-480.6f00593e.avif 480w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-880.5376c44a.avif 880w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1320.57bf80fb.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x630.6a4f02f8.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x675.a460f329.jpg",
+      "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x900.bd4671db.jpg",
+      "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x1200.41711088.jpg"
+    ],
+    "alt": "Stacks of steel I-beams and lumber at a construction supply yard",
+    "thumbnail": true
+  },
+  "card:winnipeg-housing-market-september-2026": {
+    "src": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-880.da43aae0.webp",
+    "srcSet": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-480.d3628825.webp 480w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-880.da43aae0.webp 880w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1320.aab4d802.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-480.466deb34.avif 480w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-880.c9f25b45.avif 880w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1320.71785636.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x630.0770c6b0.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x675.cedccf0f.jpg",
+      "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x900.81cd02e5.jpg",
+      "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x1200.e0874d86.jpg"
+    ],
+    "alt": "Aerial view of a tree-lined neighbourhood of houses in early autumn, with a downtown skyline behind",
+    "thumbnail": true
+  },
+  "card:winnipeg-housing-starts-older-rental-buildings": {
+    "src": "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-880.1f4b7f9f.webp",
+    "srcSet": "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-480.edb24da5.webp 480w, /images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-880.1f4b7f9f.webp 880w, /images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-1320.66c77117.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-480.550482cd.avif 480w, /images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-880.1953a300.avif 880w, /images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-1320.c14dd1f3.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-1200x630.b31ab7ed.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-1200x675.f264e576.jpg",
+      "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-1200x900.0fc81568.jpg",
+      "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-1200x1200.aac0b783.jpg"
+    ],
+    "alt": "Construction crane over a new apartment tower beside an older brick apartment building",
+    "thumbnail": true
+  },
+  "card:winnipeg-industrial-vacancy-older-buildings": {
+    "src": "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-880.d131bae9.webp",
+    "srcSet": "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-480.f8d6f50d.webp 480w, /images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-880.d131bae9.webp 880w, /images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1320.80065012.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-480.9633239d.avif 480w, /images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-880.1e340004.avif 880w, /images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1320.13b4be95.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1200x630.9539dc59.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1200x675.cf9d6f55.jpg",
+      "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1200x900.fce7be74.jpg",
+      "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1200x1200.3dab360e.jpg"
+    ],
+    "alt": "Older industrial warehouse with new LED high-bay lighting, fresh white walls and loading dock doors",
+    "thumbnail": true
+  },
+  "card:winnipeg-landlords-longer-tenancies": {
+    "src": "/images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-880.c181ff00.webp",
+    "srcSet": "/images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-480.83e054d4.webp 480w, /images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-880.c181ff00.webp 880w, /images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-1320.1280a911.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-480.43bc052f.avif 480w, /images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-880.2b8e6163.avif 880w, /images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-1320.55b68bc4.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-1200x630.55094b7d.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-1200x675.01252492.jpg",
+      "/images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-1200x900.6c03c5d0.jpg",
+      "/images/blog/winnipeg-landlords-longer-tenancies/slower-sales-longer-holds-why-1200x1200.230a7cd5.jpg"
+    ],
+    "alt": "Lived-in apartment living room with a navy sofa, plants and bookshelves",
+    "thumbnail": true
+  },
+  "card:winnipeg-office-vacancy-class-b": {
+    "src": "/images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-880.222e1937.webp",
+    "srcSet": "/images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-480.918aac21.webp 480w, /images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-880.222e1937.webp 880w, /images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-1320.90a96309.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-480.93c8f91b.avif 480w, /images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-880.f9bf215a.avif 880w, /images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-1320.7b022568.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-1200x630.073fb46a.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-1200x675.748b456c.jpg",
+      "/images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-1200x900.dc7e192f.jpg",
+      "/images/blog/winnipeg-office-vacancy-class-b/winnipeg-office-vacancy-the-ig-move-1200x1200.28d00e65.jpg"
+    ],
+    "alt": "Empty older office floor with dated grey cubicles and large windows",
+    "thumbnail": true
+  },
   "card:winnipeg-renovation-permits": {
     "src": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp",
     "srcSet": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-480.0f487983.webp 480w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-880.55b461dd.webp 880w, /images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1320.5c78c717.webp 1320w",
@@ -738,6 +1651,54 @@ export const MEDIA = {
       "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x1200.f510177c.jpg"
     ],
     "alt": "Title card: Winnipeg Renovation Show: Questions to Ask Contractors"
+  },
+  "card:winnipeg-rent-prices-falling-2026": {
+    "src": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-880.927c0815.webp",
+    "srcSet": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-480.cf54eca8.webp 480w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-880.927c0815.webp 880w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1320.5912f5cc.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-480.4062248d.avif 480w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-880.81648252.avif 880w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1320.6915a351.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x630.1df60b5c.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x675.4fa9cfa6.jpg",
+      "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x900.9822fbdf.jpg",
+      "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x1200.ff5bd4c3.jpg"
+    ],
+    "alt": "Brick apartment building in autumn with a blank for-rent sign on the lawn",
+    "thumbnail": true
+  },
+  "card:winnipeg-retail-market-2026": {
+    "src": "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-880.8ed6de79.webp",
+    "srcSet": "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-480.c127e69b.webp 480w, /images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-880.8ed6de79.webp 880w, /images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1320.49583a7c.webp 1320w",
+    "avifSrcSet": "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-480.862e3bf3.avif 480w, /images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-880.bce588d8.avif 880w, /images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1320.23a69445.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1200x630.f6a58859.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1200x675.6455c499.jpg",
+      "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1200x900.f6f5ff9c.jpg",
+      "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1200x1200.067d3a83.jpg"
+    ],
+    "alt": "Renovated retail strip with modern storefronts, planters and a Canadian flag on a sunny day",
+    "thumbnail": true
+  },
+  "card:winter-unit-turnover-checklist-winnipeg": {
+    "src": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-880.31f92b81.webp",
+    "srcSet": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-480.e5763651.webp 480w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-880.31f92b81.webp 880w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1320.d0942f83.webp 1320w",
+    "avifSrcSet": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-480.6ace35ea.avif 480w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-880.6c6e1c9b.avif 880w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1320.6a482139.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x630.2755e97d.jpg",
+    "schemaImages": [
+      "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x675.38c6564d.jpg",
+      "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x900.e0775ec6.jpg",
+      "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x1200.6c767f6f.jpg"
+    ],
+    "alt": "Empty apartment during a winter unit turnover, with fresh paint, snow outside the window and cleaning supplies on the floor",
+    "thumbnail": true
   }
 };
 

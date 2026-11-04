@@ -14,7 +14,7 @@ export default {
     "Hiring a Contractor"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-15",
+  "updated": "2026-11-05",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-880.e059f48d.webp",
@@ -94,7 +94,11 @@ export default {
     },
     {
       "t": "p",
-      "x": "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors, apart from electrical or plumbing work a homeowner does personally in the single detached house they live in, so a general contractor either holds those licences or brings in licensed trades."
+      "x": "In Winnipeg, electrical, plumbing and mechanical work, and demolishing a building or part of one, is done by City-licensed contractors, apart from electrical or plumbing work a homeowner does personally in the single detached house they live in, so a general contractor either holds those licences or brings in licensed trades."
+    },
+    {
+      "t": "p",
+      "x": "Removing only interior components, such as walls and partitions, isn't a demolition under the City's rules, and a home's deck, shed or detached garage doesn't need a demolition licence."
     },
     {
       "t": "p",
@@ -299,6 +303,11 @@ export default {
       "accessed": "2026-10-13"
     },
     {
+      "label": "City of Winnipeg: Demolition contractor information",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information",
+      "accessed": "2026-11-05"
+    },
+    {
       "label": "City of Winnipeg: Electrical installations",
       "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations",
       "accessed": "2026-10-13"
@@ -372,31 +381,32 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
-      "title": "Full vs Partial Renovation: How to Choose for Your Winnipeg Home",
-      "excerpt": "A full renovation fixes everything at once; partial upgrades spread the work and the cost over time. The right choice depends on the condition of your house, your plans and how much disruption you can live with. Here is a practical way to decide.",
-      "category": "Permits & Planning",
-      "date": "2026-09-01",
-      "readMinutes": 7,
+      "slug": "how-to-vet-commercial-renovation-contractors-winnipeg",
+      "title": "How to Find and Vet Commercial Renovation Contractors in Winnipeg",
+      "excerpt": "How to find, shortlist and vet commercial renovation contractors in Winnipeg: where to look, documents to request, smart questions and red flags.",
+      "category": "Hiring a Contractor",
+      "date": "2026-11-05",
+      "readMinutes": 3,
       "image": {
-        "base": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose",
+        "base": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "73b0c74a",
-          "25c16ad6",
-          "a3d281b8"
+          "f7088b6c",
+          "abfd0e4b",
+          "d0e6be5e"
         ],
         "avif": [
-          "66feb4f2",
-          "62be2807",
-          "1e9a351d"
+          "32515d10",
+          "9f12c4df",
+          "01529b80"
         ],
         "main": 1
-      }
+      },
+      "thumbnail": true
     }
   ]
 };

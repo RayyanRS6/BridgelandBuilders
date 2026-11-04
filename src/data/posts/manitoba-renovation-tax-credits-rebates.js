@@ -14,7 +14,7 @@ export default {
     "Money & Rebates"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-15",
+  "updated": "2026-11-05",
   "readMinutes": 12,
   "hero": null,
   "heroSrc": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-880.c91918d2.webp",
@@ -52,7 +52,11 @@ export default {
     },
     {
       "t": "p",
-      "x": "As of October 13, 2026 (October 15 for the two programs marked in the table), the programs below are listed as available on their official pages. Each has its own eligibility rules, and the Efficiency Manitoba rebates and the Manitoba Hydro loan need approval before you buy materials or start work."
+      "x": "As of October 13, 2026 (October 15 for the two programs marked in the table), the programs below are listed as available on their official pages. Each has its own eligibility rules and its own order of steps."
+    },
+    {
+      "t": "p",
+      "x": "The Efficiency Manitoba insulation rebate and the Manitoba Hydro loan need approval before you buy materials or start work. The Home Energy Retrofits offer needs an application before work starts. The windows and doors rebate runs the other way: you install first, then apply within 90 days."
     },
     {
       "t": "p",
@@ -96,7 +100,7 @@ export default {
           "[Efficiency Manitoba Windows and Doors Rebate](https://efficiencymb.ca/my-home/windows-and-doors/)",
           "Homeowners and landlords",
           "$100 per ENERGY STAR certified triple-pane window or door ($300 for income-qualified households)",
-          "Listed"
+          "Listed; install first, then apply within 90 days"
         ],
         [
           "[Efficiency Manitoba EnerGuide evaluation rebate](https://efficiencymb.ca/my-home/energuide-home-evaluation-rebate/)",
@@ -233,7 +237,11 @@ export default {
     },
     {
       "t": "p",
-      "x": "Insulation, windows and doors, and deep energy retrofits are the rebates most likely to line up with a renovation. The catch is timing: Efficiency Manitoba wants approval before you buy materials or start work, including removing drywall, stucco or old insulation. Plan the rebate into the schedule at the quote stage, not after demolition."
+      "x": "Insulation, windows and doors, and deep energy retrofits are the rebates most likely to line up with a renovation. The catch is timing, and it differs by rebate, so plan it into the schedule at the quote stage, not after demolition."
+    },
+    {
+      "t": "p",
+      "x": "The insulation rebate needs approval before you buy materials or start work, including removing drywall, stucco or old insulation. Home Energy Retrofits needs an EnerGuide evaluation and an application before work starts. The windows and doors rebate runs the other way: you install first, then apply within 90 days of installation and full payment."
     },
     {
       "t": "p",
@@ -281,7 +289,7 @@ export default {
     },
     {
       "t": "li",
-      "x": "Apply and get approval before you buy materials or start work, for Efficiency Manitoba rebates and the Manitoba Hydro loan."
+      "x": "Check each program's order of steps. The insulation rebate and the Manitoba Hydro loan need approval before you buy materials or start work, Home Energy Retrofits needs an application first, and the windows and doors rebate is claimed within 90 days after installation."
     },
     {
       "t": "li",
@@ -316,7 +324,7 @@ export default {
     },
     {
       "q": "Can I still get the Canada Greener Homes Grant?",
-      "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Loan is closed because its funding is fully committed. Income-qualified households can look at Efficiency Manitoba's Energy Efficiency Assistance Program, which the federal Canada Greener Homes Affordability Program now helps fund. Others can use Efficiency Manitoba's rebates and Manitoba Hydro's loan, approved before work starts."
+      "a": "No. Natural Resources Canada lists the Canada Greener Homes Grant as closed, and the Loan is closed because its funding is fully committed. Income-qualified households can look at Efficiency Manitoba's Energy Efficiency Assistance Program, which the federal Canada Greener Homes Affordability Program now helps fund. Others can use Efficiency Manitoba's rebates and Manitoba Hydro's loan."
     },
     {
       "q": "Is there a grant for seniors' home modifications in Manitoba?",
@@ -370,12 +378,17 @@ export default {
     {
       "label": "Efficiency Manitoba: Home Insulation Rebate",
       "url": "https://efficiencymb.ca/my-home/home-insulation-rebate/",
-      "accessed": "2026-10-13"
+      "accessed": "2026-11-05"
     },
     {
       "label": "Efficiency Manitoba: Window and door upgrades",
       "url": "https://efficiencymb.ca/my-home/windows-and-doors/",
-      "accessed": "2026-10-13"
+      "accessed": "2026-11-05"
+    },
+    {
+      "label": "Efficiency Manitoba: Windows and Doors Rebate",
+      "url": "https://efficiencymb.ca/my-home/windows-and-doors-rebate/",
+      "accessed": "2026-11-05"
     },
     {
       "label": "Efficiency Manitoba: EnerGuide home evaluation rebate",
@@ -385,7 +398,7 @@ export default {
     {
       "label": "Efficiency Manitoba: Home Energy Retrofits",
       "url": "https://efficiencymb.ca/my-home/home-energy-retrofit-program/",
-      "accessed": "2026-10-13"
+      "accessed": "2026-11-05"
     },
     {
       "label": "Efficiency Manitoba: Energy Efficiency Assistance Program",

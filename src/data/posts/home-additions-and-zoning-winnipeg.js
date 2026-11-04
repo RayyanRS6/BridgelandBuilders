@@ -349,32 +349,32 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "basement-development-permits-winnipeg",
-      "title": "Basement Development Permits in Winnipeg: How to Apply",
-      "excerpt": "What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.",
+      "slug": "convert-house-to-duplex-winnipeg",
+      "title": "Convert a House to a Duplex in Winnipeg: Rules and Options",
+      "excerpt": "Many Winnipeg lots can now hold up to four units. Compare duplex and triplex conversions and basement suites, and the permits each one needs.",
       "category": "Permits & Planning",
-      "date": "2026-10-13",
-      "readMinutes": 9,
+      "date": "2026-11-05",
+      "readMinutes": 3,
       "image": {
-        "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
+        "base": "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "86f7cdfe",
-          "d1925dff",
-          "eb1b2d54"
+          "0668316c",
+          "9d20eb42",
+          "829c5c18"
         ],
         "avif": [
-          "3e79a34c",
-          "4c88fdfd",
-          "d2a97ce0"
+          "0b3338f7",
+          "3fa983a1",
+          "84f90dc3"
         ],
         "main": 1
       },
-      "titleCard": true
+      "thumbnail": true
     }
   ]
 };
