@@ -6,7 +6,7 @@
   "metaDescription": "What a general contractor does on a renovation, from pricing and permits to trades, schedule and handover, plus how GCs charge and when you need one.",
   "excerpt": "A plain-language guide for homeowners and business owners: what a general contractor is responsible for, how general contractors price work, and when hiring one makes sense.",
   "date": "2026-10-13",
-  "updated": "2026-10-15",
+  "updated": "2026-11-05",
   "cats": [
     "Hiring a Contractor"
   ],
@@ -25,6 +25,7 @@
   "sources": [
     { "label": "City of Winnipeg: Home improvement projects (permits)", "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects", "accessed": "2026-10-13" },
     { "label": "City of Winnipeg: List of licensed contractors", "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors", "accessed": "2026-10-13" },
+    { "label": "City of Winnipeg: Demolition contractor information", "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information", "accessed": "2026-11-05" },
     { "label": "City of Winnipeg: Electrical installations", "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations", "accessed": "2026-10-13" },
     { "label": "City of Winnipeg: Plumbing installations", "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations", "accessed": "2026-10-13" },
     { "label": "WCB Manitoba: Register a business for WCB coverage (mandatory industries)", "url": "https://www.wcb.mb.ca/employers/register-a-business-for-wcb-coverage/", "accessed": "2026-10-13" }
@@ -88,7 +89,11 @@
     },
     {
       "t": "p",
-      "x": "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors, apart from electrical or plumbing work a homeowner does personally in the single detached house they live in, so a general contractor either holds those licences or brings in licensed trades."
+      "x": "In Winnipeg, electrical, plumbing and mechanical work, and demolishing a building or part of one, is done by City-licensed contractors, apart from electrical or plumbing work a homeowner does personally in the single detached house they live in, so a general contractor either holds those licences or brings in licensed trades."
+    },
+    {
+      "t": "p",
+      "x": "Removing only interior components, such as walls and partitions, isn't a demolition under the City's rules, and a home's deck, shed or detached garage doesn't need a demolition licence."
     },
     {
       "t": "p",
