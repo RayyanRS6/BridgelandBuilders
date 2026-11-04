@@ -56,6 +56,16 @@
  *   ctaService?     a service path (src/data/services.js) for the post's
  *                   service CTA, used first whenever that page is live
  *                   (overrides the services[] rule above)
+ *   ctaPrimary?     'visit' = the post's red button and bottom banner offer a
+ *                   free on-site visit (/book-online) instead of the instant
+ *                   quote, whose estimator only prices kitchens, bathrooms
+ *                   and basements. Absent = the instant quote.
+ *   listOrder?      among posts with the same date, lower numbers are listed
+ *                   first (then by slug); posts without one come after. Build
+ *                   only, not part of any client module.
+ *   thumbAlt?       alt text of the client thumbnail (media-src/thumbnails/
+ *                   <slug>.png, scripts/build-images.mjs) when it is the
+ *                   post's card, in place of "Title card: <title>"
  *   cluster         topic id shared by posts on one subject ('' = none)
  *   reviewBy?       YYYY-MM-DD: the post carries facts tied to a date (an
  *                   event, a season, a program year, a monthly figure);
@@ -251,6 +261,7 @@ function heroImages(p) {
       ...(card.avifSrcSet ? { heroAvifSrcSet: card.avifSrcSet } : {}),
       ogImage: card.og,
       ...schemaImagesOf(card, p.slug),
+      ...(card.thumbnail ? { thumbnail: true } : {}),
     };
   }
   const media = mediaFor(p.hero);
@@ -391,6 +402,13 @@ function metaTitleFor(p) {
   return branded.length <= 60 ? branded : p.title;
 }
 
+/** Alt text (og:image:alt) of a post without a hero: the client thumbnail's own, else the title card's. */
+function cardAlt(p) {
+  const card = MEDIA && MEDIA[`card:${p.slug}`];
+  if (!card) return p.title;
+  return (card.thumbnail && p.thumbAlt) || `Title card: ${p.title}`;
+}
+
 /* -------------------------------------------------------------- build */
 const published = raw.filter((p) => statusOf(p) === 'published');
 
@@ -431,6 +449,8 @@ for (const p of published) {
   if (p.reviewBy !== undefined && !(/^\d{4}-\d{2}-\d{2}$/.test(p.reviewBy || '') && !Number.isNaN(Date.parse(p.reviewBy)))) {
     fail(`${p.slug}: reviewBy must be a YYYY-MM-DD date`);
   }
+  if (p.ctaPrimary !== undefined && p.ctaPrimary !== 'visit') fail(`${p.slug}: ctaPrimary must be "visit" (or left out)`);
+  if (p.listOrder !== undefined && !Number.isFinite(p.listOrder)) fail(`${p.slug}: listOrder must be a number`);
 }
 
 const bodies = new Map();
@@ -462,11 +482,12 @@ let posts = published.map((p) => {
     readMinutes: Math.max(3, Math.round(postTexts(p).reduce((n, text) => n + countWords(text), 0) / 200)),
     hero: p.hero,
     ...heroImages(p),
-    heroAlt: p.hero ? p.heroAlt || p.title : MEDIA && MEDIA[`card:${p.slug}`] ? `Title card: ${p.title}` : p.title,
+    heroAlt: p.hero ? p.heroAlt || p.title : cardAlt(p),
     author: p.author || '',
     reviewedBy: p.reviewedBy || '',
     services: p.services || [],
     ...(p.ctaService ? { ctaService: p.ctaService } : {}),
+    ...(p.ctaPrimary ? { ctaPrimary: p.ctaPrimary } : {}),
     cluster: p.cluster || '',
     memberOnly: !!p.memberOnly,
   };
@@ -474,7 +495,11 @@ let posts = published.map((p) => {
 // Build-only (blogPosts.js, for audit-seo): not part of any client module.
 const reviewByOf = new Map(published.filter((p) => p.reviewBy).map((p) => [p.slug, p.reviewBy]));
 
-posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.slug.localeCompare(b.slug)));
+// Build-only too: the order is written into every list, so no page needs the number.
+const listOrderOf = new Map(published.filter((p) => p.listOrder !== undefined).map((p) => [p.slug, p.listOrder]));
+const listOrder = (post) => listOrderOf.get(post.slug) ?? Number.MAX_SAFE_INTEGER;
+
+posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : listOrder(a) - listOrder(b) || a.slug.localeCompare(b.slug)));
 
 /**
  * Plan §7 category set for /blog. A post opts in by carrying one of these in
@@ -490,6 +515,8 @@ const CATEGORY_SET = [
   'Hiring a Contractor',
   'Commercial',
   'Money & Rebates',
+  'Landlords & Property Managers',
+  'Winnipeg Market News',
 ];
 for (const p of published) {
   for (const cat of p.cats || []) {
@@ -521,6 +548,9 @@ for (const r of redirects) {
 }
 
 /* ------------------------------------------------------ link checks */
+// An absolute link to this site would skip every check below and could ship a
+// link to a 404, opening in a new tab with a full page load.
+const OWN_DOMAIN_LINK = /^https?:\/\/(?:www\.)?bridgelandbuilders\.com(?:[/?#]|$)/i;
 const cleanPath = (path) => (path.length > 1 ? path.replace(/\/+$/, '') : path);
 const redirectSources = new Set([
   ...redirects.map((r) => r.from),
@@ -547,7 +577,8 @@ for (const p of published) {
   for (const text of postTexts(p)) {
     for (const [, , href] of String(text).matchAll(INLINE_LINK)) {
       if (!href.startsWith('/')) {
-        if (!/^(https:\/\/|mailto:|tel:)/.test(href)) fail(`${p.slug}: link "${href}" must be a /path, https://, mailto: or tel: URL`);
+        if (OWN_DOMAIN_LINK.test(href)) fail(`${p.slug}: link ${href} is an absolute link to this site: use the /path`);
+        else if (!/^(https:\/\/|mailto:|tel:)/.test(href)) fail(`${p.slug}: link "${href}" must be a /path, https://, mailto: or tel: URL`);
         continue;
       }
       if (href.includes('?')) {
@@ -697,11 +728,13 @@ function cardHero(post) {
 }
 
 // A compact card drops the original `hero` URL, so `titleCard: true` says the
-// image is the post's branded title card (no hero photo). Cards with strings
-// keep `hero`, and BlogCard tells the two apart as it always has.
+// image is the post's branded title card (no hero photo), and `thumbnail: true`
+// that it is the client's thumbnail in that place. Cards with strings keep
+// `hero`, and BlogCard tells the two apart as it always has.
 function cardOf(post) {
   const hero = cardHero(post);
-  return { ...pick(post, CARD_TEXT_FIELDS), ...hero, ...(hero.image && !post.hero ? { titleCard: true } : {}) };
+  const kind = post.thumbnail ? { thumbnail: true } : { titleCard: true };
+  return { ...pick(post, CARD_TEXT_FIELDS), ...hero, ...(hero.image && !post.hero ? kind : {}) };
 }
 
 const indexOut = `${HEADER}
