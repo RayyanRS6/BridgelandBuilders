@@ -1221,6 +1221,17 @@
   transform-origin: center bottom;
 }
 
+/* A client thumbnail (scripts/build-images.mjs) is a 16:9 picture with its title
+   in the left panel, so the normal card box shows it edge to edge. The taller
+   featured box shows it whole too, on the colour of that panel. */
+.blog-card.is-featured .blog-card-media.is-thumbnail {
+  background: #ebe7c8;
+}
+
+.blog-card.is-featured .blog-card-media.is-thumbnail img {
+  object-fit: contain;
+}
+
 .blog-card.is-featured .blog-card-body {
   justify-content: center;
   padding: 44px 44px 40px;
