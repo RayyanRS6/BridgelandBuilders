@@ -15,7 +15,7 @@
 #      entries on key pages. Playwright is installed for this job only; it is
 #      not a project dependency.
 #   4. Lighthouse CI (lighthouserc.json, separate job): mobile lab metrics on
-#      5 URLs against the plan §4 budgets. Warnings only, and the job can
+#      6 URLs against the plan §4 budgets. Warnings only, and the job can
 #      never fail the workflow; the reports are kept as a run artifact.
 # Vercel's GitHub integration reports deployments to GitHub, which triggers
 # deployment_status. No secrets are needed: the IndexNow key is the public
