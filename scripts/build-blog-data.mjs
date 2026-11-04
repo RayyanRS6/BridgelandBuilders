@@ -14,16 +14,21 @@
  *                             reviewedBy } and `related` (three ranked cards).
  *   src/data/postCards/<slug>.js  CLIENT. One post's card, for the guides on
  *                             service pages (content.guides).
- *   src/data/blogList.js      CLIENT. Everything /blog renders in one module:
- *                             BLOG_CATEGORIES and BLOG_LIST (cards plus
- *                             categories). Cards carry a self-hosted hero as
- *                             a compact record (src/lib/cardImage.js), not
- *                             as srcset strings.
+ *   src/data/blogList.js      CLIENT. What /blog renders first, in one module:
+ *                             BLOG_CATEGORIES, BLOG_PAGE_SIZE, BLOG_LIST (the
+ *                             newest cards plus categories) and BLOG_TITLES
+ *                             (every other post as a title link). Cards carry
+ *                             a self-hosted hero as a compact record
+ *                             (src/lib/cardImage.js), not as srcset strings.
+ *   src/data/blogListRest.js  CLIENT, lazy. BLOG_REST: the cards BLOG_LIST
+ *                             leaves out. BlogPage loads it for "Show more"
+ *                             and the category filter, never on first load.
  *   src/data/blogListSeo.js   CLIENT, lazy. BLOG_NODE_POSTS: what the /blog
  *                             Blog node lists per post (title, metaDescription,
- *                             date, ogImage). BlogPage loads it only when the
- *                             head has to be written (a client-side
- *                             navigation), never on the prerendered page.
+ *                             date, ogImage) for the newest posts it lists.
+ *                             BlogPage loads it only when the head has to be
+ *                             written (a client-side navigation), never on the
+ *                             prerendered page.
  *   src/data/homeGuides.js    CLIENT. The three guide cards on the home page
  *                             (GUIDE_SLUGS below).
  *   src/data/blogIndex.js     CLIENT. BLOG_CARDS: every published post's card
@@ -113,6 +118,7 @@ const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const POSTS_DIR = join(ROOT, 'blog-raw', 'posts');
 const OUT_INDEX = join(ROOT, 'src', 'data', 'blogIndex.js');
 const OUT_LIST = join(ROOT, 'src', 'data', 'blogList.js');
+const OUT_LIST_REST = join(ROOT, 'src', 'data', 'blogListRest.js');
 const OUT_LIST_SEO = join(ROOT, 'src', 'data', 'blogListSeo.js');
 const OUT_HOME = join(ROOT, 'src', 'data', 'homeGuides.js');
 const OUT_FULL = join(ROOT, 'src', 'data', 'blogPosts.js');
@@ -127,6 +133,10 @@ const GUIDE_SLUGS = [
   'basement-development-permits-winnipeg',
 ];
 const GUIDE_COUNT = 3;
+
+// /blog shows this many full cards first and reveals this many more at a time.
+// Its first load then stays small however many posts there are.
+const LIST_PAGE_SIZE = 12;
 
 // Calculators a post body can embed ({"t": "calculator", "id": …}): the ids
 // src/components/Calculator.jsx knows. An unknown id would render nothing.
@@ -749,24 +759,44 @@ const indexOut = `${HEADER}
 export const BLOG_CARDS = ${json(posts.map((post) => ({ ...cardOf(post), ...pick(post, ['categories', 'services', 'cluster']) })))};
 ${helpers('BLOG_CARDS')}`;
 
+const listCard = (post) => ({ ...cardOf(post), ...pick(post, ['categories']) });
+
 const listOut = `${HEADER}
 //
-// Everything /blog (src/pages/BlogPage.jsx) renders, in one module: the filter
-// categories and every published post's card and categories. What only its
-// Blog node needs (meta descriptions, 1200x630 images) is in blogListSeo.js,
-// loaded only when the head has to be written.
+// What /blog (src/pages/BlogPage.jsx) renders first, in one module: the filter
+// categories, the newest posts' cards and every other post as a title link.
+// The other posts' cards are in blogListRest.js, loaded when a visitor asks for
+// more or picks a category. What only its Blog node needs (meta descriptions,
+// 1200x630 images) is in blogListSeo.js, loaded only when the head has to be
+// written.
 
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = ${json(categories)};
 
-/** Published posts only (blog-raw status "published"), newest first. */
-export const BLOG_LIST = ${json(posts.map((post) => ({ ...cardOf(post), ...pick(post, ['categories']) })))};
+/** How many cards /blog shows first, and how many more each "Show more" reveals. */
+export const BLOG_PAGE_SIZE = ${LIST_PAGE_SIZE};
+
+/** The newest published posts (blog-raw status "published"), newest first, as cards. */
+export const BLOG_LIST = ${json(posts.slice(0, LIST_PAGE_SIZE).map(listCard))};
+
+/** Every other published post, newest first, as a title link. */
+export const BLOG_TITLES = ${json(posts.slice(LIST_PAGE_SIZE).map((post) => pick(post, ['slug', 'title'])))};
+`;
+
+const listRestOut = `${HEADER}
+//
+// The cards blogList.js leaves out. BlogPage.jsx imports this lazily, when a
+// visitor asks for more cards or picks a category.
+
+/** The published posts after BLOG_LIST, newest first, as cards. */
+export const BLOG_REST = ${json(posts.slice(LIST_PAGE_SIZE).map(listCard))};
 `;
 
 // The /blog Blog node (seo.js buildBlogNode) per post: the same fields, in the
 // same order, as head.js builds it from blogPosts.js for the prerender. The
 // original hero is only its fallback image, so it is left out when there is
-// an ogImage.
+// an ogImage. Only the posts the node lists, so this chunk stops growing too.
+const BLOG_NODE_POST_LIMIT = (seoModule && seoModule.BLOG_NODE_POST_LIMIT) || 20;
 const blogNodePost = (post) => ({
   ...pick(post, ['slug', 'title', 'metaDescription', 'date', 'ogImage']),
   ...(post.ogImage ? {} : pick(post, ['hero'])),
@@ -778,8 +808,8 @@ const listSeoOut = `${HEADER}
 // the head has to be written (a client-side navigation to /blog): the
 // prerendered page already has the same head (src/data/head.js).
 
-/** Published posts only (blog-raw status "published"), newest first. */
-export const BLOG_NODE_POSTS = ${json(posts.map(blogNodePost))};
+/** The newest published posts (blog-raw status "published"), newest first. */
+export const BLOG_NODE_POSTS = ${json(posts.slice(0, BLOG_NODE_POST_LIMIT).map(blogNodePost))};
 `;
 
 for (const slug of GUIDE_SLUGS) {
@@ -840,6 +870,7 @@ for (const post of posts) {
 }
 writeFileSync(OUT_INDEX, indexOut);
 writeFileSync(OUT_LIST, listOut);
+writeFileSync(OUT_LIST_REST, listRestOut);
 writeFileSync(OUT_LIST_SEO, listSeoOut);
 writeFileSync(OUT_HOME, homeOut);
 writeFileSync(OUT_FULL, fullOut);

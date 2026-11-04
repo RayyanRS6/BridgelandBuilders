@@ -556,9 +556,14 @@ export function buildFaqPage(path, faqs) {
   };
 }
 
+// The Blog node names only the newest posts: it is not a sitemap, and listing
+// all of them would add about 700 bytes per post to the /blog head.
+export const BLOG_NODE_POST_LIMIT = 20;
+
 /**
- * The Blog node for /blog, listing every published post. Shared by the
- * prerender (head.js) and the blog page so both emit identical JSON-LD.
+ * The Blog node for /blog, listing the newest published posts (`posts` is
+ * newest first). Shared by the prerender (head.js) and the blog page so both
+ * emit identical JSON-LD.
  */
 export function buildBlogNode({ posts, description }) {
   return {
@@ -569,7 +574,7 @@ export function buildBlogNode({ posts, description }) {
     description,
     publisher: organizationRef,
     inLanguage: 'en-CA',
-    blogPost: (posts || []).map((post) => ({
+    blogPost: (posts || []).slice(0, BLOG_NODE_POST_LIMIT).map((post) => ({
       '@type': 'BlogPosting',
       '@id': `${SITE_URL}/blog/${post.slug}#article`,
       headline: post.title,

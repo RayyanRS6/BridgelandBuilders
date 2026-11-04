@@ -1252,6 +1252,61 @@
   color: var(--text-muted);
 }
 
+.blog-empty a {
+  color: var(--accent-red);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* "Show more" under the /blog cards: the ghost pill at a thumb-sized height, with
+   the focus ring index.css takes off buttons. */
+.blog-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.blog-more-button {
+  justify-content: center;
+  min-height: 48px;
+  min-width: 180px;
+}
+
+.blog-more-button:focus-visible {
+  outline: 2px solid var(--accent-seagreen);
+  outline-offset: 2px;
+}
+
+/* The posts not shown as cards yet: one row each, a tap target on a phone, and
+   as many columns as fit at about 340px. */
+.blog-title-links {
+  margin-top: 56px;
+}
+
+.blog-title-list {
+  margin-top: 14px;
+  list-style: none;
+  column-width: 340px;
+  column-gap: 40px;
+}
+
+.blog-title-list li {
+  break-inside: avoid;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.blog-title-list a {
+  display: block;
+  padding: 11px 0;
+  font-size: 0.97rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.blog-title-list a:hover {
+  color: var(--accent-red);
+}
+
 /* ---------- Article ---------- */
 .blog-post-hero .page-hero-card h1 {
   font-size: clamp(2rem, 4.4vw, 3.4rem);
