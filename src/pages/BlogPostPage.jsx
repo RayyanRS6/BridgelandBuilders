@@ -10,8 +10,7 @@ import { ArrowRightIcon, CalendarIcon, ClockIcon } from '../components/icons.jsx
 import { personById, personPath } from '../data/people.js';
 import { serviceByPath } from '../data/services.js';
 import { BBB_PROFILE_URL, INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
-import { buildPostHead } from '../data/postContent.js';
-import useSeo from '../hooks/useSeo.js';
+import { useLazySeo } from '../hooks/useSeo.js';
 import { keepServerHtml, lazyWithRetry, retryLoad } from '../lib/lazyRetry.js';
 
 // Only an unknown slug renders it, so it is not part of a post's first load.
@@ -123,12 +122,12 @@ export default function BlogPostPage() {
 
 /**
  * The whole post page. It also owns the <head> sync (the same buildPostHead
- * the prerender uses): on first load the prerendered head already matches,
- * so nothing changes.
+ * the prerender uses): on first load the prerendered head already matches, so
+ * nothing changes and buildPostHead, with the seo.js builders behind it, is
+ * never downloaded. After a client-side navigation it loads to write the head.
  */
 function PostPage({ post }) {
-  const head = useMemo(() => buildPostHead(post), [post]);
-  useSeo(head);
+  useLazySeo(`/blog/${post.slug}`, () => import('../data/postContent.js').then(({ buildPostHead }) => buildPostHead(post)));
 
   const faqs = useMemo(
     () => (post.faqs || []).map((item) => ({ q: item.q, a: renderInline(item.a, 'faq') })),

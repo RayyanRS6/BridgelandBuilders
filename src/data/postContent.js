@@ -1,7 +1,8 @@
 /**
- * Blog post schema, shared by the post page (runtime, BlogPostPage.jsx) and
- * the build-time SEO layer (head.js), so the static HTML and the client
- * render always emit the same JSON-LD.
+ * Blog post schema, shared by the post page (runtime, BlogPostPage.jsx, which
+ * imports it lazily, only when the head has to be written) and the build-time
+ * SEO layer (head.js), so the static HTML and the client render always emit
+ * the same JSON-LD.
  *
  * The prerender passes a full post from blogPosts.js (metadata + body); the
  * page passes its lazily loaded post module (src/data/posts/<slug>.js), which
