@@ -15,7 +15,7 @@
  *   src/data/postCards/<slug>.js  CLIENT. One post's card, for the guides on
  *                             service pages (content.guides).
  *   src/data/blogList.js      CLIENT. What /blog renders first, in one module:
- *                             BLOG_CATEGORIES, BLOG_PAGE_SIZE, BLOG_LIST (the
+ *                             BLOG_CATEGORIES, the card counts, BLOG_LIST (the
  *                             newest cards plus categories) and BLOG_TITLES
  *                             (every other post as a title link). Cards carry
  *                             a self-hosted hero as a compact record
@@ -134,8 +134,10 @@ const GUIDE_SLUGS = [
 ];
 const GUIDE_COUNT = 3;
 
-// /blog shows this many full cards first and reveals this many more at a time.
-// Its first load then stays small however many posts there are.
+// /blog shows the featured card and a grid of 12 first, so the grid's rows are
+// full at two and three columns, then reveals 12 more at a time. Its first load
+// stays small however many posts there are.
+const LIST_FIRST_CARDS = 13;
 const LIST_PAGE_SIZE = 12;
 
 // Calculators a post body can embed ({"t": "calculator", "id": …}): the ids
@@ -773,14 +775,17 @@ const listOut = `${HEADER}
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = ${json(categories)};
 
-/** How many cards /blog shows first, and how many more each "Show more" reveals. */
+/** How many cards /blog shows first. */
+export const BLOG_FIRST_CARDS = ${LIST_FIRST_CARDS};
+
+/** How many more cards each "Show more" reveals. */
 export const BLOG_PAGE_SIZE = ${LIST_PAGE_SIZE};
 
 /** The newest published posts (blog-raw status "published"), newest first, as cards. */
-export const BLOG_LIST = ${json(posts.slice(0, LIST_PAGE_SIZE).map(listCard))};
+export const BLOG_LIST = ${json(posts.slice(0, LIST_FIRST_CARDS).map(listCard))};
 
 /** Every other published post, newest first, as a title link. */
-export const BLOG_TITLES = ${json(posts.slice(LIST_PAGE_SIZE).map((post) => pick(post, ['slug', 'title'])))};
+export const BLOG_TITLES = ${json(posts.slice(LIST_FIRST_CARDS).map((post) => pick(post, ['slug', 'title'])))};
 `;
 
 const listRestOut = `${HEADER}
@@ -789,7 +794,7 @@ const listRestOut = `${HEADER}
 // visitor asks for more cards or picks a category.
 
 /** The published posts after BLOG_LIST, newest first, as cards. */
-export const BLOG_REST = ${json(posts.slice(LIST_PAGE_SIZE).map(listCard))};
+export const BLOG_REST = ${json(posts.slice(LIST_FIRST_CARDS).map(listCard))};
 `;
 
 // The /blog Blog node (seo.js buildBlogNode) per post: the same fields, in the

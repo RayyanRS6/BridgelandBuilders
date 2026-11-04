@@ -8,7 +8,7 @@ import BlogCard from '../components/BlogCard.jsx';
 // separate chunks (src/data/posts/), so /blog never downloads article text, and
 // the other cards are one lazy chunk (blogListRest.js). BLOG_CATEGORIES is the
 // plan's category set once posts carry it, else the categories posts carry today.
-import { BLOG_CATEGORIES, BLOG_LIST, BLOG_PAGE_SIZE, BLOG_TITLES } from '../data/blogList.js';
+import { BLOG_CATEGORIES, BLOG_FIRST_CARDS, BLOG_LIST, BLOG_PAGE_SIZE, BLOG_TITLES } from '../data/blogList.js';
 import { useLazyPageSeo } from '../hooks/useSeo.js';
 import { retryLoad } from '../lib/lazyRetry.js';
 
@@ -62,11 +62,11 @@ const prefetchRestCards = () => {
 
 // What the visitor last had open, for the browser's Back button. It starts as
 // the defaults, so a page load matches the prerendered HTML.
-const lastView = { category: ALL, shown: BLOG_PAGE_SIZE };
+const lastView = { category: ALL, shown: BLOG_FIRST_CARDS };
 
 /**
  * One URL for every post. The prerender and the first render show the newest
- * BLOG_PAGE_SIZE cards and every other post as a plain title link, so the HTML
+ * BLOG_FIRST_CARDS cards and every other post as a plain title link, so the HTML
  * still links each post for crawlers. "Show more" and the category filter load
  * the other cards. A post moves from the title links to the cards as it is
  * revealed, and a category narrows both.
@@ -74,7 +74,7 @@ const lastView = { category: ALL, shown: BLOG_PAGE_SIZE };
 export default function BlogPage() {
   const cameBack = useNavigationType() === 'POP';
   const [activeCategory, setActiveCategory] = useState(cameBack ? lastView.category : ALL);
-  const [shown, setShown] = useState(cameBack ? lastView.shown : BLOG_PAGE_SIZE);
+  const [shown, setShown] = useState(cameBack ? lastView.shown : BLOG_FIRST_CARDS);
   const [rest, setRest] = useState(restCards);
   const [failed, setFailed] = useState(false);
   const grid = useRef(null);
@@ -90,7 +90,7 @@ export default function BlogPage() {
 
   const cards = matching.slice(0, shown);
   const [featured, ...others] = cards;
-  const waiting = !rest && !failed && (inCategory || shown > BLOG_PAGE_SIZE);
+  const waiting = !rest && !failed && (inCategory || shown > BLOG_FIRST_CARDS);
 
   // Without the other cards, the posts in a category aren't known yet: no title
   // links while they load, and if they can't be loaded, all of them.
@@ -126,7 +126,7 @@ export default function BlogPage() {
   function chooseCategory(category) {
     pendingFocus.current = null;
     setActiveCategory(category);
-    setShown(BLOG_PAGE_SIZE);
+    setShown(BLOG_FIRST_CARDS);
     setFailed(false);
     if (category !== ALL && !rest) requestRestCards();
   }
