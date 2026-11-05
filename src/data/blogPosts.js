@@ -25954,7 +25954,7 @@ export const BLOG_POSTS = [
           [
             "Reviews",
             "Read recent reviews on more than one site, and look at how the contractor replies to complaints, not only the star rating.",
-            "Google, HomeStars, Better Business Bureau"
+            "Google, HomeStars"
           ],
           [
             "References with photos",
