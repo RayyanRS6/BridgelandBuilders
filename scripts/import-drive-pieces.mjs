@@ -1,8 +1,9 @@
 /**
  * Turns the client's edited Drive pieces into blog-raw/posts/<slug>.json, the
  * post format scripts/build-blog-data.mjs reads (its header lists the fields).
- * The inputs live outside this repo: one Markdown file per piece, <dir>/<id>.md,
- * with front matter. EDITOR-RULES.md beside them describes the format.
+ * The inputs are not committed, because this repo is public: one Markdown file per
+ * piece, <dir>/<id>.md, with front matter, in an untracked folder inside the repo
+ * folder such as Claude outputs/. EDITOR-RULES.md beside them describes the format.
  *
  *   node scripts/import-drive-pieces.mjs --from=<dir> --date=YYYY-MM-DD [options]
  *

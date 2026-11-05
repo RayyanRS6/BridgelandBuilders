@@ -74,11 +74,11 @@ const AT_A_GLANCE = [
     x: `**Google rating:** [${REVIEW_STATS.rating.toFixed(1)} out of 5 from ${REVIEWS}](${GBP.mapsUrl}), as of ${monthYear(REVIEW_STATS_AS_OF)}.`,
     hidden: !(REVIEW_STATS.count > 0 && GBP.mapsUrl && REVIEW_STATS_AS_OF),
   },
-  {
-    t: 'li',
-    x: `**Better Business Bureau:** [BBB Accredited Business](${BBB_PROFILE_URL}) since ${monthYear(BBB_ACCREDITED_SINCE)}.`,
-    hidden: !(BBB_PROFILE_URL && BBB_ACCREDITED_SINCE),
-  },
+  // Built only when both values are set, so these words stay out of this page's
+  // JavaScript while they are null (a hidden block still ships its text).
+  ...(BBB_PROFILE_URL && BBB_ACCREDITED_SINCE
+    ? [{ t: 'li', x: `**Better Business Bureau:** [BBB Accredited Business](${BBB_PROFILE_URL}) since ${monthYear(BBB_ACCREDITED_SINCE)}.` }]
+    : []),
 ];
 
 // "Who is Bridgeland Builders?" — answer first, owner-confirmed facts only. No
@@ -115,14 +115,17 @@ const ABOUT_BLOCKS = [
   // siteConfig.js) with a link to the profile; without it, the profile link
   // only. Licence, insurance, WCB and warranty lines wait for documents from
   // the owner.
-  { t: 'h2', x: 'Credentials you can check', hidden: !BBB_PROFILE_URL },
-  {
-    t: 'p',
-    x: BBB_ACCREDITED_SINCE
-      ? `Bridgeland Builders has been a BBB Accredited Business since ${monthYear(BBB_ACCREDITED_SINCE)}. [See our Better Business Bureau profile](${BBB_PROFILE_URL}) to check it for yourself.`
-      : `Bridgeland Builders has a business profile with the Better Business Bureau. [Check us on the Better Business Bureau](${BBB_PROFILE_URL}) to see it for yourself.`,
-    hidden: !BBB_PROFILE_URL,
-  },
+  ...(BBB_PROFILE_URL
+    ? [
+        { t: 'h2', x: 'Credentials you can check' },
+        {
+          t: 'p',
+          x: BBB_ACCREDITED_SINCE
+            ? `Bridgeland Builders has been a BBB Accredited Business since ${monthYear(BBB_ACCREDITED_SINCE)}. [See our Better Business Bureau profile](${BBB_PROFILE_URL}) to check it for yourself.`
+            : `Bridgeland Builders has a business profile with the Better Business Bureau. [Check us on the Better Business Bureau](${BBB_PROFILE_URL}) to see it for yourself.`,
+        },
+      ]
+    : []),
 ];
 
 // The values that used to sit on the process cards, now on About (SEO plan §7).
