@@ -77,8 +77,13 @@ export const SOCIAL_PROFILES = {
   x: 'https://x.com/bridgeland58384',
 };
 
-export const BBB_PROFILE_URL =
-  'https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638';
+// Hidden for now. BBB's own profile read "This business is NOT BBB Accredited"
+// and "BBB Accreditation: None" on 2026-11-04 and again on 2026-11-05, so null
+// here takes the badge, the profile links and the llms lines off every page.
+// If the owner confirms the accreditation with BBB, put these back:
+//   BBB_PROFILE_URL 'https://www.bbb.org/ca/mb/winnipeg/profile/commercial-renovation/bridgeland-builders-0057-1000008638'
+//   BBB_ACCREDITED_SINCE the date BBB's page then shows
+export const BBB_PROFILE_URL = null;
 
 // BBB accreditation, read from the profile above on 2026-10-23: a research
 // check of the profile saw "Accredited since 2025-09-01", and Bing's snippet of
@@ -98,12 +103,12 @@ export const BBB_PROFILE_URL =
 // Pages read this date through src/data/entityFacts.generated.js (written by
 // scripts/build-seo-files.mjs), never from here: this module ships in the
 // entry chunk of every page, which is at its JavaScript budget.
-export const BBB_ACCREDITED_SINCE = '2025-09-01';
+export const BBB_ACCREDITED_SINCE = null;
 // The day the profile above was last checked for the accreditation. BBB, not
 // us, decides whether it still holds, so re-check the profile monthly, with
 // REVIEW_STATS, and update this date: the SEO audit warns once it is over 35
 // days old (scripts/audit-seo.mjs), as it does for REVIEW_STATS.asOf.
-export const BBB_ACCREDITATION_CHECKED = '2026-10-23';
+export const BBB_ACCREDITATION_CHECKED = '2026-11-05';
 
 // Google Business Profile, confirmed by the owner 2026-10-13 (same listing:
 // ludocid 6390477049138999065). reviewUrl is Google's write-a-review form for

@@ -3,4 +3,4 @@
 // Only /about-us imports this, so the two dates stay out of the entry chunk
 // that siteConfig.js ships in.
 export const REVIEW_STATS_AS_OF = "2026-10-23";
-export const BBB_ACCREDITED_SINCE = "2025-09-01";
+export const BBB_ACCREDITED_SINCE = null;

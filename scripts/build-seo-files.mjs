@@ -243,6 +243,7 @@ const bbbLine = BBB_ACCREDITED_SINCE && BBB_PROFILE_URL
   ? `Better Business Bureau: BBB Accredited Business since ${BBB_ACCREDITED_SINCE} (${BBB_PROFILE_URL})`
   : null;
 const reputationLines = [ratingLine, bbbLine].filter(Boolean).map((line) => `- ${line}`).join('\n');
+const reputationHeading = bbbLine ? 'Ratings and accreditation' : 'Ratings';
 const lastUpdatedLine = LAST_UPDATED ? `Last updated: ${LAST_UPDATED}` : null;
 
 // Sections are joined with one blank line; empty sections are dropped.
@@ -275,7 +276,7 @@ with the City of Winnipeg or the local municipality when a project requires them
 - Quote requests (instant price estimator): ${SITE_URL}/instant-quote
 - Book a free on-site visit: ${SITE_URL}/book-online
 - Contact form: ${SITE_URL}/contact-us`,
-  reputationLines && `## Ratings and accreditation\n${reputationLines}`,
+  reputationLines && `## ${reputationHeading}\n${reputationLines}`,
   profileLines && `## Profiles\n${profileLines}`,
 ));
 
@@ -333,7 +334,7 @@ out('llms-full.txt', doc(
   `## Service area\n${SERVICE_AREA_STATEMENT}\n\nCommunities: ${SERVICE_AREA_NAMES.join(', ')}`,
   BUSINESS.knowsAbout && BUSINESS.knowsAbout.length &&
     `## Expertise\n${BUSINESS.knowsAbout.map((k) => `- ${k}`).join('\n')}`,
-  reputationLines && `## Ratings and accreditation\n${reputationLines}`,
+  reputationLines && `## ${reputationHeading}\n${reputationLines}`,
   profileLines && `## Profiles\n${profileLines}`,
   fullCostLines && `## Renovation cost guides\n${fullCostLines}`,
   faqBlocks.length && `## Frequently asked questions\n\n${faqBlocks.join('\n\n')}`,
