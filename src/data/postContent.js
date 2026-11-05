@@ -14,7 +14,7 @@ import { PEOPLE, personPath } from './people.js';
 import { serviceByPath } from './services.js';
 import { buildBreadcrumbs, buildFaqPage, buildWebPage, graph, isoWinnipeg, organizationRef } from './seo.js';
 
-// ISO 8601 with the America/Winnipeg offset (-06:00 / -05:00); lives in seo.js
+// ISO 8601 with the America/Winnipeg offset for that day; lives in seo.js
 // so the /blog Blog node formats dates identically.
 export { isoWinnipeg };
 
