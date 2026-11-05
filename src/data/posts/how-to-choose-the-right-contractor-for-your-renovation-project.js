@@ -16,17 +16,16 @@ export default {
   "date": "2026-08-05",
   "updated": "2026-11-05",
   "readMinutes": 10,
-  "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
-  "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-  "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
-  "ogImage": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg",
+  "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.b9156d66.webp",
+  "heroSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-480.790e901b.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.b9156d66.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1320.31875efd.webp 1320w",
+  "heroAvifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-480.701c4659.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.d03a470e.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1320.b5f1901f.avif 1320w",
+  "ogImage": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x630.45d23c11.jpg",
   "schemaImages": [
-    "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x675.fcf35ad6.jpg",
-    "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x900.5532b02d.jpg",
-    "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x1200.e55b5a9b.jpg"
+    "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x675.e82c5ba8.jpg",
+    "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x900.2f140546.jpg",
+    "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x1200.253f3c81.jpg"
   ],
-  "heroAlt": "Title graphic reading “How to Avoid Unexpected Expenses? Master cost control and budgeting strategies” beside a model house and a calculator on a desk",
+  "heroAlt": "Title card: How to Choose a Renovation Contractor in Winnipeg",
   "author": "",
   "reviewedBy": "",
   "services": [
