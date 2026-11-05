@@ -16,17 +16,16 @@ export default {
   "date": "2026-09-01",
   "updated": "2026-10-15",
   "readMinutes": 7,
-  "hero": "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png",
-  "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
-  "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
-  "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
-  "ogImage": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg",
+  "heroSrc": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-880.63e7eccb.webp",
+  "heroSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-480.90f415ff.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-880.63e7eccb.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1320.052e848e.webp 1320w",
+  "heroAvifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-480.0f501bc8.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-880.808052e1.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1320.454ae0e0.avif 1320w",
+  "ogImage": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x630.7c53a7a2.jpg",
   "schemaImages": [
-    "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x675.84b8afe3.jpg",
-    "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x900.545f9340.jpg",
-    "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x1200.705b1c83.jpg"
+    "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x675.caf49069.jpg",
+    "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x900.f1965444.jpg",
+    "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x1200.03d92bd1.jpg"
   ],
-  "heroAlt": "Title graphic reading “How to Choose Between a Full Renovation / Partial Upgrade: Navigating transformation for your commercial space” over a blue-tinted office",
+  "heroAlt": "Title card: Full vs Partial Renovation: How to Choose for Your Winnipeg Home",
   "author": "",
   "reviewedBy": "",
   "services": [

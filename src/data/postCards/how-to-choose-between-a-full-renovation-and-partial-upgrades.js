@@ -11,22 +11,23 @@ export default {
   "date": "2026-09-01",
   "readMinutes": 7,
   "image": {
-    "base": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose",
+    "base": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial",
     "widths": [
       480,
       880,
       1320
     ],
     "webp": [
-      "73b0c74a",
-      "25c16ad6",
-      "a3d281b8"
+      "90f415ff",
+      "63e7eccb",
+      "052e848e"
     ],
     "avif": [
-      "66feb4f2",
-      "62be2807",
-      "1e9a351d"
+      "0f501bc8",
+      "808052e1",
+      "454ae0e0"
     ],
     "main": 1
-  }
+  },
+  "titleCard": true
 };

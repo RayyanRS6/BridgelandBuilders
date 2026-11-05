@@ -2478,24 +2478,25 @@ export const BLOG_REST = [
     "date": "2026-09-01",
     "readMinutes": 7,
     "image": {
-      "base": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose",
+      "base": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial",
       "widths": [
         480,
         880,
         1320
       ],
       "webp": [
-        "73b0c74a",
-        "25c16ad6",
-        "a3d281b8"
+        "90f415ff",
+        "63e7eccb",
+        "052e848e"
       ],
       "avif": [
-        "66feb4f2",
-        "62be2807",
-        "1e9a351d"
+        "0f501bc8",
+        "808052e1",
+        "454ae0e0"
       ],
       "main": 1
     },
+    "titleCard": true,
     "categories": [
       "Permits & Planning"
     ]
@@ -2539,24 +2540,25 @@ export const BLOG_REST = [
     "date": "2026-08-11",
     "readMinutes": 8,
     "image": {
-      "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+      "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation",
       "widths": [
         480,
         880,
         1320
       ],
       "webp": [
-        "76344da3",
-        "dbbc5f1b",
-        "b9481b87"
+        "6ec14999",
+        "bdc465be",
+        "01015ca2"
       ],
       "avif": [
-        "26670bc4",
-        "3191a00b",
-        "54f184c8"
+        "07955c0c",
+        "479ed3b5",
+        "1256d87a"
       ],
       "main": 1
     },
+    "titleCard": true,
     "categories": [
       "Commercial",
       "Money & Rebates"

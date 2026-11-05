@@ -81,58 +81,6 @@ export const MEDIA = {
       "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x1200.7620f4ce.jpg"
     ]
   },
-  "https://static.wixstatic.com/media/48172a_8727dd450ac9404db43d99e2b749a775~mv2.png": {
-    "original": {
-      "width": 2560,
-      "height": 1440,
-      "bytes": 870285
-    },
-    "hero": {
-      "src": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
-      "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
-      "width": 880,
-      "height": 495
-    },
-    "src": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp",
-    "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.73b0c74a.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.25c16ad6.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.a3d281b8.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-480.66feb4f2.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-880.62be2807.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1320.1e9a351d.avif 1320w",
-    "width": 880,
-    "height": 495,
-    "crop": "16:9",
-    "og": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg",
-    "schemaImages": [
-      "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x675.84b8afe3.jpg",
-      "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x900.545f9340.jpg",
-      "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x1200.705b1c83.jpg"
-    ]
-  },
-  "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png": {
-    "original": {
-      "width": 2560,
-      "height": 1440,
-      "bytes": 3492567
-    },
-    "hero": {
-      "src": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
-      "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w",
-      "width": 880,
-      "height": 495
-    },
-    "src": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp",
-    "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.76344da3.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.dbbc5f1b.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.b9481b87.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-480.26670bc4.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-880.3191a00b.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1320.54f184c8.avif 1320w",
-    "width": 880,
-    "height": 495,
-    "crop": "16:9",
-    "og": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x630.50417805.jpg",
-    "schemaImages": [
-      "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x675.0ac85043.jpg",
-      "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x900.447bb467.jpg",
-      "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x1200.ae42b1a0.jpg"
-    ]
-  },
   "https://static.wixstatic.com/media/48172a_f7569d3b387c483aa5cf63035922ebc1~mv2.png": {
     "original": {
       "width": 2560,
@@ -826,6 +774,21 @@ export const MEDIA = {
     "alt": "Project manager in a hard hat reviewing blueprints at a commercial construction site with a steel frame building",
     "thumbnail": true
   },
+  "card:how-to-choose-between-a-full-renovation-and-partial-upgrades": {
+    "src": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-880.63e7eccb.webp",
+    "srcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-480.90f415ff.webp 480w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-880.63e7eccb.webp 880w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1320.052e848e.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-480.0f501bc8.avif 480w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-880.808052e1.avif 880w, /images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1320.454ae0e0.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x630.7c53a7a2.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x675.caf49069.jpg",
+      "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x900.f1965444.jpg",
+      "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial-1200x1200.03d92bd1.jpg"
+    ],
+    "alt": "Title card: Full vs Partial Renovation: How to Choose for Your Winnipeg Home"
+  },
   "card:how-to-choose-the-right-contractor-for-your-renovation-project": {
     "src": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.b9156d66.webp",
     "srcSet": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-480.790e901b.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.b9156d66.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1320.31875efd.webp 1320w",
@@ -840,6 +803,21 @@ export const MEDIA = {
       "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x1200.253f3c81.jpg"
     ],
     "alt": "Title card: How to Choose a Renovation Contractor in Winnipeg"
+  },
+  "card:how-to-finance-a-commercial-renovation-without-breaking-the-bank": {
+    "src": "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-880.bdc465be.webp",
+    "srcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-480.6ec14999.webp 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-880.bdc465be.webp 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-1320.01015ca2.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-480.07955c0c.avif 480w, /images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-880.479ed3b5.avif 880w, /images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-1320.1256d87a.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-1200x630.d72988f4.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-1200x675.96701207.jpg",
+      "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-1200x900.c72d579f.jpg",
+      "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation-1200x1200.455d5449.jpg"
+    ],
+    "alt": "Title card: Commercial Renovation Financing in Manitoba: Your Options"
   },
   "card:how-to-vet-commercial-renovation-contractors-winnipeg": {
     "src": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-880.abfd0e4b.webp",

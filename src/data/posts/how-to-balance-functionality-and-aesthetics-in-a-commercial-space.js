@@ -362,24 +362,25 @@ export default {
       "date": "2026-08-11",
       "readMinutes": 8,
       "image": {
-        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance",
+        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "76344da3",
-          "dbbc5f1b",
-          "b9481b87"
+          "6ec14999",
+          "bdc465be",
+          "01015ca2"
         ],
         "avif": [
-          "26670bc4",
-          "3191a00b",
-          "54f184c8"
+          "07955c0c",
+          "479ed3b5",
+          "1256d87a"
         ],
         "main": 1
-      }
+      },
+      "titleCard": true
     }
   ]
 };
