@@ -1,0 +1,241 @@
+{
+  "slug": "renovating-an-office-while-working",
+  "status": "published",
+  "title": "Renovating an Office While Working: A Phasing Guide",
+  "metaTitle": "Renovating an Office While Working: A Phasing Guide",
+  "metaDescription": "How to plan an office renovation around a working office: phasing, after-hours work, protecting people and data, and what to expect from your contractor.",
+  "excerpt": "How to plan an office renovation around a working office: phasing, after-hours work, protecting people and data, and what to expect from your contractor.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Commercial"
+  ],
+  "services": [
+    "/services/office-renovations"
+  ],
+  "ctaService": "/services/office-renovations",
+  "cluster": "commercial-planning",
+  "answer": "You can often keep an office running during a renovation if the work is phased. Divide the space into zones, finish one area so staff can move into it, schedule loud and dusty tasks for after hours within the City's noise limits, keep exits clear and tell staff what's happening each week.",
+  "hero": null,
+  "thumbAlt": "Plastic dust barrier separating an office renovation zone from desks still in use",
+  "ctaPrimary": "visit",
+  "listOrder": 4,
+  "sources": [
+    {
+      "label": "City of Winnipeg: Construction in your neighbourhood (noise hours)",
+      "url": "https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "City of Winnipeg: Commercial projects",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/commercial-projects",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Manitoba Accessibility Office: Accessible Customer Service Standard Regulation Handbook (Nov 2025)",
+      "url": "https://accessibilitymb.ca/resources/cs-standard/general/cs-handbook.pdf",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Many businesses can't close for weeks while their office is renovated. Clients still call, staff still need to work, and deadlines don't move. The good news is that renovating an office while working is often possible, because an office renovation contractor can phase the work so your business keeps running."
+    },
+    {
+      "t": "p",
+      "x": "Here's how to plan a renovation around a working office, and what to expect from your contractor."
+    },
+    {
+      "t": "h2",
+      "x": "Before construction: plan the office renovation phases"
+    },
+    {
+      "t": "p",
+      "x": "Work with your office renovation contractor to divide the space into zones, then schedule each zone separately."
+    },
+    {
+      "t": "p",
+      "x": "**A typical phasing plan:**"
+    },
+    {
+      "t": "table",
+      "head": [
+        "Phase",
+        "Work area",
+        "Staff location"
+      ],
+      "rows": [
+        [
+          "1",
+          "Empty or underused area (build new rooms first)",
+          "Existing space"
+        ],
+        [
+          "2",
+          "First occupied zone",
+          "Move to new rooms from Phase 1"
+        ],
+        [
+          "3",
+          "Second occupied zone",
+          "Move to finished Phase 2 area"
+        ],
+        [
+          "4",
+          "Reception, washrooms, kitchen",
+          "Temporary arrangements or after-hours work"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "x": "The idea is to always have somewhere finished for people to move into."
+    },
+    {
+      "t": "h2",
+      "x": "Decide what happens after hours"
+    },
+    {
+      "t": "p",
+      "x": "Some work is too loud or dusty for business hours:"
+    },
+    {
+      "t": "li",
+      "x": "Demolition and core drilling"
+    },
+    {
+      "t": "li",
+      "x": "Flooring removal and installation"
+    },
+    {
+      "t": "li",
+      "x": "Ceiling and lighting work over occupied areas"
+    },
+    {
+      "t": "li",
+      "x": "Work in reception or shared spaces"
+    },
+    {
+      "t": "p",
+      "x": "Loud work has limits too. [Within 150 metres of a home](https://www.winnipeg.ca/building-development/property-records/construction-your-neighbourhood), the City of Winnipeg says it can't start before 7 a.m. on weekdays or 9 a.m. on weekends and holidays, and it has to stop by 9 p.m. Your building's own rules also apply, and [office fit-up planning](/blog/office-fit-up-lease-planning-winnipeg) covers what to ask the property manager."
+    },
+    {
+      "t": "p",
+      "x": "After-hours work can cost more, so compare it with the productivity you would lose during the day. Agree on which tasks happen when, in writing."
+    },
+    {
+      "t": "h2",
+      "x": "Protect people, equipment and data"
+    },
+    {
+      "t": "p",
+      "x": "Your contractor should provide:"
+    },
+    {
+      "t": "li",
+      "x": "**Dust barriers** and floor protection, with negative air where needed"
+    },
+    {
+      "t": "li",
+      "x": "**Clear separation** between work zones and staff areas"
+    },
+    {
+      "t": "li",
+      "x": "**Safe, unobstructed exits** at all times"
+    },
+    {
+      "t": "li",
+      "x": "**Daily cleanup** of shared areas"
+    },
+    {
+      "t": "p",
+      "x": "On your side: back up IT systems, protect or move sensitive equipment, and secure confidential files in work zones. An older building also calls for testing suspect materials before anything is disturbed; see [asbestos testing before renovating](/blog/asbestos-testing-before-renovating-manitoba)."
+    },
+    {
+      "t": "p",
+      "x": "If an accessible entrance or washroom will be out of use during a phase, [Manitoba's Accessible Customer Service Standard](https://accessibilitymb.ca/resources/cs-standard/general/cs-handbook.pdf) requires organizations with at least one employee to tell the public why, when it will be back and how else to get service."
+    },
+    {
+      "t": "h2",
+      "x": "Communicate with your team"
+    },
+    {
+      "t": "oli",
+      "x": "Share the schedule and phase map with staff before work starts."
+    },
+    {
+      "t": "oli",
+      "x": "Post weekly updates: what's happening, where, and any noisy days."
+    },
+    {
+      "t": "oli",
+      "x": "Name one internal contact who talks to the contractor's project lead."
+    },
+    {
+      "t": "oli",
+      "x": "Give staff a way to raise issues quickly."
+    },
+    {
+      "t": "h2",
+      "x": "What to expect from your office renovation contractor"
+    },
+    {
+      "t": "p",
+      "x": "Ask any contractor you are comparing for:"
+    },
+    {
+      "t": "li",
+      "x": "One contractor to deal with, and a progress update every week"
+    },
+    {
+      "t": "li",
+      "x": "Permits and inspections coordinated (the City says [construction projects for commercial properties need permits](https://www.winnipeg.ca/building-development/building-renovating/commercial-projects))"
+    },
+    {
+      "t": "li",
+      "x": "Crews who check in and follow building rules"
+    },
+    {
+      "t": "li",
+      "x": "Respect for your clients and staff"
+    },
+    {
+      "t": "h2",
+      "x": "Common mistakes to avoid"
+    },
+    {
+      "t": "li",
+      "x": "Starting before the phasing plan is agreed"
+    },
+    {
+      "t": "li",
+      "x": "Making design changes mid-phase"
+    },
+    {
+      "t": "li",
+      "x": "Forgetting IT, phone and furniture moves in the schedule"
+    },
+    {
+      "t": "li",
+      "x": "Not telling the building manager or neighbouring tenants"
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "With a clear phasing plan and a contractor who schedules around your hours, you can often renovate your office without closing it."
+    },
+    {
+      "t": "p",
+      "x": "**Need to renovate while staying open?** Bridgeland Builders plans phased and after-hours office renovations in Winnipeg and nearby communities, with a progress update every week. [**Book a Free On-Site Visit**](/book-online)."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Office renovation contractor](/services/office-renovations) · [Commercial renovation planning guide](/blog/how-to-prepare-your-business-for-a-major-renovation) · [Office Renovation Cost in Winnipeg: Budget by Scope](/blog/office-renovation-cost-winnipeg)"
+    }
+  ]
+}

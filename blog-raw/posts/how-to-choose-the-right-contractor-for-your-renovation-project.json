@@ -6,7 +6,7 @@
   "metaDescription": "A 12-point Winnipeg checklist for hiring a renovation contractor: WCB clearance, insurance, registration, permits, deposits, contracts and red flags.",
   "excerpt": "A practical Winnipeg checklist for comparing renovation contractors: what to verify, where to verify it, and what a fair contract and payment schedule look like.",
   "date": "2026-08-05",
-  "updated": "2026-10-15",
+  "updated": "2026-11-05",
   "cats": [
     "Hiring a Contractor"
   ],
@@ -35,6 +35,7 @@
     { "label": "City of Winnipeg: Electrical installations", "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/electrical-installations", "accessed": "2026-10-13" },
     { "label": "City of Winnipeg: Plumbing installations", "url": "https://www.winnipeg.ca/building-development/building-renovating/home-improvement-projects/plumbing-installations", "accessed": "2026-10-13" },
     { "label": "City of Winnipeg: List of licensed contractors", "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors", "accessed": "2026-10-13" },
+    { "label": "City of Winnipeg: Demolition contractor information", "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information", "accessed": "2026-11-05" },
     { "label": "Manitoba Consumer Protection Office: How to file a complaint", "url": "https://www.gov.mb.ca/consumerinfo/file-complaint.html", "accessed": "2026-10-15" },
     { "label": "Court of King's Bench of Manitoba: Notice and practice direction, small claims limit increase (December 9, 2024)", "url": "https://www.manitobacourts.mb.ca/site/assets/files/2044/small_claims_limit_increase_and_limit_on_filing_material_2024_dec_9.pdf", "accessed": "2026-10-15" },
     { "label": "S.M. 2021, c. 30, s. 18: The New Home Warranty Act (unproclaimed) repealed", "url": "https://web2.gov.mb.ca/laws/statutes/2021/c03021e.php", "accessed": "2026-10-15" },
@@ -103,7 +104,7 @@
         ["Deposit size", "The Consumer Protection Office calls a 10% down payment reasonable and advises never prepaying in full. Ask what any larger deposit pays for.", "[Consumer Protection Office: home improvements](https://www.gov.mb.ca/cp/cpo/info/home_improvements.html)"],
         ["Change orders in writing", "Every change should be written and signed, with its price and effect on the schedule, before the extra work starts.", "Your contract"],
         ["Written warranty", "Ask for the warranty in writing: what it covers, for how long, and how you report a problem.", "Your contract"],
-        ["Licensed trades", "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors (a homeowner can do their own electrical or plumbing work in the single detached house they live in). Ask who those trades are and search the names.", "[City of Winnipeg licensed contractors](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors)"],
+        ["Licensed trades", "In Winnipeg, electrical, plumbing and mechanical work, and demolishing a building or part of one, is done by City-licensed contractors (a homeowner can do their own electrical or plumbing work in the single detached house they live in). Ask who those trades are and search the names.", "[City of Winnipeg licensed contractors](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors)"],
         ["Realistic schedule", "Get a written start date and duration, ask what could delay it, and compare it with other quotes for the same scope.", "Your contract"]
       ],
       "note": "Sources checked October 13, 2026. Outside Winnipeg, ask your local municipality which permits and trade licences apply."

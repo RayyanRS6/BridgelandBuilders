@@ -1,0 +1,203 @@
+{
+  "slug": "how-to-vet-commercial-renovation-contractors-winnipeg",
+  "status": "published",
+  "title": "How to Find and Vet Commercial Renovation Contractors in Winnipeg",
+  "metaTitle": "How to Vet Commercial Renovation Contractors in Winnipeg",
+  "metaDescription": "How to find, shortlist and vet commercial renovation contractors in Winnipeg: where to look, documents to request, smart questions and red flags.",
+  "excerpt": "How to find, shortlist and vet commercial renovation contractors in Winnipeg: where to look, documents to request, smart questions and red flags.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Hiring a Contractor"
+  ],
+  "services": [
+    "/services/commercial-renovations"
+  ],
+  "ctaService": "/services/commercial-renovations",
+  "cluster": "hiring-a-contractor",
+  "answer": "Shortlist three companies through referrals and targeted searches, then vet each one: pull its WCB clearance, ask for a certificate of liability insurance, search its name in the Companies Office, call two or three commercial references, and get a detailed written quote after a site visit. Walk away from pressure, large cash deposits or skipped permits.",
+  "hero": null,
+  "thumbAlt": "Checklist on a clipboard and a white hard hat on a desk, for vetting a commercial contractor",
+  "ctaPrimary": "visit",
+  "listOrder": 16,
+  "sources": [
+    {
+      "label": "WCB Manitoba: Clearances FAQ",
+      "url": "https://www.wcb.mb.ca/clearances-faq",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "WCB Manitoba: Clearances",
+      "url": "https://www.wcb.mb.ca/clearances",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Manitoba Companies Office",
+      "url": "https://companiesoffice.gov.mb.ca/",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "City of Winnipeg: Property information and records, permit search by address",
+      "url": "https://www.winnipeg.ca/building-development/property-information-records",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Manitoba Laws: The Builders' Liens Act, C.C.S.M. c. B91, s. 24",
+      "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/b091.php",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Winnipeg Construction Association: Directory",
+      "url": "https://winnipegconstruction.ca/membership/directory/",
+      "accessed": "2026-11-05"
+    },
+    {
+      "label": "Manitoba Home Builders' Association: Our Members",
+      "url": "https://www.homebuilders.mb.ca/our-membership/our-members/",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Finding commercial renovation contractors used to mean asking around. Today, many business owners start with a Google search, a review site or even an AI assistant like ChatGPT. That makes it easy to get a list of names, and harder to know how to vet a commercial contractor in Winnipeg before you hand over a deposit."
+    },
+    {
+      "t": "h2",
+      "x": "Where to look"
+    },
+    {
+      "t": "p",
+      "x": "**Referrals.** Ask property managers, commercial real estate agents, architects and other business owners who renovated recently. A referral from someone with a similar project is still the best starting point."
+    },
+    {
+      "t": "p",
+      "x": "**Google and maps.** Search for your project type plus Winnipeg (for example, \"office renovation Winnipeg\" or \"restaurant renovation Winnipeg\"). Look past the ads, and don't judge a company by its website alone. Ask for references and run the public-record checks below."
+    },
+    {
+      "t": "p",
+      "x": "**AI assistants.** Tools like ChatGPT can suggest names, but they draw on what's publicly written online. Treat their suggestions as a starting list, not a recommendation, and verify everything."
+    },
+    {
+      "t": "p",
+      "x": "**Industry groups.** Local construction and home builders' associations list their members."
+    },
+    {
+      "t": "h2",
+      "x": "Build a shortlist of three"
+    },
+    {
+      "t": "p",
+      "x": "For each candidate, check:"
+    },
+    {
+      "t": "li",
+      "x": "**Commercial work like yours:** offices, retail, clinics, restaurants. Ask how many they've finished recently. Residential-only experience isn't the same."
+    },
+    {
+      "t": "li",
+      "x": "**Reviews that mention specifics:** schedules met, communication, cleanliness, working around customers."
+    },
+    {
+      "t": "li",
+      "x": "**Public records:** look the business up in the [Manitoba Companies Office](https://companiesoffice.gov.mb.ca/) registry, and make sure the name there is the one on the quote."
+    },
+    {
+      "t": "li",
+      "x": "**How quickly they respond** to your first inquiry. It's a preview of the project."
+    },
+    {
+      "t": "h2",
+      "x": "How to vet a commercial contractor before you sign"
+    },
+    {
+      "t": "oli",
+      "x": "**WCB Manitoba clearance.** Hire a firm that isn't in good standing and you might be liable for its assessment costs, WCB Manitoba warns. A [clearance letter](/blog/how-to-check-a-contractors-wcb-clearance-manitoba) is open to anyone through WCB's public Clearance Request System, so pull one before work starts and again before each payment."
+    },
+    {
+      "t": "oli",
+      "x": "**Liability insurance.** Request a certificate of insurance with you named as certificate holder, and confirm it with the listed insurer or broker."
+    },
+    {
+      "t": "oli",
+      "x": "**References** from two or three commercial clients. Call them."
+    },
+    {
+      "t": "oli",
+      "x": "**Permit experience** on projects like yours in Winnipeg. You can look up a property's issued permits in the [City's permit search](https://ppdportal.winnipeg.ca/Permits/PropertyPermitSearch/Start.jsp)."
+    },
+    {
+      "t": "oli",
+      "x": "**A detailed written quote** with scope, allowances, schedule, payment terms and warranty. The payment terms should allow for [Manitoba's 7.5% builders' lien holdback](/blog/builders-lien-holdback-manitoba)."
+    },
+    {
+      "t": "oli",
+      "x": "**Site visit first.** A serious contractor won't give a firm commercial price without seeing the space."
+    },
+    {
+      "t": "h2",
+      "x": "Questions that reveal experience"
+    },
+    {
+      "t": "li",
+      "x": "How will you keep my business open during construction?"
+    },
+    {
+      "t": "li",
+      "x": "What permits will we need, and how long does review usually take?"
+    },
+    {
+      "t": "li",
+      "x": "What surprises do you typically find in buildings like mine?"
+    },
+    {
+      "t": "li",
+      "x": "Who is my single point of contact on site?"
+    },
+    {
+      "t": "h2",
+      "x": "Red flags"
+    },
+    {
+      "t": "li",
+      "x": "Pressure to sign quickly or pay large cash deposits"
+    },
+    {
+      "t": "li",
+      "x": "No written contract"
+    },
+    {
+      "t": "li",
+      "x": "Suggestions to skip permits"
+    },
+    {
+      "t": "li",
+      "x": "Reluctance to provide clearance, insurance or references"
+    },
+    {
+      "t": "li",
+      "x": "Payment instructions that change by email"
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "Search tools make it easy to find commercial renovation contractors. Vetting them on experience, references and clear written terms is what protects your project."
+    },
+    {
+      "t": "p",
+      "x": "**Planning a commercial renovation?** Bridgeland Builders is a commercial renovation contractor for offices, stores, restaurants, cafés, bars, hotels and clinics in Winnipeg and nearby communities. We walk the space with you and put the scope in a free written quote. [**Book a Free On-Site Visit**](/book-online)."
+    },
+    {
+      "t": "p",
+      "x": "General information, not legal advice. Ask a lawyer how these rules apply to your contract."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Commercial renovation contractors](/services/commercial-renovations) · [How to choose a renovation contractor in Winnipeg](/blog/how-to-choose-the-right-contractor-for-your-renovation-project) · [12 Questions to Ask a Commercial Renovation Contractor](/blog/questions-to-ask-a-commercial-renovation-contractor)"
+    }
+  ]
+}

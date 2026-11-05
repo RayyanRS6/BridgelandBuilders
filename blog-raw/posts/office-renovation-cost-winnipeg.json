@@ -1,0 +1,267 @@
+{
+  "slug": "office-renovation-cost-winnipeg",
+  "status": "published",
+  "title": "Office Renovation Cost in Winnipeg: How to Budget by Scope",
+  "metaTitle": "Office Renovation Cost in Winnipeg: Budget by Scope",
+  "metaDescription": "What drives office renovation cost in Winnipeg? Four scope levels, what pushes costs up or down, soft costs to include and a budget worksheet.",
+  "excerpt": "What drives office renovation cost in Winnipeg? Four scope levels, what pushes costs up or down, soft costs to include and a budget worksheet.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Commercial",
+    "Costs & Budgets"
+  ],
+  "services": [
+    "/services/office-renovations"
+  ],
+  "ctaService": "/services/office-renovations",
+  "cluster": "commercial-costs",
+  "answer": "No reliable dollar figure for an office renovation exists without seeing the space, because cost follows scope. A refresh of paint and flooring sits at the low end, and new walls, washrooms, HVAC changes and code upgrades push it up. Decide your scope level, add soft costs and a contingency, then get a site-specific written quote.",
+  "hero": null,
+  "thumbAlt": "Open-plan office with new workstations, a roll of flooring and stacked boxes",
+  "ctaPrimary": "visit",
+  "listOrder": 28,
+  "sources": [
+    {
+      "label": "BDC: Leasehold improvements, the 8 steps to follow",
+      "url": "https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "City of Winnipeg: Planning, development and building fees",
+      "url": "https://www.winnipeg.ca/building-development/fees-charges",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "The first question about any office renovation is cost, and the honest answer is \"it depends on scope.\" Office renovation cost in Winnipeg can be very different for a paint-and-carpet refresh than for a full reconfiguration with new walls, washrooms and HVAC."
+    },
+    {
+      "t": "p",
+      "x": "That's why this guide gives no dollar or per-square-foot figures: no reliable number exists without seeing the space, including what's behind the walls, what the building requires and the hours you need to stay open. The best way to budget is to define your scope first, then price it."
+    },
+    {
+      "t": "h2",
+      "x": "Office renovation cost in Winnipeg: the four scope levels"
+    },
+    {
+      "t": "table",
+      "head": [
+        "Level",
+        "What's included",
+        "Disruption",
+        "Relative cost"
+      ],
+      "rows": [
+        [
+          "1. Refresh",
+          "Paint, carpet tile or vinyl, ceiling tiles, LED lighting",
+          "Low, often after hours",
+          "Lowest"
+        ],
+        [
+          "2. Reconfigure",
+          "Level 1 plus new walls, doors, meeting rooms, electrical and data",
+          "Medium",
+          "Moderate"
+        ],
+        [
+          "3. Full renovation",
+          "Level 2 plus washrooms, kitchenette, HVAC changes, millwork",
+          "High",
+          "High"
+        ],
+        [
+          "4. Base building upgrades",
+          "Level 3 plus accessibility, fire separations, envelope or code upgrades",
+          "High",
+          "Highest"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "x": "Many projects mix levels: a refreshed open area with a few new rooms, for example. The disruption and relative cost ratings above are a rough guide, not published data or a quote."
+    },
+    {
+      "t": "h2",
+      "x": "What pushes office renovation cost up"
+    },
+    {
+      "t": "li",
+      "x": "**Moving plumbing** (washrooms, kitchenettes) away from existing lines"
+    },
+    {
+      "t": "li",
+      "x": "**HVAC changes** to serve new rooms"
+    },
+    {
+      "t": "li",
+      "x": "**Electrical capacity** for more equipment"
+    },
+    {
+      "t": "li",
+      "x": "**Code upgrades** triggered by the work: accessibility, exits, fire separations"
+    },
+    {
+      "t": "li",
+      "x": "**Older buildings:** asbestos testing and abatement, uneven floors, outdated wiring"
+    },
+    {
+      "t": "li",
+      "x": "**After-hours work** to keep your office open"
+    },
+    {
+      "t": "li",
+      "x": "**Premium finishes:** glass walls, custom millwork, high-end flooring"
+    },
+    {
+      "t": "h2",
+      "x": "What keeps it down"
+    },
+    {
+      "t": "li",
+      "x": "Reusing existing walls, ceilings and mechanical systems"
+    },
+    {
+      "t": "li",
+      "x": "Keeping kitchenettes and washrooms near existing plumbing"
+    },
+    {
+      "t": "li",
+      "x": "Choosing durable mid-range finishes"
+    },
+    {
+      "t": "li",
+      "x": "Making design decisions early and avoiding mid-project changes"
+    },
+    {
+      "t": "li",
+      "x": "Using your landlord's [tenant improvement allowance](/blog/tenant-improvement-allowance-winnipeg), if your lease has one, to offset part of the cost"
+    },
+    {
+      "t": "h2",
+      "x": "Don't forget soft costs"
+    },
+    {
+      "t": "p",
+      "x": "Budget beyond construction for:"
+    },
+    {
+      "t": "li",
+      "x": "Design and drawings (architect or designer)"
+    },
+    {
+      "t": "li",
+      "x": "City of Winnipeg [permit fees](https://www.winnipeg.ca/building-development/fees-charges)"
+    },
+    {
+      "t": "li",
+      "x": "Furniture, IT, AV and security"
+    },
+    {
+      "t": "li",
+      "x": "Moving and temporary space"
+    },
+    {
+      "t": "li",
+      "x": "Signage"
+    },
+    {
+      "t": "li",
+      "x": "A [contingency fund](https://www.bdc.ca/en/articles-tools/money-finance/buy-lease-commercial-real-estate/how-to-protect-your-business-when-making-lease-hold-improvements), larger for older buildings"
+    },
+    {
+      "t": "h2",
+      "x": "A simple budgeting worksheet"
+    },
+    {
+      "t": "p",
+      "x": "Fill in the right-hand column from your own quotes and lease. It starts blank on purpose, because no figure we printed here would be reliable for your space."
+    },
+    {
+      "t": "table",
+      "head": [
+        "Item",
+        "Your estimate"
+      ],
+      "rows": [
+        [
+          "Construction (from contractor quote)",
+          ""
+        ],
+        [
+          "Design and drawings",
+          ""
+        ],
+        [
+          "Permits",
+          ""
+        ],
+        [
+          "Furniture and equipment",
+          ""
+        ],
+        [
+          "IT, AV and security",
+          ""
+        ],
+        [
+          "Moving and signage",
+          ""
+        ],
+        [
+          "Contingency",
+          ""
+        ],
+        [
+          "Landlord tenant improvement allowance (subtract)",
+          ""
+        ],
+        [
+          "Net project budget",
+          ""
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "How to get a reliable number"
+    },
+    {
+      "t": "oli",
+      "x": "Write a short brief: headcount, rooms needed, equipment, hours you need to stay open."
+    },
+    {
+      "t": "oli",
+      "x": "Share your floor plan and photos."
+    },
+    {
+      "t": "oli",
+      "x": "Book an on-site visit. A firm office renovation cost needs eyes on the space."
+    },
+    {
+      "t": "oli",
+      "x": "Compare quotes line by line, including allowances and exclusions."
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "Office renovation cost follows scope. Decide what level of renovation you need, plan for soft costs and contingency, and get a site-specific quote before you commit."
+    },
+    {
+      "t": "p",
+      "x": "**Budgeting an office project?** Bridgeland Builders prices office renovations in a free written quote after a free on-site visit, once we have walked the space with you and seen your lease dates. [Our Winnipeg cost guide](/renovation-cost-winnipeg#priced-after-a-visit) explains what moves the price. [**Book a Free On-Site Visit**](/book-online)."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Office renovations](/services/office-renovations) · [The biggest cost factors in commercial renovation](/blog/the-biggest-cost-factors-in-commercial-renovation-projects) · [8 Office Building Upgrades That Attract Tenants in 2027](/blog/office-building-upgrades-attract-tenants)"
+    }
+  ]
+}

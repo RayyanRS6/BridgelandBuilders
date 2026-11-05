@@ -1,0 +1,250 @@
+{
+  "slug": "infill-housing-winnipeg-small-landlords",
+  "status": "published",
+  "title": "Infill Housing in Winnipeg: What It Means for Landlords",
+  "metaTitle": "Infill Housing in Winnipeg: What It Means for Landlords",
+  "metaDescription": "Winnipeg zoning now allows up to four units on many lots. Why older houses can become infill sites and why some projects start with demolition.",
+  "excerpt": "Winnipeg zoning now allows up to four units on many lots. Why older houses can become infill sites and why some projects start with demolition.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Permits & Planning"
+  ],
+  "services": [
+    "/services/demolition"
+  ],
+  "ctaService": "/services/demolition",
+  "cluster": "permits-zoning",
+  "answer": "Among Canada's 10 largest cities, Winnipeg had the fastest growth in housing starts from January to July 2026, and zoning changes now allow homes of two, three or four units as of right in many neighbourhoods. For small landlords, older houses on good lots can become infill sites, but whole-building demolition needs a permit and a City-licensed demolition contractor.",
+  "hero": null,
+  "thumbAlt": "New narrow infill house under construction between older homes on a tree-lined street",
+  "ctaPrimary": "visit",
+  "listOrder": 60,
+  "reviewBy": "2026-12-31",
+  "sources": [
+    {
+      "label": "City of Winnipeg: Winnipeg leads major Canadian cities in housing growth",
+      "url": "https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "City of Winnipeg: Zoning changes to accommodate infill housing",
+      "url": "https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "City of Winnipeg: Demolition permits",
+      "url": "https://legacy.winnipeg.ca/ppd/permits/Residential/Demolitions.stm",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "City of Winnipeg: Demolition contractor information",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information",
+      "accessed": "2026-11-05"
+    },
+    {
+      "label": "Manitoba Workplace Safety and Health: Asbestos FAQs",
+      "url": "https://www.gov.mb.ca/labour/safety/faq/asbestos.html",
+      "accessed": "2026-11-05"
+    },
+    {
+      "label": "liv.rent: October 2026 Winnipeg rent report",
+      "url": "https://liv.rent/blog/?p=69631",
+      "accessed": "2026-11-04"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "h2",
+      "x": "The building boom"
+    },
+    {
+      "t": "p",
+      "x": "The [City of Winnipeg](https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth) reported 3,514 housing starts from January to July 2026, up 40.4%, the largest percentage increase among Canada's 10 largest cities. Completions were up 52.7%. Nationally, starts fell about 4.1%. That is the backdrop for infill housing in Winnipeg."
+    },
+    {
+      "t": "p",
+      "x": "Infill means new homes, duplexes, triplexes and small multi-unit buildings on existing residential lots. [Zoning changes](https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing) in effect since June 26, 2025 allow two-, three- and four-unit homes as of right in many neighbourhoods."
+    },
+    {
+      "t": "h2",
+      "x": "Why older Winnipeg houses can become infill sites"
+    },
+    {
+      "t": "p",
+      "x": "Many Winnipeg neighbourhoods have older bungalows and two-storey homes on lots that could now hold more units. When a house needs major work (foundation repairs, outdated systems, poor layout), the economics can favour redevelopment over renovation."
+    },
+    {
+      "t": "table",
+      "head": [
+        "Factor",
+        "Favours renovation",
+        "Favours redevelopment"
+      ],
+      "rows": [
+        [
+          "House condition",
+          "Sound structure, minor updates",
+          "Foundation, structural or major system issues"
+        ],
+        [
+          "Lot size",
+          "Small or irregular",
+          "Wide enough for multiple units"
+        ],
+        [
+          "Zoning",
+          "Single-unit only",
+          "Allows duplex, triplex or more"
+        ],
+        [
+          "Location",
+          "Low rental demand",
+          "Near transit, schools, services"
+        ],
+        [
+          "Investment horizon",
+          "Short-term hold",
+          "Long-term rental income"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "Our view: demolition is a planning decision, not just a job"
+    },
+    {
+      "t": "p",
+      "x": "Demolition is often treated as a simple first step: knock it down, haul it away. In practice, it involves planning that can affect the whole project's timeline and cost:"
+    },
+    {
+      "t": "oli",
+      "x": "**Hazardous materials:** older homes may contain asbestos, lead paint or vermiculite. Testing is needed before demolition."
+    },
+    {
+      "t": "oli",
+      "x": "**Utility disconnections:** gas, hydro, water and sewer must be safely disconnected by the right parties."
+    },
+    {
+      "t": "oli",
+      "x": "**Permits:** Winnipeg requires a [demolition permit](https://legacy.winnipeg.ca/ppd/permits/Residential/Demolitions.stm) for most buildings or parts of buildings, and the applicant must hold a City demolition contractor licence."
+    },
+    {
+      "t": "oli",
+      "x": "**Neighbours:** dust, noise and vibration need managing, especially on tight infill lots."
+    },
+    {
+      "t": "oli",
+      "x": "**Site preparation:** the lot must be left ready for new construction."
+    },
+    {
+      "t": "p",
+      "x": "For a whole building, hire a licensed demolition contractor, and settle these steps before the new build is scheduled."
+    },
+    {
+      "t": "h2",
+      "x": "Adding units by renovating"
+    },
+    {
+      "t": "p",
+      "x": "Not every project is a full teardown. Some small landlords add units by renovating:"
+    },
+    {
+      "t": "li",
+      "x": "**Basement suite conversions**, which may require removing old finishes and walls. See [basement suites](/services/basement-suites)."
+    },
+    {
+      "t": "li",
+      "x": "**Interior reconfiguration** to create two units from one."
+    },
+    {
+      "t": "li",
+      "x": "**Additions**, which may mean opening up part of the existing structure. See [home additions](/services/home-additions)."
+    },
+    {
+      "t": "p",
+      "x": "Interior work like this uses [selective demolition](/services/demolition), removing only what is necessary while protecting the rest of the structure. The City doesn't treat removing interior components, such as walls and partitions, as demolition, though the renovation may still need a building permit. [Taking down part of a building](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information) is different, and needs a demolition permit and a licensed applicant."
+    },
+    {
+      "t": "h2",
+      "x": "What it means for agents"
+    },
+    {
+      "t": "p",
+      "x": "Real estate agents can add value by recognizing redevelopment potential. A house that seems like a tough sale as a single-family home may appeal to investors if the lot supports more units. Agents who understand zoning, typical demolition and construction costs, and local rental demand can position these properties to the right buyers."
+    },
+    {
+      "t": "h2",
+      "x": "The rental context"
+    },
+    {
+      "t": "p",
+      "x": "New infill units enter a rental market where [one-bedroom asking rents have eased slightly](https://liv.rent/blog/?p=69631): liv.rent's October 2026 report shows a third straight monthly dip, the latest of 0.1%."
+    },
+    {
+      "t": "p",
+      "x": "Small landlords planning infill should match unit sizes to local demand, and check current asking rents for the sizes they plan."
+    },
+    {
+      "t": "h2",
+      "x": "Questions to ask before buying for redevelopment"
+    },
+    {
+      "t": "p",
+      "x": "Investors considering a house for redevelopment should check: What does zoning allow on this lot? Are there any easements, heritage designations or other restrictions? What are the likely costs for demolition, hazardous material removal and new servicing? How long will permits take? What rents can the new units achieve?"
+    },
+    {
+      "t": "p",
+      "x": "Getting answers before buying avoids paying a redevelopment price for a lot that cannot deliver."
+    },
+    {
+      "t": "h2",
+      "x": "A note on hazardous materials"
+    },
+    {
+      "t": "p",
+      "x": "Many older Winnipeg homes were built before modern restrictions on asbestos and other hazardous materials. Asbestos may be found in insulation, plaster, flooring, ceiling texture and siding. Disturbing it during demolition without proper testing and abatement is dangerous, and [Manitoba's workplace safety rules](https://www.gov.mb.ca/labour/safety/faq/asbestos.html) say non-compliance can bring work stoppages, fines or prosecution."
+    },
+    {
+      "t": "p",
+      "x": "[Testing](/blog/asbestos-testing-before-renovating-manitoba) should be completed before demolition starts, and any abatement carried out by qualified specialists. Manitoba also requires notice 5 to 10 days before work that may release asbestos-containing material. Building this time into the schedule avoids delays later."
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "Winnipeg's building boom and zoning changes are creating opportunities for small landlords and investors. Some of those opportunities start with demolition by a licensed contractor, and planning it well sets up the rest of the project."
+    },
+    {
+      "t": "p",
+      "x": "For agents, knowing what a lot's zoning allows and what demolition involves also helps price older homes on larger lots, because their value to an infill builder may be higher than their value as a single-family home."
+    },
+    {
+      "t": "h2",
+      "x": "How Bridgeland helps"
+    },
+    {
+      "t": "p",
+      "x": "Bridgeland Builders provides interior and selective demolition in Winnipeg: strip-outs of kitchens, bathrooms, basements and commercial spaces ahead of a renovation. We don't take on whole-building demolition, which in Winnipeg needs a demolition permit and an applicant who holds a City demolition contractor licence."
+    },
+    {
+      "t": "p",
+      "x": "We also develop basement suites and handle masonry, flooring, exterior painting, windows and doors for renovation projects."
+    },
+    {
+      "t": "p",
+      "x": "**Planning a suite or an interior strip-out?** [**Book a Free On-Site Visit**](/book-online) with Bridgeland Builders for a free written quote."
+    },
+    {
+      "t": "p",
+      "x": "This is general information, not legal or financial advice. Confirm zoning and permits with the City, and talk to a lawyer or accountant before you buy for redevelopment. If the house has tenants, ask the Residential Tenancies Branch about ending a tenancy before you plan demolition."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Interior demolition services](/services/demolition) · [Home addition zoning in Winnipeg](/blog/home-additions-and-zoning-winnipeg) · [Convert a House to a Duplex in Winnipeg: Rules and Options](/blog/convert-house-to-duplex-winnipeg)"
+    }
+  ]
+}

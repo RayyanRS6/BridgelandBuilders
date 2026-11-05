@@ -1,0 +1,211 @@
+{
+  "slug": "renovation-capital-vs-current-expense-canada",
+  "status": "published",
+  "title": "Renovations: Capital vs Current Expense for Canadian Owners",
+  "metaTitle": "Renovations: Capital vs Current Expense for Canadian Owners",
+  "metaDescription": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+  "excerpt": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Money & Rebates"
+  ],
+  "services": [
+    "/services/commercial-renovations"
+  ],
+  "ctaService": "/services/commercial-renovations",
+  "cluster": "commercial-costs",
+  "answer": "A repair that restores something to its original condition is usually a current expense, generally deducted in the year you incur it. An improvement that gives a lasting benefit or makes the property better than before is usually capital, generally deducted over time through capital cost allowance. This is general information: confirm yours with your accountant.",
+  "hero": null,
+  "thumbAlt": "Calculator, receipts and a small wooden house model beside renovation plans, for sorting capital vs current expenses",
+  "ctaPrimary": "visit",
+  "listOrder": 57,
+  "reviewBy": "2026-12-31",
+  "sources": [
+    {
+      "label": "Canada Revenue Agency: Rental income guide (T4036), current or capital expenses",
+      "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/t4036/rental-income.html",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Canada Revenue Agency: General information for GST/HST registrants (RC4022)",
+      "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Manitoba Finance: Bulletin 005, Information for Contractors (revised July 2019)",
+      "url": "https://www.gov.mb.ca/finance/taxation/pubs/bulletins/005.pdf",
+      "accessed": "2026-11-05"
+    },
+    {
+      "label": "Efficiency Manitoba: Building Envelope Program",
+      "url": "https://efficiencymb.ca/business/building-envelope/",
+      "accessed": "2026-11-04"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Planning a business remodel before your fiscal year-end? The type of work decides how the cost is treated for tax, and the timing can affect when you get the benefit. Whether a renovation is a capital expense or a current expense changes how much you can deduct this year."
+    },
+    {
+      "t": "p",
+      "x": "Here's a plain-language overview for Canadian business owners and landlords, about property used to earn income. It doesn't cover renovations to your own home. This is general information, not tax advice, so always confirm your situation with your accountant."
+    },
+    {
+      "t": "h2",
+      "x": "Renovations: current expense or capital expenditure?"
+    },
+    {
+      "t": "p",
+      "x": "The Canada Revenue Agency (CRA) treats renovation costs in one of two ways:"
+    },
+    {
+      "t": "table",
+      "head": [
+        "",
+        "Current expense",
+        "Capital expenditure"
+      ],
+      "rows": [
+        [
+          "What it is",
+          "Repairs that restore something to its original condition",
+          "Improvements that give a lasting benefit or make the property better than before"
+        ],
+        [
+          "The CRA's own examples",
+          "Painting the exterior of a wooden house, repairing wooden steps",
+          "Putting vinyl siding on a wooden house, replacing wooden steps with concrete steps"
+        ],
+        [
+          "Renovation examples (ours, not the CRA's)",
+          "Repainting, patching drywall, fixing a leak, replacing a few broken tiles",
+          "A new [addition](/services/home-additions), a [kitchen](/services/kitchen-renovations) or [bathroom](/services/bathroom-renovations) remodel that makes the space better than before, new windows that upgrade the building"
+        ],
+        [
+          "Tax treatment",
+          "Generally deducted in the year incurred",
+          "Generally deducted over time through capital cost allowance (CCA)"
+        ]
+      ]
+    },
+    {
+      "t": "p",
+      "x": "The line isn't always obvious. A useful question is whether the work restores or betters the property."
+    },
+    {
+      "t": "p",
+      "x": "The CRA's rental income guide uses four tests: whether the expense gives a lasting benefit, whether it maintains or improves the property, whether it's for a part of the property or a separate asset, and its value relative to the property, which isn't decisive on its own."
+    },
+    {
+      "t": "h2",
+      "x": "Capital cost allowance basics"
+    },
+    {
+      "t": "p",
+      "x": "Capital improvements are added to a CCA class and deducted gradually. Classes that can apply to renovation work include:"
+    },
+    {
+      "t": "li",
+      "x": "**Class 1:** most buildings acquired after 1987, unless they belong in another class"
+    },
+    {
+      "t": "li",
+      "x": "**Class 13:** many capital improvements a tenant makes to leased property (the maximum rate depends on the type of leasehold interest and the terms of the lease, so ask your accountant)"
+    },
+    {
+      "t": "li",
+      "x": "**Class 8:** furniture, household appliances, some fixtures and machinery"
+    },
+    {
+      "t": "p",
+      "x": "Rules for the first-year deduction have changed several times in recent years, so ask your accountant which rules apply to work completed this year."
+    },
+    {
+      "t": "h2",
+      "x": "Year-end timing tips"
+    },
+    {
+      "t": "oli",
+      "x": "**Know your fiscal year-end.** Current expenses are generally deducted in the year you incur them, so work completed before year-end may count this year."
+    },
+    {
+      "t": "oli",
+      "x": "**Schedule true repairs before year-end** if you want the deduction this year."
+    },
+    {
+      "t": "oli",
+      "x": "**Document the scope clearly.** An invoice that separates repairs from improvements makes the tax treatment easier to support."
+    },
+    {
+      "t": "oli",
+      "x": "**Claim GST input tax credits where you can.** If you're a GST registrant, you can generally recover the GST paid on renovations related to your commercial activities, including commercial rentals. Long-term residential rents (one month or more) are exempt, so you generally can't claim credits on costs for those units. Capital real property has its own rules."
+    },
+    {
+      "t": "oli",
+      "x": "**Treat Manitoba Retail Sales Tax (RST) separately.** Input tax credits recover GST, not RST. On construction, installation, maintenance or repair of real property, Manitoba Finance says contractors pay RST on their materials and should not charge it on their billings. Other goods and work can be taxed differently, so ask your accountant."
+    },
+    {
+      "t": "oli",
+      "x": "**Check rebates first.** Some energy incentives require approval before work starts, as [Efficiency Manitoba's Building Envelope Program](https://efficiencymb.ca/business/building-envelope/) does. Missing that step can cost you the incentive."
+    },
+    {
+      "t": "h2",
+      "x": "For rental property owners"
+    },
+    {
+      "t": "p",
+      "x": "The CRA encourages landlords to report rental income and expenses on Form T776. The same test applies: work that restores a unit to its original condition is usually a current expense, and work that makes it better than before is usually capital."
+    },
+    {
+      "t": "p",
+      "x": "Repairs that put a used property you just acquired into suitable condition for use are capital. You can't use CCA to create or increase a rental loss."
+    },
+    {
+      "t": "h2",
+      "x": "Keep these records"
+    },
+    {
+      "t": "li",
+      "x": "Contracts and detailed invoices showing scope"
+    },
+    {
+      "t": "li",
+      "x": "Proof of payment"
+    },
+    {
+      "t": "li",
+      "x": "Before-and-after photos"
+    },
+    {
+      "t": "li",
+      "x": "Permits and inspection records"
+    },
+    {
+      "t": "li",
+      "x": "Rebate approvals and payments, because the CRA has you subtract a rebate from the related cost"
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "Year-end renovations can be well timed for tax, as long as the work is properly classified and documented. Plan with your accountant, then book the work."
+    },
+    {
+      "t": "p",
+      "x": "**Planning renovation work?** Bridgeland Builders starts every project with a free on-site visit and a free written quote you can take to your accountant. [**Book a Free On-Site Visit**](/book-online)."
+    },
+    {
+      "t": "p",
+      "x": "General information, not tax advice. Confirm with your accountant or the CRA."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Commercial renovations](/services/commercial-renovations) · [Home renovation grants and tax credits in Manitoba](/blog/manitoba-renovation-tax-credits-rebates) · [Bank of Canada Rate Hike: What 2.50% Means for Renovations](/blog/bank-of-canada-rate-hike-renovation-budgets)"
+    }
+  ]
+}

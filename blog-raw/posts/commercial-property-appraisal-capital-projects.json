@@ -1,0 +1,252 @@
+{
+  "slug": "commercial-property-appraisal-capital-projects",
+  "status": "published",
+  "title": "Refinancing at Higher Rates: Capital Projects That Protect Commercial Property Value",
+  "metaTitle": "Refinancing Commercial Property: Projects That Protect Value",
+  "metaDescription": "Renewing a commercial mortgage soon? Failing windows, doors and masonry can lower your appraisal. Fix the visible risks first to protect property value.",
+  "excerpt": "Renewing a commercial mortgage soon? Failing windows, doors and masonry can lower your appraisal. Fix the visible risks first to protect property value.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Commercial"
+  ],
+  "services": [
+    "/services/windows-and-doors"
+  ],
+  "ctaService": "/services/windows-and-doors",
+  "cluster": "commercial-costs",
+  "answer": "Owners refinancing commercial property in 2026 and 2027 may face higher rates than they planned for, and lenders and appraisers may look closely at building condition. Visible deferred maintenance, especially failing windows, doors and masonry, can reduce valuations and loan amounts. Targeted envelope work before an appraisal can help protect value.",
+  "hero": null,
+  "thumbAlt": "Modern commercial building with large dark-framed windows and panel cladding against a blue sky",
+  "ctaPrimary": "visit",
+  "listOrder": 53,
+  "reviewBy": "2026-12-09",
+  "sources": [
+    {
+      "label": "Bank of Canada: Bank of Canada raises the policy rate to 2.5% (Oct 28, 2026)",
+      "url": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Bank of Canada: Raises the overnight rate target to 5% (July 12, 2023)",
+      "url": "https://www.bankofcanada.ca/2023/07/fad-press-release-2023-07-12/",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "MCAP: Common documents required for a commercial mortgage",
+      "url": "https://www.mcap.com/Content/MCAP/Docs/MCAP%20Commercial%20Mortgage%20Document%20Checklist_EN.pdf",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Manitoba Public Utilities Board: Notice of decision on Manitoba Hydro's general rate application (March 19, 2026)",
+      "url": "https://www.pubmanitoba.ca/v1/contact-us/media/pubs/2026-nr/nr-mh-gra-fiscal-2026-2028-march-19-2026-english.pdf",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Efficiency Manitoba: Commercial Deep Energy Retrofit Program",
+      "url": "https://efficiencymb.ca/business/deep-energy-retrofit/",
+      "accessed": "2026-11-04"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "h2",
+      "x": "The refinancing squeeze"
+    },
+    {
+      "t": "p",
+      "x": "The Bank of Canada [raised its policy rate to 2.50% on October 28, 2026](https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/), its first increase since [July 2023](https://www.bankofcanada.ca/2023/07/fad-press-release-2023-07-12/), and said there could be a need to raise it further. For anyone refinancing commercial property, that matters: a commercial mortgage written when rates were lower can renew at a higher one."
+    },
+    {
+      "t": "p",
+      "x": "At renewal, a lender may order a new appraisal and review the property's condition and income. Requirements vary. One lender's [commercial mortgage document checklist](https://www.mcap.com/Content/MCAP/Docs/MCAP%20Commercial%20Mortgage%20Document%20Checklist_EN.pdf) lists an appraisal and a building condition assessment or engineer's report, where required."
+    },
+    {
+      "t": "p",
+      "x": "If the building's value has fallen, or if the lender sees significant capital needs, the owner may face a lower loan amount or a requirement to fund repairs."
+    },
+    {
+      "t": "h2",
+      "x": "What lenders and appraisers look for in building condition"
+    },
+    {
+      "t": "p",
+      "x": "Appraisers and lenders assess risk, and their criteria vary. Condition items that can raise red flags include:"
+    },
+    {
+      "t": "li",
+      "x": "**Failing windows** with fogged glass, rotted frames or visible leaks."
+    },
+    {
+      "t": "li",
+      "x": "**Damaged or outdated exterior doors** that are hard to secure."
+    },
+    {
+      "t": "li",
+      "x": "**Cracked or spalling masonry.**"
+    },
+    {
+      "t": "li",
+      "x": "**Water staining** inside the building."
+    },
+    {
+      "t": "li",
+      "x": "**High vacancy or turnover** linked to building condition."
+    },
+    {
+      "t": "p",
+      "x": "If a building condition assessment lists major envelope repairs, ask your lender how that affects the loan, including any holdback or change to the loan amount."
+    },
+    {
+      "t": "h2",
+      "x": "Our view: fix the visible risks before the appraisal"
+    },
+    {
+      "t": "p",
+      "x": "Owners cannot control interest rates, but they can deal with the condition problems an appraiser would see. Strategic capital spending before a refinancing can protect value in three ways:"
+    },
+    {
+      "t": "oli",
+      "x": "**Reducing identified capital needs,** so the lender sees fewer future costs."
+    },
+    {
+      "t": "oli",
+      "x": "**Supporting income,** by keeping tenants and reducing vacancy."
+    },
+    {
+      "t": "oli",
+      "x": "**Improving first impressions** for tenants and buyers."
+    },
+    {
+      "t": "p",
+      "x": "The best candidates are projects that address obvious condition issues. [Exterior window and door installation](/services/windows-and-doors) can be near the top of the list, because these components are highly visible and closely linked to water and energy issues."
+    },
+    {
+      "t": "h2",
+      "x": "Prioritizing work"
+    },
+    {
+      "t": "table",
+      "head": [
+        "Priority",
+        "Work",
+        "Why"
+      ],
+      "rows": [
+        [
+          "1",
+          "Water-related repairs: masonry, failed windows",
+          "Water damage can spread, and a lender may ask about it"
+        ],
+        [
+          "2",
+          "Exterior doors and entrances",
+          "Security, appearance and tenant experience"
+        ],
+        [
+          "3",
+          "Common-area flooring and paint",
+          "First impression and tenant satisfaction"
+        ],
+        [
+          "4",
+          "Unit or suite upgrades",
+          "Supports rent and occupancy"
+        ]
+      ]
+    },
+    {
+      "t": "h2",
+      "x": "Timing your projects"
+    },
+    {
+      "t": "p",
+      "x": "Refinancing can take time, so owners should:"
+    },
+    {
+      "t": "li",
+      "x": "**Review condition early,** ideally 12 to 18 months before renewal."
+    },
+    {
+      "t": "li",
+      "x": "**Get quotes over the winter** and schedule exterior work for the warmer months."
+    },
+    {
+      "t": "li",
+      "x": "**Keep records** of work completed, including invoices and photos, to share with lenders."
+    },
+    {
+      "t": "li",
+      "x": "**Consider phasing:** complete the most visible items before the appraisal, then plan the rest."
+    },
+    {
+      "t": "h2",
+      "x": "Energy and operating costs"
+    },
+    {
+      "t": "p",
+      "x": "Window and door upgrades can also lower operating costs. After a 4.0% general rate increase in 2026, [Manitoba Hydro's electricity revenue increases](https://www.pubmanitoba.ca/v1/contact-us/media/pubs/2026-nr/nr-mh-gra-fiscal-2026-2028-march-19-2026-english.pdf) average 3.5% in 2027 and 3.0% in 2028, and your customer class may pay more or less than that. These increases raise the cost of running electrically heated buildings with air leaks."
+    },
+    {
+      "t": "p",
+      "x": "Lower operating expenses improve net operating income, which can affect valuation. Programs such as [Efficiency Manitoba's Commercial Deep Energy Retrofit Program](https://efficiencymb.ca/business/deep-energy-retrofit/) may help with larger projects that meet savings targets, but approval is required before work begins."
+    },
+    {
+      "t": "p",
+      "x": "Our guide to [Efficiency Manitoba commercial rebates](/blog/efficiency-manitoba-commercial-rebates) covers its other programs, including the Building Envelope Program for windows and glazed doors, which requires a contractor registered with Efficiency Manitoba."
+    },
+    {
+      "t": "h2",
+      "x": "Questions to ask your lender"
+    },
+    {
+      "t": "p",
+      "x": "Owners approaching renewal should talk to their lender early. Useful questions include: Will you require a new appraisal or building condition assessment? What condition items would affect the loan amount? Would completed repairs, with documentation, change the outcome? Are there holdbacks for capital work, and how are they released?"
+    },
+    {
+      "t": "p",
+      "x": "Those conversations help owners decide which projects to complete before renewal and which can be planned afterward."
+    },
+    {
+      "t": "h2",
+      "x": "Don't overlook the inside"
+    },
+    {
+      "t": "p",
+      "x": "Appraisers and lenders may also look at interior condition, especially in common areas and vacant units. Worn corridor flooring, damaged doors and peeling paint can suggest deferred maintenance even when systems are sound."
+    },
+    {
+      "t": "p",
+      "x": "New common-area flooring and paint can improve how the whole building presents to tenants and buyers. Vacant units should be in rentable condition, because lenders may discount income from units that need work before they can be leased."
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "Higher rates make refinancing harder, but owners can improve their position. Completing visible envelope repairs, especially exterior windows and doors, before an appraisal can reduce identified capital needs, support income and help protect property value."
+    },
+    {
+      "t": "h2",
+      "x": "How Bridgeland helps"
+    },
+    {
+      "t": "p",
+      "x": "Bridgeland Builders installs [exterior windows and doors](/services/windows-and-doors) and provides [masonry repair](/services/masonry-stucco), [flooring](/services/flooring) and [exterior painting](/services/exterior-painting) for commercial buildings in Winnipeg and nearby communities. Every job starts with a free on-site visit and a free written quote."
+    },
+    {
+      "t": "p",
+      "x": "**Refinancing in the next year?** [**Book a Free On-Site Visit**](/book-online) from Bridgeland Builders for window and door replacement."
+    },
+    {
+      "t": "p",
+      "x": "General information, not financial advice. Talk to your lender, accountant or lawyer about your own refinancing."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Exterior window and door installation](/services/windows-and-doors) · [Commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) · [Renovations Before a Commercial Mortgage Renewal or Sale](/blog/commercial-mortgage-renewal-renovations-winnipeg)"
+    }
+  ]
+}

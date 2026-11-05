@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigationType } from 'react-router-dom';
 
 const RETRY_EVERY_MS = 100;
 const GIVE_UP_AFTER_MS = 2000;
@@ -71,6 +71,7 @@ function landOnFirstLoad(hash) {
 // smoothly.
 export default function ScrollToHash() {
   const { pathname, hash } = useLocation();
+  const navigationType = useNavigationType();
   const initialLocation = useRef(`${pathname}${hash}`);
   const leftInitialLocation = useRef(false);
   const previousPathname = useRef(pathname);
@@ -85,7 +86,9 @@ export default function ScrollToHash() {
     previousPathname.current = pathname;
 
     if (!hash) {
-      if (!isInitial) scrollToTop();
+      // Back to /blog: BlogPage puts the visitor where they were on its long list.
+      const blogRestoresItself = navigationType === 'POP' && pathname === '/blog';
+      if (!isInitial && !blogRestoresItself) scrollToTop();
       return undefined;
     }
 

@@ -15,7 +15,7 @@ export default {
     "Costs & Budgets"
   ],
   "date": "2026-10-13",
-  "updated": "2026-10-15",
+  "updated": "2026-11-05",
   "readMinutes": 8,
   "hero": null,
   "heroSrc": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-880.311eab5d.webp",
@@ -139,6 +139,10 @@ export default {
     {
       "t": "p",
       "x": "If you're close to renewal, timing the renovation around it may avoid the penalty. Some lenders also offer a blend-and-extend, where your old rate is blended with a new term's rate; it generally avoids the prepayment penalty, though administrative fees may apply."
+    },
+    {
+      "t": "p",
+      "x": "Buying a home that needs work is a different case, because some insured mortgages can include the cost of improvements in the purchase. Our guide to the [purchase plus improvements mortgage](/blog/purchase-plus-improvements-mortgage-winnipeg) explains how that works."
     },
     {
       "t": "h2",

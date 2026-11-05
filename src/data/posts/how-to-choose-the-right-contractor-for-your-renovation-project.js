@@ -14,7 +14,7 @@ export default {
     "Hiring a Contractor"
   ],
   "date": "2026-08-05",
-  "updated": "2026-10-15",
+  "updated": "2026-11-05",
   "readMinutes": 10,
   "hero": "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png",
   "heroSrc": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
@@ -115,7 +115,7 @@ export default {
         ],
         [
           "Licensed trades",
-          "In Winnipeg, electrical, plumbing, mechanical and demolition work is done by City-licensed contractors (a homeowner can do their own electrical or plumbing work in the single detached house they live in). Ask who those trades are and search the names.",
+          "In Winnipeg, electrical, plumbing and mechanical work, and demolishing a building or part of one, is done by City-licensed contractors (a homeowner can do their own electrical or plumbing work in the single detached house they live in). Ask who those trades are and search the names.",
           "[City of Winnipeg licensed contractors](https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors)"
         ],
         [
@@ -375,6 +375,11 @@ export default {
       "label": "City of Winnipeg: List of licensed contractors",
       "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/list-licensed-contractors",
       "accessed": "2026-10-13"
+    },
+    {
+      "label": "City of Winnipeg: Demolition contractor information",
+      "url": "https://www.winnipeg.ca/building-development/building-renovating/trade-information-contractor-licensing/contractor-licensing/demolition-contractor-information",
+      "accessed": "2026-11-05"
     },
     {
       "label": "Manitoba Consumer Protection Office: How to file a complaint",

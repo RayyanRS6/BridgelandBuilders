@@ -1,0 +1,164 @@
+{
+  "slug": "winter-unit-turnover-checklist-winnipeg",
+  "status": "published",
+  "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+  "metaTitle": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+  "metaDescription": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+  "excerpt": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cats": [
+    "Landlords & Property Managers"
+  ],
+  "services": [
+    "/services/commercial-renovations",
+    "/services/flooring"
+  ],
+  "ctaService": "/services/commercial-renovations",
+  "cluster": "rental-buildings",
+  "answer": "A winter unit turnover checklist starts before the resident moves out: walk the unit early, book trades and order long-lead items. Then fix heat and drafts first, followed by paint, flooring, kitchen and bath touch-ups, lighting and safety items. Standardized finishes and back-to-back trades help keep the turn short.",
+  "hero": null,
+  "thumbAlt": "Empty apartment during a winter unit turnover, with fresh paint, snow outside the window and cleaning supplies on the floor",
+  "ctaPrimary": "visit",
+  "listOrder": 3,
+  "reviewBy": "2027-03-31",
+  "sources": [
+    {
+      "label": "liv.rent: October 2026 Winnipeg rent report",
+      "url": "https://liv.rent/blog/?p=69631",
+      "accessed": "2026-11-04"
+    },
+    {
+      "label": "Manitoba Residential Tenancies Branch: Privacy fact sheet on landlord entry",
+      "url": "https://www.gov.mb.ca/cca/rtb/resource_list/privacy.pdf",
+      "accessed": "2026-11-05"
+    }
+  ],
+  "faqs": [],
+  "blocks": [
+    {
+      "t": "p",
+      "x": "Winter can be a slow time to lease a rental in Winnipeg, which makes a unit turnover checklist worth having before the next move-out notice arrives. Rents have softened too: at $1,319, the average unfurnished one-bedroom asking rent in [liv.rent's October 2026 report](https://liv.rent/blog/?p=69631) was down three months in a row, though the latest drop was only 0.1%."
+    },
+    {
+      "t": "p",
+      "x": "When renters have choices, units that are ready on day one have an edge. This checklist covers the property management renovations to plan between November and March."
+    },
+    {
+      "t": "h2",
+      "x": "Before the resident moves out"
+    },
+    {
+      "t": "li",
+      "x": "**Walk the unit early, ideally 30 to 60 days before move-out.** Note damage and wear so you can order materials early. Manitoba [limits when a landlord can enter](https://www.gov.mb.ca/cca/rtb/resource_list/privacy.pdf), so get the tenant's agreement first, or give written notice where the rules allow it. The Residential Tenancies Branch can explain what applies."
+    },
+    {
+      "t": "li",
+      "x": "**Book trades now.** Painters, flooring installers and repair crews can get busy before the holidays. Lock in dates before the notice period ends."
+    },
+    {
+      "t": "li",
+      "x": "**Order long-lead items.** Appliances, windows, doors and custom counters can be slow to arrive in winter, so order them early."
+    },
+    {
+      "t": "h2",
+      "x": "The winter unit turnover checklist: what to renovate first"
+    },
+    {
+      "t": "p",
+      "x": "**1. Heat and drafts.** Prospects notice cold units instantly in a Winnipeg January. Have a heating contractor check furnace or boiler operation. Replace weatherstripping, fix door sweeps, and inspect windows for failed seals or frost buildup."
+    },
+    {
+      "t": "p",
+      "x": "**2. Paint.** Fresh, neutral paint throughout. Use washable finishes in kitchens, bathrooms and hallways."
+    },
+    {
+      "t": "p",
+      "x": "**3. Flooring.** Replace worn carpet with luxury vinyl plank. It handles salt, slush and boots better and can last through multiple turns. In older buildings, [test old tile and adhesive for asbestos](/blog/asbestos-testing-before-renovating-manitoba) before they come up."
+    },
+    {
+      "t": "p",
+      "x": "**4. Kitchen and bath refresh.** New hardware, faucets, light fixtures, and re-caulked tubs and sinks make an older unit feel updated."
+    },
+    {
+      "t": "p",
+      "x": "**5. Lighting.** Short winter days mean showings in low light. Replace dim bulbs, and have an electrician add fixtures where rooms feel dark."
+    },
+    {
+      "t": "p",
+      "x": "**6. Safety items.** Last on this list, but never skip them: test smoke and carbon monoxide alarms, check railings and secure entry locks."
+    },
+    {
+      "t": "h2",
+      "x": "Common areas count too"
+    },
+    {
+      "t": "p",
+      "x": "Prospects judge the building before they see the unit. Before winter showings:"
+    },
+    {
+      "t": "li",
+      "x": "Keep entrances clear of snow and ice, and well lit."
+    },
+    {
+      "t": "li",
+      "x": "Use durable entry mats and clean salt stains on lobby floors."
+    },
+    {
+      "t": "li",
+      "x": "Repair damaged entry doors, mailboxes and hallway flooring."
+    },
+    {
+      "t": "h2",
+      "x": "Plan winter-friendly renovation work"
+    },
+    {
+      "t": "p",
+      "x": "Winter is a good time for **interior** property management renovations: [kitchens](/services/kitchen-renovations), [bathrooms](/services/bathroom-renovations), [flooring](/services/flooring) and paint, because the work is indoors and less affected by the cold. Save exterior work like masonry, painting and siding for the warmer months."
+    },
+    {
+      "t": "h2",
+      "x": "Keep the turn short"
+    },
+    {
+      "t": "p",
+      "x": "Set a target for a standard turn, counted from move-out to show-ready, and track each unit against it. Ways to get there:"
+    },
+    {
+      "t": "oli",
+      "x": "Standardize finishes (one paint colour, one flooring, one fixture package) across units."
+    },
+    {
+      "t": "oli",
+      "x": "Keep a stock of common parts: hardware, faucets, outlets, blinds."
+    },
+    {
+      "t": "oli",
+      "x": "Schedule trades back-to-back, not one at a time."
+    },
+    {
+      "t": "oli",
+      "x": "Photograph and list the unit the day it's ready."
+    },
+    {
+      "t": "h2",
+      "x": "The bottom line"
+    },
+    {
+      "t": "p",
+      "x": "In winter, every vacant day counts. Property managers who plan turns before move-out, fix heat and drafts first, and standardize finishes give their units a better chance of leasing, even in January."
+    },
+    {
+      "t": "p",
+      "x": "**Planning winter turns?** Bridgeland Builders handles flooring, kitchens and bathrooms and quotes vacant-unit turnovers for property managers in Winnipeg and nearby communities, with a schedule in your written quote. [**Book a Free On-Site Visit**](/book-online)."
+    },
+    {
+      "t": "p",
+      "x": "General information, not legal advice. Ask the Residential Tenancies Branch what applies to your building."
+    },
+    {
+      "t": "p",
+      "x": "**Related reading:** [Flooring installation service](/services/flooring) · [Basement suite rental income in Winnipeg](/blog/basement-suite-rental-income-winnipeg) · [Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter](/blog/winnipeg-rent-prices-falling-2026)"
+    }
+  ]
+}

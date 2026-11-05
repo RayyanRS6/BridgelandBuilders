@@ -44,6 +44,13 @@
  * legacy files and entries are kept (less those no published post shows any
  * more) and only the cards are redone.
  *
+ * Client thumbnails: a published post without a `hero` that has a designed PNG
+ * at media-src/thumbnails/<slug>.png (git-ignored) uses it instead of a drawn
+ * card, in the same 'card:<slug>' entry with the same outputs and `thumbnail:
+ * true`. Its title is part of the picture, so nothing is cover-cropped: see
+ * thumbnailWide. Originals are only on the machine that has them, so an entry
+ * whose original is missing is kept with its files rather than redrawn.
+ *
  * Brand: public/og/default-1200x630.jpg (brand colours, logo-on-dark.png and
  * DM Sans text) and public/icons/icon-192.png, icon-512.png,
  * icon-maskable-512.png (the bridge mark from the 1080px master logo, else
@@ -105,6 +112,20 @@ const hash8 = (buffer) => createHash('sha256').update(buffer).digest('hex').slic
 const kb = (buffer) => Math.round(buffer.length / 102.4) / 10;
 const warnings = [];
 
+const MIN_QUALITY = 40;
+const QUALITY_STEP = 5;
+
+/** encode(quality), retried at lower qualities until it fits limitKb. No limit: one encode, whatever its size. */
+async function encodeWithin(encode, startQuality, limitKb) {
+  let quality = startQuality;
+  let buffer = await encode(quality);
+  while (limitKb && kb(buffer) > limitKb && quality > MIN_QUALITY) {
+    quality -= QUALITY_STEP;
+    buffer = await encode(quality);
+  }
+  return buffer;
+}
+
 function slugify(text, fallback) {
   const slug = String(text || '')
     .toLowerCase()
@@ -142,18 +163,20 @@ function writeOnce(dir, base, ext, buffer) {
 
 /* ================================================================ blog */
 
-async function variantSet(input, { dir, urlDir, base, ratio, originalWidth, label, sizes = WIDTHS }) {
+async function variantSet(input, { dir, urlDir, base, ratio, originalWidth, label, sizes = WIDTHS, keepBudgets = false }) {
   const widths = sizes.filter((w) => w <= originalWidth);
   if (!widths.length) widths.push(originalWidth);
   const main = widths.includes(MAIN_WIDTH) ? MAIN_WIDTH : widths[widths.length - 1];
   const avif = [];
   const webp = [];
   let mainWebp = null;
+  // keepBudgets trades quality for size. Otherwise past a budget is only a warning.
+  const limit = (kbLimit) => (keepBudgets ? kbLimit : 0);
   for (const width of widths) {
     const height = Math.round(width * ratio);
     const pipeline = () => sharp(input).rotate().resize({ width, height, fit: 'cover', position: 'centre' });
-    const avifBuf = await pipeline().avif({ quality: 50, effort: 4 }).toBuffer();
-    const webpBuf = await pipeline().webp({ quality: 76, effort: 5 }).toBuffer();
+    const avifBuf = await encodeWithin((quality) => pipeline().avif({ quality, effort: 4 }).toBuffer(), 50, limit(width === main ? LCP_BUDGET_KB : BUDGET_KB));
+    const webpBuf = await encodeWithin((quality) => pipeline().webp({ quality, effort: 5 }).toBuffer(), 76, limit(BUDGET_KB));
     for (const [buf, fmt] of [[avifBuf, 'avif'], [webpBuf, 'webp']]) {
       if (kb(buf) > BUDGET_KB) warnings.push(`${label} ${width}w ${fmt} is ${kb(buf)} KB (> ${BUDGET_KB} KB)`);
     }
@@ -209,17 +232,21 @@ async function buildBlog({ cardsOnly = false } = {}) {
   let media;
   let summary;
   if (!cardsOnly && existsSync(manifestPath)) {
+    // The legacy rebuild empties public/images/blog/, kept thumbnails included.
+    const kept = await savedThumbnails();
     ({ media, summary } = await buildLegacyImages(manifestPath));
+    restoreThumbnails(kept, media);
   } else {
     if (!cardsOnly) {
       console.log('[images] no media-src/manifest.json — legacy blog images kept as they are (run node scripts/fetch-legacy-images.mjs to rebuild them)');
     }
     media = await keptLegacyMedia();
-    summary = `${Object.keys(media).length} legacy entries kept`;
+    summary = `${Object.keys(media).length} entries kept`;
   }
   const cards = await buildTitleCards(media);
   writeFileSync(GENERATED, mediaModule(media));
-  console.log(`[images] blog: ${summary}; ${cards} title card(s); src/data/media.generated.js written`);
+  const thumbnails = Object.values(media).filter((entry) => entry.thumbnail).length;
+  console.log(`[images] blog: ${summary}; ${cards} title card(s), ${thumbnails} of them client thumbnails; src/data/media.generated.js written`);
   const longest = longestPath(BLOG_OUT);
   console.log(`[images] longest path: ${longest.length} characters (${longest})`);
   if (longest.length >= MAX_PATH) warnings.push(`${longest} is ${longest.length} characters (>= ${MAX_PATH}); shorten MAX_NAME or MAX_FOLDER`);
@@ -339,31 +366,37 @@ function currentUses() {
  * The current media.generated.js minus its title cards (whose files are
  * deleted, as they are redrawn next) and minus any original no published post
  * shows any more (files deleted too), for runs that do not rebuild the legacy
- * images.
+ * images. A kept thumbnail stays, files and all (keptThumbnails).
  */
 async function keptLegacyMedia() {
   if (!existsSync(GENERATED)) return {};
   const { MEDIA = {} } = await import(pathToFileURL(GENERATED).href);
   const current = currentUses();
+  const thumbnails = keptThumbnails(MEDIA);
   const media = {};
   for (const [key, entry] of Object.entries(MEDIA)) {
-    if (key.startsWith(CARD_PREFIX) || (current && !current.has(key))) removeImageFiles(entry);
+    if (!thumbnails.has(key) && (key.startsWith(CARD_PREFIX) || (current && !current.has(key)))) removeImageFiles(entry);
     else media[key] = entry;
   }
   return media;
 }
 
-/** Deletes the /images/blog/ files of a media entry (and its folder once empty). */
-function removeImageFiles(entry) {
+/** The /images/blog/ files of a media entry, as site paths. */
+function imageUrls(entry) {
   const sets = [entry.srcSet, entry.avifSrcSet, entry.hero?.srcSet, entry.hero?.avifSrcSet].flatMap((set) =>
     String(set || '').split(', ').map((item) => item.split(' ')[0])
   );
+  return [...new Set([entry.src, entry.og, entry.hero?.src, ...sets, ...(entry.schemaImages || [])])].filter((url) => url && url.startsWith('/images/blog/'));
+}
+
+const publicFile = (url) => join(PUBLIC, ...url.slice(1).split('/'));
+
+/** Deletes the /images/blog/ files of a media entry (and its folder once empty). */
+function removeImageFiles(entry) {
   const folders = new Set();
-  for (const url of new Set([entry.src, entry.og, entry.hero?.src, ...sets, ...(entry.schemaImages || [])])) {
-    if (!url || !url.startsWith('/images/blog/')) continue;
-    const parts = url.slice(1).split('/');
-    rmSync(join(PUBLIC, ...parts), { force: true });
-    folders.add(join(PUBLIC, ...parts.slice(0, -1)));
+  for (const url of imageUrls(entry)) {
+    rmSync(publicFile(url), { force: true });
+    folders.add(join(publicFile(url), '..'));
   }
   for (const folder of folders) {
     if (existsSync(folder) && !readdirSync(folder).length) rmSync(folder, { recursive: true, force: true });
@@ -388,6 +421,7 @@ function mediaModule(media) {
 //
 // '${CARD_PREFIX}<post-slug>' -> the branded title card of a published post without a
 // hero: src/srcSet/avifSrcSet/width/height (16:9), crop, og, schemaImages, and alt.
+// With thumbnail: true the same files come from the client's designed thumbnail.
 export const MEDIA = ${JSON.stringify(media, null, 2)};
 
 /** Self-hosted versions of an original image URL, or undefined. */
@@ -497,6 +531,19 @@ async function buildTitleCards(media) {
   if (!posts.length) return 0;
   const fonts = await dmSansFonts();
   for (const post of posts) {
+    const key = `${CARD_PREFIX}${post.slug}`;
+    const kept = media[key];
+    if (kept) {
+      // Moved to its place among the cards, so the generated file keeps one order.
+      delete media[key];
+      media[key] = kept;
+      continue;
+    }
+    if (existsSync(thumbnailFile(post.slug))) {
+      media[key] = await buildThumbnail(post);
+      process.stdout.write('.');
+      continue;
+    }
     const title = post.title.trim().replace(/\s+/g, ' ');
     const folder = folderFor(post.slug);
     const dir = join(BLOG_OUT, folder);
@@ -521,7 +568,7 @@ async function buildTitleCards(media) {
       schemaImages.push(`${urlDir}/${writeOnce(dir, `${base}-${w}x${h}`, 'jpg', jpg)}`);
     }
 
-    media[`${CARD_PREFIX}${post.slug}`] = {
+    media[key] = {
       ...set,
       crop: '16:9',
       og: `${urlDir}/${writeOnce(dir, `${base}-${OG.width}x${OG.height}`, 'jpg', og)}`,
@@ -532,6 +579,159 @@ async function buildTitleCards(media) {
   }
   process.stdout.write('\n');
   return posts.length;
+}
+
+/* ========================================================== thumbnails */
+
+const THUMBNAILS = join(MEDIA_SRC, 'thumbnails');
+const thumbnailFile = (slug) => join(THUMBNAILS, `${slug}.png`);
+// Text on a flat ground shows JPEG artefacts sooner than a photo does.
+const THUMBNAIL_JPEG_QUALITY = 84;
+
+/**
+ * The thumbnail entries of `media` to keep as they are: the post still shows
+ * one, and its original is not on this machine, so the only thing left to do
+ * would be to replace the client's design with a drawn card.
+ */
+function keptThumbnails(media) {
+  const showing = new Set(postsWithoutHero().map((post) => `${CARD_PREFIX}${post.slug}`));
+  return new Set(
+    Object.entries(media)
+      .filter(([key, entry]) => entry.thumbnail && showing.has(key) && !existsSync(thumbnailFile(key.slice(CARD_PREFIX.length))))
+      .map(([key]) => key)
+  );
+}
+
+/** Kept thumbnails' entries and file contents, to survive public/images/blog/ being emptied. */
+async function savedThumbnails() {
+  if (!existsSync(GENERATED)) return [];
+  const { MEDIA = {} } = await import(pathToFileURL(GENERATED).href);
+  return [...keptThumbnails(MEDIA)].map((key) => ({
+    key,
+    entry: MEDIA[key],
+    files: imageUrls(MEDIA[key]).filter((url) => existsSync(publicFile(url))).map((url) => [publicFile(url), readFileSync(publicFile(url))]),
+  }));
+}
+
+function restoreThumbnails(saved, media) {
+  for (const { key, entry, files } of saved) {
+    for (const [file, buffer] of files) {
+      mkdirSync(join(file, '..'), { recursive: true });
+      writeFileSync(file, buffer);
+    }
+    media[key] = entry;
+  }
+}
+
+/**
+ * A thumbnail's ground colour (the commonest colour on its border) and, when it
+ * has the client's layout, the column where its photo starts: from the top row
+ * to the bottom row one flat panel, then one narrow flat bar, then the photo.
+ */
+async function thumbnailLayout(input) {
+  const { data, info } = await sharp(input).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, height } = info;
+  const colourAt = (x, y) => {
+    const i = (y * width + x) * 3;
+    return (data[i] << 16) | (data[i + 1] << 8) | data[i + 2];
+  };
+  const counts = new Map();
+  const count = (x, y) => counts.set(colourAt(x, y), (counts.get(colourAt(x, y)) || 0) + 1);
+  for (let x = 0; x < width; x += 1) [0, height - 1].forEach((y) => count(x, y));
+  for (let y = 0; y < height; y += 1) [0, width - 1].forEach((x) => count(x, y));
+  const ground = [...counts].reduce((best, entry) => (entry[1] > best[1] ? entry : best))[0];
+
+  const runEnd = (x, y) => {
+    let end = x;
+    while (end < width && colourAt(end, y) === colourAt(x, y)) end += 1;
+    return end;
+  };
+  const [panel, bar] = [runEnd(0, 0), runEnd(runEnd(0, 0), 0)];
+  const sameBelow = runEnd(0, height - 1) === panel && runEnd(panel, height - 1) === bar;
+  const usual = colourAt(0, 0) === ground && sameBelow && panel > width * 0.3 && bar - panel < width * 0.05 && bar < width * 0.9;
+  return { width, height, background: `#${ground.toString(16).padStart(6, '0')}`, photoLeft: usual ? bar : 0 };
+}
+
+/** The whole image inside width x height, on the thumbnail's ground colour. */
+const fittedFrame = (input, width, height, background) =>
+  sharp(input).resize({ width, height, fit: 'contain', background }).flatten({ background }).png().toBuffer();
+
+/**
+ * The thumbnail as a 16:9 frame, the shape of the blog card box. The originals
+ * are wider (1200x630), and a centred cut would clip the logo chip and crowd
+ * the title. So the panel and bar grow by their own flat colours, which leaves
+ * every word in place, and the photo is re-cut to the full height from its top
+ * right corner, where the chip sits; only the photo's inner edge is lost. An
+ * image without that layout is shown whole on its ground colour.
+ */
+async function thumbnailWide(input, { width, height, background, photoLeft }) {
+  const frameHeight = Math.round((width * 9) / 16);
+  if (!photoLeft || frameHeight <= height) return fittedFrame(input, width, frameHeight, background);
+  const top = Math.floor((frameHeight - height) / 2);
+  const panel = await sharp(input)
+    .extract({ left: 0, top: 0, width: photoLeft, height })
+    .extend({ top, bottom: frameHeight - height - top, extendWith: 'copy' })
+    .png()
+    .toBuffer();
+  const photo = await sharp(input)
+    .extract({ left: photoLeft, top: 0, width: width - photoLeft, height })
+    .resize({ width: width - photoLeft, height: frameHeight, fit: 'cover', position: 'right top' })
+    .png()
+    .toBuffer();
+  return sharp({ create: { width, height: frameHeight, channels: 3, background } })
+    .composite([
+      { input: panel, left: 0, top: 0 },
+      { input: photo, left: photoLeft, top: 0 },
+    ])
+    .png()
+    .toBuffer();
+}
+
+/** A frame as a JPEG within limitKb, lowering the quality only if it has to. */
+async function thumbnailJpeg(frame, limitKb, label) {
+  const jpg = await encodeWithin((quality) => sharp(frame).jpeg({ quality, mozjpeg: true, progressive: true }).toBuffer(), THUMBNAIL_JPEG_QUALITY, limitKb);
+  if (kb(jpg) > limitKb) warnings.push(`${label} is ${kb(jpg)} KB (> ${limitKb} KB)`);
+  return jpg;
+}
+
+/**
+ * A post's 'card:<slug>' entry from its client thumbnail: what a drawn card
+ * writes (same widths, AVIF and WebP, OG, three article JPEGs). The title is
+ * part of the picture, so OG, 4:3 and 1:1 show the whole image inside the frame
+ * on its ground colour, never a cover crop.
+ */
+async function buildThumbnail(post) {
+  const input = readFileSync(thumbnailFile(post.slug));
+  const title = post.title.trim().replace(/\s+/g, ' ');
+  const folder = folderFor(post.slug);
+  const dir = join(BLOG_OUT, folder);
+  const urlDir = `/images/blog/${folder}`;
+  mkdirSync(dir, { recursive: true });
+  const base = slugify(title, `${post.slug}-card`);
+  const label = `${post.slug} (thumbnail)`;
+
+  const layout = await thumbnailLayout(input);
+  if (!layout.photoLeft) warnings.push(`${label} does not have the usual panel, bar and photo: its 16:9 frame shows it whole on ${layout.background}`);
+  const wide = await thumbnailWide(input, layout);
+  const { set, mainKb } = await variantSet(wide, { dir, urlDir, base, ratio: 9 / 16, originalWidth: CARD_LAYOUTS.hero.width, label, keepBudgets: true });
+  if (mainKb.avifKb > LCP_BUDGET_KB) warnings.push(`${label} ${MAIN_WIDTH}w AVIF is ${mainKb.avifKb} KB (> ${LCP_BUDGET_KB} KB LCP budget)`);
+
+  const og = await thumbnailJpeg(await fittedFrame(input, OG.width, OG.height, layout.background), BUDGET_KB, `${label} OG image`);
+  const schemaImages = [];
+  for (const { width: w, height: h, layout: shape } of ARTICLE_SIZES) {
+    const frame = await fittedFrame(shape === 'article16x9' ? wide : input, w, h, layout.background);
+    const jpg = await thumbnailJpeg(frame, ARTICLE_BUDGET_KB, `${label} ${w}x${h} article image`);
+    schemaImages.push(`${urlDir}/${writeOnce(dir, `${base}-${w}x${h}`, 'jpg', jpg)}`);
+  }
+
+  return {
+    ...set,
+    crop: '16:9',
+    og: `${urlDir}/${writeOnce(dir, `${base}-${OG.width}x${OG.height}`, 'jpg', og)}`,
+    schemaImages,
+    alt: post.thumbAlt || title,
+    thumbnail: true,
+  };
 }
 
 /** One title card as a PNG: SVG background and bars, DM Sans text on top. */

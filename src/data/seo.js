@@ -152,7 +152,7 @@ export const PAGE_SEO = {
     title: 'Winnipeg Renovation Guides | Bridgeland Builders',
     description:
       'Renovation guides for Winnipeg homes and businesses: costs, permits, basements, kitchens and bathrooms, hiring a contractor, commercial work and money.',
-    updated: '2026-10-23',
+    updated: '2026-11-05',
   },
   // Second contact page, holding the GoHighLevel form with the SMS consent
   // checkbox that the Privacy Policy and Terms of Service point to (A2P). Kept
@@ -230,14 +230,19 @@ export const organizationNamed = {
 
 /**
  * ISO 8601 date-time for a YYYY-MM-DD date, at midnight in Winnipeg with the
- * offset in force that day (-06:00 CST or -05:00 CDT). Values that already
- * carry a time are returned unchanged. If the runtime has no time-zone data
- * the bare date is returned rather than a guessed offset.
+ * offset in force that day: -06:00 CST or -05:00 CDT up to October 2026, then
+ * -05:00 all year. Values that already carry a time are returned unchanged. If
+ * the runtime has no time-zone data the bare date is returned rather than a
+ * guessed offset.
  */
 export function isoWinnipeg(date) {
   if (!date) return undefined;
   const value = String(date);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  // Manitoba stays on UTC-5 all year: clocks did not go back on 2026-11-01
+  // (gov.mb.ca/timechange, tz data 2026e). Not left to Intl, so the build and
+  // every browser agree whatever time-zone data they carry.
+  if (value >= '2026-11-01') return `${value}T00:00:00-05:00`;
   // 06:00 UTC is midnight CST / 1 am CDT — always before the 2 am DST switch,
   // so this instant has the offset that applied at local midnight.
   const offset = winnipegOffset(new Date(`${value}T06:00:00Z`));
@@ -556,9 +561,14 @@ export function buildFaqPage(path, faqs) {
   };
 }
 
+// The Blog node names only the newest posts: it is not a sitemap, and listing
+// all of them would add about 700 bytes per post to the /blog head.
+export const BLOG_NODE_POST_LIMIT = 20;
+
 /**
- * The Blog node for /blog, listing every published post. Shared by the
- * prerender (head.js) and the blog page so both emit identical JSON-LD.
+ * The Blog node for /blog, listing the newest published posts (`posts` is
+ * newest first). Shared by the prerender (head.js) and the blog page so both
+ * emit identical JSON-LD.
  */
 export function buildBlogNode({ posts, description }) {
   return {
@@ -569,7 +579,7 @@ export function buildBlogNode({ posts, description }) {
     description,
     publisher: organizationRef,
     inLanguage: 'en-CA',
-    blogPost: (posts || []).map((post) => ({
+    blogPost: (posts || []).slice(0, BLOG_NODE_POST_LIMIT).map((post) => ({
       '@type': 'BlogPosting',
       '@id': `${SITE_URL}/blog/${post.slug}#article`,
       headline: post.title,

@@ -14,16 +14,21 @@
  *                             reviewedBy } and `related` (three ranked cards).
  *   src/data/postCards/<slug>.js  CLIENT. One post's card, for the guides on
  *                             service pages (content.guides).
- *   src/data/blogList.js      CLIENT. Everything /blog renders in one module:
- *                             BLOG_CATEGORIES and BLOG_LIST (cards plus
- *                             categories). Cards carry a self-hosted hero as
- *                             a compact record (src/lib/cardImage.js), not
- *                             as srcset strings.
+ *   src/data/blogList.js      CLIENT. What /blog renders first, in one module:
+ *                             BLOG_CATEGORIES, the card counts, BLOG_LIST (the
+ *                             newest cards plus categories) and BLOG_TITLES
+ *                             (every other post as a title link). Cards carry
+ *                             a self-hosted hero as a compact record
+ *                             (src/lib/cardImage.js), not as srcset strings.
+ *   src/data/blogListRest.js  CLIENT, lazy. BLOG_REST: the cards BLOG_LIST
+ *                             leaves out. BlogPage loads it for "Show more"
+ *                             and the category filter, never on first load.
  *   src/data/blogListSeo.js   CLIENT, lazy. BLOG_NODE_POSTS: what the /blog
  *                             Blog node lists per post (title, metaDescription,
- *                             date, ogImage). BlogPage loads it only when the
- *                             head has to be written (a client-side
- *                             navigation), never on the prerendered page.
+ *                             date, ogImage) for the newest posts it lists.
+ *                             BlogPage loads it only when the head has to be
+ *                             written (a client-side navigation), never on the
+ *                             prerendered page.
  *   src/data/homeGuides.js    CLIENT. The three guide cards on the home page
  *                             (GUIDE_SLUGS below).
  *   src/data/blogIndex.js     CLIENT. BLOG_CARDS: every published post's card
@@ -56,6 +61,16 @@
  *   ctaService?     a service path (src/data/services.js) for the post's
  *                   service CTA, used first whenever that page is live
  *                   (overrides the services[] rule above)
+ *   ctaPrimary?     'visit' = the post's red button and bottom banner offer a
+ *                   free on-site visit (/book-online) instead of the instant
+ *                   quote, whose estimator only prices kitchens, bathrooms
+ *                   and basements. Absent = the instant quote.
+ *   listOrder?      among posts with the same date, lower numbers are listed
+ *                   first (then by slug); posts without one come after. Build
+ *                   only, not part of any client module.
+ *   thumbAlt?       alt text of the client thumbnail (media-src/thumbnails/
+ *                   <slug>.png, scripts/build-images.mjs) when it is the
+ *                   post's card, in place of "Title card: <title>"
  *   cluster         topic id shared by posts on one subject ('' = none)
  *   reviewBy?       YYYY-MM-DD: the post carries facts tied to a date (an
  *                   event, a season, a program year, a monthly figure);
@@ -103,6 +118,7 @@ const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const POSTS_DIR = join(ROOT, 'blog-raw', 'posts');
 const OUT_INDEX = join(ROOT, 'src', 'data', 'blogIndex.js');
 const OUT_LIST = join(ROOT, 'src', 'data', 'blogList.js');
+const OUT_LIST_REST = join(ROOT, 'src', 'data', 'blogListRest.js');
 const OUT_LIST_SEO = join(ROOT, 'src', 'data', 'blogListSeo.js');
 const OUT_HOME = join(ROOT, 'src', 'data', 'homeGuides.js');
 const OUT_FULL = join(ROOT, 'src', 'data', 'blogPosts.js');
@@ -117,6 +133,12 @@ const GUIDE_SLUGS = [
   'basement-development-permits-winnipeg',
 ];
 const GUIDE_COUNT = 3;
+
+// /blog shows the featured card and a grid of 12 first, so the grid's rows are
+// full at two and three columns, then reveals 12 more at a time. Its first load
+// stays small however many posts there are.
+const LIST_FIRST_CARDS = 13;
+const LIST_PAGE_SIZE = 12;
 
 // Calculators a post body can embed ({"t": "calculator", "id": …}): the ids
 // src/components/Calculator.jsx knows. An unknown id would render nothing.
@@ -251,6 +273,7 @@ function heroImages(p) {
       ...(card.avifSrcSet ? { heroAvifSrcSet: card.avifSrcSet } : {}),
       ogImage: card.og,
       ...schemaImagesOf(card, p.slug),
+      ...(card.thumbnail ? { thumbnail: true } : {}),
     };
   }
   const media = mediaFor(p.hero);
@@ -391,6 +414,13 @@ function metaTitleFor(p) {
   return branded.length <= 60 ? branded : p.title;
 }
 
+/** Alt text (og:image:alt) of a post without a hero: the client thumbnail's own, else the title card's. */
+function cardAlt(p) {
+  const card = MEDIA && MEDIA[`card:${p.slug}`];
+  if (!card) return p.title;
+  return (card.thumbnail && p.thumbAlt) || `Title card: ${p.title}`;
+}
+
 /* -------------------------------------------------------------- build */
 const published = raw.filter((p) => statusOf(p) === 'published');
 
@@ -431,6 +461,8 @@ for (const p of published) {
   if (p.reviewBy !== undefined && !(/^\d{4}-\d{2}-\d{2}$/.test(p.reviewBy || '') && !Number.isNaN(Date.parse(p.reviewBy)))) {
     fail(`${p.slug}: reviewBy must be a YYYY-MM-DD date`);
   }
+  if (p.ctaPrimary !== undefined && p.ctaPrimary !== 'visit') fail(`${p.slug}: ctaPrimary must be "visit" (or left out)`);
+  if (p.listOrder !== undefined && !Number.isFinite(p.listOrder)) fail(`${p.slug}: listOrder must be a number`);
 }
 
 const bodies = new Map();
@@ -462,11 +494,12 @@ let posts = published.map((p) => {
     readMinutes: Math.max(3, Math.round(postTexts(p).reduce((n, text) => n + countWords(text), 0) / 200)),
     hero: p.hero,
     ...heroImages(p),
-    heroAlt: p.hero ? p.heroAlt || p.title : MEDIA && MEDIA[`card:${p.slug}`] ? `Title card: ${p.title}` : p.title,
+    heroAlt: p.hero ? p.heroAlt || p.title : cardAlt(p),
     author: p.author || '',
     reviewedBy: p.reviewedBy || '',
     services: p.services || [],
     ...(p.ctaService ? { ctaService: p.ctaService } : {}),
+    ...(p.ctaPrimary ? { ctaPrimary: p.ctaPrimary } : {}),
     cluster: p.cluster || '',
     memberOnly: !!p.memberOnly,
   };
@@ -474,7 +507,11 @@ let posts = published.map((p) => {
 // Build-only (blogPosts.js, for audit-seo): not part of any client module.
 const reviewByOf = new Map(published.filter((p) => p.reviewBy).map((p) => [p.slug, p.reviewBy]));
 
-posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.slug.localeCompare(b.slug)));
+// Build-only too: the order is written into every list, so no page needs the number.
+const listOrderOf = new Map(published.filter((p) => p.listOrder !== undefined).map((p) => [p.slug, p.listOrder]));
+const listOrder = (post) => listOrderOf.get(post.slug) ?? Number.MAX_SAFE_INTEGER;
+
+posts.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : listOrder(a) - listOrder(b) || a.slug.localeCompare(b.slug)));
 
 /**
  * Plan §7 category set for /blog. A post opts in by carrying one of these in
@@ -490,6 +527,8 @@ const CATEGORY_SET = [
   'Hiring a Contractor',
   'Commercial',
   'Money & Rebates',
+  'Landlords & Property Managers',
+  'Winnipeg Market News',
 ];
 for (const p of published) {
   for (const cat of p.cats || []) {
@@ -521,6 +560,9 @@ for (const r of redirects) {
 }
 
 /* ------------------------------------------------------ link checks */
+// An absolute link to this site would skip every check below and could ship a
+// link to a 404, opening in a new tab with a full page load.
+const OWN_DOMAIN_LINK = /^https?:\/\/(?:www\.)?bridgelandbuilders\.com(?:[/?#]|$)/i;
 const cleanPath = (path) => (path.length > 1 ? path.replace(/\/+$/, '') : path);
 const redirectSources = new Set([
   ...redirects.map((r) => r.from),
@@ -547,7 +589,8 @@ for (const p of published) {
   for (const text of postTexts(p)) {
     for (const [, , href] of String(text).matchAll(INLINE_LINK)) {
       if (!href.startsWith('/')) {
-        if (!/^(https:\/\/|mailto:|tel:)/.test(href)) fail(`${p.slug}: link "${href}" must be a /path, https://, mailto: or tel: URL`);
+        if (OWN_DOMAIN_LINK.test(href)) fail(`${p.slug}: link ${href} is an absolute link to this site: use the /path`);
+        else if (!/^(https:\/\/|mailto:|tel:)/.test(href)) fail(`${p.slug}: link "${href}" must be a /path, https://, mailto: or tel: URL`);
         continue;
       }
       if (href.includes('?')) {
@@ -697,11 +740,13 @@ function cardHero(post) {
 }
 
 // A compact card drops the original `hero` URL, so `titleCard: true` says the
-// image is the post's branded title card (no hero photo). Cards with strings
-// keep `hero`, and BlogCard tells the two apart as it always has.
+// image is the post's branded title card (no hero photo), and `thumbnail: true`
+// that it is the client's thumbnail in that place. Cards with strings keep
+// `hero`, and BlogCard tells the two apart as it always has.
 function cardOf(post) {
   const hero = cardHero(post);
-  return { ...pick(post, CARD_TEXT_FIELDS), ...hero, ...(hero.image && !post.hero ? { titleCard: true } : {}) };
+  const kind = post.thumbnail ? { thumbnail: true } : { titleCard: true };
+  return { ...pick(post, CARD_TEXT_FIELDS), ...hero, ...(hero.image && !post.hero ? kind : {}) };
 }
 
 const indexOut = `${HEADER}
@@ -716,24 +761,47 @@ const indexOut = `${HEADER}
 export const BLOG_CARDS = ${json(posts.map((post) => ({ ...cardOf(post), ...pick(post, ['categories', 'services', 'cluster']) })))};
 ${helpers('BLOG_CARDS')}`;
 
+const listCard = (post) => ({ ...cardOf(post), ...pick(post, ['categories']) });
+
 const listOut = `${HEADER}
 //
-// Everything /blog (src/pages/BlogPage.jsx) renders, in one module: the filter
-// categories and every published post's card and categories. What only its
-// Blog node needs (meta descriptions, 1200x630 images) is in blogListSeo.js,
-// loaded only when the head has to be written.
+// What /blog (src/pages/BlogPage.jsx) renders first, in one module: the filter
+// categories, the newest posts' cards and every other post as a title link.
+// The other posts' cards are in blogListRest.js, loaded when a visitor asks for
+// more or picks a category. What only its Blog node needs (meta descriptions,
+// 1200x630 images) is in blogListSeo.js, loaded only when the head has to be
+// written.
 
 /** Filter categories for /blog. */
 export const BLOG_CATEGORIES = ${json(categories)};
 
-/** Published posts only (blog-raw status "published"), newest first. */
-export const BLOG_LIST = ${json(posts.map((post) => ({ ...cardOf(post), ...pick(post, ['categories']) })))};
+/** How many cards /blog shows first. */
+export const BLOG_FIRST_CARDS = ${LIST_FIRST_CARDS};
+
+/** How many more cards each "Show more" reveals. */
+export const BLOG_PAGE_SIZE = ${LIST_PAGE_SIZE};
+
+/** The newest published posts (blog-raw status "published"), newest first, as cards. */
+export const BLOG_LIST = ${json(posts.slice(0, LIST_FIRST_CARDS).map(listCard))};
+
+/** Every other published post, newest first, as a title link. */
+export const BLOG_TITLES = ${json(posts.slice(LIST_FIRST_CARDS).map((post) => pick(post, ['slug', 'title'])))};
+`;
+
+const listRestOut = `${HEADER}
+//
+// The cards blogList.js leaves out. BlogPage.jsx imports this lazily, when a
+// visitor asks for more cards or picks a category.
+
+/** The published posts after BLOG_LIST, newest first, as cards. */
+export const BLOG_REST = ${json(posts.slice(LIST_FIRST_CARDS).map(listCard))};
 `;
 
 // The /blog Blog node (seo.js buildBlogNode) per post: the same fields, in the
 // same order, as head.js builds it from blogPosts.js for the prerender. The
 // original hero is only its fallback image, so it is left out when there is
-// an ogImage.
+// an ogImage. Only the posts the node lists, so this chunk stops growing too.
+const BLOG_NODE_POST_LIMIT = (seoModule && seoModule.BLOG_NODE_POST_LIMIT) || 20;
 const blogNodePost = (post) => ({
   ...pick(post, ['slug', 'title', 'metaDescription', 'date', 'ogImage']),
   ...(post.ogImage ? {} : pick(post, ['hero'])),
@@ -745,8 +813,8 @@ const listSeoOut = `${HEADER}
 // the head has to be written (a client-side navigation to /blog): the
 // prerendered page already has the same head (src/data/head.js).
 
-/** Published posts only (blog-raw status "published"), newest first. */
-export const BLOG_NODE_POSTS = ${json(posts.map(blogNodePost))};
+/** The newest published posts (blog-raw status "published"), newest first. */
+export const BLOG_NODE_POSTS = ${json(posts.slice(0, BLOG_NODE_POST_LIMIT).map(blogNodePost))};
 `;
 
 for (const slug of GUIDE_SLUGS) {
@@ -807,6 +875,7 @@ for (const post of posts) {
 }
 writeFileSync(OUT_INDEX, indexOut);
 writeFileSync(OUT_LIST, listOut);
+writeFileSync(OUT_LIST_REST, listRestOut);
 writeFileSync(OUT_LIST_SEO, listSeoOut);
 writeFileSync(OUT_HOME, homeOut);
 writeFileSync(OUT_FULL, fullOut);

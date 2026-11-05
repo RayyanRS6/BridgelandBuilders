@@ -6,286 +6,146 @@
 // the head has to be written (a client-side navigation to /blog): the
 // prerendered page already has the same head (src/data/head.js).
 
-/** Published posts only (blog-raw status "published"), newest first. */
+/** The newest published posts (blog-raw status "published"), newest first. */
 export const BLOG_NODE_POSTS = [
   {
-    "slug": "basement-suite-rental-income-winnipeg",
-    "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
-    "metaDescription": "Renting out a Winnipeg basement suite: permits, code ceiling heights, egress and fire separation, CMHC rent figures, and a payback calculator.",
-    "date": "2026-10-23",
-    "ogImage": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental-1200x630.89b9628c.jpg"
+    "slug": "vacant-storefront-renovation-winnipeg",
+    "title": "Vacant Storefront Renovation: Re-Lease Winnipeg Retail",
+    "metaDescription": "Why storefronts sit empty and the targeted retail renovations that can help Winnipeg landlords re-lease, from façades to vanilla box shells and permits.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/vacant-storefront-renovation-winnipeg/vacant-storefront-renovation-re-1200x630.306a1194.jpg"
   },
   {
-    "slug": "asbestos-testing-before-renovating-manitoba",
-    "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
-    "metaDescription": "When to test for asbestos before renovating in Manitoba, what to do about vermiculite insulation, and what the Province’s 2025 asbestos rule changes mean.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before-1200x630.85e7027f.jpg"
+    "slug": "tenant-improvement-allowance-winnipeg",
+    "title": "Tenant Improvement Allowances in Winnipeg: Who Pays for What",
+    "metaDescription": "How tenant improvement allowances work in Winnipeg office, retail and medical leases, three common TI structures and what to settle before signing.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances-1200x630.7f726a79.jpg"
   },
   {
-    "slug": "builders-lien-holdback-manitoba",
-    "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
-    "metaDescription": "How Manitoba's 7.5% builders' lien holdback works on a renovation: the 60-day period, substantial performance, liens, holdback accounts and prompt payment.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7-1200x630.9da2ce8b.jpg"
+    "slug": "winter-unit-turnover-checklist-winnipeg",
+    "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+    "metaDescription": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x630.2755e97d.jpg"
   },
   {
-    "slug": "check-permit-history-winnipeg-house",
-    "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
-    "metaDescription": "Check a Winnipeg home’s permit history: the City’s free permit search, open permits and orders, what each status means, and how Permit Amnesty works.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x630.8eb4b6d0.jpg"
+    "slug": "renovating-an-office-while-working",
+    "title": "Renovating an Office While Working: A Phasing Guide",
+    "metaDescription": "How to plan an office renovation around a working office: phasing, after-hours work, protecting people and data, and what to expect from your contractor.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working-1200x630.c972fce0.jpg"
   },
   {
-    "slug": "occupancy-permit-change-of-use-winnipeg",
-    "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
-    "metaDescription": "When a Winnipeg commercial space needs an occupancy permit, when a new tenant doesn't, what counts as a change of use, and what to check before you lease.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x630.d6f1bcd2.jpg"
+    "slug": "commercial-interior-demolition-winnipeg",
+    "title": "Commercial Interior Demolition: Step One in Repositioning",
+    "metaDescription": "From vacant retail units to Class B office floors, Winnipeg repositioning often starts with commercial interior demolition. How to plan a strip-out.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step-1200x630.8d75aacc.jpg"
   },
   {
-    "slug": "removing-a-load-bearing-wall-winnipeg",
-    "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
-    "metaDescription": "Removing a load-bearing wall in Winnipeg: when the City wants structural or engineered drawings, why LVL beams need an engineer, and what gets inspected.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x630.1bd584b1.jpg"
+    "slug": "restaurant-renovation-checklist-winnipeg",
+    "title": "Restaurant Renovation Checklist for Winnipeg Owners",
+    "metaDescription": "A restaurant renovation checklist for Winnipeg owners: approvals, ventilation, kitchen planning, conversions and the questions to ask a renovation company.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/restaurant-renovation-checklist-winnipeg/restaurant-renovation-checklist-1200x630.a37bc703.jpg"
   },
   {
-    "slug": "window-condensation-winnipeg-winter",
-    "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
-    "metaDescription": "Why windows frost up in a Winnipeg winter, NRCan's humidity limits from 0°C to −40°C, what fog between the panes means, and when to replace windows.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x630.a5ce35d5.jpg"
+    "slug": "convert-house-to-duplex-winnipeg",
+    "title": "Convert a House to a Duplex in Winnipeg: Rules and Options",
+    "metaDescription": "Many Winnipeg lots can now hold up to four units. Compare duplex and triplex conversions and basement suites, and the permits each one needs.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/convert-house-to-duplex-winnipeg/convert-a-house-to-a-duplex-1200x630.3a99df61.jpg"
   },
   {
-    "slug": "home-renovation-cost-canada",
-    "title": "How Much Does a Home Renovation Cost in Canada?",
-    "metaDescription": "There’s no official average renovation cost in Canada. What Statistics Canada data does show, why per-square-foot prices mislead, and our Winnipeg ranges.",
-    "date": "2026-10-14",
-    "ogImage": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x630.2525769f.jpg"
+    "slug": "medical-clinic-design-layout-winnipeg",
+    "title": "Medical Clinic Design and Layout: Planning a Winnipeg Clinic",
+    "metaDescription": "How to plan a medical clinic layout that works: patient and staff flow, privacy, accessibility, cleanable finishes and less downtime during renovation.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1200x630.76cc0085.jpg"
   },
   {
-    "slug": "basement-development-permits-winnipeg",
-    "title": "Basement Development Permits in Winnipeg: How to Apply",
-    "metaDescription": "What Winnipeg requires to finish a basement: when you need a permit, ceiling heights, bedroom windows, insulation, alarms, drawings and inspections.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x630.e8c47488.jpg"
+    "slug": "brick-repointing-cost-winnipeg-walk-ups",
+    "title": "Brick Repointing in Winnipeg Walk-Ups: Plan the Masonry Bill",
+    "metaDescription": "Many of Winnipeg's brick apartment buildings are decades old. Signs of masonry trouble, what drives repointing cost, and how to plan repairs.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/brick-repointing-cost-winnipeg-walk-ups/brick-repointing-in-winnipeg-walk-1200x630.26c91eba.jpg"
   },
   {
-    "slug": "basement-flood-protection-winnipeg",
-    "title": "Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits",
-    "metaDescription": "How backwater valves and sump pits protect Winnipeg basements, which homes must have them, the permits involved, and why the City subsidy no longer exists.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x630.bca545a6.jpg"
+    "slug": "office-building-upgrades-attract-tenants",
+    "title": "8 Office Building Upgrades That Attract Tenants in 2027",
+    "metaDescription": "With little new office supply in Winnipeg, these eight office upgrades can help existing buildings win tenants in 2027, from spec suites to lobbies.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1200x630.b786a6d0.jpg"
   },
   {
-    "slug": "clay-soil-basement-cracks-winnipeg",
-    "title": "Clay Soil and Basement Cracks in Winnipeg: What’s Normal",
-    "metaDescription": "Why Winnipeg’s clay moves foundations, which basement cracks to watch, when to call a structural engineer, and how to finish a basement on moving soil.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x630.1ca49e3e.jpg"
+    "slug": "capital-planning-property-managers-winnipeg",
+    "title": "Data-Driven Capital Planning: How Winnipeg Property Managers Can Spend Smarter",
+    "metaDescription": "Your work orders, complaints and turnover records show where capital spending saves most. How Winnipeg property managers build plans owners approve.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how-1200x630.a89d87ff.jpg"
   },
   {
-    "slug": "clinic-renovation-permits-winnipeg",
-    "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
-    "metaDescription": "Renovating a medical, dental or physio clinic in Winnipeg? The permits, sealed drawings, X-ray approvals, accessibility rules and occupancy steps to plan.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x630.bc757f21.jpg"
+    "slug": "pre-listing-renovations-winnipeg",
+    "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
+    "metaDescription": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x630.80bcfc97.jpg"
   },
   {
-    "slug": "ensuite-renovation-winnipeg",
-    "title": "How Much Should an Ensuite Renovation Cost in Winnipeg?",
-    "metaDescription": "What sets the cost of an ensuite renovation in Winnipeg: layout, shower, plumbing moves and finishes, plus timelines, permits and where to see prices.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x630.ccbdff08.jpg"
+    "slug": "purchase-plus-improvements-mortgage-winnipeg",
+    "title": "Purchase Plus Improvements Mortgage: Winnipeg Fixer-Uppers",
+    "metaDescription": "How Winnipeg buyers use a purchase plus improvements mortgage to renovate a fixer-upper, what lenders need, and how to get a realistic quote first.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x630.6e2a7fc4.jpg"
   },
   {
-    "slug": "exterior-painting-winnipeg-when-to-paint",
-    "title": "When to Paint Your House Exterior in Winnipeg",
-    "metaDescription": "When to paint a house exterior in Winnipeg, how weather affects paint, prep for older homes with possible lead paint, and what a quote should cover.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x630.8d9272ff.jpg"
+    "slug": "efficiency-manitoba-commercial-rebates",
+    "title": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
+    "metaDescription": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x630.fee273a5.jpg"
   },
   {
-    "slug": "home-additions-and-zoning-winnipeg",
-    "title": "Home Addition Zoning in Winnipeg: Permits and Variances",
-    "metaDescription": "Planning an addition in Winnipeg? What the development and building permits check, how variances work, and what the 2025 infill zoning changes mean.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x630.420c23b0.jpg"
+    "slug": "small-commercial-renovation-ideas",
+    "title": "10 Small Commercial Renovation Ideas With Big Impact",
+    "metaDescription": "Ten small commercial renovations for Winnipeg offices, shops, clinics and multi-unit buildings that change how a space feels, without a full renovation.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1200x630.29656878.jpg"
   },
   {
-    "slug": "home-renovation-financing-canada",
-    "title": "Home Renovation Financing in Canada: Your Options",
-    "metaDescription": "How Canadians pay for renovations: HELOCs, refinancing, home equity and personal loans, lines of credit, CMHC suite refinancing, and which programs closed.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x630.fdd817b3.jpg"
+    "slug": "how-to-vet-commercial-renovation-contractors-winnipeg",
+    "title": "How to Find and Vet Commercial Renovation Contractors in Winnipeg",
+    "metaDescription": "How to find, shortlist and vet commercial renovation contractors in Winnipeg: where to look, documents to request, smart questions and red flags.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-1200x630.9ea63fbd.jpg"
   },
   {
-    "slug": "home-renovation-planning-guide-canada",
-    "title": "Home Renovation Planning in Canada: Guide and Checklist",
-    "metaDescription": "Plan a home renovation in Canada step by step: goals, budget, permits, timeline, asbestos and radon checks before demolition, and a full checklist.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/home-renovation-planning-guide-canada/title-card-home-renovation-planning-1200x630.95c71e72.jpg"
+    "slug": "winnipeg-housing-starts-older-rental-buildings",
+    "title": "Winnipeg's Housing Starts Boom and the Older Rental Problem",
+    "metaDescription": "Winnipeg housing starts rose 40.4% from January to July 2026. What that means for older apartment blocks, and why a planned renovation program wins.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/winnipeg-housing-starts-older-rental/winnipegs-housing-starts-boom-1200x630.b31ab7ed.jpg"
   },
   {
-    "slug": "how-to-check-a-contractors-wcb-clearance-manitoba",
-    "title": "How to Check a Contractor's WCB Clearance in Manitoba",
-    "metaDescription": "Step by step: how Manitoba homeowners request a contractor's WCB clearance letter online, what it proves, and what to do if the contractor isn't listed.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/how-to-check-a-contractors-wcb-clearance/title-card-how-to-check-1200x630.8a999200.jpg"
+    "slug": "cost-of-tenant-turnover-winnipeg",
+    "title": "The Cost of Tenant Turnover: Retention Math for Winnipeg",
+    "metaDescription": "One tenant turnover can cost a Winnipeg landlord thousands of dollars. A worksheet to work out yours, and why window and door upgrades help retention.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1200x630.bae48e84.jpg"
   },
   {
-    "slug": "insulation-rebates-during-a-renovation-manitoba",
-    "title": "Insulation Rebates in Manitoba: How to Use Them During a Renovation",
-    "metaDescription": "Efficiency Manitoba's insulation rebate needs approval before drywall comes down. Rates by area, the steps, and which programs are open or closed in 2026.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/insulation-rebates-during-a-renovation/title-card-insulation-rebates-1200x630.5496f199.jpg"
+    "slug": "apartment-lobby-renovation-ideas",
+    "title": "Apartment Lobby Renovation Ideas Borrowed From Hotels",
+    "metaDescription": "Hotels know guests judge them by the lobby and hallway, and tenants do too. Apartment and office lobby renovation ideas from the hospitality playbook.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/apartment-lobby-renovation-ideas/apartment-lobby-renovation-ideas-1200x630.4179059e.jpg"
   },
   {
-    "slug": "manitoba-renovation-tax-credits-rebates",
-    "title": "Home Renovation Grants and Tax Credits in Manitoba",
-    "metaDescription": "Which renovation tax credits, rebates and loans Manitoba homeowners can still use, which programs have closed, and how to avoid losing a rebate.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/manitoba-renovation-tax-credits-rebates/title-card-home-renovation-grants-1200x630.a6d534f4.jpg"
-  },
-  {
-    "slug": "office-fit-up-lease-planning-winnipeg",
-    "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
-    "metaDescription": "Plan a Winnipeg office fit-up around your lease: landlord consent, tenant allowances, City permits, inspections and the occupancy permit before move-in.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg-1200x630.96b0b61e.jpg"
-  },
-  {
-    "slug": "planning-a-winter-basement-development-winnipeg",
-    "title": "Planning a Winter Basement Development in Winnipeg",
-    "metaDescription": "How to plan a basement development over a Winnipeg winter: permit timing, radon testing, egress windows in frozen ground, inspections and a timeline.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/planning-a-winter-basement-development/title-card-planning-a-winter-1200x630.d192608b.jpg"
-  },
-  {
-    "slug": "radon-testing-before-finishing-a-basement",
-    "title": "Radon Testing Before Finishing a Basement in Manitoba",
-    "metaDescription": "Why to test for radon before finishing a Manitoba basement: Health Canada’s 200 Bq/m³ guideline, three-month tests, timing, mitigation and retesting.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/radon-testing-before-finishing/title-card-radon-testing-before-1200x630.2a82280e.jpg"
-  },
-  {
-    "slug": "renovating-a-character-home-in-winnipeg",
-    "title": "Heritage District Renovations: Updating a Character Home in Winnipeg",
-    "metaDescription": "Renovating an older Winnipeg home? When a heritage permit applies, what Armstrong's Point and Crescentwood–Enderton Park mean, and what to test first.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/renovating-a-character-home-in-winnipeg/title-card-heritage-district-1200x630.608d8208.jpg"
-  },
-  {
-    "slug": "restaurant-renovation-permits-winnipeg",
-    "title": "Restaurant Renovation Permits in Winnipeg: What You Need",
-    "metaDescription": "Renovating a restaurant, café or bar in Winnipeg? City permits, health plan review, kitchen hoods, LGCA notice, patios and after-hours work explained.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/restaurant-renovation-permits-winnipeg/title-card-restaurant-renovation-1200x630.00900e3d.jpg"
-  },
-  {
-    "slug": "secondary-suite-rules-winnipeg",
-    "title": "Secondary Suite Rules in Winnipeg: What the City Requires",
-    "metaDescription": "Winnipeg secondary suite rules as the City lists them: permits, size limits, separation, the 2025 zoning changes, and which suite funding programs exist.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/secondary-suite-rules-winnipeg/title-card-secondary-suite-rules-1200x630.05e576ee.jpg"
-  },
-  {
-    "slug": "spring-flood-prep-winnipeg-basements",
-    "title": "Spring Flood Prep for Winnipeg Basements: A Homeowner Checklist",
-    "metaDescription": "A spring checklist for Winnipeg basements: snow, eavestroughs, sump pump tests, backwater valves, belongings, and what to do if water gets in.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/spring-flood-prep-winnipeg-basements/title-card-spring-flood-prep-1200x630.8405f91a.jpg"
-  },
-  {
-    "slug": "what-does-a-general-contractor-do",
-    "title": "What Does a General Contractor Do?",
-    "metaDescription": "What a general contractor does on a renovation, from pricing and permits to trades, schedule and handover, plus how GCs charge and when you need one.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/what-does-a-general-contractor-do/title-card-what-does-a-general-1200x630.d9be107c.jpg"
-  },
-  {
-    "slug": "window-and-door-replacement-winnipeg",
-    "title": "Window and Door Replacement in Winnipeg: Permits, Glass and Rebates",
-    "metaDescription": "When replacing windows and doors in Winnipeg needs a permit, what ENERGY STAR and triple-pane mean, and how the Efficiency Manitoba rebate works in 2026.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/window-and-door-replacement-winnipeg/title-card-window-and-door-1200x630.1dd372eb.jpg"
-  },
-  {
-    "slug": "winnipeg-renovation-permits",
-    "title": "Renovation Permits in Winnipeg: What Needs One and How to Apply",
-    "metaDescription": "Which Winnipeg renovations need a building permit, which don’t, how development permits fit in, and what inspections to expect, checked against City pages.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/winnipeg-renovation-permits/title-card-renovation-permits-1200x630.69ac1710.jpg"
-  },
-  {
-    "slug": "winnipeg-renovation-show-questions-to-ask",
-    "title": "Winnipeg Renovation Show: Questions to Ask Contractors",
-    "metaDescription": "Going to the Winnipeg Renovation Show on January 15–17, 2027? What to bring, the questions to ask at each contractor's booth, and what to do afterwards.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/winnipeg-renovation-show-questions/title-card-winnipeg-renovation-show-1200x630.68ebc0fa.jpg"
-  },
-  {
-    "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
-    "title": "Commercial Interior Design: Balancing Function and Looks",
-    "metaDescription": "Plan a commercial interior that works first and looks right: code-driven layout choices, durable finishes, lighting, brand colour and flexible design.",
-    "date": "2026-09-03",
-    "ogImage": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey-1200x630.18501d53.jpg"
-  },
-  {
-    "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
-    "title": "Full vs Partial Renovation: How to Choose for Your Winnipeg Home",
-    "metaDescription": "Full renovation or room-by-room upgrades? A decision table, what older Winnipeg homes hide behind the walls, and how to phase work without paying twice.",
-    "date": "2026-09-01",
-    "ogImage": "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x630.6b4ae4ef.jpg"
-  },
-  {
-    "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
-    "title": "Commercial Renovation ROI: Which Upgrades Pay Back?",
-    "metaDescription": "How to judge the return on a commercial renovation: a simple ROI method, upgrades that tend to pay back, leasing versus owning, and what lowers the return.",
-    "date": "2026-08-12",
-    "ogImage": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding-1200x630.5db48b4e.jpg"
-  },
-  {
-    "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
-    "title": "Commercial Renovation Financing in Manitoba: Your Options",
-    "metaDescription": "Compare ways to pay for a commercial renovation in Manitoba: term loans, lines of credit, BDC, landlord allowances, equipment financing and phasing.",
-    "date": "2026-08-11",
-    "ogImage": "/images/blog/how-to-finance-a-commercial-renovation/title-card-reading-how-to-finance-1200x630.50417805.jpg"
-  },
-  {
-    "slug": "how-to-choose-the-right-contractor-for-your-renovation-project",
-    "title": "How to Choose a Renovation Contractor in Winnipeg",
-    "metaDescription": "A 12-point Winnipeg checklist for hiring a renovation contractor: WCB clearance, insurance, registration, permits, deposits, contracts and red flags.",
-    "date": "2026-08-05",
-    "ogImage": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg"
-  },
-  {
-    "slug": "the-biggest-cost-factors-in-commercial-renovation-projects",
-    "title": "The Biggest Cost Factors in Commercial Renovation Projects",
-    "metaDescription": "What drives commercial renovation costs in Winnipeg: building systems, code upgrades, hidden conditions, after-hours work, and how to avoid overruns.",
-    "date": "2026-08-04",
-    "ogImage": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest-1200x630.c1dc6544.jpg"
-  },
-  {
-    "slug": "how-to-prepare-your-business-for-a-major-renovation",
-    "title": "Commercial Renovation Planning in Winnipeg: A Business Guide",
-    "metaDescription": "Plan a commercial renovation in Winnipeg without losing customers: timeline stages, phasing, after-hours work, staff and customer notices, and occupancy.",
-    "date": "2026-07-29",
-    "ogImage": "/images/blog/how-to-prepare-your-business-for-a-major/title-graphic-reading-how-to-prepare-1200x630.0c5e2327.jpg"
-  },
-  {
-    "slug": "which-bathroom-remodel-upgrades-offer-the-best-return-on-investment-for-canadian-homeowners",
-    "title": "Bathroom Renovation Ideas That Add Value in Winnipeg Homes",
-    "metaDescription": "Bathroom renovation ideas that add value in Winnipeg homes: waterproofing, ventilation, storage and accessibility upgrades, plus where you can save.",
-    "date": "2026-07-17",
-    "ogImage": "/images/blog/which-bathroom-remodel-upgrades-offer/bright-bathroom-with-a-freestanding-1200x630.d2c7aef8.jpg"
-  },
-  {
-    "slug": "essential-design-strategies-for-small-kitchen-renovations",
-    "title": "Small Kitchen Renovation Ideas for Winnipeg Homes",
-    "metaDescription": "Small kitchen renovation ideas for Winnipeg homes: compare galley, L-shaped, U-shaped and peninsula layouts, then plan storage, lighting and budget.",
-    "date": "2026-07-12",
-    "ogImage": "/images/blog/essential-design-strategies-for-small/kitchen-wall-with-light-wood-upper-1200x630.0638e1e0.jpg"
+    "slug": "canadian-dental-care-plan-dental-office-space",
+    "title": "Canadian Dental Care Plan: How Dental Offices Should Adapt",
+    "metaDescription": "How dental clinic remodelling can add capacity through flow, not just more chairs. 7.6 million Canadians have enrolled in the Canadian Dental Care Plan.",
+    "date": "2026-11-05",
+    "ogImage": "/images/blog/canadian-dental-care-plan-dental-office/canadian-dental-care-plan-how-dental-1200x630.b376fdcf.jpg"
   }
 ];

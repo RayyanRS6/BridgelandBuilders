@@ -32,7 +32,8 @@ export default function BlogCard({ post, featured = false }) {
   // Until that exists there is no image at all: the media box keeps its 16:9
   // space and background (pages.css), so the grid stays even. Self-hosted
   // images arrive as a compact record (`image`, with `titleCard` set when it
-  // is the title card); cardImage rebuilds src and srcsets.
+  // is the title card, `thumbnail` when it is the client's thumbnail instead);
+  // cardImage rebuilds src and srcsets.
   const image = cardImage(post);
   const imageSrc = image.src;
   const isTitleCard = post.image ? Boolean(post.titleCard) : Boolean(!post.hero && post.heroSrc);
@@ -45,7 +46,7 @@ export default function BlogCard({ post, featured = false }) {
       onTouchStart={prefetch}
     >
       <Link
-        className={`blog-card-media${isTitleCard ? ' is-title-card' : ''}`}
+        className={`blog-card-media${isTitleCard ? ' is-title-card' : ''}${post.thumbnail ? ' is-thumbnail' : ''}`}
         to={`/blog/${post.slug}`}
         tabIndex={-1}
         aria-hidden="true"

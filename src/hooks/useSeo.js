@@ -97,9 +97,9 @@ function useHeadSync(path, deps, build) {
 
 /**
  * Keeps title, description, canonical, Open Graph/Twitter tags and JSON-LD in
- * sync with the current page, from a ready-made head (a blog post's
- * buildPostHead, the 404 page). Purely head-level: it never touches the DOM
- * the user sees.
+ * sync with the current page, from a ready-made head (the 404 page; a blog
+ * post's buildPostHead goes through useLazySeo below). Purely head-level: it
+ * never touches the DOM the user sees.
  */
 export default function useSeo({ title, description, path, image, imageAlt, jsonLd, type, publishedTime, modifiedTime, robots }) {
   useHeadSync(
@@ -163,15 +163,13 @@ export function usePageSeo(path, options = {}) {
 }
 
 /**
- * usePageSeo for a page whose options need data the page itself doesn't show
- * (e.g. /blog's Blog node: every post's meta description and 1200x630 image).
- * `loadOptions()` resolves to usePageSeo's options and is called only when
- * the head has to be written, i.e. after a client-side navigation, so that
- * data stays out of the page's first load. One write, once both the options
- * and headWriter.js have loaded; a failed load is handled like a failed
+ * Writes a head that takes a download to work out, once `load()` and
+ * headWriter.js have both arrived. `load` is called only when the head has to
+ * be written, i.e. after a client-side navigation, so what it fetches stays out
+ * of the page's first load. A failed load is handled like a failed
  * headWriter.js (reloadOnce).
  */
-export function useLazyPageSeo(path, loadOptions) {
+function useLazyHeadSync(path, load, toHead) {
   const firstRun = useRef(true);
   useEffect(() => {
     const first = firstRun.current;
@@ -179,9 +177,9 @@ export function useLazyPageSeo(path, loadOptions) {
     if (first && hasServerHead(path)) return undefined;
     let cancelled = false;
     let cancelWrite;
-    retryLoad(loadOptions).then(
-      (options) => {
-        if (!cancelled) cancelWrite = withWriter((module) => module.writeHead(module.pageHead(path, options)));
+    retryLoad(load).then(
+      (loaded) => {
+        if (!cancelled) cancelWrite = withWriter((module) => module.writeHead(toHead(module, loaded)));
       },
       (error) => {
         if (!cancelled && !onInitialPage() && isChunkLoadError(error)) reloadOnce();
@@ -193,4 +191,22 @@ export function useLazyPageSeo(path, loadOptions) {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [path]);
+}
+
+/**
+ * usePageSeo for a page whose options need data the page itself doesn't show
+ * (e.g. /blog's Blog node: the newest posts' meta descriptions and 1200x630
+ * images). `loadOptions()` resolves to usePageSeo's options.
+ */
+export function useLazyPageSeo(path, loadOptions) {
+  useLazyHeadSync(path, loadOptions, (module, options) => module.pageHead(path, options));
+}
+
+/**
+ * useSeo for a page whose ready-made head is built by code it doesn't otherwise
+ * need (a blog post's buildPostHead, and the seo.js builders behind it).
+ * `loadHead()` resolves to useSeo's head.
+ */
+export function useLazySeo(path, loadHead) {
+  useLazyHeadSync(path, loadHead, (module, head) => head);
 }

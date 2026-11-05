@@ -10,8 +10,7 @@ import { ArrowRightIcon, CalendarIcon, ClockIcon } from '../components/icons.jsx
 import { personById, personPath } from '../data/people.js';
 import { serviceByPath } from '../data/services.js';
 import { BBB_PROFILE_URL, INSTANT_QUOTE_LABEL, INSTANT_QUOTE_PATH, SITE_PHONE, SITE_PHONE_TEL } from '../data/siteConfig.js';
-import { buildPostHead } from '../data/postContent.js';
-import useSeo from '../hooks/useSeo.js';
+import { useLazySeo } from '../hooks/useSeo.js';
 import { keepServerHtml, lazyWithRetry, retryLoad } from '../lib/lazyRetry.js';
 
 // Only an unknown slug renders it, so it is not part of a post's first load.
@@ -34,6 +33,15 @@ function CalculatorWidget(props) {
   );
 }
 const BODY_WIDGETS = { calculator: CalculatorWidget };
+
+// What a post with ctaPrimary "visit" offers in its red button and bottom banner:
+// the estimator only prices kitchens, bathrooms and basements.
+const VISIT_CTA = {
+  to: '/book-online',
+  label: 'Book a Free On-Site Visit',
+  title: 'Book a free on-site visit',
+  text: 'We’ll look at the space with you and follow up with a free written quote. There’s no obligation to go ahead.',
+};
 
 // Topic clusters that span every kind of project (permits in general, paying
 // for a renovation, planning, hiring a contractor, energy rebates): a post in
@@ -114,12 +122,12 @@ export default function BlogPostPage() {
 
 /**
  * The whole post page. It also owns the <head> sync (the same buildPostHead
- * the prerender uses): on first load the prerendered head already matches,
- * so nothing changes.
+ * the prerender uses): on first load the prerendered head already matches, so
+ * nothing changes and buildPostHead, with the seo.js builders behind it, is
+ * never downloaded. After a client-side navigation it loads to write the head.
  */
 function PostPage({ post }) {
-  const head = useMemo(() => buildPostHead(post), [post]);
-  useSeo(head);
+  useLazySeo(`/blog/${post.slug}`, () => import('../data/postContent.js').then(({ buildPostHead }) => buildPostHead(post)));
 
   const faqs = useMemo(
     () => (post.faqs || []).map((item) => ({ q: item.q, a: renderInline(item.a, 'faq') })),
@@ -134,6 +142,7 @@ function PostPage({ post }) {
   const heroSrc = post.hero ? post.heroSrc || post.hero : null;
 
   const serviceLink = serviceCta(post);
+  const visit = post.ctaPrimary === 'visit' ? VISIT_CTA : null;
 
   return (
     <main>
@@ -246,8 +255,8 @@ function PostPage({ post }) {
                 <p>Tell us what you have in mind and we will put together a clear, written quote.</p>
               </div>
               <div className="blog-post-cta-actions">
-                <Link className="btn-pill-red" to={INSTANT_QUOTE_PATH} data-cta="blog-post-quote">
-                  <span>{INSTANT_QUOTE_LABEL.toUpperCase()}</span>
+                <Link className="btn-pill-red" to={visit ? visit.to : INSTANT_QUOTE_PATH} data-cta={visit ? 'blog-post-visit' : 'blog-post-quote'}>
+                  <span>{(visit ? visit.label : INSTANT_QUOTE_LABEL).toUpperCase()}</span>
                   <ArrowRightIcon size={14} />
                 </Link>
                 <Link className="btn-pill-ghost" to={serviceLink.to} data-cta="blog-post-service">
@@ -286,7 +295,7 @@ function PostPage({ post }) {
         </section>
       )}
 
-      <CtaBanner />
+      <CtaBanner visit={visit} />
     </main>
   );
 }
