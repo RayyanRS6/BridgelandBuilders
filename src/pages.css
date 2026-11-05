@@ -1272,7 +1272,8 @@
   min-width: 180px;
 }
 
-.blog-more-button:focus-visible {
+.blog-more-button:focus-visible,
+.blog-filter-pill:focus-visible {
   outline: 2px solid var(--accent-seagreen);
   outline-offset: 2px;
 }

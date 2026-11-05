@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigationType } from 'react-router-dom';
 import PageHero from '../components/PageHero.jsx';
 import CtaBanner from '../components/CtaBanner.jsx';
@@ -13,6 +13,9 @@ import { useLazyPageSeo } from '../hooks/useSeo.js';
 import { retryLoad } from '../lib/lazyRetry.js';
 
 const ALL = 'All Posts';
+
+// useLayoutEffect warns during the prerender, where effects don't run anyway.
+const useBrowserLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /**
  * The head's options: the Blog node and the latest post's 1200x630 image,
@@ -60,9 +63,10 @@ const prefetchRestCards = () => {
   loadRestCards().catch(() => {});
 };
 
-// What the visitor last had open, for the browser's Back button. It starts as
-// the defaults, so a page load matches the prerendered HTML.
-const lastView = { category: ALL, shown: BLOG_FIRST_CARDS };
+// What the visitor last had open and where they were on the page, for the
+// browser's Back button. It starts as the defaults, so a page load matches the
+// prerendered HTML.
+const lastView = { category: ALL, shown: BLOG_FIRST_CARDS, scrollY: null };
 
 /**
  * One URL for every post. The prerender and the first render show the newest
@@ -78,9 +82,45 @@ export default function BlogPage() {
   const [rest, setRest] = useState(restCards);
   const [failed, setFailed] = useState(false);
   const grid = useRef(null);
+  const moreBlock = useRef(null);
   const pendingFocus = useRef(null);
 
   useLazyPageSeo('/blog', loadSeoOptions);
+
+  // Back returns the visitor to where they were, before the first paint. This
+  // page's history entry opts out of the browser's own restore, which would
+  // smooth-scroll the article still on screen and overshoot on a slow phone. Its
+  // listener ends in a layout effect, so the jump in scroll as the page gives way
+  // to the next one is never saved. A reload or a visit to another site still
+  // gets the browser's restore (pagehide), and a return from the back/forward
+  // cache opts out again (pageshow).
+  useBrowserLayoutEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    if (cameBack && lastView.scrollY !== null) {
+      window.scrollTo({ top: lastView.scrollY, left: 0, behavior: 'instant' });
+    }
+    const save = () => {
+      lastView.scrollY = window.scrollY;
+    };
+    const browserRestores = () => {
+      window.history.scrollRestoration = 'auto';
+    };
+    const restoreOurselves = (event) => {
+      if (event.persisted) window.history.scrollRestoration = 'manual';
+    };
+    window.addEventListener('scroll', save, { passive: true });
+    window.addEventListener('pagehide', browserRestores);
+    window.addEventListener('pageshow', restoreOurselves);
+    return () => {
+      window.removeEventListener('scroll', save);
+      window.removeEventListener('pagehide', browserRestores);
+      window.removeEventListener('pageshow', restoreOurselves);
+      // The router has already moved on, so this lands on the next page's entry.
+      browserRestores();
+    };
+    // Once per mount: `cameBack` describes how this page was reached.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const inCategory = activeCategory !== ALL;
   const matching = useMemo(() => {
@@ -105,6 +145,24 @@ export default function BlogPage() {
     lastView.category = activeCategory;
     lastView.shown = shown;
   }, [rest, activeCategory, shown]);
+
+  // Starts the download as the visitor nears "Show more". Cards that arrive after
+  // a tap push the page down late enough to count as layout shift on a slow
+  // connection. The button sits far below the first screen, so a page load
+  // doesn't trigger this.
+  useEffect(() => {
+    if (rest || !hasMore || typeof IntersectionObserver === 'undefined') return undefined;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        prefetchRestCards();
+      },
+      { rootMargin: '100% 0px' }
+    );
+    observer.observe(moreBlock.current);
+    return () => observer.disconnect();
+  }, [rest, hasMore]);
 
   // A keyboard user moves on to the first new card. Otherwise focus stays on
   // the button, unless that was the last of the cards and the button is gone.
@@ -184,8 +242,10 @@ export default function BlogPage() {
 
           <h2 className="section-title">Latest guides</h2>
 
+          {/* Keyed by post, as the grid is: a reused image would keep showing the
+              old thumbnail, with its printed title, until the new one loads. */}
           {featured && (
-            <div className="reveal">
+            <div className="reveal" key={featured.slug}>
               <BlogCard post={featured} featured />
             </div>
           )}
@@ -204,7 +264,7 @@ export default function BlogPage() {
           </p>
 
           {hasMore && (
-            <div className="blog-more">
+            <div className="blog-more" ref={moreBlock}>
               <button
                 type="button"
                 className="btn-pill-ghost blog-more-button"
