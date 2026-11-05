@@ -157,6 +157,10 @@ export default {
     },
     {
       "t": "p",
+      "x": "General information, not legal advice. Ask the Residential Tenancies Branch what applies to your building."
+    },
+    {
+      "t": "p",
       "x": "**Related reading:** [Flooring installation service](/services/flooring) · [Basement suite rental income in Winnipeg](/blog/basement-suite-rental-income-winnipeg) · [Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter](/blog/winnipeg-rent-prices-falling-2026)"
     }
   ],
