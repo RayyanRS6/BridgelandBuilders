@@ -344,24 +344,25 @@ export default {
       "date": "2026-08-05",
       "readMinutes": 10,
       "image": {
-        "base": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid",
+        "base": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "c1d3b9fa",
-          "3b993117",
-          "3dde30a7"
+          "790e901b",
+          "b9156d66",
+          "31875efd"
         ],
         "avif": [
-          "c03d571e",
-          "8eb20a2f",
-          "504b262f"
+          "701c4659",
+          "d03a470e",
+          "b5f1901f"
         ],
         "main": 1
-      }
+      },
+      "titleCard": true
     },
     {
       "slug": "home-renovation-planning-guide-canada",

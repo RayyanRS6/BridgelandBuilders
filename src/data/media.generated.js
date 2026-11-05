@@ -107,32 +107,6 @@ export const MEDIA = {
       "/images/blog/how-to-choose-between-a-full-renovation/title-graphic-reading-how-to-choose-1200x1200.705b1c83.jpg"
     ]
   },
-  "https://static.wixstatic.com/media/48172a_553fca813a1d400ba67d30153a2844bd~mv2.png": {
-    "original": {
-      "width": 2560,
-      "height": 1440,
-      "bytes": 770305
-    },
-    "hero": {
-      "src": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-      "srcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-      "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
-      "width": 880,
-      "height": 495
-    },
-    "src": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp",
-    "srcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c1d3b9fa.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.3b993117.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.3dde30a7.webp 1320w",
-    "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-480.c03d571e.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-880.8eb20a2f.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1320.504b262f.avif 1320w",
-    "width": 880,
-    "height": 495,
-    "crop": "16:9",
-    "og": "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x630.d9d7d351.jpg",
-    "schemaImages": [
-      "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x675.fcf35ad6.jpg",
-      "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x900.5532b02d.jpg",
-      "/images/blog/how-to-choose-the-right-contractor/title-graphic-reading-how-to-avoid-1200x1200.e55b5a9b.jpg"
-    ]
-  },
   "https://static.wixstatic.com/media/48172a_479a3ef7aea14b9cb1d2d2450874a1e9~mv2.png": {
     "original": {
       "width": 2560,
@@ -568,7 +542,7 @@ export const MEDIA = {
       "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1200x900.bcb0c820.jpg",
       "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per-1200x1200.d3d12757.jpg"
     ],
-    "alt": "Tape measure and calculator on commercial floor plans beside a hard hat, for estimating renovation cost per square foot",
+    "alt": "Tape measure and calculator on floor plans beside a hard hat",
     "thumbnail": true
   },
   "card:commercial-renovation-process": {
@@ -632,7 +606,7 @@ export const MEDIA = {
       "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1200x900.e1bff2e2.jpg",
       "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover-1200x1200.f4c6f546.jpg"
     ],
-    "alt": "Empty apartment with moving boxes, paint cans and a stepladder, showing the cost of tenant turnover",
+    "alt": "Empty apartment with moving boxes, paint cans and a stepladder",
     "thumbnail": true
   },
   "card:early-contractor-involvement-architects": {
@@ -802,7 +776,7 @@ export const MEDIA = {
       "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1200x900.e7100d53.jpg",
       "/images/blog/hospitality-renovation-winnipeg-off/when-to-renovate-a-restaurant-or-bar-1200x1200.0827d545.jpg"
     ],
-    "alt": "Renovated bar and restaurant with warm lighting, a backlit bar and new bar stools, empty before opening",
+    "alt": "Empty bar and restaurant with warm lighting, a backlit bar and rows of bar stools",
     "thumbnail": true
   },
   "card:hotel-renovation-winnipeg-stay-open": {
@@ -818,7 +792,7 @@ export const MEDIA = {
       "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1200x900.85ce70cb.jpg",
       "/images/blog/hotel-renovation-winnipeg-stay-open/hotel-renovation-without-closing-1200x1200.71b94611.jpg"
     ],
-    "alt": "Renovated hotel guest room with a tall upholstered headboard, warm lighting and crisp bedding",
+    "alt": "Hotel guest room with a tall upholstered headboard, warm lighting and crisp bedding",
     "thumbnail": true
   },
   "card:how-to-check-a-contractors-wcb-clearance-manitoba": {
@@ -851,6 +825,21 @@ export const MEDIA = {
     ],
     "alt": "Project manager in a hard hat reviewing blueprints at a commercial construction site with a steel frame building",
     "thumbnail": true
+  },
+  "card:how-to-choose-the-right-contractor-for-your-renovation-project": {
+    "src": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.b9156d66.webp",
+    "srcSet": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-480.790e901b.webp 480w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.b9156d66.webp 880w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1320.31875efd.webp 1320w",
+    "avifSrcSet": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-480.701c4659.avif 480w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-880.d03a470e.avif 880w, /images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1320.b5f1901f.avif 1320w",
+    "width": 880,
+    "height": 495,
+    "crop": "16:9",
+    "og": "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x630.45d23c11.jpg",
+    "schemaImages": [
+      "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x675.e82c5ba8.jpg",
+      "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x900.2f140546.jpg",
+      "/images/blog/how-to-choose-the-right-contractor/title-card-how-to-choose-1200x1200.253f3c81.jpg"
+    ],
+    "alt": "Title card: How to Choose a Renovation Contractor in Winnipeg"
   },
   "card:how-to-vet-commercial-renovation-contractors-winnipeg": {
     "src": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial-880.abfd0e4b.webp",
@@ -944,7 +933,7 @@ export const MEDIA = {
       "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1200x900.c4b64008.jpg",
       "/images/blog/manitoba-new-clinics-medical-space/manitobas-new-clinics-what-they-mean-1200x1200.aa317ab5.jpg"
     ],
-    "alt": "New medical clinic waiting room with modern seating, plants and a wood reception desk",
+    "alt": "Medical clinic waiting room with modern seating, plants and a wood reception desk",
     "thumbnail": true
   },
   "card:manitoba-renovation-tax-credits-rebates": {
@@ -1007,7 +996,7 @@ export const MEDIA = {
       "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1200x900.d3893fa6.jpg",
       "/images/blog/medical-clinic-design-layout-winnipeg/medical-clinic-design-and-layout-1200x1200.68dba52a.jpg"
     ],
-    "alt": "Medical clinic corridor with exam rooms and light wood and white finishes, showing clinic design and layout",
+    "alt": "Medical clinic corridor with an open exam room, light wood flooring and white walls",
     "thumbnail": true
   },
   "card:occupancy-permit-change-of-use-winnipeg": {
@@ -1038,7 +1027,7 @@ export const MEDIA = {
       "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1200x900.120666c8.jpg",
       "/images/blog/office-building-upgrades-attract-tenants/8-office-building-upgrades-that-1200x1200.6a53d012.jpg"
     ],
-    "alt": "Renovated office lounge with soft seating, plants and a coffee bar, an amenity that attracts office tenants",
+    "alt": "Office lounge with soft seating, plants and a coffee bar",
     "thumbnail": true
   },
   "card:office-fit-up-lease-planning-winnipeg": {
@@ -1069,7 +1058,7 @@ export const MEDIA = {
       "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1200x900.ccaa669e.jpg",
       "/images/blog/office-renovation-cost-winnipeg/office-renovation-cost-in-winnipeg-1200x1200.3343d327.jpg"
     ],
-    "alt": "Open-plan office renovation with new workstations, carpet tile rolls and boxes of flooring",
+    "alt": "Open-plan office with new workstations, a roll of flooring and stacked boxes",
     "thumbnail": true
   },
   "card:office-to-hotel-conversion-winnipeg": {
@@ -1383,7 +1372,7 @@ export const MEDIA = {
       "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1200x900.190b0bab.jpg",
       "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas-1200x1200.d344f650.jpg"
     ],
-    "alt": "Small office refreshed with a dark geometric feature wall, new lighting and plants",
+    "alt": "Small office with a dark geometric feature wall, a desk and plants",
     "thumbnail": true
   },
   "card:smart-locks-rental-properties-door-first": {
@@ -1587,7 +1576,7 @@ export const MEDIA = {
       "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1200x900.fce7be74.jpg",
       "/images/blog/winnipeg-industrial-vacancy-older/winnipeg-industrial-space-is-tight-1200x1200.3dab360e.jpg"
     ],
-    "alt": "Older industrial warehouse with new LED high-bay lighting, fresh white walls and loading dock doors",
+    "alt": "Older industrial warehouse with high-bay lighting, white walls and loading dock doors",
     "thumbnail": true
   },
   "card:winnipeg-landlords-longer-tenancies": {
@@ -1681,7 +1670,7 @@ export const MEDIA = {
       "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1200x900.f6f5ff9c.jpg",
       "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it-1200x1200.067d3a83.jpg"
     ],
-    "alt": "Renovated retail strip with modern storefronts, planters and a Canadian flag on a sunny day",
+    "alt": "Retail strip with modern storefronts, planters and a Canadian flag on a sunny day",
     "thumbnail": true
   },
   "card:winter-unit-turnover-checklist-winnipeg": {
