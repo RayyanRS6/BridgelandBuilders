@@ -3,8 +3,8 @@
   "status": "draft",
   "title": "Infill Housing in Winnipeg: What It Means for Landlords",
   "metaTitle": "Infill Housing in Winnipeg: What It Means for Landlords",
-  "metaDescription": "Winnipeg zoning now allows up to four units on many lots. Why older houses can become infill sites and why some projects start with demolition.",
-  "excerpt": "Winnipeg zoning now allows up to four units on many lots. Why older houses can become infill sites and why some projects start with demolition.",
+  "metaDescription": "Winnipeg's 2025 zoning changes allowed up to four units on many lots. Why older houses can become infill sites and why some projects start with demolition.",
+  "excerpt": "Winnipeg's 2025 zoning changes allowed up to four units on many lots. Why older houses can become infill sites and why some projects start with demolition.",
   "date": "2026-11-05",
   "updated": "2026-11-05",
   "cats": [
@@ -15,12 +15,12 @@
   ],
   "ctaService": "/services/demolition",
   "cluster": "permits-zoning",
-  "answer": "Among Canada's 10 largest cities, Winnipeg had the fastest growth in housing starts from January to July 2026, and zoning changes now allow homes of two, three or four units as of right in many neighbourhoods. For small landlords, older houses on good lots can become infill sites, but whole-building demolition needs a permit and a City-licensed demolition contractor.",
+  "answer": "Among Canada's 10 largest cities, Winnipeg had the fastest growth in housing starts from January to July 2026, and June 2025 zoning changes allowed homes of two, three or four units as of right in many neighbourhoods. For small landlords, older houses on good lots can become infill sites, but whole-building demolition needs a permit and a City-licensed demolition contractor.",
   "hero": null,
   "thumbAlt": "New narrow infill house under construction between older homes on a tree-lined street",
   "ctaPrimary": "visit",
   "listOrder": 60,
-  "reviewBy": "2026-12-31",
+  "reviewBy": "2027-06-01",
   "sources": [
     {
       "label": "City of Winnipeg: Winnipeg leads major Canadian cities in housing growth",
@@ -57,15 +57,15 @@
   "blocks": [
     {
       "t": "h2",
-      "x": "The building boom"
+      "x": "The building boom through July 2026"
     },
     {
       "t": "p",
-      "x": "The [City of Winnipeg](https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth) reported 3,514 housing starts from January to July 2026, up 40.4%, the largest percentage increase among Canada's 10 largest cities. Completions were up 52.7%. Nationally, starts fell about 4.1%. That is the backdrop for infill housing in Winnipeg."
+      "x": "The [City of Winnipeg](https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth) reported 3,514 housing starts from January to July 2026, up 40.4%, the largest percentage increase among Canada's 10 largest cities. Completions were up 52.7%. Nationally, starts fell about 4.1%. That was the backdrop for infill housing in Winnipeg in mid-2026."
     },
     {
       "t": "p",
-      "x": "Infill means new homes, duplexes, triplexes and small multi-unit buildings on existing residential lots. [Zoning changes](https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing) in effect since June 26, 2025 allow two-, three- and four-unit homes as of right in many neighbourhoods."
+      "x": "Infill means new homes, duplexes, triplexes and small multi-unit buildings on existing residential lots. [Zoning changes](https://www.winnipeg.ca/building-development/housing/housing-accelerator-fund/infill-housing) that City Council approved on June 26, 2025 allowed two-, three- and four-unit homes as of right in many neighbourhoods."
     },
     {
       "t": "h2",
@@ -73,7 +73,7 @@
     },
     {
       "t": "p",
-      "x": "Many Winnipeg neighbourhoods have older bungalows and two-storey homes on lots that could now hold more units. When a house needs major work (foundation repairs, outdated systems, poor layout), the economics can favour redevelopment over renovation."
+      "x": "Many Winnipeg neighbourhoods have older bungalows and two-storey homes on lots that could hold more units under those changes. When a house needs major work (foundation repairs, outdated systems, poor layout), the economics can favour redevelopment over renovation."
     },
     {
       "t": "table",
@@ -180,7 +180,7 @@
     },
     {
       "t": "p",
-      "x": "New infill units enter a rental market where [one-bedroom asking rents have eased slightly](https://liv.rent/blog/?p=69631): liv.rent's October 2026 report shows a third straight monthly dip, the latest of 0.1%."
+      "x": "On the rental side, [one-bedroom asking rents had eased slightly](https://liv.rent/blog/?p=69631) by October 2026: liv.rent's report that month showed a third straight monthly dip, this one of 0.1%."
     },
     {
       "t": "p",
@@ -216,7 +216,7 @@
     },
     {
       "t": "p",
-      "x": "Winnipeg's building boom and zoning changes are creating opportunities for small landlords and investors. Some of those opportunities start with demolition by a licensed contractor, and planning it well sets up the rest of the project."
+      "x": "Winnipeg's building boom through July 2026 and its zoning changes have created opportunities for small landlords and investors. Some of those opportunities start with demolition by a licensed contractor, and planning it well sets up the rest of the project."
     },
     {
       "t": "p",

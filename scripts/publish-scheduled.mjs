@@ -22,10 +22,9 @@
  * and goes out through the timed "Publish this week's posts" GitHub workflow
  * (.github/workflows/publish-weekly.yml), its button, or a pull request.
  *
- * If a post in the week is past its "reviewBy" date, nothing is published and
- * the exit code is 1: re-check the post's dated facts, correct the text, set a
- * new "reviewBy" in its file and run this again. Facts tied to a date do not go
- * live unchecked.
+ * The schedule runs with nobody checking it, so a post past its "reviewBy" date
+ * still goes out, with a note in the log. Wording in a waiting post has to hold
+ * on its go-live date: dated statements, not claims about "now".
  *
  * If a week is partly out, nothing is published and the exit code is 1. Nothing
  * here does that to a week, so a person has been at it, and a person decides.
@@ -69,8 +68,8 @@ if (LIST) {
     for (const [kind, list] of [['blog', week.blogs || []], ['article', week.articles || []]]) {
       for (const slug of list) {
         const post = bySlug.get(slug);
-        const mustRecheck = isWaiting(slug) && post?.reviewBy && post.reviewBy < week.date;
-        const review = mustRecheck ? `  [re-check its facts first: review-by date ${post.reviewBy}]` : '';
+        const pastReview = isWaiting(slug) && post?.reviewBy && post.reviewBy < week.date;
+        const review = pastReview ? `  [review-by date ${post.reviewBy} passes before it goes out]` : '';
         console.log(`  ${kind.padEnd(8)}${post?.title || slug}${review}`);
         console.log(`          /blog/${slug}`);
       }
@@ -108,16 +107,11 @@ if (alreadyOut.length) {
 // It goes out today, whatever day was planned, so the dates stay true.
 console.log(`Week planned for ${week.date}: ${due.length} post(s) due, going out dated ${today}.`);
 
-const stale = due.filter((slug) => {
+const pastReview = due.filter((slug) => {
   const reviewBy = bySlug.get(slug).reviewBy;
   return reviewBy && reviewBy < today;
 });
-if (stale.length) {
-  console.error('Nothing published: these posts are past their review-by date.');
-  for (const slug of stale) console.error(`  ${slug}  review by ${bySlug.get(slug).reviewBy}`);
-  console.error('Re-check the dated facts, correct the text, set a new "reviewBy" in each file, then run this again.');
-  process.exit(1);
-}
+for (const slug of pastReview) console.log(`  Note: ${slug} is past its review-by date, ${bySlug.get(slug).reviewBy}. It goes out anyway.`);
 
 /** `text` with the one match of `pattern` replaced; anything but exactly one match is a stop. */
 function replaceOnce(text, pattern, replacement, where) {

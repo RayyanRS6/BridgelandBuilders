@@ -20,7 +20,7 @@
   "thumbAlt": "Black smart lock with keypad on a solid grey apartment door",
   "ctaPrimary": "visit",
   "listOrder": 38,
-  "reviewBy": "2026-12-31",
+  "reviewBy": "2027-04-07",
   "sources": [
     {
       "label": "City of Winnipeg: Winnipeg leads major Canadian cities in housing growth",
@@ -51,6 +51,11 @@
       "label": "Manitoba Residential Tenancies Branch: Privacy fact sheet on landlord entry",
       "url": "https://www.gov.mb.ca/cca/rtb/resource_list/privacy.pdf",
       "accessed": "2026-11-05"
+    },
+    {
+      "label": "Manitoba: The Residential Tenancies Amendment Act, S.M. 2026, c. 49",
+      "url": "https://web2.gov.mb.ca/laws/statutes/2026/c04926.php",
+      "accessed": "2026-11-06"
     }
   ],
   "faqs": [],
@@ -61,7 +66,7 @@
     },
     {
       "t": "p",
-      "x": "More new housing is opening in Winnipeg. Housing completions were up 52.7% in the first seven months of 2026, the [City of Winnipeg](https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth) reports. Some rental buildings here already [list keyless entry among their amenities](https://www.broadstreet.ca/manitoba/winnipeg/edgewood-place), which puts smart locks for rental properties on the list for older buildings too."
+      "x": "More new housing opened in Winnipeg in the first seven months of 2026. Housing completions were up 52.7%, the [City of Winnipeg](https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth) reported in August 2026. Some rental buildings here already [list keyless entry among their amenities](https://www.broadstreet.ca/manitoba/winnipeg/edgewood-place), which puts smart locks for rental properties on the list for older buildings too."
     },
     {
       "t": "p",
@@ -85,7 +90,7 @@
     },
     {
       "t": "p",
-      "x": "Owners of older buildings may see the appeal, especially with [Winnipeg one-bedroom asking rents down three months in a row](https://liv.rent/blog/?p=69631) as of October 2026."
+      "x": "Owners of older buildings may see the appeal, especially when rents soften: liv.rent's October 2026 report showed [Winnipeg one-bedroom asking rents down three months in a row](https://liv.rent/blog/?p=69631)."
     },
     {
       "t": "h2",
@@ -205,7 +210,7 @@
     },
     {
       "t": "p",
-      "x": "The Residential Tenancies Branch's fact sheet generally calls for 24 hours to two weeks of written notice, and says landlords should go with outside contractors to let them in. Think about tenant privacy before you keep entry logs. This is general information, not legal advice, so check with the Branch."
+      "x": "The Residential Tenancies Branch's fact sheet generally calls for 24 hours to two weeks of written notice, and says landlords should go with outside contractors to let them in. From October 2026, notice also covers showing units to renters. Think about tenant privacy before you keep entry logs. This is general information, not legal advice, so check with the Branch."
     },
     {
       "t": "h2",

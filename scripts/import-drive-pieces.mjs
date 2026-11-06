@@ -3,7 +3,7 @@
  * post format scripts/build-blog-data.mjs reads (its header lists the fields).
  * The inputs are not committed, because this repo is public: one Markdown file per
  * piece, <dir>/<id>.md, with front matter, in an untracked folder inside the repo
- * folder such as Claude outputs/. EDITOR-RULES.md beside them describes the format.
+ * folder. EDITOR-RULES.md beside them describes the format.
  *
  *   node scripts/import-drive-pieces.mjs --from=<dir> --date=YYYY-MM-DD [options]
  *
