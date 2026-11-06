@@ -252,88 +252,88 @@ export default {
   ],
   "related": [
     {
-      "slug": "small-commercial-renovation-ideas",
-      "title": "10 Small Commercial Renovation Ideas With Big Impact",
-      "excerpt": "Ten small commercial renovations for Winnipeg offices, shops, clinics and multi-unit buildings that change how a space feels, without a full renovation.",
+      "slug": "occupancy-permit-change-of-use-winnipeg",
+      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
+      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
       "category": "Commercial",
-      "date": "2026-11-05",
-      "readMinutes": 4,
+      "date": "2026-10-15",
+      "readMinutes": 11,
       "image": {
-        "base": "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas",
+        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "9a890ac5",
-          "d66e2bb5",
-          "840efabb"
+          "1d8c089e",
+          "ef758048",
+          "68fdd292"
         ],
         "avif": [
-          "709e9828",
-          "e531e5fb",
-          "2a7bc8bd"
+          "c4d497a2",
+          "ba38b8d1",
+          "3c392686"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     },
     {
-      "slug": "commercial-renovation-process",
-      "title": "The Commercial Renovation Process: 9 Steps to Handover",
-      "excerpt": "What commercial renovation services can include, step by step: site visit, budget, drawings, permits, phasing, construction, inspections and handover.",
+      "slug": "clinic-renovation-permits-winnipeg",
+      "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
+      "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
       "category": "Commercial",
-      "date": "2026-11-05",
-      "readMinutes": 3,
+      "date": "2026-10-13",
+      "readMinutes": 10,
       "image": {
-        "base": "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9",
+        "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "c3aca01f",
-          "dab0cf04",
-          "851379dc"
+          "3fb04080",
+          "6b2a1b51",
+          "0e8b8a5a"
         ],
         "avif": [
-          "6c9e75fe",
-          "975599a6",
-          "47eb3618"
+          "18450584",
+          "e03ed2b1",
+          "75e30f7c"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     },
     {
-      "slug": "commercial-renovation-cost-per-square-foot-winnipeg",
-      "title": "Commercial Renovation Cost per Square Foot in Winnipeg",
-      "excerpt": "What drives commercial renovation cost per square foot in Winnipeg, relative costs by project type, hidden costs and how to get an accurate quote.",
-      "category": "Costs & Budgets",
-      "date": "2026-11-05",
-      "readMinutes": 3,
+      "slug": "office-fit-up-lease-planning-winnipeg",
+      "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
+      "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
+      "category": "Commercial",
+      "date": "2026-10-13",
+      "readMinutes": 8,
       "image": {
-        "base": "/images/blog/commercial-renovation-cost-per-square/commercial-renovation-cost-per",
+        "base": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "fadf6a0c",
-          "6d40ef15",
-          "b802bb9e"
+          "09eabf05",
+          "9079ee23",
+          "1977b93b"
         ],
         "avif": [
-          "04a91ec9",
-          "2aa5ce31",
-          "0470b210"
+          "d81177bd",
+          "432a5aed",
+          "b33e68fe"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     }
   ]
 };

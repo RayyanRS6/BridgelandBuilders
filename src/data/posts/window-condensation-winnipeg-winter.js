@@ -348,60 +348,60 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "efficiency-manitoba-commercial-rebates",
-      "title": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
-      "excerpt": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
-      "category": "Money & Rebates",
-      "date": "2026-11-05",
-      "readMinutes": 5,
+      "slug": "asbestos-testing-before-renovating-manitoba",
+      "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
+      "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
+      "category": "Older Homes",
+      "date": "2026-10-15",
+      "readMinutes": 10,
       "image": {
-        "base": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial",
+        "base": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "e945bac0",
-          "1d10ae70",
-          "a0b2a03d"
+          "647701ea",
+          "e82e0b35",
+          "d62a9906"
         ],
         "avif": [
-          "543c1373",
-          "b2998267",
-          "5926283d"
+          "a81bb4f7",
+          "a3e4bb73",
+          "4b20838b"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     },
     {
-      "slug": "cost-of-tenant-turnover-winnipeg",
-      "title": "The Cost of Tenant Turnover: Retention Math for Winnipeg",
-      "excerpt": "One tenant turnover can cost a Winnipeg landlord thousands of dollars. A worksheet to work out yours, and why window and door upgrades help retention.",
-      "category": "Landlords & Property Managers",
-      "date": "2026-11-05",
-      "readMinutes": 5,
+      "slug": "check-permit-history-winnipeg-house",
+      "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
+      "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
+      "category": "Permits & Planning",
+      "date": "2026-10-15",
+      "readMinutes": 11,
       "image": {
-        "base": "/images/blog/cost-of-tenant-turnover-winnipeg/the-cost-of-tenant-turnover",
+        "base": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "fa4aa318",
-          "77b70750",
-          "7fadedc7"
+          "dfc78763",
+          "1189cd90",
+          "d00db2e5"
         ],
         "avif": [
-          "4aad2e8c",
-          "908121ef",
-          "6fb9632f"
+          "e09156f1",
+          "a5b2e756",
+          "574fa93a"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     }
   ]
 };

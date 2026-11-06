@@ -176,7 +176,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "The renovation itself may still need a building permit, and the City says [construction projects on commercial properties need permits](https://www.winnipeg.ca/building-development/building-renovating/commercial-projects). Our guide to [the commercial renovation process](/blog/commercial-renovation-process) covers that step."
+      "x": "The renovation itself may still need a building permit, and the City says [construction projects on commercial properties need permits](https://www.winnipeg.ca/building-development/building-renovating/commercial-projects)."
     },
     {
       "t": "p",
@@ -244,7 +244,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Related reading:** [Interior demolition in Winnipeg](/services/demolition) · [Asbestos testing before renovating in Manitoba](/blog/asbestos-testing-before-renovating-manitoba) · [After the Hudson's Bay Closures: Winnipeg Big-Box Space](/blog/hudsons-bay-closure-winnipeg-malls)"
+      "x": "**Related reading:** [Interior demolition in Winnipeg](/services/demolition) · [Asbestos testing before renovating in Manitoba](/blog/asbestos-testing-before-renovating-manitoba)"
     }
   ],
   "faqs": [],
@@ -313,88 +313,88 @@ export default {
   ],
   "related": [
     {
-      "slug": "renovating-an-office-while-working",
-      "title": "Renovating an Office While Working: A Phasing Guide",
-      "excerpt": "How to plan an office renovation around a working office: phasing, after-hours work, protecting people and data, and what to expect from your contractor.",
-      "category": "Commercial",
-      "date": "2026-11-05",
-      "readMinutes": 3,
+      "slug": "asbestos-testing-before-renovating-manitoba",
+      "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
+      "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
+      "category": "Older Homes",
+      "date": "2026-10-15",
+      "readMinutes": 10,
       "image": {
-        "base": "/images/blog/renovating-an-office-while-working/renovating-an-office-while-working",
+        "base": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "21b5c6af",
-          "aac2ad80",
-          "8c8849fc"
+          "647701ea",
+          "e82e0b35",
+          "d62a9906"
         ],
         "avif": [
-          "8c0c7ebd",
-          "1e39e754",
-          "dc49626a"
+          "a81bb4f7",
+          "a3e4bb73",
+          "4b20838b"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     },
     {
-      "slug": "small-commercial-renovation-ideas",
-      "title": "10 Small Commercial Renovation Ideas With Big Impact",
-      "excerpt": "Ten small commercial renovations for Winnipeg offices, shops, clinics and multi-unit buildings that change how a space feels, without a full renovation.",
-      "category": "Commercial",
-      "date": "2026-11-05",
-      "readMinutes": 4,
+      "slug": "removing-a-load-bearing-wall-winnipeg",
+      "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
+      "excerpt": "What the City of Winnipeg’s permit form asks for when a load-bearing wall is opened, moved or removed, why an LVL beam needs an engineer’s sealed drawing, and what happens to the wiring and plumbing inside the wall.",
+      "category": "Permits & Planning",
+      "date": "2026-10-15",
+      "readMinutes": 10,
       "image": {
-        "base": "/images/blog/small-commercial-renovation-ideas/10-small-commercial-renovation-ideas",
+        "base": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "9a890ac5",
-          "d66e2bb5",
-          "840efabb"
+          "0aee3eb7",
+          "46195eef",
+          "69190335"
         ],
         "avif": [
-          "709e9828",
-          "e531e5fb",
-          "2a7bc8bd"
+          "bd0be13d",
+          "00fb01ad",
+          "d432225b"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     },
     {
-      "slug": "commercial-renovation-process",
-      "title": "The Commercial Renovation Process: 9 Steps to Handover",
-      "excerpt": "What commercial renovation services can include, step by step: site visit, budget, drawings, permits, phasing, construction, inspections and handover.",
+      "slug": "office-fit-up-lease-planning-winnipeg",
+      "title": "Office Fit-Up in Winnipeg: Planning Around Your Lease",
+      "excerpt": "How to line up an office fit-up with your lease dates in Winnipeg: what to settle with the landlord, which City approvals apply, and when your team can actually move in.",
       "category": "Commercial",
-      "date": "2026-11-05",
-      "readMinutes": 3,
+      "date": "2026-10-13",
+      "readMinutes": 8,
       "image": {
-        "base": "/images/blog/commercial-renovation-process/the-commercial-renovation-process-9",
+        "base": "/images/blog/office-fit-up-lease-planning-winnipeg/title-card-office-fit-up-in-winnipeg",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "c3aca01f",
-          "dab0cf04",
-          "851379dc"
+          "09eabf05",
+          "9079ee23",
+          "1977b93b"
         ],
         "avif": [
-          "6c9e75fe",
-          "975599a6",
-          "47eb3618"
+          "d81177bd",
+          "432a5aed",
+          "b33e68fe"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     }
   ]
 };

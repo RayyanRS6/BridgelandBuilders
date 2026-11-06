@@ -1,0 +1,80 @@
+{
+  "_about": "The client's agreed pace: 2 blogs and 2 articles a week, published on Thursdays. A post waiting for its week has status \"draft\" in blog-raw/posts. scripts/publish-scheduled.mjs publishes the week that is due; the build fails if a week or a published post breaks the pace. To move a post, swap it with another post of the same kind in this file. Order: facts tied to a date first, then by how likely the reader is to hire a renovation contractor.",
+  "weeks": [
+    {
+      "date": "2026-11-05",
+      "blogs": ["vacant-storefront-renovation-winnipeg", "tenant-improvement-allowance-winnipeg"],
+      "articles": ["commercial-interior-demolition-winnipeg", "capital-planning-property-managers-winnipeg"]
+    },
+    {
+      "date": "2026-11-12",
+      "blogs": ["pre-listing-renovations-winnipeg", "purchase-plus-improvements-mortgage-winnipeg"],
+      "articles": ["winnipeg-housing-market-september-2026", "trusted-trades-list-real-estate-agents"]
+    },
+    {
+      "date": "2026-11-19",
+      "blogs": ["manitoba-rent-increase-guideline-2027", "winter-unit-turnover-checklist-winnipeg"],
+      "articles": ["winnipeg-rent-prices-falling-2026", "bank-of-canada-rate-hike-renovation-budgets"]
+    },
+    {
+      "date": "2026-11-26",
+      "blogs": ["renovation-capital-vs-current-expense-canada", "efficiency-manitoba-commercial-rebates"],
+      "articles": ["manitoba-rent-control-threshold-2000", "winnipeg-construction-costs-2026"]
+    },
+    {
+      "date": "2026-12-03",
+      "blogs": ["commercial-mortgage-renewal-renovations-winnipeg", "agent-scripts-homes-that-need-work-winnipeg"],
+      "articles": ["commercial-property-appraisal-capital-projects", "early-contractor-involvement-architects"]
+    },
+    {
+      "date": "2026-12-10",
+      "blogs": ["rent-concessions-vs-renovations-winnipeg", "commercial-renovation-process"],
+      "articles": ["cost-of-tenant-turnover-winnipeg", "winnipeg-housing-starts-older-rental-buildings"]
+    },
+    {
+      "date": "2026-12-17",
+      "blogs": ["small-commercial-renovation-ideas", "commercial-renovation-cost-per-square-foot-winnipeg"],
+      "articles": ["manitoba-hydro-rate-increase-building-envelope", "winnipeg-retail-market-2026"]
+    },
+    {
+      "date": "2026-12-24",
+      "blogs": ["how-to-choose-a-commercial-construction-company-winnipeg", "how-to-vet-commercial-renovation-contractors-winnipeg"],
+      "articles": ["portage-place-redevelopment-downtown-buildings", "winnipeg-landlords-longer-tenancies"]
+    },
+    {
+      "date": "2026-12-31",
+      "blogs": ["tenant-retention-upgrades-lease-renewal", "convert-house-to-duplex-winnipeg"],
+      "articles": ["brick-repointing-cost-winnipeg-walk-ups", "apartment-lobby-renovation-ideas"]
+    },
+    {
+      "date": "2027-01-07",
+      "blogs": ["restaurant-renovation-checklist-winnipeg", "hospitality-renovation-winnipeg-off-season"],
+      "articles": ["smart-locks-rental-properties-door-first", "hudsons-bay-closure-winnipeg-malls"]
+    },
+    {
+      "date": "2027-01-14",
+      "blogs": ["office-building-upgrades-attract-tenants", "office-renovation-cost-winnipeg"],
+      "articles": ["winnipeg-office-vacancy-class-b", "flight-to-quality-office-winnipeg"]
+    },
+    {
+      "date": "2027-01-21",
+      "blogs": ["renovating-an-office-while-working", "medical-clinic-design-layout-winnipeg"],
+      "articles": ["winnipeg-industrial-vacancy-older-buildings", "flex-space-suburban-office-winnipeg"]
+    },
+    {
+      "date": "2027-01-28",
+      "blogs": ["hotel-renovation-winnipeg-stay-open", "office-to-residential-conversion-winnipeg"],
+      "articles": ["canadian-dental-care-plan-dental-office-space", "manitoba-new-clinics-medical-space"]
+    },
+    {
+      "date": "2027-02-04",
+      "blogs": ["reduce-commercial-building-operating-costs", "contractor-payment-fraud-red-flags"],
+      "articles": ["office-to-hotel-conversion-winnipeg", "infill-housing-winnipeg-small-landlords"]
+    },
+    {
+      "date": "2027-02-11",
+      "blogs": ["renovations-lower-commercial-property-insurance", "questions-to-ask-a-commercial-renovation-contractor"],
+      "articles": ["average-rent-by-neighbourhood-winnipeg", "seller-impersonation-title-fraud-canada"]
+    }
+  ]
+}

@@ -381,32 +381,32 @@ export default {
       "titleCard": true
     },
     {
-      "slug": "how-to-vet-commercial-renovation-contractors-winnipeg",
-      "title": "How to Find and Vet Commercial Renovation Contractors in Winnipeg",
-      "excerpt": "How to find, shortlist and vet commercial renovation contractors in Winnipeg: where to look, documents to request, smart questions and red flags.",
-      "category": "Hiring a Contractor",
-      "date": "2026-11-05",
-      "readMinutes": 3,
+      "slug": "how-to-choose-between-a-full-renovation-and-partial-upgrades",
+      "title": "Full vs Partial Renovation: How to Choose for Your Winnipeg Home",
+      "excerpt": "A full renovation fixes everything at once; partial upgrades spread the work and the cost over time. The right choice depends on the condition of your house, your plans and how much disruption you can live with. Here is a practical way to decide.",
+      "category": "Permits & Planning",
+      "date": "2026-09-01",
+      "readMinutes": 7,
       "image": {
-        "base": "/images/blog/how-to-vet-commercial-renovation/how-to-find-and-vet-commercial",
+        "base": "/images/blog/how-to-choose-between-a-full-renovation/title-card-full-vs-partial",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "f7088b6c",
-          "abfd0e4b",
-          "d0e6be5e"
+          "90f415ff",
+          "63e7eccb",
+          "052e848e"
         ],
         "avif": [
-          "32515d10",
-          "9f12c4df",
-          "01529b80"
+          "0f501bc8",
+          "808052e1",
+          "454ae0e0"
         ],
         "main": 1
       },
-      "thumbnail": true
+      "titleCard": true
     }
   ]
 };

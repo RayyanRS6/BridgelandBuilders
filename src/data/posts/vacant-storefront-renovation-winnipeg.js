@@ -196,7 +196,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Related reading:** [Retail renovation in Winnipeg](/services/retail-renovations) · [Occupancy permits and change of use](/blog/occupancy-permit-change-of-use-winnipeg) · [Winnipeg Retail Market 2026: Where It Is Growing](/blog/winnipeg-retail-market-2026)"
+      "x": "**Related reading:** [Retail renovation in Winnipeg](/services/retail-renovations) · [Occupancy permits and change of use](/blog/occupancy-permit-change-of-use-winnipeg)"
     }
   ],
   "faqs": [],
@@ -235,62 +235,6 @@ export default {
   ],
   "related": [
     {
-      "slug": "hudsons-bay-closure-winnipeg-malls",
-      "title": "After the Hudson's Bay Closures: Winnipeg Big-Box Space",
-      "excerpt": "The Hudson's Bay closures left huge vacancies in Winnipeg's malls. How owners can break big boxes into units that modern retail and service tenants want.",
-      "category": "Winnipeg Market News",
-      "date": "2026-11-05",
-      "readMinutes": 5,
-      "image": {
-        "base": "/images/blog/hudsons-bay-closure-winnipeg-malls/after-the-hudsons-bay-closures",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "517e7345",
-          "24e38647",
-          "18e76b4f"
-        ],
-        "avif": [
-          "2c71ea06",
-          "e0d8279b",
-          "644064ab"
-        ],
-        "main": 1
-      },
-      "thumbnail": true
-    },
-    {
-      "slug": "winnipeg-retail-market-2026",
-      "title": "Winnipeg Retail Market 2026: Where It Is Growing",
-      "excerpt": "Costco Westport, the Stockyards, Polo Park and St. Vital Centre: where Winnipeg retail is growing and the storefronts and shells new tenants expect.",
-      "category": "Winnipeg Market News",
-      "date": "2026-11-05",
-      "readMinutes": 5,
-      "image": {
-        "base": "/images/blog/winnipeg-retail-market-2026/winnipeg-retail-market-2026-where-it",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "c127e69b",
-          "8ed6de79",
-          "49583a7c"
-        ],
-        "avif": [
-          "862e3bf3",
-          "bce588d8",
-          "23a69445"
-        ],
-        "main": 1
-      },
-      "thumbnail": true
-    },
-    {
       "slug": "occupancy-permit-change-of-use-winnipeg",
       "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
       "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
@@ -317,6 +261,60 @@ export default {
         "main": 1
       },
       "titleCard": true
+    },
+    {
+      "slug": "how-to-balance-functionality-and-aesthetics-in-a-commercial-space",
+      "title": "Commercial Interior Design: Balancing Function and Looks",
+      "excerpt": "A practical order of decisions for a commercial interior that works for staff and customers and still looks like your brand, with what to settle early and what can wait.",
+      "category": "Commercial",
+      "date": "2026-09-03",
+      "readMinutes": 8,
+      "image": {
+        "base": "/images/blog/how-to-balance-functionality/open-commercial-lounge-with-grey",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "413203b1",
+          "4e31fe2d",
+          "34a27d10"
+        ],
+        "avif": [
+          "0f59d06c",
+          "12dcb183",
+          "43da1cb9"
+        ],
+        "main": 1
+      }
+    },
+    {
+      "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
+      "title": "Commercial Renovation ROI: Which Upgrades Pay Back?",
+      "excerpt": "A plain-language way to judge whether a commercial renovation will pay for itself, which kinds of upgrades tend to earn their cost back, and what quietly eats into the return.",
+      "category": "Commercial",
+      "date": "2026-08-12",
+      "readMinutes": 7,
+      "image": {
+        "base": "/images/blog/understanding-roi-which-commercial/title-graphic-reading-understanding",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "90ed6161",
+          "52b03fa5",
+          "e95b1d18"
+        ],
+        "avif": [
+          "7be4d1c9",
+          "5a9d610c",
+          "537414ab"
+        ],
+        "main": 1
+      }
     }
   ]
 };
