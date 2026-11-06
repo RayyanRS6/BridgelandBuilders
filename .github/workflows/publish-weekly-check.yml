@@ -2,8 +2,7 @@
 # Monday before. It fails, and GitHub emails a failure, when:
 #   - last week's posts are not live on the site
 #   - last week's posts did not go out, for example because GitHub skipped the timers
-#   - this Thursday's posts would be refused: a post past its review-by date, or
-#     a problem in the schedule
+#   - this Thursday's posts would be refused, because of a problem in the schedule
 # It changes nothing.
 name: Check this week's posts
 

@@ -5,7 +5,6 @@ dist-ssr
 *.local
 .env
 *.zip
-.claude/
 # Local Lighthouse CI runs (npx @lhci/cli autorun with lighthouserc.json)
 .lighthouseci/
 .env.local

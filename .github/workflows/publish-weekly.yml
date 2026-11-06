@@ -1,8 +1,8 @@
 # Publishes one week of blog-raw/publishing-schedule.json. The client's pace is
 # 2 blogs and 2 articles a week, on Thursdays.
 #
-# It runs by itself on GitHub, with no computer or Claude session needed. Anyone
-# can also press "Run workflow" (Actions tab, then "Publish this week's posts").
+# It runs by itself on GitHub, with no computer needed. Anyone can also press
+# "Run workflow" (Actions tab, then "Publish this week's posts").
 # Trying more than once is safe: once the week is out, a try finds nothing due.
 #
 # What it does: scripts/publish-scheduled.mjs picks the oldest week that is due
@@ -11,15 +11,15 @@
 # deploys. A run that publishes stays red until the new posts answer on the live
 # site. Post-deploy checks then run as for any deploy.
 #
-# It stops and publishes nothing, and GitHub emails a failure, when:
+# Nobody needs to check anything for it to run. It stops and publishes nothing,
+# and GitHub emails a failure, only when something is broken:
 #   - last week's posts are not live on the site, so two weeks can't stack up
 #     behind a failed deploy (scripts/check-live-posts.mjs)
-#   - a post in the week is past its review-by date, so its facts need a re-check
 #   - the week is partly out, so a person decides
-# Later weeks wait behind a stopped week. A re-check merged by the Saturday try
-# keeps the later dates. After that they move back a week, and the run opens a
-# GitHub issue saying so. .github/workflows/publish-weekly-check.yml warns on the
-# Monday before.
+# Later weeks wait behind a stopped week. A week out late takes its real date.
+# From the following Monday on, later weeks move back a week, and the run opens a
+# GitHub issue saying so. .github/workflows/publish-weekly-check.yml warns on
+# Mondays if something is already wrong.
 #
 # The test box builds whatever is due and pushes nothing. With a test date as
 # well, it rehearses that day's week. A test date is refused on a real run, so
