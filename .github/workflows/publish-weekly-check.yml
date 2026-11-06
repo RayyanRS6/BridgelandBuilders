@@ -1,0 +1,53 @@
+# Warning for the weekly publish (.github/workflows/publish-weekly.yml) on the
+# Monday before. It fails, and GitHub emails a failure, when:
+#   - last week's posts are not live on the site
+#   - last week's posts did not go out, for example because GitHub skipped the timers
+#   - this Thursday's posts would be refused: a post past its review-by date, or
+#     a problem in the schedule
+# It changes nothing.
+name: Check this week's posts
+
+on:
+  schedule:
+    # Mondays 05:37 UTC, 12:37 a.m. in Winnipeg. GitHub's timers can start hours late.
+    - cron: '37 5 * * 1'
+  workflow_dispatch:
+    inputs:
+      thursday:
+        description: 'Test only: check this date instead of the coming Thursday (YYYY-MM-DD)'
+        type: string
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Are last week's posts live?
+        run: node scripts/check-live-posts.mjs
+
+      - name: Did last week's posts go out?
+        run: |
+          output=$(node scripts/publish-scheduled.mjs --dry-run 2>&1 || true)
+          echo "$output"
+          if echo "$output" | grep -q 'Week planned for'; then
+            echo "A week whose date has passed has not gone out."
+            exit 1
+          fi
+
+      - name: Would this Thursday's posts go out?
+        env:
+          THURSDAY: ${{ inputs.thursday }}
+        run: |
+          when="${THURSDAY:-$(date -u -d 'next thursday' +%F)}"
+          echo "Checking $when"
+          node scripts/publish-scheduled.mjs --dry-run "--date=$when"

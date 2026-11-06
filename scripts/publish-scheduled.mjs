@@ -19,13 +19,16 @@
  * captions and the plan.
  *
  * After this, it takes the normal build, npm run audit:hashes and another build,
- * and goes out through a pull request or the "Publish this week's posts" GitHub
- * workflow (.github/workflows/publish-weekly.yml).
+ * and goes out through the timed "Publish this week's posts" GitHub workflow
+ * (.github/workflows/publish-weekly.yml), its button, or a pull request.
  *
  * If a post in the week is past its "reviewBy" date, nothing is published and
  * the exit code is 1: re-check the post's dated facts, correct the text, set a
  * new "reviewBy" in its file and run this again. Facts tied to a date do not go
  * live unchecked.
+ *
+ * If a week is partly out, nothing is published and the exit code is 1. Nothing
+ * here does that to a week, so a person has been at it, and a person decides.
  *
  * The files are edited as text, so their formatting and line endings stay as
  * they are. Node built-ins only.
@@ -93,11 +96,17 @@ if (!dueWeeks.length) {
 
 const week = dueWeeks[0];
 const due = slugsOfWeek(week).filter(isWaiting);
-// It goes out today, whatever day was planned, so the dates stay true. A week
-// already partly out keeps its date, so all its posts agree with the schedule.
-const partlyOut = due.length < slugsOfWeek(week).length;
-const goesOutOn = partlyOut ? week.date : today;
-console.log(`Week planned for ${week.date}: ${due.length} post(s) due, going out dated ${goesOutOn}.`);
+// A retired post is simply left out. A published one means someone has been at this week.
+const alreadyOut = slugsOfWeek(week).filter((slug) => bySlug.get(slug)?.status === 'published');
+if (alreadyOut.length) {
+  console.error(`Nothing published: the week planned for ${week.date} is partly out.`);
+  console.error(`  Already published: ${alreadyOut.join(', ')}`);
+  console.error(`  Still waiting: ${due.join(', ')}`);
+  console.error('To keep a waiting post back, move it to a later week in the schedule. To take a live post down, set its status to "redirect" or "noindex", not "draft".');
+  process.exit(1);
+}
+// It goes out today, whatever day was planned, so the dates stay true.
+console.log(`Week planned for ${week.date}: ${due.length} post(s) due, going out dated ${today}.`);
 
 const stale = due.filter((slug) => {
   const reviewBy = bySlug.get(slug).reviewBy;
@@ -124,8 +133,8 @@ let keywordMap = readFileSync(KEYWORD_MAP, 'utf8');
 for (const slug of due) {
   let text = readFileSync(postFile(slug), 'utf8');
   text = replaceOnce(text, /"status":\s*"draft"/, '"status": "published"', slug);
-  text = replaceOnce(text, /"date":\s*"[^"]*"/, `"date": "${goesOutOn}"`, slug);
-  if (bySlug.get(slug).updated !== undefined) text = replaceOnce(text, /"updated":\s*"[^"]*"/, `"updated": "${goesOutOn}"`, slug);
+  text = replaceOnce(text, /"date":\s*"[^"]*"/, `"date": "${today}"`, slug);
+  if (bySlug.get(slug).updated !== undefined) text = replaceOnce(text, /"updated":\s*"[^"]*"/, `"updated": "${today}"`, slug);
   writes.push([postFile(slug), text]);
 
   const entry = new RegExp(`("/blog/${escapeForRegExp(slug)}":\\s*\\{\\s*"status":\\s*)"planned"`);
@@ -138,10 +147,10 @@ writes.push([KEYWORD_MAP, keywordMap]);
 // later weeks on their weekday and the gaps between them as they were.
 const later = weeks.slice(weeks.indexOf(week) + 1);
 let moveDays = 0;
-while (later.length && mondayOf(addDays(later[0].date, moveDays)) <= mondayOf(goesOutOn)) moveDays += 7;
+while (later.length && mondayOf(addDays(later[0].date, moveDays)) <= mondayOf(today)) moveDays += 7;
 
 const newDates = new Map();
-if (goesOutOn !== week.date) newDates.set(week.date, goesOutOn);
+if (today !== week.date) newDates.set(week.date, today);
 if (moveDays) for (const laterWeek of later) newDates.set(laterWeek.date, addDays(laterWeek.date, moveDays));
 if (newDates.size) {
   const scheduleFile = join(ROOT, SCHEDULE_FILE);
