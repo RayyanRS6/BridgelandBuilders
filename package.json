@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "seo": "node scripts/build-seo-files.mjs && node scripts/sync-redirects.mjs",
     "blog:data": "node scripts/build-blog-data.mjs",
+    "publish:week": "node scripts/publish-scheduled.mjs",
     "prerender": "node scripts/prerender.mjs",
     "audit": "node scripts/audit-seo.mjs",
     "audit:hashes": "node scripts/audit-seo.mjs --update-hashes",

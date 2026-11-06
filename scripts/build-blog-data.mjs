@@ -96,7 +96,14 @@
  * [label](https://…) and **bold**. Internal links must point at a live,
  * indexable page: links to redirect sources, noindex routes, unpublished
  * posts, draft service pages, ?query URLs or paths that are not a page on the
- * site fail the build.
+ * site fail the build. The one exception is a post waiting for its week in the
+ * publishing schedule: links to it are held back until it goes live.
+ *
+ * Publishing schedule: blog-raw/publishing-schedule.json holds the client's
+ * pace, 2 blogs and 2 articles a week. A post waiting for its week has status
+ * 'draft'. scripts/publish-scheduled.mjs flips a week's posts when the date
+ * arrives, and this script fails the build when the pace is broken
+ * (scripts/lib/publishing-schedule.mjs).
  *
  * Images: when src/data/media.generated.js exists (original URL →
  * { src, srcSet, avifSrcSet, width, height, hero?, og?, schemaImages? }) the
@@ -112,6 +119,7 @@ import { join, relative } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { cardImage } from '../src/lib/cardImage.js';
 import { stripInline } from '../src/lib/inlineText.js';
+import { checkSchedule, holdLinksInPost, loadWeeks, makeLinkHolder, scheduledDates, winnipegToday } from './lib/publishing-schedule.mjs';
 
 const VERIFY = process.argv.includes('--verify');
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
@@ -170,6 +178,14 @@ for (const p of raw) {
   if (status === 'published' && p.legacyBlocks) fail(`${p.slug}: raw Wix blocks (legacyBlocks) — normalise the post before publishing it`);
   if (status === 'published' && !/^\d{4}-\d{2}-\d{2}$/.test(p.date || '')) fail(`${p.slug}: date must be YYYY-MM-DD`);
 }
+
+// The client's pace: 2 blogs and 2 articles a week. PUBLISH_TEST_DATE is only for
+// rehearsing a future week (.github/workflows/publish-weekly.yml, which never pushes one).
+const scheduleWeeks = loadWeeks(ROOT);
+checkSchedule(scheduleWeeks, raw, process.env.PUBLISH_TEST_DATE || winnipegToday()).forEach(fail);
+const scheduleDates = scheduledDates(scheduleWeeks);
+const waitingPosts = raw.filter((p) => statusOf(p) === 'draft' && scheduleDates.has(p.slug));
+const holdLinks = makeLinkHolder(new Set(waitingPosts.map((p) => `/blog/${p.slug}`)));
 
 /** Optional project modules: a missing or broken one degrades to null with a warning. */
 async function optionalModule(rel) {
@@ -422,7 +438,7 @@ function cardAlt(p) {
 }
 
 /* -------------------------------------------------------------- build */
-const published = raw.filter((p) => statusOf(p) === 'published');
+const published = raw.filter((p) => statusOf(p) === 'published').map((p) => holdLinksInPost(p, holdLinks));
 
 for (const p of published) {
   for (const key of ['author', 'reviewedBy']) {
@@ -885,6 +901,10 @@ const byStatus = raw.reduce((acc, p) => ({ ...acc, [statusOf(p)]: (acc[statusOf(
 const bodyImages = [...bodies.values()].flatMap((b) => b.blocks.filter((block) => block.t === 'img'));
 console.log('blog-raw/posts:', raw.length, JSON.stringify(byStatus));
 console.log('published posts:', posts.length, '| redirects:', redirects.length, '| post modules:', bodies.size);
+if (scheduleWeeks.length) {
+  const nextDate = waitingPosts.map((p) => scheduleDates.get(p.slug)).sort()[0];
+  console.log(`publishing schedule: ${scheduleWeeks.length} weeks, ${waitingPosts.length} posts waiting${nextDate ? `, next on ${nextDate}` : ''}`);
+}
 console.log('categories:', categories.join(' | '));
 console.log('home guides:', homeGuides.map((p) => p.slug).join(', '));
 console.log('faqs:', posts.map((p) => bodies.get(p.slug).faqs.length).join(','), '| member-only:', posts.filter((p) => p.memberOnly).length);

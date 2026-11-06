@@ -905,7 +905,7 @@
       "note": "wave 5 guide (2026-10-15); plan additions, validate volume (O-16)"
     },
     "/blog/winnipeg-housing-market-september-2026": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg housing market september 2026"],
       "secondary": [
         "curb appeal before selling",
@@ -916,7 +916,7 @@
       "note": "Drive piece A01, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/bank-of-canada-rate-hike-renovation-budgets": {
-      "status": "live",
+      "status": "planned",
       "primary": ["bank of Canada rate hike renovations"],
       "secondary": [
         "bank of Canada 2.50%",
@@ -926,7 +926,7 @@
       "note": "Drive piece A02, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-landlords-longer-tenancies": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg landlords longer tenancies"],
       "secondary": [
         "property renovation services",
@@ -937,7 +937,7 @@
       "note": "Drive piece A03, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-rent-prices-falling-2026": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg rents falling"],
       "secondary": [
         "average rent Winnipeg one bedroom",
@@ -948,7 +948,7 @@
       "note": "Drive piece A04, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-housing-starts-older-rental-buildings": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg housing starts"],
       "secondary": [
         "older apartment building renovation",
@@ -958,7 +958,7 @@
       "note": "Drive piece A05, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/cost-of-tenant-turnover-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["cost of tenant turnover"],
       "secondary": [
         "tenant retention Winnipeg",
@@ -969,14 +969,14 @@
       "note": "Drive piece A06, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/average-rent-by-neighbourhood-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["average rent by neighbourhood Winnipeg"],
       "secondary": ["st boniface rent"],
       "supporting": [],
       "note": "Drive piece A07, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-construction-costs-2026": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg construction costs 2026"],
       "secondary": [
         "tariffs construction costs Canada",
@@ -987,7 +987,7 @@
       "note": "Drive piece A08, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/portage-place-redevelopment-downtown-buildings": {
-      "status": "live",
+      "status": "planned",
       "primary": ["portage place redevelopment"],
       "secondary": [
         "downtown Winnipeg revitalization",
@@ -998,7 +998,7 @@
       "note": "Drive piece A09, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-office-vacancy-class-b": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg office vacancy"],
       "secondary": [
         "class b office Winnipeg",
@@ -1008,14 +1008,14 @@
       "note": "Drive piece A10, imported 2026-11-05; keywords from the file, validate volume. Dropped, already owned: office renovations (/services/office-renovations supporting)."
     },
     "/blog/flight-to-quality-office-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["flight to quality office Winnipeg"],
       "secondary": ["skywalk office buildings Winnipeg"],
       "supporting": [],
       "note": "Drive piece A11, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/flex-space-suburban-office-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["flex space Winnipeg"],
       "secondary": [
         "suburban office Winnipeg",
@@ -1025,7 +1025,7 @@
       "note": "Drive piece A12, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/hudsons-bay-closure-winnipeg-malls": {
-      "status": "live",
+      "status": "planned",
       "primary": ["hudson's bay closures Winnipeg"],
       "secondary": [
         "big box space redevelopment",
@@ -1036,7 +1036,7 @@
       "note": "Drive piece A13, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-retail-market-2026": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg retail market 2026"],
       "secondary": [
         "commercial retail renovations",
@@ -1047,7 +1047,7 @@
       "note": "Drive piece A14, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-industrial-vacancy-older-buildings": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Winnipeg industrial"],
       "secondary": [
         "Winnipeg industrial vacancy",
@@ -1059,7 +1059,7 @@
       "note": "Drive piece A15, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/office-to-hotel-conversion-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["office to hotel conversion"],
       "secondary": [
         "hotel renovation contractors",
@@ -1070,7 +1070,7 @@
       "note": "Drive piece A16, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/seller-impersonation-title-fraud-canada": {
-      "status": "live",
+      "status": "planned",
       "primary": ["seller impersonation fraud"],
       "secondary": [
         "title fraud Canada",
@@ -1090,7 +1090,7 @@
       "note": "Drive piece A18, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/commercial-property-appraisal-capital-projects": {
-      "status": "live",
+      "status": "planned",
       "primary": ["refinancing commercial property"],
       "secondary": [
         "refinancing commercial property 2026",
@@ -1101,7 +1101,7 @@
       "note": "Drive piece A19, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/manitoba-hydro-rate-increase-building-envelope": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Manitoba hydro rate increase"],
       "secondary": [
         "Manitoba hydro rates 2027 2028",
@@ -1112,7 +1112,7 @@
       "note": "Drive piece A20, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/smart-locks-rental-properties-door-first": {
-      "status": "live",
+      "status": "planned",
       "primary": ["smart locks for rental properties"],
       "secondary": [
         "keyless entry apartments",
@@ -1123,14 +1123,14 @@
       "note": "Drive piece A21, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/infill-housing-winnipeg-small-landlords": {
-      "status": "live",
+      "status": "planned",
       "primary": ["infill housing Winnipeg"],
       "secondary": ["small landlord redevelopment"],
       "supporting": [],
       "note": "Drive piece A22, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/trusted-trades-list-real-estate-agents": {
-      "status": "live",
+      "status": "planned",
       "primary": ["trusted trades list for real estate agents"],
       "secondary": [
         "professional painters in Winnipeg mb",
@@ -1141,7 +1141,7 @@
       "note": "Drive piece A23, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/apartment-lobby-renovation-ideas": {
-      "status": "live",
+      "status": "planned",
       "primary": ["apartment lobby renovation ideas"],
       "secondary": [
         "hospitality space remodeling",
@@ -1152,14 +1152,14 @@
       "note": "Drive piece A24, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/early-contractor-involvement-architects": {
-      "status": "live",
+      "status": "planned",
       "primary": ["early contractor involvement"],
       "secondary": ["construction partners for architects Winnipeg"],
       "supporting": [],
       "note": "Drive piece A25, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/canadian-dental-care-plan-dental-office-space": {
-      "status": "live",
+      "status": "planned",
       "primary": ["canadian dental care plan dental office"],
       "secondary": [
         "dental clinic remodeling",
@@ -1170,7 +1170,7 @@
       "note": "Drive piece A26, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/manitoba-new-clinics-medical-space": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Manitoba new clinics"],
       "secondary": [
         "medical clinic renovation",
@@ -1181,7 +1181,7 @@
       "note": "Drive piece A27, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/brick-repointing-cost-winnipeg-walk-ups": {
-      "status": "live",
+      "status": "planned",
       "primary": ["brick repointing Winnipeg"],
       "secondary": [
         "brick repointing cost Winnipeg",
@@ -1203,7 +1203,7 @@
       "note": "Drive piece A29, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/manitoba-rent-control-threshold-2000": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Manitoba rent control threshold $2,000"],
       "secondary": [
         "rent regulation exemption Manitoba 2027",
@@ -1213,7 +1213,7 @@
       "note": "Drive piece A30, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/pre-listing-renovations-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["pre-listing renovations Winnipeg"],
       "secondary": [
         "what to fix before selling a house",
@@ -1224,7 +1224,7 @@
       "note": "Drive piece B01, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/agent-scripts-homes-that-need-work-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["real estate agent scripts"],
       "secondary": [
         "handling buyer objections real estate",
@@ -1235,7 +1235,7 @@
       "note": "Drive piece B02, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/purchase-plus-improvements-mortgage-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["purchase plus improvements mortgage Winnipeg"],
       "secondary": [
         "buying a fixer upper Winnipeg",
@@ -1246,7 +1246,7 @@
       "note": "Drive piece B03, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winter-unit-turnover-checklist-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["unit turnover checklist"],
       "secondary": [
         "rental unit turnover Winnipeg",
@@ -1257,7 +1257,7 @@
       "note": "Drive piece B04, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/manitoba-rent-increase-guideline-2027": {
-      "status": "live",
+      "status": "planned",
       "primary": ["Manitoba rent increase guideline 2027"],
       "secondary": [
         "above guideline rent increase Manitoba",
@@ -1267,7 +1267,7 @@
       "note": "Drive piece B05, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/tenant-retention-upgrades-lease-renewal": {
-      "status": "live",
+      "status": "planned",
       "primary": ["tenant retention upgrades"],
       "secondary": [
         "lease renewal upgrades",
@@ -1277,7 +1277,7 @@
       "note": "Drive piece B06, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/rent-concessions-vs-renovations-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["rent concessions renovations"],
       "secondary": [
         "rent concessions vs renovations",
@@ -1288,7 +1288,7 @@
       "note": "Drive piece B07, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/office-to-residential-conversion-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["office to residential conversion Winnipeg"],
       "secondary": [
         "office conversion to apartments",
@@ -1298,7 +1298,7 @@
       "note": "Drive piece B08, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/how-to-choose-a-commercial-construction-company-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["how to choose a commercial construction company"],
       "secondary": [
         "construction companies in Winnipeg Manitoba",
@@ -1309,7 +1309,7 @@
       "note": "Drive piece B09, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/convert-house-to-duplex-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["convert house to duplex Winnipeg"],
       "secondary": [
         "triplex zoning Winnipeg",
@@ -1319,7 +1319,7 @@
       "note": "Drive piece B10, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/questions-to-ask-a-commercial-renovation-contractor": {
-      "status": "live",
+      "status": "planned",
       "primary": ["questions to ask a commercial contractor"],
       "secondary": [
         "questions to ask before hiring a contractor",
@@ -1350,7 +1350,7 @@
       "note": "Drive piece B13, imported 2026-11-05; keywords from the file, validate volume. Dropped, already owned: tenant improvement contractor winnipeg (/services/commercial-renovations secondary)."
     },
     "/blog/commercial-renovation-process": {
-      "status": "live",
+      "status": "planned",
       "primary": ["commercial renovation process"],
       "secondary": [
         "commercial renovation services",
@@ -1361,7 +1361,7 @@
       "note": "Drive piece B14, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/commercial-renovation-cost-per-square-foot-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["commercial renovation cost per square foot Winnipeg"],
       "secondary": [
         "commercial renovations cost",
@@ -1372,7 +1372,7 @@
       "note": "Drive piece B15, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/how-to-vet-commercial-renovation-contractors-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["how to vet a commercial contractor"],
       "secondary": [
         "commercial renovation contractors",
@@ -1383,7 +1383,7 @@
       "note": "Drive piece B16, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/contractor-payment-fraud-red-flags": {
-      "status": "live",
+      "status": "planned",
       "primary": ["contractor payment fraud"],
       "secondary": [
         "renovation scams",
@@ -1394,7 +1394,7 @@
       "note": "Drive piece B17, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/small-commercial-renovation-ideas": {
-      "status": "live",
+      "status": "planned",
       "primary": ["small commercial renovation ideas"],
       "secondary": [
         "small commercial renovations",
@@ -1405,7 +1405,7 @@
       "note": "Drive piece B18, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/reduce-commercial-building-operating-costs": {
-      "status": "live",
+      "status": "planned",
       "primary": ["reduce operating costs commercial building"],
       "secondary": [
         "commercial property renovation",
@@ -1416,7 +1416,7 @@
       "note": "Drive piece B19, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/commercial-mortgage-renewal-renovations-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["renovations before commercial mortgage renewal"],
       "secondary": [
         "commercial building renovations Winnipeg",
@@ -1426,7 +1426,7 @@
       "note": "Drive piece B20, imported 2026-11-05; keywords from the file, validate volume. Dropped, already owned: refinancing commercial property (/blog/commercial-property-appraisal-capital-projects primary)."
     },
     "/blog/office-building-upgrades-attract-tenants": {
-      "status": "live",
+      "status": "planned",
       "primary": ["office building upgrades to attract tenants"],
       "secondary": [
         "office renovation",
@@ -1436,7 +1436,7 @@
       "note": "Drive piece B21, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/renovations-lower-commercial-property-insurance": {
-      "status": "live",
+      "status": "planned",
       "primary": ["lower commercial property insurance"],
       "secondary": [
         "commercial renovation",
@@ -1447,7 +1447,7 @@
       "note": "Drive piece B22, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/efficiency-manitoba-commercial-rebates": {
-      "status": "live",
+      "status": "planned",
       "primary": ["efficiency Manitoba commercial rebates"],
       "secondary": [
         "energy efficient commercial renovations",
@@ -1457,7 +1457,7 @@
       "note": "Drive piece B23, imported 2026-11-05; keywords from the file, validate volume. Dropped, already owned: commercial renovations (/services/commercial-renovations supporting)."
     },
     "/blog/office-renovation-cost-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["office renovation cost Winnipeg"],
       "secondary": [
         "office renovation cost per square foot",
@@ -1468,7 +1468,7 @@
       "note": "Drive piece B24, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/medical-clinic-design-layout-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["medical clinic design layout"],
       "secondary": [
         "medical office renovations",
@@ -1479,7 +1479,7 @@
       "note": "Drive piece B25, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/renovation-capital-vs-current-expense-canada": {
-      "status": "live",
+      "status": "planned",
       "primary": ["renovation capital expense vs current expense"],
       "secondary": [
         "are renovations tax deductible for rental property",
@@ -1490,7 +1490,7 @@
       "note": "Drive piece B26, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/hotel-renovation-winnipeg-stay-open": {
-      "status": "live",
+      "status": "planned",
       "primary": ["hotel renovation without closing"],
       "secondary": [
         "hotel renovation in Winnipeg mb",
@@ -1501,7 +1501,7 @@
       "note": "Drive piece B27, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/restaurant-renovation-checklist-winnipeg": {
-      "status": "live",
+      "status": "planned",
       "primary": ["restaurant renovation checklist"],
       "secondary": [
         "restaurant renovation company",
@@ -1512,7 +1512,7 @@
       "note": "Drive piece B28, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/renovating-an-office-while-working": {
-      "status": "live",
+      "status": "planned",
       "primary": ["renovating an office while working"],
       "secondary": [
         "office renovation contractor",
@@ -1523,7 +1523,7 @@
       "note": "Drive piece B29, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/hospitality-renovation-winnipeg-off-season": {
-      "status": "live",
+      "status": "planned",
       "primary": ["when to renovate a restaurant or bar"],
       "secondary": [
         "hospitality renovation in Winnipeg mb",

@@ -70,6 +70,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import sharp from 'sharp';
+import { loadWeeks, scheduledDates } from './lib/publishing-schedule.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const PUBLIC = join(ROOT, 'public');
@@ -510,13 +511,18 @@ const CARD_LAYOUTS = {
   },
 };
 
-/** Published posts (blog-raw/posts/*.json; a missing status means published). */
+/**
+ * Published posts (blog-raw/posts/*.json; a missing status means published),
+ * plus the drafts waiting for their week in the publishing schedule: their
+ * images have to be ready when the week arrives.
+ */
 function publishedPosts() {
   if (!existsSync(POSTS_DIR)) return [];
+  const waiting = scheduledDates(loadWeeks(ROOT));
   return readdirSync(POSTS_DIR)
     .filter((file) => file.endsWith('.json'))
     .map((file) => JSON.parse(readFileSync(join(POSTS_DIR, file), 'utf8')))
-    .filter((post) => (post.status || 'published') === 'published' && post.slug);
+    .filter((post) => post.slug && ((post.status || 'published') === 'published' || (post.status === 'draft' && waiting.has(post.slug))));
 }
 
 /** Published posts without a hero image, by slug. */
