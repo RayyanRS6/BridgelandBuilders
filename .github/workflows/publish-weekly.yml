@@ -1,22 +1,25 @@
 # Publishes one week of blog-raw/publishing-schedule.json. The client's pace is
 # 2 blogs and 2 articles a week, on Thursdays.
 #
-# It runs only when someone presses "Run workflow" on GitHub (Actions tab, then
-# "Publish this week's posts"). To let it run by itself every Thursday, add this
-# under "on:":
-#   schedule:
-#     # Thursdays 15:07 UTC, 10:07 a.m. in Winnipeg, off the top of the hour.
-#     - cron: '7 15 * * 4'
+# It runs by itself on GitHub, with no computer or Claude session needed. Anyone
+# can also press "Run workflow" (Actions tab, then "Publish this week's posts").
+# Trying more than once is safe: once the week is out, a try finds nothing due.
 #
 # What it does: scripts/publish-scheduled.mjs picks the oldest week that is due
 # and flips its posts, then the normal build runs (with the content hashes
 # recorded, as in every release) and the result goes straight to main, which
-# deploys. A green run means the new posts answer on the live site. Post-deploy
-# checks then run as for any deploy.
+# deploys. A run that publishes stays red until the new posts answer on the live
+# site. Post-deploy checks then run as for any deploy.
 #
-# It stops and publishes nothing, and GitHub emails a failure, when a post in the
-# week is past its review-by date: its dated facts need a re-check first. It does
-# nothing at all when no week is due, so pressing the button early is harmless.
+# It stops and publishes nothing, and GitHub emails a failure, when:
+#   - last week's posts are not live on the site, so two weeks can't stack up
+#     behind a failed deploy (scripts/check-live-posts.mjs)
+#   - a post in the week is past its review-by date, so its facts need a re-check
+#   - the week is partly out, so a person decides
+# Later weeks wait behind a stopped week. A re-check merged by the Saturday try
+# keeps the later dates. After that they move back a week, and the run opens a
+# GitHub issue saying so. .github/workflows/publish-weekly-check.yml warns on the
+# Monday before.
 #
 # The test box builds whatever is due and pushes nothing. With a test date as
 # well, it rehearses that day's week. A test date is refused on a real run, so
@@ -24,6 +27,16 @@
 name: Publish this week's posts
 
 on:
+  schedule:
+    # Times are UTC, off the top of the hour as GitHub advises. Timers can start
+    # hours late (5.6 to 8.4 hours so far for this repo's other timer), or
+    # rarely not at all, so the first try is early and there are two more.
+    # Thursday 12:37 a.m. in Winnipeg.
+    - cron: '37 5 * * 4'
+    # Thursday 12:37 p.m. in Winnipeg.
+    - cron: '37 17 * * 4'
+    # Saturday 12:37 p.m. in Winnipeg, still inside the same Monday-to-Sunday week.
+    - cron: '37 17 * * 6'
   workflow_dispatch:
     inputs:
       test_run:
@@ -37,6 +50,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: publish-weekly
@@ -45,7 +59,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v5
         with:
@@ -56,6 +70,9 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
+
+      - name: Check the last published week reached the live site
+        run: node scripts/check-live-posts.mjs
 
       - name: Install
         run: npm ci --no-audit --no-fund
@@ -109,17 +126,24 @@ jobs:
       # A push is not a deploy: if Vercel fails, the run must not look finished.
       - name: Wait for the new posts on the live site
         if: steps.build.outputs.changed == 'true' && inputs.test_run != true
+        run: node scripts/check-live-posts.mjs
+
+      # Moved dates need changing in the captions and the plan, and a run that
+      # worked sends no email, so this has to say so somewhere that reaches a person.
+      - name: Say so if later weeks moved
+        if: steps.build.outputs.changed == 'true' && inputs.test_run != true
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          file=$(git show --name-only --format= HEAD -- blog-raw/posts | head -n 1)
-          url="https://bridgelandbuilders.com/blog/$(basename "$file" .json)"
-          status=""
-          for attempt in $(seq 1 40); do
-            status=$(curl -s -o /dev/null -w '%{http_code}' "$url" || true)
-            if [ "$status" = "200" ]; then
-              echo "$url answers 200."
-              exit 0
-            fi
-            sleep 15
-          done
-          echo "$url still answers $status after 10 minutes. Check the deployment on Vercel before running this again."
-          exit 1
+          before=$(git show HEAD~1:blog-raw/publishing-schedule.json | jq -r '.weeks[-1].date')
+          after=$(jq -r '.weeks[-1].date' blog-raw/publishing-schedule.json)
+          if [ "$before" = "$after" ]; then
+            exit 0
+          fi
+          echo "Later weeks moved: the last week was $before and is now $after."
+          printf '%s\n\n%s\n\n%s\n' \
+            "@$GITHUB_ACTOR a week went out late, so every later week moved back to keep the pace of 2 blogs and 2 articles a week. The last week was $before and is now $after." \
+            "Please change the dates in the captions and the plan, and let the client know. A caption posted on its old date would link to a page that is not live yet." \
+            "New dates: $(jq -r '[.weeks[].date] | join(", ")' blog-raw/publishing-schedule.json)" \
+            > issue-body.md
+          gh issue create --title "Publishing dates moved: the last week is now $after" --body-file issue-body.md

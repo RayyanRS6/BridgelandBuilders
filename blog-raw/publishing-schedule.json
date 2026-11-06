@@ -1,5 +1,5 @@
 {
-  "_about": "The client's agreed pace: 2 blogs and 2 articles a week, published on Thursdays. A post waiting for its week has status \"draft\" in blog-raw/posts. scripts/publish-scheduled.mjs publishes the week that is due; the build fails if a week or a published post breaks the pace. To move a post, swap it with another post of the same kind in this file. Order: facts tied to a date first, then by how likely the reader is to hire a renovation contractor.",
+  "_about": "The client's agreed pace: 2 blogs and 2 articles a week, published on Thursdays. A post waiting for its week has status \"draft\" in blog-raw/posts. scripts/publish-scheduled.mjs publishes the week that is due; the build fails if a week or a published post breaks the pace. To move a post, swap it with another post of the same kind in this file. To take a live post down, set its status to \"redirect\" or \"noindex\", not \"draft\", because a draft in a past week counts as due. Order: facts tied to a date first, then by how likely the reader is to hire a renovation contractor.",
   "weeks": [
     {
       "date": "2026-11-05",
