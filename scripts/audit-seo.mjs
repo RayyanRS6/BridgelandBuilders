@@ -1102,8 +1102,12 @@ if (robotsTxt == null) {
   report.error('robots.missing', null, 'public/robots.txt not found');
 } else {
   const robots = parseRobots(robotsTxt);
-  // '*' always; named search bots only when they have their own group.
-  const agents = ['*', 'googlebot', 'bingbot'].filter((a) => a === '*' || robots.groups.some((g) => g.agents.includes(a)));
+  // '*' always; named search and answer-engine crawlers only when they have
+  // their own group. ChatGPT search reads pages with oai-searchbot and
+  // chatgpt-user, and also draws on Bing's index.
+  const agents = ['*', 'googlebot', 'bingbot', 'oai-searchbot', 'chatgpt-user', 'gptbot', 'perplexitybot'].filter(
+    (a) => a === '*' || robots.groups.some((g) => g.agents.includes(a)),
+  );
   for (const agent of agents) {
     const blocked = [...(INDEXABLE.size ? INDEXABLE : PRERENDER_SET)]
       .map((route) => [route, robotsAllows(robots, agent, route)])

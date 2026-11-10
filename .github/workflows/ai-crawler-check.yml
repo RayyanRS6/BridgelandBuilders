@@ -1,0 +1,36 @@
+# Weekly check that ChatGPT's crawlers (OAI-SearchBot, ChatGPT-User, GPTBot),
+# Bing and Perplexity can read the live site (scripts/check-ai-crawlers.mjs).
+# The same check runs after every production deploy (post-deploy.yml); this
+# run catches a firewall or hosting setting that changes without a deploy.
+# It also runs on a pull request that changes the check itself. It fails, and
+# GitHub emails a failure, when a crawler is turned away, blocked by
+# robots.txt or noindex, or served something other than the real page. It
+# changes nothing.
+name: AI crawler check
+
+on:
+  schedule:
+    # Tuesdays 15:23 UTC, 10:23 a.m. in Winnipeg. GitHub's timers can start hours late.
+    - cron: '23 15 * * 2'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - scripts/check-ai-crawlers.mjs
+      - .github/workflows/ai-crawler-check.yml
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Can ChatGPT, Bing and Perplexity read the site?
+        run: node scripts/check-ai-crawlers.mjs https://bridgelandbuilders.com

@@ -11,10 +11,14 @@
 #      page, and that page answers 200. It runs against the production apex,
 #      not the deployment URL: per-deployment *.vercel.app URLs sit behind
 #      Vercel SSO and answer every request with 302 /sso-api.
-#   3. Back-button check (scripts/check-history.mjs): no script adds history
+#   3. AI crawler check (scripts/check-ai-crawlers.mjs): ChatGPT's crawlers,
+#      Bing and Perplexity get the real prerendered pages, with nothing in
+#      robots.txt, a noindex or the firewall turning them away. It also runs
+#      weekly on its own (ai-crawler-check.yml).
+#   4. Back-button check (scripts/check-history.mjs): no script adds history
 #      entries on key pages. Playwright is installed for this job only; it is
 #      not a project dependency.
-#   4. Lighthouse CI (lighthouserc.json, separate job): mobile lab metrics on
+#   5. Lighthouse CI (lighthouserc.json, separate job): mobile lab metrics on
 #      6 URLs against the plan §4 budgets. Warnings only, and the job can
 #      never fail the workflow; the reports are kept as a run artifact.
 # Vercel's GitHub integration reports deployments to GitHub, which triggers
@@ -106,6 +110,10 @@ jobs:
       - name: Live redirect check
         if: ${{ always() }}
         run: npm run check:redirects -- "$SITE_URL" --mode=production
+
+      - name: AI crawler check
+        if: ${{ always() }}
+        run: node scripts/check-ai-crawlers.mjs "$SITE_URL"
 
       - name: Install Playwright (this job only)
         if: ${{ always() }}
