@@ -227,10 +227,12 @@ for (const crawler of CRAWLERS) {
     }
     if (target.kind === 'sitemap' && !/<urlset[\s>]/i.test(res.body)) say('is not a sitemap (no <urlset>)');
     if (target.kind === 'llms' && !/^#\s+\S/m.test(res.body)) say('is not an llms.txt (no "# " title line)');
+    // noindex only matters on pages. llms.txt carries "X-Robots-Tag: noindex"
+    // on purpose (vercel.json): assistants read it, search results don't list it.
+    if (target.kind !== 'page') continue;
     if (isNoindex(headerDirectives(res.headers.get('x-robots-tag'), crawler.token))) {
       say(`X-Robots-Tag "${res.headers.get('x-robots-tag')}" keeps it out of the index`);
     }
-    if (target.kind !== 'page') continue;
 
     const page = readPage(res.body);
     const expected = controlPage.get(target.path);
