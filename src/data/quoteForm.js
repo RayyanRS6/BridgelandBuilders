@@ -61,11 +61,13 @@ export const isInServiceArea = (lead) => lead[SERVICE_AREA.key] === SERVICE_AREA
 // used on /book-online. Each booking is a free on-site visit (confirmed by the
 // owner 2026-10-13). The calendar is still named "Free 15-Minute Discovery
 // Call" inside GoHighLevel; rename it there so confirmation messages match.
-// durationMinutes is the GoHighLevel slot length, not shown to visitors.
+// durationMinutes is only a fallback for the visit length: bookings read the
+// calendar's own slot length from GoHighLevel (api/_lib/ghl.js). Not shown to
+// visitors. The calendar was changed to 30-minute slots in late October 2026.
 export const BOOKING_CALENDAR = {
   id: 'RmkDQbRjI83ES3E4K5OA',
   name: 'Free On-Site Visit',
-  durationMinutes: 15,
+  durationMinutes: 30,
   // Slots are fetched and shown in the business's own time zone, so a visitor
   // always sees the same times the crew does.
   timeZone: 'America/Winnipeg',

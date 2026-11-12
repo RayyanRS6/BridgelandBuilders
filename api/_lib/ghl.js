@@ -20,7 +20,7 @@ import {
   tagsForLead,
 } from '../../src/data/quoteForm.js';
 import { channelFor } from '../../src/lib/channel.js';
-import { dateIn, todayIn } from '../../src/lib/zonedDate.js';
+import { dateIn, formatLongDate, slotDate, slotTime, todayIn } from '../../src/lib/zonedDate.js';
 
 const API_BASE = 'https://services.leadconnectorhq.com';
 const CONTACTS_VERSION = '2021-07-28';
@@ -308,72 +308,124 @@ export async function addAttributionNote(contactId, attribution) {
 
 /* --------------------------------------------------------- appointment */
 
+// How long one visit lasts, read from the GoHighLevel calendar itself, so a
+// booking always matches the calendar's slots even after the owner changes
+// them there. Kept for ten minutes per function instance. If the calendar
+// can't be read, BOOKING_CALENDAR.durationMinutes is used instead.
+const SLOT_LENGTH_TTL_MS = 10 * 60 * 1000;
+let slotLength = null; // { minutes, at }
+
+async function slotMinutes(token, calendarId) {
+  if (slotLength && Date.now() - slotLength.at < SLOT_LENGTH_TTL_MS) return slotLength.minutes;
+  try {
+    const { calendar } = await ghl(`/calendars/${calendarId}`, { version: CALENDARS_VERSION, token });
+    const length = Number(calendar?.slotDuration);
+    if (length > 0) {
+      slotLength = { minutes: calendar.slotDurationUnit === 'hours' ? length * 60 : length, at: Date.now() };
+      return slotLength.minutes;
+    }
+  } catch {
+    // ghl() has already logged GoHighLevel's message.
+  }
+  return BOOKING_CALENDAR.durationMinutes;
+}
+
+/** startTime plus `minutes`, written with the same offset (e.g. -05:00). */
+function addMinutes(startTime, minutes) {
+  const endMs = Date.parse(startTime) + minutes * 60 * 1000;
+  const tzMatch = typeof startTime === 'string' ? startTime.match(/([+-]\d{2}:\d{2})$/) : null;
+  if (!tzMatch) return new Date(endMs).toISOString();
+  const sign = tzMatch[1][0] === '-' ? -1 : 1;
+  const offsetMin = (parseInt(tzMatch[1].slice(1, 3), 10) * 60 + parseInt(tzMatch[1].slice(4), 10)) * sign;
+  const localEnd = new Date(endMs + offsetMin * 60000);
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${localEnd.getUTCFullYear()}-${pad(localEnd.getUTCMonth() + 1)}-${pad(localEnd.getUTCDate())}T${pad(localEnd.getUTCHours())}:${pad(localEnd.getUTCMinutes())}:00${tzMatch[1]}`;
+}
+
+/** Whether GoHighLevel's free-slots list still offers this exact time. */
+async function isStillOpen(startTime) {
+  const date = slotDate(startTime, BOOKING_CALENDAR.timeZone);
+  try {
+    const days = await getFreeSlots(date, date);
+    const at = Date.parse(startTime);
+    return (days[date] || []).some((slot) => Date.parse(slot) === at);
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Books the slot. The calendar takes one appointment per slot and this call
  * keeps GoHighLevel's availability check on, so a time someone else has just
  * booked is refused (slot_unavailable) rather than double-booked — and once
  * booked, the time drops out of getFreeSlots for everyone else.
+ *
+ * That check can also refuse a time GoHighLevel's own free-slots list still
+ * offers (the list the visitor picked from). So a refusal is checked against
+ * that list once more: a time that has really gone stays refused, and one
+ * still listed as open is booked without the separate check. If that fails
+ * too, the error is booking_failed, so the visitor is offered a phone call
+ * instead of being sent round again to pick other times.
  */
 export async function bookAppointment(contactId, startTime, { lead } = {}) {
-  const durationMs = BOOKING_CALENDAR.durationMinutes * 60 * 1000;
-  const startMs = Date.parse(startTime);
-  const endMs = startMs + durationMs;
-
-  // Preserve the timezone offset if startTime has one (e.g. -05:00) so start & end match
-  let endTime;
-  const tzMatch = typeof startTime === 'string' ? startTime.match(/([+-]\d{2}:\d{2})$/) : null;
-  if (tzMatch) {
-    const sign = tzMatch[1][0] === '-' ? -1 : 1;
-    const hours = parseInt(tzMatch[1].slice(1, 3), 10);
-    const mins = parseInt(tzMatch[1].slice(4), 10);
-    const offsetMin = (hours * 60 + mins) * sign;
-    const localEnd = new Date(endMs + offsetMin * 60000);
-    const pad = (n) => String(n).padStart(2, '0');
-    endTime = `${localEnd.getUTCFullYear()}-${pad(localEnd.getUTCMonth() + 1)}-${pad(localEnd.getUTCDate())}T${pad(localEnd.getUTCHours())}:${pad(localEnd.getUTCMinutes())}:00${tzMatch[1]}`;
-  } else {
-    endTime = new Date(endMs).toISOString();
-  }
-
   const meetingAddress = [lead?.address, lead?.city, lead?.postalCode].filter(Boolean).join(', ') || lead?.address || '';
   // Every booking is a free on-site visit (BOOKING_CALENDAR.name).
   const title = lead?.name ? `${BOOKING_CALENDAR.name} - ${lead.name}` : BOOKING_CALENDAR.name;
   const renovationTypes = Array.isArray(lead?.types) && lead.types.length ? lead.types.join(', ') : '';
+  const tz = BOOKING_CALENDAR.timeZone;
   const notes = [
     `Contact: ${lead?.name || ''}`,
     `Phone: ${lead?.phone || ''}`,
     `Email: ${lead?.email || ''}`,
     `Meeting Location: ${meetingAddress}`,
+    // The time the visitor picked, in words, in case a screen shows it with an
+    // outdated Winnipeg offset.
+    `Visit Time: ${formatLongDate(slotDate(startTime, tz))} at ${slotTime(startTime, tz)} (${BOOKING_CALENDAR.timeZoneLabel})`,
     renovationTypes ? `Renovation Types: ${renovationTypes}` : null,
     lead?.marketingConsent ? marketingConsentNote() : null,
   ].filter(Boolean).join('\n');
 
-  if (isMock()) return { id: `mock-appointment-${Date.now()}`, startTime, endTime, address: meetingAddress, title };
+  if (isMock()) {
+    const endTime = addMinutes(startTime, BOOKING_CALENDAR.durationMinutes);
+    return { id: `mock-appointment-${Date.now()}`, startTime, endTime, address: meetingAddress, title };
+  }
 
   const { token, locationId, calendarId } = config();
-  const data = await ghl('/calendars/events/appointments', {
-    method: 'POST',
-    version: CALENDARS_VERSION,
-    token,
-    body: {
-      calendarId,
-      locationId,
-      contactId,
-      startTime,
-      endTime,
-      title,
-      meetingLocationType: 'custom',
-      meetingLocationId: 'custom_0',
-      overrideLocationConfig: true,
-      address: meetingAddress,
-      location: meetingAddress,
-      meetingLocation: meetingAddress,
-      selectedTimezone: BOOKING_CALENDAR.timeZone,
-      appointmentStatus: 'confirmed',
-      toNotify: true,
-      description: notes,
-      notes,
-    },
-  });
+  const endTime = addMinutes(startTime, await slotMinutes(token, calendarId));
+  const body = {
+    calendarId,
+    locationId,
+    contactId,
+    startTime,
+    endTime,
+    title,
+    meetingLocationType: 'custom',
+    meetingLocationId: 'custom_0',
+    overrideLocationConfig: true,
+    address: meetingAddress,
+    location: meetingAddress,
+    meetingLocation: meetingAddress,
+    selectedTimezone: tz,
+    appointmentStatus: 'confirmed',
+    toNotify: true,
+    description: notes,
+    notes,
+  };
+  const create = (extra) =>
+    ghl('/calendars/events/appointments', { method: 'POST', version: CALENDARS_VERSION, token, body: { ...body, ...extra } });
+
+  let data;
+  try {
+    data = await create();
+  } catch (error) {
+    if (error?.code !== 'slot_unavailable' || !(await isStillOpen(startTime))) throw error;
+    console.error('[ghl] booking check refused a time free-slots still lists; booking it without that check');
+    try {
+      data = await create({ ignoreFreeSlotValidation: true });
+    } catch (retryError) {
+      throw new BookingError('booking_failed', 502, retryError?.message, retryError?.upstreamStatus);
+    }
+  }
 
   // Tag the contact in GoHighLevel to signal that the meeting was booked (Step 2 completed)
   await ghl(`/contacts/${contactId}/tags`, {
@@ -383,10 +435,12 @@ export async function bookAppointment(contactId, startTime, { lead } = {}) {
     body: { tags: ['website-appointment-booked', 'appointment-booked'] },
   }).catch((err) => console.error('[ghl] Failed to add appointment-booked tags:', err));
 
+  // The times sent, not GoHighLevel's echo: its appointment records write the
+  // same moment with an outdated Winnipeg offset (-06:00 in November 2026).
   return {
     id: data?.id,
-    startTime: data?.startTime || startTime,
-    endTime: data?.endTime || endTime,
+    startTime,
+    endTime,
     address: data?.address || meetingAddress,
     title: data?.title || title,
   };

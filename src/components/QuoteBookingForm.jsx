@@ -14,7 +14,7 @@ import { getAttribution } from '../lib/attribution.js';
 import { bookSlot, saveLead, trackConversion, utmSource } from '../lib/bookingApi.js';
 import { channelFor } from '../lib/channel.js';
 import { PRESELECT_EVENT } from '../lib/quoteFormEvents.js';
-import { dateIn, formatLongDate, formatTime } from '../lib/zonedDate.js';
+import { formatLongDate, slotDate, slotTime } from '../lib/zonedDate.js';
 import { ArrowRightIcon, CheckIcon, ChevronLeftIcon, PinIcon } from './icons.jsx';
 import PhoneInput from './PhoneInput.jsx';
 import SlotCalendar from './SlotCalendar.jsx';
@@ -39,7 +39,8 @@ const EMPTY = {
 
 const ALERTS = {
   not_configured: 'Online booking isn’t available right now.',
-  slot_unavailable: 'Sorry — that time was just booked by someone else. Please pick another.',
+  slot_unavailable: 'Sorry — that time is no longer available, so we’ve taken it off the list. Please pick another.',
+  booking_failed: 'We couldn’t book that time online, but we have your details.',
   network_error: 'We couldn’t reach our booking system. Please check your connection and try again.',
   default: 'Something went wrong on our side.',
 };
@@ -133,6 +134,8 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
   const [slot, setSlot] = useState(null);
   const [booking, setBooking] = useState(null);
   const [refreshKey, setRefreshKey] = useState(0);
+  // Times the booking system refused: never offered to this visitor again.
+  const [refusedSlots, setRefusedSlots] = useState([]);
   const formRef = useRef(null);
   const headingRef = useRef(null);
   const mounted = useRef(false);
@@ -245,11 +248,13 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
       const result = await bookSlot({ ...values, utmSource: utmSource(), attribution, eventId, startTime: slot });
       trackConversion('Schedule', eventId);
       track('book_appointment', leadParams(values, attribution));
-      setBooking(result.booking?.startTime ? result.booking : { startTime: slot });
+      // The chosen slot, as the calendar listed it, is the time booked.
+      setBooking({ ...result.booking, startTime: slot });
       setStep('done');
     } catch (error) {
       fail(error, 'schedule');
       if (error.code === 'slot_unavailable') {
+        setRefusedSlots((current) => [...current, slot]);
         setSlot(null);
         setRefreshKey((key) => key + 1);
       }
@@ -456,12 +461,18 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
             </p>
           </div>
 
-          <SlotCalendar timeZone={tz} selectedSlot={slot} onSelectSlot={setSlot} refreshKey={refreshKey} />
+          <SlotCalendar
+            timeZone={tz}
+            selectedSlot={slot}
+            onSelectSlot={setSlot}
+            refreshKey={refreshKey}
+            hiddenSlots={refusedSlots}
+          />
 
           {slot && (
             <p className="qf-selected">
               <CheckIcon size={15} />
-              {formatLongDate(dateIn(slot, tz))} at {formatTime(slot, tz)}
+              {formatLongDate(slotDate(slot, tz))} at {slotTime(slot, tz)}
             </p>
           )}
 
@@ -485,7 +496,7 @@ export default function QuoteBookingForm({ id, title = 'Get Your Free Quote', in
           <span className="qf-done-icon"><CheckIcon size={26} /></span>
           <h2 className="qf-title" ref={headingRef} tabIndex={-1}>You’re Booked!</h2>
           <p className="qf-done-when">
-            {formatLongDate(dateIn(booking.startTime, tz))} at {formatTime(booking.startTime, tz)}
+            {formatLongDate(slotDate(booking.startTime, tz))} at {slotTime(booking.startTime, tz)}
             <small>{BOOKING_CALENDAR.timeZoneLabel}</small>
           </p>
           <p>

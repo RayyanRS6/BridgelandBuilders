@@ -38,6 +38,28 @@ export function dateIn(iso, timeZone) {
   return new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(iso));
 }
 
+// Booking slots arrive from GoHighLevel already in Winnipeg time, with their
+// offset ('2026-11-13T11:00:00-05:00'), so their date and time are read
+// straight from the text. Converting them through the device's time-zone data
+// would show them an hour early wherever that data is out of date (Manitoba
+// stopped changing its clocks on 2026-11-01). Anything without an offset is
+// formatted in `timeZone` as usual.
+const SLOT = /^(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2})(?::\d{2}(?:\.\d+)?)?[+-]\d{2}:\d{2}$/;
+
+/** The calendar date of a booking slot, as 'YYYY-MM-DD'. */
+export function slotDate(iso, timeZone) {
+  const match = SLOT.exec(iso);
+  return match ? match[1] : dateIn(iso, timeZone);
+}
+
+/** '11:00 am' style time of a booking slot. */
+export function slotTime(iso, timeZone) {
+  const match = SLOT.exec(iso);
+  if (!match) return formatTime(iso, timeZone);
+  const hour = Number(match[2]);
+  return `${hour % 12 || 12}:${match[3]} ${hour < 12 ? 'am' : 'pm'}`;
+}
+
 export function daysInMonth(year, month) {
   return new Date(Date.UTC(year, month, 0)).getUTCDate();
 }
