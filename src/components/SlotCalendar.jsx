@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import { fetchSlots } from '../lib/bookingApi.js';
 import {
-  dateIn,
   daysInMonth,
   formatLongDate,
   formatMonth,
-  formatTime,
   monthGrid,
   shiftMonth,
+  slotDate,
+  slotTime,
   todayIn,
 } from '../lib/zonedDate.js';
 import { ChevronLeftIcon, ChevronRightIcon } from './icons.jsx';
@@ -16,6 +16,8 @@ const WEEKDAYS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 // How far ahead a visitor can browse: this month plus the next two.
 const MONTHS_AHEAD = 2;
 
+const NONE = [];
+
 const cx = (...classes) => classes.filter(Boolean).join(' ');
 const monthKeyOf = ({ year, month }) => `${year}-${String(month).padStart(2, '0')}`;
 
@@ -23,16 +25,31 @@ const monthKeyOf = ({ year, month }) => `${year}-${String(month).padStart(2, '0'
  * Month view of open on-site visit times from the GoHighLevel calendar, with
  * the chosen day's times listed underneath. Everything is shown in `timeZone`.
  * Bump `refreshKey` to re-fetch (e.g. after a slot was taken by someone else).
+ * `hiddenSlots` are times the booking system has already refused for this
+ * visitor: they are never offered again, even if the calendar still lists them.
  */
-export default function SlotCalendar({ timeZone, selectedSlot, onSelectSlot, refreshKey = 0 }) {
+export default function SlotCalendar({ timeZone, selectedSlot, onSelectSlot, refreshKey = 0, hiddenSlots = NONE }) {
   const today = useMemo(() => todayIn(timeZone), [timeZone]);
   const firstMonth = useMemo(() => ({ year: Number(today.slice(0, 4)), month: Number(today.slice(5, 7)) }), [today]);
   const lastMonth = useMemo(() => shiftMonth(firstMonth, MONTHS_AHEAD), [firstMonth]);
 
   const [view, setView] = useState(firstMonth);
-  const [days, setDays] = useState(null);
+  const [fetchedDays, setDays] = useState(null);
   const [status, setStatus] = useState('loading');
-  const [selectedDate, setSelectedDate] = useState(selectedSlot ? dateIn(selectedSlot, timeZone) : null);
+  const [selectedDate, setSelectedDate] = useState(selectedSlot ? slotDate(selectedSlot, timeZone) : null);
+
+  // The month's open times, less any the booking system has refused. A day
+  // left with no times is dropped, so it shows as unavailable.
+  const days = useMemo(() => {
+    if (!fetchedDays || !hiddenSlots.length) return fetchedDays;
+    const hidden = new Set(hiddenSlots.map(Date.parse));
+    const open = {};
+    for (const [date, times] of Object.entries(fetchedDays)) {
+      const left = times.filter((iso) => !hidden.has(Date.parse(iso)));
+      if (left.length) open[date] = left;
+    }
+    return open;
+  }, [fetchedDays, hiddenSlots]);
   const [autoAdvanced, setAutoAdvanced] = useState(false);
   const [retryKey, setRetryKey] = useState(0);
 
@@ -59,7 +76,7 @@ export default function SlotCalendar({ timeZone, selectedSlot, onSelectSlot, ref
 
   const selectDate = (date) => {
     setSelectedDate(date);
-    if (selectedSlot && dateIn(selectedSlot, timeZone) !== date) onSelectSlot(null);
+    if (selectedSlot && slotDate(selectedSlot, timeZone) !== date) onSelectSlot(null);
   };
 
   // Once a month loads, open its first available day so times show straight
@@ -154,7 +171,7 @@ export default function SlotCalendar({ timeZone, selectedSlot, onSelectSlot, ref
                 className={cx('qf-slot', iso === selectedSlot && 'is-selected')}
                 onClick={() => onSelectSlot(iso)}
               >
-                {formatTime(iso, timeZone)}
+                {slotTime(iso, timeZone)}
               </button>
             ))}
           </div>
