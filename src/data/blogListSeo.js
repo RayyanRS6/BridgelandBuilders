@@ -9,6 +9,34 @@
 /** The newest published posts (blog-raw status "published"), newest first. */
 export const BLOG_NODE_POSTS = [
   {
+    "slug": "pre-listing-renovations-winnipeg",
+    "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
+    "metaDescription": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
+    "date": "2026-11-12",
+    "ogImage": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x630.80bcfc97.jpg"
+  },
+  {
+    "slug": "purchase-plus-improvements-mortgage-winnipeg",
+    "title": "Purchase Plus Improvements Mortgage: Winnipeg Fixer-Uppers",
+    "metaDescription": "How Winnipeg buyers use a purchase plus improvements mortgage to renovate a fixer-upper, what lenders need, and how to get a realistic quote first.",
+    "date": "2026-11-12",
+    "ogImage": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x630.6e2a7fc4.jpg"
+  },
+  {
+    "slug": "winnipeg-housing-market-september-2026",
+    "title": "Winnipeg Housing Market, September 2026: Advice for Sellers",
+    "metaDescription": "Winnipeg-area sales fell 10% in September while listings rose 14%. What that means for sellers, and why exterior work and curb appeal may matter more.",
+    "date": "2026-11-12",
+    "ogImage": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x630.0770c6b0.jpg"
+  },
+  {
+    "slug": "trusted-trades-list-real-estate-agents",
+    "title": "Trusted Trades List for Real Estate Agents in Winnipeg",
+    "metaDescription": "With more listings and pickier buyers, a reliable bench of trades, including professional painters, helps Winnipeg agents prepare homes for sale.",
+    "date": "2026-11-12",
+    "ogImage": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x630.731454fd.jpg"
+  },
+  {
     "slug": "vacant-storefront-renovation-winnipeg",
     "title": "Vacant Storefront Renovation: Re-Lease Winnipeg Retail",
     "metaDescription": "Why storefronts sit empty and the targeted retail renovations that can help Winnipeg landlords re-lease, from façades to vanilla box shells and permits.",
@@ -119,33 +147,5 @@ export const BLOG_NODE_POSTS = [
     "metaDescription": "Renovating a medical, dental or physio clinic in Winnipeg? The permits, sealed drawings, X-ray approvals, accessibility rules and occupancy steps to plan.",
     "date": "2026-10-13",
     "ogImage": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x630.bc757f21.jpg"
-  },
-  {
-    "slug": "ensuite-renovation-winnipeg",
-    "title": "How Much Should an Ensuite Renovation Cost in Winnipeg?",
-    "metaDescription": "What sets the cost of an ensuite renovation in Winnipeg: layout, shower, plumbing moves and finishes, plus timelines, permits and where to see prices.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/ensuite-renovation-winnipeg/title-card-how-much-should-1200x630.ccbdff08.jpg"
-  },
-  {
-    "slug": "exterior-painting-winnipeg-when-to-paint",
-    "title": "When to Paint Your House Exterior in Winnipeg",
-    "metaDescription": "When to paint a house exterior in Winnipeg, how weather affects paint, prep for older homes with possible lead paint, and what a quote should cover.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/exterior-painting-winnipeg-when-to-paint/title-card-when-to-paint-your-house-1200x630.8d9272ff.jpg"
-  },
-  {
-    "slug": "home-additions-and-zoning-winnipeg",
-    "title": "Home Addition Zoning in Winnipeg: Permits and Variances",
-    "metaDescription": "Planning an addition in Winnipeg? What the development and building permits check, how variances work, and what the 2025 infill zoning changes mean.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/home-additions-and-zoning-winnipeg/title-card-home-addition-zoning-1200x630.420c23b0.jpg"
-  },
-  {
-    "slug": "home-renovation-financing-canada",
-    "title": "Home Renovation Financing in Canada: Your Options",
-    "metaDescription": "How Canadians pay for renovations: HELOCs, refinancing, home equity and personal loans, lines of credit, CMHC suite refinancing, and which programs closed.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/home-renovation-financing-canada/title-card-home-renovation-financing-1200x630.fdd817b3.jpg"
   }
 ];

@@ -16,11 +16,811 @@ export const BLOG_CATEGORIES = [
   "Hiring a Contractor",
   "Commercial",
   "Money & Rebates",
-  "Landlords & Property Managers"
+  "Landlords & Property Managers",
+  "Winnipeg Market News"
 ];
 
 /** Published posts only (blog-raw status "published"), newest first, with bodies. */
 export const BLOG_POSTS = [
+  {
+    "slug": "pre-listing-renovations-winnipeg",
+    "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
+    "metaTitle": "Pre-Listing Renovations in Winnipeg: What to Fix First",
+    "metaDescription": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
+    "excerpt": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
+    "category": "Permits & Planning",
+    "categories": [
+      "Permits & Planning"
+    ],
+    "date": "2026-11-12",
+    "updated": "2026-11-12",
+    "readMinutes": 4,
+    "hero": null,
+    "heroSrc": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-880.5e2f392c.webp",
+    "heroSrcSet": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-480.6abdd2e4.webp 480w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-880.5e2f392c.webp 880w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1320.493990c1.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-480.a7b725cb.avif 480w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-880.8f2a4e53.avif 880w, /images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1320.a033abc0.avif 1320w",
+    "ogImage": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x630.80bcfc97.jpg",
+    "schemaImages": [
+      "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x675.8ce8963f.jpg",
+      "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x900.a11c9813.jpg",
+      "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg-1200x1200.abb592ef.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Freshly painted entryway with a new ceiling light, hardwood floor and a paint tray on a drop cloth",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/exterior-painting"
+    ],
+    "ctaService": "/services/exterior-painting",
+    "ctaPrimary": "visit",
+    "cluster": "home-sellers",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Winnipeg sellers have more competition than they did a year ago. The Winnipeg Regional Real Estate Board's [September 2026 results](/blog/winnipeg-housing-market-september-2026) showed softer sales and more active listings, especially detached homes, even as the year-to-date detached average hit a record. That makes pre-listing renovations in Winnipeg a question of priorities: which to do first, and which to skip."
+      },
+      {
+        "t": "p",
+        "x": "More choice means buyers can be picky. The homes that stand out are the ones with no obvious projects."
+      },
+      {
+        "t": "h2",
+        "x": "Why buyers punish visible problems"
+      },
+      {
+        "t": "p",
+        "x": "Many buyers subtract the cost of every project they see from their offer, and they may guess high. A worn floor, a dated bathroom or peeling exterior paint can cost a seller in negotiation."
+      },
+      {
+        "t": "p",
+        "x": "With more listings to choose from, some buyers simply skip homes that need work."
+      },
+      {
+        "t": "h2",
+        "x": "The pre-listing renovation priority list for Winnipeg sellers"
+      },
+      {
+        "t": "p",
+        "x": "Focus on what buyers see in photos and what inspectors flag."
+      },
+      {
+        "t": "p",
+        "x": "**1. Fix anything an inspector will write up.** Leaky taps, cracked tile, sticking doors, missing handrails and damaged caulking. Fixing them before listing removes easy negotiating points. Foundation cracks in older homes on clay soil are different: a crack that is widening, offset or leaking needs a structural engineer's assessment first. See [basement cracks on clay soil](/blog/clay-soil-basement-cracks-winnipeg)."
+      },
+      {
+        "t": "p",
+        "x": "**2. Paint.** Fresh, neutral interior paint makes rooms look clean in photos and covers marks and wear. Touch up exterior trim and doors too, when the weather allows. Before anyone sands, note that a house built before 1960 probably has lead-based paint, [Health Canada](https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html) says, and it warns against removing that paint with sanders or heat guns."
+      },
+      {
+        "t": "p",
+        "x": "**3. Flooring.** Replace visibly worn carpet or damaged [flooring](/services/flooring) in main living areas. Durable luxury vinyl plank photographs well and is a practical choice for busy family areas. Older floor tiles may contain asbestos, so [have them tested](/blog/asbestos-testing-before-renovating-manitoba) before anyone lifts them."
+      },
+      {
+        "t": "p",
+        "x": "**4. Kitchen refresh, not a full remodel.** New cabinet hardware, lighting, faucet and possibly counters can update a kitchen without the cost and time of a [full kitchen renovation](/services/kitchen-renovations)."
+      },
+      {
+        "t": "p",
+        "x": "**5. Bathroom touch-ups.** Re-grout, re-caulk, swap the vanity light and mirror, and replace a stained toilet seat or dated fixtures."
+      },
+      {
+        "t": "p",
+        "x": "**6. Windows and doors.** A tired front door or foggy, failed window seals stand out in listing photos and raise questions about heating costs."
+      },
+      {
+        "t": "p",
+        "x": "**7. Curb appeal.** Clean the siding, repair masonry, and make sure the entry is lit and inviting, especially for fall and winter showings."
+      },
+      {
+        "t": "h2",
+        "x": "What not to do"
+      },
+      {
+        "t": "li",
+        "x": "**Don't start a major remodel** right before selling. Full kitchen and [bathroom renovations](/services/bathroom-renovations) or [basement developments](/services/basement-renovations) take time, and you may not get the full cost back at sale."
+      },
+      {
+        "t": "li",
+        "x": "**Don't choose bold finishes.** Neutral colours and materials appeal to the most buyers."
+      },
+      {
+        "t": "li",
+        "x": "**Don't skip permits.** Buyers can run [the City's free permit search](/blog/check-permit-history-winnipeg-house) on a Winnipeg address, and unpermitted work can delay or derail a sale."
+      },
+      {
+        "t": "h2",
+        "x": "Timing for a winter listing"
+      },
+      {
+        "t": "p",
+        "x": "Winter listings can face fewer buyers, and with more active listings than a year ago, you can't count on less competition. Interior paint, flooring and fixture updates can happen any time, so do those first."
+      },
+      {
+        "t": "p",
+        "x": "Exterior painting and masonry need warmer weather. Once the cold sets in, [book that work for late spring](/blog/exterior-painting-winnipeg-when-to-paint). If you list before then, price the home to reflect any visible exterior wear."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "In a market with more listings, move-in ready homes stand out. A short list of targeted renovations removes easy objections and can help protect your price."
+      },
+      {
+        "t": "p",
+        "x": "**Getting ready to list in Winnipeg?** Bridgeland Builders takes on work that gets a property ready to sell, including exterior painting, flooring, and windows and doors, scoped and quoted in writing after a free on-site visit. [**Book a Free On-Site Visit**](/book-online)."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Exterior painting services](/services/exterior-painting) · [Checking a Winnipeg home's permit history](/blog/check-permit-history-winnipeg-house) · [Winnipeg Housing Market, September 2026: Advice for Sellers](/blog/winnipeg-housing-market-september-2026)"
+      }
+    ],
+    "faqs": [],
+    "answer": "Fix what an inspector would write up first, then what buyers see in photos: fresh neutral paint, worn flooring, small kitchen and bathroom updates, a tired front door or failed window seals, and the entry. Skip major remodels and bold finishes, and make sure any work that needs a permit has one.",
+    "sources": [
+      {
+        "label": "Winnipeg Regional Real Estate Board: September 2026 market results",
+        "url": "https://www.winnipegregionalrealestatenews.com/market-statistics/market-releases/article/629/more-choice-record-average-prices-and-softer-sales-defined-september-results",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Health Canada: Lead-based paint",
+        "url": "https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2026-12-21"
+  },
+  {
+    "slug": "purchase-plus-improvements-mortgage-winnipeg",
+    "title": "Purchase Plus Improvements Mortgage: Winnipeg Fixer-Uppers",
+    "metaTitle": "Purchase Plus Improvements Mortgage: Winnipeg Fixer-Uppers",
+    "metaDescription": "How Winnipeg buyers use a purchase plus improvements mortgage to renovate a fixer-upper, what lenders need, and how to get a realistic quote first.",
+    "excerpt": "How Winnipeg buyers use a purchase plus improvements mortgage to renovate a fixer-upper, what lenders need, and how to get a realistic quote first.",
+    "category": "Money & Rebates",
+    "categories": [
+      "Money & Rebates"
+    ],
+    "date": "2026-11-12",
+    "updated": "2026-11-12",
+    "readMinutes": 4,
+    "hero": null,
+    "heroSrc": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-880.c739b6f5.webp",
+    "heroSrcSet": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-480.719705a4.webp 480w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-880.c739b6f5.webp 880w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1320.4f52ddd7.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-480.29d246be.avif 480w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-880.930f705f.avif 880w, /images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1320.465534fb.avif 1320w",
+    "ogImage": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x630.6e2a7fc4.jpg",
+    "schemaImages": [
+      "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x675.30342132.jpg",
+      "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x900.73894c0e.jpg",
+      "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage-1200x1200.ca2bc3aa.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Older two-storey stucco house with a wooden front porch and a blank real estate sign in a leaf-covered yard",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations",
+      "/services/basement-renovations"
+    ],
+    "ctaService": "/services/whole-home-renovations",
+    "ctaPrimary": "visit",
+    "cluster": "home-sellers",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Buying a fixer-upper in Winnipeg can be a realistic way into a good neighbourhood. The Winnipeg Regional Real Estate Board reports a record year-to-date detached average of $467,687 across its market region, as of September 2026. A purchase plus improvements mortgage is one way for Winnipeg buyers to pay for the house and the renovation at the same time."
+      },
+      {
+        "t": "p",
+        "x": "Here's how buyers finance renovations at purchase, and how to plan the project around your budget."
+      },
+      {
+        "t": "h2",
+        "x": "Option 1: Purchase plus improvements mortgage"
+      },
+      {
+        "t": "p",
+        "x": "Many Canadian lenders offer a **purchase plus improvements** mortgage. It adds the cost of planned renovations to your mortgage, so you finance both with one loan. CMHC's insured version is called CMHC Improvement."
+      },
+      {
+        "t": "p",
+        "x": "**How it typically works:**"
+      },
+      {
+        "t": "oli",
+        "x": "You get a detailed contractor quote for the work before you buy."
+      },
+      {
+        "t": "oli",
+        "x": "The lender approves a mortgage based on the home's value **after** the improvements."
+      },
+      {
+        "t": "oli",
+        "x": "At closing, the lender usually holds back the renovation funds. Ask your lender how that works."
+      },
+      {
+        "t": "oli",
+        "x": "The work is completed within the time your lender sets."
+      },
+      {
+        "t": "oli",
+        "x": "The lender confirms the work is done, sometimes with an inspection, then releases the funds to pay the contractor. Because that can come after the work, ask how the contractor gets paid in the meantime, and whether you'll need savings to carry the job until then."
+      },
+      {
+        "t": "p",
+        "x": "**Good to know:** lenders and mortgage insurers set their own limits and eligible work, so ask your mortgage broker what applies to you."
+      },
+      {
+        "t": "p",
+        "x": "[CMHC's 2025 fact sheet](https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-improvement-fact-sheet.pdf) for its insured product, CMHC Improvement, lists up to 95% loan-to-value for owner-occupied homes with one or two units, 90% for three or four units, and 80% for non-owner-occupied rentals of two to four units. Improvement costs of 10% or less of the as-improved value use a single advance, and higher costs use progress advances."
+      },
+      {
+        "t": "p",
+        "x": "CMHC says additional conditions may apply and this information can change, so confirm the terms with your lender before you rely on them."
+      },
+      {
+        "t": "h2",
+        "x": "Option 2: Refinance or line of credit later"
+      },
+      {
+        "t": "p",
+        "x": "If you buy now and renovate later, you may be able to refinance or use a [home equity line of credit](/blog/home-renovation-financing-canada) once you've built equity. This suits projects that can wait."
+      },
+      {
+        "t": "h2",
+        "x": "Option 3: Government programs and rebates"
+      },
+      {
+        "t": "p",
+        "x": "Check for rebates before you renovate. Energy upgrades like insulation and windows may qualify for Efficiency Manitoba programs. Rules change, so confirm before work starts."
+      },
+      {
+        "t": "h2",
+        "x": "How to plan renovations on a Winnipeg fixer-upper"
+      },
+      {
+        "t": "p",
+        "x": "**Get the quote before you remove conditions.** Your offer should be conditional on financing and inspection. Use that time to have a contractor walk through and price the work."
+      },
+      {
+        "t": "p",
+        "x": "**Separate must-do from nice-to-have:**"
+      },
+      {
+        "t": "table",
+        "head": [
+          "Priority",
+          "Examples"
+        ],
+        "rows": [
+          [
+            "Must-do",
+            "Foundation cracks, roof, electrical, plumbing, furnace, water in the basement"
+          ],
+          [
+            "Should-do",
+            "Windows, insulation, flooring, failing bathrooms"
+          ],
+          [
+            "Nice-to-have",
+            "Kitchen redesign, basement development, layout changes"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "**Watch for Winnipeg-specific issues.** Older homes on clay soil can show [foundation movement](/blog/clay-soil-basement-cracks-winnipeg). Character homes may have knob-and-tube wiring, or asbestos-containing materials that need testing before demolition."
+      },
+      {
+        "t": "p",
+        "x": "**Check permits.** Structural changes, basement developments, plumbing and electrical work typically need [City of Winnipeg permits](/blog/winnipeg-renovation-permits). Your lender may ask for proof the work was permitted."
+      },
+      {
+        "t": "p",
+        "x": "**Build in a contingency** for surprises, especially in older homes."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "A fixer-upper can get you into the right home at the right price, if you know the renovation cost before you commit. Get the contractor quote early, talk to your mortgage broker, and plan the must-dos first."
+      },
+      {
+        "t": "p",
+        "x": "**Buying a home that needs work?** Bridgeland Builders does not provide financing. Our free written quote, prepared after a free on-site visit, sets out the scope and the taxes, and your lender or broker can tell you what else they need. [**Book a Free On-Site Visit**](/book-online)."
+      },
+      {
+        "t": "p",
+        "x": "For [kitchens](/services/kitchen-renovations), [bathrooms](/services/bathroom-renovations) and [basements](/services/basement-renovations), our [instant renovation estimate](/instant-quote) gives a quick starting range before the visit."
+      },
+      {
+        "t": "p",
+        "x": "This is general information, not financial advice. Ask your lender or mortgage broker what applies to you."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Winnipeg renovation cost ranges](/renovation-cost-winnipeg) · [Home renovation financing options in Canada](/blog/home-renovation-financing-canada) · [Pre-Listing Renovations in Winnipeg: What to Fix First](/blog/pre-listing-renovations-winnipeg)"
+      }
+    ],
+    "faqs": [],
+    "answer": "A purchase plus improvements mortgage adds the cost of planned renovations to your mortgage, so you finance a fixer-upper and the work with one loan. The lender bases it on the home's value after the improvements, usually holds back the renovation funds, and releases them once the work is confirmed. Ask your lender or broker what applies.",
+    "sources": [
+      {
+        "label": "CMHC: CMHC Improvement mortgage loan insurance fact sheet (2025)",
+        "url": "https://assets.cmhc-schl.gc.ca/sf/project/cmhc/pdfs/factsheets/new/cmhc-improvement-fact-sheet.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Winnipeg Regional Real Estate Board: September 2026 market results",
+        "url": "https://www.winnipegregionalrealestatenews.com/market-statistics/market-releases/article/629/more-choice-record-average-prices-and-softer-sales-defined-september-results",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Insulation upgrades",
+        "url": "https://efficiencymb.ca/my-home/insulation-upgrades/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Windows and doors rebate",
+        "url": "https://efficiencymb.ca/my-home/windows-and-doors-rebate/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "nesto: What is a purchase plus improvements mortgage?",
+        "url": "https://www.nesto.ca/mortgage-basics/what-is-a-purchase-plus-improvements-mortgage/",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2026-12-31"
+  },
+  {
+    "slug": "winnipeg-housing-market-september-2026",
+    "title": "Winnipeg Housing Market, September 2026: Advice for Sellers",
+    "metaTitle": "Winnipeg Housing Market, September 2026: Advice for Sellers",
+    "metaDescription": "Winnipeg-area sales fell 10% in September while listings rose 14%. What that means for sellers, and why exterior work and curb appeal may matter more.",
+    "excerpt": "Winnipeg-area sales fell 10% in September while listings rose 14%. What that means for sellers, and why exterior work and curb appeal may matter more.",
+    "category": "Winnipeg Market News",
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "date": "2026-11-12",
+    "updated": "2026-11-12",
+    "readMinutes": 5,
+    "hero": null,
+    "heroSrc": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-880.da43aae0.webp",
+    "heroSrcSet": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-480.d3628825.webp 480w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-880.da43aae0.webp 880w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1320.aab4d802.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-480.466deb34.avif 480w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-880.c9f25b45.avif 880w, /images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1320.71785636.avif 1320w",
+    "ogImage": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x630.0770c6b0.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x675.cedccf0f.jpg",
+      "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x900.81cd02e5.jpg",
+      "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september-1200x1200.e0874d86.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Aerial view of a tree-lined neighbourhood of houses in early autumn, with a downtown skyline behind",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/exterior-painting"
+    ],
+    "ctaService": "/services/exterior-painting",
+    "ctaPrimary": "visit",
+    "cluster": "home-sellers",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "h2",
+        "x": "What the September 2026 Winnipeg housing market numbers say"
+      },
+      {
+        "t": "p",
+        "x": "The [Winnipeg Regional Real Estate Board's September 2026 release](https://www.winnipegregionalrealestatenews.com/market-statistics/market-releases/article/629/more-choice-record-average-prices-and-softer-sales-defined-september-results) shows a Winnipeg housing market shifting under sellers' feet. There were 1,250 sales in September, down about 10% from a year earlier, though even with the five-year average. At the same time, active listings climbed to 4,234, up about 14%, and detached-home listings rose roughly 20%."
+      },
+      {
+        "t": "p",
+        "x": "Prices have not cracked: the year-to-date average for detached homes across the board's market region is $467,687, a record. But the balance of power is moving."
+      },
+      {
+        "t": "p",
+        "x": "That combination, record prices with softer sales and more inventory, can be an early signal of a market where buyers start to negotiate harder. Sellers can still get strong prices, but buyers have more homes to compare."
+      },
+      {
+        "t": "p",
+        "x": "These figures cover the board's whole market region, not only the city."
+      },
+      {
+        "t": "table",
+        "head": [
+          "Indicator (Sept 2026)",
+          "Value",
+          "Change vs. Sept 2025"
+        ],
+        "rows": [
+          [
+            "MLS sales",
+            "1,250",
+            "About −10%"
+          ],
+          [
+            "Active listings",
+            "4,234",
+            "About +14%"
+          ],
+          [
+            "Detached listings",
+            "2,098",
+            "About +20%"
+          ],
+          [
+            "YTD detached average price",
+            "$467,687",
+            "Record, up 3% from 2025"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "Our view: inventory turns curb appeal from nice-to-have into a pricing tool"
+      },
+      {
+        "t": "p",
+        "x": "In a tight market, buyers forgive a peeling fascia or a faded front door because there is little else to see. In a market with 14% more listings, they are less likely to. Some may scroll past it."
+      },
+      {
+        "t": "p",
+        "x": "The first photo in a listing is usually the front of the house, and it is competing with other front-of-house photos in the same price band."
+      },
+      {
+        "t": "p",
+        "x": "The interest-rate picture adds pressure. On October 28, 2026, the Bank of Canada [raised its policy rate to 2.50%](https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/), its first increase since July 2023, and signalled that more increases are possible. Buyers who were stretching their budgets now have less room, and they may be pickier about homes that look like they need work."
+      },
+      {
+        "t": "p",
+        "x": "A buyer who sees \"needs paint\" sees a cost they may subtract from their offer, possibly more than the job would actually cost."
+      },
+      {
+        "t": "p",
+        "x": "That is why we think professional [exterior painting services](/services/exterior-painting) belong near the top of every pre-listing conversation. Paint is not a cover-up; it is one of the most visible signals that a home has been maintained."
+      },
+      {
+        "t": "h2",
+        "x": "Where exterior work shows first"
+      },
+      {
+        "t": "p",
+        "x": "Not every exterior project is worth doing before a sale. The items most likely to matter are the ones a buyer sees first:"
+      },
+      {
+        "t": "li",
+        "x": "**Front door and trim.** A repainted or [replaced front door](/services/windows-and-doors) changes how the house looks in the listing photo."
+      },
+      {
+        "t": "li",
+        "x": "**Fascia, soffit and window trim.** Peeling paint around windows can read as water damage, even when it is not."
+      },
+      {
+        "t": "li",
+        "x": "**Garage door and siding touch-ups.** Where the garage faces the street, it is a big part of the first photo."
+      },
+      {
+        "t": "li",
+        "x": "**Masonry and steps.** Cracked parging or crumbling front steps can read as structural problems to buyers and inspectors alike."
+      },
+      {
+        "t": "li",
+        "x": "**Fences and decks that face the street.** A grey, weathered fence is not neutral in photos."
+      },
+      {
+        "t": "h2",
+        "x": "The Winnipeg timing problem"
+      },
+      {
+        "t": "p",
+        "x": "Exterior paint needs warm, dry conditions to cure properly. In Winnipeg, [exterior painting is done between late spring and early fall](/blog/exterior-painting-winnipeg-when-to-paint), and the paint's label sets the exact limits. That leaves sellers with three practical paths:"
+      },
+      {
+        "t": "oli",
+        "x": "**Listing now:** focus on cleaning, minor touch-ups where conditions allow, and interior presentation, and price to reflect any visible exterior wear."
+      },
+      {
+        "t": "oli",
+        "x": "**Listing in spring:** book exterior work now for the first suitable weeks, usually in late spring. Contractors' spring calendars can fill early, and sellers who wait until April can end up listing late."
+      },
+      {
+        "t": "oli",
+        "x": "**Holding and renting:** if a sale is not urgent, use the winter to plan masonry, door and window work, and book it for the warmer months."
+      },
+      {
+        "t": "p",
+        "x": "For agents, the second path is the one worth raising with any client who is \"thinking about spring.\" A conversation this winter is what gets the house photographed in May."
+      },
+      {
+        "t": "h2",
+        "x": "What agents should tell sellers now"
+      },
+      {
+        "t": "p",
+        "x": "The honest message is that prices are holding but buyers are getting choosier. That gives agents a credible, data-backed reason to recommend [pre-listing work](/blog/pre-listing-renovations-winnipeg) without sounding like they are padding the budget."
+      },
+      {
+        "t": "p",
+        "x": "Bring the board's latest numbers to the listing appointment. Point out the extra inventory in the seller's price range. Then walk the outside of the house with the seller and list the five things a buyer will notice from the sidewalk."
+      },
+      {
+        "t": "p",
+        "x": "A short exterior scope, priced in a written quote after a free on-site visit, gives the seller a clear choice: invest in presentation, or accept that buyers may negotiate off the asking price for the same issues."
+      },
+      {
+        "t": "h2",
+        "x": "How Bridgeland helps"
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders handles exterior painting, masonry and stucco repair, and window and door installation for homes and commercial buildings in Winnipeg and nearby communities. Every job starts with a free on-site visit and a free written quote, and exterior work is booked for the warmer months."
+      },
+      {
+        "t": "p",
+        "x": "**Planning a spring listing?** [**Book a Free On-Site Visit**](/book-online) with Bridgeland Builders this winter, and plan the exterior work for the warmer months."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Exterior painting services](/services/exterior-painting) · [When to paint your house exterior in Winnipeg](/blog/exterior-painting-winnipeg-when-to-paint) · [Pre-Listing Renovations in Winnipeg: What to Fix First](/blog/pre-listing-renovations-winnipeg)"
+      }
+    ],
+    "faqs": [],
+    "answer": "Winnipeg-area buyers have more choice than a year ago: active listings are up 14%, while September sales fell about 10% and the detached average hit a year-to-date record. Homes that look tired from the curb can lose the first showing, so sellers should plan exterior presentation now and book outdoor work for late spring.",
+    "sources": [
+      {
+        "label": "Winnipeg Regional Real Estate Board: September 2026 market results",
+        "url": "https://www.winnipegregionalrealestatenews.com/market-statistics/market-releases/article/629/more-choice-record-average-prices-and-softer-sales-defined-september-results",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Bank of Canada: Bank of Canada raises the policy rate to 2.5% (Oct 28, 2026)",
+        "url": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Ratehub: Bank of Canada October 2026 rate hike",
+        "url": "https://www.ratehub.ca/blog/bank-of-canada-october-2026-rate-hike/",
+        "accessed": "2026-11-04"
+      }
+    ],
+    "reviewBy": "2026-11-15"
+  },
+  {
+    "slug": "trusted-trades-list-real-estate-agents",
+    "title": "Trusted Trades List for Real Estate Agents in Winnipeg",
+    "metaTitle": "Trusted Trades List for Real Estate Agents in Winnipeg",
+    "metaDescription": "With more listings and pickier buyers, a reliable bench of trades, including professional painters, helps Winnipeg agents prepare homes for sale.",
+    "excerpt": "With more listings and pickier buyers, a reliable bench of trades, including professional painters, helps Winnipeg agents prepare homes for sale.",
+    "category": "Hiring a Contractor",
+    "categories": [
+      "Hiring a Contractor"
+    ],
+    "date": "2026-11-12",
+    "updated": "2026-11-12",
+    "readMinutes": 4,
+    "hero": null,
+    "heroSrc": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-880.4e9b342c.webp",
+    "heroSrcSet": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-480.2b9dda80.webp 480w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-880.4e9b342c.webp 880w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1320.42030d4f.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-480.cba4ba4e.avif 480w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-880.1ee31b40.avif 880w, /images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1320.f5065ee0.avif 1320w",
+    "ogImage": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x630.731454fd.jpg",
+    "schemaImages": [
+      "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x675.5989d764.jpg",
+      "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x900.e24c8264.jpg",
+      "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate-1200x1200.f240294f.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Four tradespeople with tool belts and toolboxes standing in front of a house, seen from behind",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/exterior-painting"
+    ],
+    "ctaService": "/services/exterior-painting",
+    "ctaPrimary": "visit",
+    "cluster": "home-sellers",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "h2",
+        "x": "A market that rewards preparation"
+      },
+      {
+        "t": "p",
+        "x": "The [Winnipeg Regional Real Estate Board](https://www.winnipegregionalrealestatenews.com/market-statistics/market-releases/article/629/more-choice-record-average-prices-and-softer-sales-defined-september-results) reported September 2026 sales down about 10% and listings up about 14%, with detached-home listings up about 20%. The year-to-date detached average is a record, but buyers have more options. That raises the value of a trusted trades list for real estate agents."
+      },
+      {
+        "t": "p",
+        "x": "The Bank of Canada's [October 2026 rate hike](https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/) adds pressure. Buyers with tighter budgets may be less willing to take on homes that need work."
+      },
+      {
+        "t": "p",
+        "x": "In this market, homes that look move-in ready have an edge. The question for sellers is who will get the work done, and how quickly."
+      },
+      {
+        "t": "h2",
+        "x": "Sellers want one call, not ten"
+      },
+      {
+        "t": "p",
+        "x": "Many sellers do not have a contractor list. They are often busy, sometimes relocating, and sometimes selling an estate. When an agent recommends [pre-listing work](/blog/pre-listing-renovations-winnipeg) such as painting, a few repairs and new flooring, the seller's next question is: \"Who can do that?\""
+      },
+      {
+        "t": "p",
+        "x": "Agents who can answer with confidence gain trust. Agents who say \"try searching online\" leave sellers to manage a stressful process on their own, which can delay the listing."
+      },
+      {
+        "t": "p",
+        "x": "Getting a written quote from a trusted contractor, with a clear scope and timeline, lets the seller weigh the cost against the likely effect on price and time on market."
+      },
+      {
+        "t": "h2",
+        "x": "Our view: the agent is the project quarterback"
+      },
+      {
+        "t": "p",
+        "x": "The best agents act as coordinators for pre-listing work. They do not do the work, and they should not take responsibility for it, but they connect sellers with trusted trades and keep the timeline moving."
+      },
+      {
+        "t": "p",
+        "x": "A strong bench includes:"
+      },
+      {
+        "t": "table",
+        "head": [
+          "Trade",
+          "Common pre-listing work"
+        ],
+        "rows": [
+          [
+            "Painters",
+            "Interior repaint, trim, doors, exterior touch-ups"
+          ],
+          [
+            "Flooring installers",
+            "Replacing worn carpet, repairing floors"
+          ],
+          [
+            "Door and window installers",
+            "Front door replacement, failed windows"
+          ],
+          [
+            "Masons",
+            "Front steps, brickwork and parging repairs"
+          ],
+          [
+            "General renovators",
+            "Combined small repairs"
+          ],
+          [
+            "Cleaners and stagers",
+            "Final presentation"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "What to look for in painters"
+      },
+      {
+        "t": "p",
+        "x": "Painting is a common pre-listing job. It makes rooms look cleaner and more neutral in photos, and it covers marks and wear."
+      },
+      {
+        "t": "p",
+        "x": "But results depend on the crew. Professional painters in Winnipeg should bring:"
+      },
+      {
+        "t": "li",
+        "x": "**Proper preparation:** patching, sanding, priming."
+      },
+      {
+        "t": "li",
+        "x": "**Clean lines** that look sharp in photos."
+      },
+      {
+        "t": "li",
+        "x": "**Reliability,** showing up as promised so photos and listing dates hold."
+      },
+      {
+        "t": "p",
+        "x": "A poor paint job can do more harm than good, because buyers notice drips, patchy coverage and paint on trim."
+      },
+      {
+        "t": "p",
+        "x": "On older homes, ask how the crew plans around lead paint. [Health Canada](https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html) says a house built before 1960 probably has lead-based paint, and warns against using sanders or heat guns to remove it."
+      },
+      {
+        "t": "h2",
+        "x": "Building and maintaining your trusted trades list"
+      },
+      {
+        "t": "oli",
+        "x": "**Vet trades properly:** run [WCB's clearance search](/blog/how-to-check-a-contractors-wcb-clearance-manitoba), check the Companies Office, look up past job addresses in the City's permit search, confirm insurance and ask for references."
+      },
+      {
+        "t": "oli",
+        "x": "**Start small:** try a new trade on a simple job before recommending them widely."
+      },
+      {
+        "t": "oli",
+        "x": "**Get feedback** from clients after every job."
+      },
+      {
+        "t": "oli",
+        "x": "**Disclose relationships** with any trades you refer, in line with your brokerage's rules."
+      },
+      {
+        "t": "oli",
+        "x": "**Let sellers choose:** recommend more than one option where possible, and make it clear the contract is between the seller and the trade."
+      },
+      {
+        "t": "h2",
+        "x": "Timing for spring"
+      },
+      {
+        "t": "p",
+        "x": "Spring is usually a busy listing season, and trades can book up early. Agents with spring listings should line up painting and repairs now. Interior painting can be done over the winter; exterior painting and masonry need to wait for warmer weather, so book those early for the first suitable weeks, usually in late spring."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "In a market with more listings and choosier buyers, preparation helps sell homes. Agents who maintain a vetted bench of trades can help sellers move from \"thinking about it\" to \"listed\", and help their listings stand out when buyers have plenty to compare."
+      },
+      {
+        "t": "h2",
+        "x": "How Bridgeland helps"
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders provides exterior painting, flooring, window and door installation and masonry repair for homes in Winnipeg and nearby communities, including work that gets a property ready to sell, scoped and quoted in writing after a free on-site visit."
+      },
+      {
+        "t": "p",
+        "x": "**Have a listing that needs pre-sale work?** [**Book a Free On-Site Visit**](/book-online) with Bridgeland Builders, and the seller gets a free written quote."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Exterior painting services](/services/exterior-painting) · [Winnipeg Renovation Show: questions to ask contractors](/blog/winnipeg-renovation-show-questions-to-ask)"
+      }
+    ],
+    "faqs": [],
+    "answer": "A trusted trades list is a short, vetted bench of painters, flooring installers, door and window installers, masons and general renovators that an agent can suggest to sellers before listing. With more listings and pickier buyers, it helps sellers get pre-listing work moving, as long as agents vet each trade, disclose referral relationships and let sellers choose.",
+    "sources": [
+      {
+        "label": "Winnipeg Regional Real Estate Board: September 2026 market results",
+        "url": "https://www.winnipegregionalrealestatenews.com/market-statistics/market-releases/article/629/more-choice-record-average-prices-and-softer-sales-defined-september-results",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Bank of Canada: Bank of Canada raises the policy rate to 2.5% (Oct 28, 2026)",
+        "url": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Health Canada: Lead-based paint",
+        "url": "https://www.canada.ca/en/health-canada/services/home-safety/lead-based-paint.html",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2026-11-15"
+  },
   {
     "slug": "vacant-storefront-renovation-winnipeg",
     "title": "Vacant Storefront Renovation: Re-Lease Winnipeg Retail",
@@ -6180,7 +6980,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "Buying a home that needs work is a different case, because some insured mortgages can include the cost of improvements in the purchase."
+        "x": "Buying a home that needs work is a different case, because some insured mortgages can include the cost of improvements in the purchase. Our guide to the [purchase plus improvements mortgage](/blog/purchase-plus-improvements-mortgage-winnipeg) explains how that works."
       },
       {
         "t": "h2",

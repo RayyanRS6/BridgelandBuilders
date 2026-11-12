@@ -142,7 +142,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "Buying a home that needs work is a different case, because some insured mortgages can include the cost of improvements in the purchase."
+      "x": "Buying a home that needs work is a different case, because some insured mortgages can include the cost of improvements in the purchase. Our guide to the [purchase plus improvements mortgage](/blog/purchase-plus-improvements-mortgage-winnipeg) explains how that works."
     },
     {
       "t": "h2",

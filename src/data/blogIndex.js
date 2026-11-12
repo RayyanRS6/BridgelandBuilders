@@ -10,6 +10,148 @@
 /** Published posts only (blog-raw status "published"), newest first, card and ranking fields. */
 export const BLOG_CARDS = [
   {
+    "slug": "pre-listing-renovations-winnipeg",
+    "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
+    "excerpt": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
+    "category": "Permits & Planning",
+    "date": "2026-11-12",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "6abdd2e4",
+        "5e2f392c",
+        "493990c1"
+      ],
+      "avif": [
+        "a7b725cb",
+        "8f2a4e53",
+        "a033abc0"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Permits & Planning"
+    ],
+    "services": [
+      "/services/exterior-painting"
+    ],
+    "cluster": "home-sellers"
+  },
+  {
+    "slug": "purchase-plus-improvements-mortgage-winnipeg",
+    "title": "Purchase Plus Improvements Mortgage: Winnipeg Fixer-Uppers",
+    "excerpt": "How Winnipeg buyers use a purchase plus improvements mortgage to renovate a fixer-upper, what lenders need, and how to get a realistic quote first.",
+    "category": "Money & Rebates",
+    "date": "2026-11-12",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "719705a4",
+        "c739b6f5",
+        "4f52ddd7"
+      ],
+      "avif": [
+        "29d246be",
+        "930f705f",
+        "465534fb"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Money & Rebates"
+    ],
+    "services": [
+      "/services/kitchen-renovations",
+      "/services/bathroom-renovations",
+      "/services/basement-renovations"
+    ],
+    "cluster": "home-sellers"
+  },
+  {
+    "slug": "winnipeg-housing-market-september-2026",
+    "title": "Winnipeg Housing Market, September 2026: Advice for Sellers",
+    "excerpt": "Winnipeg-area sales fell 10% in September while listings rose 14%. What that means for sellers, and why exterior work and curb appeal may matter more.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-12",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "d3628825",
+        "da43aae0",
+        "aab4d802"
+      ],
+      "avif": [
+        "466deb34",
+        "c9f25b45",
+        "71785636"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "services": [
+      "/services/exterior-painting"
+    ],
+    "cluster": "home-sellers"
+  },
+  {
+    "slug": "trusted-trades-list-real-estate-agents",
+    "title": "Trusted Trades List for Real Estate Agents in Winnipeg",
+    "excerpt": "With more listings and pickier buyers, a reliable bench of trades, including professional painters, helps Winnipeg agents prepare homes for sale.",
+    "category": "Hiring a Contractor",
+    "date": "2026-11-12",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "2b9dda80",
+        "4e9b342c",
+        "42030d4f"
+      ],
+      "avif": [
+        "cba4ba4e",
+        "1ee31b40",
+        "f5065ee0"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Hiring a Contractor"
+    ],
+    "services": [
+      "/services/exterior-painting"
+    ],
+    "cluster": "home-sellers"
+  },
+  {
     "slug": "vacant-storefront-renovation-winnipeg",
     "title": "Vacant Storefront Renovation: Re-Lease Winnipeg Retail",
     "excerpt": "Why storefronts sit empty and the targeted retail renovations that can help Winnipeg landlords re-lease, from façades to vanilla box shells and permits.",

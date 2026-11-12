@@ -18,7 +18,8 @@ export const BLOG_CATEGORIES = [
   "Hiring a Contractor",
   "Commercial",
   "Money & Rebates",
-  "Landlords & Property Managers"
+  "Landlords & Property Managers",
+  "Winnipeg Market News"
 ];
 
 /** How many cards /blog shows first. */
@@ -29,6 +30,130 @@ export const BLOG_PAGE_SIZE = 12;
 
 /** The newest published posts (blog-raw status "published"), newest first, as cards. */
 export const BLOG_LIST = [
+  {
+    "slug": "pre-listing-renovations-winnipeg",
+    "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
+    "excerpt": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
+    "category": "Permits & Planning",
+    "date": "2026-11-12",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/pre-listing-renovations-winnipeg/pre-listing-renovations-in-winnipeg",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "6abdd2e4",
+        "5e2f392c",
+        "493990c1"
+      ],
+      "avif": [
+        "a7b725cb",
+        "8f2a4e53",
+        "a033abc0"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Permits & Planning"
+    ]
+  },
+  {
+    "slug": "purchase-plus-improvements-mortgage-winnipeg",
+    "title": "Purchase Plus Improvements Mortgage: Winnipeg Fixer-Uppers",
+    "excerpt": "How Winnipeg buyers use a purchase plus improvements mortgage to renovate a fixer-upper, what lenders need, and how to get a realistic quote first.",
+    "category": "Money & Rebates",
+    "date": "2026-11-12",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/purchase-plus-improvements-mortgage/purchase-plus-improvements-mortgage",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "719705a4",
+        "c739b6f5",
+        "4f52ddd7"
+      ],
+      "avif": [
+        "29d246be",
+        "930f705f",
+        "465534fb"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Money & Rebates"
+    ]
+  },
+  {
+    "slug": "winnipeg-housing-market-september-2026",
+    "title": "Winnipeg Housing Market, September 2026: Advice for Sellers",
+    "excerpt": "Winnipeg-area sales fell 10% in September while listings rose 14%. What that means for sellers, and why exterior work and curb appeal may matter more.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-12",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/winnipeg-housing-market-september-2026/winnipeg-housing-market-september",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "d3628825",
+        "da43aae0",
+        "aab4d802"
+      ],
+      "avif": [
+        "466deb34",
+        "c9f25b45",
+        "71785636"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ]
+  },
+  {
+    "slug": "trusted-trades-list-real-estate-agents",
+    "title": "Trusted Trades List for Real Estate Agents in Winnipeg",
+    "excerpt": "With more listings and pickier buyers, a reliable bench of trades, including professional painters, helps Winnipeg agents prepare homes for sale.",
+    "category": "Hiring a Contractor",
+    "date": "2026-11-12",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/trusted-trades-list-real-estate-agents/trusted-trades-list-for-real-estate",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "2b9dda80",
+        "4e9b342c",
+        "42030d4f"
+      ],
+      "avif": [
+        "cba4ba4e",
+        "1ee31b40",
+        "f5065ee0"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Hiring a Contractor"
+    ]
+  },
   {
     "slug": "vacant-storefront-renovation-winnipeg",
     "title": "Vacant Storefront Renovation: Re-Lease Winnipeg Retail",
@@ -312,136 +437,27 @@ export const BLOG_LIST = [
       "Commercial",
       "Permits & Planning"
     ]
-  },
-  {
-    "slug": "removing-a-load-bearing-wall-winnipeg",
-    "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
-    "excerpt": "What the City of Winnipeg’s permit form asks for when a load-bearing wall is opened, moved or removed, why an LVL beam needs an engineer’s sealed drawing, and what happens to the wiring and plumbing inside the wall.",
-    "category": "Permits & Planning",
-    "date": "2026-10-15",
-    "readMinutes": 10,
-    "image": {
-      "base": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "0aee3eb7",
-        "46195eef",
-        "69190335"
-      ],
-      "avif": [
-        "bd0be13d",
-        "00fb01ad",
-        "d432225b"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Permits & Planning"
-    ]
-  },
-  {
-    "slug": "window-condensation-winnipeg-winter",
-    "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
-    "excerpt": "Frost and water on the inside of your windows are usually a humidity problem first. Using Natural Resources Canada's humidity table and Health Canada's moisture advice, this guide explains how humid a Winnipeg house can be in a cold snap, what fog between the panes means and when replacement makes sense.",
-    "category": "Older Homes",
-    "date": "2026-10-15",
-    "readMinutes": 10,
-    "image": {
-      "base": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "94567594",
-        "96a34dae",
-        "6c520be8"
-      ],
-      "avif": [
-        "939ce55c",
-        "6a8c29ad",
-        "8433cb61"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Older Homes"
-    ]
-  },
-  {
-    "slug": "home-renovation-cost-canada",
-    "title": "How Much Does a Home Renovation Cost in Canada?",
-    "excerpt": "Why there’s no reliable national average for what a renovation costs, what Statistics Canada’s construction price data does show, why per-square-foot figures mislead, and how to get a real number for your project.",
-    "category": "Costs & Budgets",
-    "date": "2026-10-14",
-    "readMinutes": 7,
-    "image": {
-      "base": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "9ad93e01",
-        "5517d108",
-        "6f8cec70"
-      ],
-      "avif": [
-        "02b9c202",
-        "1ff31c44",
-        "f7242463"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Costs & Budgets"
-    ]
-  },
-  {
-    "slug": "basement-development-permits-winnipeg",
-    "title": "Basement Development Permits in Winnipeg: How to Apply",
-    "excerpt": "What the City of Winnipeg asks for when you finish a basement, from bedroom windows and ceiling heights to drawings, alarms and inspections.",
-    "category": "Permits & Planning",
-    "date": "2026-10-13",
-    "readMinutes": 9,
-    "image": {
-      "base": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "86f7cdfe",
-        "d1925dff",
-        "eb1b2d54"
-      ],
-      "avif": [
-        "3e79a34c",
-        "4c88fdfd",
-        "d2a97ce0"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Permits & Planning",
-      "Basements & Suites"
-    ]
   }
 ];
 
 /** Every other published post, newest first, as a title link. */
 export const BLOG_TITLES = [
+  {
+    "slug": "removing-a-load-bearing-wall-winnipeg",
+    "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams"
+  },
+  {
+    "slug": "window-condensation-winnipeg-winter",
+    "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg"
+  },
+  {
+    "slug": "home-renovation-cost-canada",
+    "title": "How Much Does a Home Renovation Cost in Canada?"
+  },
+  {
+    "slug": "basement-development-permits-winnipeg",
+    "title": "Basement Development Permits in Winnipeg: How to Apply"
+  },
   {
     "slug": "basement-flood-protection-winnipeg",
     "title": "Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits"
