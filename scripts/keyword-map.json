@@ -916,7 +916,7 @@
       "note": "Drive piece A01, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/bank-of-canada-rate-hike-renovation-budgets": {
-      "status": "planned",
+      "status": "live",
       "primary": ["bank of Canada rate hike renovations"],
       "secondary": [
         "bank of Canada 2.50%",
@@ -937,7 +937,7 @@
       "note": "Drive piece A03, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-rent-prices-falling-2026": {
-      "status": "planned",
+      "status": "live",
       "primary": ["Winnipeg rents falling"],
       "secondary": [
         "average rent Winnipeg one bedroom",
@@ -1246,7 +1246,7 @@
       "note": "Drive piece B03, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winter-unit-turnover-checklist-winnipeg": {
-      "status": "planned",
+      "status": "live",
       "primary": ["unit turnover checklist"],
       "secondary": [
         "rental unit turnover Winnipeg",
@@ -1257,7 +1257,7 @@
       "note": "Drive piece B04, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/manitoba-rent-increase-guideline-2027": {
-      "status": "planned",
+      "status": "live",
       "primary": ["Manitoba rent increase guideline 2027"],
       "secondary": [
         "above guideline rent increase Manitoba",

@@ -23,6 +23,976 @@ export const BLOG_CATEGORIES = [
 /** Published posts only (blog-raw status "published"), newest first, with bodies. */
 export const BLOG_POSTS = [
   {
+    "slug": "winter-unit-turnover-checklist-winnipeg",
+    "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+    "metaTitle": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+    "metaDescription": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+    "excerpt": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+    "category": "Landlords & Property Managers",
+    "categories": [
+      "Landlords & Property Managers"
+    ],
+    "date": "2026-11-19",
+    "updated": "2026-11-19",
+    "readMinutes": 3,
+    "hero": null,
+    "heroSrc": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-880.31f92b81.webp",
+    "heroSrcSet": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-480.e5763651.webp 480w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-880.31f92b81.webp 880w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1320.d0942f83.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-480.6ace35ea.avif 480w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-880.6c6e1c9b.avif 880w, /images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1320.6a482139.avif 1320w",
+    "ogImage": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x630.2755e97d.jpg",
+    "schemaImages": [
+      "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x675.38c6564d.jpg",
+      "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x900.e0775ec6.jpg",
+      "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x1200.6c767f6f.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Empty apartment during a winter unit turnover, with fresh paint, snow outside the window and cleaning supplies on the floor",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/commercial-renovations",
+      "/services/flooring"
+    ],
+    "ctaService": "/services/commercial-renovations",
+    "ctaPrimary": "visit",
+    "cluster": "rental-buildings",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Winter can be a slow time to lease a rental in Winnipeg, which makes a unit turnover checklist worth having before the next move-out notice arrives. Rents have softened too: at $1,319, the average unfurnished one-bedroom asking rent in [liv.rent's October 2026 report](https://liv.rent/blog/?p=69631) was down three months in a row, though the latest drop was only 0.1%."
+      },
+      {
+        "t": "p",
+        "x": "When renters have choices, units that are ready on day one have an edge. This checklist covers the property management renovations to plan between November and March."
+      },
+      {
+        "t": "h2",
+        "x": "Before the resident moves out"
+      },
+      {
+        "t": "li",
+        "x": "**Walk the unit early, ideally 30 to 60 days before move-out.** Note damage and wear so you can order materials early. Manitoba [limits when a landlord can enter](https://www.gov.mb.ca/cca/rtb/resource_list/privacy.pdf), so get the tenant's agreement first, or give written notice where the rules allow it. The Residential Tenancies Branch can explain what applies."
+      },
+      {
+        "t": "li",
+        "x": "**Book trades now.** Painters, flooring installers and repair crews can get busy before the holidays. Lock in dates before the notice period ends."
+      },
+      {
+        "t": "li",
+        "x": "**Order long-lead items.** Appliances, windows, doors and custom counters can be slow to arrive in winter, so order them early."
+      },
+      {
+        "t": "h2",
+        "x": "The winter unit turnover checklist: what to renovate first"
+      },
+      {
+        "t": "p",
+        "x": "**1. Heat and drafts.** Prospects notice cold units instantly in a Winnipeg January. Have a heating contractor check furnace or boiler operation. Replace weatherstripping, fix door sweeps, and inspect windows for failed seals or frost buildup."
+      },
+      {
+        "t": "p",
+        "x": "**2. Paint.** Fresh, neutral paint throughout. Use washable finishes in kitchens, bathrooms and hallways."
+      },
+      {
+        "t": "p",
+        "x": "**3. Flooring.** Replace worn carpet with luxury vinyl plank. It handles salt, slush and boots better and can last through multiple turns. In older buildings, [test old tile and adhesive for asbestos](/blog/asbestos-testing-before-renovating-manitoba) before they come up."
+      },
+      {
+        "t": "p",
+        "x": "**4. Kitchen and bath refresh.** New hardware, faucets, light fixtures, and re-caulked tubs and sinks make an older unit feel updated."
+      },
+      {
+        "t": "p",
+        "x": "**5. Lighting.** Short winter days mean showings in low light. Replace dim bulbs, and have an electrician add fixtures where rooms feel dark."
+      },
+      {
+        "t": "p",
+        "x": "**6. Safety items.** Last on this list, but never skip them: test smoke and carbon monoxide alarms, check railings and secure entry locks."
+      },
+      {
+        "t": "h2",
+        "x": "Common areas count too"
+      },
+      {
+        "t": "p",
+        "x": "Prospects judge the building before they see the unit. Before winter showings:"
+      },
+      {
+        "t": "li",
+        "x": "Keep entrances clear of snow and ice, and well lit."
+      },
+      {
+        "t": "li",
+        "x": "Use durable entry mats and clean salt stains on lobby floors."
+      },
+      {
+        "t": "li",
+        "x": "Repair damaged entry doors, mailboxes and hallway flooring."
+      },
+      {
+        "t": "h2",
+        "x": "Plan winter-friendly renovation work"
+      },
+      {
+        "t": "p",
+        "x": "Winter is a good time for **interior** property management renovations: [kitchens](/services/kitchen-renovations), [bathrooms](/services/bathroom-renovations), [flooring](/services/flooring) and paint, because the work is indoors and less affected by the cold. Save exterior work like masonry, painting and siding for the warmer months."
+      },
+      {
+        "t": "h2",
+        "x": "Keep the turn short"
+      },
+      {
+        "t": "p",
+        "x": "Set a target for a standard turn, counted from move-out to show-ready, and track each unit against it. Ways to get there:"
+      },
+      {
+        "t": "oli",
+        "x": "Standardize finishes (one paint colour, one flooring, one fixture package) across units."
+      },
+      {
+        "t": "oli",
+        "x": "Keep a stock of common parts: hardware, faucets, outlets, blinds."
+      },
+      {
+        "t": "oli",
+        "x": "Schedule trades back-to-back, not one at a time."
+      },
+      {
+        "t": "oli",
+        "x": "Photograph and list the unit the day it's ready."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "In winter, every vacant day counts. Property managers who plan turns before move-out, fix heat and drafts first, and standardize finishes give their units a better chance of leasing, even in January."
+      },
+      {
+        "t": "p",
+        "x": "**Planning winter turns?** Bridgeland Builders handles flooring, kitchens and bathrooms and quotes vacant-unit turnovers for property managers in Winnipeg and nearby communities, with a schedule in your written quote. [**Book a Free On-Site Visit**](/book-online)."
+      },
+      {
+        "t": "p",
+        "x": "General information, not legal advice. Ask the Residential Tenancies Branch what applies to your building."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Flooring installation service](/services/flooring) · [Basement suite rental income in Winnipeg](/blog/basement-suite-rental-income-winnipeg) · [Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter](/blog/winnipeg-rent-prices-falling-2026)"
+      }
+    ],
+    "faqs": [],
+    "answer": "A winter unit turnover checklist starts before the resident moves out: walk the unit early, book trades and order long-lead items. Then fix heat and drafts first, followed by paint, flooring, kitchen and bath touch-ups, lighting and safety items. Standardized finishes and back-to-back trades help keep the turn short.",
+    "sources": [
+      {
+        "label": "liv.rent: October 2026 Winnipeg rent report",
+        "url": "https://liv.rent/blog/?p=69631",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: Privacy fact sheet on landlord entry",
+        "url": "https://www.gov.mb.ca/cca/rtb/resource_list/privacy.pdf",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2027-03-31"
+  },
+  {
+    "slug": "manitoba-rent-increase-guideline-2027",
+    "title": "Manitoba Rent Increase Guideline 2027: A Landlord's Guide",
+    "metaTitle": "Manitoba Rent Increase Guideline 2027: A Landlord's Guide",
+    "metaDescription": "Manitoba's 2027 rent guideline is 3% and the exemption rises to $2,000. Which renovations still pay now that capital pass-through was cut by 40%.",
+    "excerpt": "Manitoba's 2027 rent guideline is 3% and the exemption rises to $2,000. Which renovations still pay now that capital pass-through was cut by 40%.",
+    "category": "Landlords & Property Managers",
+    "categories": [
+      "Landlords & Property Managers"
+    ],
+    "date": "2026-11-19",
+    "updated": "2026-11-19",
+    "readMinutes": 6,
+    "hero": null,
+    "heroSrc": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-880.00c30be1.webp",
+    "heroSrcSet": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-480.c1b743ab.webp 480w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-880.00c30be1.webp 880w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1320.3f007b2b.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-480.381d3e94.avif 480w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-880.74f6045e.avif 880w, /images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1320.df5bb90c.avif 1320w",
+    "ogImage": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x630.cb1eed5b.jpg",
+    "schemaImages": [
+      "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x675.e63a1bdb.jpg",
+      "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x900.87936b2a.jpg",
+      "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x1200.86ab6fdb.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Three-storey brick walk-up apartment building with a concrete front stoop on a sunny summer day",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/commercial-renovations"
+    ],
+    "ctaService": "/services/commercial-renovations",
+    "ctaPrimary": "visit",
+    "cluster": "rental-buildings",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "The Manitoba rent increase guideline for 2027 is **3%**, effective January 1, 2027. At the same time, the province is raising the rent level at which units are exempt from rent regulation from $1,670 to $2,000 a month, which it calls the largest expansion of rent control in decades. More units will now fall under the guideline."
+      },
+      {
+        "t": "p",
+        "x": "For property managers, that means capped increases on more units, and more reason to invest wisely in the ones you have."
+      },
+      {
+        "t": "p",
+        "x": "On October 30, 2026, the province also cut how much capital work can count in an above-guideline application. The renovation solutions for property managers most likely to still make financial sense are the ones that cut costs or keep tenants."
+      },
+      {
+        "t": "h2",
+        "x": "The rules in brief"
+      },
+      {
+        "t": "li",
+        "x": "**Guideline:** 3% for increases taking effect in 2027."
+      },
+      {
+        "t": "li",
+        "x": "**Exemption threshold:** rises to $2,000 a month on January 1, 2027. Most units renting below that amount are regulated. The exceptions include buildings first occupied after March 7, 2005, exempt for 20 years counted from the first occupancy permit or first tenant, whichever came first, along with social housing and government-run, co-op, non-profit life-lease and approved rehabilitated units."
+      },
+      {
+        "t": "li",
+        "x": "**Notice:** tenants must receive written notice at least three months before an increase. For a January 1, 2027 increase, notice was due by September 30, 2026."
+      },
+      {
+        "t": "li",
+        "x": "**Frequency:** rent generally can be raised only once every 12 months."
+      },
+      {
+        "t": "li",
+        "x": "**Above-guideline increases:** landlords can apply to Manitoba's Residential Tenancies Branch for an increase above the guideline, based on documented changes in operating expenses and the allowable share of capital expenses. Mortgage interest is not an operating expense; it only counts if the complex runs at a deficit."
+      },
+      {
+        "t": "li",
+        "x": "**New tenants:** a regulated unit in a complex of four or more units can't be rented to a new tenant above the average rent of similar units in the complex. In a complex of three units or fewer, the landlord sets the amount, and a fourplex with the landlord living in one unit counts as three."
+      },
+      {
+        "t": "li",
+        "x": "**Notice to New Tenant:** for a regulated unit, the landlord must give this notice even if the rent isn't rising, and send the Branch a copy within 14 days. In a complex of four or more units, the tenant then has 30 days to ask the Branch to check the average. Without the notice, an increase isn't allowed."
+      },
+      {
+        "t": "li",
+        "x": "**Moving a tenant out to renovate:** this applies only if the work needs the unit vacant. The landlord must give written notice to move. In Winnipeg that is currently 4 months, set from CMHC's fall vacancy rate, so it can change."
+      },
+      {
+        "t": "li",
+        "x": "**Limits on that notice:** it can't end a fixed-term agreement early, and a tenant with a child at a nearby school can't be made to leave before the school year ends. The landlord pays reasonable moving expenses up to a set maximum. The tenant can ask in writing, before moving out, for first refusal on the renovated unit."
+      },
+      {
+        "t": "li",
+        "x": "**Rehabilitation schemes:** with the Branch's approval, a scheme can cover a single unit for up to 2 years, or a complex or part of one for up to 5 years. Apply before you start, because the rules limit work done before the first order. For one unit in a complex of four or more, the tenant must leave voluntarily."
+      },
+      {
+        "t": "h2",
+        "x": "Renovations and above-guideline rent increases in Manitoba"
+      },
+      {
+        "t": "p",
+        "x": "If you've completed major capital work, such as a new roof, windows, boiler or building-wide upgrades, part of the cost may count in an above-guideline application. Landlords can't apply because they plan to do work. The Residential Tenancies Branch reviews the documented expenses and decides the allowable increase."
+      },
+      {
+        "t": "p",
+        "x": "[On October 30, 2026](https://web2.gov.mb.ca/laws/regs/annual/2026/116.php), Manitoba cut the share of capital costs that counts in an above-guideline application by 40%. The share is now 20%, 15%, 10% or 7.5% of the cost, depending on the item. Since October 20, 2026, tenants pay none of a proposed above-guideline increase until the Branch issues an order."
+      },
+      {
+        "t": "p",
+        "x": "The new shares apply to any application with no order by October 30, 2026, whenever it was filed. You can only claim costs already paid or billed, and you must list any rebates. The Branch's FAQ and fact sheet still show the old rule that tenants pay while they wait, but its home page notice replaces it."
+      },
+      {
+        "t": "p",
+        "x": "To give yourself the best footing:"
+      },
+      {
+        "t": "oli",
+        "x": "**Keep detailed records:** contracts, invoices, proof of payment, and before-and-after photos."
+      },
+      {
+        "t": "oli",
+        "x": "**Separate capital work from routine maintenance.** Repairs and upkeep are treated differently from capital improvements."
+      },
+      {
+        "t": "oli",
+        "x": "**Check the deadlines and forms** (Form 3 and the Branch's guidebook) before you start, not after. The Branch wants the application at least two and a half months before the first increase. Its landlord guide was last updated in September 2026, so it still shows the old shares and the old rule on paying before an order."
+      },
+      {
+        "t": "oli",
+        "x": "**Talk to residents.** Explain what's being upgraded and why. Clear communication reduces disputes."
+      },
+      {
+        "t": "h2",
+        "x": "Renovation solutions that pay off under rent control"
+      },
+      {
+        "t": "p",
+        "x": "When rent growth is capped, the best renovations either **cut costs** or **reduce turnover**:"
+      },
+      {
+        "t": "table",
+        "head": [
+          "Renovation",
+          "Why it can pay"
+        ],
+        "rows": [
+          [
+            "Windows, doors, weatherstripping",
+            "Lower heating bills, fewer comfort complaints"
+          ],
+          [
+            "Durable flooring at turnover",
+            "Fewer replacements over future turns"
+          ],
+          [
+            "Water-saving fixtures",
+            "Lower utility costs"
+          ],
+          [
+            "Kitchen and bath refresh at turnover",
+            "Stronger leasing, fewer vacant days"
+          ],
+          [
+            "Common-area upgrades",
+            "Better retention and building reputation"
+          ],
+          [
+            "Energy retrofits",
+            "May qualify for Efficiency Manitoba incentives"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "For a [kitchen](/services/kitchen-renovations) or [bathroom](/services/bathroom-renovations) renovation, the [instant estimate](/instant-quote) gives a starting range. Other work is priced in a free written quote after a free on-site visit."
+      },
+      {
+        "t": "p",
+        "x": "If the building was built or renovated before 1990, check for asbestos before old materials are disturbed. Our guide covers [asbestos testing before you renovate](/blog/asbestos-testing-before-renovating-manitoba)."
+      },
+      {
+        "t": "p",
+        "x": "If you're counting on an incentive, apply first. [Efficiency Manitoba's Building Envelope Program](https://efficiencymb.ca/business/building-envelope/) lists multi-unit residential buildings, and it says not to buy or install anything until you're approved."
+      },
+      {
+        "t": "h2",
+        "x": "Units above the $2,000 threshold"
+      },
+      {
+        "t": "p",
+        "x": "A unit is exempt if the rent payable on December 31 of the previous year was $2,000 or more. That is the regulation's wording. The Branch's FAQ says more than $2,000 a month as of December 31, 2026, so ask the Branch about a unit at exactly $2,000."
+      },
+      {
+        "t": "p",
+        "x": "Starting in 2028, the amount rises each January by the guideline, rounded to the nearest $5."
+      },
+      {
+        "t": "p",
+        "x": "Exempt units still follow the rules on three months' notice and one increase every 12 months, but the new-tenant limits don't apply to them. Well-finished, updated units in this range compete on quality, so renovations that keep them at the top of the market still matter."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "With a 3% guideline, more units under rent control in 2027 and a smaller share of capital costs counting in an application, property managers win by spending on what lowers costs and keeps residents. Keep solid records of completed work in case an above-guideline application makes sense."
+      },
+      {
+        "t": "p",
+        "x": "**Planning capital work for 2027?** Bridgeland Builders quotes vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners, and you get a free written quote after the visit. [**Book a Free On-Site Visit**](/book-online)."
+      },
+      {
+        "t": "p",
+        "x": "General information, not legal, tax or financial advice. Have the Manitoba Residential Tenancies Branch, an accountant or a lawyer confirm how the rules apply to your building."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Commercial property renovation](/services/commercial-renovations) · [Secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg)"
+      }
+    ],
+    "faqs": [],
+    "answer": "Manitoba's 2027 rent increase guideline is 3%, effective January 1, 2027. The exemption threshold rises from $1,670 to $2,000 a month, so more units fall under the guideline. Landlords can still apply for more, but only part of paid or billed capital costs counts, and that share was cut by 40% in October 2026.",
+    "sources": [
+      {
+        "label": "Manitoba Residential Tenancies Branch: current rent increase guideline",
+        "url": "https://www.gov.mb.ca/cca/rtb/rentincreaseguideline/currentrentguideline.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Province of Manitoba: Historic Expansion of Rent Control Effective Jan. 1, 2027 (Sept 3, 2026)",
+        "url": "https://news.gov.mb.ca/news/?archive=&item=75138",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Province of Manitoba: Changes Regulations to Limit Rent Hikes and Expand Rent Control (Oct 20, 2026)",
+        "url": "https://news.gov.mb.ca/news/?archive=&item=75837",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: M.R. 116/2026, amending the Residential Rent Regulation",
+        "url": "https://web2.gov.mb.ca/laws/regs/annual/2026/116.php",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: M.R. 91/2026, amending the Residential Rent Regulation",
+        "url": "https://web2.gov.mb.ca/laws/regs/annual/2026/091.php",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: Residential Rent Regulation, M.R. 156/92",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/_pdf-regs.php?reg=156/92",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: The Residential Tenancies Act",
+        "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/r119.php",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Residential Tenancies Branch guidebook: rent increases for a new tenant",
+        "url": "https://www.gov.mb.ca/cca/rtb/ot/gbook/s13rentreg_rentincreasenewt7.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: home page notices",
+        "url": "https://www.gov.mb.ca/cca/rtb/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: rent FAQ",
+        "url": "https://www.gov.mb.ca/cca/rtb/faqsrent.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: above-guideline increases",
+        "url": "https://www.gov.mb.ca/cca/rtb/landlord/aboveguide.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: Above Guideline Rent Increases fact sheet",
+        "url": "https://www.gov.mb.ca/cca/rtb/resource_list/aboveguidelinerentincr.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: landlord's guide to above-guideline applications",
+        "url": "https://www.gov.mb.ca/cca/rtb/resource_list/aguideforlandlords_cover.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: Notice to Move",
+        "url": "https://www.gov.mb.ca/cca/rtb/resource_list/noticetomove.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Building Envelope Program",
+        "url": "https://efficiencymb.ca/business/building-envelope/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Workplace Safety and Health: asbestos FAQs",
+        "url": "https://www.gov.mb.ca/labour/safety/faq/asbestos.html",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2027-01-01"
+  },
+  {
+    "slug": "bank-of-canada-rate-hike-renovation-budgets",
+    "title": "Bank of Canada Rate Hike: What 2.50% Means for Renovations",
+    "metaTitle": "Bank of Canada Rate Hike: What 2.50% Means for Renovations",
+    "metaDescription": "The Bank of Canada raised rates to 2.50% on Oct 28, 2026, its first hike since July 2023. What it means for Winnipeg renovation budgets and what to do now.",
+    "excerpt": "The Bank of Canada raised rates to 2.50% on Oct 28, 2026, its first hike since July 2023. What it means for Winnipeg renovation budgets and what to do now.",
+    "category": "Winnipeg Market News",
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "date": "2026-11-19",
+    "updated": "2026-11-19",
+    "readMinutes": 5,
+    "hero": null,
+    "heroSrc": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-880.407886aa.webp",
+    "heroSrcSet": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-480.3d9c756e.webp 480w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-880.407886aa.webp 880w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1320.b4e1244f.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-480.872cb81c.avif 480w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-880.d1a82b3d.avif 880w, /images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1320.1842c076.avif 1320w",
+    "ogImage": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x630.1c559f16.jpg",
+    "schemaImages": [
+      "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x675.c66ec350.jpg",
+      "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x900.adbdc712.jpg",
+      "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x1200.a838008e.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "House keys, a calculator and renovation plans on a kitchen table, for budgeting after the Bank of Canada rate hike",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/commercial-renovations"
+    ],
+    "ctaService": "/services/commercial-renovations",
+    "ctaPrimary": "visit",
+    "cluster": "commercial-costs",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "h2",
+        "x": "What happened on October 28"
+      },
+      {
+        "t": "p",
+        "x": "The Bank of Canada rate hike changes the math on which renovations make sense. On October 28, 2026, the Bank lifted its target for the overnight rate to 2.50%, with the Bank Rate at 2.75% and the deposit rate at 2.45%, according to the [Bank's announcement](https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/). It was [the first increase since July 2023](https://www.ratehub.ca/blog/bank-of-canada-october-2026-rate-hike/)."
+      },
+      {
+        "t": "p",
+        "x": "The backdrop matters for anyone planning a capital budget:"
+      },
+      {
+        "t": "li",
+        "x": "**Inflation is moving the wrong way.** Consumer price inflation was [3.1% in September](https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.htm), and the Bank expects it to reach about 3.5% by year-end before returning to its 2% target around mid-2028."
+      },
+      {
+        "t": "li",
+        "x": "**Energy prices spiked.** Brent crude was trading near US$115 a barrel in the Bank's [October report](https://www.bankofcanada.ca/wp-content/uploads/2026/10/mpr-2026-10-28.pdf), and the Bank assumes it will average about US$100 in the fourth quarter of 2026. That can feed through to fuel, freight and materials."
+      },
+      {
+        "t": "li",
+        "x": "**Trade talks with the US broke down in late August.** The Bank's [tariff assumptions](https://www.bankofcanada.ca/publications/mpr/mpr-2026-10-28/tariff-assumptions/) say that has led to new tariffs and more uncertainty, which can reach imported products and components."
+      },
+      {
+        "t": "li",
+        "x": "**Growth is slow.** The Bank projects GDP growth of about 1% in 2026, improving to roughly 2% in 2027 and 2028."
+      },
+      {
+        "t": "p",
+        "x": "The next decision is December 9, 2026, and the Bank did not rule out further hikes."
+      },
+      {
+        "t": "h2",
+        "x": "Why the rate hike matters for renovation budgets"
+      },
+      {
+        "t": "p",
+        "x": "Many commercial and multifamily renovations are financed in some way: lines of credit, refinancing, or capital reserves that would otherwise earn interest. A higher rate raises the carrying cost of those projects."
+      },
+      {
+        "t": "p",
+        "x": "As a made-up illustration, not a quote or a Bridgeland price, on a $250,000 loan fully repaid over five years, each quarter-point increase adds roughly $1,700 to $1,800 in interest over the term. An interest-only loan would cost more, about $3,100."
+      },
+      {
+        "t": "p",
+        "x": "That is not enough to cancel a good project, but it is enough to make a marginal one harder to justify. This is general information, not financial advice, so have your lender or accountant run your own numbers."
+      },
+      {
+        "t": "p",
+        "x": "Construction costs have been rising too. [Altus Group's 2026 Cost Guide insights](https://www.altusgroup.com/insights/caution-in-2026-optimistic-for-2027-cost-guide-insights/) say Winnipeg construction costs rose by 4% or more in 2025, with metals and mechanical and electrical components leading. Nationally, Altus ties those increases to US tariffs and trade uncertainty. When inflation is above target, waiting may not make a project cheaper."
+      },
+      {
+        "t": "h2",
+        "x": "Our view: fewer projects, better scoped"
+      },
+      {
+        "t": "p",
+        "x": "Higher rates reward owners who do the right projects well, and punish owners who do the wrong projects or do them twice. We would group renovation spending into three buckets:"
+      },
+      {
+        "t": "table",
+        "head": [
+          "Bucket",
+          "Examples",
+          "What to do now"
+        ],
+        "rows": [
+          [
+            "Protect the asset",
+            "Masonry repair, failing windows and doors, water intrusion",
+            "Do it. Deferral can cost more as damage spreads."
+          ],
+          [
+            "Earn revenue",
+            "Unit turns, tenant improvements, lobby and common areas",
+            "Do it where rent or occupancy gains are clear."
+          ],
+          [
+            "Nice to have",
+            "Cosmetic refreshes with no rent or retention case",
+            "Defer or phase, unless it supports a sale or lease-up."
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "The first bucket is the most important. Rates do not slow down a leaking window or a spalling brick wall, which is why [window replacement](/services/windows-and-doors) and [masonry repair](/services/masonry-stucco) sit in this bucket. Deferring protective work in a higher-rate world can just mean paying more later, with more damage, at a higher cost of capital."
+      },
+      {
+        "t": "h2",
+        "x": "What to look for in a contractor when money costs more"
+      },
+      {
+        "t": "p",
+        "x": "When money is cheap, a change order is an annoyance. When money costs more, change orders, schedule slips and rework directly erode returns. That changes what owners should look for when [choosing a contractor](/blog/how-to-choose-the-right-contractor-for-your-renovation-project). The right contractor for this environment is not necessarily the cheapest bidder. It is the one that:"
+      },
+      {
+        "t": "li",
+        "x": "**Puts the full scope and price in writing,** and says how it handles the items that often cause change orders: hidden conditions, demolition surprises and finish selections."
+      },
+      {
+        "t": "li",
+        "x": "**Holds a realistic schedule,** because every extra month of construction is another month of carrying cost and lost rent."
+      },
+      {
+        "t": "li",
+        "x": "**Covers several trades,** so the owner is not coordinating separate painters, flooring installers, masons and door installers."
+      },
+      {
+        "t": "li",
+        "x": "**Communicates early when something changes,** so the owner can decide while options are still cheap."
+      },
+      {
+        "t": "h2",
+        "x": "Practical steps for Winnipeg owners"
+      },
+      {
+        "t": "oli",
+        "x": "**Re-rank your 2027 capital plan** using the three buckets above. Our [capital planning guide](/blog/capital-planning-property-managers-winnipeg) shows how to use your own maintenance data."
+      },
+      {
+        "t": "oli",
+        "x": "**Get written pricing** for protective work early, so you have real numbers before spring."
+      },
+      {
+        "t": "oli",
+        "x": "**Ask contractors to put the scope, allowances and how changes are priced** in writing, with clear exclusions."
+      },
+      {
+        "t": "oli",
+        "x": "**Stage the remaining projects** so revenue-earning work can help fund the rest."
+      },
+      {
+        "t": "oli",
+        "x": "**Watch December 9.** If rates rise again, the case for deferring nice-to-have work strengthens; protective work stays urgent either way."
+      },
+      {
+        "t": "h2",
+        "x": "How Bridgeland helps"
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders does commercial and residential renovations in Winnipeg and nearby communities, including masonry and stucco repairs, windows and doors, flooring, exterior painting and interior demolition. We walk the space with you at a free on-site visit and put the scope in a free written quote, so you can weigh each project against your budget."
+      },
+      {
+        "t": "p",
+        "x": "**Planning your 2027 capital budget?** [**Book a Free On-Site Visit**](/book-online) with Bridgeland Builders to walk through the projects on your list."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Commercial renovations](/services/commercial-renovations) · [Commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)"
+      }
+    ],
+    "faqs": [],
+    "answer": "The Bank of Canada raised its policy rate by 25 basis points to 2.50% on October 28, 2026, and left the door open to more. Borrowing for renovations can cost more, and construction costs could keep climbing. For Winnipeg owners, the response is not to stop investing in buildings, but to be more disciplined about which projects get funded.",
+    "sources": [
+      {
+        "label": "Bank of Canada: Bank of Canada raises the policy rate to 2.5% (Oct 28, 2026)",
+        "url": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Bank of Canada: Monetary Policy Report, October 2026",
+        "url": "https://www.bankofcanada.ca/wp-content/uploads/2026/10/mpr-2026-10-28.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Bank of Canada: Tariff and other assumptions, October 2026 report",
+        "url": "https://www.bankofcanada.ca/publications/mpr/mpr-2026-10-28/tariff-assumptions/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Statistics Canada: Consumer Price Index, September 2026",
+        "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.htm",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Ratehub: Bank of Canada October 2026 rate hike",
+        "url": "https://www.ratehub.ca/blog/bank-of-canada-october-2026-rate-hike/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Altus Group: Cautious in 2026, optimistic for 2027 (Cost Guide insights)",
+        "url": "https://www.altusgroup.com/insights/caution-in-2026-optimistic-for-2027-cost-guide-insights/",
+        "accessed": "2026-11-04"
+      }
+    ],
+    "reviewBy": "2026-12-09"
+  },
+  {
+    "slug": "winnipeg-rent-prices-falling-2026",
+    "title": "Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter",
+    "metaTitle": "Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter",
+    "metaDescription": "In October 2026, Winnipeg's average one-bedroom asking rent fell to $1,319, a third monthly dip. Why updated units compete and why flooring comes first.",
+    "excerpt": "In October 2026, Winnipeg's average one-bedroom asking rent fell to $1,319, a third monthly dip. Why updated units compete and why flooring comes first.",
+    "category": "Winnipeg Market News",
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "date": "2026-11-19",
+    "updated": "2026-11-19",
+    "readMinutes": 5,
+    "hero": null,
+    "heroSrc": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-880.927c0815.webp",
+    "heroSrcSet": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-480.cf54eca8.webp 480w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-880.927c0815.webp 880w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1320.5912f5cc.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-480.4062248d.avif 480w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-880.81648252.avif 880w, /images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1320.6915a351.avif 1320w",
+    "ogImage": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x630.1df60b5c.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x675.4fa9cfa6.jpg",
+      "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x900.9822fbdf.jpg",
+      "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x1200.ff5bd4c3.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Brick apartment building in autumn with a blank for-rent sign on the lawn",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/flooring"
+    ],
+    "ctaService": "/services/flooring",
+    "ctaPrimary": "visit",
+    "cluster": "rental-buildings",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "h2",
+        "x": "The numbers"
+      },
+      {
+        "t": "p",
+        "x": "Are Winnipeg rents falling? Through October 2026, month to month, yes, by small amounts. According to [liv.rent's October 2026 Winnipeg rent report](https://liv.rent/blog/?p=69631), published October 6:"
+      },
+      {
+        "t": "li",
+        "x": "The average unfurnished one-bedroom asking rent was **$1,319**, down 0.1% month over month but still up 1.7% from a year earlier."
+      },
+      {
+        "t": "li",
+        "x": "That was the **third consecutive monthly decline**, and $34 below the July peak of $1,353."
+      },
+      {
+        "t": "li",
+        "x": "**South Winnipeg** was the most expensive area for one-bedrooms at $1,369 in [liv.rent's August report](https://liv.rent/blog/rent-reports/august-2026-winnipeg-rent-report/), while **St. Boniface** was the lowest at $1,301."
+      },
+      {
+        "t": "li",
+        "x": "Not everything fell in the October report: East Winnipeg's average two-bedroom asking rent rose about 8% from September to October, to $1,657. That was one month's move, after a dip in September, so treat it as a signal to watch and not as proof of a shortage."
+      },
+      {
+        "t": "p",
+        "x": "The broader context: [City of Winnipeg data](https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth) shows starts for all housing up 40.4% in the first seven months of 2026 and completions up 52.7%. [CMHC's 2025 rental report](https://eppd1strscr01.blob.core.windows.net/cmhcprdcontainer/sf/project/archive/housing_markets/rentalmarketreportcanadaandselectedmarkets/rental-market-report-2025-fall-en.pdf) says purpose-built rental supply grew 2.6% in the Winnipeg area in 2025."
+      },
+      {
+        "t": "h2",
+        "x": "Our view: \"available\" is not the same as \"chosen\""
+      },
+      {
+        "t": "p",
+        "x": "A flat or falling rent average can hide a split. CMHC's 2025 report says older buildings struggled to compete with newer ones that offer updated features and pricing incentives. Older units with dated finishes can sit longer, and their landlords may end up offering concessions or cutting rent to fill them."
+      },
+      {
+        "t": "p",
+        "x": "That means the decision facing many Winnipeg landlords is not \"should I cut rent?\" but \"what would it take for this unit to compete with the new building down the street?\""
+      },
+      {
+        "t": "h2",
+        "x": "Why new flooring is the first rental upgrade to consider"
+      },
+      {
+        "t": "p",
+        "x": "Heat, drafts and safety items come before any finish. After those, flooring is one of the first things a prospective tenant notices in person and in photos."
+      },
+      {
+        "t": "p",
+        "x": "Worn carpet, mismatched patches, or scratched laminate make a unit look older than it is. A professional [flooring installation service](/services/flooring) fixes that in a way tenants can see immediately, and modern products hold up for years."
+      },
+      {
+        "t": "table",
+        "head": [
+          "Option",
+          "Typical strengths",
+          "Watch-outs"
+        ],
+        "rows": [
+          [
+            "Luxury vinyl plank (LVP)",
+            "Water-resistant, durable, fast to install, looks like wood",
+            "Subfloor must be flat; quality varies by wear layer"
+          ],
+          [
+            "Laminate",
+            "Lower cost, good appearance",
+            "Less water-tolerant; swells at seams if wet"
+          ],
+          [
+            "Carpet",
+            "Low cost, warm",
+            "Shows wear quickly; often replaced every turn"
+          ],
+          [
+            "Tile",
+            "Very durable in kitchens and baths",
+            "Higher labour cost; cold underfoot"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "For many rental units, LVP strikes a good balance of durability, appearance and cost. It can also shorten future turns: instead of replacing carpet, the landlord cleans and moves on."
+      },
+      {
+        "t": "p",
+        "x": "Check what is coming up first. The Province says asbestos was used in buildings built or renovated before 1990, and Health Canada lists floor tiles among the materials, so old tile and adhesive [may need testing](/blog/asbestos-testing-before-renovating-manitoba) before anyone lifts them."
+      },
+      {
+        "t": "h2",
+        "x": "Pricing smarter"
+      },
+      {
+        "t": "p",
+        "x": "Upgrades and pricing go together. A few principles for a competitive market:"
+      },
+      {
+        "t": "li",
+        "x": "**Know the rule before you price.** In a larger building, a regulated unit's new-tenant rent may be capped, as the note below on the 2027 rules explains."
+      },
+      {
+        "t": "li",
+        "x": "**Compare with the closest comparable, not the area average.** A renovated unit in South Winnipeg competes with other renovated units, so check what renters are choosing before you set a scope."
+      },
+      {
+        "t": "li",
+        "x": "**Use upgrades to avoid concessions.** As an illustration only, not a quote: a month of free rent on a $1,319 unit costs roughly $1,300. That money could go toward flooring instead. Get a written quote to compare."
+      },
+      {
+        "t": "li",
+        "x": "**Time work to vacancies.** Flooring is easiest to install in an empty unit, so plan scopes before a lease ends."
+      },
+      {
+        "t": "h2",
+        "x": "A note on the 2027 rules"
+      },
+      {
+        "t": "p",
+        "x": "Manitoba's 2027 rent guideline is 3%, and from January 1, 2027, the exemption threshold is $2,000, so more units are covered ([Province of Manitoba](https://news.gov.mb.ca/news/?archive=&item=75138))."
+      },
+      {
+        "t": "p",
+        "x": "When a regulated unit turns over, the rule depends on the building. With four or more units in the complex, a new tenant can't be charged more than the average rent of similar units there. With three units or fewer, the landlord sets the amount."
+      },
+      {
+        "t": "p",
+        "x": "A landlord-occupied fourplex counts as three. Either way, a Notice to New Tenant is required, with a copy to the Branch within 14 days. Exempt units aren't covered by this rule."
+      },
+      {
+        "t": "p",
+        "x": "Upgrades won't lift a regulated unit past those limits, but they can still help it lease and keep a tenant. An empty unit is also the easiest time to do the work, which is another reason to complete upgrades before re-leasing, not after."
+      },
+      {
+        "t": "h2",
+        "x": "What the next few months could bring"
+      },
+      {
+        "t": "p",
+        "x": "Winter is often a slower time to lease in Winnipeg, so rents may soften before spring. That can make the next few months a good window to complete upgrades, so renovated units are ready for the spring leasing season."
+      },
+      {
+        "t": "p",
+        "x": "Watch two numbers. The first is liv.rent's monthly one-bedroom average: if it keeps falling after the three straight declines to October 2026, competition for tenants may grow. The second is your own days-on-market. If dated units are taking noticeably longer to lease than renovated ones, the cost of that vacancy is the clearest argument for upgrading."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "Falling average rents do not mean every unit must cut its price. They may mean the market is sorting units by quality. Landlords who upgrade the features tenants notice first, with flooring near the top of the list, are better placed to hold their rents while others discount."
+      },
+      {
+        "t": "h2",
+        "x": "How Bridgeland helps"
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders takes up old flooring, prepares the subfloor and installs new floors, and we quote vacant-unit turnovers, common areas and multi-unit upgrades for property managers and building owners in Winnipeg and nearby communities. Every job starts with a free on-site visit and a free written quote."
+      },
+      {
+        "t": "p",
+        "x": "**Have a unit coming vacant?** [**Book a Free On-Site Visit**](/book-online) from Bridgeland Builders and get it ready to compete."
+      },
+      {
+        "t": "p",
+        "x": "General information, not legal, tax or financial advice. Have the Manitoba Residential Tenancies Branch, an accountant or a lawyer confirm how the rules apply to your building."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Flooring installation in Winnipeg](/services/flooring) · [Winter Unit Turnover Checklist for Winnipeg Rentals](/blog/winter-unit-turnover-checklist-winnipeg)"
+      }
+    ],
+    "faqs": [],
+    "answer": "Winnipeg one-bedroom asking rents slipped for three straight months to October 2026, by small amounts, and were still up 1.7% from a year earlier. With more supply, units have to compete. Landlords whose units photograph and show better are better placed to hold rents, and flooring is one of the most visible, durable ways to get there.",
+    "sources": [
+      {
+        "label": "liv.rent: October 2026 Winnipeg rent report",
+        "url": "https://liv.rent/blog/?p=69631",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "liv.rent: August 2026 Winnipeg rent report",
+        "url": "https://liv.rent/blog/rent-reports/august-2026-winnipeg-rent-report/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "City of Winnipeg: Winnipeg leads major Canadian cities in housing growth (Aug 20, 2026)",
+        "url": "https://www.winnipeg.ca/news/2026-08-20-winnipeg-leads-major-canadian-cities-housing-growth",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "CMHC: 2025 Rental Market Report, Winnipeg section (PDF)",
+        "url": "https://eppd1strscr01.blob.core.windows.net/cmhcprdcontainer/sf/project/archive/housing_markets/rentalmarketreportcanadaandselectedmarkets/rental-market-report-2025-fall-en.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Province of Manitoba: Historic Expansion of Rent Control Effective Jan. 1, 2027 (Sept 3, 2026)",
+        "url": "https://news.gov.mb.ca/news/?archive=&item=75138",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: The Residential Tenancies Act",
+        "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/r119.php",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Residential Tenancies Branch guidebook: rent increases for a new tenant",
+        "url": "https://www.gov.mb.ca/cca/rtb/ot/gbook/s13rentreg_rentincreasenewt7.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Workplace Safety and Health: asbestos FAQs",
+        "url": "https://www.gov.mb.ca/labour/safety/faq/asbestos.html",
+        "accessed": "2026-11-05"
+      },
+      {
+        "label": "Health Canada: health risks of asbestos",
+        "url": "https://www.canada.ca/en/health-canada/services/air-quality/indoor-air-contaminants/health-risks-asbestos.html",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2026-12-10"
+  },
+  {
     "slug": "pre-listing-renovations-winnipeg",
     "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
     "metaTitle": "Pre-Listing Renovations in Winnipeg: What to Fix First",
@@ -1749,7 +2719,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "To sort the ranked list into what to do now and what can wait, use the three budget buckets: protect the asset, earn revenue and nice to have."
+        "x": "To sort the ranked list into what to do now and what can wait, use the [three budget buckets](/blog/bank-of-canada-rate-hike-renovation-budgets): protect the asset, earn revenue and nice to have."
       },
       {
         "t": "h2",

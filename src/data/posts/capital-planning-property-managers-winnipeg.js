@@ -137,7 +137,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "To sort the ranked list into what to do now and what can wait, use the three budget buckets: protect the asset, earn revenue and nice to have."
+      "x": "To sort the ranked list into what to do now and what can wait, use the [three budget buckets](/blog/bank-of-canada-rate-hike-renovation-budgets): protect the asset, earn revenue and nice to have."
     },
     {
       "t": "h2",
@@ -266,6 +266,62 @@ export default {
   ],
   "related": [
     {
+      "slug": "winter-unit-turnover-checklist-winnipeg",
+      "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+      "excerpt": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+      "category": "Landlords & Property Managers",
+      "date": "2026-11-19",
+      "readMinutes": 3,
+      "image": {
+        "base": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "e5763651",
+          "31f92b81",
+          "d0942f83"
+        ],
+        "avif": [
+          "6ace35ea",
+          "6c6e1c9b",
+          "6a482139"
+        ],
+        "main": 1
+      },
+      "thumbnail": true
+    },
+    {
+      "slug": "manitoba-rent-increase-guideline-2027",
+      "title": "Manitoba Rent Increase Guideline 2027: A Landlord's Guide",
+      "excerpt": "Manitoba's 2027 rent guideline is 3% and the exemption rises to $2,000. Which renovations still pay now that capital pass-through was cut by 40%.",
+      "category": "Landlords & Property Managers",
+      "date": "2026-11-19",
+      "readMinutes": 6,
+      "image": {
+        "base": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "c1b743ab",
+          "00c30be1",
+          "3f007b2b"
+        ],
+        "avif": [
+          "381d3e94",
+          "74f6045e",
+          "df5bb90c"
+        ],
+        "main": 1
+      },
+      "thumbnail": true
+    },
+    {
       "slug": "tenant-improvement-allowance-winnipeg",
       "title": "Tenant Improvement Allowances in Winnipeg: Who Pays for What",
       "excerpt": "How tenant improvement allowances work in Winnipeg office, retail and medical leases, three common TI structures and what to settle before signing.",
@@ -292,62 +348,6 @@ export default {
         "main": 1
       },
       "thumbnail": true
-    },
-    {
-      "slug": "occupancy-permit-change-of-use-winnipeg",
-      "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
-      "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
-      "category": "Commercial",
-      "date": "2026-10-15",
-      "readMinutes": 11,
-      "image": {
-        "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "1d8c089e",
-          "ef758048",
-          "68fdd292"
-        ],
-        "avif": [
-          "c4d497a2",
-          "ba38b8d1",
-          "3c392686"
-        ],
-        "main": 1
-      },
-      "titleCard": true
-    },
-    {
-      "slug": "clinic-renovation-permits-winnipeg",
-      "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
-      "excerpt": "What a medical, dental or physiotherapy clinic renovation in Winnipeg needs before work starts and before patients come back.",
-      "category": "Commercial",
-      "date": "2026-10-13",
-      "readMinutes": 10,
-      "image": {
-        "base": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "3fb04080",
-          "6b2a1b51",
-          "0e8b8a5a"
-        ],
-        "avif": [
-          "18450584",
-          "e03ed2b1",
-          "75e30f7c"
-        ],
-        "main": 1
-      },
-      "titleCard": true
     }
   ]
 };

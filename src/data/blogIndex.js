@@ -10,6 +10,147 @@
 /** Published posts only (blog-raw status "published"), newest first, card and ranking fields. */
 export const BLOG_CARDS = [
   {
+    "slug": "winter-unit-turnover-checklist-winnipeg",
+    "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+    "excerpt": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+    "category": "Landlords & Property Managers",
+    "date": "2026-11-19",
+    "readMinutes": 3,
+    "image": {
+      "base": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "e5763651",
+        "31f92b81",
+        "d0942f83"
+      ],
+      "avif": [
+        "6ace35ea",
+        "6c6e1c9b",
+        "6a482139"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Landlords & Property Managers"
+    ],
+    "services": [
+      "/services/commercial-renovations",
+      "/services/flooring"
+    ],
+    "cluster": "rental-buildings"
+  },
+  {
+    "slug": "manitoba-rent-increase-guideline-2027",
+    "title": "Manitoba Rent Increase Guideline 2027: A Landlord's Guide",
+    "excerpt": "Manitoba's 2027 rent guideline is 3% and the exemption rises to $2,000. Which renovations still pay now that capital pass-through was cut by 40%.",
+    "category": "Landlords & Property Managers",
+    "date": "2026-11-19",
+    "readMinutes": 6,
+    "image": {
+      "base": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "c1b743ab",
+        "00c30be1",
+        "3f007b2b"
+      ],
+      "avif": [
+        "381d3e94",
+        "74f6045e",
+        "df5bb90c"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Landlords & Property Managers"
+    ],
+    "services": [
+      "/services/commercial-renovations"
+    ],
+    "cluster": "rental-buildings"
+  },
+  {
+    "slug": "bank-of-canada-rate-hike-renovation-budgets",
+    "title": "Bank of Canada Rate Hike: What 2.50% Means for Renovations",
+    "excerpt": "The Bank of Canada raised rates to 2.50% on Oct 28, 2026, its first hike since July 2023. What it means for Winnipeg renovation budgets and what to do now.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-19",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "3d9c756e",
+        "407886aa",
+        "b4e1244f"
+      ],
+      "avif": [
+        "872cb81c",
+        "d1a82b3d",
+        "1842c076"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "services": [
+      "/services/commercial-renovations"
+    ],
+    "cluster": "commercial-costs"
+  },
+  {
+    "slug": "winnipeg-rent-prices-falling-2026",
+    "title": "Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter",
+    "excerpt": "In October 2026, Winnipeg's average one-bedroom asking rent fell to $1,319, a third monthly dip. Why updated units compete and why flooring comes first.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-19",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "cf54eca8",
+        "927c0815",
+        "5912f5cc"
+      ],
+      "avif": [
+        "4062248d",
+        "81648252",
+        "6915a351"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "services": [
+      "/services/flooring"
+    ],
+    "cluster": "rental-buildings"
+  },
+  {
     "slug": "pre-listing-renovations-winnipeg",
     "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
     "excerpt": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",

@@ -31,6 +31,130 @@ export const BLOG_PAGE_SIZE = 12;
 /** The newest published posts (blog-raw status "published"), newest first, as cards. */
 export const BLOG_LIST = [
   {
+    "slug": "winter-unit-turnover-checklist-winnipeg",
+    "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+    "excerpt": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+    "category": "Landlords & Property Managers",
+    "date": "2026-11-19",
+    "readMinutes": 3,
+    "image": {
+      "base": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "e5763651",
+        "31f92b81",
+        "d0942f83"
+      ],
+      "avif": [
+        "6ace35ea",
+        "6c6e1c9b",
+        "6a482139"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Landlords & Property Managers"
+    ]
+  },
+  {
+    "slug": "manitoba-rent-increase-guideline-2027",
+    "title": "Manitoba Rent Increase Guideline 2027: A Landlord's Guide",
+    "excerpt": "Manitoba's 2027 rent guideline is 3% and the exemption rises to $2,000. Which renovations still pay now that capital pass-through was cut by 40%.",
+    "category": "Landlords & Property Managers",
+    "date": "2026-11-19",
+    "readMinutes": 6,
+    "image": {
+      "base": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "c1b743ab",
+        "00c30be1",
+        "3f007b2b"
+      ],
+      "avif": [
+        "381d3e94",
+        "74f6045e",
+        "df5bb90c"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Landlords & Property Managers"
+    ]
+  },
+  {
+    "slug": "bank-of-canada-rate-hike-renovation-budgets",
+    "title": "Bank of Canada Rate Hike: What 2.50% Means for Renovations",
+    "excerpt": "The Bank of Canada raised rates to 2.50% on Oct 28, 2026, its first hike since July 2023. What it means for Winnipeg renovation budgets and what to do now.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-19",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "3d9c756e",
+        "407886aa",
+        "b4e1244f"
+      ],
+      "avif": [
+        "872cb81c",
+        "d1a82b3d",
+        "1842c076"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ]
+  },
+  {
+    "slug": "winnipeg-rent-prices-falling-2026",
+    "title": "Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter",
+    "excerpt": "In October 2026, Winnipeg's average one-bedroom asking rent fell to $1,319, a third monthly dip. Why updated units compete and why flooring comes first.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-19",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "cf54eca8",
+        "927c0815",
+        "5912f5cc"
+      ],
+      "avif": [
+        "4062248d",
+        "81648252",
+        "6915a351"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ]
+  },
+  {
     "slug": "pre-listing-renovations-winnipeg",
     "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
     "excerpt": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
@@ -310,138 +434,27 @@ export const BLOG_LIST = [
       "Money & Rebates",
       "Permits & Planning"
     ]
-  },
-  {
-    "slug": "asbestos-testing-before-renovating-manitoba",
-    "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
-    "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
-    "category": "Older Homes",
-    "date": "2026-10-15",
-    "readMinutes": 10,
-    "image": {
-      "base": "/images/blog/asbestos-testing-before-renovating/title-card-asbestos-testing-before",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "647701ea",
-        "e82e0b35",
-        "d62a9906"
-      ],
-      "avif": [
-        "a81bb4f7",
-        "a3e4bb73",
-        "4b20838b"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Older Homes"
-    ]
-  },
-  {
-    "slug": "builders-lien-holdback-manitoba",
-    "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor",
-    "excerpt": "A plain-language guide to Manitoba's builders' lien holdback for homeowners: how much to keep back, for how long, when a lien can be registered, and how prompt payment fits in, checked against the Act.",
-    "category": "Hiring a Contractor",
-    "date": "2026-10-15",
-    "readMinutes": 11,
-    "image": {
-      "base": "/images/blog/builders-lien-holdback-manitoba/title-card-builders-liens-and-the-7",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "1b473aa7",
-        "73253ecf",
-        "4cc70a86"
-      ],
-      "avif": [
-        "ee61434d",
-        "20180f2d",
-        "7a91bd95"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Hiring a Contractor"
-    ]
-  },
-  {
-    "slug": "check-permit-history-winnipeg-house",
-    "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
-    "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
-    "category": "Permits & Planning",
-    "date": "2026-10-15",
-    "readMinutes": 11,
-    "image": {
-      "base": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "dfc78763",
-        "1189cd90",
-        "d00db2e5"
-      ],
-      "avif": [
-        "e09156f1",
-        "a5b2e756",
-        "574fa93a"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Permits & Planning",
-      "Basements & Suites",
-      "Older Homes"
-    ]
-  },
-  {
-    "slug": "occupancy-permit-change-of-use-winnipeg",
-    "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
-    "excerpt": "A plain-language guide to Winnipeg building occupancy permits for tenants and landlords: when one is needed, the 2022 change-of-tenant rule, change of use, and the City records to check before you sign a lease.",
-    "category": "Commercial",
-    "date": "2026-10-15",
-    "readMinutes": 11,
-    "image": {
-      "base": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "1d8c089e",
-        "ef758048",
-        "68fdd292"
-      ],
-      "avif": [
-        "c4d497a2",
-        "ba38b8d1",
-        "3c392686"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Commercial",
-      "Permits & Planning"
-    ]
   }
 ];
 
 /** Every other published post, newest first, as a title link. */
 export const BLOG_TITLES = [
+  {
+    "slug": "asbestos-testing-before-renovating-manitoba",
+    "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules"
+  },
+  {
+    "slug": "builders-lien-holdback-manitoba",
+    "title": "Builders' Liens and the 7.5% Holdback in Manitoba: A Homeowner's Guide to Paying a Contractor"
+  },
+  {
+    "slug": "check-permit-history-winnipeg-house",
+    "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty"
+  },
+  {
+    "slug": "occupancy-permit-change-of-use-winnipeg",
+    "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease"
+  },
   {
     "slug": "removing-a-load-bearing-wall-winnipeg",
     "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams"

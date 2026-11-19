@@ -9,6 +9,34 @@
 /** The newest published posts (blog-raw status "published"), newest first. */
 export const BLOG_NODE_POSTS = [
   {
+    "slug": "winter-unit-turnover-checklist-winnipeg",
+    "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
+    "metaDescription": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
+    "date": "2026-11-19",
+    "ogImage": "/images/blog/winter-unit-turnover-checklist-winnipeg/winter-unit-turnover-checklist-1200x630.2755e97d.jpg"
+  },
+  {
+    "slug": "manitoba-rent-increase-guideline-2027",
+    "title": "Manitoba Rent Increase Guideline 2027: A Landlord's Guide",
+    "metaDescription": "Manitoba's 2027 rent guideline is 3% and the exemption rises to $2,000. Which renovations still pay now that capital pass-through was cut by 40%.",
+    "date": "2026-11-19",
+    "ogImage": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline-1200x630.cb1eed5b.jpg"
+  },
+  {
+    "slug": "bank-of-canada-rate-hike-renovation-budgets",
+    "title": "Bank of Canada Rate Hike: What 2.50% Means for Renovations",
+    "metaDescription": "The Bank of Canada raised rates to 2.50% on Oct 28, 2026, its first hike since July 2023. What it means for Winnipeg renovation budgets and what to do now.",
+    "date": "2026-11-19",
+    "ogImage": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50-1200x630.1c559f16.jpg"
+  },
+  {
+    "slug": "winnipeg-rent-prices-falling-2026",
+    "title": "Winnipeg Rents Are Falling: Price Smarter, Upgrade Smarter",
+    "metaDescription": "In October 2026, Winnipeg's average one-bedroom asking rent fell to $1,319, a third monthly dip. Why updated units compete and why flooring comes first.",
+    "date": "2026-11-19",
+    "ogImage": "/images/blog/winnipeg-rent-prices-falling-2026/winnipeg-rents-are-falling-price-1200x630.1df60b5c.jpg"
+  },
+  {
     "slug": "pre-listing-renovations-winnipeg",
     "title": "Pre-Listing Renovations in Winnipeg: What to Fix Before You Sell",
     "metaDescription": "Selling in Winnipeg? See which pre-listing renovations buyers notice, what inspectors flag, and what to skip before you list your home.",
@@ -119,33 +147,5 @@ export const BLOG_NODE_POSTS = [
     "metaDescription": "There’s no official average renovation cost in Canada. What Statistics Canada data does show, why per-square-foot prices mislead, and our Winnipeg ranges.",
     "date": "2026-10-14",
     "ogImage": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x630.2525769f.jpg"
-  },
-  {
-    "slug": "basement-development-permits-winnipeg",
-    "title": "Basement Development Permits in Winnipeg: How to Apply",
-    "metaDescription": "What Winnipeg requires to finish a basement: when you need a permit, ceiling heights, bedroom windows, insulation, alarms, drawings and inspections.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/basement-development-permits-winnipeg/title-card-basement-development-1200x630.e8c47488.jpg"
-  },
-  {
-    "slug": "basement-flood-protection-winnipeg",
-    "title": "Basement Flooding in Winnipeg: Backwater Valves, Sump Pits and Permits",
-    "metaDescription": "How backwater valves and sump pits protect Winnipeg basements, which homes must have them, the permits involved, and why the City subsidy no longer exists.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/basement-flood-protection-winnipeg/title-card-basement-flooding-1200x630.bca545a6.jpg"
-  },
-  {
-    "slug": "clay-soil-basement-cracks-winnipeg",
-    "title": "Clay Soil and Basement Cracks in Winnipeg: What’s Normal",
-    "metaDescription": "Why Winnipeg’s clay moves foundations, which basement cracks to watch, when to call a structural engineer, and how to finish a basement on moving soil.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/clay-soil-basement-cracks-winnipeg/title-card-clay-soil-and-basement-1200x630.1ca49e3e.jpg"
-  },
-  {
-    "slug": "clinic-renovation-permits-winnipeg",
-    "title": "Clinic Renovation Permits in Winnipeg: What to Plan For",
-    "metaDescription": "Renovating a medical, dental or physio clinic in Winnipeg? The permits, sealed drawings, X-ray approvals, accessibility rules and occupancy steps to plan.",
-    "date": "2026-10-13",
-    "ogImage": "/images/blog/clinic-renovation-permits-winnipeg/title-card-clinic-renovation-permits-1200x630.bc757f21.jpg"
   }
 ];
