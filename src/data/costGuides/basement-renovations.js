@@ -5,6 +5,8 @@
 // basements (estimator.bridgelandbuilders.com/api/services, read 2026-10-13).
 // The estimator publishes min/max per size tier and per option but not how it
 // combines them, so this page never adds ranges together or quotes a total.
+// 2026-11-19: the owner set the bathroom ($10,000–$14,000) and carpet
+// ($2,500–$4,000) ranges here directly; the estimator still had the old ones.
 // Timeline and "what's included" come from the basement service page
 // (src/data/services/basement-renovations.js). Code figures (bedroom window,
 // ceiling height, backwater valve, bathroom fan) are from the City of
@@ -29,7 +31,7 @@ export default {
       'Basement development costs in Winnipeg: starting ranges from $25,000 to $150,000 by size in our estimator, plus what a bathroom and egress window add.',
     primaryKeyword: 'basement renovation cost Winnipeg',
     published: '2026-10-13',
-    updated: '2026-10-15',
+    updated: '2026-11-19',
   },
 
   eyebrow: 'Basement Development Cost',
@@ -63,8 +65,8 @@ export default {
       head: ['Option', 'Choice', 'Estimator range'],
       rows: [
         ['Plumbing', 'New plumbing needed', '$1,500–$2,750'],
-        ['Bathroom', 'Adding a bathroom', '$5,000–$7,500'],
-        ['Flooring', 'Carpet', '$1,000–$2,000'],
+        ['Bathroom', 'Adding a bathroom', '$10,000–$14,000'],
+        ['Flooring', 'Carpet', '$2,500–$4,000'],
         ['Flooring', 'Laminate', '$1,500–$2,500'],
         ['Flooring', 'Ceramic or porcelain tile', '$2,500–$3,500'],
         ['Flooring', 'Hardwood', '$3,000–$4,000'],
@@ -90,7 +92,7 @@ export default {
     },
     {
       title: 'A bathroom and new plumbing',
-      text: 'Adding a bathroom runs $5,000–$7,500 in the estimator and new plumbing $1,500–$2,750. The City requires a backwater valve to protect new plumbing branches installed below grade, and plumbing work needs its own permit.',
+      text: 'Adding a bathroom runs $10,000–$14,000 in the estimator and new plumbing $1,500–$2,750. The City requires a backwater valve to protect new plumbing branches installed below grade, and plumbing work needs its own permit.',
     },
     {
       title: 'Bedrooms and egress windows',
@@ -102,7 +104,7 @@ export default {
     },
     {
       title: 'Insulation, flooring and extras',
-      text: 'Foundation walls must be insulated to the City’s minimum values for a heated space. Flooring runs from carpet at $1,000–$2,000 to hardwood at $3,000–$4,000 in the estimator, and soundproofing is $1,000–$2,000.',
+      text: 'Foundation walls must be insulated to the City’s minimum values for a heated space. Flooring in the estimator runs $1,500–$2,500 for laminate, $2,500–$4,000 for carpet and $3,000–$4,000 for hardwood, and soundproofing is $1,000–$2,000.',
     },
   ],
 
@@ -125,7 +127,7 @@ export default {
       blocks: [
         {
           t: 'p',
-          x: 'In our estimator, adding a basement bathroom runs $5,000–$7,500, with new plumbing at $1,500–$2,750. What changes the real number is the drain: if there isn’t one where the bathroom needs to go, the concrete is broken and the drain re-run, or an up-flush system is used. We tell you which your basement needs.',
+          x: 'In our estimator, adding a basement bathroom runs $10,000–$14,000, with new plumbing at $1,500–$2,750. What changes the real number is the drain: if there isn’t one where the bathroom needs to go, the concrete is broken and the drain re-run, or an up-flush system is used. We tell you which your basement needs.',
         },
         {
           t: 'p',
