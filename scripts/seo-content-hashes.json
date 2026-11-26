@@ -8,7 +8,7 @@
     "updated": "2026-10-23"
   },
   "/blog": {
-    "hash": "210b0b56db8256fa",
+    "hash": "ed9fbd5864ef9689",
     "updated": "2026-11-05"
   },
   "/blog/asbestos-testing-before-renovating-manitoba": {
@@ -16,7 +16,7 @@
     "updated": "2026-10-15"
   },
   "/blog/bank-of-canada-rate-hike-renovation-budgets": {
-    "hash": "e7669a0b47bfdb74",
+    "hash": "2b1291c46b20d844",
     "updated": "2026-11-19"
   },
   "/blog/basement-development-permits-winnipeg": {
@@ -36,7 +36,7 @@
     "updated": "2026-10-15"
   },
   "/blog/capital-planning-property-managers-winnipeg": {
-    "hash": "5aa6e08b628055c9",
+    "hash": "a70368003cf2caf2",
     "updated": "2026-11-05"
   },
   "/blog/check-permit-history-winnipeg-house": {
@@ -54,6 +54,10 @@
   "/blog/commercial-interior-demolition-winnipeg": {
     "hash": "48d2642fe25c65b4",
     "updated": "2026-11-05"
+  },
+  "/blog/efficiency-manitoba-commercial-rebates": {
+    "hash": "ff01c9ca0b94f8bd",
+    "updated": "2026-11-26"
   },
   "/blog/ensuite-renovation-winnipeg": {
     "hash": "c270bc4d56ac8a5c",
@@ -115,8 +119,12 @@
     "hash": "8e2b807f0374de55",
     "updated": "2026-11-05"
   },
+  "/blog/manitoba-rent-control-threshold-2000": {
+    "hash": "e6df00f58d857544",
+    "updated": "2026-11-26"
+  },
   "/blog/manitoba-rent-increase-guideline-2027": {
-    "hash": "340b3a112b18c4c9",
+    "hash": "b923ec92cd58366e",
     "updated": "2026-11-19"
   },
   "/blog/occupancy-permit-change-of-use-winnipeg": {
@@ -150,6 +158,10 @@
   "/blog/renovating-a-character-home-in-winnipeg": {
     "hash": "d225d1a9982c8fb7",
     "updated": "2026-10-15"
+  },
+  "/blog/renovation-capital-vs-current-expense-canada": {
+    "hash": "db69abc5d1538d6d",
+    "updated": "2026-11-26"
   },
   "/blog/restaurant-renovation-permits-winnipeg": {
     "hash": "3825e24bac936f28",
@@ -196,8 +208,12 @@
     "updated": "2026-10-15"
   },
   "/blog/window-condensation-winnipeg-winter": {
-    "hash": "e8b10f87306d5025",
+    "hash": "7fc1875ce59f7bfd",
     "updated": "2026-10-15"
+  },
+  "/blog/winnipeg-construction-costs-2026": {
+    "hash": "1bc20c4cfa122f53",
+    "updated": "2026-11-26"
   },
   "/blog/winnipeg-housing-market-september-2026": {
     "hash": "9e04ba1c2e747356",
@@ -212,11 +228,11 @@
     "updated": "2026-10-13"
   },
   "/blog/winnipeg-rent-prices-falling-2026": {
-    "hash": "cf67b85e957763f4",
+    "hash": "d7cf13dc3f3b283a",
     "updated": "2026-11-19"
   },
   "/blog/winter-unit-turnover-checklist-winnipeg": {
-    "hash": "c611e607c1f3a790",
+    "hash": "6f609d4adc5d82d2",
     "updated": "2026-11-19"
   },
   "/book-online": {

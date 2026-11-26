@@ -292,6 +292,34 @@ export default {
       "thumbnail": true
     },
     {
+      "slug": "manitoba-rent-control-threshold-2000",
+      "title": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+      "excerpt": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+      "category": "Landlords & Property Managers",
+      "date": "2026-11-26",
+      "readMinutes": 6,
+      "image": {
+        "base": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "9867f566",
+          "dcfebaa0",
+          "8b284eea"
+        ],
+        "avif": [
+          "e4ee3a68",
+          "a69ae0be",
+          "f86dbf7a"
+        ],
+        "main": 1
+      },
+      "thumbnail": true
+    },
+    {
       "slug": "asbestos-testing-before-renovating-manitoba",
       "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
       "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
@@ -318,34 +346,6 @@ export default {
         "main": 1
       },
       "titleCard": true
-    },
-    {
-      "slug": "manitoba-rent-increase-guideline-2027",
-      "title": "Manitoba Rent Increase Guideline 2027: A Landlord's Guide",
-      "excerpt": "Manitoba's 2027 rent guideline is 3% and the exemption rises to $2,000. Which renovations still pay now that capital pass-through was cut by 40%.",
-      "category": "Landlords & Property Managers",
-      "date": "2026-11-19",
-      "readMinutes": 6,
-      "image": {
-        "base": "/images/blog/manitoba-rent-increase-guideline-2027/manitoba-rent-increase-guideline",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "c1b743ab",
-          "00c30be1",
-          "3f007b2b"
-        ],
-        "avif": [
-          "381d3e94",
-          "74f6045e",
-          "df5bb90c"
-        ],
-        "main": 1
-      },
-      "thumbnail": true
     }
   ]
 };

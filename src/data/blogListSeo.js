@@ -9,6 +9,34 @@
 /** The newest published posts (blog-raw status "published"), newest first. */
 export const BLOG_NODE_POSTS = [
   {
+    "slug": "efficiency-manitoba-commercial-rebates",
+    "title": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
+    "metaDescription": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
+    "date": "2026-11-26",
+    "ogImage": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x630.fee273a5.jpg"
+  },
+  {
+    "slug": "manitoba-rent-control-threshold-2000",
+    "title": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+    "metaDescription": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+    "date": "2026-11-26",
+    "ogImage": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x630.2f97c584.jpg"
+  },
+  {
+    "slug": "winnipeg-construction-costs-2026",
+    "title": "Tariffs, Metals and Labour: What's Driving Winnipeg Construction Costs in 2026",
+    "metaDescription": "Winnipeg construction costs rose 4% or more in 2025, led by metals, Altus Group says. Which renovation items carry tariff risk.",
+    "date": "2026-11-26",
+    "ogImage": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x630.6a4f02f8.jpg"
+  },
+  {
+    "slug": "renovation-capital-vs-current-expense-canada",
+    "title": "Renovations: Capital vs Current Expense for Canadian Owners",
+    "metaDescription": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+    "date": "2026-11-26",
+    "ogImage": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x630.6b3e21b4.jpg"
+  },
+  {
     "slug": "winter-unit-turnover-checklist-winnipeg",
     "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
     "metaDescription": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
@@ -119,33 +147,5 @@ export const BLOG_NODE_POSTS = [
     "metaDescription": "Check a Winnipeg home’s permit history: the City’s free permit search, open permits and orders, what each status means, and how Permit Amnesty works.",
     "date": "2026-10-15",
     "ogImage": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes-1200x630.8eb4b6d0.jpg"
-  },
-  {
-    "slug": "occupancy-permit-change-of-use-winnipeg",
-    "title": "Occupancy Permits and Change of Use in Winnipeg: What to Check Before You Lease",
-    "metaDescription": "When a Winnipeg commercial space needs an occupancy permit, when a new tenant doesn't, what counts as a change of use, and what to check before you lease.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/occupancy-permit-change-of-use-winnipeg/title-card-occupancy-permits-1200x630.d6f1bcd2.jpg"
-  },
-  {
-    "slug": "removing-a-load-bearing-wall-winnipeg",
-    "title": "Removing a Load-Bearing Wall in Winnipeg: Permits, Drawings and Beams",
-    "metaDescription": "Removing a load-bearing wall in Winnipeg: when the City wants structural or engineered drawings, why LVL beams need an engineer, and what gets inspected.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/removing-a-load-bearing-wall-winnipeg/title-card-removing-a-load-bearing-1200x630.1bd584b1.jpg"
-  },
-  {
-    "slug": "window-condensation-winnipeg-winter",
-    "title": "Window Condensation in Winter: Humidity, Frost and Failed Seals in Winnipeg",
-    "metaDescription": "Why windows frost up in a Winnipeg winter, NRCan's humidity limits from 0°C to −40°C, what fog between the panes means, and when to replace windows.",
-    "date": "2026-10-15",
-    "ogImage": "/images/blog/window-condensation-winnipeg-winter/title-card-window-condensation-1200x630.a5ce35d5.jpg"
-  },
-  {
-    "slug": "home-renovation-cost-canada",
-    "title": "How Much Does a Home Renovation Cost in Canada?",
-    "metaDescription": "There’s no official average renovation cost in Canada. What Statistics Canada data does show, why per-square-foot prices mislead, and our Winnipeg ranges.",
-    "date": "2026-10-14",
-    "ogImage": "/images/blog/home-renovation-cost-canada/title-card-how-much-does-a-home-1200x630.2525769f.jpg"
   }
 ];

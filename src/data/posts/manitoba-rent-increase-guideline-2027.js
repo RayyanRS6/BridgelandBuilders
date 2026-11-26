@@ -217,7 +217,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Related reading:** [Commercial property renovation](/services/commercial-renovations) · [Secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg)"
+      "x": "**Related reading:** [Commercial property renovation](/services/commercial-renovations) · [Secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) · [Manitoba's $2,000 Rent Control Threshold: What Changes](/blog/manitoba-rent-control-threshold-2000)"
     }
   ],
   "faqs": [],
@@ -334,6 +334,34 @@ export default {
       "thumbnail": true
     },
     {
+      "slug": "manitoba-rent-control-threshold-2000",
+      "title": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+      "excerpt": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+      "category": "Landlords & Property Managers",
+      "date": "2026-11-26",
+      "readMinutes": 6,
+      "image": {
+        "base": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "9867f566",
+          "dcfebaa0",
+          "8b284eea"
+        ],
+        "avif": [
+          "e4ee3a68",
+          "a69ae0be",
+          "f86dbf7a"
+        ],
+        "main": 1
+      },
+      "thumbnail": true
+    },
+    {
       "slug": "capital-planning-property-managers-winnipeg",
       "title": "Data-Driven Capital Planning: How Winnipeg Property Managers Can Spend Smarter",
       "excerpt": "Your work orders, complaints and turnover records show where capital spending saves most. How Winnipeg property managers build plans owners approve.",
@@ -356,34 +384,6 @@ export default {
           "913e072c",
           "4c930c9a",
           "c15f084c"
-        ],
-        "main": 1
-      },
-      "thumbnail": true
-    },
-    {
-      "slug": "bank-of-canada-rate-hike-renovation-budgets",
-      "title": "Bank of Canada Rate Hike: What 2.50% Means for Renovations",
-      "excerpt": "The Bank of Canada raised rates to 2.50% on Oct 28, 2026, its first hike since July 2023. What it means for Winnipeg renovation budgets and what to do now.",
-      "category": "Winnipeg Market News",
-      "date": "2026-11-19",
-      "readMinutes": 5,
-      "image": {
-        "base": "/images/blog/bank-of-canada-rate-hike-renovation/bank-of-canada-rate-hike-what-2-50",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "3d9c756e",
-          "407886aa",
-          "b4e1244f"
-        ],
-        "avif": [
-          "872cb81c",
-          "d1a82b3d",
-          "1842c076"
         ],
         "main": 1
       },

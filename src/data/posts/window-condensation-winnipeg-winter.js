@@ -348,6 +348,34 @@ export default {
       "titleCard": true
     },
     {
+      "slug": "efficiency-manitoba-commercial-rebates",
+      "title": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
+      "excerpt": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
+      "category": "Money & Rebates",
+      "date": "2026-11-26",
+      "readMinutes": 5,
+      "image": {
+        "base": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "e945bac0",
+          "1d10ae70",
+          "a0b2a03d"
+        ],
+        "avif": [
+          "543c1373",
+          "b2998267",
+          "5926283d"
+        ],
+        "main": 1
+      },
+      "thumbnail": true
+    },
+    {
       "slug": "asbestos-testing-before-renovating-manitoba",
       "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
       "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",
@@ -370,34 +398,6 @@ export default {
           "a81bb4f7",
           "a3e4bb73",
           "4b20838b"
-        ],
-        "main": 1
-      },
-      "titleCard": true
-    },
-    {
-      "slug": "check-permit-history-winnipeg-house",
-      "title": "Checking a Winnipeg Home’s Permit History: Open Permits, Unpermitted Work and Permit Amnesty",
-      "excerpt": "How to look up a Winnipeg house’s permits, find open permits and orders before you buy or sell, and bring unpermitted work into compliance through the City’s Permit Amnesty program.",
-      "category": "Permits & Planning",
-      "date": "2026-10-15",
-      "readMinutes": 11,
-      "image": {
-        "base": "/images/blog/check-permit-history-winnipeg-house/title-card-checking-a-winnipeg-homes",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "dfc78763",
-          "1189cd90",
-          "d00db2e5"
-        ],
-        "avif": [
-          "e09156f1",
-          "a5b2e756",
-          "574fa93a"
         ],
         "main": 1
       },

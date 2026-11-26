@@ -237,7 +237,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Related reading:** [Commercial renovations for property managers](/services/commercial-renovations) · [Commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)"
+      "x": "**Related reading:** [Commercial renovations for property managers](/services/commercial-renovations) · [Commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value) · [Renovations: Capital vs Current Expense for Canadian Owners](/blog/renovation-capital-vs-current-expense-canada)"
     }
   ],
   "faqs": [],
@@ -322,28 +322,28 @@ export default {
       "thumbnail": true
     },
     {
-      "slug": "tenant-improvement-allowance-winnipeg",
-      "title": "Tenant Improvement Allowances in Winnipeg: Who Pays for What",
-      "excerpt": "How tenant improvement allowances work in Winnipeg office, retail and medical leases, three common TI structures and what to settle before signing.",
-      "category": "Commercial",
-      "date": "2026-11-05",
-      "readMinutes": 4,
+      "slug": "manitoba-rent-control-threshold-2000",
+      "title": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+      "excerpt": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+      "category": "Landlords & Property Managers",
+      "date": "2026-11-26",
+      "readMinutes": 6,
       "image": {
-        "base": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances",
+        "base": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control",
         "widths": [
           480,
           880,
           1320
         ],
         "webp": [
-          "9a2f42de",
-          "ffbce5ca",
-          "2306d93f"
+          "9867f566",
+          "dcfebaa0",
+          "8b284eea"
         ],
         "avif": [
-          "865be3ce",
-          "2bc2458f",
-          "5550e9c6"
+          "e4ee3a68",
+          "a69ae0be",
+          "f86dbf7a"
         ],
         "main": 1
       },

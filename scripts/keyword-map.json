@@ -976,7 +976,7 @@
       "note": "Drive piece A07, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/winnipeg-construction-costs-2026": {
-      "status": "planned",
+      "status": "live",
       "primary": ["Winnipeg construction costs 2026"],
       "secondary": [
         "tariffs construction costs Canada",
@@ -1203,7 +1203,7 @@
       "note": "Drive piece A29, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/manitoba-rent-control-threshold-2000": {
-      "status": "planned",
+      "status": "live",
       "primary": ["Manitoba rent control threshold $2,000"],
       "secondary": [
         "rent regulation exemption Manitoba 2027",
@@ -1447,7 +1447,7 @@
       "note": "Drive piece B22, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/efficiency-manitoba-commercial-rebates": {
-      "status": "planned",
+      "status": "live",
       "primary": ["efficiency Manitoba commercial rebates"],
       "secondary": [
         "energy efficient commercial renovations",
@@ -1479,7 +1479,7 @@
       "note": "Drive piece B25, imported 2026-11-05; keywords from the file, validate volume."
     },
     "/blog/renovation-capital-vs-current-expense-canada": {
-      "status": "planned",
+      "status": "live",
       "primary": ["renovation capital expense vs current expense"],
       "secondary": [
         "are renovations tax deductible for rental property",

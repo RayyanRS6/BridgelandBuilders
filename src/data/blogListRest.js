@@ -7,6 +7,132 @@
 /** The published posts after BLOG_LIST, newest first, as cards. */
 export const BLOG_REST = [
   {
+    "slug": "tenant-improvement-allowance-winnipeg",
+    "title": "Tenant Improvement Allowances in Winnipeg: Who Pays for What",
+    "excerpt": "How tenant improvement allowances work in Winnipeg office, retail and medical leases, three common TI structures and what to settle before signing.",
+    "category": "Commercial",
+    "date": "2026-11-05",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "9a2f42de",
+        "ffbce5ca",
+        "2306d93f"
+      ],
+      "avif": [
+        "865be3ce",
+        "2bc2458f",
+        "5550e9c6"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Commercial"
+    ]
+  },
+  {
+    "slug": "commercial-interior-demolition-winnipeg",
+    "title": "Commercial Interior Demolition: Step One in Repositioning",
+    "excerpt": "From vacant retail units to Class B office floors, Winnipeg repositioning often starts with commercial interior demolition. How to plan a strip-out.",
+    "category": "Commercial",
+    "date": "2026-11-05",
+    "readMinutes": 6,
+    "image": {
+      "base": "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "3b109ed7",
+        "c87d25f3",
+        "7228bc67"
+      ],
+      "avif": [
+        "578983c8",
+        "90399ab6",
+        "a6941ef7"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Commercial"
+    ]
+  },
+  {
+    "slug": "capital-planning-property-managers-winnipeg",
+    "title": "Data-Driven Capital Planning: How Winnipeg Property Managers Can Spend Smarter",
+    "excerpt": "Your work orders, complaints and turnover records show where capital spending saves most. How Winnipeg property managers build plans owners approve.",
+    "category": "Landlords & Property Managers",
+    "date": "2026-11-05",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "18b6c8b8",
+        "e468107e",
+        "10f7cd1a"
+      ],
+      "avif": [
+        "913e072c",
+        "4c930c9a",
+        "c15f084c"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Landlords & Property Managers"
+    ]
+  },
+  {
+    "slug": "basement-suite-rental-income-winnipeg",
+    "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
+    "excerpt": "When a Winnipeg basement suite can legally be rented, the building code numbers that shape it, what CMHC’s rent survey shows, and a payback calculator that uses your own quote.",
+    "category": "Basements & Suites",
+    "date": "2026-10-23",
+    "readMinutes": 13,
+    "image": {
+      "base": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "17ebf9b4",
+        "17834f28",
+        "0b66c85d"
+      ],
+      "avif": [
+        "29c56e33",
+        "e7d88156",
+        "999be742"
+      ],
+      "main": 1
+    },
+    "titleCard": true,
+    "categories": [
+      "Basements & Suites",
+      "Money & Rebates",
+      "Permits & Planning"
+    ]
+  },
+  {
     "slug": "asbestos-testing-before-renovating-manitoba",
     "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules",
     "excerpt": "Older Manitoba homes can hide asbestos in plaster, floor tiles, siding and vermiculite insulation. When to test, who should do it, and what the Province’s December 2025 asbestos rules mean for your renovation.",

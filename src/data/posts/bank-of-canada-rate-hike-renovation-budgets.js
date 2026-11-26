@@ -189,7 +189,7 @@ export default {
     },
     {
       "t": "p",
-      "x": "**Related reading:** [Commercial renovations](/services/commercial-renovations) · [Commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)"
+      "x": "**Related reading:** [Commercial renovations](/services/commercial-renovations) · [Commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) · [Winnipeg Construction Costs 2026: Tariffs, Metals, Labour](/blog/winnipeg-construction-costs-2026)"
     }
   ],
   "faqs": [],
@@ -228,6 +228,62 @@ export default {
   ],
   "related": [
     {
+      "slug": "winnipeg-construction-costs-2026",
+      "title": "Tariffs, Metals and Labour: What's Driving Winnipeg Construction Costs in 2026",
+      "excerpt": "Winnipeg construction costs rose 4% or more in 2025, led by metals, Altus Group says. Which renovation items carry tariff risk.",
+      "category": "Winnipeg Market News",
+      "date": "2026-11-26",
+      "readMinutes": 5,
+      "image": {
+        "base": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "0ebb315d",
+          "8398ad81",
+          "686a91ea"
+        ],
+        "avif": [
+          "6f00593e",
+          "5376c44a",
+          "57bf80fb"
+        ],
+        "main": 1
+      },
+      "thumbnail": true
+    },
+    {
+      "slug": "renovation-capital-vs-current-expense-canada",
+      "title": "Renovations: Capital vs Current Expense for Canadian Owners",
+      "excerpt": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+      "category": "Money & Rebates",
+      "date": "2026-11-26",
+      "readMinutes": 4,
+      "image": {
+        "base": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current",
+        "widths": [
+          480,
+          880,
+          1320
+        ],
+        "webp": [
+          "67bec0c5",
+          "14580032",
+          "6c4c4540"
+        ],
+        "avif": [
+          "3d67af64",
+          "53605990",
+          "617f552a"
+        ],
+        "main": 1
+      },
+      "thumbnail": true
+    },
+    {
       "slug": "understanding-roi-which-commercial-renovations-bring-the-most-value",
       "title": "Commercial Renovation ROI: Which Upgrades Pay Back?",
       "excerpt": "A plain-language way to judge whether a commercial renovation will pay for itself, which kinds of upgrades tend to earn their cost back, and what quietly eats into the return.",
@@ -250,61 +306,6 @@ export default {
           "7be4d1c9",
           "5a9d610c",
           "537414ab"
-        ],
-        "main": 1
-      }
-    },
-    {
-      "slug": "how-to-finance-a-commercial-renovation-without-breaking-the-bank",
-      "title": "Commercial Renovation Financing in Manitoba: Your Options",
-      "excerpt": "The main ways Manitoba businesses pay for a renovation, from bank and BDC loans to landlord allowances, equipment financing and the federal small business loan program, and what to prepare first.",
-      "category": "Commercial",
-      "date": "2026-08-11",
-      "readMinutes": 8,
-      "image": {
-        "base": "/images/blog/how-to-finance-a-commercial-renovation/title-card-commercial-renovation",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "6ec14999",
-          "bdc465be",
-          "01015ca2"
-        ],
-        "avif": [
-          "07955c0c",
-          "479ed3b5",
-          "1256d87a"
-        ],
-        "main": 1
-      },
-      "titleCard": true
-    },
-    {
-      "slug": "the-biggest-cost-factors-in-commercial-renovation-projects",
-      "title": "The Biggest Cost Factors in Commercial Renovation Projects",
-      "excerpt": "The parts of a commercial renovation that move the price most, why older buildings and changes of use cost more, and the steps that keep a project from running over budget.",
-      "category": "Commercial",
-      "date": "2026-08-04",
-      "readMinutes": 9,
-      "image": {
-        "base": "/images/blog/the-biggest-cost-factors-in-commercial/worker-in-a-hard-hat-and-safety-vest",
-        "widths": [
-          480,
-          880,
-          1320
-        ],
-        "webp": [
-          "f2db0b8c",
-          "eaf95e2d",
-          "afcff434"
-        ],
-        "avif": [
-          "b0fa83b7",
-          "e36c2cee",
-          "6642e0d8"
         ],
         "main": 1
       }

@@ -10,6 +10,148 @@
 /** Published posts only (blog-raw status "published"), newest first, card and ranking fields. */
 export const BLOG_CARDS = [
   {
+    "slug": "efficiency-manitoba-commercial-rebates",
+    "title": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
+    "excerpt": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
+    "category": "Money & Rebates",
+    "date": "2026-11-26",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "e945bac0",
+        "1d10ae70",
+        "a0b2a03d"
+      ],
+      "avif": [
+        "543c1373",
+        "b2998267",
+        "5926283d"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Money & Rebates"
+    ],
+    "services": [
+      "/services/windows-and-doors"
+    ],
+    "cluster": "energy-rebates"
+  },
+  {
+    "slug": "manitoba-rent-control-threshold-2000",
+    "title": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+    "excerpt": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+    "category": "Landlords & Property Managers",
+    "date": "2026-11-26",
+    "readMinutes": 6,
+    "image": {
+      "base": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "9867f566",
+        "dcfebaa0",
+        "8b284eea"
+      ],
+      "avif": [
+        "e4ee3a68",
+        "a69ae0be",
+        "f86dbf7a"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Landlords & Property Managers"
+    ],
+    "services": [
+      "/services/commercial-renovations",
+      "/services/flooring"
+    ],
+    "cluster": "rental-buildings"
+  },
+  {
+    "slug": "winnipeg-construction-costs-2026",
+    "title": "Tariffs, Metals and Labour: What's Driving Winnipeg Construction Costs in 2026",
+    "excerpt": "Winnipeg construction costs rose 4% or more in 2025, led by metals, Altus Group says. Which renovation items carry tariff risk.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-26",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "0ebb315d",
+        "8398ad81",
+        "686a91ea"
+      ],
+      "avif": [
+        "6f00593e",
+        "5376c44a",
+        "57bf80fb"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "services": [
+      "/services/general-contracting",
+      "/services/commercial-renovations"
+    ],
+    "cluster": "commercial-costs"
+  },
+  {
+    "slug": "renovation-capital-vs-current-expense-canada",
+    "title": "Renovations: Capital vs Current Expense for Canadian Owners",
+    "excerpt": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+    "category": "Money & Rebates",
+    "date": "2026-11-26",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "67bec0c5",
+        "14580032",
+        "6c4c4540"
+      ],
+      "avif": [
+        "3d67af64",
+        "53605990",
+        "617f552a"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Money & Rebates"
+    ],
+    "services": [
+      "/services/commercial-renovations"
+    ],
+    "cluster": "commercial-costs"
+  },
+  {
     "slug": "winter-unit-turnover-checklist-winnipeg",
     "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
     "excerpt": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",

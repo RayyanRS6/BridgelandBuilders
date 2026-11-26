@@ -23,6 +23,1195 @@ export const BLOG_CATEGORIES = [
 /** Published posts only (blog-raw status "published"), newest first, with bodies. */
 export const BLOG_POSTS = [
   {
+    "slug": "efficiency-manitoba-commercial-rebates",
+    "title": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
+    "metaTitle": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
+    "metaDescription": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
+    "excerpt": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
+    "category": "Money & Rebates",
+    "categories": [
+      "Money & Rebates"
+    ],
+    "date": "2026-11-26",
+    "updated": "2026-11-26",
+    "readMinutes": 5,
+    "hero": null,
+    "heroSrc": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-880.1d10ae70.webp",
+    "heroSrcSet": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-480.e945bac0.webp 480w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-880.1d10ae70.webp 880w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1320.a0b2a03d.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-480.543c1373.avif 480w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-880.b2998267.avif 880w, /images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1320.5926283d.avif 1320w",
+    "ogImage": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x630.fee273a5.jpg",
+    "schemaImages": [
+      "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x675.6393a08a.jpg",
+      "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x900.07deef97.jpg",
+      "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial-1200x1200.a16f5de0.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Commercial office with LED panel lights and a smart thermostat on the wall",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/windows-and-doors"
+    ],
+    "ctaService": "/services/windows-and-doors",
+    "ctaPrimary": "visit",
+    "cluster": "energy-rebates",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Heating a building through a Winnipeg winter is expensive, and older commercial buildings can lose a lot of that heat through windows, walls and roofs. The good news: commercial renovations that cut energy use can qualify for Efficiency Manitoba commercial rebates and incentives, which can offset part of the cost."
+      },
+      {
+        "t": "p",
+        "x": "Here's how to plan energy-efficient commercial renovations, and how to use the incentives available heading into 2027."
+      },
+      {
+        "t": "h2",
+        "x": "Start with a baseline"
+      },
+      {
+        "t": "p",
+        "x": "Before you choose upgrades, know where the energy goes:"
+      },
+      {
+        "t": "oli",
+        "x": "**Review 12 to 24 months of utility bills.** Look for seasonal spikes and unusual use."
+      },
+      {
+        "t": "oli",
+        "x": "**Benchmark the building.** [ENERGY STAR Portfolio Manager](https://www.energystar.gov/buildings/benchmark) is Canada's national benchmarking tool and can compare your building to similar ones."
+      },
+      {
+        "t": "oli",
+        "x": "**Get an energy assessment** or energy model for larger projects. It can show which upgrades save the most, and it's often part of the incentive process. Efficiency Manitoba's [Commercial Energy Audit Program](https://efficiencymb.ca/business/commercial-energy-audit-program/) covers up to 50% of an audit's cost, but the application must be approved before the on-site work."
+      },
+      {
+        "t": "h2",
+        "x": "The upgrades that matter most in Manitoba"
+      },
+      {
+        "t": "p",
+        "x": "**Building envelope first.** In a cold climate, keeping heat in is usually the place to start:"
+      },
+      {
+        "t": "li",
+        "x": "[Window and door replacement](/services/windows-and-doors)"
+      },
+      {
+        "t": "li",
+        "x": "Air sealing at windows, doors, roof edges and penetrations"
+      },
+      {
+        "t": "li",
+        "x": "Added insulation in roofs and walls during other renovation work"
+      },
+      {
+        "t": "p",
+        "x": "Before insulation or air sealing, review how the work can affect indoor air quality, as [Efficiency Manitoba advises](https://efficiencymb.ca/business/building-envelope/). In larger buildings (Part 3 of the building code), significant envelope alterations can also need an architect or engineer, [the City's commercial alteration guide](https://legacy.winnipeg.ca/ppd/Documents/Permits/CommercialAlterationDesignSummary/Guide-Commercial-Alteration-Design-Summary.pdf) says."
+      },
+      {
+        "t": "p",
+        "x": "**Then systems:**"
+      },
+      {
+        "t": "li",
+        "x": "High-efficiency heating and ventilation equipment, sized for the improved envelope"
+      },
+      {
+        "t": "li",
+        "x": "Heat recovery ventilation"
+      },
+      {
+        "t": "li",
+        "x": "Building automation and controls"
+      },
+      {
+        "t": "li",
+        "x": "LED lighting with occupancy and daylight sensors"
+      },
+      {
+        "t": "p",
+        "x": "**And water:**"
+      },
+      {
+        "t": "li",
+        "x": "Low-flow fixtures and efficient water heating"
+      },
+      {
+        "t": "h2",
+        "x": "How Efficiency Manitoba commercial rebates work"
+      },
+      {
+        "t": "p",
+        "x": "[Efficiency Manitoba](https://efficiencymb.ca/business/) offers programs for commercial, multi-unit residential and industrial buildings, including the **Commercial Deep Energy Retrofit Program**, the Building Envelope Program, the Business Lighting Program and HVAC & Controls."
+      },
+      {
+        "t": "p",
+        "x": "For [deep retrofits](https://efficiencymb.ca/business/deep-energy-retrofit/), the program:"
+      },
+      {
+        "t": "li",
+        "x": "Supports projects that reduce building energy use by **at least 20%**, using at least two significant measures from different categories"
+      },
+      {
+        "t": "li",
+        "x": "Offers up to **$12,000** toward energy modelling"
+      },
+      {
+        "t": "li",
+        "x": "Pays a performance incentive of **$2.25 to $6.00 per square foot**, scaled to the percentage of energy saved"
+      },
+      {
+        "t": "li",
+        "x": "Adds a 100% bonus on that incentive for multi-unit residential buildings that install a ground source heat pump as the primary heating system, for projects enrolled by **March 31, 2027**"
+      },
+      {
+        "t": "li",
+        "x": "Requires approval **before** any on-site work starts"
+      },
+      {
+        "t": "p",
+        "x": "Projects in this program [generally can't also claim](https://efficiencymb.ca/wp-content/uploads/EM_Commercial-Deep-Energy-Retrofit-Program-Guide.pdf) prescriptive incentives from other Efficiency Manitoba programs for the planned upgrades, so choose your route before you apply."
+      },
+      {
+        "t": "p",
+        "x": "The [Building Envelope Program](https://efficiencymb.ca/business/building-envelope/) is the closest fit for windows, doors and insulation. Its [incentive details](https://efficiencymb.ca/business/building-envelope/incentive-details/) list these formulas, where U-value is for the whole assembly and lower is better:"
+      },
+      {
+        "t": "li",
+        "x": "**Windows:** $150 x (1.6 - U-value) x window area in square metres"
+      },
+      {
+        "t": "li",
+        "x": "**Curtain wall or storefront:** $200 x (2.0 - U-value) x area in square metres"
+      },
+      {
+        "t": "li",
+        "x": "**Doors with glazing:** $150 for swinging or $200 for sliding, x (1.6 - U-value) x door area in square metres"
+      },
+      {
+        "t": "li",
+        "x": "**Insulation:** up to 7.5 cents x R-value added x area in square feet, depending on where it goes, and no more than the invoiced cost of the insulation materials"
+      },
+      {
+        "t": "p",
+        "x": "Efficiency Manitoba's own example is 20 windows totalling 30 square metres with a U-value of 0.84, for an estimated incentive of $3,420. Products must also meet minimum thermal performance values. The program's pages show different end dates for a temporary bonus on these rates, so ask which applies before you count on it."
+      },
+      {
+        "t": "p",
+        "x": "The building must be heated mainly with electricity or natural gas, and the project can't have started. Don't buy or install anything until you have approval, and then you have one year to finish. Your contractor must be registered with Efficiency Manitoba, so check its [supplier list](https://efficiencymb.ca/find-a-supplier/) before you apply."
+      },
+      {
+        "t": "p",
+        "x": "Other programs include:"
+      },
+      {
+        "t": "li",
+        "x": "[Business Lighting Program](https://efficiencymb.ca/business/business-lighting/): eligible LED lamps, fixtures, backlit signs and lighting controls, through a registered supplier, with approval before you buy anything"
+      },
+      {
+        "t": "li",
+        "x": "[HVAC & Controls](https://efficiencymb.ca/business/hvac/): heat pump rebates and variable flow pump and fan systems"
+      },
+      {
+        "t": "li",
+        "x": "[Small Business Program](https://efficiencymb.ca/business/small-business/): free basic products and a free lighting and attic insulation assessment"
+      },
+      {
+        "t": "li",
+        "x": "[In-Suite Energy Efficiency Program](https://efficiencymb.ca/in-suite-energy-efficiency-program/): upgrades to suites in multi-unit residential buildings with four or more suites"
+      },
+      {
+        "t": "p",
+        "x": "Incentives and terms change, so confirm current details at efficiencymb.ca before you finalize scope."
+      },
+      {
+        "t": "h2",
+        "x": "Combine efficiency with your next renovation"
+      },
+      {
+        "t": "p",
+        "x": "Work you're already doing can be a good time to improve efficiency:"
+      },
+      {
+        "t": "table",
+        "head": [
+          "If you're already...",
+          "Add"
+        ],
+        "rows": [
+          [
+            "Renovating a suite or floor",
+            "Wall insulation, LED lighting, controls"
+          ],
+          [
+            "Repairing masonry or the exterior",
+            "Air sealing, window replacement"
+          ],
+          [
+            "Replacing flooring at the main level",
+            "Insulation at slab edges where accessible"
+          ],
+          [
+            "Updating washrooms",
+            "Low-flow fixtures, efficient water heating"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "Step-by-step"
+      },
+      {
+        "t": "oli",
+        "x": "Baseline and energy assessment, with any audit funding approved first"
+      },
+      {
+        "t": "oli",
+        "x": "Confirm incentive eligibility and apply"
+      },
+      {
+        "t": "oli",
+        "x": "Wait for written approval"
+      },
+      {
+        "t": "oli",
+        "x": "Complete the work, keeping invoices and specifications"
+      },
+      {
+        "t": "oli",
+        "x": "Submit documentation for the incentive, which comes after the work is done, so plan to carry the full cost until then"
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "Energy-efficient commercial renovations can lower operating costs for years, and Manitoba incentives can cover part of the cost, as long as you qualify and are approved before you build."
+      },
+      {
+        "t": "p",
+        "x": "**Planning envelope or efficiency upgrades?** Bridgeland Builders handles [windows and doors](/services/windows-and-doors), [masonry](/services/masonry-stucco) and [interior commercial renovations](/services/commercial-renovations). If you plan to use an incentive that requires a registered contractor, confirm that with any contractor before you apply, us included. [**Book a Free On-Site Visit**](/book-online)."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Windows and doors installation](/services/windows-and-doors) · [Home insulation rebates in Manitoba](/blog/insulation-rebates-during-a-renovation-manitoba)"
+      }
+    ],
+    "faqs": [],
+    "answer": "Efficiency Manitoba commercial rebates come through several programs. The Building Envelope Program pays by formula for windows, glazed doors and insulation, and the Commercial Deep Energy Retrofit Program supports projects that cut energy use by at least 20%. Other programs cover lighting and HVAC. Get approval before you buy or install, and check that your contractor is registered.",
+    "sources": [
+      {
+        "label": "Efficiency Manitoba: Business programs",
+        "url": "https://efficiencymb.ca/business/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Commercial Deep Energy Retrofit Program",
+        "url": "https://efficiencymb.ca/business/deep-energy-retrofit/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Commercial Deep Energy Retrofit Program Guide (February 2026)",
+        "url": "https://efficiencymb.ca/wp-content/uploads/EM_Commercial-Deep-Energy-Retrofit-Program-Guide.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Building Envelope Program",
+        "url": "https://efficiencymb.ca/business/building-envelope/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Building Envelope Program incentive details",
+        "url": "https://efficiencymb.ca/business/building-envelope/incentive-details/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Find a supplier",
+        "url": "https://efficiencymb.ca/find-a-supplier/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Commercial Energy Audit Program",
+        "url": "https://efficiencymb.ca/business/commercial-energy-audit-program/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Business Lighting Program",
+        "url": "https://efficiencymb.ca/business/business-lighting/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: HVAC & Controls",
+        "url": "https://efficiencymb.ca/business/hvac/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Small Business Program",
+        "url": "https://efficiencymb.ca/business/small-business/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: In-Suite Energy Efficiency Program",
+        "url": "https://efficiencymb.ca/in-suite-energy-efficiency-program/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "ENERGY STAR: Benchmark your building with Portfolio Manager",
+        "url": "https://www.energystar.gov/buildings/benchmark",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "City of Winnipeg: Guide to the Commercial Alteration Design Summary",
+        "url": "https://legacy.winnipeg.ca/ppd/Documents/Permits/CommercialAlterationDesignSummary/Guide-Commercial-Alteration-Design-Summary.pdf",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2027-03-31"
+  },
+  {
+    "slug": "manitoba-rent-control-threshold-2000",
+    "title": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+    "metaTitle": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+    "metaDescription": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+    "excerpt": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+    "category": "Landlords & Property Managers",
+    "categories": [
+      "Landlords & Property Managers"
+    ],
+    "date": "2026-11-26",
+    "updated": "2026-11-26",
+    "readMinutes": 6,
+    "hero": null,
+    "heroSrc": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-880.dcfebaa0.webp",
+    "heroSrcSet": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-480.9867f566.webp 480w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-880.dcfebaa0.webp 880w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1320.8b284eea.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-480.e4ee3a68.avif 480w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-880.a69ae0be.avif 880w, /images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1320.f86dbf7a.avif 1320w",
+    "ogImage": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x630.2f97c584.jpg",
+    "schemaImages": [
+      "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x675.c6e30be9.jpg",
+      "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x900.3e8adee1.jpg",
+      "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control-1200x1200.b8cd5479.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Renovated apartment with new kitchen, quartz counter and vinyl plank flooring, keys on the counter",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/commercial-renovations",
+      "/services/flooring"
+    ],
+    "ctaService": "/services/commercial-renovations",
+    "ctaPrimary": "visit",
+    "cluster": "rental-buildings",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "h2",
+        "x": "What's changing with Manitoba's $2,000 rent control threshold"
+      },
+      {
+        "t": "p",
+        "x": "The [Province of Manitoba](https://news.gov.mb.ca/news/?archive=&item=75138) is expanding rent regulation for 2027, and the $2,000 rent control threshold is the main change:"
+      },
+      {
+        "t": "li",
+        "x": "The **rent increase guideline** for 2027 is **3%**."
+      },
+      {
+        "t": "li",
+        "x": "The **exemption threshold** for units rises from **$1,670 to $2,000** per month on January 1, 2027."
+      },
+      {
+        "t": "p",
+        "x": "Most units renting below that amount are regulated. Units in buildings first occupied after March 7, 2005 are exempt for 20 years from the first occupancy permit or first tenant, whichever came first. Social housing, government-run units, co-op units, non-profit life-lease units and approved rehabilitated units are also exempt."
+      },
+      {
+        "t": "p",
+        "x": "Other units renting between $1,670 and $2,000 will now be covered by the guideline. Landlords can still apply for an [above-guideline increase](https://www.gov.mb.ca/cca/rtb/landlord/aboveguide.html) to recover part of their eligible capital costs, but approval depends on documentation and the province's rules."
+      },
+      {
+        "t": "p",
+        "x": "[Since October 30, 2026](https://web2.gov.mb.ca/laws/regs/annual/2026/116.php), capital costs count for 40% less in an above-guideline application: 20%, 15%, 10% or 7.5% of the cost, depending on the item. And from October 20, 2026, a proposed above-guideline increase isn't payable at all until there is a Branch order."
+      },
+      {
+        "t": "h2",
+        "x": "Why it matters now"
+      },
+      {
+        "t": "p",
+        "x": "The rental market is also softening. The average unfurnished one-bedroom asking rent was $1,319 in [liv.rent's October 2026 report](https://liv.rent/blog/?p=69631), after three monthly declines, though still up 1.7% from a year earlier."
+      },
+      {
+        "t": "p",
+        "x": "Two-bedrooms moved the other way in East Winnipeg, where the average asking rent rose about 8% from September to October, to $1,657. One month's rise after a dip in September is a signal to watch, not proof of a shortage."
+      },
+      {
+        "t": "p",
+        "x": "For landlords, the combination means:"
+      },
+      {
+        "t": "oli",
+        "x": "**Rents are not rising quickly** in many segments."
+      },
+      {
+        "t": "oli",
+        "x": "**Future increases will be capped** for more units."
+      },
+      {
+        "t": "oli",
+        "x": "**The rent at turnover has limits** for regulated units in larger buildings, so it can't simply follow the market."
+      },
+      {
+        "t": "h2",
+        "x": "Our view: upgrade before you re-lease"
+      },
+      {
+        "t": "p",
+        "x": "When a regulated unit turns over, the rule depends on the building. In a complex with four or more units, the new tenant's rent can't be more than the average rent of similar units in that complex. In a complex with three units or fewer, the landlord sets the amount."
+      },
+      {
+        "t": "p",
+        "x": "A fourplex where the landlord lives in one unit counts as three. Either way, the landlord must give a Notice to New Tenant and send the Branch a copy within 14 days. Units exempt from rent regulation fall outside this rule."
+      },
+      {
+        "t": "p",
+        "x": "Upgrades don't change those limits. What they can do is help a unit compete. Units that look fresh and well finished tend to lease more easily. Units that look worn may need lower rents or concessions, and in a regulated unit a lower rent can become the base for capped future increases."
+      },
+      {
+        "t": "p",
+        "x": "That still makes cost-effective upgrades before re-leasing worthwhile, because an empty unit is the easiest time to do the work. The goal is to maximize the unit's appeal at a reasonable cost."
+      },
+      {
+        "t": "h2",
+        "x": "Where interior doors fit in"
+      },
+      {
+        "t": "p",
+        "x": "Interior doors are often overlooked, but they shape how a unit feels. Old hollow-core doors with dents, holes, mismatched hardware and peeling paint make even a freshly painted unit look tired. Replacing them makes a visible difference."
+      },
+      {
+        "t": "p",
+        "x": "Interior door installation can include:"
+      },
+      {
+        "t": "li",
+        "x": "**Bedroom, bathroom and closet doors,** in a consistent modern style."
+      },
+      {
+        "t": "li",
+        "x": "**Solid-core doors,** which reduce noise between rooms and feel more substantial."
+      },
+      {
+        "t": "li",
+        "x": "**New hardware,** such as matching levers and hinges."
+      },
+      {
+        "t": "li",
+        "x": "**Trim and casing** replacement where damaged."
+      },
+      {
+        "t": "li",
+        "x": "**Suite entry doors,** which may need to be fire-rated in multi-unit buildings, so check before you replace them."
+      },
+      {
+        "t": "h2",
+        "x": "A turnover upgrade package"
+      },
+      {
+        "t": "table",
+        "head": [
+          "Upgrade",
+          "Impact"
+        ],
+        "rows": [
+          [
+            "Full paint",
+            "Clean, fresh appearance"
+          ],
+          [
+            "Interior doors and hardware",
+            "Modern, consistent look"
+          ],
+          [
+            "Flooring (LVP)",
+            "Durable, attractive, easy to maintain"
+          ],
+          [
+            "Trim and minor repairs",
+            "Finished look"
+          ],
+          [
+            "Kitchen and bath refresh (where needed)",
+            "Higher perceived value"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "Bundled together and scheduled by one contractor, these upgrades leave you with one schedule to manage between tenancies. Where a [kitchen](/services/kitchen-renovations) or [bathroom](/services/bathroom-renovations) needs more than a refresh, treat it as its own project."
+      },
+      {
+        "t": "p",
+        "x": "Check for asbestos before old flooring or plaster is disturbed. Buildings built or renovated before 1990 are the ones the Province names, and our guide covers [asbestos testing before you renovate](/blog/asbestos-testing-before-renovating-manitoba)."
+      },
+      {
+        "t": "h2",
+        "x": "Documentation matters"
+      },
+      {
+        "t": "p",
+        "x": "If landlords plan to seek above-guideline increases for larger capital projects, good records are essential, because a claim can only include costs already paid or billed, and rebates must be declared. Keep itemized invoices, scopes of work and before-and-after photos. Even for smaller upgrades, documentation helps with insurance, tax and future planning."
+      },
+      {
+        "t": "p",
+        "x": "Landlords should confirm with the Residential Tenancies Branch which costs qualify. Rehabilitation schemes are a separate route. With the Branch's approval, one can exempt a complex or part of it for up to 5 years, or one unit for up to 2 years. Apply before work starts, because the rules limit work done before the first order."
+      },
+      {
+        "t": "h2",
+        "x": "A note on timing"
+      },
+      {
+        "t": "p",
+        "x": "The new threshold applies to rent increases that take effect on or after January 1, 2027, no matter when notice was given. Under the regulation, the test is whether the rent payable on December 31 of the previous year was $2,000 or more. Ask the Residential Tenancies Branch how this applies to a specific unit."
+      },
+      {
+        "t": "p",
+        "x": "The Branch's FAQ puts it differently, as more than $2,000 a month as of December 31, 2026, so check with the Branch if a unit is at exactly $2,000. Whatever the timing, a well-kept unit can help attract a tenant who stays."
+      },
+      {
+        "t": "h2",
+        "x": "Don't forget common areas"
+      },
+      {
+        "t": "p",
+        "x": "Unit upgrades are more effective when common areas also look cared for. Prospective tenants see the entrance, lobby and hallway before they see the unit. Fresh paint and flooring in common areas support every upgraded unit."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "Manitoba's rent rule changes bring more units under the guideline and reduce what capital work can add to an above-guideline application. Landlords who know the turnover rule for their building, and complete cost-effective upgrades before re-leasing, are better placed to lease units and keep good tenants."
+      },
+      {
+        "t": "h2",
+        "x": "How Bridgeland helps"
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders quotes vacant-unit turnovers, common areas, washrooms and multi-unit upgrades for property managers and building owners in Winnipeg and nearby communities, along with [flooring installation](/services/flooring). Each job starts with a free on-site visit and a written quote."
+      },
+      {
+        "t": "p",
+        "x": "**Planning a unit turnover?** [**Book a Free On-Site Visit**](/book-online) with Bridgeland Builders, and you'll get a free written quote for the work."
+      },
+      {
+        "t": "p",
+        "x": "General information, not legal, tax or financial advice. Have the Manitoba Residential Tenancies Branch, an accountant or a lawyer confirm how the rules apply to your building."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Windows and exterior doors](/services/windows-and-doors) · [Basement suite rental income in Winnipeg](/blog/basement-suite-rental-income-winnipeg) · [Manitoba Rent Increase Guideline 2027: A Landlord's Guide](/blog/manitoba-rent-increase-guideline-2027)"
+      }
+    ],
+    "faqs": [],
+    "answer": "On January 1, 2027, Manitoba raises the rent threshold for exemption from rent guidelines from $1,670 to $2,000 a month, bringing more units under the 3% guideline. At turnover, the rent rule for regulated units depends on the building: complexes of four or more units are capped at the average of similar units, while smaller complexes can set the amount.",
+    "sources": [
+      {
+        "label": "Province of Manitoba: Historic Expansion of Rent Control Effective Jan. 1, 2027 (Sept 3, 2026)",
+        "url": "https://news.gov.mb.ca/news/?archive=&item=75138",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Province of Manitoba: Changes Regulations to Limit Rent Hikes and Expand Rent Control (Oct 20, 2026)",
+        "url": "https://news.gov.mb.ca/news/?archive=&item=75837",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: M.R. 116/2026, amending the Residential Rent Regulation",
+        "url": "https://web2.gov.mb.ca/laws/regs/annual/2026/116.php",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: M.R. 91/2026, amending the Residential Rent Regulation",
+        "url": "https://web2.gov.mb.ca/laws/regs/annual/2026/091.php",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: Residential Rent Regulation, M.R. 156/92",
+        "url": "https://web2.gov.mb.ca/laws/regs/current/_pdf-regs.php?reg=156/92",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Laws: The Residential Tenancies Act",
+        "url": "https://web2.gov.mb.ca/laws/statutes/ccsm/r119.php",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Residential Tenancies Branch guidebook: rent increases for a new tenant",
+        "url": "https://www.gov.mb.ca/cca/rtb/ot/gbook/s13rentreg_rentincreasenewt7.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: home page notices",
+        "url": "https://www.gov.mb.ca/cca/rtb/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: rent FAQ",
+        "url": "https://www.gov.mb.ca/cca/rtb/faqsrent.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: above-guideline increases",
+        "url": "https://www.gov.mb.ca/cca/rtb/landlord/aboveguide.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: Above Guideline Rent Increases fact sheet",
+        "url": "https://www.gov.mb.ca/cca/rtb/resource_list/aboveguidelinerentincr.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Residential Tenancies Branch: landlord's guide to above-guideline applications",
+        "url": "https://www.gov.mb.ca/cca/rtb/resource_list/aguideforlandlords_cover.pdf",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "liv.rent: October 2026 Winnipeg rent report",
+        "url": "https://liv.rent/blog/?p=69631",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Workplace Safety and Health: asbestos FAQs",
+        "url": "https://www.gov.mb.ca/labour/safety/faq/asbestos.html",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2026-12-31"
+  },
+  {
+    "slug": "winnipeg-construction-costs-2026",
+    "title": "Tariffs, Metals and Labour: What's Driving Winnipeg Construction Costs in 2026",
+    "metaTitle": "Winnipeg Construction Costs 2026: Tariffs, Metals, Labour",
+    "metaDescription": "Winnipeg construction costs rose 4% or more in 2025, led by metals, Altus Group says. Which renovation items carry tariff risk.",
+    "excerpt": "Winnipeg construction costs rose 4% or more in 2025, led by metals, Altus Group says. Which renovation items carry tariff risk.",
+    "category": "Winnipeg Market News",
+    "categories": [
+      "Winnipeg Market News"
+    ],
+    "date": "2026-11-26",
+    "updated": "2026-11-26",
+    "readMinutes": 5,
+    "hero": null,
+    "heroSrc": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-880.8398ad81.webp",
+    "heroSrcSet": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-480.0ebb315d.webp 480w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-880.8398ad81.webp 880w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1320.686a91ea.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-480.6f00593e.avif 480w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-880.5376c44a.avif 880w, /images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1320.57bf80fb.avif 1320w",
+    "ogImage": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x630.6a4f02f8.jpg",
+    "schemaImages": [
+      "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x675.a460f329.jpg",
+      "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x900.bd4671db.jpg",
+      "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats-1200x1200.41711088.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Stacks of steel I-beams and lumber at a construction supply yard",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/general-contracting",
+      "/services/commercial-renovations"
+    ],
+    "ctaService": "/services/general-contracting",
+    "ctaPrimary": "visit",
+    "cluster": "commercial-costs",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "h2",
+        "x": "What the data shows"
+      },
+      {
+        "t": "p",
+        "x": "This article explains what is driving Winnipeg construction costs in 2026, not what your project will cost. No reliable figure exists without seeing the space, because scope, building condition and materials differ from one job to the next."
+      },
+      {
+        "t": "p",
+        "x": "Altus Group's [2026 Canadian Cost Guide](https://www.altusgroup.com/featured-insights/canadian-cost-guide/) reports costs by local market and building type, including private-sector prices per square foot. Altus warns that the guide can throw a budget off badly if misapplied, so treat it as a benchmark, not a price for your space."
+      },
+      {
+        "t": "p",
+        "x": "For [kitchens](/services/kitchen-renovations), [bathrooms](/services/bathroom-renovations) and [basements](/services/basement-renovations), our [Winnipeg renovation cost guide](/renovation-cost-winnipeg) lists the estimator's starting price ranges."
+      },
+      {
+        "t": "p",
+        "x": "[Altus Group's 2026 Cost Guide insights](https://www.altusgroup.com/insights/caution-in-2026-optimistic-for-2027-cost-guide-insights/), published in April 2026, say Winnipeg construction costs rose by 4% or more in 2025. Its key observations for Winnipeg:"
+      },
+      {
+        "t": "li",
+        "x": "**Metals** are the main material pressure, which Altus ties nationally to US tariffs and trade uncertainty."
+      },
+      {
+        "t": "li",
+        "x": "**Mechanical and electrical materials**, which depend on metals, are part of the same pressure."
+      },
+      {
+        "t": "li",
+        "x": "**Wood products** have been relatively stable."
+      },
+      {
+        "t": "li",
+        "x": "**Labour** costs are rising with inflation. Altus says Winnipeg availability is holding steady, though demand is expected to grow. Nationally it calls shortages the most persistent constraint."
+      },
+      {
+        "t": "p",
+        "x": "Altus framed 2026 as a year for caution, with more optimism for 2027. Since then, the outlook has become more complicated."
+      },
+      {
+        "t": "p",
+        "x": "Consumer prices [rose 3.1% year over year in September 2026](https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.htm), and trade negotiations with the United States [broke down in late August](https://www.bankofcanada.ca/publications/mpr/mpr-2026-10-28/tariff-assumptions/). The Bank of Canada [raised its policy rate to 2.50% on October 28, 2026](https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/), saying it wanted to reduce the risk that high energy prices spread more broadly."
+      },
+      {
+        "t": "h2",
+        "x": "Where tariffs hit Winnipeg renovation projects"
+      },
+      {
+        "t": "p",
+        "x": "Not all renovation work is equally exposed. This table is our own rough read of tariff exposure, not published data:"
+      },
+      {
+        "t": "table",
+        "head": [
+          "Component",
+          "Exposure",
+          "Why"
+        ],
+        "rows": [
+          [
+            "Steel studs, framing, structural steel",
+            "High",
+            "Direct tariff impact on metals"
+          ],
+          [
+            "Aluminum window frames, storefronts, doors",
+            "High",
+            "Aluminum tariffs and imported systems"
+          ],
+          [
+            "Mechanical and electrical equipment",
+            "High",
+            "Metal content and imported components"
+          ],
+          [
+            "Fasteners, hardware",
+            "Medium",
+            "Often imported; small share of cost"
+          ],
+          [
+            "Lumber, drywall",
+            "Lower",
+            "Largely domestic; Altus calls wood comparatively stable"
+          ],
+          [
+            "Paint, flooring",
+            "Varies",
+            "Depends on product origin"
+          ],
+          [
+            "Masonry materials (brick, block, mortar)",
+            "Lower",
+            "Largely domestic supply"
+          ],
+          [
+            "Labour",
+            "Rising",
+            "Costs rising with inflation; Winnipeg availability holding steady, per Altus"
+          ]
+        ]
+      },
+      {
+        "t": "h2",
+        "x": "Our view: plan around volatility, not just price"
+      },
+      {
+        "t": "p",
+        "x": "Cost increases are hard to avoid, but volatility is the bigger risk. A project priced in March and ordered in September can face very different prices for metal and imported components. Owners can manage that risk in a few ways:"
+      },
+      {
+        "t": "oli",
+        "x": "**Lock in pricing early** for high-exposure items. Ask contractors how long their quotes hold and which items carry escalation risk."
+      },
+      {
+        "t": "oli",
+        "x": "**Order long-lead items first.** Windows, storefront systems and specialty doors can have long lead times and high tariff exposure. If you plan to claim an incentive, get approval before you buy: [Efficiency Manitoba's Building Envelope Program](https://efficiencymb.ca/business/building-envelope/) says not to buy or install anything until you are approved."
+      },
+      {
+        "t": "oli",
+        "x": "**Consider domestic alternatives.** Canadian-made windows, doors and materials can reduce exposure, though not every product has an equivalent."
+      },
+      {
+        "t": "oli",
+        "x": "**Keep scopes tight.** A change order is usually priced at current, not original, prices."
+      },
+      {
+        "t": "oli",
+        "x": "**Book labour early.** Spring can be a busy season, so talk to contractors about their schedules over the winter."
+      },
+      {
+        "t": "h2",
+        "x": "Choosing contractors when costs are volatile"
+      },
+      {
+        "t": "p",
+        "x": "When costs move quickly, the contractor matters more. Owners looking for renovation contractors in Winnipeg should ask:"
+      },
+      {
+        "t": "li",
+        "x": "How long does your quote hold, and what triggers a price change?"
+      },
+      {
+        "t": "li",
+        "x": "Which materials in this scope carry tariff risk?"
+      },
+      {
+        "t": "li",
+        "x": "Can you suggest alternatives with lower exposure?"
+      },
+      {
+        "t": "li",
+        "x": "Who supplies your windows and doors, and where are they made?"
+      },
+      {
+        "t": "li",
+        "x": "How do you handle cost increases on long-lead items?"
+      },
+      {
+        "t": "p",
+        "x": "Clear answers to those questions show how a contractor handles cost risk."
+      },
+      {
+        "t": "h2",
+        "x": "What could change the outlook"
+      },
+      {
+        "t": "p",
+        "x": "Several developments could shift costs in the months ahead. A renewed trade agreement with the United States could ease pressure on metals and imported components, while further escalation could add to it."
+      },
+      {
+        "t": "p",
+        "x": "Oil prices affect freight, asphalt-based products and many manufactured goods. And the Bank of Canada's December 9, 2026 decision can influence both financing costs and the pace of construction activity, which in turn affects labour availability."
+      },
+      {
+        "t": "p",
+        "x": "Owners do not need to predict these outcomes, but they should build flexibility into budgets. There is [no single right contingency figure](/blog/the-biggest-cost-factors-in-commercial-renovation-projects). Older buildings and projects with significant metal or imported content call for more."
+      },
+      {
+        "t": "h2",
+        "x": "A worked example"
+      },
+      {
+        "t": "p",
+        "x": "Here is an illustration with round numbers, not a quote or a Bridgeland price. Picture a renovation budget split into shares: 40% aluminum storefront and doors, 30% flooring and finishes, and 30% labour. Suppose metal and imported components rise 10% between quote and order. That 10% is picked for easy math, not a forecast."
+      },
+      {
+        "t": "p",
+        "x": "The storefront line grows by 10%, which adds 4% to the whole budget. If the owner had locked pricing at contract signing and ordered the storefront first, most of that increase could have been avoided."
+      },
+      {
+        "t": "p",
+        "x": "The flooring and finishes, if they carry lower tariff exposure, could be ordered later. Sequencing purchases by risk is one of the simplest ways to protect a budget."
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "Construction costs in Winnipeg rose in 2025, and the pressure is uneven. Owners who understand where it is concentrated can order strategically, choose lower-risk materials and work with contractors who are open about cost risk."
+      },
+      {
+        "t": "h2",
+        "x": "How Bridgeland helps"
+      },
+      {
+        "t": "p",
+        "x": "Bridgeland Builders is a Winnipeg renovation contractor covering [windows and doors](/services/windows-and-doors), [masonry and stucco](/services/masonry-stucco), [flooring](/services/flooring), [exterior painting](/services/exterior-painting) and [interior demolition](/services/demolition). As your [general contractor](/services/general-contracting), we order materials and long-lead items early and track deliveries so the site keeps moving."
+      },
+      {
+        "t": "p",
+        "x": "**Worried about rising costs?** [**Book a Free On-Site Visit**](/book-online) with Bridgeland Builders. After the visit you get a free written quote for your 2027 project."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Winnipeg renovation cost ranges](/renovation-cost-winnipeg) · [The biggest cost factors in commercial renovation](/blog/the-biggest-cost-factors-in-commercial-renovation-projects)"
+      }
+    ],
+    "faqs": [],
+    "answer": "Altus Group said in April 2026 that metals are the main material pressure on Winnipeg construction costs, and it ties that nationally to US tariffs and trade uncertainty. It says Winnipeg costs rose by 4% or more in 2025. Mechanical and electrical materials depend on metals, wood has been stable, and labour costs are rising with inflation.",
+    "sources": [
+      {
+        "label": "Altus Group: Cautious in 2026, optimistic for 2027 (Cost Guide insights, April 23, 2026)",
+        "url": "https://www.altusgroup.com/insights/caution-in-2026-optimistic-for-2027-cost-guide-insights/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Altus Group: 2026 Canadian Cost Guide",
+        "url": "https://www.altusgroup.com/featured-insights/canadian-cost-guide/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Statistics Canada: Consumer Price Index, September 2026",
+        "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.htm",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Bank of Canada: Monetary Policy Report, October 2026, tariff and other assumptions",
+        "url": "https://www.bankofcanada.ca/publications/mpr/mpr-2026-10-28/tariff-assumptions/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Bank of Canada: Bank of Canada raises the policy rate to 2.5% (Oct 28, 2026)",
+        "url": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Efficiency Manitoba: Building Envelope Program",
+        "url": "https://efficiencymb.ca/business/building-envelope/",
+        "accessed": "2026-11-05"
+      }
+    ],
+    "reviewBy": "2026-12-09"
+  },
+  {
+    "slug": "renovation-capital-vs-current-expense-canada",
+    "title": "Renovations: Capital vs Current Expense for Canadian Owners",
+    "metaTitle": "Renovations: Capital vs Current Expense for Canadian Owners",
+    "metaDescription": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+    "excerpt": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+    "category": "Money & Rebates",
+    "categories": [
+      "Money & Rebates"
+    ],
+    "date": "2026-11-26",
+    "updated": "2026-11-26",
+    "readMinutes": 4,
+    "hero": null,
+    "heroSrc": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-880.14580032.webp",
+    "heroSrcSet": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-480.67bec0c5.webp 480w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-880.14580032.webp 880w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1320.6c4c4540.webp 1320w",
+    "heroAvifSrcSet": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-480.3d67af64.avif 480w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-880.53605990.avif 880w, /images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1320.617f552a.avif 1320w",
+    "ogImage": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x630.6b3e21b4.jpg",
+    "schemaImages": [
+      "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x675.fb1c502d.jpg",
+      "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x900.e089a8f8.jpg",
+      "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current-1200x1200.7f0f153e.jpg"
+    ],
+    "thumbnail": true,
+    "heroAlt": "Calculator, receipts and a small wooden house model beside renovation plans, for sorting capital vs current expenses",
+    "author": "",
+    "reviewedBy": "",
+    "services": [
+      "/services/commercial-renovations"
+    ],
+    "ctaService": "/services/commercial-renovations",
+    "ctaPrimary": "visit",
+    "cluster": "commercial-costs",
+    "memberOnly": false,
+    "status": "published",
+    "blocks": [
+      {
+        "t": "p",
+        "x": "Planning a business remodel before your fiscal year-end? The type of work decides how the cost is treated for tax, and the timing can affect when you get the benefit. Whether a renovation is a capital expense or a current expense changes how much you can deduct this year."
+      },
+      {
+        "t": "p",
+        "x": "Here's a plain-language overview for Canadian business owners and landlords, about property used to earn income. It doesn't cover renovations to your own home. This is general information, not tax advice, so always confirm your situation with your accountant."
+      },
+      {
+        "t": "h2",
+        "x": "Renovations: current expense or capital expenditure?"
+      },
+      {
+        "t": "p",
+        "x": "The Canada Revenue Agency (CRA) treats renovation costs in one of two ways:"
+      },
+      {
+        "t": "table",
+        "head": [
+          "",
+          "Current expense",
+          "Capital expenditure"
+        ],
+        "rows": [
+          [
+            "What it is",
+            "Repairs that restore something to its original condition",
+            "Improvements that give a lasting benefit or make the property better than before"
+          ],
+          [
+            "The CRA's own examples",
+            "Painting the exterior of a wooden house, repairing wooden steps",
+            "Putting vinyl siding on a wooden house, replacing wooden steps with concrete steps"
+          ],
+          [
+            "Renovation examples (ours, not the CRA's)",
+            "Repainting, patching drywall, fixing a leak, replacing a few broken tiles",
+            "A new [addition](/services/home-additions), a [kitchen](/services/kitchen-renovations) or [bathroom](/services/bathroom-renovations) remodel that makes the space better than before, new windows that upgrade the building"
+          ],
+          [
+            "Tax treatment",
+            "Generally deducted in the year incurred",
+            "Generally deducted over time through capital cost allowance (CCA)"
+          ]
+        ]
+      },
+      {
+        "t": "p",
+        "x": "The line isn't always obvious. A useful question is whether the work restores or betters the property."
+      },
+      {
+        "t": "p",
+        "x": "The CRA's rental income guide uses four tests: whether the expense gives a lasting benefit, whether it maintains or improves the property, whether it's for a part of the property or a separate asset, and its value relative to the property, which isn't decisive on its own."
+      },
+      {
+        "t": "h2",
+        "x": "Capital cost allowance basics"
+      },
+      {
+        "t": "p",
+        "x": "Capital improvements are added to a CCA class and deducted gradually. Classes that can apply to renovation work include:"
+      },
+      {
+        "t": "li",
+        "x": "**Class 1:** most buildings acquired after 1987, unless they belong in another class"
+      },
+      {
+        "t": "li",
+        "x": "**Class 13:** many capital improvements a tenant makes to leased property (the maximum rate depends on the type of leasehold interest and the terms of the lease, so ask your accountant)"
+      },
+      {
+        "t": "li",
+        "x": "**Class 8:** furniture, household appliances, some fixtures and machinery"
+      },
+      {
+        "t": "p",
+        "x": "Rules for the first-year deduction have changed several times in recent years, so ask your accountant which rules apply to work completed this year."
+      },
+      {
+        "t": "h2",
+        "x": "Year-end timing tips"
+      },
+      {
+        "t": "oli",
+        "x": "**Know your fiscal year-end.** Current expenses are generally deducted in the year you incur them, so work completed before year-end may count this year."
+      },
+      {
+        "t": "oli",
+        "x": "**Schedule true repairs before year-end** if you want the deduction this year."
+      },
+      {
+        "t": "oli",
+        "x": "**Document the scope clearly.** An invoice that separates repairs from improvements makes the tax treatment easier to support."
+      },
+      {
+        "t": "oli",
+        "x": "**Claim GST input tax credits where you can.** If you're a GST registrant, you can generally recover the GST paid on renovations related to your commercial activities, including commercial rentals. Long-term residential rents (one month or more) are exempt, so you generally can't claim credits on costs for those units. Capital real property has its own rules."
+      },
+      {
+        "t": "oli",
+        "x": "**Treat Manitoba Retail Sales Tax (RST) separately.** Input tax credits recover GST, not RST. On construction, installation, maintenance or repair of real property, Manitoba Finance says contractors pay RST on their materials and should not charge it on their billings. Other goods and work can be taxed differently, so ask your accountant."
+      },
+      {
+        "t": "oli",
+        "x": "**Check rebates first.** Some energy incentives require approval before work starts, as [Efficiency Manitoba's Building Envelope Program](https://efficiencymb.ca/business/building-envelope/) does. Missing that step can cost you the incentive."
+      },
+      {
+        "t": "h2",
+        "x": "For rental property owners"
+      },
+      {
+        "t": "p",
+        "x": "The CRA encourages landlords to report rental income and expenses on Form T776. The same test applies: work that restores a unit to its original condition is usually a current expense, and work that makes it better than before is usually capital."
+      },
+      {
+        "t": "p",
+        "x": "Repairs that put a used property you just acquired into suitable condition for use are capital. You can't use CCA to create or increase a rental loss."
+      },
+      {
+        "t": "h2",
+        "x": "Keep these records"
+      },
+      {
+        "t": "li",
+        "x": "Contracts and detailed invoices showing scope"
+      },
+      {
+        "t": "li",
+        "x": "Proof of payment"
+      },
+      {
+        "t": "li",
+        "x": "Before-and-after photos"
+      },
+      {
+        "t": "li",
+        "x": "Permits and inspection records"
+      },
+      {
+        "t": "li",
+        "x": "Rebate approvals and payments, because the CRA has you subtract a rebate from the related cost"
+      },
+      {
+        "t": "h2",
+        "x": "The bottom line"
+      },
+      {
+        "t": "p",
+        "x": "Year-end renovations can be well timed for tax, as long as the work is properly classified and documented. Plan with your accountant, then book the work."
+      },
+      {
+        "t": "p",
+        "x": "**Planning renovation work?** Bridgeland Builders starts every project with a free on-site visit and a free written quote you can take to your accountant. [**Book a Free On-Site Visit**](/book-online)."
+      },
+      {
+        "t": "p",
+        "x": "General information, not tax advice. Confirm with your accountant or the CRA."
+      },
+      {
+        "t": "p",
+        "x": "**Related reading:** [Commercial renovations](/services/commercial-renovations) · [Home renovation grants and tax credits in Manitoba](/blog/manitoba-renovation-tax-credits-rebates) · [Bank of Canada Rate Hike: What 2.50% Means for Renovations](/blog/bank-of-canada-rate-hike-renovation-budgets)"
+      }
+    ],
+    "faqs": [],
+    "answer": "A repair that restores something to its original condition is usually a current expense, generally deducted in the year you incur it. An improvement that gives a lasting benefit or makes the property better than before is usually capital, generally deducted over time through capital cost allowance. This is general information: confirm yours with your accountant.",
+    "sources": [
+      {
+        "label": "Canada Revenue Agency: Rental income guide (T4036), current or capital expenses",
+        "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/t4036/rental-income.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Canada Revenue Agency: General information for GST/HST registrants (RC4022)",
+        "url": "https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/rc4022/general-information-gst-hst-registrants.html",
+        "accessed": "2026-11-04"
+      },
+      {
+        "label": "Manitoba Finance: Bulletin 005, Information for Contractors (revised July 2019)",
+        "url": "https://www.gov.mb.ca/finance/taxation/pubs/bulletins/005.pdf",
+        "accessed": "2026-11-05"
+      },
+      {
+        "label": "Efficiency Manitoba: Building Envelope Program",
+        "url": "https://efficiencymb.ca/business/building-envelope/",
+        "accessed": "2026-11-04"
+      }
+    ],
+    "reviewBy": "2026-12-31"
+  },
+  {
     "slug": "winter-unit-turnover-checklist-winnipeg",
     "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
     "metaTitle": "Winter Unit Turnover Checklist for Winnipeg Rentals",
@@ -415,7 +1604,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Related reading:** [Commercial property renovation](/services/commercial-renovations) · [Secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg)"
+        "x": "**Related reading:** [Commercial property renovation](/services/commercial-renovations) · [Secondary suite rules in Winnipeg](/blog/secondary-suite-rules-winnipeg) · [Manitoba's $2,000 Rent Control Threshold: What Changes](/blog/manitoba-rent-control-threshold-2000)"
       }
     ],
     "faqs": [],
@@ -691,7 +1880,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Related reading:** [Commercial renovations](/services/commercial-renovations) · [Commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank)"
+        "x": "**Related reading:** [Commercial renovations](/services/commercial-renovations) · [Commercial renovation financing in Manitoba](/blog/how-to-finance-a-commercial-renovation-without-breaking-the-bank) · [Winnipeg Construction Costs 2026: Tariffs, Metals, Labour](/blog/winnipeg-construction-costs-2026)"
       }
     ],
     "faqs": [],
@@ -2819,7 +4008,7 @@ export const BLOG_POSTS = [
       },
       {
         "t": "p",
-        "x": "**Related reading:** [Commercial renovations for property managers](/services/commercial-renovations) · [Commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value)"
+        "x": "**Related reading:** [Commercial renovations for property managers](/services/commercial-renovations) · [Commercial renovation ROI](/blog/understanding-roi-which-commercial-renovations-bring-the-most-value) · [Renovations: Capital vs Current Expense for Canadian Owners](/blog/renovation-capital-vs-current-expense-canada)"
       }
     ],
     "faqs": [],

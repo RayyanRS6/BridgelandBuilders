@@ -31,6 +31,130 @@ export const BLOG_PAGE_SIZE = 12;
 /** The newest published posts (blog-raw status "published"), newest first, as cards. */
 export const BLOG_LIST = [
   {
+    "slug": "efficiency-manitoba-commercial-rebates",
+    "title": "Efficiency Manitoba Commercial Rebates: 2027 Upgrade Guide",
+    "excerpt": "Which energy-efficient commercial renovations matter most in Manitoba, how Efficiency Manitoba incentives work and how to pair them with your project.",
+    "category": "Money & Rebates",
+    "date": "2026-11-26",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/efficiency-manitoba-commercial-rebates/efficiency-manitoba-commercial",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "e945bac0",
+        "1d10ae70",
+        "a0b2a03d"
+      ],
+      "avif": [
+        "543c1373",
+        "b2998267",
+        "5926283d"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Money & Rebates"
+    ]
+  },
+  {
+    "slug": "manitoba-rent-control-threshold-2000",
+    "title": "Manitoba's $2,000 Rent Control Threshold: What Changes",
+    "excerpt": "On January 1, 2027, Manitoba raises the rent-regulation exemption from $1,670 to $2,000. What it means for the rent you can set at turnover.",
+    "category": "Landlords & Property Managers",
+    "date": "2026-11-26",
+    "readMinutes": 6,
+    "image": {
+      "base": "/images/blog/manitoba-rent-control-threshold-2000/manitobas-2-000-rent-control",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "9867f566",
+        "dcfebaa0",
+        "8b284eea"
+      ],
+      "avif": [
+        "e4ee3a68",
+        "a69ae0be",
+        "f86dbf7a"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Landlords & Property Managers"
+    ]
+  },
+  {
+    "slug": "winnipeg-construction-costs-2026",
+    "title": "Tariffs, Metals and Labour: What's Driving Winnipeg Construction Costs in 2026",
+    "excerpt": "Winnipeg construction costs rose 4% or more in 2025, led by metals, Altus Group says. Which renovation items carry tariff risk.",
+    "category": "Winnipeg Market News",
+    "date": "2026-11-26",
+    "readMinutes": 5,
+    "image": {
+      "base": "/images/blog/winnipeg-construction-costs-2026/tariffs-metals-and-labour-whats",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "0ebb315d",
+        "8398ad81",
+        "686a91ea"
+      ],
+      "avif": [
+        "6f00593e",
+        "5376c44a",
+        "57bf80fb"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Winnipeg Market News"
+    ]
+  },
+  {
+    "slug": "renovation-capital-vs-current-expense-canada",
+    "title": "Renovations: Capital vs Current Expense for Canadian Owners",
+    "excerpt": "Is your renovation a current expense or a capital cost? A plain-language look at CRA rules for Canadian businesses and landlords, with year-end tips.",
+    "category": "Money & Rebates",
+    "date": "2026-11-26",
+    "readMinutes": 4,
+    "image": {
+      "base": "/images/blog/renovation-capital-vs-current-expense/renovations-capital-vs-current",
+      "widths": [
+        480,
+        880,
+        1320
+      ],
+      "webp": [
+        "67bec0c5",
+        "14580032",
+        "6c4c4540"
+      ],
+      "avif": [
+        "3d67af64",
+        "53605990",
+        "617f552a"
+      ],
+      "main": 1
+    },
+    "thumbnail": true,
+    "categories": [
+      "Money & Rebates"
+    ]
+  },
+  {
     "slug": "winter-unit-turnover-checklist-winnipeg",
     "title": "Winter Unit Turnover Checklist for Winnipeg Rentals",
     "excerpt": "A winter unit turnover checklist for Winnipeg property managers: what to renovate first, how to schedule cold-weather work and how to keep the turn short.",
@@ -308,137 +432,27 @@ export const BLOG_LIST = [
     "categories": [
       "Commercial"
     ]
-  },
-  {
-    "slug": "tenant-improvement-allowance-winnipeg",
-    "title": "Tenant Improvement Allowances in Winnipeg: Who Pays for What",
-    "excerpt": "How tenant improvement allowances work in Winnipeg office, retail and medical leases, three common TI structures and what to settle before signing.",
-    "category": "Commercial",
-    "date": "2026-11-05",
-    "readMinutes": 4,
-    "image": {
-      "base": "/images/blog/tenant-improvement-allowance-winnipeg/tenant-improvement-allowances",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "9a2f42de",
-        "ffbce5ca",
-        "2306d93f"
-      ],
-      "avif": [
-        "865be3ce",
-        "2bc2458f",
-        "5550e9c6"
-      ],
-      "main": 1
-    },
-    "thumbnail": true,
-    "categories": [
-      "Commercial"
-    ]
-  },
-  {
-    "slug": "commercial-interior-demolition-winnipeg",
-    "title": "Commercial Interior Demolition: Step One in Repositioning",
-    "excerpt": "From vacant retail units to Class B office floors, Winnipeg repositioning often starts with commercial interior demolition. How to plan a strip-out.",
-    "category": "Commercial",
-    "date": "2026-11-05",
-    "readMinutes": 6,
-    "image": {
-      "base": "/images/blog/commercial-interior-demolition-winnipeg/commercial-interior-demolition-step",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "3b109ed7",
-        "c87d25f3",
-        "7228bc67"
-      ],
-      "avif": [
-        "578983c8",
-        "90399ab6",
-        "a6941ef7"
-      ],
-      "main": 1
-    },
-    "thumbnail": true,
-    "categories": [
-      "Commercial"
-    ]
-  },
-  {
-    "slug": "capital-planning-property-managers-winnipeg",
-    "title": "Data-Driven Capital Planning: How Winnipeg Property Managers Can Spend Smarter",
-    "excerpt": "Your work orders, complaints and turnover records show where capital spending saves most. How Winnipeg property managers build plans owners approve.",
-    "category": "Landlords & Property Managers",
-    "date": "2026-11-05",
-    "readMinutes": 5,
-    "image": {
-      "base": "/images/blog/capital-planning-property-managers/data-driven-capital-planning-how",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "18b6c8b8",
-        "e468107e",
-        "10f7cd1a"
-      ],
-      "avif": [
-        "913e072c",
-        "4c930c9a",
-        "c15f084c"
-      ],
-      "main": 1
-    },
-    "thumbnail": true,
-    "categories": [
-      "Landlords & Property Managers"
-    ]
-  },
-  {
-    "slug": "basement-suite-rental-income-winnipeg",
-    "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback",
-    "excerpt": "When a Winnipeg basement suite can legally be rented, the building code numbers that shape it, what CMHC’s rent survey shows, and a payback calculator that uses your own quote.",
-    "category": "Basements & Suites",
-    "date": "2026-10-23",
-    "readMinutes": 13,
-    "image": {
-      "base": "/images/blog/basement-suite-rental-income-winnipeg/title-card-basement-suite-rental",
-      "widths": [
-        480,
-        880,
-        1320
-      ],
-      "webp": [
-        "17ebf9b4",
-        "17834f28",
-        "0b66c85d"
-      ],
-      "avif": [
-        "29c56e33",
-        "e7d88156",
-        "999be742"
-      ],
-      "main": 1
-    },
-    "titleCard": true,
-    "categories": [
-      "Basements & Suites",
-      "Money & Rebates",
-      "Permits & Planning"
-    ]
   }
 ];
 
 /** Every other published post, newest first, as a title link. */
 export const BLOG_TITLES = [
+  {
+    "slug": "tenant-improvement-allowance-winnipeg",
+    "title": "Tenant Improvement Allowances in Winnipeg: Who Pays for What"
+  },
+  {
+    "slug": "commercial-interior-demolition-winnipeg",
+    "title": "Commercial Interior Demolition: Step One in Repositioning"
+  },
+  {
+    "slug": "capital-planning-property-managers-winnipeg",
+    "title": "Data-Driven Capital Planning: How Winnipeg Property Managers Can Spend Smarter"
+  },
+  {
+    "slug": "basement-suite-rental-income-winnipeg",
+    "title": "Basement Suite Rental Income in Winnipeg: Rules, Rent and Payback"
+  },
   {
     "slug": "asbestos-testing-before-renovating-manitoba",
     "title": "Asbestos Testing Before Renovating in Manitoba: Vermiculite and the 2025 Rules"
