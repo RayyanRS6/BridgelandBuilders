@@ -68,7 +68,9 @@ export const SERVICE_AREA_STATEMENT = `${SITE_NAME} serves Winnipeg and nearby c
 // The business's own profiles (found in the SEO audit; each carries the same
 // phone number and website). Used as Organization sameAs and for footer links.
 export const SOCIAL_PROFILES = {
-  facebook: 'https://www.facebook.com/profile.php?id=61567968356924',
+  // The page's username since November 2026; the old profile.php?id=61567968356924
+  // address now redirects here.
+  facebook: 'https://www.facebook.com/bridgelandbuilders',
   instagram: 'https://www.instagram.com/bridgelandbuilder/',
   linkedin: 'https://www.linkedin.com/company/bridgeland-builders/',
   youtube: 'https://www.youtube.com/channel/UCKN758eCYFdf-eH9_FFwjgw',

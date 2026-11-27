@@ -15,9 +15,12 @@ const SEO_OPTIONS = { faqs: CONTACT_FAQS };
 // The owner's "Embed a map" snippet for our Google Business Profile (place
 // 0x6a8200703e874ec7:0x58af89049b376f19, the same CID as GBP.mapsUrl), added
 // 2026-10-15. Its region parameter was changed from the snippet's "ph" (where
-// it was generated) to "ca"; everything else is as Google gave it.
+// it was generated) to "ca". Since November 2026 the profile shows no address
+// (a service-area business), so the snippet's close-up of one neighbourhood
+// was swapped for a Winnipeg-wide view (centre and span below). With no
+// address, Google frames the view itself and drops no pin.
 const MAP_EMBED_URL =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.2179684738358!2d-97.08322952381421!3d49.83836183124672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6a8200703e874ec7%3A0x58af89049b376f19!2sBridgeland%20Builders!5e0!3m2!1sen!2sca!4v1792052348677!5m2!1sen!2sca';
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45000!2d-97.1384!3d49.8951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6a8200703e874ec7%3A0x58af89049b376f19!2sBridgeland%20Builders!5e0!3m2!1sen!2sca!4v1792052348677!5m2!1sen!2sca';
 
 // What happens after someone gets in touch (owner-confirmed steps).
 const NEXT_STEPS = [
